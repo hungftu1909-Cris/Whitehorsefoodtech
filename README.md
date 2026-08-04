@@ -54,9 +54,12 @@ in `messages/en.json` / `messages/vi.json`) because real content wasn't
 available yet. Search both files for `[Placeholder` and `TODO` to find every
 spot that needs a real answer before this goes live. In particular:
 
-- [ ] **Logo** — drop the real brand logo at `brand/logo-source.png` (or
-      `.svg`), then swap `src/components/layout/logo.tsx` and `src/app/icon.svg`
-      for the real mark, and update `src/app/[locale]/opengraph-image.tsx`.
+- [x] **Logo** — real logo received and wired in: `brand/logo-source.png` is
+      the original; `brand/logo-mark.png` is the cropped emblem (source of
+      truth for re-exports); `public/brand/mark-*.png`, `src/app/icon.png`,
+      `src/app/apple-icon.png` and the OG image are all generated from it.
+      If a vector/SVG source becomes available later, re-export from that
+      instead for crisper edges at all sizes.
 - [ ] **Photography** — drop licensed/real photos into `public/images/...`
       using the exact filenames listed in [`public/images/README.md`](public/images/README.md)
       and they replace the placeholders automatically (see

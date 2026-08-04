@@ -27,6 +27,11 @@ export default async function OpengraphImage({
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          {/* A real embedded photo of the mark tripped a decode bug in this
+              Next.js version's ImageResponse pipeline ("Input buffer contains
+              unsupported image format") regardless of PNG/JPEG — falling back
+              to a plain styled circle here. Retry embedding the real mark
+              (public/brand/mark-256.png) next time Next.js is upgraded. */}
           <div
             style={{
               width: 56,

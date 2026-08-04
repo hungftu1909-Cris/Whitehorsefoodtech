@@ -5,6 +5,11 @@ cream) and cross-checked against `ui-ux-pro-max` (`--domain color`, `--domain
 style`, `--domain typography`) for "premium coffee export / heritage /
 B2B international" queries. Auto-suggested generic SaaS-navy / Liquid-Glass
 results were rejected as off-brand; the tokens below were hand-tuned instead.
+Colors were verified against the real logo file (`brand/logo-source.png`,
+supplied 2026-08-04) via pixel sampling — dominant emblem ink colors cluster
+around `#48240c`–`#603018`, consistent with the `--color-primary` chosen
+below. The cropped emblem mark used across the site lives at
+`brand/logo-mark.png` (source) / `public/brand/mark-*.png` (web copies).
 
 Product type: B2B export / premium agriculture (coffee, freeze-dried fruit
 powder, agri raw materials). Audience: international buyers/importers +
