@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { routing } from "@/i18n/routing";
@@ -58,8 +58,10 @@ export default async function ProductCategoryPage({
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-          <ImagePlaceholder
-            label={`${t("name")} — product photography needed`}
+          <SmartImage
+            src={`/images/products/${category.slug}-detail.jpg`}
+            alt={t("name")}
+            placeholderLabel={`${t("name")} — product photography needed`}
             aspect="aspect-[4/3]"
           />
 

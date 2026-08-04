@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -39,10 +39,13 @@ export function Hero() {
           </div>
         </div>
 
-        <ImagePlaceholder
-          label="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
+        <SmartImage
+          src="/images/hero.jpg"
+          alt="Whitehorse Foodtech coffee and premium agricultural exports"
+          placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
           aspect="aspect-[5/4]"
           className="w-full"
+          priority
         />
       </div>
     </section>

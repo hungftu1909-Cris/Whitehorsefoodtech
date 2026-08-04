@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/sections/page-hero";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 import { getAllPosts } from "@/lib/blog";
 import type { Locale } from "@/i18n/routing";
 
@@ -42,8 +42,10 @@ export default async function BlogPage({
                 href={`/blog/${post.slug}`}
                 className="group cursor-pointer overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
               >
-                <ImagePlaceholder
-                  label="Article cover image needed"
+                <SmartImage
+                  src={`/images/blog/${post.slug}.jpg`}
+                  alt={post.title}
+                  placeholderLabel="Article cover image needed"
                   aspect="aspect-[16/10]"
                   className="rounded-none border-0 border-b border-border"
                 />

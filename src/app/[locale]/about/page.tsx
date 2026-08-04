@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 import { Compass, ShieldCheck, MessageCircle, Handshake } from "lucide-react";
 
 const VALUE_ICONS = [Compass, ShieldCheck, MessageCircle, Handshake];
@@ -35,7 +35,12 @@ export default async function AboutPage({
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-          <ImagePlaceholder label="Team / office photography needed" aspect="aspect-[4/3]" />
+          <SmartImage
+            src="/images/about.jpg"
+            alt="Whitehorse Foodtech team and office"
+            placeholderLabel="Team / office photography needed"
+            aspect="aspect-[4/3]"
+          />
           <div>
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("mission.title")}

@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getAllSlugs, getPost } from "@/lib/blog";
 import { routing, type Locale } from "@/i18n/routing";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -64,7 +64,13 @@ export default async function BlogPostPage({
         </h1>
       </header>
 
-      <ImagePlaceholder label="Article cover image needed" aspect="aspect-[16/9]" className="mt-8" />
+      <SmartImage
+        src={`/images/blog/${post.slug}.jpg`}
+        alt={post.title}
+        placeholderLabel="Article cover image needed"
+        aspect="aspect-[16/9]"
+        className="mt-8"
+      />
 
       <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-serif prose-headings:font-semibold prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
         <MDXRemote source={post.content} />

@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "@/components/sections/section-heading";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 
 export function ProductsPreview() {
@@ -22,7 +22,13 @@ export function ProductsPreview() {
                 href={`/products/${category.slug}`}
                 className="group cursor-pointer overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
               >
-                <ImagePlaceholder label={`${item.title} — photo needed`} aspect="aspect-[4/3]" className="rounded-none border-0 border-b border-border" />
+                <SmartImage
+                  src={`/images/products/${category.slug}-card.jpg`}
+                  alt={item.title}
+                  placeholderLabel={`${item.title} — photo needed`}
+                  aspect="aspect-[4/3]"
+                  className="rounded-none border-0 border-b border-border"
+                />
                 <div className="p-6">
                   <h3 className="font-serif text-xl font-semibold text-foreground">
                     {item.title}

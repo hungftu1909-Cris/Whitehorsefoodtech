@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 
 export async function generateMetadata({
   params,
@@ -49,7 +49,12 @@ export default async function ProcessPage({
 
       <section className="border-t border-border bg-muted/30">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2 lg:items-center lg:px-8">
-          <ImagePlaceholder label="Factory / facility photography needed" aspect="aspect-[4/3]" />
+          <SmartImage
+            src="/images/factory.jpg"
+            alt="Whitehorse Foodtech processing facility"
+            placeholderLabel="Factory / facility photography needed"
+            aspect="aspect-[4/3]"
+          />
           <div>
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("factory.title")}

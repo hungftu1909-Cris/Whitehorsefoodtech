@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { SmartImage } from "@/components/ui/smart-image";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { ArrowRight } from "lucide-react";
 
@@ -43,8 +43,10 @@ export default async function ProductsPage({
               href={`/products/${c.slug}`}
               className="group cursor-pointer overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
             >
-              <ImagePlaceholder
-                label={`${t(`categories.${c.categoryKey}.name`)} — photo needed`}
+              <SmartImage
+                src={`/images/products/${c.slug}-card.jpg`}
+                alt={t(`categories.${c.categoryKey}.name`)}
+                placeholderLabel={`${t(`categories.${c.categoryKey}.name`)} — photo needed`}
                 aspect="aspect-[4/3]"
                 className="rounded-none border-0 border-b border-border"
               />

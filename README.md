@@ -57,9 +57,10 @@ spot that needs a real answer before this goes live. In particular:
 - [ ] **Logo** — drop the real brand logo at `brand/logo-source.png` (or
       `.svg`), then swap `src/components/layout/logo.tsx` and `src/app/icon.svg`
       for the real mark, and update `src/app/[locale]/opengraph-image.tsx`.
-- [ ] **Photography** — every `<ImagePlaceholder>` in the codebase marks a
-      spot that needs real product/factory/team photography. Search for
-      `ImagePlaceholder` to find them all.
+- [ ] **Photography** — drop licensed/real photos into `public/images/...`
+      using the exact filenames listed in [`public/images/README.md`](public/images/README.md)
+      and they replace the placeholders automatically (see
+      `src/components/ui/smart-image.tsx`).
 - [ ] **Company details** — `src/lib/site.ts` has placeholder address, phone
       and email. Update these (they feed the footer, contact page and
       structured data).
