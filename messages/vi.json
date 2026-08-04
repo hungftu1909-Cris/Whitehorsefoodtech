@@ -1,0 +1,400 @@
+{
+  "meta": {
+    "siteName": "Whitehorse Foodtech",
+    "title": "Whitehorse Foodtech — Xuất khẩu cà phê, bột hoa quả sấy thăng hoa & nông sản cao cấp",
+    "description": "Whitehorse Foodtech xuất khẩu cà phê nhân/rang, bột hoa quả sấy thăng hoa và nguyên liệu nông sản cao cấp từ Việt Nam đến các nhà sản xuất thực phẩm, nhà rang xay và nhà phân phối trên toàn thế giới."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "products": "Sản phẩm",
+    "productsCoffee": "Cà phê",
+    "productsFruitPowder": "Bột hoa quả sấy thăng hoa",
+    "productsAgri": "Nguyên liệu nông sản cao cấp",
+    "certifications": "Chứng nhận",
+    "process": "Quy trình & Nhà máy",
+    "clients": "Khách hàng & Đối tác",
+    "blog": "Tin tức",
+    "contact": "Liên hệ",
+    "requestQuote": "Yêu cầu báo giá"
+  },
+  "footer": {
+    "tagline": "Nông sản cao cấp, giao khắp toàn cầu.",
+    "addressLabel": "Trụ sở chính",
+    "address": "[Địa chỉ công ty — cần xác nhận], Việt Nam",
+    "phoneLabel": "Điện thoại",
+    "emailLabel": "Email",
+    "quickLinksTitle": "Công ty",
+    "productsTitle": "Sản phẩm",
+    "legalTitle": "Pháp lý",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản giao dịch",
+    "rights": "Bảo lưu mọi quyền.",
+    "newsletterTitle": "Cập nhật thương mại",
+    "newsletterSubtitle": "Lịch thu hoạch, xu hướng giá và sản phẩm mới — không spam.",
+    "newsletterPlaceholder": "Email công việc của bạn",
+    "newsletterCta": "Đăng ký"
+  },
+  "common": {
+    "learnMore": "Tìm hiểu thêm",
+    "readMore": "Đọc thêm",
+    "viewAll": "Xem tất cả",
+    "backTo": "Quay lại",
+    "submit": "Gửi",
+    "sending": "Đang gửi…",
+    "sent": "Đã gửi",
+    "required": "Bắt buộc",
+    "invalidEmail": "Vui lòng nhập email hợp lệ",
+    "downloadCatalog": "Tải catalogue sản phẩm",
+    "getInTouch": "Liên hệ ngay",
+    "requestQuote": "Yêu cầu báo giá",
+    "minutesRead": "phút đọc"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Từ Việt Nam · Xuất khẩu toàn cầu",
+      "title": "Cà phê, bột hoa quả sấy thăng hoa và nguyên liệu nông sản cao cấp — thu mua chính xác, giao hàng đáng tin cậy.",
+      "subtitle": "Whitehorse Foodtech cung cấp cho các nhà sản xuất thực phẩm & đồ uống, nhà rang xay và nhà phân phối trên toàn thế giới các sản phẩm nông nghiệp Việt Nam đạt chuẩn xuất khẩu, với khả năng truy xuất nguồn gốc đầy đủ và chất lượng ổn định từ vùng trồng đến container.",
+      "ctaPrimary": "Yêu cầu báo giá",
+      "ctaSecondary": "Khám phá sản phẩm"
+    },
+    "trustStrip": {
+      "title": "Được tin tưởng trong toàn bộ chuỗi cung ứng",
+      "items": [
+        "Thu mua trực tiếp từ vùng trồng",
+        "Truy xuất nguồn gốc từng lô hàng",
+        "Khối lượng đơn hàng linh hoạt (LCL đến FCL)",
+        "Xử lý toàn bộ chứng từ xuất khẩu"
+      ]
+    },
+    "valueProps": {
+      "eyebrow": "Vì sao chọn Whitehorse",
+      "title": "Được xây dựng cho những khách hàng không thể chấp nhận sự thiếu ổn định",
+      "subtitle": "Mỗi lô hàng đều được phân loại, kiểm nghiệm và đóng gói theo cùng một tiêu chuẩn — dù là đơn hàng thử nghiệm hay hợp đồng thường niên.",
+      "items": [
+        {
+          "title": "Thu mua trực tiếp từ nguồn",
+          "description": "Chúng tôi hợp tác trực tiếp với các hợp tác xã và cơ sở chế biến tại các vùng nông nghiệp trọng điểm của Việt Nam — không qua trung gian không cần thiết, không biến động giá khó hiểu."
+        },
+        {
+          "title": "Chất lượng ổn định, có hồ sơ đầy đủ",
+          "description": "Mỗi lô hàng được phân loại theo thông số đã thống nhất, có kết quả kiểm nghiệm và mẫu hàng trước khi giao — sản phẩm nhận được đúng như mẫu đã duyệt."
+        },
+        {
+          "title": "Logistics xuất khẩu trọn gói",
+          "description": "Giấy chứng nhận kiểm dịch thực vật, chứng nhận xuất xứ, hun trùng và chứng từ hải quan được chuẩn bị và kiểm tra trước khi container rời cảng."
+        },
+        {
+          "title": "Đối tác đồng hành, không chỉ là nhà cung cấp",
+          "description": "Đội ngũ của chúng tôi trực tiếp phản hồi yêu cầu và làm việc cùng bạn về thông số kỹ thuật, đóng gói và lịch giao hàng — không qua tổng đài."
+        }
+      ]
+    },
+    "productsPreview": {
+      "eyebrow": "Sản phẩm xuất khẩu",
+      "title": "Ba dòng sản phẩm. Một tiêu chuẩn chất lượng.",
+      "subtitle": "Từ cà phê nhân đến bột hoa quả sấy thăng hoa và nguyên liệu gia vị cao cấp, mọi danh mục đều được thu mua và phân loại theo tiêu chuẩn xuất khẩu.",
+      "items": [
+        {
+          "title": "Cà phê",
+          "description": "Cà phê nhân Robusta và Arabica, cùng các lựa chọn rang xay và pha trộn theo yêu cầu, phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi.",
+          "cta": "Xem thông số cà phê"
+        },
+        {
+          "title": "Bột hoa quả sấy thăng hoa",
+          "description": "Thanh long, xoài, chanh dây và nhiều loại khác — sấy thăng hoa để giữ trọn màu sắc, hương vị và dưỡng chất cho ngành sản xuất thực phẩm & đồ uống.",
+          "cta": "Xem danh mục bột hoa quả"
+        },
+        {
+          "title": "Nguyên liệu nông sản cao cấp",
+          "description": "Hạt điều, hồ tiêu, quế, hoa hồi và các loại gia vị, nguyên liệu nông sản đạt chuẩn xuất khẩu khác.",
+          "cta": "Xem nguyên liệu nông sản"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Từ nông trại đến container",
+      "title": "Quy trình minh bạch ở mọi giai đoạn",
+      "subtitle": "Truy xuất nguồn gốc không chỉ là cam kết — đó là cách mỗi đơn hàng được xây dựng.",
+      "steps": [
+        { "title": "Thu mua", "description": "Quan hệ hợp tác trực tiếp với nông dân và hợp tác xã tại các vùng sản xuất trọng điểm của Việt Nam." },
+        { "title": "Chế biến & Phân loại", "description": "Lô hàng được làm sạch, phân loại và kiểm nghiệm theo thông số của khách hàng trước khi phê duyệt." },
+        { "title": "Kiểm soát chất lượng", "description": "Mẫu hàng trước khi giao, báo cáo kiểm nghiệm và giám định bên thứ ba theo yêu cầu." },
+        { "title": "Xuất khẩu & Logistics", "description": "Chứng từ, đóng container và vận chuyển được phối hợp để đảm bảo giao hàng đúng hẹn." }
+      ],
+      "cta": "Xem toàn bộ quy trình"
+    },
+    "certifications": {
+      "eyebrow": "Chất lượng & tuân thủ",
+      "title": "Đạt tiêu chuẩn an toàn thực phẩm quốc tế",
+      "subtitle": "[Nội dung mẫu — xác nhận và liệt kê các chứng nhận thực tế đang có trước khi đăng, ví dụ ISO 22000, HACCP, chứng nhận hữu cơ hoặc đăng ký FDA.]",
+      "cta": "Xem chứng nhận"
+    },
+    "testimonial": {
+      "quote": "[Nội dung mẫu — thay bằng đánh giá thực tế đã được khách hàng/đối tác chấp thuận khi có.]",
+      "name": "[Tên liên hệ]",
+      "role": "[Chức danh]",
+      "company": "[Công ty, Quốc gia]"
+    },
+    "ctaBanner": {
+      "title": "Sẵn sàng cho container tiếp theo?",
+      "subtitle": "Cho chúng tôi biết sản phẩm, số lượng và cảng đích — chúng tôi sẽ phản hồi báo giá chính thức trong 1–2 ngày làm việc.",
+      "cta": "Yêu cầu báo giá"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Về Whitehorse Foodtech",
+      "title": "Kết nối nông nghiệp Việt Nam với chuỗi cung ứng thực phẩm & đồ uống toàn cầu",
+      "subtitle": "[Nội dung mẫu — bổ sung câu chuyện thành lập, năm thành lập và trụ sở chính.]"
+    },
+    "mission": {
+      "title": "Sứ mệnh của chúng tôi",
+      "body": "[Nội dung mẫu — mô tả sứ mệnh công ty trong 2–3 câu: ví dụ mang đến sản phẩm nông nghiệp Việt Nam đạt chuẩn xuất khẩu, chất lượng ổn định và có thể truy xuất nguồn gốc cho các nhà sản xuất toàn cầu, đồng thời hỗ trợ nông dân và hợp tác xã tại nguồn.]"
+    },
+    "stats": {
+      "title": "Whitehorse Foodtech qua những con số",
+      "items": [
+        { "value": "[#]", "label": "Quốc gia phục vụ" },
+        { "value": "[#]", "label": "Tấn xuất khẩu / năm" },
+        { "value": "[#]", "label": "Vùng trồng đối tác" },
+        { "value": "[#]", "label": "Năm kinh nghiệm xuất khẩu" }
+      ]
+    },
+    "values": {
+      "title": "Giá trị cốt lõi",
+      "items": [
+        { "title": "Truy xuất nguồn gốc", "description": "Mỗi lô hàng đều có thể truy ngược về vùng trồng và cơ sở chế biến." },
+        { "title": "Ổn định", "description": "Mẫu hàng bạn duyệt chính là sản phẩm bạn nhận được." },
+        { "title": "Phản hồi nhanh", "description": "Trao đổi trực tiếp với đội ngũ xử lý đơn hàng của bạn — không qua hàng đợi hỗ trợ." },
+        { "title": "Thu mua công bằng", "description": "Quan hệ lâu dài với nông dân và hợp tác xã, dựa trên mức giá công bằng và minh bạch." }
+      ]
+    },
+    "team": {
+      "title": "Ban lãnh đạo",
+      "subtitle": "[Nội dung mẫu — bổ sung tên, chức danh và tiểu sử ngắn của ban lãnh đạo khi có.]"
+    },
+    "cta": {
+      "title": "Muốn tìm hiểu thêm về cách chúng tôi làm việc?",
+      "cta": "Liên hệ ngay"
+    }
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "Sản phẩm của chúng tôi",
+      "title": "Cà phê, bột hoa quả và nguyên liệu nông sản đạt chuẩn xuất khẩu",
+      "subtitle": "Mọi dòng sản phẩm đều được thu mua, phân loại và đóng gói theo yêu cầu khách hàng — có mẫu hàng và hồ sơ kiểm nghiệm trước khi giao."
+    },
+    "categories": {
+      "coffee": {
+        "name": "Cà phê",
+        "slug": "coffee",
+        "tagline": "Cà phê nhân & rang Robusta và Arabica",
+        "description": "Thu mua từ Tây Nguyên, cà phê của chúng tôi được phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi để đáp ứng thông số kỹ thuật của khách hàng quốc tế — có sẵn dạng nhân xanh, rang, hoặc pha trộn theo yêu cầu.",
+        "specTitle": "Thông số điển hình",
+        "specs": [
+          "Robusta: Sàng 16/18, độ ẩm tối đa 12,5%, đen & vỡ tối đa 3–5%",
+          "Arabica: Sàng 15+, độ ẩm tối đa 12%, chế biến ướt hoàn toàn hoặc tự nhiên",
+          "Đóng gói: bao đay 60kg có lót GrainPro, hoặc hút chân không theo yêu cầu",
+          "Nhận rang và pha trộn theo yêu cầu cho chương trình nhãn hàng riêng"
+        ],
+        "applicationsTitle": "Ứng dụng phổ biến",
+        "applications": ["Nhà rang xay", "Sản xuất cà phê hòa tan", "Pha trộn nhãn hàng riêng", "Dịch vụ ăn uống"]
+      },
+      "fruitPowder": {
+        "name": "Bột hoa quả sấy thăng hoa",
+        "slug": "freeze-dried-fruit-powder",
+        "tagline": "Thanh long, xoài, chanh dây & nhiều loại khác",
+        "description": "Công nghệ sấy thăng hoa giữ lại màu sắc, hương thơm và dưỡng chất tốt hơn hẳn so với sấy phun hoặc sấy nhiệt, tạo ra loại bột mịn, ổn định, lý tưởng cho các sản phẩm thực phẩm và đồ uống chế biến.",
+        "specTitle": "Thông số điển hình",
+        "specs": [
+          "Trái cây: thanh long, xoài, chanh dây, mãng cầu, măng cụt (nhận trái cây theo yêu cầu)",
+          "Độ ẩm: tối đa 3–5% để đảm bảo hạn sử dụng lâu dài",
+          "Kích thước hạt: tiêu chuẩn 80–100 mesh, có thể tùy chỉnh theo yêu cầu",
+          "Đóng gói: túi nhôm kèm gói hút ẩm, 1kg–25kg, có thùng phuy số lượng lớn"
+        ],
+        "applicationsTitle": "Ứng dụng phổ biến",
+        "applications": ["Bột pha smoothie & đồ uống", "Bánh & bánh kẹo", "Thực phẩm chức năng", "Tạo màu/hương vị tự nhiên"]
+      },
+      "agriRaw": {
+        "name": "Nguyên liệu nông sản cao cấp",
+        "slug": "premium-agri-raw-materials",
+        "tagline": "Hạt điều, hồ tiêu, quế, hoa hồi & gia vị",
+        "description": "Việt Nam là một trong những nước xuất khẩu hàng đầu thế giới về hạt điều, hồ tiêu, quế và hoa hồi — chúng tôi cung cấp các lô hàng đạt chuẩn xuất khẩu với đầy đủ hồ sơ cho đối tác sản xuất thực phẩm và kinh doanh gia vị.",
+        "specTitle": "Thông số điển hình",
+        "specs": [
+          "Hạt điều: các cấp WW240/WW320/SW240, đóng lon hút chân không 22,68kg",
+          "Hồ tiêu: dung trọng 500–570 g/l, độ ẩm tối đa 13%, tiệt trùng hơi nước theo yêu cầu",
+          "Quế: nguyên cây, gãy vụn, hoặc xay, phân loại theo hàm lượng tinh dầu",
+          "Hoa hồi: nguyên cánh hoặc tách cánh, phơi khô tự nhiên, độ ẩm đạt chuẩn xuất khẩu"
+        ],
+        "applicationsTitle": "Ứng dụng phổ biến",
+        "applications": ["Sản xuất thực phẩm", "Pha trộn & phân phối gia vị", "Đóng gói bán lẻ & dịch vụ ăn uống", "Sản xuất hương liệu & chiết xuất"]
+      }
+    },
+    "sampleCta": {
+      "title": "Cần mẫu sản phẩm hoặc bảng thông số kỹ thuật chính thức?",
+      "subtitle": "Chúng tôi có thể gửi mẫu và hồ sơ kiểm nghiệm trước khi bạn đặt hàng chính thức.",
+      "cta": "Yêu cầu mẫu hàng"
+    }
+  },
+  "certifications": {
+    "hero": {
+      "eyebrow": "Chất lượng & tuân thủ",
+      "title": "Chứng nhận & tiêu chuẩn",
+      "subtitle": "[Trang nội dung mẫu — chỉ liệt kê các chứng nhận thực tế đang sở hữu, kèm số chứng nhận và thời hạn hiệu lực nếu có. Không đăng thông tin chưa được xác thực.]"
+    },
+    "items": [
+      { "name": "ISO 22000", "description": "[Nội dung mẫu — xác nhận tình trạng chứng nhận] Hệ thống quản lý an toàn thực phẩm." },
+      { "name": "HACCP", "description": "[Nội dung mẫu — xác nhận tình trạng chứng nhận] Phân tích mối nguy và kiểm soát điểm tới hạn." },
+      { "name": "Chứng nhận hữu cơ", "description": "[Nội dung mẫu — xác nhận tổ chức cấp chứng nhận: USDA Organic / EU Organic / khác] cho các dòng sản phẩm áp dụng." },
+      { "name": "Đăng ký FDA", "description": "[Nội dung mẫu — xác nhận tình trạng đăng ký cơ sở với FDA cho các lô hàng xuất sang Hoa Kỳ.]" }
+    ],
+    "documentsTitle": "Hồ sơ cung cấp theo yêu cầu",
+    "documents": [
+      "Chứng nhận xuất xứ (C/O)",
+      "Chứng nhận kiểm dịch thực vật",
+      "Chứng nhận hun trùng",
+      "Kết quả kiểm nghiệm / Certificate of Analysis",
+      "Mẫu vận đơn & hóa đơn thương mại"
+    ],
+    "cta": {
+      "title": "Cần chứng từ cụ thể để thông quan?",
+      "cta": "Liên hệ đội ngũ xuất khẩu"
+    }
+  },
+  "process": {
+    "hero": {
+      "eyebrow": "Cách chúng tôi làm việc",
+      "title": "Từ vùng trồng đến container của bạn",
+      "subtitle": "Quy trình có cấu trúc rõ ràng, đảm bảo tính ổn định, truy xuất nguồn gốc và giao hàng đúng hẹn."
+    },
+    "steps": [
+      {
+        "title": "1. Thu mua",
+        "description": "Chúng tôi hợp tác trực tiếp với các hợp tác xã và đối tác chế biến tại những vùng sản xuất trọng điểm của Việt Nam, xây dựng quan hệ lâu dài thay vì giao dịch một lần."
+      },
+      {
+        "title": "2. Chế biến & Phân loại",
+        "description": "Nguyên liệu thô được làm sạch, phân loại và kiểm nghiệm theo thông số đã thống nhất — cỡ sàng, độ ẩm, tỷ lệ lỗi và các tiêu chí riêng của khách hàng."
+      },
+      {
+        "title": "3. Kiểm soát chất lượng",
+        "description": "Mỗi lô hàng đều được lấy mẫu và kiểm nghiệm trước khi phê duyệt. Báo cáo kiểm nghiệm và mẫu hàng thực tế được gửi cho khách hàng trước khi giao, có thể sắp xếp giám định bên thứ ba."
+      },
+      {
+        "title": "4. Đóng gói",
+        "description": "Sản phẩm được đóng gói theo yêu cầu khách hàng — bao bì xuất khẩu tiêu chuẩn hoặc bao bì nhãn hàng riêng — với biện pháp chống ẩm, chống côn trùng phù hợp từng dòng sản phẩm."
+      },
+      {
+        "title": "5. Chứng từ xuất khẩu",
+        "description": "Chứng nhận xuất xứ, chứng nhận kiểm dịch thực vật, chứng nhận hun trùng và các chứng từ thương mại được chuẩn bị và kiểm tra trước khi đóng container."
+      },
+      {
+        "title": "6. Vận chuyển & Giao hàng",
+        "description": "Chúng tôi phối hợp đóng container và lịch vận chuyển theo điều kiện Incoterms đã thống nhất, cập nhật liên tục cho khách hàng từ cảng đi đến cảng đến."
+      }
+    ],
+    "factory": {
+      "title": "Cơ sở sản xuất",
+      "subtitle": "[Nội dung mẫu — bổ sung thông tin nhà máy/cơ sở: địa điểm, công suất, thiết bị chế biến, hình ảnh khi có.]"
+    },
+    "cta": {
+      "title": "Có câu hỏi cụ thể về quy trình hoặc chứng từ?",
+      "cta": "Trao đổi với đội ngũ của chúng tôi"
+    }
+  },
+  "clients": {
+    "hero": {
+      "eyebrow": "Đối tác của chúng tôi",
+      "title": "Khách hàng & Đối tác",
+      "subtitle": "[Nội dung mẫu — bổ sung logo và thông tin khách hàng/đối tác thực tế đã được chấp thuận công khai. Không đăng tên hoặc logo công ty khi chưa có sự cho phép bằng văn bản.]"
+    },
+    "regionsTitle": "Thị trường hiện đang phục vụ",
+    "regions": "[Nội dung mẫu — liệt kê quốc gia/khu vực xuất khẩu thực tế, ví dụ: Bắc Mỹ, EU, Đông Á, Trung Đông.]",
+    "testimonialsTitle": "Đối tác nói gì về chúng tôi",
+    "testimonialsSubtitle": "[Nội dung mẫu — bổ sung đánh giá thực tế từ khách hàng khi có.]",
+    "cta": {
+      "title": "Quan tâm trở thành đối tác?",
+      "cta": "Bắt đầu trao đổi"
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Tin tức",
+      "title": "Tin tức & thông tin ngành",
+      "subtitle": "Cập nhật mùa vụ, xu hướng thị trường và hướng dẫn xuất khẩu từ đội ngũ Whitehorse Foodtech."
+    },
+    "empty": "Bài viết mới sẽ sớm ra mắt — hãy quay lại sau.",
+    "backToList": "Quay lại danh sách bài viết"
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Liên hệ",
+      "title": "Cùng trao đổi về đơn hàng tiếp theo",
+      "subtitle": "Với các câu hỏi chung, hợp tác kinh doanh hoặc yêu cầu chứng từ, hãy liên hệ — đội ngũ xuất khẩu của chúng tôi sẽ phản hồi trong 1–2 ngày làm việc."
+    },
+    "info": {
+      "title": "Thông tin liên hệ",
+      "addressLabel": "Văn phòng",
+      "address": "[Địa chỉ công ty — cần xác nhận], Việt Nam",
+      "phoneLabel": "Điện thoại",
+      "emailLabel": "Email",
+      "hoursLabel": "Giờ làm việc",
+      "hours": "Thứ Hai–Thứ Bảy, 8:00–17:30 (GMT+7)"
+    },
+    "form": {
+      "title": "Gửi tin nhắn cho chúng tôi",
+      "name": "Họ và tên",
+      "company": "Công ty",
+      "email": "Email công việc",
+      "phone": "Điện thoại (không bắt buộc)",
+      "message": "Nội dung",
+      "messagePlaceholder": "Cho chúng tôi biết bạn đang tìm kiếm điều gì…",
+      "submit": "Gửi tin nhắn",
+      "success": "Cảm ơn bạn — tin nhắn đã được gửi. Chúng tôi sẽ liên hệ lại sớm nhất.",
+      "error": "Đã có lỗi khi gửi tin nhắn. Vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi."
+    }
+  },
+  "rfq": {
+    "hero": {
+      "eyebrow": "Yêu cầu báo giá",
+      "title": "Nhận báo giá chính thức",
+      "subtitle": "Cho chúng tôi biết sản phẩm, số lượng và điểm đến — đội ngũ xuất khẩu sẽ phản hồi giá, thời gian giao hàng và điều kiện vận chuyển trong 1–2 ngày làm việc."
+    },
+    "form": {
+      "title": "Yêu cầu báo giá",
+      "name": "Họ và tên",
+      "company": "Tên công ty",
+      "email": "Email công việc",
+      "phone": "Điện thoại / WhatsApp (không bắt buộc)",
+      "country": "Quốc gia điểm đến",
+      "product": "Sản phẩm quan tâm",
+      "productPlaceholder": "Chọn sản phẩm",
+      "productCoffee": "Cà phê",
+      "productFruitPowder": "Bột hoa quả sấy thăng hoa",
+      "productAgri": "Nguyên liệu nông sản cao cấp",
+      "productOther": "Khác / chưa có trong danh sách",
+      "volume": "Số lượng đặt hàng dự kiến",
+      "volumePlaceholder": "ví dụ: 1 container 20ft, 5 tấn/tháng",
+      "incoterm": "Điều kiện Incoterm mong muốn (không bắt buộc)",
+      "incotermPlaceholder": "ví dụ: FOB, CIF, EXW",
+      "message": "Thông tin bổ sung",
+      "messagePlaceholder": "Yêu cầu đóng gói, mức giá mục tiêu, chứng nhận cần có, thời gian giao hàng…",
+      "submit": "Gửi yêu cầu báo giá",
+      "success": "Cảm ơn bạn — yêu cầu báo giá đã được ghi nhận. Đội ngũ xuất khẩu sẽ phản hồi trong 1–2 ngày làm việc.",
+      "error": "Đã có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi."
+    }
+  },
+  "legal": {
+    "privacyTitle": "Chính sách bảo mật",
+    "privacyBody": "[Nội dung mẫu — thay bằng chính sách bảo mật thực tế trước khi ra mắt, nêu rõ dữ liệu nào được thu thập qua form liên hệ/RFQ, cách lưu trữ và sử dụng, cũng như cách khách truy cập có thể yêu cầu xóa dữ liệu. Nên tham khảo luật sư am hiểu luật bảo vệ dữ liệu tại thị trường mục tiêu (ví dụ GDPR cho khách hàng EU).]",
+    "termsTitle": "Điều khoản giao dịch",
+    "termsBody": "[Nội dung mẫu — thay bằng điều khoản giao dịch thực tế: điều khoản thanh toán, số lượng đặt hàng tối thiểu, thời gian giao hàng, chính sách bảo hành/khiếu nại và quy trình giải quyết tranh chấp, trước khi ra mắt.]"
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "subtitle": "Trang bạn tìm kiếm không tồn tại hoặc đã được di chuyển.",
+    "cta": "Về trang chủ"
+  }
+}

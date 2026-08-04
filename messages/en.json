@@ -1,0 +1,400 @@
+{
+  "meta": {
+    "siteName": "Whitehorse Foodtech",
+    "title": "Whitehorse Foodtech — Premium Coffee, Freeze-Dried Fruit Powder & Agri Exports",
+    "description": "Vietnam-based exporter of premium green/roasted coffee, freeze-dried fruit powder and agricultural raw materials, delivered globally to food & beverage manufacturers, roasters and distributors."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "productsCoffee": "Coffee",
+    "productsFruitPowder": "Freeze-Dried Fruit Powder",
+    "productsAgri": "Premium Agri Raw Materials",
+    "certifications": "Certifications",
+    "process": "Process & Factory",
+    "clients": "Clients & Partners",
+    "blog": "Insights",
+    "contact": "Contact",
+    "requestQuote": "Request a Quote"
+  },
+  "footer": {
+    "tagline": "Premium agricultural products, globally delivered.",
+    "addressLabel": "Head Office",
+    "address": "[Company address — to be confirmed], Vietnam",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "quickLinksTitle": "Company",
+    "productsTitle": "Products",
+    "legalTitle": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Trade",
+    "rights": "All rights reserved.",
+    "newsletterTitle": "Trade updates",
+    "newsletterSubtitle": "Harvest schedules, pricing trends and new product lines — no spam.",
+    "newsletterPlaceholder": "Your business email",
+    "newsletterCta": "Subscribe"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "backTo": "Back to",
+    "submit": "Submit",
+    "sending": "Sending…",
+    "sent": "Sent",
+    "required": "Required",
+    "invalidEmail": "Enter a valid email address",
+    "downloadCatalog": "Download product catalog",
+    "getInTouch": "Get in touch",
+    "requestQuote": "Request a quote",
+    "minutesRead": "min read"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Vietnam-based · Global export",
+      "title": "Premium coffee, freeze-dried fruit powder and agri raw materials — sourced with precision, delivered with trust.",
+      "subtitle": "Whitehorse Foodtech supplies food & beverage manufacturers, roasters and distributors worldwide with export-grade Vietnamese agricultural products, backed by full traceability and consistent quality from harvest to container.",
+      "ctaPrimary": "Request a quote",
+      "ctaSecondary": "Explore our products"
+    },
+    "trustStrip": {
+      "title": "Trusted across the supply chain",
+      "items": [
+        "Direct sourcing from growing regions",
+        "Full lot traceability",
+        "Flexible order volumes (LCL to FCL)",
+        "Export documentation handled end-to-end"
+      ]
+    },
+    "valueProps": {
+      "eyebrow": "Why Whitehorse",
+      "title": "Built for buyers who can't afford inconsistency",
+      "subtitle": "Every shipment is graded, tested and packed to the same standard — whether it's a trial order or a standing annual contract.",
+      "items": [
+        {
+          "title": "Direct-from-origin sourcing",
+          "description": "We work directly with growing cooperatives and processing facilities across Vietnam's key agricultural regions — no unnecessary intermediaries, no unexplained price swings."
+        },
+        {
+          "title": "Consistent, documented quality",
+          "description": "Every lot is graded against agreed specifications with lab results and samples available before shipment, so what arrives matches what was approved."
+        },
+        {
+          "title": "Export logistics, handled",
+          "description": "Phytosanitary certificates, certificates of origin, fumigation and customs documentation are prepared and verified before your container leaves port."
+        },
+        {
+          "title": "A partner, not just a supplier",
+          "description": "Our team responds to buyer inquiries directly and works with you on specifications, packaging and delivery schedules — not a call center."
+        }
+      ]
+    },
+    "productsPreview": {
+      "eyebrow": "What we export",
+      "title": "Three product lines. One quality standard.",
+      "subtitle": "From green coffee to freeze-dried fruit powder and premium spice materials, every category is sourced and graded to export specification.",
+      "items": [
+        {
+          "title": "Coffee",
+          "description": "Robusta and Arabica green beans, plus roasted and custom-blend options, graded by screen size, moisture and defect count.",
+          "cta": "View coffee specifications"
+        },
+        {
+          "title": "Freeze-Dried Fruit Powder",
+          "description": "Dragon fruit, mango, passion fruit and more — freeze-dried to preserve color, flavor and nutrients for F&B manufacturing.",
+          "cta": "View fruit powder range"
+        },
+        {
+          "title": "Premium Agri Raw Materials",
+          "description": "Cashew nuts, black pepper, cinnamon, star anise and other export-grade spices and raw agricultural materials.",
+          "cta": "View agri raw materials"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "From farm to container",
+      "title": "A transparent process, at every stage",
+      "subtitle": "Traceability isn't a claim — it's how every order is built.",
+      "steps": [
+        { "title": "Sourcing", "description": "Direct relationships with growers and cooperatives in Vietnam's core producing regions." },
+        { "title": "Processing & Grading", "description": "Lots are cleaned, graded and tested against buyer specifications before approval." },
+        { "title": "Quality Control", "description": "Pre-shipment samples, lab reports and third-party inspection available on request." },
+        { "title": "Export & Logistics", "description": "Documentation, container loading and shipping coordinated for on-time delivery." }
+      ],
+      "cta": "See our full process"
+    },
+    "certifications": {
+      "eyebrow": "Quality & compliance",
+      "title": "Held to international food-safety standards",
+      "subtitle": "[Placeholder — confirm and list actual certifications held before publishing, e.g. ISO 22000, HACCP, organic or FDA registration.]",
+      "cta": "View certifications"
+    },
+    "testimonial": {
+      "quote": "[Placeholder testimonial — replace with an approved quote from an actual buyer or partner once available.]",
+      "name": "[Contact name]",
+      "role": "[Title]",
+      "company": "[Company, Country]"
+    },
+    "ctaBanner": {
+      "title": "Ready to source your next container?",
+      "subtitle": "Tell us your product, volume and destination port — we'll respond with a formal quote within 1–2 business days.",
+      "cta": "Request a quote"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About Whitehorse Foodtech",
+      "title": "Connecting Vietnamese agriculture to global food & beverage supply chains",
+      "subtitle": "[Placeholder — add founding story, year established and headquarters location.]"
+    },
+    "mission": {
+      "title": "Our mission",
+      "body": "[Placeholder — describe the company's mission in 2–3 sentences: e.g. to deliver consistent, traceable, export-grade agricultural products from Vietnam to global manufacturers, while supporting the growers and cooperatives at the source.]"
+    },
+    "stats": {
+      "title": "Whitehorse Foodtech at a glance",
+      "items": [
+        { "value": "[#]", "label": "Countries served" },
+        { "value": "[#]", "label": "Metric tons exported / year" },
+        { "value": "[#]", "label": "Partner growing regions" },
+        { "value": "[#]", "label": "Years in export trade" }
+      ]
+    },
+    "values": {
+      "title": "What guides our work",
+      "items": [
+        { "title": "Traceability", "description": "Every lot can be traced back to its region and processing facility." },
+        { "title": "Consistency", "description": "The sample you approve is the product you receive." },
+        { "title": "Responsiveness", "description": "Direct communication with the team handling your order — not a ticketing queue." },
+        { "title": "Fair sourcing", "description": "Long-term relationships with growers and cooperatives, built on fair, transparent pricing." }
+      ]
+    },
+    "team": {
+      "title": "Leadership",
+      "subtitle": "[Placeholder — add leadership team names, titles and short bios once available.]"
+    },
+    "cta": {
+      "title": "Want to know more about how we work?",
+      "cta": "Get in touch"
+    }
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "Our products",
+      "title": "Export-grade coffee, fruit powder and agricultural raw materials",
+      "subtitle": "Every product line is sourced, graded and packed to buyer specification — with samples and lab documentation available before shipment."
+    },
+    "categories": {
+      "coffee": {
+        "name": "Coffee",
+        "slug": "coffee",
+        "tagline": "Robusta & Arabica green and roasted coffee",
+        "description": "Sourced from Vietnam's Central Highlands, our coffee is graded by screen size, moisture content and defect count to match international buyer specifications — available as green beans, roasted, or custom blends.",
+        "specTitle": "Typical specifications",
+        "specs": [
+          "Robusta: Screen 16/18, moisture 12.5% max, black & broken 3–5% max",
+          "Arabica: Screen 15+, moisture 12% max, fully washed or natural process",
+          "Packaging: 60kg jute bags with GrainPro liner, or vacuum-sealed on request",
+          "Custom roasting and blending available for private-label programs"
+        ],
+        "applicationsTitle": "Common applications",
+        "applications": ["Roasters", "Instant coffee manufacturing", "Private-label retail blends", "Foodservice"]
+      },
+      "fruitPowder": {
+        "name": "Freeze-Dried Fruit Powder",
+        "slug": "freeze-dried-fruit-powder",
+        "tagline": "Dragon fruit, mango, passion fruit & more",
+        "description": "Freeze-drying locks in color, aroma and nutrients far better than spray- or heat-drying, producing a fine, stable powder ideal for formulated food and beverage products.",
+        "specTitle": "Typical specifications",
+        "specs": [
+          "Fruits: dragon fruit, mango, passion fruit, soursop, mangosteen (custom fruits on request)",
+          "Moisture: 3–5% max for extended shelf stability",
+          "Mesh size: 80–100 mesh standard, custom particle size on request",
+          "Packaging: aluminum foil bags with desiccant, 1kg–25kg, bulk drums available"
+        ],
+        "applicationsTitle": "Common applications",
+        "applications": ["Smoothie & beverage powders", "Bakery & confectionery", "Nutraceuticals & supplements", "Natural food coloring/flavoring"]
+      },
+      "agriRaw": {
+        "name": "Premium Agri Raw Materials",
+        "slug": "premium-agri-raw-materials",
+        "tagline": "Cashew, pepper, cinnamon, star anise & spices",
+        "description": "Vietnam is among the world's leading exporters of cashew nuts, black pepper, cinnamon and star anise — we supply export-grade lots with full documentation for food manufacturing and spice trading partners.",
+        "specTitle": "Typical specifications",
+        "specs": [
+          "Cashew: WW240/WW320/SW240 grades, vacuum-packed 22.68kg tins",
+          "Black pepper: 500–570 g/l density, moisture 13% max, steam-sterilized on request",
+          "Cinnamon (cassia): whole quills, broken, or ground, oil content graded",
+          "Star anise: whole or split, sun-dried, export moisture standard"
+        ],
+        "applicationsTitle": "Common applications",
+        "applications": ["Food manufacturing", "Spice blending & distribution", "Foodservice & retail packing", "Flavor & extract production"]
+      }
+    },
+    "sampleCta": {
+      "title": "Need product samples or a formal spec sheet?",
+      "subtitle": "We can send samples and lab documentation ahead of any commercial order.",
+      "cta": "Request samples"
+    }
+  },
+  "certifications": {
+    "hero": {
+      "eyebrow": "Quality & compliance",
+      "title": "Certifications & standards",
+      "subtitle": "[Placeholder page — list only the certifications actually held, with certificate numbers and validity dates where applicable. Do not publish unverified claims.]"
+    },
+    "items": [
+      { "name": "ISO 22000", "description": "[Placeholder — confirm certification status] Food safety management system." },
+      { "name": "HACCP", "description": "[Placeholder — confirm certification status] Hazard Analysis and Critical Control Points." },
+      { "name": "Organic Certification", "description": "[Placeholder — confirm certification body: USDA Organic / EU Organic / other] for applicable product lines." },
+      { "name": "FDA Registration", "description": "[Placeholder — confirm FDA facility registration status for US-bound shipments.]" }
+    ],
+    "documentsTitle": "Documentation available on request",
+    "documents": [
+      "Certificate of Origin",
+      "Phytosanitary Certificate",
+      "Fumigation Certificate",
+      "Lab test / Certificate of Analysis",
+      "Bill of Lading & commercial invoice templates"
+    ],
+    "cta": {
+      "title": "Need a specific certificate for customs clearance?",
+      "cta": "Contact our export team"
+    }
+  },
+  "process": {
+    "hero": {
+      "eyebrow": "How we work",
+      "title": "From growing region to your container",
+      "subtitle": "A structured process designed for consistency, traceability and on-time delivery."
+    },
+    "steps": [
+      {
+        "title": "1. Sourcing",
+        "description": "We work directly with growing cooperatives and processing partners across Vietnam's key producing regions, building long-term relationships rather than one-off purchases."
+      },
+      {
+        "title": "2. Processing & Grading",
+        "description": "Raw material is cleaned, sorted and graded against agreed specifications — screen size, moisture, defect count and other buyer-specific criteria."
+      },
+      {
+        "title": "3. Quality Control",
+        "description": "Every lot is sampled and tested before approval. Lab reports and physical samples are shared with the buyer prior to shipment, and third-party inspection can be arranged."
+      },
+      {
+        "title": "4. Packing",
+        "description": "Products are packed to buyer specification — standard export packaging or custom private-label packaging — with moisture and pest control appropriate to each product line."
+      },
+      {
+        "title": "5. Export Documentation",
+        "description": "Certificate of Origin, phytosanitary certificate, fumigation certificate and commercial documents are prepared and verified ahead of container loading."
+      },
+      {
+        "title": "6. Shipping & Delivery",
+        "description": "We coordinate container loading and shipping schedules to the agreed Incoterms, keeping buyers updated from port of loading to port of destination."
+      }
+    ],
+    "factory": {
+      "title": "Facilities",
+      "subtitle": "[Placeholder — add facility/factory details: location, capacity, processing equipment, photos once available.]"
+    },
+    "cta": {
+      "title": "Have a specific process or documentation question?",
+      "cta": "Talk to our team"
+    }
+  },
+  "clients": {
+    "hero": {
+      "eyebrow": "Who we work with",
+      "title": "Clients & partners",
+      "subtitle": "[Placeholder — add logos and details of actual buyers/partners once approved for public use. Never publish a company's name or logo without their written permission.]"
+    },
+    "regionsTitle": "Markets we currently serve",
+    "regions": "[Placeholder — list destination countries/regions actually served, e.g. North America, EU, East Asia, Middle East.]",
+    "testimonialsTitle": "What partners say",
+    "testimonialsSubtitle": "[Placeholder — add approved testimonials from real buyers once available.]",
+    "cta": {
+      "title": "Interested in becoming a partner?",
+      "cta": "Start a conversation"
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Insights",
+      "title": "News & industry insights",
+      "subtitle": "Harvest updates, market trends and export guidance from the Whitehorse Foodtech team."
+    },
+    "empty": "New articles are on the way — check back soon.",
+    "backToList": "Back to all articles"
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your next order",
+      "subtitle": "For general inquiries, partnership questions or documentation requests, reach out and our export team will respond within 1–2 business days."
+    },
+    "info": {
+      "title": "Contact details",
+      "addressLabel": "Office",
+      "address": "[Company address — to be confirmed], Vietnam",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "hoursLabel": "Business hours",
+      "hours": "Monday–Saturday, 8:00–17:30 (GMT+7)"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Full name",
+      "company": "Company",
+      "email": "Business email",
+      "phone": "Phone (optional)",
+      "message": "Message",
+      "messagePlaceholder": "Tell us what you're looking for…",
+      "submit": "Send message",
+      "success": "Thank you — your message has been sent. We'll be in touch shortly.",
+      "error": "Something went wrong sending your message. Please try again or email us directly."
+    }
+  },
+  "rfq": {
+    "hero": {
+      "eyebrow": "Request a quote",
+      "title": "Get a formal quotation",
+      "subtitle": "Share your product, volume and destination and our export team will respond with pricing, lead time and shipping terms within 1–2 business days."
+    },
+    "form": {
+      "title": "Quote request",
+      "name": "Full name",
+      "company": "Company name",
+      "email": "Business email",
+      "phone": "Phone / WhatsApp (optional)",
+      "country": "Destination country",
+      "product": "Product of interest",
+      "productPlaceholder": "Select a product",
+      "productCoffee": "Coffee",
+      "productFruitPowder": "Freeze-Dried Fruit Powder",
+      "productAgri": "Premium Agri Raw Materials",
+      "productOther": "Other / not listed",
+      "volume": "Estimated order volume",
+      "volumePlaceholder": "e.g. 1 x 20ft container, 5 metric tons/month",
+      "incoterm": "Preferred Incoterm (optional)",
+      "incotermPlaceholder": "e.g. FOB, CIF, EXW",
+      "message": "Additional details",
+      "messagePlaceholder": "Packaging preferences, target price, certifications required, timeline…",
+      "submit": "Submit quote request",
+      "success": "Thank you — your quote request has been received. Our export team will respond within 1–2 business days.",
+      "error": "Something went wrong submitting your request. Please try again or email us directly."
+    }
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "privacyBody": "[Placeholder — replace with a real privacy policy before launch, covering what data is collected via the contact/RFQ forms, how it's stored and used, and how visitors can request deletion. Consider consulting a lawyer familiar with your target markets' data protection laws (e.g. GDPR for EU buyers).]",
+    "termsTitle": "Terms of Trade",
+    "termsBody": "[Placeholder — replace with your actual terms of trade: payment terms, order minimums, lead times, warranty/claims policy and dispute resolution process, before launch.]"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you're looking for doesn't exist or has moved.",
+    "cta": "Back to home"
+  }
+}
