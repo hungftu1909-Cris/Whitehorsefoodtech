@@ -36,7 +36,7 @@ export default async function ProductsPage({
       />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {PRODUCT_CATEGORIES.map((c) => (
             <Link
               key={c.slug}

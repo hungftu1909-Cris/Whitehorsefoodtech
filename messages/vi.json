@@ -11,6 +11,7 @@
     "productsCoffee": "Cà phê",
     "productsFruitPowder": "Bột hoa quả sấy thăng hoa",
     "productsAgri": "Nguyên liệu nông sản cao cấp",
+    "productsBirdsNest": "Yến chế biến sâu",
     "certifications": "Chứng nhận",
     "process": "Quy trình & Nhà máy",
     "clients": "Khách hàng & Đối tác",
@@ -92,18 +93,23 @@
     },
     "productsPreview": {
       "eyebrow": "Sản phẩm xuất khẩu",
-      "title": "Ba dòng sản phẩm. Một tiêu chuẩn chất lượng.",
-      "subtitle": "Từ cà phê nhân đến bột hoa quả sấy thăng hoa và nguyên liệu gia vị cao cấp, mọi danh mục đều được thu mua và phân loại theo tiêu chuẩn xuất khẩu.",
+      "title": "Bốn dòng sản phẩm. Một tiêu chuẩn chất lượng.",
+      "subtitle": "Từ cà phê nhân đến bột hoa quả sấy thăng hoa, yến chế biến sâu và nguyên liệu gia vị cao cấp, mọi danh mục đều được thu mua và phân loại theo tiêu chuẩn xuất khẩu.",
       "items": [
         {
           "title": "Cà phê",
-          "description": "Cà phê nhân Robusta và Arabica, cùng các lựa chọn rang xay và pha trộn theo yêu cầu, phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi.",
+          "description": "Cà phê nhân và rang xay, cùng các dòng chế biến sâu — bột cà phê hòa tan, tinh chất cà phê và cold brew cô đặc.",
           "cta": "Xem thông số cà phê"
         },
         {
           "title": "Bột hoa quả sấy thăng hoa",
-          "description": "Thanh long, xoài, chanh dây và nhiều loại khác — sấy thăng hoa để giữ trọn màu sắc, hương vị và dưỡng chất cho ngành sản xuất thực phẩm & đồ uống.",
+          "description": "Chanh dây, cam, xoài, mãng cầu, sầu riêng và thanh long — sấy thăng hoa để giữ trọn màu sắc, hương vị và dưỡng chất cho ngành sản xuất thực phẩm & đồ uống.",
           "cta": "Xem danh mục bột hoa quả"
+        },
+        {
+          "title": "Yến chế biến sâu",
+          "description": "Sản phẩm yến sào chế biến sâu (Yến) — nước yến chưng sẵn đóng chai và tinh chất yến nguyên chất, dành cho phân phối bán lẻ và dịch vụ ăn uống.",
+          "cta": "Xem dòng sản phẩm yến"
         },
         {
           "title": "Nguyên liệu nông sản cao cấp",
@@ -182,33 +188,34 @@
   "products": {
     "hero": {
       "eyebrow": "Sản phẩm của chúng tôi",
-      "title": "Cà phê, bột hoa quả và nguyên liệu nông sản đạt chuẩn xuất khẩu",
+      "title": "Cà phê, bột hoa quả, yến chế biến sâu và nguyên liệu nông sản đạt chuẩn xuất khẩu",
       "subtitle": "Mọi dòng sản phẩm đều được thu mua, phân loại và đóng gói theo yêu cầu khách hàng — có mẫu hàng và hồ sơ kiểm nghiệm trước khi giao."
     },
     "categories": {
       "coffee": {
         "name": "Cà phê",
         "slug": "coffee",
-        "tagline": "Cà phê nhân & rang Robusta và Arabica",
-        "description": "Thu mua từ Tây Nguyên, cà phê của chúng tôi được phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi để đáp ứng thông số kỹ thuật của khách hàng quốc tế — có sẵn dạng nhân xanh, rang, hoặc pha trộn theo yêu cầu.",
+        "tagline": "Cà phê nhân, rang, bột hòa tan, tinh chất & cold brew",
+        "description": "Thu mua từ Tây Nguyên, cà phê của chúng tôi được phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi để đáp ứng thông số kỹ thuật của khách hàng quốc tế — có sẵn dạng nhân xanh, rang nguyên hạt/xay, cùng các dòng chế biến sâu hơn: bột cà phê hòa tan, tinh chất cà phê dạng lỏng và cold brew cô đặc pha sẵn.",
         "specTitle": "Thông số điển hình",
         "specs": [
           "Robusta: Sàng 16/18, độ ẩm tối đa 12,5%, đen & vỡ tối đa 3–5%",
           "Arabica: Sàng 15+, độ ẩm tối đa 12%, chế biến ướt hoàn toàn hoặc tự nhiên",
-          "Đóng gói: bao đay 60kg có lót GrainPro, hoặc hút chân không theo yêu cầu",
-          "Nhận rang và pha trộn theo yêu cầu cho chương trình nhãn hàng riêng"
+          "Dòng chế biến sâu: bột hòa tan sấy phun/sấy thăng hoa, tinh chất cà phê chiết lạnh, cold brew cô đặc không đường — tùy chỉnh nồng độ và bao bì theo yêu cầu",
+          "Đóng gói: bao đay 60kg có lót GrainPro (cà phê nhân); túi, thùng phuy hoặc bag-in-box cho bột/tinh chất/cold brew",
+          "Nhận rang, phối chế và đóng gói nhãn hàng riêng theo yêu cầu"
         ],
         "applicationsTitle": "Ứng dụng phổ biến",
-        "applications": ["Nhà rang xay", "Sản xuất cà phê hòa tan", "Pha trộn nhãn hàng riêng", "Dịch vụ ăn uống"]
+        "applications": ["Nhà rang xay", "Sản xuất cà phê hòa tan & RTD", "Thương hiệu cold brew & cà phê lon", "Pha trộn nhãn hàng riêng", "Dịch vụ ăn uống"]
       },
       "fruitPowder": {
         "name": "Bột hoa quả sấy thăng hoa",
         "slug": "freeze-dried-fruit-powder",
-        "tagline": "Thanh long, xoài, chanh dây & nhiều loại khác",
+        "tagline": "Chanh dây, cam, xoài, mãng cầu, sầu riêng, thanh long",
         "description": "Công nghệ sấy thăng hoa giữ lại màu sắc, hương thơm và dưỡng chất tốt hơn hẳn so với sấy phun hoặc sấy nhiệt, tạo ra loại bột mịn, ổn định, lý tưởng cho các sản phẩm thực phẩm và đồ uống chế biến.",
         "specTitle": "Thông số điển hình",
         "specs": [
-          "Trái cây: thanh long, xoài, chanh dây, mãng cầu, măng cụt (nhận trái cây theo yêu cầu)",
+          "Trái cây: chanh dây, cam, xoài, mãng cầu, sầu riêng, thanh long (nhận trái cây theo yêu cầu)",
           "Độ ẩm: tối đa 3–5% để đảm bảo hạn sử dụng lâu dài",
           "Kích thước hạt: tiêu chuẩn 80–100 mesh, có thể tùy chỉnh theo yêu cầu",
           "Đóng gói: túi nhôm kèm gói hút ẩm, 1kg–25kg, có thùng phuy số lượng lớn"
@@ -230,6 +237,21 @@
         ],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Sản xuất thực phẩm", "Pha trộn & phân phối gia vị", "Đóng gói bán lẻ & dịch vụ ăn uống", "Sản xuất hương liệu & chiết xuất"]
+      },
+      "birdsNest": {
+        "name": "Yến chế biến sâu",
+        "slug": "processed-birds-nest",
+        "tagline": "Yến sào chế biến sâu (Yến)",
+        "description": "[Nội dung mẫu — xác nhận dòng sản phẩm thực tế trước khi đăng] Việt Nam là một trong những nước sản xuất yến sào hàng đầu; chúng tôi cung cấp các sản phẩm yến chế biến sâu, sẵn sàng phân phối bán lẻ và dịch vụ ăn uống thay vì chỉ yến thô/yến tinh chế.",
+        "specTitle": "Thông số điển hình",
+        "specs": [
+          "Dòng sản phẩm: nước yến chưng sẵn đóng chai (đường phèn, ít đường, nhân sâm và các vị khác), tinh chất yến nguyên chất, yến khô/tinh chế nguyên tổ",
+          "[Nội dung mẫu — xác nhận] Thu mua và chế biến tại cơ sở đạt chuẩn an toàn thực phẩm; bổ sung thông tin chứng nhận thực tế khi có",
+          "Đóng gói: chai thủy tinh bán lẻ (thường 70ml, dạng lốc nhiều chai) cho dòng nước yến; hũ hoặc hút chân không cho yến khô — nhận đóng gói nhãn hàng riêng",
+          "Hạn sử dụng và yêu cầu bảo quản lạnh khác nhau theo từng dòng sản phẩm — liên hệ đội ngũ xuất khẩu để biết chi tiết"
+        ],
+        "applicationsTitle": "Ứng dụng phổ biến",
+        "applications": ["Bán lẻ thực phẩm sức khỏe", "Thương hiệu đồ uống RTD nhãn hàng riêng", "Bộ quà tặng bán lẻ cao cấp", "Phân phối dịch vụ ăn uống & nhà thuốc"]
       }
     },
     "sampleCta": {

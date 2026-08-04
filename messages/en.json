@@ -11,6 +11,7 @@
     "productsCoffee": "Coffee",
     "productsFruitPowder": "Freeze-Dried Fruit Powder",
     "productsAgri": "Premium Agri Raw Materials",
+    "productsBirdsNest": "Processed Bird's Nest",
     "certifications": "Certifications",
     "process": "Process & Factory",
     "clients": "Clients & Partners",
@@ -92,18 +93,23 @@
     },
     "productsPreview": {
       "eyebrow": "What we export",
-      "title": "Three product lines. One quality standard.",
-      "subtitle": "From green coffee to freeze-dried fruit powder and premium spice materials, every category is sourced and graded to export specification.",
+      "title": "Four product lines. One quality standard.",
+      "subtitle": "From green coffee to freeze-dried fruit powder, processed bird's nest and premium spice materials, every category is sourced and graded to export specification.",
       "items": [
         {
           "title": "Coffee",
-          "description": "Robusta and Arabica green beans, plus roasted and custom-blend options, graded by screen size, moisture and defect count.",
+          "description": "Green beans and roasted coffee, plus deeper-processed lines — soluble powder, liquid extract and cold brew concentrate.",
           "cta": "View coffee specifications"
         },
         {
           "title": "Freeze-Dried Fruit Powder",
-          "description": "Dragon fruit, mango, passion fruit and more — freeze-dried to preserve color, flavor and nutrients for F&B manufacturing.",
+          "description": "Passion fruit, orange, mango, soursop, durian and dragon fruit — freeze-dried to preserve color, flavor and nutrients for F&B manufacturing.",
           "cta": "View fruit powder range"
+        },
+        {
+          "title": "Processed Bird's Nest",
+          "description": "Deep-processed edible bird's nest (Yến) — ready-to-drink bottled formats and pure extract, built for retail and foodservice distribution.",
+          "cta": "View bird's nest range"
         },
         {
           "title": "Premium Agri Raw Materials",
@@ -182,33 +188,34 @@
   "products": {
     "hero": {
       "eyebrow": "Our products",
-      "title": "Export-grade coffee, fruit powder and agricultural raw materials",
+      "title": "Export-grade coffee, fruit powder, bird's nest and agricultural raw materials",
       "subtitle": "Every product line is sourced, graded and packed to buyer specification — with samples and lab documentation available before shipment."
     },
     "categories": {
       "coffee": {
         "name": "Coffee",
         "slug": "coffee",
-        "tagline": "Robusta & Arabica green and roasted coffee",
-        "description": "Sourced from Vietnam's Central Highlands, our coffee is graded by screen size, moisture content and defect count to match international buyer specifications — available as green beans, roasted, or custom blends.",
+        "tagline": "Green beans, roasted, powder, extract & cold brew",
+        "description": "Sourced from Vietnam's Central Highlands, our coffee is graded by screen size, moisture content and defect count to match international buyer specifications — available as green beans and roasted whole/ground coffee, plus deeper-processed lines: soluble coffee powder, liquid coffee extract and ready-to-drink cold brew concentrate.",
         "specTitle": "Typical specifications",
         "specs": [
           "Robusta: Screen 16/18, moisture 12.5% max, black & broken 3–5% max",
           "Arabica: Screen 15+, moisture 12% max, fully washed or natural process",
-          "Packaging: 60kg jute bags with GrainPro liner, or vacuum-sealed on request",
-          "Custom roasting and blending available for private-label programs"
+          "Processed lines: spray-dried/freeze-dried soluble powder, cold-extracted liquid coffee extract, unsweetened cold brew concentrate — custom concentration and packaging on request",
+          "Packaging: 60kg jute bags with GrainPro liner (green beans); pouches, drums or bag-in-box for powder/extract/cold brew",
+          "Custom roasting, formulation and private-label packaging available"
         ],
         "applicationsTitle": "Common applications",
-        "applications": ["Roasters", "Instant coffee manufacturing", "Private-label retail blends", "Foodservice"]
+        "applications": ["Roasters", "Instant & RTD coffee manufacturing", "Cold brew & canned coffee brands", "Private-label retail blends", "Foodservice"]
       },
       "fruitPowder": {
         "name": "Freeze-Dried Fruit Powder",
         "slug": "freeze-dried-fruit-powder",
-        "tagline": "Dragon fruit, mango, passion fruit & more",
+        "tagline": "Passion fruit, orange, mango, soursop, durian, dragon fruit",
         "description": "Freeze-drying locks in color, aroma and nutrients far better than spray- or heat-drying, producing a fine, stable powder ideal for formulated food and beverage products.",
         "specTitle": "Typical specifications",
         "specs": [
-          "Fruits: dragon fruit, mango, passion fruit, soursop, mangosteen (custom fruits on request)",
+          "Fruits: passion fruit, orange, mango, soursop, durian, dragon fruit (custom fruits on request)",
           "Moisture: 3–5% max for extended shelf stability",
           "Mesh size: 80–100 mesh standard, custom particle size on request",
           "Packaging: aluminum foil bags with desiccant, 1kg–25kg, bulk drums available"
@@ -230,6 +237,21 @@
         ],
         "applicationsTitle": "Common applications",
         "applications": ["Food manufacturing", "Spice blending & distribution", "Foodservice & retail packing", "Flavor & extract production"]
+      },
+      "birdsNest": {
+        "name": "Processed Bird's Nest",
+        "slug": "processed-birds-nest",
+        "tagline": "Deep-processed edible bird's nest (Yến)",
+        "description": "[Placeholder — confirm actual product line before publishing] Vietnam is a major producer of edible bird's nest (Yến); we offer deep-processed, ready-to-sell formats built for retail and foodservice distribution rather than raw/cleaned nest alone.",
+        "specTitle": "Typical specifications",
+        "specs": [
+          "Formats: bottled ready-to-drink bird's nest drink (rock sugar, low-sugar, ginseng and other variants), pure bird's nest extract, dried/cleaned whole nest",
+          "[Placeholder — confirm] Sourced and processed under food-safety-compliant facilities; add real certification detail once confirmed",
+          "Packaging: retail glass bottles (typically 70ml multi-packs) for RTD lines; jars or vacuum packs for dried nest — private-label packaging available",
+          "Shelf life and cold-chain requirements vary by format — confirm with our export team"
+        ],
+        "applicationsTitle": "Common applications",
+        "applications": ["Health food & wellness retail", "Private-label RTD beverage brands", "Gifting & premium retail sets", "Foodservice & pharmacy distribution"]
       }
     },
     "sampleCta": {

@@ -6,6 +6,11 @@ export const PRODUCT_CATEGORIES = [
     categoryKey: "fruitPowder" as const,
   },
   {
+    slug: "processed-birds-nest",
+    key: "productsBirdsNest" as const,
+    categoryKey: "birdsNest" as const,
+  },
+  {
     slug: "premium-agri-raw-materials",
     key: "productsAgri" as const,
     categoryKey: "agriRaw" as const,
