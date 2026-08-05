@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
+import { Reveal } from "@/components/ui/reveal";
 import { Compass, ShieldCheck, MessageCircle, Handshake } from "lucide-react";
 
 const VALUE_ICONS = [Compass, ShieldCheck, MessageCircle, Handshake];
@@ -34,32 +35,34 @@ export default async function AboutPage({
       <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <SmartImage
-          src="/images/about.jpg"
-          alt="Whitehorse Foodtech — from freeze-drying technology to Vietnam's agricultural value chain"
-          placeholderLabel="Company / capability photography needed"
-          aspect="aspect-[16/9]"
-          sizes="(min-width: 1024px) 64rem, 100vw"
-        />
-        <div className="mx-auto mt-10 max-w-3xl">
+        <Reveal>
+          <SmartImage
+            src="/images/about.jpg"
+            alt="Whitehorse Foodtech — from freeze-drying technology to Vietnam's agricultural value chain"
+            placeholderLabel="Company / capability photography needed"
+            aspect="aspect-[16/9]"
+            sizes="(min-width: 1024px) 64rem, 100vw"
+          />
+        </Reveal>
+        <Reveal delay={150} className="mx-auto mt-10 max-w-3xl">
           <h2 className="font-serif text-2xl font-semibold text-foreground">
             {t("origin.title")}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             {t("origin.body")}
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
+        <Reveal className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
           <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
             {t("mission.title")}
           </p>
           <p className="mt-4 font-serif text-2xl leading-snug text-balance italic md:text-3xl">
             &ldquo;{t("mission.body")}&rdquo;
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="border-y border-border bg-muted/30">
@@ -68,12 +71,12 @@ export default async function AboutPage({
             {t("stats.title")}
           </h2>
           <dl className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
+            {stats.map((stat, i) => (
+              <Reveal key={stat.label} as="div" delay={i * 100} className="text-center">
                 <dt className="sr-only">{stat.label}</dt>
                 <dd className="font-serif text-4xl font-semibold text-accent">{stat.value}</dd>
                 <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
-              </div>
+              </Reveal>
             ))}
           </dl>
         </div>
@@ -85,7 +88,7 @@ export default async function AboutPage({
           {values.map((value, i) => {
             const Icon = VALUE_ICONS[i % VALUE_ICONS.length];
             return (
-              <div key={value.title} className="text-center">
+              <Reveal key={value.title} delay={i * 100} className="text-center">
                 <div className="mx-auto flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
                   <Icon className="size-5" aria-hidden="true" />
                 </div>
@@ -95,19 +98,19 @@ export default async function AboutPage({
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {value.description}
                 </p>
-              </div>
+              </Reveal>
             );
           })}
         </div>
       </section>
 
       <section className="border-t border-border bg-muted/30">
-        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
+        <Reveal className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
           <h2 className="font-serif text-2xl font-semibold text-foreground">
             {t("team.title")}
           </h2>
           <p className="mt-3 text-sm text-muted-foreground">{t("team.subtitle")}</p>
-        </div>
+        </Reveal>
       </section>
 
       <CtaSection title={t("cta.title")} cta={t("cta.cta")} href="/contact" />

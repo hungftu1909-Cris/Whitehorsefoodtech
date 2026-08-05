@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -85,6 +86,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <LocaleSwitcher className="hidden sm:flex" />
+          <ThemeToggle className="cursor-pointer" />
           <Link
             href="/rfq"
             className={cn(buttonVariants({ variant: "default" }), "hidden cursor-pointer sm:inline-flex")}

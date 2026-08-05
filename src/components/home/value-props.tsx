@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Sprout, ShieldCheck, FileCheck2, Users } from "lucide-react";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { Reveal } from "@/components/ui/reveal";
 
 const ICONS = [Sprout, ShieldCheck, FileCheck2, Users];
 
@@ -19,7 +20,7 @@ export function ValueProps() {
         {items.map((item, i) => {
           const Icon = ICONS[i % ICONS.length];
           return (
-            <div key={item.title}>
+            <Reveal key={item.title} delay={i * 100}>
               <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
                 <Icon className="size-5" aria-hidden="true" />
               </div>
@@ -29,7 +30,7 @@ export function ValueProps() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
-            </div>
+            </Reveal>
           );
         })}
       </div>

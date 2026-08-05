@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ShieldCheck, FileText } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
+import { Reveal } from "@/components/ui/reveal";
 
 export async function generateMetadata({
   params,
@@ -31,8 +32,8 @@ export default async function CertificationsPage({
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map((item) => (
-            <div key={item.name} className="rounded-lg border border-border bg-card p-6">
+          {items.map((item, i) => (
+            <Reveal key={item.name} delay={i * 100} className="rounded-lg border border-border bg-card p-6">
               <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
                 <ShieldCheck className="size-5" aria-hidden="true" />
               </div>
@@ -42,7 +43,7 @@ export default async function CertificationsPage({
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>

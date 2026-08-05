@@ -5,6 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
+import { Reveal } from "@/components/ui/reveal";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { routing } from "@/i18n/routing";
@@ -58,14 +59,16 @@ export default async function ProductCategoryPage({
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-          <SmartImage
-            src={`/images/products/${category.slug}-detail.jpg`}
-            alt={t("name")}
-            placeholderLabel={`${t("name")} — product photography needed`}
-            aspect="aspect-[3/2]"
-          />
+          <Reveal>
+            <SmartImage
+              src={`/images/products/${category.slug}-detail.jpg`}
+              alt={t("name")}
+              placeholderLabel={`${t("name")} — product photography needed`}
+              aspect="aspect-[3/2]"
+            />
+          </Reveal>
 
-          <div>
+          <Reveal delay={150}>
             <p className="text-base leading-relaxed text-muted-foreground">
               {t("description")}
             </p>
@@ -92,7 +95,7 @@ export default async function ProductCategoryPage({
                 </Badge>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 

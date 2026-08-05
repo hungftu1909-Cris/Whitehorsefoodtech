@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/accordion";
 import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
 import { LocaleSwitcher } from "./locale-switcher";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { Logo } from "./logo";
 
 export function MobileNav() {
@@ -98,8 +99,9 @@ export function MobileNav() {
             {t("requestQuote")}
           </Link>
 
-          <div className="mt-6 border-t border-border pt-4">
+          <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
             <LocaleSwitcher />
+            <ThemeToggle className="cursor-pointer" />
           </div>
         </nav>
       </SheetContent>

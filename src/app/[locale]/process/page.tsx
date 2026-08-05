@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
+import { Reveal } from "@/components/ui/reveal";
 
 export async function generateMetadata({
   params,
@@ -30,8 +31,8 @@ export default async function ProcessPage({
 
       <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <ol className="relative space-y-12 border-l border-border pl-8">
-          {steps.map((step) => (
-            <li key={step.title} className="relative">
+          {steps.map((step, i) => (
+            <Reveal key={step.title} as="li" delay={i * 80} className="relative">
               <span
                 className="absolute top-0 -left-[calc(2rem+5px)] flex size-2.5 -translate-x-1/2 items-center justify-center rounded-full bg-accent"
                 aria-hidden="true"
@@ -42,28 +43,30 @@ export default async function ProcessPage({
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 {step.description}
               </p>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </section>
 
       <section className="border-t border-border bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-          <SmartImage
-            src="/images/factory.jpg"
-            alt="Whitehorse Foodtech processing facility — from raw ingredients to export logistics"
-            placeholderLabel="Factory / facility photography needed"
-            aspect="aspect-[16/9]"
-            sizes="(min-width: 1024px) 80rem, 100vw"
-          />
-          <div className="mx-auto mt-10 max-w-2xl text-center">
+          <Reveal>
+            <SmartImage
+              src="/images/factory.jpg"
+              alt="Whitehorse Foodtech processing facility — from raw ingredients to export logistics"
+              placeholderLabel="Factory / facility photography needed"
+              aspect="aspect-[16/9]"
+              sizes="(min-width: 1024px) 80rem, 100vw"
+            />
+          </Reveal>
+          <Reveal delay={150} className="mx-auto mt-10 max-w-2xl text-center">
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("factory.title")}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {t("factory.subtitle")}
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 

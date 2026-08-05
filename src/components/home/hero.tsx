@@ -1,16 +1,25 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
-import { SmartImage } from "@/components/ui/smart-image";
+import { ImageCarousel, type CarouselSlide } from "@/components/ui/image-carousel";
+import { Reveal } from "@/components/ui/reveal";
+import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
+
+const CANDIDATE_SLIDES: CarouselSlide[] = [
+  { src: "/images/hero.jpg", alt: "Coffee cherries and freeze-dried fruit — Whitehorse Foodtech premium agricultural exports" },
+  { src: "/images/about.jpg", alt: "Whitehorse Foodtech — sourcing, R&D, factories and global export network" },
+  { src: "/images/factory.jpg", alt: "Whitehorse Foodtech processing facility" },
+];
 
 export function Hero() {
   const t = useTranslations("home.hero");
+  const slides = CANDIDATE_SLIDES.filter((s) => hasPublicFile(s.src));
 
   return (
     <section className="border-b border-border bg-muted/40">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2 lg:items-center lg:px-8">
-        <div>
+        <Reveal>
           <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
             {t("eyebrow")}
           </p>
@@ -37,17 +46,17 @@ export function Hero() {
               {t("ctaSecondary")}
             </Link>
           </div>
-        </div>
+        </Reveal>
 
-        <SmartImage
-          src="/images/hero.jpg"
-          alt="Coffee cherries and freeze-dried fruit — Whitehorse Foodtech premium agricultural exports"
-          placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
-          aspect="aspect-[16/9]"
-          className="w-full"
-          sizes="(min-width: 1024px) 50vw, 100vw"
-          priority
-        />
+        <Reveal delay={150}>
+          <ImageCarousel
+            slides={slides}
+            placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
+            aspect="aspect-[16/9]"
+            className="w-full"
+            priority
+          />
+        </Reveal>
       </div>
     </section>
   );

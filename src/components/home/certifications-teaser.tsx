@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
+import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
 export function CertificationsTeaser() {
@@ -9,7 +10,7 @@ export function CertificationsTeaser() {
 
   return (
     <section className="border-t border-border bg-muted/30">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-16 text-center sm:px-6 lg:px-8">
+      <Reveal className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-16 text-center sm:px-6 lg:px-8">
         <div className="flex size-12 items-center justify-center rounded-full bg-accent/15 text-accent">
           <ShieldCheck className="size-6" aria-hidden="true" />
         </div>
@@ -23,7 +24,7 @@ export function CertificationsTeaser() {
         <Link href="/certifications" className={cn(buttonVariants({ variant: "outline" }), "mt-2 cursor-pointer")}>
           {t("cta")}
         </Link>
-      </div>
+      </Reveal>
     </section>
   );
 }

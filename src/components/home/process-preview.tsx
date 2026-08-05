@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
 export function ProcessPreview() {
@@ -22,7 +23,12 @@ export function ProcessPreview() {
 
       <ol className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, i) => (
-          <li key={step.title} className="relative border-t-2 border-accent pt-5">
+          <Reveal
+            key={step.title}
+            as="li"
+            delay={i * 100}
+            className="relative border-t-2 border-accent pt-5"
+          >
             <span className="font-serif text-3xl font-semibold text-accent/50">
               {String(i + 1).padStart(2, "0")}
             </span>
@@ -32,7 +38,7 @@ export function ProcessPreview() {
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               {step.description}
             </p>
-          </li>
+          </Reveal>
         ))}
       </ol>
     </section>
