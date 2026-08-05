@@ -37,18 +37,29 @@ export default async function AboutPage({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <SmartImage
             src="/images/about.jpg"
-            alt="Whitehorse Foodtech team and office"
-            placeholderLabel="Team / office photography needed"
+            alt="Whitehorse Foodtech — from freeze-drying technology to Vietnam's agricultural value chain"
+            placeholderLabel="Company / capability photography needed"
             aspect="aspect-[4/3]"
           />
           <div>
             <h2 className="font-serif text-2xl font-semibold text-foreground">
-              {t("mission.title")}
+              {t("origin.title")}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              {t("mission.body")}
+              {t("origin.body")}
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
+            {t("mission.title")}
+          </p>
+          <p className="mt-4 font-serif text-2xl leading-snug text-balance italic md:text-3xl">
+            &ldquo;{t("mission.body")}&rdquo;
+          </p>
         </div>
       </section>
 

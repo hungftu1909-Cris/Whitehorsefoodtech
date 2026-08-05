@@ -152,19 +152,23 @@
     "hero": {
       "eyebrow": "Về Whitehorse Foodtech",
       "title": "Kết nối nông nghiệp Việt Nam với chuỗi cung ứng thực phẩm & đồ uống toàn cầu",
-      "subtitle": "[Nội dung mẫu — bổ sung câu chuyện thành lập, năm thành lập và trụ sở chính.]"
+      "subtitle": "Từ nhà sản xuất công nghệ sấy thăng hoa hàng đầu Việt Nam, trở thành kiến trúc sư của chuỗi giá trị nông sản cao cấp Việt Nam."
+    },
+    "origin": {
+      "title": "Câu chuyện của chúng tôi",
+      "body": "Whitehorse Foodtech khởi nguồn từ một trong những đơn vị sản xuất máy sấy thăng hoa hàng đầu Việt Nam, với nhiều năm gia công các sản phẩm sấy thăng hoa cao cấp cho đối tác trong và ngoài nước. Nền tảng công nghệ và chuyên môn chế biến sâu tích lũy qua thời gian đó trở thành điểm khởi đầu cho một sứ mệnh lớn hơn: trở thành nhà kiến trúc sư của chuỗi giá trị nông sản Việt Nam từ đầu đến cuối — xây dựng nền tảng nguyên liệu cao cấp, chế biến sâu, và là cầu nối đưa nông sản Việt vươn lên bản đồ nguyên liệu toàn cầu."
     },
     "mission": {
       "title": "Sứ mệnh của chúng tôi",
-      "body": "[Nội dung mẫu — mô tả sứ mệnh công ty trong 2–3 câu: ví dụ mang đến sản phẩm nông nghiệp Việt Nam đạt chuẩn xuất khẩu, chất lượng ổn định và có thể truy xuất nguồn gốc cho các nhà sản xuất toàn cầu, đồng thời hỗ trợ nông dân và hợp tác xã tại nguồn.]"
+      "body": "Chúng tôi xây dựng một hệ thống thực phẩm tốt đẹp hơn — kết nối những nguyên liệu tinh túy nhất của Việt Nam với công nghệ, chất lượng và thế giới."
     },
     "stats": {
       "title": "Whitehorse Foodtech qua những con số",
       "items": [
-        { "value": "[#]", "label": "Quốc gia phục vụ" },
-        { "value": "[#]", "label": "Tấn xuất khẩu / năm" },
-        { "value": "[#]", "label": "Vùng trồng đối tác" },
-        { "value": "[#]", "label": "Năm kinh nghiệm xuất khẩu" }
+        { "value": "30", "label": "Quốc gia phục vụ" },
+        { "value": "100K+", "label": "Tấn xuất khẩu / năm" },
+        { "value": "3.000+", "label": "Vùng trồng đối tác" },
+        { "value": "5", "label": "Năm kinh nghiệm xuất khẩu" }
       ]
     },
     "values": {

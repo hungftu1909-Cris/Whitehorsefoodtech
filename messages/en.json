@@ -152,19 +152,23 @@
     "hero": {
       "eyebrow": "About Whitehorse Foodtech",
       "title": "Connecting Vietnamese agriculture to global food & beverage supply chains",
-      "subtitle": "[Placeholder — add founding story, year established and headquarters location.]"
+      "subtitle": "From Vietnam's leading freeze-drying technology manufacturer to architect of the country's premium agricultural value chain."
+    },
+    "origin": {
+      "title": "Our story",
+      "body": "Whitehorse Foodtech began as one of Vietnam's leading manufacturers of freeze-drying equipment, spending years perfecting premium freeze-dried processing on behalf of partners at home and abroad. That technical foundation became the starting point for something bigger: a company built to architect Vietnam's agricultural value chain end to end — developing a platform for premium, deep-processed ingredients, and building the bridge that carries Vietnamese agriculture onto the global ingredient map."
     },
     "mission": {
       "title": "Our mission",
-      "body": "[Placeholder — describe the company's mission in 2–3 sentences: e.g. to deliver consistent, traceable, export-grade agricultural products from Vietnam to global manufacturers, while supporting the growers and cooperatives at the source.]"
+      "body": "We build a better food system — connecting Vietnam's finest ingredients with technology, quality, and the world."
     },
     "stats": {
       "title": "Whitehorse Foodtech at a glance",
       "items": [
-        { "value": "[#]", "label": "Countries served" },
-        { "value": "[#]", "label": "Metric tons exported / year" },
-        { "value": "[#]", "label": "Partner growing regions" },
-        { "value": "[#]", "label": "Years in export trade" }
+        { "value": "30", "label": "Countries served" },
+        { "value": "100K+", "label": "Metric tons exported / year" },
+        { "value": "3,000+", "label": "Partner growing regions" },
+        { "value": "5", "label": "Years in export trade" }
       ]
     },
     "values": {
