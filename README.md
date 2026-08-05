@@ -89,7 +89,9 @@ spot that needs a real answer before this goes live. In particular:
 
 Source is on GitHub: https://github.com/hungftu1909-Cris/Whitehorsefoodtech
 
+- [`docs/deployment-vercel.md`](docs/deployment-vercel.md) — current
+  target: Vercel (zero-config, auto-deploy on push, recommended)
 - [`docs/deployment-namecheap-vps.md`](docs/deployment-namecheap-vps.md) —
-  current target: Namecheap VPS (Node.js + PM2 + Nginx + Let's Encrypt)
+  alternative: Namecheap VPS (Node.js + PM2 + Nginx + Let's Encrypt)
 - [`docs/deployment.md`](docs/deployment.md) — alternative: Hostinger
   Node.js hosting
