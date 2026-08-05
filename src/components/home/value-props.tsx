@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl";
-import { Sprout, ShieldCheck, FileCheck2, Users } from "lucide-react";
+import { Sprout, ShieldCheck, FileCheck2, Handshake } from "lucide-react";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 
-const ICONS = [Sprout, ShieldCheck, FileCheck2, Users];
+// Matches home.valueProps.items order: direct sourcing, documented quality,
+// export logistics, partnership (not just supply).
+const ICONS = [Sprout, ShieldCheck, FileCheck2, Handshake];
 
 export function ValueProps() {
   const t = useTranslations("home.valueProps");
