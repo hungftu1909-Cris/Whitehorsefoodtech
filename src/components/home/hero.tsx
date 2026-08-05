@@ -41,10 +41,11 @@ export function Hero() {
 
         <SmartImage
           src="/images/hero.jpg"
-          alt="Whitehorse Foodtech coffee and premium agricultural exports"
+          alt="Coffee cherries and freeze-dried fruit — Whitehorse Foodtech premium agricultural exports"
           placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
-          aspect="aspect-[5/4]"
+          aspect="aspect-[16/9]"
           className="w-full"
+          sizes="(min-width: 1024px) 50vw, 100vw"
           priority
         />
       </div>

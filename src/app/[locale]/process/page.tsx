@@ -48,18 +48,19 @@ export default async function ProcessPage({
       </section>
 
       <section className="border-t border-border bg-muted/30">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2 lg:items-center lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
           <SmartImage
             src="/images/factory.jpg"
-            alt="Whitehorse Foodtech processing facility"
+            alt="Whitehorse Foodtech processing facility — from raw ingredients to export logistics"
             placeholderLabel="Factory / facility photography needed"
-            aspect="aspect-[4/3]"
+            aspect="aspect-[16/9]"
+            sizes="(min-width: 1024px) 80rem, 100vw"
           />
-          <div>
+          <div className="mx-auto mt-10 max-w-2xl text-center">
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("factory.title")}
             </h2>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {t("factory.subtitle")}
             </p>
           </div>
