@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { pageMetadata } from "@/lib/seo";
 import { Compass, ShieldCheck, MessageCircle, Handshake } from "lucide-react";
 
@@ -81,7 +82,9 @@ export default async function AboutPage({
             {stats.map((stat, i) => (
               <Reveal key={stat.label} as="div" delay={i * 100} className="text-center">
                 <dt className="sr-only">{stat.label}</dt>
-                <dd className="font-serif text-4xl font-semibold text-accent">{stat.value}</dd>
+                <dd className="font-serif text-4xl font-semibold text-accent">
+                  <AnimatedCounter value={stat.value} />
+                </dd>
                 <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
               </Reveal>
             ))}

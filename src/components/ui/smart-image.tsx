@@ -38,7 +38,9 @@ export function SmartImage({
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover"
+        // group-hover only fires inside a `.group` ancestor (e.g. a product
+        // card <Link>) — harmless no-op everywhere else.
+        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
     </div>
   );

@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { FloatingRfqCta } from "@/components/layout/floating-rfq-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -101,6 +102,7 @@ export default async function LocaleLayout({
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
+            <FloatingRfqCta />
             <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>

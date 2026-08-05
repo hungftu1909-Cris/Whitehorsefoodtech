@@ -1,8 +1,10 @@
 import { useTranslations } from "next-intl";
+import { Package } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { ImageCarousel, type CarouselSlide } from "@/components/ui/image-carousel";
 import { Reveal } from "@/components/ui/reveal";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
@@ -48,7 +50,7 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={150}>
+        <Reveal delay={150} className="relative">
           <ImageCarousel
             slides={slides}
             placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
@@ -56,6 +58,18 @@ export function Hero() {
             className="w-full"
             priority
           />
+
+          <div className="absolute -bottom-6 left-4 flex items-center gap-3 rounded-lg border border-border bg-card py-3 pr-5 pl-4 shadow-lg sm:left-6">
+            <div className="flex size-9 shrink-0 items-center justify-center rounded-md bg-accent/15 text-accent">
+              <Package className="size-5" aria-hidden="true" />
+            </div>
+            <div className="leading-tight">
+              <p className="font-serif text-xl font-semibold text-foreground">
+                <AnimatedCounter value={t("badgeValue")} />
+              </p>
+              <p className="text-xs text-muted-foreground">{t("badgeLabel")}</p>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

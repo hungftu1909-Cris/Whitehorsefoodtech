@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/reveal";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 /**
  * Scale/credibility numbers surfaced right on the homepage — reuses the
@@ -18,7 +19,7 @@ export function StatsStrip() {
             <Reveal key={stat.label} delay={i * 80} className="text-center md:text-left">
               <dt className="sr-only">{stat.label}</dt>
               <dd className="font-serif text-3xl font-semibold text-accent md:text-4xl">
-                {stat.value}
+                <AnimatedCounter value={stat.value} />
               </dd>
               <p className="mt-1 text-xs text-primary-foreground/70 md:text-sm">{stat.label}</p>
             </Reveal>
