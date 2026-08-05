@@ -26,7 +26,7 @@ export function ProductsPreview() {
                   src={`/images/products/${category.slug}-card.jpg`}
                   alt={item.title}
                   placeholderLabel={`${item.title} — photo needed`}
-                  aspect="aspect-[4/3]"
+                  aspect="aspect-[3/2]"
                   className="rounded-none border-0 border-b border-border"
                 />
                 <div className="p-6">

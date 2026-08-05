@@ -34,21 +34,20 @@ export default async function AboutPage({
       <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-          <SmartImage
-            src="/images/about.jpg"
-            alt="Whitehorse Foodtech — from freeze-drying technology to Vietnam's agricultural value chain"
-            placeholderLabel="Company / capability photography needed"
-            aspect="aspect-[4/3]"
-          />
-          <div>
-            <h2 className="font-serif text-2xl font-semibold text-foreground">
-              {t("origin.title")}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              {t("origin.body")}
-            </p>
-          </div>
+        <SmartImage
+          src="/images/about.jpg"
+          alt="Whitehorse Foodtech — from freeze-drying technology to Vietnam's agricultural value chain"
+          placeholderLabel="Company / capability photography needed"
+          aspect="aspect-[16/9]"
+          sizes="(min-width: 1024px) 64rem, 100vw"
+        />
+        <div className="mx-auto mt-10 max-w-3xl">
+          <h2 className="font-serif text-2xl font-semibold text-foreground">
+            {t("origin.title")}
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            {t("origin.body")}
+          </p>
         </div>
       </section>
 

@@ -60,10 +60,15 @@ spot that needs a real answer before this goes live. In particular:
       `src/app/apple-icon.png` and the OG image are all generated from it.
       If a vector/SVG source becomes available later, re-export from that
       instead for crisper edges at all sizes.
-- [ ] **Photography** — drop licensed/real photos into `public/images/...`
-      using the exact filenames listed in [`public/images/README.md`](public/images/README.md)
-      and they replace the placeholders automatically (see
-      `src/components/ui/smart-image.tsx`).
+- [x] **Product photography** — the 4 product category images and the About
+      page banner are in (`public/images/products/*`, `public/images/about.jpg`;
+      originals in `brand/marketing/`).
+- [ ] **Remaining photography** — hero (`hero.jpg`), factory (`factory.jpg`)
+      and blog cover images are still placeholders. Drop files into
+      `public/images/...` using the exact filenames listed in
+      [`public/images/README.md`](public/images/README.md) and they replace
+      the placeholders automatically (see `src/components/ui/smart-image.tsx`).
+      Product images use a 3:2 aspect ratio to match the supplied artwork.
 - [ ] **Company details** — `src/lib/site.ts` has placeholder address, phone
       and email. Update these (they feed the footer, contact page and
       structured data).
