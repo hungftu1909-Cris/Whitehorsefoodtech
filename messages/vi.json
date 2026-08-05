@@ -276,6 +276,29 @@
       { "name": "Chứng nhận hữu cơ", "description": "[Nội dung mẫu — xác nhận tổ chức cấp chứng nhận: USDA Organic / EU Organic / khác] cho các dòng sản phẩm áp dụng." },
       { "name": "Đăng ký FDA", "description": "[Nội dung mẫu — xác nhận tình trạng đăng ký cơ sở với FDA cho các lô hàng xuất sang Hoa Kỳ.]" }
     ],
+    "sustainability": {
+      "eyebrow": "Phát triển bền vững",
+      "title": "Xây dựng trên nền tảng thu mua minh bạch, có thể truy xuất",
+      "subtitle": "Với chúng tôi, chất lượng và phát triển bền vững không phải hai mục tiêu tách biệt — chuỗi cung ứng có thể truy ngược về tận vùng trồng cũng chính là chuỗi cung ứng ổn định nhất qua từng mùa vụ.",
+      "pillars": [
+        {
+          "title": "Thu mua có thể truy xuất",
+          "description": "Mỗi lô hàng đều được truy ngược về vùng trồng và cơ sở chế biến, giúp xử lý vấn đề chất lượng ngay tại nguồn thay vì phỏng đoán ở khâu sau."
+        },
+        {
+          "title": "Đồng hành cùng nông dân & hợp tác xã",
+          "description": "Quan hệ hợp tác lâu dài với các hợp tác xã và nông dân, dựa trên mức giá công bằng, minh bạch thay vì thu mua thời vụ, đơn lẻ."
+        },
+        {
+          "title": "Trách nhiệm với môi trường",
+          "description": "[Nội dung mẫu — mô tả thực tế các hoạt động khi có xác nhận: ví dụ sử dụng nước/năng lượng trong chế biến, giảm rác thải bao bì, phương thức canh tác tại vùng trồng.]"
+        },
+        {
+          "title": "Chất lượng & an toàn thực phẩm",
+          "description": "Kiểm nghiệm theo từng lô hàng và thông số kỹ thuật rõ ràng trước khi giao — xem thêm phần chứng nhận phía trên và trang quy trình để biết chi tiết."
+        }
+      ]
+    },
     "documentsTitle": "Hồ sơ cung cấp theo yêu cầu",
     "documents": [
       "Chứng nhận xuất xứ (C/O)",

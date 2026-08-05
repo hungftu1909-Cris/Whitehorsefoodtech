@@ -1,8 +1,14 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
+import { LinkedInIcon, FacebookIcon } from "./social-icons";
 import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
 import { siteConfig } from "@/lib/site";
+
+const SOCIAL_LINKS = [
+  { href: siteConfig.social.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
+  { href: siteConfig.social.facebook, label: "Facebook", Icon: FacebookIcon },
+].filter((s) => s.href);
 
 export function SiteFooter() {
   const t = useTranslations("nav");
@@ -80,13 +86,29 @@ export function SiteFooter() {
           <p>
             © {year} {siteConfig.name}. {tf("rights")}
           </p>
-          <div className="flex gap-5">
+          <div className="flex items-center gap-5">
             <Link href="/privacy" className="cursor-pointer hover:text-primary-foreground">
               {tf("privacy")}
             </Link>
             <Link href="/terms" className="cursor-pointer hover:text-primary-foreground">
               {tf("terms")}
             </Link>
+            {SOCIAL_LINKS.length > 0 && (
+              <div className="flex items-center gap-3 border-l border-primary-foreground/15 pl-5">
+                {SOCIAL_LINKS.map(({ href, label, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="cursor-pointer text-primary-foreground/70 hover:text-primary-foreground"
+                  >
+                    <Icon className="size-4" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

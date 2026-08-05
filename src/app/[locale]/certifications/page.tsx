@@ -1,9 +1,13 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { ShieldCheck, FileText } from "lucide-react";
+import { ShieldCheck, FileText, Leaf, Users, Sprout, BadgeCheck } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
+import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
 import { Reveal } from "@/components/ui/reveal";
+import { pageMetadata } from "@/lib/seo";
+
+const PILLAR_ICONS = [Leaf, Users, Sprout, BadgeCheck];
 
 export async function generateMetadata({
   params,
@@ -12,7 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "certifications.hero" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata({ locale, path: "/certifications", title: t("title"), description: t("subtitle") });
 }
 
 export default async function CertificationsPage({
@@ -25,6 +29,7 @@ export default async function CertificationsPage({
   const t = await getTranslations({ locale, namespace: "certifications" });
   const items = t.raw("items") as { name: string; description: string }[];
   const documents = t.raw("documents") as string[];
+  const pillars = t.raw("sustainability.pillars") as { title: string; description: string }[];
 
   return (
     <>
@@ -49,6 +54,34 @@ export default async function CertificationsPage({
       </section>
 
       <section className="border-t border-border bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+          <SectionHeading
+            eyebrow={t("sustainability.eyebrow")}
+            title={t("sustainability.title")}
+            subtitle={t("sustainability.subtitle")}
+          />
+          <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {pillars.map((pillar, i) => {
+              const Icon = PILLAR_ICONS[i % PILLAR_ICONS.length];
+              return (
+                <Reveal key={pillar.title} delay={i * 100}>
+                  <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
+                    <Icon className="size-5" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-4 font-serif text-lg font-semibold text-foreground">
+                    {pillar.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {pillar.description}
+                  </p>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-background">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="font-serif text-2xl font-semibold text-foreground">
             {t("documentsTitle")}

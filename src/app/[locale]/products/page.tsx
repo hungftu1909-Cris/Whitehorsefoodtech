@@ -6,6 +6,7 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
+import { pageMetadata } from "@/lib/seo";
 import { ArrowRight } from "lucide-react";
 
 export async function generateMetadata({
@@ -15,7 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "products.hero" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata({ locale, path: "/products", title: t("title"), description: t("subtitle") });
 }
 
 export default async function ProductsPage({

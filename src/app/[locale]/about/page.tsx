@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
+import { pageMetadata } from "@/lib/seo";
 import { Compass, ShieldCheck, MessageCircle, Handshake } from "lucide-react";
 
 const VALUE_ICONS = [Compass, ShieldCheck, MessageCircle, Handshake];
@@ -16,7 +17,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about.hero" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata({
+    locale,
+    path: "/about",
+    title: t("title"),
+    description: t("subtitle"),
+    images: ["/images/about.jpg"],
+  });
 }
 
 export default async function AboutPage({

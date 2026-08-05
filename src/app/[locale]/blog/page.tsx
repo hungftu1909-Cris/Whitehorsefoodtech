@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/sections/page-hero";
 import { SmartImage } from "@/components/ui/smart-image";
 import { getAllPosts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
 export async function generateMetadata({
@@ -13,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.hero" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata({ locale, path: "/blog", title: t("title"), description: t("subtitle") });
 }
 
 export default async function BlogPage({

@@ -8,6 +8,7 @@ import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
+import { pageMetadata } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -32,7 +33,13 @@ export async function generateMetadata({
     locale,
     namespace: `products.categories.${category.categoryKey}`,
   });
-  return { title: t("name"), description: t("description") };
+  return pageMetadata({
+    locale,
+    path: `/products/${slug}`,
+    title: t("name"),
+    description: t("description"),
+    images: [`/images/products/${slug}-detail.jpg`],
+  });
 }
 
 export default async function ProductCategoryPage({

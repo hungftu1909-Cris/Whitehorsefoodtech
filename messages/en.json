@@ -276,6 +276,29 @@
       { "name": "Organic Certification", "description": "[Placeholder — confirm certification body: USDA Organic / EU Organic / other] for applicable product lines." },
       { "name": "FDA Registration", "description": "[Placeholder — confirm FDA facility registration status for US-bound shipments.]" }
     ],
+    "sustainability": {
+      "eyebrow": "Sustainability",
+      "title": "Built on traceable, responsible sourcing",
+      "subtitle": "Quality and sustainability aren't separate goals for us — a supply chain we can trace back to the grower is also the one most likely to be consistent, season after season.",
+      "pillars": [
+        {
+          "title": "Traceable sourcing",
+          "description": "Every lot is tracked back to its growing region and processing facility, so quality issues can be diagnosed at the source rather than guessed at downstream."
+        },
+        {
+          "title": "Grower & cooperative partnerships",
+          "description": "Long-term relationships with the cooperatives and growers we buy from, built on fair, transparent pricing rather than one-off spot purchases."
+        },
+        {
+          "title": "Environmental stewardship",
+          "description": "[Placeholder — describe actual practices once confirmed: e.g. water/energy use in processing, packaging waste reduction, sourcing regions' farming practices.]"
+        },
+        {
+          "title": "Quality & food safety",
+          "description": "Lot-level testing and documented specifications before shipment, so what's approved is what arrives — see our certifications above and process page for detail."
+        }
+      ]
+    },
     "documentsTitle": "Documentation available on request",
     "documents": [
       "Certificate of Origin",

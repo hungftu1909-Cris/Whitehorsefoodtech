@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { RfqForm } from "@/components/forms/rfq-form";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -10,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "rfq.hero" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata({ locale, path: "/rfq", title: t("title"), description: t("subtitle") });
 }
 
 export default async function RfqPage({

@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -8,7 +9,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "legal" });
-  return { title: t("privacyTitle") };
+  return {
+    ...pageMetadata({ locale, path: "/privacy", title: t("privacyTitle"), description: t("privacyBody") }),
+    // Placeholder legal copy — keep out of search results until real policy is in.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function PrivacyPage({

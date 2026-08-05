@@ -7,6 +7,8 @@ import { Link } from "@/i18n/navigation";
 import { getAllSlugs, getPost } from "@/lib/blog";
 import { routing, type Locale } from "@/i18n/routing";
 import { SmartImage } from "@/components/ui/smart-image";
+import { pageMetadata } from "@/lib/seo";
+import { hasPublicFile } from "@/lib/media";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -22,7 +24,14 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const post = getPost(locale as Locale, slug);
   if (!post) return {};
-  return { title: post.title, description: post.description };
+  const coverPath = `/images/blog/${slug}.jpg`;
+  return pageMetadata({
+    locale,
+    path: `/blog/${slug}`,
+    title: post.title,
+    description: post.description,
+    images: hasPublicFile(coverPath) ? [coverPath] : undefined,
+  });
 }
 
 export default async function BlogPostPage({
