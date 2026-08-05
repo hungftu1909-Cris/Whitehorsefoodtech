@@ -56,7 +56,7 @@ requirement). Contrast checked against WCAG AA (4.5:1 body text).
 | `--color-card` | `#FFFFFF` | Card surfaces |
 | `--color-card-foreground` | `#241505` | Text on cards |
 | `--color-muted` | `#F1E7D6` | Muted section backgrounds, tags |
-| `--color-muted-foreground` | `#6B5A45` | Secondary/caption text |
+| `--color-muted-foreground` | `#4A3C2C` | Secondary/caption text (darkened 2026-08 for stronger contrast) |
 | `--color-border` | `#E4D6BC` | Hairline borders/dividers |
 | `--color-success` | `#4B6043` | Organic/certification badges |
 | `--color-destructive` | `#B3261E` | Form errors |
