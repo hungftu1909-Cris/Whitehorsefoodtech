@@ -153,16 +153,57 @@
   "about": {
     "hero": {
       "eyebrow": "Về Whitehorse Foodtech",
-      "title": "Kết nối nông nghiệp Việt Nam với chuỗi cung ứng thực phẩm & đồ uống toàn cầu",
-      "subtitle": "Từ nhà sản xuất công nghệ sấy thăng hoa hàng đầu Việt Nam, trở thành kiến trúc sư của chuỗi giá trị nông sản cao cấp Việt Nam."
+      "title": "Nâng tầm nguyên liệu Việt Nam cho chuỗi cung ứng thực phẩm toàn cầu",
+      "subtitle": "Whitehorse Foodtech kết nối nguồn nguyên liệu, nghiên cứu và phát triển sản phẩm, quản trị chất lượng cùng năng lực sản xuất phù hợp để tạo ra những giải pháp nguyên liệu nhất quán, linh hoạt và sẵn sàng cho thị trường quốc tế."
     },
     "origin": {
       "title": "Câu chuyện của chúng tôi",
-      "body": "Whitehorse Foodtech khởi nguồn từ một trong những đơn vị sản xuất máy sấy thăng hoa hàng đầu Việt Nam, với nhiều năm gia công các sản phẩm sấy thăng hoa cao cấp cho đối tác trong và ngoài nước. Nền tảng công nghệ và chuyên môn chế biến sâu tích lũy qua thời gian đó trở thành điểm khởi đầu cho một sứ mệnh lớn hơn: trở thành nhà kiến trúc sư của chuỗi giá trị nông sản Việt Nam từ đầu đến cuối — xây dựng nền tảng nguyên liệu cao cấp, chế biến sâu, và là cầu nối đưa nông sản Việt vươn lên bản đồ nguyên liệu toàn cầu."
+      "paragraphs": [
+        "Việt Nam sở hữu nguồn nguyên liệu nông nghiệp phong phú, đa dạng và giàu bản sắc. Tuy nhiên, để một nguyên liệu địa phương có thể trở thành sản phẩm phù hợp với các thương hiệu thực phẩm và đồ uống quốc tế, cần nhiều hơn một nguồn cung tốt.",
+        "Sản phẩm phải được phát triển theo đúng ứng dụng, kiểm soát bằng tiêu chuẩn rõ ràng, sản xuất ổn định và đi kèm hệ thống tài liệu phù hợp với từng thị trường.",
+        "Whitehorse Foodtech được xây dựng để kết nối các mắt xích đó trong một quy trình thống nhất. Chúng tôi phối hợp nguồn nguyên liệu, năng lực nghiên cứu và phát triển, quản trị chất lượng, các đối tác sản xuất phù hợp và hoạt động xuất khẩu để biến tiềm năng của nguyên liệu Việt Nam thành những giải pháp có thể thương mại hóa trên quy mô quốc tế.",
+        "Thay vì chỉ cung cấp một sản phẩm có sẵn, chúng tôi bắt đầu từ nhu cầu thực tế của khách hàng: sản phẩm được sử dụng trong ứng dụng nào, cần đạt tiêu chuẩn gì, quy cách đóng gói ra sao và phải đáp ứng những yêu cầu nào tại thị trường đích."
+      ]
+    },
+    "valueCreation": {
+      "eyebrow": "Cách chúng tôi làm việc",
+      "title": "Cách chúng tôi tạo ra giá trị",
+      "subtitle": "Một giải pháp nguyên liệu tốt phải cân bằng được bốn yếu tố: nguồn nguyên liệu phù hợp, sản phẩm đúng ứng dụng, chất lượng nhất quán và khả năng triển khai thương mại hiệu quả.",
+      "items": [
+        {
+          "title": "Phát triển nguồn nguyên liệu",
+          "description": "Xác định nguồn nguyên liệu phù hợp với yêu cầu sản phẩm, mùa vụ, khả năng chế biến và tiêu chuẩn của thị trường đích."
+        },
+        {
+          "title": "R&D và thiết kế sản phẩm",
+          "description": "Phát triển định dạng, công thức, đặc tính cảm quan và thông số kỹ thuật dựa trên ứng dụng thực tế của khách hàng."
+        },
+        {
+          "title": "Quản trị chất lượng",
+          "description": "Thiết lập mẫu chuẩn, chỉ tiêu kỹ thuật, yêu cầu kiểm nghiệm và hồ sơ chất lượng phù hợp trước khi sản xuất thương mại."
+        },
+        {
+          "title": "Sản xuất và xuất khẩu",
+          "description": "Kết nối năng lực sản xuất phù hợp, lựa chọn quy cách đóng gói và phối hợp chứng từ, logistics cho từng đơn hàng."
+        }
+      ]
+    },
+    "operatingModel": {
+      "eyebrow": "Mô hình vận hành",
+      "title": "Một đầu mối xuyên suốt từ ý tưởng đến đơn hàng",
+      "subtitle": "Whitehorse Foodtech đóng vai trò điều phối xuyên suốt quá trình phát triển và thương mại hóa sản phẩm. Mỗi dự án được triển khai dựa trên yêu cầu cụ thể của khách hàng thay vì áp dụng một giải pháp giống nhau cho mọi thị trường.",
+      "steps": [
+        { "title": "Yêu cầu khách hàng", "description": "Ứng dụng sản phẩm, thị trường đích, tiêu chuẩn, sản lượng và mức giá mục tiêu." },
+        { "title": "Lựa chọn nguyên liệu", "description": "Đánh giá nguồn gốc, đặc tính nguyên liệu, mùa vụ và khả năng cung ứng." },
+        { "title": "Phát triển sản phẩm", "description": "Xây dựng mẫu thử, thông số kỹ thuật, quy trình và phương án đóng gói." },
+        { "title": "Kiểm soát sản xuất", "description": "Quản lý mẫu chuẩn, chất lượng lô hàng và hồ sơ liên quan." },
+        { "title": "Giao hàng quốc tế", "description": "Phối hợp chứng từ, điều kiện thương mại và phương án logistics." }
+      ]
     },
     "mission": {
       "title": "Sứ mệnh của chúng tôi",
-      "body": "Chúng tôi xây dựng một hệ thống thực phẩm tốt đẹp hơn — kết nối những nguyên liệu tinh túy nhất của Việt Nam với công nghệ, chất lượng và thế giới."
+      "body": "Chúng tôi xây dựng một hệ thống thực phẩm tốt đẹp hơn — kết nối những nguyên liệu tinh túy của Việt Nam với công nghệ, chất lượng và thị trường toàn cầu.",
+      "extra": "Whitehorse Foodtech hướng tới việc tạo ra giá trị bền vững cho toàn bộ chuỗi cung ứng: nâng cao giá trị của nguyên liệu Việt Nam, giúp các đối tác sản xuất tiếp cận những tiêu chuẩn cao hơn và mang đến cho khách hàng quốc tế một đầu mối phát triển sản phẩm minh bạch, linh hoạt và hiệu quả."
     },
     "stats": {
       "title": "Whitehorse Foodtech qua những con số",
@@ -174,12 +215,12 @@
       ]
     },
     "values": {
-      "title": "Giá trị cốt lõi",
+      "title": "Những nguyên tắc chúng tôi theo đuổi",
       "items": [
-        { "title": "Truy xuất nguồn gốc", "description": "Mỗi lô hàng đều có thể truy ngược về vùng trồng và cơ sở chế biến." },
-        { "title": "Ổn định", "description": "Mẫu hàng bạn duyệt chính là sản phẩm bạn nhận được." },
-        { "title": "Phản hồi nhanh", "description": "Trao đổi trực tiếp với đội ngũ xử lý đơn hàng của bạn — không qua hàng đợi hỗ trợ." },
-        { "title": "Thu mua công bằng", "description": "Quan hệ lâu dài với nông dân và hợp tác xã, dựa trên mức giá công bằng và minh bạch." }
+        { "title": "Minh bạch và truy xuất", "description": "Chúng tôi ưu tiên quản lý rõ ràng nguồn nguyên liệu, thông số sản phẩm, cơ sở sản xuất và hồ sơ liên quan đến từng dự án." },
+        { "title": "Nhất quán từ mẫu đến sản xuất", "description": "Mẫu được phê duyệt là cơ sở để xây dựng tiêu chuẩn kỹ thuật và kiểm soát chất lượng trong quá trình sản xuất thương mại." },
+        { "title": "Phản hồi nhanh và trực tiếp", "description": "Khách hàng làm việc trực tiếp với đội ngũ phụ trách dự án để rút ngắn thời gian trao đổi, thử mẫu và ra quyết định." },
+        { "title": "Hợp tác có trách nhiệm", "description": "Chúng tôi hướng tới những mối quan hệ dài hạn, trong đó lợi ích của khách hàng, đối tác sản xuất và nguồn cung nguyên liệu được cân bằng một cách hợp lý." }
       ]
     },
     "team": {
@@ -187,8 +228,10 @@
       "subtitle": "[Nội dung mẫu — bổ sung tên, chức danh và tiểu sử ngắn của ban lãnh đạo khi có.]"
     },
     "cta": {
-      "title": "Muốn tìm hiểu thêm về cách chúng tôi làm việc?",
-      "cta": "Liên hệ ngay"
+      "title": "Đang tìm kiếm một giải pháp nguyên liệu từ Việt Nam?",
+      "subtitle": "Hãy chia sẻ với chúng tôi về sản phẩm, ứng dụng, tiêu chuẩn, sản lượng dự kiến và thị trường mục tiêu. Đội ngũ Whitehorse sẽ cùng bạn xác định phương án nguyên liệu và phát triển sản phẩm phù hợp.",
+      "cta": "Gửi yêu cầu sản phẩm",
+      "secondaryCta": "Khám phá sản phẩm"
     }
   },
   "products": {

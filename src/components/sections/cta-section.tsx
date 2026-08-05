@@ -7,12 +7,16 @@ export function CtaSection({
   subtitle,
   cta,
   href = "/rfq",
+  secondaryCta,
+  secondaryHref,
   className,
 }: {
   title: string;
   subtitle?: string;
   cta: string;
   href?: string;
+  secondaryCta?: string;
+  secondaryHref?: string;
   className?: string;
 }) {
   return (
@@ -26,15 +30,28 @@ export function CtaSection({
             <p className="mt-2 max-w-xl text-primary-foreground/75">{subtitle}</p>
           )}
         </div>
-        <Link
-          href={href}
-          className={cn(
-            buttonVariants({ variant: "default", size: "lg" }),
-            "shrink-0 cursor-pointer bg-accent text-accent-foreground hover:bg-accent/90"
+        <div className="flex shrink-0 flex-wrap gap-3">
+          <Link
+            href={href}
+            className={cn(
+              buttonVariants({ variant: "default", size: "lg" }),
+              "cursor-pointer bg-accent text-accent-foreground hover:bg-accent/90"
+            )}
+          >
+            {cta}
+          </Link>
+          {secondaryCta && secondaryHref && (
+            <Link
+              href={secondaryHref}
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "cursor-pointer border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+              )}
+            >
+              {secondaryCta}
+            </Link>
           )}
-        >
-          {cta}
-        </Link>
+        </div>
       </div>
     </section>
   );

@@ -153,16 +153,57 @@
   "about": {
     "hero": {
       "eyebrow": "About Whitehorse Foodtech",
-      "title": "Connecting Vietnamese agriculture to global food & beverage supply chains",
-      "subtitle": "From Vietnam's leading freeze-drying technology manufacturer to architect of the country's premium agricultural value chain."
+      "title": "Elevating Vietnamese ingredients for global food & beverage supply chains",
+      "subtitle": "Whitehorse Foodtech connects sourcing, R&D and product development, quality management, and the right manufacturing capacity to build ingredient solutions that are consistent, adaptable and ready for international markets."
     },
     "origin": {
       "title": "Our story",
-      "body": "Whitehorse Foodtech began as one of Vietnam's leading manufacturers of freeze-drying equipment, spending years perfecting premium freeze-dried processing on behalf of partners at home and abroad. That technical foundation became the starting point for something bigger: a company built to architect Vietnam's agricultural value chain end to end — developing a platform for premium, deep-processed ingredients, and building the bridge that carries Vietnamese agriculture onto the global ingredient map."
+      "paragraphs": [
+        "Vietnam is home to a rich, diverse range of agricultural raw materials. But turning a local ingredient into a product that meets the standards of international food and beverage brands takes more than a good source of supply.",
+        "The product has to be developed for the right application, controlled against clear specifications, produced consistently, and backed by documentation that matches the requirements of each destination market.",
+        "Whitehorse Foodtech exists to connect those pieces into a single, coordinated process. We bring together sourcing, R&D capability, quality management, the right manufacturing partners and export operations to turn the potential of Vietnamese ingredients into solutions that can be commercialized at international scale.",
+        "Rather than starting from a fixed product, we start from what the customer actually needs: what application the product serves, what standards it has to meet, how it should be packaged, and what's required to enter the target market."
+      ]
+    },
+    "valueCreation": {
+      "eyebrow": "How we work",
+      "title": "How we create value",
+      "subtitle": "A good ingredient solution has to balance four things: the right source, a product built for its application, consistent quality, and the ability to commercialize it efficiently.",
+      "items": [
+        {
+          "title": "Source development",
+          "description": "Identifying raw material sources that match product requirements, seasonality, processing capability and destination-market standards."
+        },
+        {
+          "title": "R&D & product design",
+          "description": "Developing formats, formulations, sensory profile and technical specifications around the customer's real application."
+        },
+        {
+          "title": "Quality management",
+          "description": "Establishing reference samples, technical specifications, testing requirements and quality documentation before commercial production."
+        },
+        {
+          "title": "Production & export",
+          "description": "Connecting the right manufacturing capacity, choosing packaging specifications, and coordinating documentation and logistics for each order."
+        }
+      ]
+    },
+    "operatingModel": {
+      "eyebrow": "Operating model",
+      "title": "One point of contact, from concept to order",
+      "subtitle": "Whitehorse Foodtech coordinates the full path from product development to commercialization. Every project is built around the customer's specific requirements rather than a one-size-fits-all approach.",
+      "steps": [
+        { "title": "Customer requirements", "description": "Product application, target market, standards, volume and target price." },
+        { "title": "Sourcing selection", "description": "Evaluating origin, raw material characteristics, seasonality and supply capability." },
+        { "title": "Product development", "description": "Building trial samples, technical specifications, process and packaging approach." },
+        { "title": "Production control", "description": "Managing reference samples, batch quality and related documentation." },
+        { "title": "International delivery", "description": "Coordinating documentation, trade terms and logistics." }
+      ]
     },
     "mission": {
       "title": "Our mission",
-      "body": "We build a better food system — connecting Vietnam's finest ingredients with technology, quality, and the world."
+      "body": "We build a better food system — connecting Vietnam's finest ingredients with technology, quality, and global markets.",
+      "extra": "Whitehorse Foodtech works to create durable value across the whole supply chain: raising the value of Vietnamese raw materials, helping manufacturing partners reach higher standards, and giving international customers a single, transparent point of contact for flexible, efficient product development."
     },
     "stats": {
       "title": "Whitehorse Foodtech at a glance",
@@ -174,12 +215,12 @@
       ]
     },
     "values": {
-      "title": "What guides our work",
+      "title": "The principles we work by",
       "items": [
-        { "title": "Traceability", "description": "Every lot can be traced back to its region and processing facility." },
-        { "title": "Consistency", "description": "The sample you approve is the product you receive." },
-        { "title": "Responsiveness", "description": "Direct communication with the team handling your order — not a ticketing queue." },
-        { "title": "Fair sourcing", "description": "Long-term relationships with growers and cooperatives, built on fair, transparent pricing." }
+        { "title": "Transparency & traceability", "description": "We prioritize clear management of raw material sources, product specifications, production sites and documentation tied to every project." },
+        { "title": "Consistent from sample to production", "description": "The approved sample is the basis for the technical specifications and quality control applied through commercial production." },
+        { "title": "Fast, direct response", "description": "Customers work directly with the team running their project, cutting down the time spent on discussion, sampling and decisions." },
+        { "title": "Responsible partnership", "description": "We aim for long-term relationships that fairly balance the interests of customers, manufacturing partners and raw material sources." }
       ]
     },
     "team": {
@@ -187,8 +228,10 @@
       "subtitle": "[Placeholder — add leadership team names, titles and short bios once available.]"
     },
     "cta": {
-      "title": "Want to know more about how we work?",
-      "cta": "Get in touch"
+      "title": "Looking for an ingredient solution from Vietnam?",
+      "subtitle": "Tell us about your product, application, standards, expected volume and target market. The Whitehorse team will work with you to define the right sourcing and product development approach.",
+      "cta": "Send a product inquiry",
+      "secondaryCta": "Explore our products"
     }
   },
   "products": {
