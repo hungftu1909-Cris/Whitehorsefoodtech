@@ -110,7 +110,7 @@
         },
         {
           "title": "Processed Bird's Nest",
-          "description": "Deep-processed edible bird's nest (Yến) — ready-to-drink bottled formats and pure extract, built for retail and foodservice distribution.",
+          "description": "Deep-processed edible bird's nest — ready-to-drink bottled formats and pure extract, built for retail and foodservice distribution.",
           "cta": "View bird's nest range"
         },
         {
@@ -290,8 +290,8 @@
       "birdsNest": {
         "name": "Processed Bird's Nest",
         "slug": "processed-birds-nest",
-        "tagline": "Deep-processed edible bird's nest (Yến)",
-        "description": "[Placeholder — confirm actual product line before publishing] Vietnam is a major producer of edible bird's nest (Yến); we offer deep-processed, ready-to-sell formats built for retail and foodservice distribution rather than raw/cleaned nest alone.",
+        "tagline": "Deep-processed edible bird's nest",
+        "description": "[Placeholder — confirm actual product line before publishing] Vietnam is a major producer of edible bird's nest; we offer deep-processed, ready-to-sell formats built for retail and foodservice distribution rather than raw/cleaned nest alone.",
         "specTitle": "Typical specifications",
         "specs": [
           "Formats: bottled ready-to-drink bird's nest drink (rock sugar, low-sugar, ginseng and other variants), pure bird's nest extract, dried/cleaned whole nest",
