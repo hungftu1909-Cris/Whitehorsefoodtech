@@ -19,6 +19,19 @@ import { cn } from "@/lib/utils";
  * visit as possible, maximizing exposure rather than only appearing deep
  * into the page. On narrow phones the two pills would collide, so each
  * collapses to a round icon-only button below the `sm` breakpoint.
+ *
+ * Colors are deliberately theme-stable rather than pulled from tokens that
+ * flip per section/theme (`primary`, `card`): because these buttons are
+ * `position: fixed`, they drift over every kind of background as the page
+ * scrolls — cream, white, tan, and the dark-brown `bg-primary` bands (Mission
+ * quote, CTA banners, footer). A solid `primary`-colored button would nearly
+ * vanish over a `primary`-colored footer, and in dark mode `primary` itself
+ * flips to a light gold, inverting the problem. `accent` (bronze/gold) never
+ * matches a full-bleed section background in either theme, so it stays a
+ * consistent, on-brand highlight everywhere. The secondary button gets an
+ * opaque card surface (no translucency/blur to bleed into whatever's behind
+ * it) plus a 2px accent border so it reads as a distinct control even over
+ * near-white sections.
  */
 export function FloatingCtaBar() {
   const tNav = useTranslations("nav");
@@ -54,7 +67,7 @@ export function FloatingCtaBar() {
           className={cn(
             buttonVariants({ variant: "outline" }),
             shared,
-            "left-4 border-border bg-card/95 backdrop-blur sm:left-6",
+            "left-4 border-2 border-accent bg-card text-foreground hover:bg-muted sm:left-6",
             state(visible)
           )}
         >
@@ -69,7 +82,12 @@ export function FloatingCtaBar() {
           aria-label={tNav("requestQuote")}
           aria-hidden={!visible}
           tabIndex={visible ? 0 : -1}
-          className={cn(buttonVariants(), shared, "right-4 sm:right-6", state(visible))}
+          className={cn(
+            buttonVariants(),
+            shared,
+            "right-4 bg-accent text-accent-foreground hover:bg-accent/90 sm:right-6",
+            state(visible)
+          )}
         >
           <span className="hidden sm:inline">{tNav("requestQuote")}</span>
           <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
