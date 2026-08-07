@@ -41,13 +41,25 @@ export default async function ClientsPage({
           <p className="mt-2 text-sm text-muted-foreground">{t("regions")}</p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <Reveal key={i} delay={i * 60}>
-              <ImagePlaceholder label="Partner logo" aspect="aspect-[3/2]" />
+        {(["sourcing", "distribution"] as const).map((group, groupIndex) => (
+          <div key={group} className={groupIndex === 0 ? "mt-14" : "mt-14 border-t border-border pt-14"}>
+            <Reveal>
+              <h3 className="font-serif text-lg font-semibold text-foreground">
+                {t(`partners.${group}.title`)}
+              </h3>
+              <p className="mt-1.5 max-w-2xl text-sm text-muted-foreground">
+                {t(`partners.${group}.description`)}
+              </p>
             </Reveal>
-          ))}
-        </div>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <Reveal key={i} delay={i * 60}>
+                  <ImagePlaceholder label={t(`partners.${group}.logoLabel`)} aspect="aspect-[3/2]" />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
 
       <CtaSection title={t("cta.title")} cta={t("cta.cta")} href="/contact" />
