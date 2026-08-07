@@ -38,12 +38,15 @@ export default async function ProductsPage({
       />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {/* 5 families: 3 + 2 on desktop — same grid rhythm as the homepage
+            preview, avoids a cramped 5-across row or an orphaned lone card
+            in a 4-column layout. */}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUCT_CATEGORIES.map((c, i) => (
             <Reveal key={c.slug} delay={i * 100}>
               <Link
                 href={`/products/${c.slug}`}
-                className="group block cursor-pointer overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
+                className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
               >
                 <SmartImage
                   src={`/images/products/${c.slug}-card.jpg`}
@@ -52,7 +55,7 @@ export default async function ProductsPage({
                   aspect="aspect-[3/2]"
                   className="rounded-none border-0 border-b border-border"
                 />
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <h2 className="font-serif text-xl font-semibold text-foreground">
                     {t(`categories.${c.categoryKey}.name`)}
                   </h2>

@@ -59,6 +59,7 @@ export default async function ProductCategoryPage({
   const tp = await getTranslations({ locale, namespace: "products" });
   const specs = t.raw("specs") as string[];
   const applications = t.raw("applications") as string[];
+  const groups = t.raw("groups") as string[];
 
   return (
     <>
@@ -91,6 +92,21 @@ export default async function ProductCategoryPage({
                 </li>
               ))}
             </ul>
+
+            {groups?.length > 0 && (
+              <>
+                <h2 className="mt-8 font-serif text-xl font-semibold text-foreground">
+                  {t("groupsTitle")}
+                </h2>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {groups.map((group) => (
+                    <Badge key={group} variant="outline" className="border-accent/40 text-foreground">
+                      {group}
+                    </Badge>
+                  ))}
+                </div>
+              </>
+            )}
 
             <h2 className="mt-8 font-serif text-xl font-semibold text-foreground">
               {t("applicationsTitle")}

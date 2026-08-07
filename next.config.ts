@@ -14,6 +14,28 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  // Product taxonomy rework (2026-08): three family slugs changed. Redirect
+  // the old URLs (308, permanent) so bookmarks/backlinks/search results
+  // keep working instead of 404ing. "coffee" is unchanged so needs none.
+  async redirects() {
+    return [
+      {
+        source: "/:locale(en|vi)/products/freeze-dried-fruit-powder",
+        destination: "/:locale/products/fruit",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|vi)/products/processed-birds-nest",
+        destination: "/:locale/products/birds-nest",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|vi)/products/premium-agri-raw-materials",
+        destination: "/:locale/products/nuts-spices-botanicals",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

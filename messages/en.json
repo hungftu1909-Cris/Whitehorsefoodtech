@@ -1,17 +1,18 @@
 {
   "meta": {
     "siteName": "Whitehorse Foodtech",
-    "title": "Whitehorse Foodtech — Premium Coffee, Freeze-Dried Fruit Powder & Agri Exports",
-    "description": "Vietnam-based exporter of premium green/roasted coffee, freeze-dried fruit powder and agricultural raw materials, delivered globally to food & beverage manufacturers, roasters and distributors."
+    "title": "Whitehorse Foodtech — Premium Coffee, Coconut, Bird's Nest & Fruit Ingredients",
+    "description": "Vietnam-based ingredient partner turning coffee, coconut, bird's nest, fruit and premium spices into export-grade ingredients for food & beverage manufacturers, roasters and distributors worldwide."
   },
   "nav": {
     "home": "Home",
     "about": "About",
     "products": "Products",
-    "productsCoffee": "Coffee",
-    "productsFruitPowder": "Freeze-Dried Fruit Powder",
-    "productsAgri": "Premium Agri Raw Materials",
-    "productsBirdsNest": "Processed Bird's Nest",
+    "productsCoffee": "Coffee Ingredients",
+    "productsCoconut": "Coconut Ingredients",
+    "productsBirdsNest": "Bird's Nest Ingredients",
+    "productsFruit": "Fruit Ingredients",
+    "productsNutsSpicesBotanicals": "Nuts, Spices & Botanicals",
     "certifications": "Certifications",
     "process": "Process & Factory",
     "clients": "Clients & Partners",
@@ -54,8 +55,8 @@
   "home": {
     "hero": {
       "eyebrow": "Vietnam-based · Global export",
-      "title": "Premium coffee, freeze-dried fruit powder and agri raw materials — sourced with precision, delivered with trust.",
-      "subtitle": "Whitehorse Foodtech supplies food & beverage manufacturers, roasters and distributors worldwide with export-grade Vietnamese agricultural products, backed by full traceability and consistent quality from harvest to container.",
+      "title": "Premium ingredients from Vietnam's harvest — sourced with precision, delivered with trust.",
+      "subtitle": "Whitehorse Foodtech turns coffee, coconut, bird's nest, fruit and spice into export-grade ingredients for food & beverage manufacturers, roasters and distributors worldwide — backed by full traceability and consistent quality from harvest to container.",
       "ctaPrimary": "Request a quote",
       "ctaSecondary": "Explore our products",
       "badgeValue": "100K+",
@@ -95,28 +96,38 @@
     },
     "productsPreview": {
       "eyebrow": "What we export",
-      "title": "Four product lines. One quality standard.",
-      "subtitle": "From green coffee to freeze-dried fruit powder, processed bird's nest and premium spice materials, every category is sourced and graded to export specification.",
+      "title": "Five ingredient families. One quality standard.",
+      "subtitle": "From coffee and coconut to bird's nest, fruit and premium spices, every ingredient family is sourced and graded to a single export specification.",
       "items": [
         {
-          "title": "Coffee",
-          "description": "Green beans and roasted coffee, plus deeper-processed lines — soluble powder, liquid extract and cold brew concentrate.",
-          "cta": "View coffee specifications"
+          "title": "Coffee Ingredients",
+          "tagline": "Beans, powder, extract & cold brew",
+          "description": "From Vietnam's renowned coffee regions, we supply carefully selected coffee ingredients for global food and beverage applications — from green and roasted beans to soluble powders, extracts and cold brew concentrates.",
+          "cta": "Explore Coffee"
         },
         {
-          "title": "Freeze-Dried Fruit Powder",
-          "description": "Passion fruit, orange, mango, soursop, durian and dragon fruit — freeze-dried to preserve color, flavor and nutrients for F&B manufacturing.",
-          "cta": "View fruit powder range"
+          "title": "Coconut Ingredients",
+          "tagline": "Milk, cream, water, powder, oil & MCT",
+          "description": "Premium Vietnamese coconut transformed into versatile food ingredients — including coconut milk and cream, powders, water concentrates, virgin coconut oil and functional lipid solutions for international food and beverage brands.",
+          "cta": "Explore Coconut"
         },
         {
-          "title": "Processed Bird's Nest",
-          "description": "Deep-processed edible bird's nest — ready-to-drink bottled formats and pure extract, built for retail and foodservice distribution.",
-          "cta": "View bird's nest range"
+          "title": "Bird's Nest Ingredients",
+          "tagline": "Selected nest, extract, concentrate & powder",
+          "description": "Premium Vietnamese edible bird's nest developed into high-value functional ingredients, including selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications.",
+          "cta": "Explore Bird's Nest"
         },
         {
-          "title": "Premium Agri Raw Materials",
-          "description": "Cashew nuts, black pepper, cinnamon, star anise and other export-grade spices and raw agricultural materials.",
-          "cta": "View agri raw materials"
+          "title": "Fruit Ingredients",
+          "tagline": "Freeze-dried, powder, pieces & concentrate",
+          "description": "Vietnam's tropical fruits transformed into stable, high-quality ingredients through advanced processing — preserving natural color, aroma and nutritional value for food, beverage and nutrition applications.",
+          "cta": "Explore Fruits"
+        },
+        {
+          "title": "Nuts, Spices & Botanicals",
+          "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
+          "description": "Selected Vietnamese nuts, spices and botanicals sourced for international food manufacturers and ingredient partners, with export-grade specifications, quality control and full documentation.",
+          "cta": "Explore Ingredients"
         }
       ]
     },
@@ -237,15 +248,15 @@
   "products": {
     "hero": {
       "eyebrow": "Our products",
-      "title": "Export-grade coffee, fruit powder, bird's nest and agricultural raw materials",
-      "subtitle": "Every product line is sourced, graded and packed to buyer specification — with samples and lab documentation available before shipment."
+      "title": "Five ingredient families, sourced and processed to export specification",
+      "subtitle": "Every ingredient family is sourced, graded and packed to buyer specification — with samples and lab documentation available before shipment."
     },
     "categories": {
       "coffee": {
-        "name": "Coffee",
+        "name": "Coffee Ingredients",
         "slug": "coffee",
-        "tagline": "Green beans, roasted, powder, extract & cold brew",
-        "description": "Sourced from Vietnam's Central Highlands, our coffee is graded by screen size, moisture content and defect count to match international buyer specifications — available as green beans and roasted whole/ground coffee, plus deeper-processed lines: soluble coffee powder, liquid coffee extract and ready-to-drink cold brew concentrate.",
+        "tagline": "Beans, powder, extract & cold brew",
+        "description": "From Vietnam's renowned coffee regions, we supply carefully selected coffee ingredients for global food and beverage applications — from green and roasted beans to soluble powders, extracts and cold brew concentrates.",
         "specTitle": "Typical specifications",
         "specs": [
           "Robusta: Screen 16/18, moisture 12.5% max, black & broken 3–5% max",
@@ -254,53 +265,78 @@
           "Packaging: 60kg jute bags with GrainPro liner (green beans); pouches, drums or bag-in-box for powder/extract/cold brew",
           "Custom roasting, formulation and private-label packaging available"
         ],
+        "groupsTitle": "Product groups",
+        "groups": ["Raw & Roasted", "Powders", "Extracts", "Cold Brew", "Specialty"],
         "applicationsTitle": "Common applications",
         "applications": ["Roasters", "Instant & RTD coffee manufacturing", "Cold brew & canned coffee brands", "Private-label retail blends", "Foodservice"]
       },
-      "fruitPowder": {
-        "name": "Freeze-Dried Fruit Powder",
-        "slug": "freeze-dried-fruit-powder",
-        "tagline": "Passion fruit, orange, mango, soursop, durian, dragon fruit",
-        "description": "Freeze-drying locks in color, aroma and nutrients far better than spray- or heat-drying, producing a fine, stable powder ideal for formulated food and beverage products.",
+      "coconut": {
+        "name": "Coconut Ingredients",
+        "slug": "coconut",
+        "tagline": "Milk, cream, water, powder, oil & MCT",
+        "description": "Premium Vietnamese coconut transformed into versatile food ingredients — including coconut milk and cream, powders, water concentrates, virgin coconut oil and functional lipid solutions for international food and beverage brands.",
         "specTitle": "Typical specifications",
         "specs": [
-          "Fruits: passion fruit, orange, mango, soursop, durian, dragon fruit (custom fruits on request)",
-          "Moisture: 3–5% max for extended shelf stability",
-          "Mesh size: 80–100 mesh standard, custom particle size on request",
-          "Packaging: aluminum foil bags with desiccant, 1kg–25kg, bulk drums available"
+          "Liquid formats: coconut milk and cream at standard or custom fat content, UHT/aseptic packaging on request",
+          "Powder formats: spray-dried coconut milk, cream and coconut water powder, moisture and fat content to buyer specification",
+          "Oils & functional lipids: cold-pressed virgin coconut oil, MCT oil and MCT powder",
+          "Packaging: cartons, aseptic bags, drums or bulk — format and packaging confirmed per order"
         ],
+        "groupsTitle": "Product groups",
+        "groups": ["Milk & Cream", "Coconut Water", "Oils & Functional Lipids", "Coconut Solids", "Specialty"],
+        "applicationsTitle": "Common applications",
+        "applications": ["Dairy alternatives & plant-based beverages", "Bakery & confectionery", "Functional foods & nutraceuticals", "Foodservice & OEM formulation"]
+      },
+      "birdsNest": {
+        "name": "Bird's Nest Ingredients",
+        "slug": "birds-nest",
+        "tagline": "Selected nest, extract, concentrate & powder",
+        "description": "Premium Vietnamese edible bird's nest developed into high-value functional ingredients, including selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications.",
+        "specTitle": "Typical specifications",
+        "specs": [
+          "Formats: selected raw and cleaned bird's nest, concentrate, pure extract and powder — bottled ready-to-drink formats available",
+          "Custom formulation: sugar level, added ingredients (rock sugar, ginseng and other variants) and packaging configured to buyer requirements",
+          "Packaging: retail glass bottles (typically 70ml multi-packs) for RTD formats; jars or vacuum packs for selected/dried nest — private-label packaging available",
+          "Shelf life and cold-chain requirements vary by format — confirmed with our export team per order"
+        ],
+        "groupsTitle": "Product groups",
+        "groups": ["Selected Bird's Nest", "Concentrated & Extracted", "Powders", "Functional Formulations"],
+        "applicationsTitle": "Common applications",
+        "applications": ["Health food & wellness retail", "Private-label RTD beverage brands", "Nutraceuticals & functional formulations", "Foodservice & pharmacy distribution"]
+      },
+      "fruit": {
+        "name": "Fruit Ingredients",
+        "slug": "fruit",
+        "tagline": "Freeze-dried, powder, pieces & concentrate",
+        "description": "Vietnam's tropical fruits transformed into stable, high-quality ingredients through advanced processing — preserving natural color, aroma and nutritional value for food, beverage and nutrition applications.",
+        "specTitle": "Typical specifications",
+        "specs": [
+          "Freeze-dried powders: passion fruit, orange, mango, soursop, durian, dragon fruit and other fruits on request — moisture 3–5% max, 80–100 mesh standard",
+          "Freeze-dried pieces: slices, cubes and crumbles for bakery, cereal and snack applications",
+          "Fruit concentrates: puree and juice concentrate for beverage and flavor applications",
+          "Packaging: aluminum foil bags with desiccant (1kg–25kg) or bulk drums — custom particle size and packaging on request"
+        ],
+        "groupsTitle": "Product groups",
+        "groups": ["Freeze-Dried Powders", "Freeze-Dried Pieces", "Fruit Concentrates", "Extracts"],
         "applicationsTitle": "Common applications",
         "applications": ["Smoothie & beverage powders", "Bakery & confectionery", "Nutraceuticals & supplements", "Natural food coloring/flavoring"]
       },
-      "agriRaw": {
-        "name": "Premium Agri Raw Materials",
-        "slug": "premium-agri-raw-materials",
-        "tagline": "Cashew, pepper, cinnamon, star anise & spices",
-        "description": "Vietnam is among the world's leading exporters of cashew nuts, black pepper, cinnamon and star anise — we supply export-grade lots with full documentation for food manufacturing and spice trading partners.",
+      "nutsSpicesBotanicals": {
+        "name": "Nuts, Spices & Botanicals",
+        "slug": "nuts-spices-botanicals",
+        "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
+        "description": "Selected Vietnamese nuts, spices and botanicals sourced for international food manufacturers and ingredient partners, with export-grade specifications, quality control and full documentation.",
         "specTitle": "Typical specifications",
         "specs": [
           "Cashew: WW240/WW320/SW240 grades, vacuum-packed 22.68kg tins",
           "Black pepper: 500–570 g/l density, moisture 13% max, steam-sterilized on request",
-          "Cinnamon (cassia): whole quills, broken, or ground, oil content graded",
-          "Star anise: whole or split, sun-dried, export moisture standard"
+          "Cinnamon (cassia) & star anise: whole, broken or ground, graded by oil content and moisture",
+          "Botanicals: ginger, turmeric, lemongrass and other selected Vietnamese botanicals available fresh, dried or powdered on request"
         ],
+        "groupsTitle": "Product groups",
+        "groups": ["Nuts", "Spices", "Botanicals"],
         "applicationsTitle": "Common applications",
-        "applications": ["Food manufacturing", "Spice blending & distribution", "Foodservice & retail packing", "Flavor & extract production"]
-      },
-      "birdsNest": {
-        "name": "Processed Bird's Nest",
-        "slug": "processed-birds-nest",
-        "tagline": "Deep-processed edible bird's nest",
-        "description": "[Placeholder — confirm actual product line before publishing] Vietnam is a major producer of edible bird's nest; we offer deep-processed, ready-to-sell formats built for retail and foodservice distribution rather than raw/cleaned nest alone.",
-        "specTitle": "Typical specifications",
-        "specs": [
-          "Formats: bottled ready-to-drink bird's nest drink (rock sugar, low-sugar, ginseng and other variants), pure bird's nest extract, dried/cleaned whole nest",
-          "[Placeholder — confirm] Sourced and processed under food-safety-compliant facilities; add real certification detail once confirmed",
-          "Packaging: retail glass bottles (typically 70ml multi-packs) for RTD lines; jars or vacuum packs for dried nest — private-label packaging available",
-          "Shelf life and cold-chain requirements vary by format — confirm with our export team"
-        ],
-        "applicationsTitle": "Common applications",
-        "applications": ["Health food & wellness retail", "Private-label RTD beverage brands", "Gifting & premium retail sets", "Foodservice & pharmacy distribution"]
+        "applications": ["Food manufacturing", "Spice blending & distribution", "Flavor & extract production", "Foodservice & retail packing"]
       }
     },
     "sampleCta": {
@@ -465,9 +501,11 @@
       "country": "Destination country",
       "product": "Product of interest",
       "productPlaceholder": "Select a product",
-      "productCoffee": "Coffee",
-      "productFruitPowder": "Freeze-Dried Fruit Powder",
-      "productAgri": "Premium Agri Raw Materials",
+      "productCoffee": "Coffee Ingredients",
+      "productCoconut": "Coconut Ingredients",
+      "productBirdsNest": "Bird's Nest Ingredients",
+      "productFruit": "Fruit Ingredients",
+      "productNutsSpicesBotanicals": "Nuts, Spices & Botanicals",
       "productOther": "Other / not listed",
       "volume": "Estimated order volume",
       "volumePlaceholder": "e.g. 1 x 20ft container, 5 metric tons/month",

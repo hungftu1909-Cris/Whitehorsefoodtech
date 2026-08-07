@@ -3,9 +3,11 @@ import { rfqSchema } from "@/lib/validations";
 import { sendMail, escapeHtml } from "@/lib/mailer";
 
 const PRODUCT_LABEL: Record<string, string> = {
-  coffee: "Coffee",
-  fruitPowder: "Freeze-Dried Fruit Powder",
-  agri: "Premium Agri Raw Materials",
+  coffee: "Coffee Ingredients",
+  coconut: "Coconut Ingredients",
+  birdsNest: "Bird's Nest Ingredients",
+  fruit: "Fruit Ingredients",
+  nutsSpicesBotanicals: "Nuts, Spices & Botanicals",
   other: "Other / not listed",
 };
 

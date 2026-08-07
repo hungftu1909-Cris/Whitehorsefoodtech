@@ -1,17 +1,18 @@
 {
   "meta": {
     "siteName": "Whitehorse Foodtech",
-    "title": "Whitehorse Foodtech — Xuất khẩu cà phê, bột hoa quả sấy thăng hoa & nông sản cao cấp",
-    "description": "Whitehorse Foodtech xuất khẩu cà phê nhân/rang, bột hoa quả sấy thăng hoa và nguyên liệu nông sản cao cấp từ Việt Nam đến các nhà sản xuất thực phẩm, nhà rang xay và nhà phân phối trên toàn thế giới."
+    "title": "Whitehorse Foodtech — Nguyên liệu Cà phê, Dừa, Yến sào & Trái cây cao cấp",
+    "description": "Whitehorse Foodtech phát triển cà phê, dừa, yến sào, trái cây và gia vị cao cấp Việt Nam thành nguyên liệu thực phẩm đạt chuẩn xuất khẩu cho các nhà sản xuất thực phẩm, đồ uống và nhà phân phối trên toàn thế giới."
   },
   "nav": {
     "home": "Trang chủ",
     "about": "Giới thiệu",
     "products": "Sản phẩm",
-    "productsCoffee": "Cà phê",
-    "productsFruitPowder": "Bột hoa quả sấy thăng hoa",
-    "productsAgri": "Nguyên liệu nông sản cao cấp",
-    "productsBirdsNest": "Yến chế biến sâu",
+    "productsCoffee": "Nguyên liệu Cà phê",
+    "productsCoconut": "Nguyên liệu Dừa",
+    "productsBirdsNest": "Nguyên liệu Yến sào",
+    "productsFruit": "Nguyên liệu Trái cây",
+    "productsNutsSpicesBotanicals": "Hạt, Gia vị & Thảo mộc",
     "certifications": "Chứng nhận",
     "process": "Quy trình & Nhà máy",
     "clients": "Khách hàng & Đối tác",
@@ -54,8 +55,8 @@
   "home": {
     "hero": {
       "eyebrow": "Từ Việt Nam · Xuất khẩu toàn cầu",
-      "title": "Cà phê, bột hoa quả sấy thăng hoa và nguyên liệu nông sản cao cấp — thu mua chính xác, giao hàng đáng tin cậy.",
-      "subtitle": "Whitehorse Foodtech cung cấp cho các nhà sản xuất thực phẩm & đồ uống, nhà rang xay và nhà phân phối trên toàn thế giới các sản phẩm nông nghiệp Việt Nam đạt chuẩn xuất khẩu, với khả năng truy xuất nguồn gốc đầy đủ và chất lượng ổn định từ vùng trồng đến container.",
+      "title": "Nguyên liệu cao cấp từ nông sản Việt Nam — thu mua chính xác, giao hàng đáng tin cậy.",
+      "subtitle": "Whitehorse Foodtech phát triển cà phê, dừa, yến sào, trái cây và gia vị Việt Nam thành nguyên liệu thực phẩm đạt chuẩn xuất khẩu cho các nhà sản xuất thực phẩm & đồ uống và nhà phân phối trên toàn thế giới — với khả năng truy xuất nguồn gốc đầy đủ và chất lượng ổn định từ vùng trồng đến container.",
       "ctaPrimary": "Yêu cầu báo giá",
       "ctaSecondary": "Khám phá sản phẩm",
       "badgeValue": "100K+",
@@ -95,28 +96,38 @@
     },
     "productsPreview": {
       "eyebrow": "Sản phẩm xuất khẩu",
-      "title": "Bốn dòng sản phẩm. Một tiêu chuẩn chất lượng.",
-      "subtitle": "Từ cà phê nhân đến bột hoa quả sấy thăng hoa, yến chế biến sâu và nguyên liệu gia vị cao cấp, mọi danh mục đều được thu mua và phân loại theo tiêu chuẩn xuất khẩu.",
+      "title": "Năm nhóm nguyên liệu. Một tiêu chuẩn chất lượng.",
+      "subtitle": "Từ cà phê, dừa đến yến sào, trái cây và gia vị cao cấp, mọi nhóm nguyên liệu đều được thu mua và phân loại theo cùng một tiêu chuẩn xuất khẩu.",
       "items": [
         {
-          "title": "Cà phê",
-          "description": "Cà phê nhân và rang xay, cùng các dòng chế biến sâu — bột cà phê hòa tan, tinh chất cà phê và cold brew cô đặc.",
-          "cta": "Xem thông số cà phê"
+          "title": "Nguyên liệu Cà phê",
+          "tagline": "Hạt, bột, chiết xuất & cold brew",
+          "description": "Từ những vùng nguyên liệu cà phê nổi tiếng của Việt Nam, Whitehorse cung cấp các nguyên liệu cà phê được lựa chọn và chế biến theo yêu cầu quốc tế — từ cà phê nhân, cà phê rang đến bột hòa tan, chiết xuất và cold brew cô đặc.",
+          "cta": "Khám phá Cà phê"
         },
         {
-          "title": "Bột hoa quả sấy thăng hoa",
-          "description": "Chanh dây, cam, xoài, mãng cầu, sầu riêng và thanh long — sấy thăng hoa để giữ trọn màu sắc, hương vị và dưỡng chất cho ngành sản xuất thực phẩm & đồ uống.",
-          "cta": "Xem danh mục bột hoa quả"
+          "title": "Nguyên liệu Dừa",
+          "tagline": "Sữa, kem, nước dừa, bột, dầu & MCT",
+          "description": "Dừa Việt Nam chất lượng cao được phát triển thành các nguyên liệu thực phẩm đa dạng — từ sữa dừa, kem dừa, bột dừa, nước dừa cô đặc đến dầu dừa nguyên chất và các giải pháp lipid chức năng cho ngành thực phẩm và đồ uống quốc tế.",
+          "cta": "Khám phá Dừa"
         },
         {
-          "title": "Yến chế biến sâu",
-          "description": "Sản phẩm yến sào chế biến sâu — nước yến chưng sẵn đóng chai và tinh chất yến nguyên chất, dành cho phân phối bán lẻ và dịch vụ ăn uống.",
-          "cta": "Xem dòng sản phẩm yến"
+          "title": "Nguyên liệu Yến sào",
+          "tagline": "Yến tuyển chọn, chiết xuất, cô đặc & dạng bột",
+          "description": "Yến sào Việt Nam cao cấp được phát triển thành các nguyên liệu chức năng có giá trị cao, bao gồm yến tuyển chọn, dạng cô đặc, chiết xuất, dạng bột và các công thức tùy chỉnh cho thực phẩm cao cấp và dinh dưỡng.",
+          "cta": "Khám phá Yến sào"
         },
         {
-          "title": "Nguyên liệu nông sản cao cấp",
-          "description": "Hạt điều, hồ tiêu, quế, hoa hồi và các loại gia vị, nguyên liệu nông sản đạt chuẩn xuất khẩu khác.",
-          "cta": "Xem nguyên liệu nông sản"
+          "title": "Nguyên liệu Trái cây",
+          "tagline": "Sấy thăng hoa, dạng bột, miếng & cô đặc",
+          "description": "Trái cây nhiệt đới Việt Nam được phát triển thành các nguyên liệu chất lượng cao bằng công nghệ chế biến tiên tiến, giúp duy trì màu sắc, hương vị và giá trị dinh dưỡng tự nhiên cho ngành thực phẩm, đồ uống và dinh dưỡng.",
+          "cta": "Khám phá Trái cây"
+        },
+        {
+          "title": "Hạt, Gia vị & Thảo mộc",
+          "tagline": "Điều, tiêu, quế, hồi & thảo mộc",
+          "description": "Các loại hạt, gia vị và thảo mộc Việt Nam được tuyển chọn theo tiêu chuẩn xuất khẩu, phục vụ các nhà sản xuất thực phẩm và đối tác nguyên liệu quốc tế với khả năng kiểm soát chất lượng và hồ sơ truy xuất đầy đủ.",
+          "cta": "Khám phá Nguyên liệu"
         }
       ]
     },
@@ -237,14 +248,14 @@
   "products": {
     "hero": {
       "eyebrow": "Sản phẩm của chúng tôi",
-      "title": "Cà phê, bột hoa quả, yến chế biến sâu và nguyên liệu nông sản đạt chuẩn xuất khẩu",
-      "subtitle": "Mọi dòng sản phẩm đều được thu mua, phân loại và đóng gói theo yêu cầu khách hàng — có mẫu hàng và hồ sơ kiểm nghiệm trước khi giao."
+      "title": "Năm nhóm nguyên liệu, thu mua và chế biến theo chuẩn xuất khẩu",
+      "subtitle": "Mọi nhóm nguyên liệu đều được thu mua, phân loại và đóng gói theo yêu cầu khách hàng — có mẫu hàng và hồ sơ kiểm nghiệm trước khi giao."
     },
     "categories": {
       "coffee": {
-        "name": "Cà phê",
+        "name": "Nguyên liệu Cà phê",
         "slug": "coffee",
-        "tagline": "Cà phê nhân, rang, bột hòa tan, tinh chất & cold brew",
+        "tagline": "Hạt, bột, chiết xuất & cold brew",
         "description": "Thu mua từ Tây Nguyên, cà phê của chúng tôi được phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi để đáp ứng thông số kỹ thuật của khách hàng quốc tế — có sẵn dạng nhân xanh, rang nguyên hạt/xay, cùng các dòng chế biến sâu hơn: bột cà phê hòa tan, tinh chất cà phê dạng lỏng và cold brew cô đặc pha sẵn.",
         "specTitle": "Thông số điển hình",
         "specs": [
@@ -254,53 +265,78 @@
           "Đóng gói: bao đay 60kg có lót GrainPro (cà phê nhân); túi, thùng phuy hoặc bag-in-box cho bột/tinh chất/cold brew",
           "Nhận rang, phối chế và đóng gói nhãn hàng riêng theo yêu cầu"
         ],
+        "groupsTitle": "Nhóm sản phẩm",
+        "groups": ["Cà phê nhân & rang", "Dạng bột", "Chiết xuất", "Cold Brew", "Đặc biệt"],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Nhà rang xay", "Sản xuất cà phê hòa tan & RTD", "Thương hiệu cold brew & cà phê lon", "Pha trộn nhãn hàng riêng", "Dịch vụ ăn uống"]
       },
-      "fruitPowder": {
-        "name": "Bột hoa quả sấy thăng hoa",
-        "slug": "freeze-dried-fruit-powder",
-        "tagline": "Chanh dây, cam, xoài, mãng cầu, sầu riêng, thanh long",
-        "description": "Công nghệ sấy thăng hoa giữ lại màu sắc, hương thơm và dưỡng chất tốt hơn hẳn so với sấy phun hoặc sấy nhiệt, tạo ra loại bột mịn, ổn định, lý tưởng cho các sản phẩm thực phẩm và đồ uống chế biến.",
+      "coconut": {
+        "name": "Nguyên liệu Dừa",
+        "slug": "coconut",
+        "tagline": "Sữa, kem, nước dừa, bột, dầu & MCT",
+        "description": "Dừa Việt Nam chất lượng cao được phát triển thành các nguyên liệu thực phẩm đa dạng — từ sữa dừa, kem dừa, bột dừa, nước dừa cô đặc đến dầu dừa nguyên chất và các giải pháp lipid chức năng cho ngành thực phẩm và đồ uống quốc tế.",
         "specTitle": "Thông số điển hình",
         "specs": [
-          "Trái cây: chanh dây, cam, xoài, mãng cầu, sầu riêng, thanh long (nhận trái cây theo yêu cầu)",
-          "Độ ẩm: tối đa 3–5% để đảm bảo hạn sử dụng lâu dài",
-          "Kích thước hạt: tiêu chuẩn 80–100 mesh, có thể tùy chỉnh theo yêu cầu",
-          "Đóng gói: túi nhôm kèm gói hút ẩm, 1kg–25kg, có thùng phuy số lượng lớn"
+          "Dạng lỏng: sữa dừa và kem dừa với hàm lượng béo tiêu chuẩn hoặc theo yêu cầu, đóng gói UHT/vô trùng theo đơn hàng",
+          "Dạng bột: sữa dừa, kem dừa sấy phun và bột nước dừa, độ ẩm và hàm lượng béo theo thông số khách hàng",
+          "Dầu & lipid chức năng: dầu dừa nguyên chất ép lạnh, dầu MCT và bột MCT",
+          "Đóng gói: thùng carton, túi vô trùng, thùng phuy hoặc số lượng lớn — xác nhận theo từng đơn hàng"
         ],
+        "groupsTitle": "Nhóm sản phẩm",
+        "groups": ["Sữa & Kem dừa", "Nước dừa", "Dầu & Lipid chức năng", "Dừa dạng rắn", "Đặc biệt"],
+        "applicationsTitle": "Ứng dụng phổ biến",
+        "applications": ["Đồ uống thực vật thay thế sữa", "Bánh & bánh kẹo", "Thực phẩm chức năng", "Dịch vụ ăn uống & sản xuất OEM"]
+      },
+      "birdsNest": {
+        "name": "Nguyên liệu Yến sào",
+        "slug": "birds-nest",
+        "tagline": "Yến tuyển chọn, chiết xuất, cô đặc & dạng bột",
+        "description": "Yến sào Việt Nam cao cấp được phát triển thành các nguyên liệu chức năng có giá trị cao, bao gồm yến tuyển chọn, dạng cô đặc, chiết xuất, dạng bột và các công thức tùy chỉnh cho thực phẩm cao cấp và dinh dưỡng.",
+        "specTitle": "Thông số điển hình",
+        "specs": [
+          "Dòng sản phẩm: yến thô tuyển chọn và yến tinh chế, dạng cô đặc, tinh chất nguyên chất và dạng bột — có sẵn dạng nước yến chưng sẵn đóng chai",
+          "Tùy chỉnh công thức: độ ngọt, thành phần bổ sung (đường phèn, nhân sâm và các vị khác) và bao bì theo yêu cầu khách hàng",
+          "Đóng gói: chai thủy tinh bán lẻ (thường 70ml, dạng lốc nhiều chai) cho dòng nước yến; hũ hoặc hút chân không cho yến tuyển chọn/khô — nhận đóng gói nhãn hàng riêng",
+          "Hạn sử dụng và yêu cầu bảo quản lạnh khác nhau theo từng dòng sản phẩm — xác nhận cùng đội ngũ xuất khẩu theo từng đơn hàng"
+        ],
+        "groupsTitle": "Nhóm sản phẩm",
+        "groups": ["Yến tuyển chọn", "Cô đặc & Chiết xuất", "Dạng bột", "Công thức chức năng"],
+        "applicationsTitle": "Ứng dụng phổ biến",
+        "applications": ["Bán lẻ thực phẩm sức khỏe", "Thương hiệu đồ uống RTD nhãn hàng riêng", "Công thức thực phẩm chức năng", "Phân phối dịch vụ ăn uống & nhà thuốc"]
+      },
+      "fruit": {
+        "name": "Nguyên liệu Trái cây",
+        "slug": "fruit",
+        "tagline": "Sấy thăng hoa, dạng bột, miếng & cô đặc",
+        "description": "Trái cây nhiệt đới Việt Nam được phát triển thành các nguyên liệu chất lượng cao bằng công nghệ chế biến tiên tiến, giúp duy trì màu sắc, hương vị và giá trị dinh dưỡng tự nhiên cho ngành thực phẩm, đồ uống và dinh dưỡng.",
+        "specTitle": "Thông số điển hình",
+        "specs": [
+          "Bột sấy thăng hoa: chanh dây, cam, xoài, mãng cầu, sầu riêng, thanh long và trái cây khác theo yêu cầu — độ ẩm tối đa 3–5%, tiêu chuẩn 80–100 mesh",
+          "Miếng sấy thăng hoa: dạng lát, khối vuông và mảnh vỡ cho bánh, ngũ cốc và snack",
+          "Cô đặc trái cây: puree và nước ép cô đặc cho đồ uống và hương liệu",
+          "Đóng gói: túi nhôm kèm gói hút ẩm (1kg–25kg) hoặc thùng phuy số lượng lớn — tùy chỉnh kích thước hạt và bao bì theo yêu cầu"
+        ],
+        "groupsTitle": "Nhóm sản phẩm",
+        "groups": ["Bột sấy thăng hoa", "Miếng sấy thăng hoa", "Cô đặc trái cây", "Chiết xuất"],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Bột pha smoothie & đồ uống", "Bánh & bánh kẹo", "Thực phẩm chức năng", "Tạo màu/hương vị tự nhiên"]
       },
-      "agriRaw": {
-        "name": "Nguyên liệu nông sản cao cấp",
-        "slug": "premium-agri-raw-materials",
-        "tagline": "Hạt điều, hồ tiêu, quế, hoa hồi & gia vị",
-        "description": "Việt Nam là một trong những nước xuất khẩu hàng đầu thế giới về hạt điều, hồ tiêu, quế và hoa hồi — chúng tôi cung cấp các lô hàng đạt chuẩn xuất khẩu với đầy đủ hồ sơ cho đối tác sản xuất thực phẩm và kinh doanh gia vị.",
+      "nutsSpicesBotanicals": {
+        "name": "Hạt, Gia vị & Thảo mộc",
+        "slug": "nuts-spices-botanicals",
+        "tagline": "Điều, tiêu, quế, hồi & thảo mộc",
+        "description": "Các loại hạt, gia vị và thảo mộc Việt Nam được tuyển chọn theo tiêu chuẩn xuất khẩu, phục vụ các nhà sản xuất thực phẩm và đối tác nguyên liệu quốc tế với khả năng kiểm soát chất lượng và hồ sơ truy xuất đầy đủ.",
         "specTitle": "Thông số điển hình",
         "specs": [
           "Hạt điều: các cấp WW240/WW320/SW240, đóng lon hút chân không 22,68kg",
           "Hồ tiêu: dung trọng 500–570 g/l, độ ẩm tối đa 13%, tiệt trùng hơi nước theo yêu cầu",
-          "Quế: nguyên cây, gãy vụn, hoặc xay, phân loại theo hàm lượng tinh dầu",
-          "Hoa hồi: nguyên cánh hoặc tách cánh, phơi khô tự nhiên, độ ẩm đạt chuẩn xuất khẩu"
+          "Quế & hoa hồi: nguyên cây, gãy vụn hoặc xay, phân loại theo hàm lượng tinh dầu và độ ẩm",
+          "Thảo mộc: gừng, nghệ, sả và các loại thảo mộc Việt Nam tuyển chọn khác, dạng tươi, khô hoặc bột theo yêu cầu"
         ],
+        "groupsTitle": "Nhóm sản phẩm",
+        "groups": ["Hạt", "Gia vị", "Thảo mộc"],
         "applicationsTitle": "Ứng dụng phổ biến",
-        "applications": ["Sản xuất thực phẩm", "Pha trộn & phân phối gia vị", "Đóng gói bán lẻ & dịch vụ ăn uống", "Sản xuất hương liệu & chiết xuất"]
-      },
-      "birdsNest": {
-        "name": "Yến chế biến sâu",
-        "slug": "processed-birds-nest",
-        "tagline": "Yến sào chế biến sâu",
-        "description": "[Nội dung mẫu — xác nhận dòng sản phẩm thực tế trước khi đăng] Việt Nam là một trong những nước sản xuất yến sào hàng đầu; chúng tôi cung cấp các sản phẩm yến chế biến sâu, sẵn sàng phân phối bán lẻ và dịch vụ ăn uống thay vì chỉ yến thô/yến tinh chế.",
-        "specTitle": "Thông số điển hình",
-        "specs": [
-          "Dòng sản phẩm: nước yến chưng sẵn đóng chai (đường phèn, ít đường, nhân sâm và các vị khác), tinh chất yến nguyên chất, yến khô/tinh chế nguyên tổ",
-          "[Nội dung mẫu — xác nhận] Thu mua và chế biến tại cơ sở đạt chuẩn an toàn thực phẩm; bổ sung thông tin chứng nhận thực tế khi có",
-          "Đóng gói: chai thủy tinh bán lẻ (thường 70ml, dạng lốc nhiều chai) cho dòng nước yến; hũ hoặc hút chân không cho yến khô — nhận đóng gói nhãn hàng riêng",
-          "Hạn sử dụng và yêu cầu bảo quản lạnh khác nhau theo từng dòng sản phẩm — liên hệ đội ngũ xuất khẩu để biết chi tiết"
-        ],
-        "applicationsTitle": "Ứng dụng phổ biến",
-        "applications": ["Bán lẻ thực phẩm sức khỏe", "Thương hiệu đồ uống RTD nhãn hàng riêng", "Bộ quà tặng bán lẻ cao cấp", "Phân phối dịch vụ ăn uống & nhà thuốc"]
+        "applications": ["Sản xuất thực phẩm", "Pha trộn & phân phối gia vị", "Sản xuất hương liệu & chiết xuất", "Đóng gói bán lẻ & dịch vụ ăn uống"]
       }
     },
     "sampleCta": {
@@ -465,9 +501,11 @@
       "country": "Quốc gia điểm đến",
       "product": "Sản phẩm quan tâm",
       "productPlaceholder": "Chọn sản phẩm",
-      "productCoffee": "Cà phê",
-      "productFruitPowder": "Bột hoa quả sấy thăng hoa",
-      "productAgri": "Nguyên liệu nông sản cao cấp",
+      "productCoffee": "Nguyên liệu Cà phê",
+      "productCoconut": "Nguyên liệu Dừa",
+      "productBirdsNest": "Nguyên liệu Yến sào",
+      "productFruit": "Nguyên liệu Trái cây",
+      "productNutsSpicesBotanicals": "Hạt, Gia vị & Thảo mộc",
       "productOther": "Khác / chưa có trong danh sách",
       "volume": "Số lượng đặt hàng dự kiến",
       "volumePlaceholder": "ví dụ: 1 container 20ft, 5 tấn/tháng",

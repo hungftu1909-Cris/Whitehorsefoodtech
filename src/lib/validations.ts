@@ -21,7 +21,7 @@ export const rfqSchema = z.object({
   email: z.string().trim().email(),
   phone: z.string().trim().optional().or(z.literal("")),
   country: z.string().trim().min(1),
-  product: z.enum(["coffee", "fruitPowder", "agri", "other"]),
+  product: z.enum(["coffee", "coconut", "birdsNest", "fruit", "nutsSpicesBotanicals", "other"]),
   volume: z.string().trim().min(1),
   incoterm: z.string().trim().optional().or(z.literal("")),
   message: z.string().trim().optional().or(z.literal("")),

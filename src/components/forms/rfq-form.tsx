@@ -92,8 +92,12 @@ export function RfqForm() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="coffee">{t("productCoffee")}</SelectItem>
-                  <SelectItem value="fruitPowder">{t("productFruitPowder")}</SelectItem>
-                  <SelectItem value="agri">{t("productAgri")}</SelectItem>
+                  <SelectItem value="coconut">{t("productCoconut")}</SelectItem>
+                  <SelectItem value="birdsNest">{t("productBirdsNest")}</SelectItem>
+                  <SelectItem value="fruit">{t("productFruit")}</SelectItem>
+                  <SelectItem value="nutsSpicesBotanicals">
+                    {t("productNutsSpicesBotanicals")}
+                  </SelectItem>
                   <SelectItem value="other">{t("productOther")}</SelectItem>
                 </SelectContent>
               </Select>
