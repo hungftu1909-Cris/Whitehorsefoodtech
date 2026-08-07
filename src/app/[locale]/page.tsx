@@ -22,10 +22,10 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <ProductsPreview />
       <StatsStrip />
       <TrustStrip />
       <ValueProps />
-      <ProductsPreview />
       <ProcessPreview />
       <CertificationsTeaser />
       <Testimonial />
