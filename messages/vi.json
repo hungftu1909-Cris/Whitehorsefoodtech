@@ -256,13 +256,13 @@
         "name": "Nguyên liệu Cà phê",
         "slug": "coffee",
         "tagline": "Hạt, bột, chiết xuất & cold brew",
-        "description": "Thu mua từ Tây Nguyên, cà phê của chúng tôi được phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi để đáp ứng thông số kỹ thuật của khách hàng quốc tế — có sẵn dạng nhân xanh, rang nguyên hạt/xay, cùng các dòng chế biến sâu hơn: bột cà phê hòa tan, tinh chất cà phê dạng lỏng và cold brew cô đặc pha sẵn.",
+        "description": "Thu mua từ Tây Nguyên, cà phê của chúng tôi được phân loại theo cỡ sàng, độ ẩm và tỷ lệ lỗi để đáp ứng thông số kỹ thuật của khách hàng quốc tế — có sẵn dạng nhân xanh, rang nguyên hạt/xay, cùng các dòng chế biến sâu hơn: bột cà phê hòa tan, tinh chất cà phê dạng lỏng và cold brew cô đặc pha sẵn, cung cấp theo số lượng lớn hoặc dạng single-serve nhãn hàng riêng.",
         "specTitle": "Thông số điển hình",
         "specs": [
           "Robusta: Sàng 16/18, độ ẩm tối đa 12,5%, đen & vỡ tối đa 3–5%",
           "Arabica: Sàng 15+, độ ẩm tối đa 12%, chế biến ướt hoàn toàn hoặc tự nhiên",
-          "Dòng chế biến sâu: bột hòa tan sấy phun/sấy thăng hoa, tinh chất cà phê chiết lạnh, cold brew cô đặc không đường — tùy chỉnh nồng độ và bao bì theo yêu cầu",
-          "Đóng gói: bao đay 60kg có lót GrainPro (cà phê nhân); túi, thùng phuy hoặc bag-in-box cho bột/tinh chất/cold brew",
+          "Dòng chế biến: bột cà phê hòa tan (pha trộn Arabica & Robusta), tinh chất cà phê và tinh chất cà phê cô đặc dạng chai nhỏ giọt, cold brew cô đặc không đường — tùy chỉnh nồng độ theo yêu cầu",
+          "Đóng gói: bao đay 60kg có lót GrainPro (cà phê nhân); hũ, chai nhỏ giọt, thùng phuy hoặc bag-in-box cho bột/tinh chất/cold brew; gói single-serve và hộp bán lẻ cho dòng nhãn hàng riêng",
           "Nhận rang, phối chế và đóng gói nhãn hàng riêng theo yêu cầu"
         ],
         "groupsTitle": "Nhóm sản phẩm",
@@ -274,13 +274,14 @@
         "name": "Nguyên liệu Dừa",
         "slug": "coconut",
         "tagline": "Sữa, kem, nước dừa, bột, dầu & MCT",
-        "description": "Dừa Việt Nam chất lượng cao được phát triển thành các nguyên liệu thực phẩm đa dạng — từ sữa dừa, kem dừa, bột dừa, nước dừa cô đặc đến dầu dừa nguyên chất và các giải pháp lipid chức năng cho ngành thực phẩm và đồ uống quốc tế.",
+        "description": "Dừa Việt Nam chất lượng cao được phát triển thành các nguyên liệu thực phẩm đa dạng — từ sữa dừa, kem dừa, bột dừa, nước dừa cô đặc đến dầu dừa nguyên chất và các giải pháp lipid chức năng cho ngành thực phẩm và đồ uống quốc tế, cung cấp theo số lượng lớn hoặc đóng gói nhãn hàng riêng.",
         "specTitle": "Thông số điển hình",
         "specs": [
-          "Dạng lỏng: sữa dừa và kem dừa với hàm lượng béo tiêu chuẩn hoặc theo yêu cầu, đóng gói UHT/vô trùng theo đơn hàng",
-          "Dạng bột: sữa dừa, kem dừa sấy phun và bột nước dừa, độ ẩm và hàm lượng béo theo thông số khách hàng",
-          "Dầu & lipid chức năng: dầu dừa nguyên chất ép lạnh, dầu MCT và bột MCT",
-          "Đóng gói: thùng carton, túi vô trùng, thùng phuy hoặc số lượng lớn — xác nhận theo từng đơn hàng"
+          "Dạng lỏng: sữa dừa (hộp giấy) và kem dừa (hũ) với hàm lượng béo tiêu chuẩn hoặc theo yêu cầu, đóng gói UHT/vô trùng theo đơn hàng",
+          "Dạng bột: bột sữa dừa và bột kem dừa (thuần thực vật, không gluten, không thêm đường), nước dừa NFC, nước dừa cô đặc và bột nước dừa",
+          "Dầu & lipid chức năng: dầu dừa nguyên chất ép lạnh, dầu MCT không hương liệu và bột MCT",
+          "Đóng gói: hộp giấy, hũ, túi đứng, túi vô trùng, thùng phuy hoặc số lượng lớn — xác nhận theo từng đơn hàng",
+          "Nhận sản xuất OEM và đóng gói nhãn hàng riêng cho mọi định dạng"
         ],
         "groupsTitle": "Nhóm sản phẩm",
         "groups": ["Sữa & Kem dừa", "Nước dừa", "Dầu & Lipid chức năng", "Dừa dạng rắn", "Đặc biệt"],
@@ -291,12 +292,12 @@
         "name": "Nguyên liệu Yến sào",
         "slug": "birds-nest",
         "tagline": "Yến tuyển chọn, chiết xuất, cô đặc & dạng bột",
-        "description": "Yến sào Việt Nam cao cấp được phát triển thành các nguyên liệu chức năng có giá trị cao, bao gồm yến tuyển chọn, dạng cô đặc, chiết xuất, dạng bột và các công thức tùy chỉnh cho thực phẩm cao cấp và dinh dưỡng.",
+        "description": "Yến sào Việt Nam cao cấp được phát triển thành các nguyên liệu chức năng có giá trị cao, bao gồm yến tuyển chọn, dạng cô đặc, chiết xuất, dạng bột và các công thức tùy chỉnh cho thực phẩm cao cấp và dinh dưỡng, từ nguyên liệu số lượng lớn đến sản phẩm bán lẻ nhãn hàng riêng.",
         "specTitle": "Thông số điển hình",
         "specs": [
           "Dòng sản phẩm: yến thô tuyển chọn và yến tinh chế, dạng cô đặc, tinh chất nguyên chất và dạng bột — có sẵn dạng nước yến chưng sẵn đóng chai",
           "Tùy chỉnh công thức: độ ngọt, thành phần bổ sung (đường phèn, nhân sâm và các vị khác) và bao bì theo yêu cầu khách hàng",
-          "Đóng gói: chai thủy tinh bán lẻ (thường 70ml, dạng lốc nhiều chai) cho dòng nước yến; hũ hoặc hút chân không cho yến tuyển chọn/khô — nhận đóng gói nhãn hàng riêng",
+          "Đóng gói: chai thủy tinh bán lẻ (thường 70ml, dạng lốc nhiều chai) cho dòng nước yến; hũ hoặc hút chân không cho yến tuyển chọn/khô; có sẵn bộ hộp quà tặng cao cấp — nhận đóng gói nhãn hàng riêng",
           "Hạn sử dụng và yêu cầu bảo quản lạnh khác nhau theo từng dòng sản phẩm — xác nhận cùng đội ngũ xuất khẩu theo từng đơn hàng"
         ],
         "groupsTitle": "Nhóm sản phẩm",
@@ -308,13 +309,14 @@
         "name": "Nguyên liệu Trái cây",
         "slug": "fruit",
         "tagline": "Sấy thăng hoa, dạng bột, miếng & cô đặc",
-        "description": "Trái cây nhiệt đới Việt Nam được phát triển thành các nguyên liệu chất lượng cao bằng công nghệ chế biến tiên tiến, giúp duy trì màu sắc, hương vị và giá trị dinh dưỡng tự nhiên cho ngành thực phẩm, đồ uống và dinh dưỡng.",
+        "description": "Trái cây nhiệt đới Việt Nam được phát triển thành các nguyên liệu chất lượng cao bằng công nghệ chế biến tiên tiến, giúp duy trì màu sắc, hương vị và giá trị dinh dưỡng tự nhiên cho ngành thực phẩm, đồ uống và dinh dưỡng — có sẵn dạng bột, miếng, cô đặc và chiết xuất.",
         "specTitle": "Thông số điển hình",
         "specs": [
-          "Bột sấy thăng hoa: chanh dây, cam, xoài, mãng cầu, sầu riêng, thanh long và trái cây khác theo yêu cầu — độ ẩm tối đa 3–5%, tiêu chuẩn 80–100 mesh",
+          "Bột sấy thăng hoa: chanh dây, xoài, thanh long, sầu riêng, mãng cầu, dứa, chuối, cam và trái cây khác theo yêu cầu — độ ẩm tối đa 3–5%, tiêu chuẩn 80–100 mesh",
           "Miếng sấy thăng hoa: dạng lát, khối vuông và mảnh vỡ cho bánh, ngũ cốc và snack",
           "Cô đặc trái cây: puree và nước ép cô đặc cho đồ uống và hương liệu",
-          "Đóng gói: túi nhôm kèm gói hút ẩm (1kg–25kg) hoặc thùng phuy số lượng lớn — tùy chỉnh kích thước hạt và bao bì theo yêu cầu"
+          "Chiết xuất: tinh chất trái cây tự nhiên và hương liệu nền dạng chai nhỏ giọt, định lượng chính xác",
+          "Đóng gói: túi nhôm kèm gói hút ẩm (1kg–25kg) hoặc thùng phuy số lượng lớn cho bột/miếng; chai thủy tinh cho cô đặc và chiết xuất — tùy chỉnh kích thước hạt và bao bì theo yêu cầu"
         ],
         "groupsTitle": "Nhóm sản phẩm",
         "groups": ["Bột sấy thăng hoa", "Miếng sấy thăng hoa", "Cô đặc trái cây", "Chiết xuất"],
@@ -328,10 +330,10 @@
         "description": "Các loại hạt, gia vị và thảo mộc Việt Nam được tuyển chọn theo tiêu chuẩn xuất khẩu, phục vụ các nhà sản xuất thực phẩm và đối tác nguyên liệu quốc tế với khả năng kiểm soát chất lượng và hồ sơ truy xuất đầy đủ.",
         "specTitle": "Thông số điển hình",
         "specs": [
-          "Hạt điều: các cấp WW240/WW320/SW240, đóng lon hút chân không 22,68kg",
-          "Hồ tiêu: dung trọng 500–570 g/l, độ ẩm tối đa 13%, tiệt trùng hơi nước theo yêu cầu",
-          "Quế & hoa hồi: nguyên cây, gãy vụn hoặc xay, phân loại theo hàm lượng tinh dầu và độ ẩm",
-          "Thảo mộc: gừng, nghệ, sả và các loại thảo mộc Việt Nam tuyển chọn khác, dạng tươi, khô hoặc bột theo yêu cầu"
+          "Hạt: hạt điều (các cấp WW240/WW320/SW240, đóng lon hút chân không 22,68kg) và mắc ca, nguyên vỏ hoặc đã tách nhân",
+          "Gia vị: hồ tiêu đen (dung trọng 500–570 g/l, độ ẩm tối đa 13%) và hồ tiêu trắng, quế và hoa hồi (nguyên cây, gãy vụn hoặc xay, phân loại theo hàm lượng tinh dầu và độ ẩm), ớt — tiệt trùng hơi nước theo yêu cầu",
+          "Thảo mộc: gừng, nghệ, sả, lá dứa và các loại thảo mộc Việt Nam tuyển chọn khác, dạng tươi, khô hoặc bột theo yêu cầu",
+          "Đóng gói: hũ và gói bán lẻ cho dòng nhãn hàng riêng; lon hút chân không, bao hoặc thùng phuy số lượng lớn cho bán buôn — xác nhận theo từng đơn hàng"
         ],
         "groupsTitle": "Nhóm sản phẩm",
         "groups": ["Hạt", "Gia vị", "Thảo mộc"],

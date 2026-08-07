@@ -256,13 +256,13 @@
         "name": "Coffee Ingredients",
         "slug": "coffee",
         "tagline": "Beans, powder, extract & cold brew",
-        "description": "From Vietnam's renowned coffee regions, we supply carefully selected coffee ingredients for global food and beverage applications — from green and roasted beans to soluble powders, extracts and cold brew concentrates.",
+        "description": "From Vietnam's renowned coffee regions, we supply carefully selected coffee ingredients for global food and beverage applications — from green and roasted beans to soluble powders, extracts and cold brew concentrates, available in bulk or private-label single-serve formats.",
         "specTitle": "Typical specifications",
         "specs": [
           "Robusta: Screen 16/18, moisture 12.5% max, black & broken 3–5% max",
           "Arabica: Screen 15+, moisture 12% max, fully washed or natural process",
-          "Processed lines: spray-dried/freeze-dried soluble powder, cold-extracted liquid coffee extract, unsweetened cold brew concentrate — custom concentration and packaging on request",
-          "Packaging: 60kg jute bags with GrainPro liner (green beans); pouches, drums or bag-in-box for powder/extract/cold brew",
+          "Processed formats: soluble coffee powder (Arabica & Robusta blend), coffee extract and concentrated coffee extract in dropper-bottle format, unsweetened cold brew concentrate — custom concentration on request",
+          "Packaging: 60kg jute bags with GrainPro liner (green beans); jars, dropper bottles, drums or bag-in-box for powder/extract/cold brew; single-serve sachets and retail boxes for private-label formats",
           "Custom roasting, formulation and private-label packaging available"
         ],
         "groupsTitle": "Product groups",
@@ -274,13 +274,14 @@
         "name": "Coconut Ingredients",
         "slug": "coconut",
         "tagline": "Milk, cream, water, powder, oil & MCT",
-        "description": "Premium Vietnamese coconut transformed into versatile food ingredients — including coconut milk and cream, powders, water concentrates, virgin coconut oil and functional lipid solutions for international food and beverage brands.",
+        "description": "Premium Vietnamese coconut transformed into versatile food ingredients — including coconut milk and cream, powders, water concentrates, virgin coconut oil and functional lipid solutions for international food and beverage brands, supplied in bulk or private-label retail packaging.",
         "specTitle": "Typical specifications",
         "specs": [
-          "Liquid formats: coconut milk and cream at standard or custom fat content, UHT/aseptic packaging on request",
-          "Powder formats: spray-dried coconut milk, cream and coconut water powder, moisture and fat content to buyer specification",
-          "Oils & functional lipids: cold-pressed virgin coconut oil, MCT oil and MCT powder",
-          "Packaging: cartons, aseptic bags, drums or bulk — format and packaging confirmed per order"
+          "Liquid formats: coconut milk (carton) and coconut cream (jar) at standard or custom fat content, UHT/aseptic packaging on request",
+          "Powder formats: coconut milk powder and coconut cream powder (plant-based, gluten-free, no added sugar), NFC coconut water, coconut water concentrate and coconut water powder",
+          "Oils & functional lipids: cold-pressed virgin coconut oil, unflavored MCT oil and MCT powder",
+          "Packaging: cartons, jars, stand-up pouches, aseptic bags, drums or bulk — format and packaging confirmed per order",
+          "OEM and private-label formulation available across all formats"
         ],
         "groupsTitle": "Product groups",
         "groups": ["Milk & Cream", "Coconut Water", "Oils & Functional Lipids", "Coconut Solids", "Specialty"],
@@ -291,12 +292,12 @@
         "name": "Bird's Nest Ingredients",
         "slug": "birds-nest",
         "tagline": "Selected nest, extract, concentrate & powder",
-        "description": "Premium Vietnamese edible bird's nest developed into high-value functional ingredients, including selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications.",
+        "description": "Premium Vietnamese edible bird's nest developed into high-value functional ingredients, including selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications, from bulk ingredients to retail-ready private-label formats.",
         "specTitle": "Typical specifications",
         "specs": [
           "Formats: selected raw and cleaned bird's nest, concentrate, pure extract and powder — bottled ready-to-drink formats available",
           "Custom formulation: sugar level, added ingredients (rock sugar, ginseng and other variants) and packaging configured to buyer requirements",
-          "Packaging: retail glass bottles (typically 70ml multi-packs) for RTD formats; jars or vacuum packs for selected/dried nest — private-label packaging available",
+          "Packaging: retail glass bottles (typically 70ml multi-packs) for RTD formats; jars or vacuum packs for selected/dried nest; premium gift box sets available — private-label packaging available",
           "Shelf life and cold-chain requirements vary by format — confirmed with our export team per order"
         ],
         "groupsTitle": "Product groups",
@@ -308,13 +309,14 @@
         "name": "Fruit Ingredients",
         "slug": "fruit",
         "tagline": "Freeze-dried, powder, pieces & concentrate",
-        "description": "Vietnam's tropical fruits transformed into stable, high-quality ingredients through advanced processing — preserving natural color, aroma and nutritional value for food, beverage and nutrition applications.",
+        "description": "Vietnam's tropical fruits transformed into stable, high-quality ingredients through advanced processing — preserving natural color, aroma and nutritional value for food, beverage and nutrition applications, available as powders, pieces, concentrates and extracts.",
         "specTitle": "Typical specifications",
         "specs": [
-          "Freeze-dried powders: passion fruit, orange, mango, soursop, durian, dragon fruit and other fruits on request — moisture 3–5% max, 80–100 mesh standard",
+          "Freeze-dried powders: passion fruit, mango, dragon fruit, durian, soursop, pineapple, banana, orange and other fruits on request — moisture 3–5% max, 80–100 mesh standard",
           "Freeze-dried pieces: slices, cubes and crumbles for bakery, cereal and snack applications",
           "Fruit concentrates: puree and juice concentrate for beverage and flavor applications",
-          "Packaging: aluminum foil bags with desiccant (1kg–25kg) or bulk drums — custom particle size and packaging on request"
+          "Extracts: natural fruit extract and fruit flavor base in dropper-bottle format for precise dosing",
+          "Packaging: aluminum foil bags with desiccant (1kg–25kg) or bulk drums for powders/pieces; glass bottles for concentrates and extracts — custom particle size and packaging on request"
         ],
         "groupsTitle": "Product groups",
         "groups": ["Freeze-Dried Powders", "Freeze-Dried Pieces", "Fruit Concentrates", "Extracts"],
@@ -328,10 +330,10 @@
         "description": "Selected Vietnamese nuts, spices and botanicals sourced for international food manufacturers and ingredient partners, with export-grade specifications, quality control and full documentation.",
         "specTitle": "Typical specifications",
         "specs": [
-          "Cashew: WW240/WW320/SW240 grades, vacuum-packed 22.68kg tins",
-          "Black pepper: 500–570 g/l density, moisture 13% max, steam-sterilized on request",
-          "Cinnamon (cassia) & star anise: whole, broken or ground, graded by oil content and moisture",
-          "Botanicals: ginger, turmeric, lemongrass and other selected Vietnamese botanicals available fresh, dried or powdered on request"
+          "Nuts: cashew (WW240/WW320/SW240 grades, vacuum-packed 22.68kg tins) and macadamia, in-shell or kernel",
+          "Spices: black pepper (500–570 g/l density, moisture 13% max) and white pepper, cinnamon and star anise (whole, broken or ground, graded by oil content and moisture), chili — steam-sterilized on request",
+          "Botanicals: ginger, turmeric, lemongrass, pandan and other selected Vietnamese botanicals available fresh, dried or powdered on request",
+          "Packaging: retail jars and packs for private-label lines; bulk vacuum-packed tins, bags or drums for wholesale — format confirmed per order"
         ],
         "groupsTitle": "Product groups",
         "groups": ["Nuts", "Spices", "Botanicals"],
