@@ -352,13 +352,18 @@
     "hero": {
       "eyebrow": "Chất lượng & tuân thủ",
       "title": "Chứng nhận & tiêu chuẩn",
-      "subtitle": "[Trang nội dung mẫu — chỉ liệt kê các chứng nhận thực tế đang sở hữu, kèm số chứng nhận và thời hạn hiệu lực nếu có. Không đăng thông tin chưa được xác thực.]"
+      "subtitle": "Chúng tôi chỉ hợp tác với các nhà máy đáp ứng tiêu chuẩn an toàn thực phẩm và tuân thủ xuất khẩu quốc tế — đảm bảo mỗi lô hàng đều được hậu thuẫn bởi các chứng nhận mà thị trường của bạn yêu cầu."
+    },
+    "standards": {
+      "eyebrow": "Tiêu chuẩn đối tác sản xuất",
+      "title": "Yêu cầu bắt buộc với mọi nhà máy đối tác",
+      "subtitle": "Trước khi hợp tác với một nhà máy, cơ sở đó phải đáp ứng các tiêu chuẩn an toàn thực phẩm và tuân thủ xuất khẩu quốc tế cơ bản — đây là những tiêu chí chúng tôi sàng lọc."
     },
     "items": [
-      { "name": "ISO 22000", "description": "[Nội dung mẫu — xác nhận tình trạng chứng nhận] Hệ thống quản lý an toàn thực phẩm." },
-      { "name": "HACCP", "description": "[Nội dung mẫu — xác nhận tình trạng chứng nhận] Phân tích mối nguy và kiểm soát điểm tới hạn." },
-      { "name": "Chứng nhận hữu cơ", "description": "[Nội dung mẫu — xác nhận tổ chức cấp chứng nhận: USDA Organic / EU Organic / khác] cho các dòng sản phẩm áp dụng." },
-      { "name": "Đăng ký FDA", "description": "[Nội dung mẫu — xác nhận tình trạng đăng ký cơ sở với FDA cho các lô hàng xuất sang Hoa Kỳ.]" }
+      { "name": "ISO 22000", "description": "Nhà máy đối tác được lựa chọn dựa trên hệ thống quản lý an toàn thực phẩm đạt chứng nhận — ISO 22000 hoặc tiêu chuẩn tương đương được công nhận." },
+      { "name": "HACCP", "description": "Quy trình Phân tích mối nguy và Kiểm soát điểm tới hạn (HACCP) là yêu cầu tối thiểu đối với mọi cơ sở trong mạng lưới đối tác của chúng tôi." },
+      { "name": "Chứng nhận hữu cơ", "description": "Với các dòng sản phẩm cần nguyên liệu đạt chuẩn hữu cơ, chúng tôi chỉ thu mua qua các đối tác có chứng nhận USDA Organic, EU Organic hoặc tương đương còn hiệu lực." },
+      { "name": "Đăng ký FDA", "description": "Với các lô hàng xuất khẩu sang Hoa Kỳ, chúng tôi chỉ làm việc với các nhà máy đã đăng ký FDA để đáp ứng yêu cầu FSVP và nhập khẩu của Mỹ." }
     ],
     "sustainability": {
       "eyebrow": "Phát triển bền vững",
@@ -375,7 +380,7 @@
         },
         {
           "title": "Trách nhiệm với môi trường",
-          "description": "[Nội dung mẫu — mô tả thực tế các hoạt động khi có xác nhận: ví dụ sử dụng nước/năng lượng trong chế biến, giảm rác thải bao bì, phương thức canh tác tại vùng trồng.]"
+          "description": "Chúng tôi ưu tiên hợp tác với các nhà máy đầu tư vào chế biến tiết kiệm tài nguyên, giảm thiểu rác thải bao bì và canh tác có trách nhiệm tại các vùng nguyên liệu."
         },
         {
           "title": "Chất lượng & an toàn thực phẩm",

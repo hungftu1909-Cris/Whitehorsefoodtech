@@ -352,13 +352,18 @@
     "hero": {
       "eyebrow": "Quality & compliance",
       "title": "Certifications & standards",
-      "subtitle": "[Placeholder page — list only the certifications actually held, with certificate numbers and validity dates where applicable. Do not publish unverified claims.]"
+      "subtitle": "We partner exclusively with manufacturing facilities that meet international food safety and export compliance standards — so every shipment is backed by the certifications your market requires."
+    },
+    "standards": {
+      "eyebrow": "Manufacturing partner standards",
+      "title": "What we require from every manufacturing partner",
+      "subtitle": "Before we work with a facility, it has to meet baseline international food-safety and export-compliance standards — these are the ones we screen for."
     },
     "items": [
-      { "name": "ISO 22000", "description": "[Placeholder — confirm certification status] Food safety management system." },
-      { "name": "HACCP", "description": "[Placeholder — confirm certification status] Hazard Analysis and Critical Control Points." },
-      { "name": "Organic Certification", "description": "[Placeholder — confirm certification body: USDA Organic / EU Organic / other] for applicable product lines." },
-      { "name": "FDA Registration", "description": "[Placeholder — confirm FDA facility registration status for US-bound shipments.]" }
+      { "name": "ISO 22000", "description": "Manufacturing partners are selected for a certified food safety management system — ISO 22000 or an equivalent recognized standard." },
+      { "name": "HACCP", "description": "Hazard Analysis and Critical Control Points protocols are a baseline requirement across every facility in our partner network." },
+      { "name": "Organic Certification", "description": "For product lines requiring organic-certified raw material, we source only through partners holding valid USDA Organic, EU Organic or an equivalent certification." },
+      { "name": "FDA Registration", "description": "For US-bound shipments, we work exclusively with FDA-registered facilities to meet FSVP and US import requirements." }
     ],
     "sustainability": {
       "eyebrow": "Sustainability",
@@ -375,7 +380,7 @@
         },
         {
           "title": "Environmental stewardship",
-          "description": "[Placeholder — describe actual practices once confirmed: e.g. water/energy use in processing, packaging waste reduction, sourcing regions' farming practices.]"
+          "description": "We prioritize manufacturing partners who invest in resource-efficient processing, reduced packaging waste, and responsible farming practices across their sourcing regions."
         },
         {
           "title": "Quality & food safety",

@@ -40,7 +40,12 @@ export default async function CertificationsPage({
       <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <SectionHeading
+          eyebrow={t("standards.eyebrow")}
+          title={t("standards.title")}
+          subtitle={t("standards.subtitle")}
+        />
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => {
             const Icon = CERT_ICONS[i % CERT_ICONS.length];
             return (
