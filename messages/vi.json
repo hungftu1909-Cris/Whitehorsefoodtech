@@ -450,16 +450,16 @@
     },
     "regionsTitle": "Thị trường xuất khẩu trọng tâm",
     "regions": "Nguyên liệu cà phê, dừa, yến sào, trái cây và gia vị của Việt Nam đã có mặt tại Bắc Mỹ, Liên minh châu Âu, Đông Á và Trung Đông. Thông qua mạng lưới đối tác thương mại, đây là những khu vực mà Whitehorse Foodtech đang tập trung hướng tới.",
-    "partners": {
+    "network": {
       "sourcing": {
-        "title": "Đối tác nguồn cung",
-        "description": "Các hợp tác xã và cơ sở chế biến tại những vùng nguyên liệu trọng điểm của Việt Nam — nền tảng của mọi lô hàng.",
-        "logoLabel": "Logo đối tác nguồn cung"
+        "stat": "3.000+",
+        "statLabel": "Vùng nguyên liệu đối tác trên khắp Việt Nam",
+        "description": "Chúng tôi hợp tác với mạng lưới đa dạng gồm các hợp tác xã và cơ sở chế biến trải khắp các vùng nguyên liệu trọng điểm của Việt Nam — mang lại sự linh hoạt về khối lượng, thời gian và thông số kỹ thuật cho khách hàng, không phụ thuộc vào một nguồn cung duy nhất."
       },
       "distribution": {
-        "title": "Đối tác phân phối",
-        "description": "Các đối tác thương mại toàn cầu uy tín, giúp đưa nguyên liệu của chúng tôi đến các thị trường quốc tế.",
-        "logoLabel": "Logo đối tác phân phối"
+        "stat": "30+",
+        "statLabel": "Quốc gia được tiếp cận qua mạng lưới thương mại",
+        "description": "Thông qua các đối tác thương mại uy tín, nguyên liệu của chúng tôi tiếp cận khách hàng thực phẩm & đồ uống tại Bắc Mỹ, Liên minh châu Âu, Đông Á và Trung Đông — với khả năng linh hoạt mở rộng sang thị trường mới khi nhu cầu tăng."
       }
     },
     "testimonialsTitle": "Đối tác nói gì về chúng tôi",

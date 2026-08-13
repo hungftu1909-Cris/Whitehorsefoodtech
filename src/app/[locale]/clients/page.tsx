@@ -1,9 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Globe2 } from "lucide-react";
+import { Globe2, Sprout, Ship } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
@@ -41,25 +40,33 @@ export default async function ClientsPage({
           <p className="mt-2 text-sm text-muted-foreground">{t("regions")}</p>
         </Reveal>
 
-        {(["sourcing", "distribution"] as const).map((group, groupIndex) => (
-          <div key={group} className={groupIndex === 0 ? "mt-14" : "mt-14 border-t border-border pt-14"}>
-            <Reveal>
-              <h3 className="font-serif text-lg font-semibold text-foreground">
-                {t(`partners.${group}.title`)}
-              </h3>
-              <p className="mt-1.5 max-w-2xl text-sm text-muted-foreground">
-                {t(`partners.${group}.description`)}
-              </p>
-            </Reveal>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <Reveal key={i} delay={i * 60}>
-                  <ImagePlaceholder label={t(`partners.${group}.logoLabel`)} aspect="aspect-[3/2]" />
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        ))}
+        {/* Aggregate network scale, not named suppliers/buyers on purpose —
+            showing specific factory or trading-partner logos here would let
+            either side identify and approach the other directly, cutting
+            Whitehorse out as the intermediary. Scale numbers (partner
+            growing regions, countries reached) demonstrate reach without
+            naming anyone. */}
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {(["sourcing", "distribution"] as const).map((group, i) => {
+            const Icon = group === "sourcing" ? Sprout : Ship;
+            return (
+              <Reveal key={group} delay={i * 100} className="rounded-lg border border-border bg-card p-8">
+                <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
+                  <Icon className="size-5" aria-hidden="true" />
+                </div>
+                <div className="mt-4 font-serif text-3xl font-semibold text-foreground">
+                  {t(`network.${group}.stat`)}
+                </div>
+                <p className="mt-1 text-sm font-medium text-foreground">
+                  {t(`network.${group}.statLabel`)}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {t(`network.${group}.description`)}
+                </p>
+              </Reveal>
+            );
+          })}
+        </div>
       </section>
 
       <CtaSection title={t("cta.title")} cta={t("cta.cta")} href="/contact" />

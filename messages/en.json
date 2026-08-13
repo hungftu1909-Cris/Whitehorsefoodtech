@@ -450,16 +450,16 @@
     },
     "regionsTitle": "Our focus export markets",
     "regions": "Vietnamese coffee, coconut, bird's nest, fruit and spice ingredients are already established across North America, the European Union, East Asia and the Middle East. Through our trading partner network, these are the regions Whitehorse Foodtech is focused on reaching.",
-    "partners": {
+    "network": {
       "sourcing": {
-        "title": "Sourcing partners",
-        "description": "Growing cooperatives and processing facilities across Vietnam's key producing regions — the foundation of every shipment.",
-        "logoLabel": "Sourcing partner logo"
+        "stat": "3,000+",
+        "statLabel": "Partner growing regions across Vietnam",
+        "description": "We work with a broad, diversified network of growing cooperatives and processing facilities across Vietnam's key producing regions — giving buyers flexibility in volume, timing and specification, without dependency on any single source."
       },
       "distribution": {
-        "title": "Distribution partners",
-        "description": "Established global trading partners who help bring our ingredients to international markets.",
-        "logoLabel": "Distribution partner logo"
+        "stat": "30+",
+        "statLabel": "Countries reached through our trading network",
+        "description": "Through established trading partners, our ingredients reach food and beverage buyers across North America, the EU, East Asia and the Middle East — with the flexibility to open new markets as demand grows."
       }
     },
     "testimonialsTitle": "What partners say",
