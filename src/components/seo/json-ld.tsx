@@ -21,6 +21,8 @@ export function JsonLd({
       "@context": "https://schema.org",
       "@type": "Organization",
       name: siteName,
+      legalName: siteConfig.legalNameEn,
+      alternateName: siteConfig.legalNameVi,
       url: siteConfig.url,
       logo: `${siteConfig.url}/icon.png`,
       description,
@@ -28,6 +30,9 @@ export function JsonLd({
       telephone: siteConfig.phone,
       address: {
         "@type": "PostalAddress",
+        streetAddress: "27 Đức Diễn Alley 23/72/39",
+        addressLocality: "Phú Diễn Ward",
+        addressRegion: "Hanoi",
         addressCountry: "VN",
       },
       ...(sameAs.length ? { sameAs } : {}),
