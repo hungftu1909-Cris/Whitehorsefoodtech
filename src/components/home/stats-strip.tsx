@@ -21,7 +21,7 @@ export function StatsStrip() {
               <dd className="font-serif text-3xl font-semibold text-accent md:text-4xl">
                 <AnimatedCounter value={stat.value} />
               </dd>
-              <p className="mt-1 text-xs text-primary-foreground/70 md:text-sm">{stat.label}</p>
+              <p className="mt-1 text-xs text-primary-foreground/85 md:text-sm">{stat.label}</p>
             </Reveal>
           ))}
         </dl>

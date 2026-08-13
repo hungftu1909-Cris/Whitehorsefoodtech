@@ -27,7 +27,7 @@ export function CtaSection({
             {title}
           </h2>
           {subtitle && (
-            <p className="mt-2 max-w-xl text-primary-foreground/75">{subtitle}</p>
+            <p className="mt-2 max-w-xl text-primary-foreground/85">{subtitle}</p>
           )}
         </div>
         <div className="flex shrink-0 flex-wrap gap-3">
@@ -45,7 +45,7 @@ export function CtaSection({
               href={secondaryHref}
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
-                "cursor-pointer border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+                "cursor-pointer border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
               )}
             >
               {secondaryCta}

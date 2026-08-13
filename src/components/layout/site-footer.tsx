@@ -24,14 +24,14 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <Logo className="text-primary-foreground [&_.text-muted-foreground]:text-primary-foreground/70" />
-            <p className="mt-4 max-w-xs text-sm text-primary-foreground/70">
+            <Logo className="text-primary-foreground [&_.text-muted-foreground]:text-primary-foreground/85" />
+            <p className="mt-4 max-w-xs text-sm text-primary-foreground/85">
               {tf("tagline")}
             </p>
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold tracking-wide text-primary-foreground/60 uppercase">
+            <h3 className="text-xs font-semibold tracking-wide text-primary-foreground/80 uppercase">
               {tf("quickLinksTitle")}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -48,7 +48,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold tracking-wide text-primary-foreground/60 uppercase">
+            <h3 className="text-xs font-semibold tracking-wide text-primary-foreground/80 uppercase">
               {tf("productsTitle")}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -66,7 +66,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold tracking-wide text-primary-foreground/60 uppercase">
+            <h3 className="text-xs font-semibold tracking-wide text-primary-foreground/80 uppercase">
               {tf("addressLabel")}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-primary-foreground/80">
@@ -85,8 +85,8 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60">
-          <p className="text-primary-foreground/50">
+        <div className="mt-14 border-t border-primary-foreground/25 pt-6 text-xs text-primary-foreground/80">
+          <p className="text-primary-foreground/75">
             {legalName} · {tf("businessRegNo")} {siteConfig.businessRegistrationNumber}
           </p>
 
@@ -102,7 +102,7 @@ export function SiteFooter() {
                 {tf("terms")}
               </Link>
               {SOCIAL_LINKS.length > 0 && (
-                <div className="flex items-center gap-3 border-l border-primary-foreground/15 pl-5">
+                <div className="flex items-center gap-3 border-l border-primary-foreground/25 pl-5">
                   {SOCIAL_LINKS.map(({ href, label, Icon }) => (
                     <a
                       key={label}
@@ -110,7 +110,7 @@ export function SiteFooter() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="cursor-pointer text-primary-foreground/70 hover:text-primary-foreground"
+                      className="cursor-pointer text-primary-foreground/85 hover:text-primary-foreground"
                     >
                       <Icon className="size-4" aria-hidden="true" />
                     </a>

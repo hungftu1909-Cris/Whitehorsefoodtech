@@ -102,15 +102,22 @@
   --secondary: #3a2818;
   --secondary-foreground: #f1e7d6;
   --muted: #2c1e10;
-  --muted-foreground: #ddcda9;
-  --accent: #d4a24e;
+  /* Brightened from #ddcda9 — on low-quality/uncalibrated screens, dark
+     backgrounds crush toward gray, eating into the effective contrast even
+     when the computed WCAG ratio looks fine. Extra headroom here keeps body
+     copy (this token backs most paragraph text site-wide) legible on
+     mediocre panels, not just reference monitors. */
+  --muted-foreground: #e8dcc0;
+  --accent: #ddb066;
   --accent-foreground: #1c120a;
   --success: #7f9873;
   --success-foreground: #1c120a;
   --destructive: #e0776b;
   --destructive-foreground: #1c120a;
-  --border: color-mix(in oklab, #f1e7d6 15%, transparent);
-  --input: color-mix(in oklab, #f1e7d6 15%, transparent);
+  /* Bumped from 15% — subtle enough not to look heavy, but visible enough
+     that card/input boundaries don't disappear on washed-out screens. */
+  --border: color-mix(in oklab, #f1e7d6 22%, transparent);
+  --input: color-mix(in oklab, #f1e7d6 22%, transparent);
   --ring: #d4a24e;
   --chart-1: #e8c88a;
   --chart-2: #d4a24e;

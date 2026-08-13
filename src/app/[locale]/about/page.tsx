@@ -164,7 +164,7 @@ export default async function AboutPage({
           <p className="mt-4 font-serif text-2xl leading-snug text-balance italic md:text-3xl">
             &ldquo;{t("mission.body")}&rdquo;
           </p>
-          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-primary-foreground/75">
+          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-primary-foreground/85">
             {t("mission.extra")}
           </p>
         </Reveal>
