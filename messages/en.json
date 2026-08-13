@@ -482,9 +482,12 @@
     "info": {
       "title": "Contact details",
       "addressLabel": "Office",
-      "address": "[Company address — to be confirmed], Vietnam",
+      "address": "27 Đức Diễn Alley 23/72/39, Phú Diễn Ward, Hanoi, Vietnam",
       "phoneLabel": "Phone",
       "emailLabel": "Email",
+      "emailGeneral": "General inquiries",
+      "emailSales": "Sales & quotes",
+      "chatLabel": "Chat",
       "hoursLabel": "Business hours",
       "hours": "Monday–Saturday, 8:00–17:30 (GMT+7)"
     },

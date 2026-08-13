@@ -482,9 +482,12 @@
     "info": {
       "title": "Thông tin liên hệ",
       "addressLabel": "Văn phòng",
-      "address": "[Địa chỉ công ty — cần xác nhận], Việt Nam",
+      "address": "Số nhà 27, ngách 23/72/39 Đức Diễn, Phường Phú Diễn, Thành phố Hà Nội, Việt Nam",
       "phoneLabel": "Điện thoại",
       "emailLabel": "Email",
+      "emailGeneral": "Yêu cầu chung",
+      "emailSales": "Kinh doanh & báo giá",
+      "chatLabel": "Trò chuyện",
       "hoursLabel": "Giờ làm việc",
       "hours": "Thứ Hai–Thứ Bảy, 8:00–17:30 (GMT+7)"
     },

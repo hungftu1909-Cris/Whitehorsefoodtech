@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/forms/contact-form";
 import { siteConfig } from "@/lib/site";
@@ -62,6 +62,28 @@ export default async function ContactPage({
                     <a href={`mailto:${siteConfig.email}`} className="cursor-pointer text-foreground hover:text-accent">
                       {siteConfig.email}
                     </a>
+                    <span className="text-muted-foreground"> — {t("info.emailGeneral")}</span>
+                  </dd>
+                  <dd className="mt-1">
+                    <a href={`mailto:${siteConfig.salesEmail}`} className="cursor-pointer text-foreground hover:text-accent">
+                      {siteConfig.salesEmail}
+                    </a>
+                    <span className="text-muted-foreground"> — {t("info.emailSales")}</span>
+                  </dd>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MessageCircle className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                <div>
+                  <dt className="text-muted-foreground">{t("info.chatLabel")}</dt>
+                  <dd className="flex flex-wrap items-center gap-x-3 gap-y-1 text-foreground">
+                    <a href={siteConfig.whatsapp} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-accent">
+                      WhatsApp
+                    </a>
+                    <a href={siteConfig.zalo} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-accent">
+                      Zalo
+                    </a>
+                    <span>WeChat: {siteConfig.phone}</span>
                   </dd>
                 </div>
               </div>

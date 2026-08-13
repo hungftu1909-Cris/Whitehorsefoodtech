@@ -1,11 +1,12 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
-import { LinkedInIcon, FacebookIcon } from "./social-icons";
+import { LinkedInIcon, FacebookIcon, WhatsAppIcon } from "./social-icons";
 import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
 import { siteConfig } from "@/lib/site";
 
 const SOCIAL_LINKS = [
+  { href: siteConfig.whatsapp, label: "WhatsApp", Icon: WhatsAppIcon },
   { href: siteConfig.social.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
   { href: siteConfig.social.facebook, label: "Facebook", Icon: FacebookIcon },
 ].filter((s) => s.href);
