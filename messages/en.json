@@ -409,33 +409,33 @@
     },
     "steps": [
       {
-        "title": "1. Sourcing",
+        "title": "Sourcing",
         "description": "We work directly with growing cooperatives and processing partners across Vietnam's key producing regions, building long-term relationships rather than one-off purchases."
       },
       {
-        "title": "2. Processing & Grading",
+        "title": "Processing & Grading",
         "description": "Raw material is cleaned, sorted and graded against agreed specifications — screen size, moisture, defect count and other buyer-specific criteria."
       },
       {
-        "title": "3. Quality Control",
+        "title": "Quality Control",
         "description": "Every lot is sampled and tested before approval. Lab reports and physical samples are shared with the buyer prior to shipment, and third-party inspection can be arranged."
       },
       {
-        "title": "4. Packing",
+        "title": "Packing",
         "description": "Products are packed to buyer specification — standard export packaging or custom private-label packaging — with moisture and pest control appropriate to each product line."
       },
       {
-        "title": "5. Export Documentation",
+        "title": "Export Documentation",
         "description": "Certificate of Origin, phytosanitary certificate, fumigation certificate and commercial documents are prepared and verified ahead of container loading."
       },
       {
-        "title": "6. Shipping & Delivery",
+        "title": "Shipping & Delivery",
         "description": "We coordinate container loading and shipping schedules to the agreed Incoterms, keeping buyers updated from port of loading to port of destination."
       }
     ],
     "factory": {
       "title": "Facilities",
-      "subtitle": "[Placeholder — add facility/factory details: location, capacity, processing equipment, photos once available.]"
+      "subtitle": "From raw material intake to final packaging, our manufacturing partners run modern, temperature-controlled facilities equipped for consistent, export-grade output at scale."
     },
     "cta": {
       "title": "Have a specific process or documentation question?",

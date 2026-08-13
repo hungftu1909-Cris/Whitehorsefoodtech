@@ -409,33 +409,33 @@
     },
     "steps": [
       {
-        "title": "1. Thu mua",
+        "title": "Thu mua",
         "description": "Chúng tôi hợp tác trực tiếp với các hợp tác xã và đối tác chế biến tại những vùng sản xuất trọng điểm của Việt Nam, xây dựng quan hệ lâu dài thay vì giao dịch một lần."
       },
       {
-        "title": "2. Chế biến & Phân loại",
+        "title": "Chế biến & Phân loại",
         "description": "Nguyên liệu thô được làm sạch, phân loại và kiểm nghiệm theo thông số đã thống nhất — cỡ sàng, độ ẩm, tỷ lệ lỗi và các tiêu chí riêng của khách hàng."
       },
       {
-        "title": "3. Kiểm soát chất lượng",
+        "title": "Kiểm soát chất lượng",
         "description": "Mỗi lô hàng đều được lấy mẫu và kiểm nghiệm trước khi phê duyệt. Báo cáo kiểm nghiệm và mẫu hàng thực tế được gửi cho khách hàng trước khi giao, có thể sắp xếp giám định bên thứ ba."
       },
       {
-        "title": "4. Đóng gói",
+        "title": "Đóng gói",
         "description": "Sản phẩm được đóng gói theo yêu cầu khách hàng — bao bì xuất khẩu tiêu chuẩn hoặc bao bì nhãn hàng riêng — với biện pháp chống ẩm, chống côn trùng phù hợp từng dòng sản phẩm."
       },
       {
-        "title": "5. Chứng từ xuất khẩu",
+        "title": "Chứng từ xuất khẩu",
         "description": "Chứng nhận xuất xứ, chứng nhận kiểm dịch thực vật, chứng nhận hun trùng và các chứng từ thương mại được chuẩn bị và kiểm tra trước khi đóng container."
       },
       {
-        "title": "6. Vận chuyển & Giao hàng",
+        "title": "Vận chuyển & Giao hàng",
         "description": "Chúng tôi phối hợp đóng container và lịch vận chuyển theo điều kiện Incoterms đã thống nhất, cập nhật liên tục cho khách hàng từ cảng đi đến cảng đến."
       }
     ],
     "factory": {
       "title": "Cơ sở sản xuất",
-      "subtitle": "[Nội dung mẫu — bổ sung thông tin nhà máy/cơ sở: địa điểm, công suất, thiết bị chế biến, hình ảnh khi có.]"
+      "subtitle": "Từ khâu tiếp nhận nguyên liệu đến đóng gói hoàn thiện, các nhà máy đối tác của chúng tôi vận hành cơ sở hiện đại, kiểm soát nhiệt độ, đáp ứng sản lượng ổn định đạt chuẩn xuất khẩu."
     },
     "cta": {
       "title": "Có câu hỏi cụ thể về quy trình hoặc chứng từ?",
