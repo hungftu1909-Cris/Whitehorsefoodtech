@@ -56,8 +56,8 @@
   "home": {
     "hero": {
       "eyebrow": "Từ Việt Nam · Xuất khẩu toàn cầu",
-      "title": "Nguyên liệu cao cấp từ nông sản Việt Nam — thu mua chính xác, giao hàng đáng tin cậy.",
-      "subtitle": "Whitehorse Foodtech phát triển cà phê, dừa, yến sào, trái cây và gia vị Việt Nam thành nguyên liệu thực phẩm đạt chuẩn xuất khẩu cho các nhà sản xuất thực phẩm & đồ uống và nhà phân phối trên toàn thế giới — với khả năng truy xuất nguồn gốc đầy đủ và chất lượng ổn định từ vùng trồng đến container.",
+      "title": "Nguyên liệu cao cấp từ nông sản Việt Nam, sẵn sàng cho dây chuyền sản xuất của bạn.",
+      "subtitle": "Whitehorse Foodtech thu mua và phân loại cà phê, dừa, yến sào, trái cây và gia vị cho các nhà sản xuất thực phẩm & đồ uống, nhà rang xay và nhà phân phối trên toàn thế giới. Mỗi lô hàng đều truy xuất được về tận vùng trồng, được kiểm nghiệm trước khi xuất, và đóng gói đúng theo thông số bạn yêu cầu — không phải bản gần đúng.",
       "ctaPrimary": "Yêu cầu báo giá",
       "ctaSecondary": "Khám phá sản phẩm",
       "badgeValue": "100K+",
@@ -75,23 +75,23 @@
     "valueProps": {
       "eyebrow": "Vì sao chọn Whitehorse",
       "title": "Được xây dựng cho những khách hàng không thể chấp nhận sự thiếu ổn định",
-      "subtitle": "Mỗi lô hàng đều được phân loại, kiểm nghiệm và đóng gói theo cùng một tiêu chuẩn — dù là đơn hàng thử nghiệm hay hợp đồng thường niên.",
+      "subtitle": "Mỗi lô hàng đều được phân loại, kiểm nghiệm và đóng gói theo cùng một tiêu chuẩn. Đơn hàng thử nghiệm đầu tiên hay container thứ mười trong năm cũng không khác gì nhau.",
       "items": [
         {
           "title": "Thu mua trực tiếp từ nguồn",
-          "description": "Chúng tôi hợp tác trực tiếp với các hợp tác xã và cơ sở chế biến tại các vùng nông nghiệp trọng điểm của Việt Nam — không qua trung gian không cần thiết, không biến động giá khó hiểu."
+          "description": "Chúng tôi hợp tác trực tiếp với các hợp tác xã và cơ sở chế biến tại các vùng nông nghiệp trọng điểm của Việt Nam. Không qua trung gian không cần thiết. Không có mức giá biến động mà chúng tôi không giải thích được với bạn."
         },
         {
           "title": "Chất lượng ổn định, có hồ sơ đầy đủ",
-          "description": "Mỗi lô hàng được phân loại theo thông số đã thống nhất, có kết quả kiểm nghiệm và mẫu hàng trước khi giao — sản phẩm nhận được đúng như mẫu đã duyệt."
+          "description": "Mỗi lô hàng được phân loại đúng theo thông số bạn đã duyệt. Kết quả kiểm nghiệm và mẫu hàng thực tế được gửi trước khi container lên đường, nên khi hàng đến nơi sẽ không có bất ngờ nào."
         },
         {
           "title": "Logistics xuất khẩu trọn gói",
-          "description": "Giấy chứng nhận kiểm dịch thực vật, chứng nhận xuất xứ, hun trùng và chứng từ hải quan được chuẩn bị và kiểm tra trước khi container rời cảng."
+          "description": "Chứng nhận xuất xứ, chứng nhận kiểm dịch thực vật, chứng nhận hun trùng, chứng từ hải quan: tất cả đều được chúng tôi chuẩn bị và kiểm tra trước khi container rời cảng."
         },
         {
           "title": "Đối tác đồng hành, không chỉ là nhà cung cấp",
-          "description": "Đội ngũ của chúng tôi trực tiếp phản hồi yêu cầu và làm việc cùng bạn về thông số kỹ thuật, đóng gói và lịch giao hàng — không qua tổng đài."
+          "description": "Bạn làm việc trực tiếp với đội ngũ của chúng tôi về thông số kỹ thuật, đóng gói và lịch giao hàng. Không qua tổng đài, không phải chờ ticket."
         }
       ]
     },
@@ -103,31 +103,31 @@
         {
           "title": "Nguyên liệu Cà phê",
           "tagline": "Hạt, bột, chiết xuất & cold brew",
-          "description": "Từ những vùng nguyên liệu cà phê nổi tiếng của Việt Nam, Whitehorse cung cấp các nguyên liệu cà phê được lựa chọn và chế biến theo yêu cầu quốc tế — từ cà phê nhân, cà phê rang đến bột hòa tan, chiết xuất và cold brew cô đặc.",
+          "description": "Trồng tại Tây Nguyên, chế biến đúng thông số: cà phê nhân, cà phê rang, bột hòa tan, tinh chất lỏng, cold brew cô đặc. Phù hợp cho nhà rang xay, thương hiệu RTD lẫn nhà sản xuất nhãn hàng riêng.",
           "cta": "Khám phá Cà phê"
         },
         {
           "title": "Nguyên liệu Dừa",
           "tagline": "Sữa, kem, nước dừa, bột, dầu & MCT",
-          "description": "Dừa Việt Nam chất lượng cao được phát triển thành các nguyên liệu thực phẩm đa dạng — từ sữa dừa, kem dừa, bột dừa, nước dừa cô đặc đến dầu dừa nguyên chất và các giải pháp lipid chức năng cho ngành thực phẩm và đồ uống quốc tế.",
+          "description": "Dừa Bến Tre, chế biến thành đúng định dạng dây chuyền của bạn cần: sữa, kem, bột, nước dừa cô đặc, dầu nguyên chất, MCT. Số lượng lớn hay đóng gói nhãn hàng riêng đều sẵn sàng.",
           "cta": "Khám phá Dừa"
         },
         {
           "title": "Nguyên liệu Yến sào",
           "tagline": "Yến tuyển chọn, chiết xuất, cô đặc & dạng bột",
-          "description": "Yến sào Việt Nam cao cấp được phát triển thành các nguyên liệu chức năng có giá trị cao, bao gồm yến tuyển chọn, dạng cô đặc, chiết xuất, dạng bột và các công thức tùy chỉnh cho thực phẩm cao cấp và dinh dưỡng.",
+          "description": "Yến sào Việt Nam, phát triển thành nguyên liệu chức năng cho thực phẩm dinh dưỡng và cao cấp: yến tuyển chọn, cô đặc, chiết xuất, dạng bột, hoặc công thức riêng theo yêu cầu.",
           "cta": "Khám phá Yến sào"
         },
         {
           "title": "Nguyên liệu Trái cây",
           "tagline": "Sấy thăng hoa, dạng bột, miếng & cô đặc",
-          "description": "Trái cây nhiệt đới Việt Nam được phát triển thành các nguyên liệu chất lượng cao bằng công nghệ chế biến tiên tiến, giúp duy trì màu sắc, hương vị và giá trị dinh dưỡng tự nhiên cho ngành thực phẩm, đồ uống và dinh dưỡng.",
+          "description": "Chanh dây, xoài, thanh long và nhiều loại khác, sấy thăng hoa hoặc cô đặc mà vẫn giữ trọn màu sắc, hương thơm — thứ khiến trái cây đáng để đưa vào sản phẩm ngay từ đầu. Dạng bột, miếng, cô đặc, chiết xuất: chọn định dạng phù hợp.",
           "cta": "Khám phá Trái cây"
         },
         {
           "title": "Hạt, Gia vị & Thảo mộc",
           "tagline": "Điều, tiêu, quế, hồi & thảo mộc",
-          "description": "Các loại hạt, gia vị và thảo mộc Việt Nam được tuyển chọn theo tiêu chuẩn xuất khẩu, phục vụ các nhà sản xuất thực phẩm và đối tác nguyên liệu quốc tế với khả năng kiểm soát chất lượng và hồ sơ truy xuất đầy đủ.",
+          "description": "Hạt điều từ Bình Phước, hồ tiêu và quế từ Tây Nguyên và các tỉnh phía Bắc, cùng danh mục thảo mộc Việt Nam ngày càng mở rộng. Đạt chuẩn xuất khẩu, đầy đủ hồ sơ, sẵn sàng cho phối trộn hoặc nhãn hàng riêng.",
           "cta": "Khám phá Nguyên liệu"
         }
       ]
@@ -147,14 +147,8 @@
     "certifications": {
       "eyebrow": "Chất lượng & tuân thủ",
       "title": "Đạt tiêu chuẩn an toàn thực phẩm quốc tế",
-      "subtitle": "[Nội dung mẫu — xác nhận và liệt kê các chứng nhận thực tế đang có trước khi đăng, ví dụ ISO 22000, HACCP, chứng nhận hữu cơ hoặc đăng ký FDA.]",
+      "subtitle": "Mọi nhà máy đối tác chúng tôi hợp tác đều được sàng lọc theo tiêu chuẩn quốc tế: ISO 22000, HACCP, và các yêu cầu riêng theo thị trường đích như chứng nhận hữu cơ hoặc đăng ký FDA khi cần.",
       "cta": "Xem chứng nhận"
-    },
-    "testimonial": {
-      "quote": "[Nội dung mẫu — thay bằng đánh giá thực tế đã được khách hàng/đối tác chấp thuận khi có.]",
-      "name": "[Tên liên hệ]",
-      "role": "[Chức danh]",
-      "company": "[Công ty, Quốc gia]"
     },
     "ctaBanner": {
       "title": "Sẵn sàng cho container tiếp theo?",

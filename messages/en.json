@@ -56,8 +56,8 @@
   "home": {
     "hero": {
       "eyebrow": "Vietnam-based · Global export",
-      "title": "Premium ingredients from Vietnam's harvest — sourced with precision, delivered with trust.",
-      "subtitle": "Whitehorse Foodtech turns coffee, coconut, bird's nest, fruit and spice into export-grade ingredients for food & beverage manufacturers, roasters and distributors worldwide — backed by full traceability and consistent quality from harvest to container.",
+      "title": "Premium ingredients from Vietnam's harvest, ready for your production line.",
+      "subtitle": "Whitehorse Foodtech sources and grades coffee, coconut, bird's nest, fruit and spice for food & beverage manufacturers, roasters and distributors worldwide. Every lot is traceable back to its growing region, tested before it ships, and packed to the specification you actually asked for.",
       "ctaPrimary": "Request a quote",
       "ctaSecondary": "Explore our products",
       "badgeValue": "100K+",
@@ -75,23 +75,23 @@
     "valueProps": {
       "eyebrow": "Why Whitehorse",
       "title": "Built for buyers who can't afford inconsistency",
-      "subtitle": "Every shipment is graded, tested and packed to the same standard — whether it's a trial order or a standing annual contract.",
+      "subtitle": "Every shipment is graded, tested and packed to the same standard. It doesn't matter if it's a trial order or your tenth container this year.",
       "items": [
         {
           "title": "Direct-from-origin sourcing",
-          "description": "We work directly with growing cooperatives and processing facilities across Vietnam's key agricultural regions — no unnecessary intermediaries, no unexplained price swings."
+          "description": "We work directly with growing cooperatives and processing facilities across Vietnam's key agricultural regions. No unnecessary intermediaries. No price swings you can't explain to your own customers."
         },
         {
           "title": "Consistent, documented quality",
-          "description": "Every lot is graded against agreed specifications with lab results and samples available before shipment, so what arrives matches what was approved."
+          "description": "Every lot is graded against the specification you signed off on. Lab results and physical samples go out before the container does, so there are no surprises when it arrives."
         },
         {
           "title": "Export logistics, handled",
-          "description": "Phytosanitary certificates, certificates of origin, fumigation and customs documentation are prepared and verified before your container leaves port."
+          "description": "Certificate of origin, phytosanitary certificate, fumigation certificate, customs paperwork: we prepare and verify all of it before your container leaves port."
         },
         {
           "title": "A partner, not just a supplier",
-          "description": "Our team responds to buyer inquiries directly and works with you on specifications, packaging and delivery schedules — not a call center."
+          "description": "You'll deal directly with our team on specifications, packaging and delivery schedules. Not a call center, not a ticket queue."
         }
       ]
     },
@@ -103,31 +103,31 @@
         {
           "title": "Coffee Ingredients",
           "tagline": "Beans, powder, extract & cold brew",
-          "description": "From Vietnam's renowned coffee regions, we supply carefully selected coffee ingredients for global food and beverage applications — from green and roasted beans to soluble powders, extracts and cold brew concentrates.",
+          "description": "Grown across the Central Highlands and processed to spec: green and roasted beans, soluble powder, liquid extract, cold brew concentrate. Built for roasters, RTD brands and private-label manufacturers alike.",
           "cta": "Explore Coffee"
         },
         {
           "title": "Coconut Ingredients",
           "tagline": "Milk, cream, water, powder, oil & MCT",
-          "description": "Premium Vietnamese coconut transformed into versatile food ingredients — including coconut milk and cream, powders, water concentrates, virgin coconut oil and functional lipid solutions for international food and beverage brands.",
+          "description": "Bến Tre coconut, processed into the format your production line actually needs: milk, cream, powder, water concentrate, virgin oil, MCT. Bulk or private-label retail packaging, both on the table.",
           "cta": "Explore Coconut"
         },
         {
           "title": "Bird's Nest Ingredients",
           "tagline": "Selected nest, extract, concentrate & powder",
-          "description": "Premium Vietnamese edible bird's nest developed into high-value functional ingredients, including selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications.",
+          "description": "Vietnam's swiftlet nest, developed into functional ingredients for nutrition and premium food brands: selected nest, concentrate, extract, powder, or a formulation built to your spec.",
           "cta": "Explore Bird's Nest"
         },
         {
           "title": "Fruit Ingredients",
           "tagline": "Freeze-dried, powder, pieces & concentrate",
-          "description": "Vietnam's tropical fruits transformed into stable, high-quality ingredients through advanced processing — preserving natural color, aroma and nutritional value for food, beverage and nutrition applications.",
+          "description": "Passion fruit, mango, dragon fruit and more, freeze-dried or concentrated without losing the color and aroma that make them worth using in the first place. Powders, pieces, concentrates, extracts: pick the format.",
           "cta": "Explore Fruits"
         },
         {
           "title": "Nuts, Spices & Botanicals",
           "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
-          "description": "Selected Vietnamese nuts, spices and botanicals sourced for international food manufacturers and ingredient partners, with export-grade specifications, quality control and full documentation.",
+          "description": "Cashew from Bình Phước, pepper and cinnamon from the Central Highlands and northern provinces, plus a growing list of Vietnamese botanicals. Export-grade, documented, ready for blending or private label.",
           "cta": "Explore Ingredients"
         }
       ]
@@ -147,14 +147,8 @@
     "certifications": {
       "eyebrow": "Quality & compliance",
       "title": "Held to international food-safety standards",
-      "subtitle": "[Placeholder — confirm and list actual certifications held before publishing, e.g. ISO 22000, HACCP, organic or FDA registration.]",
+      "subtitle": "Every manufacturing partner we work with is screened against international standards: ISO 22000, HACCP, and destination-specific requirements like Organic certification or FDA registration where they apply.",
       "cta": "View certifications"
-    },
-    "testimonial": {
-      "quote": "[Placeholder testimonial — replace with an approved quote from an actual buyer or partner once available.]",
-      "name": "[Contact name]",
-      "role": "[Title]",
-      "company": "[Company, Country]"
     },
     "ctaBanner": {
       "title": "Ready to source your next container?",

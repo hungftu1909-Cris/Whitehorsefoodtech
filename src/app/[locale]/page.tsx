@@ -6,7 +6,6 @@ import { ValueProps } from "@/components/home/value-props";
 import { ProductsPreview } from "@/components/home/products-preview";
 import { ProcessPreview } from "@/components/home/process-preview";
 import { CertificationsTeaser } from "@/components/home/certifications-teaser";
-import { Testimonial } from "@/components/home/testimonial";
 import { CtaSection } from "@/components/sections/cta-section";
 import { getTranslations } from "next-intl/server";
 
@@ -28,7 +27,6 @@ export default async function Home({
       <ValueProps />
       <ProcessPreview />
       <CertificationsTeaser />
-      <Testimonial />
       <CtaSection title={t("title")} subtitle={t("subtitle")} cta={t("cta")} />
     </>
   );
