@@ -25,6 +25,7 @@ export async function POST(request: Request) {
   await sendMail({
     subject: `New contact form message — ${company}`,
     replyTo: email,
+    kind: "contact",
     html: `
       <h2>New contact form submission</h2>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>

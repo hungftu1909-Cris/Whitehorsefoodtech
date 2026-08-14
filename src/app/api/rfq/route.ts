@@ -44,6 +44,7 @@ export async function POST(request: Request) {
   await sendMail({
     subject: `New quote request — ${company} (${PRODUCT_LABEL[product]})`,
     replyTo: email,
+    kind: "rfq",
     html: `
       <h2>New RFQ submission</h2>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
