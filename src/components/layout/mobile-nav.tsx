@@ -31,7 +31,7 @@ export function MobileNav() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         render={
-          <Button variant="ghost" size="icon" className="cursor-pointer lg:hidden" aria-label={t("home")}>
+          <Button variant="ghost" size="icon" className="cursor-pointer xl:hidden" aria-label={t("home")}>
             <Menu className="size-5" />
           </Button>
         }

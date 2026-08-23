@@ -28,7 +28,7 @@ export function SiteHeader() {
           <Logo />
         </Link>
 
-        <NavigationMenu className="hidden lg:flex">
+        <NavigationMenu className="hidden xl:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link
