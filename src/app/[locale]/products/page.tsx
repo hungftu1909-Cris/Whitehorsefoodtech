@@ -52,7 +52,7 @@ export default async function ProductsPage({
                   src={`/images/products/${c.slug}-card.jpg`}
                   alt={t(`categories.${c.categoryKey}.name`)}
                   placeholderLabel={`${t(`categories.${c.categoryKey}.name`)} — photo needed`}
-                  aspect="aspect-[3/2]"
+                  aspect="aspect-[4/3]"
                   className="rounded-none border-0 border-b border-border"
                 />
                 <div className="flex flex-1 flex-col p-6">

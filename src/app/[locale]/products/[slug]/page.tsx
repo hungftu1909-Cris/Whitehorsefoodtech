@@ -72,7 +72,7 @@ export default async function ProductCategoryPage({
               src={`/images/products/${category.slug}-detail.jpg`}
               alt={t("name")}
               placeholderLabel={`${t("name")} — product photography needed`}
-              aspect="aspect-[3/2]"
+              aspect="aspect-[4/3]"
             />
           </Reveal>
 
