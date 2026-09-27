@@ -1,31 +1,48 @@
 # Real photos go here
 
-Drop a file at the exact path below and it replaces the placeholder
-automatically — no code changes needed (see `src/components/ui/smart-image.tsx`).
-JPG, PNG or WebP all work; landscape orientation, at least 1200px wide
-recommended.
+Drop a file at the exact path below and it appears automatically — no code
+changes needed (see `src/components/ui/smart-image.tsx`). If a file is
+missing, the page renders **without** an image block (there are no public
+"photo needed" placeholders). JPG, PNG or WebP all work; landscape
+orientation, at least 1200px wide recommended.
 
 | Where it's used | File path |
 |---|---|
 | Homepage hero | `public/images/hero.jpg` |
-| About page (team/office) | `public/images/about.jpg` |
-| Process page (factory) | `public/images/factory.jpg` |
-| Blog cover — per post | `public/images/blog/<post-slug>.jpg` (slug = the `.mdx` filename in `content/blog/en|vi/`) |
-| Product card (homepage + `/products` listing) | `public/images/products/<slug>-card.jpg` |
-| Product detail page | `public/images/products/<slug>-detail.jpg` |
+| (not rendered — see Truthfulness) | `public/images/about.jpg`, `public/images/factory.jpg` |
+| Blog cover — per post, optional | `public/images/blog/<post-slug>.jpg` (slug = the `.mdx` filename in `content/blog/en|vi/`; EN and VI slugs differ) |
+| Product card (homepage + `/products` listing, 4:3 crop) | `public/images/products/<slug>-card.jpg` |
+| Product detail page (4:3 crop) | `public/images/products/<slug>-detail.jpg` |
 
 Product slugs (used in both `-card` and `-detail` filenames):
 
 - `coffee`
-- `freeze-dried-fruit-powder`
-- `processed-birds-nest`
-- `premium-agri-raw-materials`
+- `coconut`
+- `birds-nest`
+- `fruit`
+- `nuts-spices-botanicals`
 
 Example: the Coffee category needs `public/images/products/coffee-card.jpg`
 (shown on homepage + `/products`) and `public/images/products/coffee-detail.jpg`
 (shown on `/products/coffee`).
 
-Client/partner logos on `/clients` are a separate case — those must be the
-*actual* client's logo (with their permission), not stock photography, so
-they aren't wired into this system. Ask a developer to swap them in
-`src/app/[locale]/clients/page.tsx` once you have approved logos.
+## Truthfulness
+
+- Text inside an image is a public claim too, and the claims scanner cannot
+  read it. Check artwork for numbers, certification words ("organic",
+  "100% natural") and branded facilities before adding it.
+- `about.jpg` and `factory.jpg` are currently **not rendered** anywhere:
+  their artwork shows unsupported claims ("> 3,000 cooperatives",
+  "hundreds of factories", a Whitehorse-branded plant). Replace them with
+  claim-free images before wiring them back in (tests enforce this).
+- `hero.jpg` has no text and is used with "Illustrative image" alt text.
+- Product images are concept mock-ups with packaging wording ("100%
+  natural", "organic & natural"). Every render shows a visible "Concept
+  artwork" badge (pass `badge` to `SmartImage`; tests enforce it) and the
+  detail page adds a caption. Alt text alone is not a disclosure. Replacing them
+  with claim-free artwork is a pending founder decision
+  (`docs/claim-registry.md` row 15).
+- Never present a partner's or stock photo as "our factory".
+- Client/partner logos are not wired into this system: they need the
+  company's written permission, and naming suppliers/buyers publicly is a
+  business decision (see `src/app/[locale]/clients/page.tsx`).

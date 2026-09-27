@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Renders a real <Image> if the file exists under /public, otherwise
- * renders nothing — a public "photo needed" panel reads as an unfinished
+ * renders nothing — a visible "missing photo" panel reads as an unfinished
  * site, so layouts are built to work text-only. Drop a licensed photo at
  * `src` (relative to /public, e.g. "/images/products/coffee-card.jpg") and
  * it appears automatically — no code changes needed. See
