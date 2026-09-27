@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
-import { AnimatedCounter } from "@/components/ui/animated-counter";
+import { StatusMarkers } from "@/components/home/status-markers";
 import { pageMetadata } from "@/lib/seo";
 import {
   Sprout,
@@ -51,7 +51,6 @@ export default async function AboutPage({
     description: string;
   }[];
   const steps = t.raw("operatingModel.steps") as { title: string; description: string }[];
-  const stats = t.raw("stats.items") as { value: string; label: string }[];
   const values = t.raw("values.items") as { title: string; description: string }[];
 
   return (
@@ -63,7 +62,7 @@ export default async function AboutPage({
         <Reveal>
           <SmartImage
             src="/images/about.jpg"
-            alt="Whitehorse Foodtech — sourcing, R&D, quality and export capability"
+            alt="Illustrative image: Vietnamese agricultural ingredients"
             placeholderLabel="Company / capability photography needed"
             aspect="aspect-[16/9]"
             sizes="(min-width: 1024px) 64rem, 100vw"
@@ -170,25 +169,8 @@ export default async function AboutPage({
         </Reveal>
       </section>
 
-      {/* Stats */}
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-center font-serif text-2xl font-semibold text-foreground">
-            {t("stats.title")}
-          </h2>
-          <dl className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
-            {stats.map((stat, i) => (
-              <Reveal key={stat.label} as="div" delay={i * 100} className="text-center">
-                <dt className="sr-only">{stat.label}</dt>
-                <dd className="font-serif text-4xl font-semibold text-accent">
-                  <AnimatedCounter value={stat.value} />
-                </dd>
-                <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
-              </Reveal>
-            ))}
-          </dl>
-        </div>
-      </section>
+      {/* Where we stand: current facts vs. clearly labelled targets */}
+      <StatusMarkers variant="muted" />
 
       {/* Values */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
@@ -210,6 +192,28 @@ export default async function AboutPage({
               </Reveal>
             );
           })}
+        </div>
+      </section>
+
+      {/* Ecosystem development (program signal) + long-term direction
+          (vision). Deliberately text-only and restrained: no partner logos,
+          and only participants who have formally agreed are named — see
+          docs/claim-registry.md before adding anything here. */}
+      <section className="border-t border-border bg-background">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-5 lg:px-8">
+          <Reveal className="lg:col-span-3">
+            <SectionHeading eyebrow={t("ecosystem.eyebrow")} title={t("ecosystem.title")} />
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              {t("ecosystem.body")}
+            </p>
+          </Reveal>
+          <Reveal delay={150} className="rounded-lg border border-dashed border-border bg-muted/30 p-6 lg:col-span-2">
+            <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
+              {t("vision.label")}
+            </p>
+            <p className="mt-1 text-xs text-muted-foreground">{t("vision.note")}</p>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{t("vision.body")}</p>
+          </Reveal>
         </div>
       </section>
 

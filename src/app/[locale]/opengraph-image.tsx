@@ -90,7 +90,7 @@ export default async function OpengraphImage({
             letterSpacing: 2,
           }}
         >
-          PREMIUM AGRICULTURAL PRODUCTS · GLOBALLY DELIVERED
+          VIETNAMESE COFFEE INGREDIENTS · B2B
         </div>
       </div>
     ),

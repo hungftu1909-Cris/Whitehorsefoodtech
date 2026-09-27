@@ -27,3 +27,15 @@ export const siteConfig = {
     facebook: "", // TODO
   },
 };
+
+/**
+ * Fills the {email}, {legalName} and {taxCode} slots used by the interim
+ * legal copy in messages/*.json from siteConfig, so the legal identity is
+ * never retyped by hand in translations.
+ */
+export function fillLegalPlaceholders(text: string, locale: string) {
+  return text
+    .replaceAll("{email}", siteConfig.email)
+    .replaceAll("{legalName}", locale === "vi" ? siteConfig.legalNameVi : siteConfig.legalNameEn)
+    .replaceAll("{taxCode}", siteConfig.businessRegistrationNumber);
+}

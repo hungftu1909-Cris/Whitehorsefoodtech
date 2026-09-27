@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
-import { StatsStrip } from "@/components/home/stats-strip";
+import { StatusMarkers } from "@/components/home/status-markers";
+import { BuyerSegments } from "@/components/home/buyer-segments";
 import { TrustStrip } from "@/components/home/trust-strip";
 import { ValueProps } from "@/components/home/value-props";
 import { ProductsPreview } from "@/components/home/products-preview";
@@ -21,8 +22,9 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <BuyerSegments />
       <ProductsPreview />
-      <StatsStrip />
+      <StatusMarkers />
       <TrustStrip />
       <ValueProps />
       <ProcessPreview />

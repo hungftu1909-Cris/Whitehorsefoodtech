@@ -1,15 +1,16 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Sprout, Filter, FlaskConical, Package, FileText, Ship } from "lucide-react";
+import { ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
-// Matches the order of process.steps: Sourcing, Processing & Grading,
-// Quality Control, Packing, Export Documentation, Shipping & Delivery.
-const STEP_ICONS = [Sprout, Filter, FlaskConical, Package, FileText, Ship];
+// Matches the order of process.steps: Requirement & specification,
+// Supplier matching & qualification, Sampling & approval, Quality control,
+// Packing & documentation, Shipping & delivery.
+const STEP_ICONS = [ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship];
 
 export async function generateMetadata({
   params,
@@ -76,11 +77,12 @@ export default async function ProcessPage({
           <Reveal>
             <SmartImage
               src="/images/factory.jpg"
-              alt="Whitehorse Foodtech processing facility — from raw ingredients to export logistics"
+              alt="Illustrative image of food processing — not a specific partner facility"
               placeholderLabel="Factory / facility photography needed"
               aspect="aspect-[16/9]"
               sizes="(min-width: 1024px) 80rem, 100vw"
             />
+            <p className="mt-2 text-xs text-muted-foreground italic">{t("factory.imageNote")}</p>
           </Reveal>
           <Reveal delay={150} className="mx-auto mt-10 max-w-2xl text-center">
             <h2 className="font-serif text-2xl font-semibold text-foreground">

@@ -1,17 +1,18 @@
 import { useTranslations } from "next-intl";
-import { Package } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { ImageCarousel, type CarouselSlide } from "@/components/ui/image-carousel";
 import { Reveal } from "@/components/ui/reveal";
-import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
+// Illustrative photography only. factory.jpg is deliberately not a hero
+// slide: its provenance is unconfirmed and, placed next to the company
+// name, it reads as the company's own plant, while the business model is
+// coordinating supplier and partner facilities.
 const CANDIDATE_SLIDES: CarouselSlide[] = [
-  { src: "/images/hero.jpg", alt: "Coffee cherries and freeze-dried fruit — Whitehorse Foodtech premium agricultural exports" },
-  { src: "/images/about.jpg", alt: "Whitehorse Foodtech — sourcing, R&D, factories and global export network" },
-  { src: "/images/factory.jpg", alt: "Whitehorse Foodtech processing facility" },
+  { src: "/images/hero.jpg", alt: "Illustrative image: coffee cherries and freeze-dried fruit" },
+  { src: "/images/about.jpg", alt: "Illustrative image: Vietnamese agricultural ingredients" },
 ];
 
 export function Hero() {
@@ -39,7 +40,7 @@ export function Hero() {
               {t("ctaPrimary")}
             </Link>
             <Link
-              href="/products"
+              href="/products/coffee"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "cursor-pointer px-6"
@@ -53,23 +54,11 @@ export function Hero() {
         <Reveal delay={150} className="relative">
           <ImageCarousel
             slides={slides}
-            placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
+            placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit (to replace)"
             aspect="aspect-[16/9]"
             className="w-full"
             priority
           />
-
-          <div className="absolute -bottom-6 left-4 flex items-center gap-3 rounded-lg border border-border bg-card py-3 pr-5 pl-4 shadow-lg sm:left-6">
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-md bg-accent/15 text-accent">
-              <Package className="size-5" aria-hidden="true" />
-            </div>
-            <div className="leading-tight">
-              <p className="font-serif text-xl font-semibold text-foreground">
-                <AnimatedCounter value={t("badgeValue")} />
-              </p>
-              <p className="text-xs text-muted-foreground">{t("badgeLabel")}</p>
-            </div>
-          </div>
         </Reveal>
       </div>
     </section>

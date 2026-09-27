@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
+import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 
 export function ProductsPreview() {
@@ -13,6 +14,7 @@ export function ProductsPreview() {
     tagline: string;
     description: string;
     cta: string;
+    status: string;
   }[];
 
   return (
@@ -39,6 +41,15 @@ export function ProductsPreview() {
                     className="rounded-none border-0 border-b border-border"
                   />
                   <div className="flex flex-1 flex-col p-6">
+                    {/* Coffee is the focus category; every other family is
+                        labelled as sourced/developed on request so the grid
+                        never implies five equally ready product lines. */}
+                    <Badge
+                      variant={category.slug === "coffee" ? "default" : "outline"}
+                      className={category.slug === "coffee" ? "mb-3 bg-accent text-accent-foreground" : "mb-3 text-muted-foreground"}
+                    >
+                      {item.status}
+                    </Badge>
                     <h3 className="font-serif text-xl font-semibold text-foreground">
                       {item.title}
                     </h3>

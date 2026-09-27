@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Globe2, Sprout, Ship } from "lucide-react";
+import { Globe2, Users, Target } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { Reveal } from "@/components/ui/reveal";
@@ -40,19 +40,24 @@ export default async function ClientsPage({
           <p className="mt-2 text-sm text-muted-foreground">{t("regions")}</p>
         </Reveal>
 
-        {/* Aggregate network scale, not named suppliers/buyers on purpose —
-            showing specific factory or trading-partner logos here would let
-            either side identify and approach the other directly, cutting
-            Whitehorse out as the intermediary. Scale numbers (partner
-            growing regions, countries reached) demonstrate reach without
-            naming anyone. */}
+        {/* Aggregate figures, not named suppliers/buyers on purpose —
+            showing specific factory or trading-partner names here would let
+            either side identify and approach the other directly. The current
+            figure and the target are always shown side by side with their
+            tags so a target is never read as a track record; both are
+            recorded in docs/claim-registry.md. */}
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {(["sourcing", "distribution"] as const).map((group, i) => {
-            const Icon = group === "sourcing" ? Sprout : Ship;
+          {(["current", "target"] as const).map((group, i) => {
+            const Icon = group === "current" ? Users : Target;
             return (
               <Reveal key={group} delay={i * 100} className="rounded-lg border border-border bg-card p-8">
-                <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
-                  <Icon className="size-5" aria-hidden="true" />
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
+                    <Icon className="size-5" aria-hidden="true" />
+                  </div>
+                  <span className="rounded-full border border-border px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">
+                    {t(`network.${group}.tag`)}
+                  </span>
                 </div>
                 <div className="mt-4 font-serif text-3xl font-semibold text-foreground">
                   {t(`network.${group}.stat`)}

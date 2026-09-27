@@ -77,6 +77,12 @@ export default async function ProductCategoryPage({
           </Reveal>
 
           <Reveal delay={150}>
+            <Badge
+              variant={category.slug === "coffee" ? "default" : "outline"}
+              className={category.slug === "coffee" ? "mb-4 bg-accent text-accent-foreground" : "mb-4 text-muted-foreground"}
+            >
+              {t("status")}
+            </Badge>
             <p className="text-base leading-relaxed text-muted-foreground">
               {t("description")}
             </p>
@@ -92,6 +98,11 @@ export default async function ProductCategoryPage({
                 </li>
               ))}
             </ul>
+            {/* Specs are indicative until a contract/COA confirms them —
+                keep this note next to the list, not in a footer. */}
+            <p className="mt-4 text-xs leading-relaxed text-muted-foreground italic">
+              {tp("specNote")}
+            </p>
 
             {groups?.length > 0 && (
               <>

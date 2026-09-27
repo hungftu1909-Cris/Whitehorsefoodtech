@@ -7,10 +7,12 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
-// Matches the order of certifications.items: ISO 22000, HACCP, Organic, FDA.
+// Matches the order of certifications.items: ISO 22000 / FSSC 22000, HACCP,
+// Organic, FDA. These are schemes checked during supplier assessment, per
+// product/site/market — not certificates Whitehorse claims to hold.
 const CERT_ICONS = [Award, ClipboardCheck, Leaf, ShieldCheck];
-// Matches certifications.sustainability.pillars: traceable sourcing, grower
-// partnerships, environmental stewardship, quality & food safety.
+// Matches certifications.sustainability.pillars: traceability per order,
+// supplier relationships, environmental responsibility, quality vs. spec.
 const PILLAR_ICONS = [Route, Users, Leaf, BadgeCheck];
 
 export async function generateMetadata({

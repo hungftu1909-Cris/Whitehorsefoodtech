@@ -5,6 +5,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
+import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
 import { ArrowRight } from "lucide-react";
@@ -56,6 +57,12 @@ export default async function ProductsPage({
                   className="rounded-none border-0 border-b border-border"
                 />
                 <div className="flex flex-1 flex-col p-6">
+                  <Badge
+                    variant={c.slug === "coffee" ? "default" : "outline"}
+                    className={c.slug === "coffee" ? "mb-3 bg-accent text-accent-foreground" : "mb-3 text-muted-foreground"}
+                  >
+                    {t(`categories.${c.categoryKey}.status`)}
+                  </Badge>
                   <h2 className="font-serif text-xl font-semibold text-foreground">
                     {t(`categories.${c.categoryKey}.name`)}
                   </h2>

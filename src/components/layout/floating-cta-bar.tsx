@@ -35,7 +35,7 @@ import { cn } from "@/lib/utils";
  */
 export function FloatingCtaBar() {
   const tNav = useTranslations("nav");
-  const tHero = useTranslations("home.hero");
+  const tCommon = useTranslations("common");
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
@@ -61,7 +61,7 @@ export function FloatingCtaBar() {
       {showProducts && (
         <Link
           href="/products"
-          aria-label={tHero("ctaSecondary")}
+          aria-label={tCommon("exploreProducts")}
           aria-hidden={!visible}
           tabIndex={visible ? 0 : -1}
           className={cn(
@@ -71,7 +71,7 @@ export function FloatingCtaBar() {
             state(visible)
           )}
         >
-          <span className="hidden sm:inline">{tHero("ctaSecondary")}</span>
+          <span className="hidden sm:inline">{tCommon("exploreProducts")}</span>
           <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
         </Link>
       )}
