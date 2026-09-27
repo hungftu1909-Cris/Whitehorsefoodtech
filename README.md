@@ -1,9 +1,11 @@
 # Whitehorse Foodtech — Website
 
-Bilingual (EN/VI) B2B website for Whitehorse Foodtech, a Hanoi-based
-ingredient company. Coffee is the focus category (for trading houses,
-ingredient distributors and beverage manufacturers); coconut, bird's nest,
-fruit and nuts/spices/botanicals are sourced or developed on request. Built
+Bilingual (EN/VI) B2B website for Whitehorse Foodtech, a premium
+agricultural ingredient sourcing and connection platform linking suitable
+Vietnamese farms, cooperatives and processing factories with international
+distributors, food and beverage manufacturers, foodservice groups and
+brands. Five product families (coffee, coconut, bird's nest, fruit, nuts,
+spices & botanicals); coffee has nine confirmed product codes. Built
 with Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui and
 `next-intl`.
 
@@ -74,14 +76,25 @@ brand/                    Source brand assets (logo, etc.)
   from there.
 - **Specifications** are indicative until confirmed in a contract/COA; the
   product pages say so next to the spec list.
-- **Coffee format codes** `WHCF001`–`WHCF009` appear only as "format of
-  interest" choices in the RFQ form. No SKU pages or Product/Offer schema
-  until SKUs have a confirmed status.
+- **Product catalog** — one typed, bilingual source: `src/lib/catalog.ts`
+  (families' sourcing ranges + confirmed codes). Three layers:
+  `/products` → `/products/<family>` (ranges, filterable confirmed codes)
+  → `/products/<family>/<code>` (e.g. `/products/coffee/whcf007`).
+  Confirmed codes `WHCF001`–`WHCF009` are defined products, not a
+  statement of stock or export readiness. A number may appear in a
+  "typical reference parameter" only with a primary source listed in
+  [`docs/product-range-sources.md`](docs/product-range-sources.md)
+  (tests enforce this); otherwise it reads "agreed per order". Only
+  BreadcrumbList/ItemList schema — no Product/Offer schema.
+- **Proof figures** — current fact, 2026 objective and three-year vision
+  are always tagged as such; see the claim registry rows 3–6.
 - **Blog translations** — EN and VI slugs differ. Give both versions of an
   article the same `translationKey` in frontmatter; hreflang, the sitemap
   and the language switcher use it (tests fail on a missing or duplicated
   pair). An article without a translation simply omits the key.
-- **Photos** — a missing image renders nothing (no placeholder panel). See
+- **Photos** — a missing image renders nothing (no placeholder panel).
+  Every rendered image needs a row in
+  [`docs/asset-provenance.md`](docs/asset-provenance.md). See
   [`public/images/README.md`](public/images/README.md).
 
 ## Lead delivery
@@ -97,8 +110,12 @@ brand/                    Source brand assets (logo, etc.)
 
 Every accepted lead gets a reference such as `RFQ-20260927-7K3QXM`, shown to
 the buyer and put in the email subject. `/rfq` accepts
-`?product=<slug>&intent=quote|sample|spec-sheet&sku=WHCF00x` to prefill the
-form (product pages link this way).
+`?product=<slug>&range=<range-id>&sku=WHCF00x&intent=quote|sample|spec-sheet`
+(`specification` is an alias of `spec-sheet`) to prefill the form; every
+value is whitelisted and older links keep working. Catalog pages build
+these links with `src/lib/rfq-links.ts`. Multi-product requests in one
+form are a documented follow-up (today: one family/range/code per request,
+the rest in "Additional details").
 
 ## Before you launch
 
@@ -113,10 +130,15 @@ form (product pages link this way).
       illustrative. Replace with claim-free, licensed imagery (see
       [`public/images/README.md`](public/images/README.md)). Blog covers
       are optional.
-- [ ] **Claim evidence gaps** — see "Gap" notes in
-      [`docs/claim-registry.md`](docs/claim-registry.md) (supplier stage
-      list behind "20+", written Balance Life naming permission, supplier
-      assessment checklist).
+- [ ] **Claim evidence** — see "Evidence needed" in
+      [`docs/claim-registry.md`](docs/claim-registry.md): dated market log
+      behind "10+ markets", written supplier qualification framework behind
+      the 2026 objective, Balance Life naming permission, supplier
+      assessment checklist.
+- [ ] **Catalog image rights** — the four coffee images from the
+      website-edit brief are user-supplied and stock-style; confirm
+      commercial licence before Production (see
+      [`docs/asset-provenance.md`](docs/asset-provenance.md)).
 - [ ] **Leadership & testimonials** — sections are hidden until approved
       names/bios/quotes exist. Never publish a company's name, logo or quote
       without written permission.

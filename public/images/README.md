@@ -13,6 +13,7 @@ orientation, at least 1200px wide recommended.
 | Blog cover — per post, optional | `public/images/blog/<post-slug>.jpg` (slug = the `.mdx` filename in `content/blog/en|vi/`; EN and VI slugs differ) |
 | Product card (homepage + `/products` listing, 4:3 crop) | `public/images/products/<slug>-card.jpg` |
 | Product detail page (4:3 crop) | `public/images/products/<slug>-detail.jpg` |
+| Catalog editorial images (family hero, product-code cards and galleries) | `public/images/catalog/<family>/*.jpg`, wired in `src/lib/catalog.ts` — always shown with an "Editorial image" badge |
 
 Product slugs (used in both `-card` and `-detail` filenames):
 
@@ -36,6 +37,9 @@ Example: the Coffee category needs `public/images/products/coffee-card.jpg`
   "hundreds of factories", a Whitehorse-branded plant). Replace them with
   claim-free images before wiring them back in (tests enforce this).
 - `hero.jpg` has no text and is used with "Illustrative image" alt text.
+- `catalog/coffee/*.jpg` come from the user-supplied website-edit brief;
+  they are editorial references (not packshots of a specific code) and
+  their production rights are pending — see `docs/asset-provenance.md`.
 - Product images are concept mock-ups with packaging wording ("100%
   natural", "organic & natural"). Every render shows a visible "Concept
   artwork" badge (pass `badge` to `SmartImage`; tests enforce it) and the

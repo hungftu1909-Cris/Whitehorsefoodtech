@@ -346,7 +346,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
     specs: [
       { label: L("Roast profile", "Profile rang") },
       { label: L("Moisture", "Độ ẩm"), method: "ISO 11294" },
-      { label: L("Blend", "Phối trộn"), reference: L("100% Robusta or blend — agreed", "100% Robusta hoặc phối trộn — thống nhất") },
+      { label: L("Blend", "Phối trộn"), reference: L("Straight Robusta or blend — agreed", "Robusta nguyên chất hoặc phối trộn — thống nhất") },
       PACKAGING,
     ],
     images: [IMG.cups, IMG.spoons],
