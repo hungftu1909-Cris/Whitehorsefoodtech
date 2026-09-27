@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
+import { hasPublicFile } from "@/lib/media";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -70,10 +71,17 @@ export default async function ProductCategoryPage({
           <Reveal>
             <SmartImage
               src={`/images/products/${category.slug}-detail.jpg`}
-              alt={t("name")}
-              placeholderLabel={`${t("name")} — product photography needed`}
+              alt={`${t("name")} — ${tp("artworkAlt")}`}
+              badge={tp("artworkBadge")}
               aspect="aspect-[4/3]"
             />
+            {/* The artwork is a concept mock-up whose packaging text
+                ("100% natural", "organic", …) is not a product claim. */}
+            {hasPublicFile(`/images/products/${category.slug}-detail.jpg`) && (
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground italic">
+                {tp("artworkNote")}
+              </p>
+            )}
           </Reveal>
 
           <Reveal delay={150}>

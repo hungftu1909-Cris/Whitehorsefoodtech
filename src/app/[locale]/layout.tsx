@@ -96,6 +96,11 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
+        {/* <Reveal> starts at opacity-0 and relies on JS to fade in; without
+            JS those sections would never show, so force them visible. */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
         <JsonLd locale={locale} siteName={t("siteName")} description={t("description")} />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider>

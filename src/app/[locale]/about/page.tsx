@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
-import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
 import { StatusMarkers } from "@/components/home/status-markers";
 import { pageMetadata } from "@/lib/seo";
@@ -33,7 +32,6 @@ export async function generateMetadata({
     path: "/about",
     title: t("title"),
     description: t("subtitle"),
-    images: ["/images/about.jpg"],
   });
 }
 
@@ -57,18 +55,10 @@ export default async function AboutPage({
     <>
       <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
-      {/* Our story */}
+      {/* Our story — text only: the old about.jpg banner is not rendered
+          because its artwork carries unsupported claims (see hero.tsx). */}
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <Reveal>
-          <SmartImage
-            src="/images/about.jpg"
-            alt="Illustrative image: Vietnamese agricultural ingredients"
-            placeholderLabel="Company / capability photography needed"
-            aspect="aspect-[16/9]"
-            sizes="(min-width: 1024px) 64rem, 100vw"
-          />
-        </Reveal>
-        <Reveal delay={150} className="mx-auto mt-10 max-w-3xl space-y-4">
+        <Reveal className="mx-auto max-w-3xl space-y-4">
           <h2 className="font-serif text-2xl font-semibold text-foreground">
             {t("origin.title")}
           </h2>
@@ -217,14 +207,9 @@ export default async function AboutPage({
         </div>
       </section>
 
-      <section className="border-t border-border bg-muted/30">
-        <Reveal className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <h2 className="font-serif text-2xl font-semibold text-foreground">
-            {t("team.title")}
-          </h2>
-          <p className="mt-3 text-sm text-muted-foreground">{t("team.subtitle")}</p>
-        </Reveal>
-      </section>
+      {/* Leadership section intentionally omitted until approved names,
+          titles and bios exist — an empty "coming soon" block reads worse
+          to a buyer doing due diligence than no block at all. */}
 
       <CtaSection
         title={t("cta.title")}

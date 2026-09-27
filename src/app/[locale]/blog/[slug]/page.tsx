@@ -76,7 +76,6 @@ export default async function BlogPostPage({
       <SmartImage
         src={`/images/blog/${post.slug}.jpg`}
         alt={post.title}
-        placeholderLabel="Article cover image needed"
         aspect="aspect-[16/9]"
         className="mt-8"
       />

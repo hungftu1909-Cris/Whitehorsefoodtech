@@ -32,11 +32,7 @@
     "legalTitle": "Pháp lý",
     "privacy": "Thông báo bảo mật",
     "terms": "Điều khoản sử dụng website",
-    "rights": "Bảo lưu mọi quyền.",
-    "newsletterTitle": "Cập nhật thương mại",
-    "newsletterSubtitle": "Lịch thu hoạch, xu hướng giá và sản phẩm mới — không spam.",
-    "newsletterPlaceholder": "Email công việc của bạn",
-    "newsletterCta": "Đăng ký"
+    "rights": "Bảo lưu mọi quyền."
   },
   "common": {
     "learnMore": "Tìm hiểu thêm",
@@ -279,10 +275,6 @@
       "note": "Tầm nhìn — chưa phải dịch vụ hiện có",
       "body": "Về lâu dài, chúng tôi mong muốn góp phần xây dựng một nền tảng mở cho nông nghiệp Việt Nam, nơi người mua có thể kiểm tra việc thẩm định nhà cung cấp, thông số sản phẩm và thông tin lô hàng dễ dàng hơn."
     },
-    "team": {
-      "title": "Ban lãnh đạo",
-      "subtitle": "[Nội dung mẫu — bổ sung tên, chức danh và tiểu sử ngắn của ban lãnh đạo khi có.]"
-    },
     "cta": {
       "title": "Đang tìm kiếm một giải pháp nguyên liệu từ Việt Nam?",
       "subtitle": "Hãy chia sẻ với chúng tôi về sản phẩm, ứng dụng, tiêu chuẩn, sản lượng dự kiến và thị trường mục tiêu. Đội ngũ Whitehorse sẽ cùng bạn xác định phương án nguyên liệu và phát triển sản phẩm phù hợp.",
@@ -297,6 +289,9 @@
       "subtitle": "Cà phê là danh mục trọng tâm của chúng tôi. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu. Thông số trên website chỉ mang tính tham khảo cho đến khi được xác nhận trong hợp đồng và phiếu kết quả phân tích (COA)."
     },
     "specNote": "Chỉ mang tính tham khảo. Thông số cuối cùng được xác nhận trong hợp đồng và phiếu kết quả phân tích (COA) của từng đơn hàng.",
+    "artworkAlt": "hình minh họa ý tưởng",
+    "artworkBadge": "Hình minh họa ý tưởng",
+    "artworkNote": "Hình minh họa ý tưởng. Chữ trên bao bì và nhãn trong hình chỉ mang tính minh họa — không phải thông số, chứng nhận hay tuyên bố về sản phẩm.",
     "categories": {
       "coffee": {
         "name": "Nguyên liệu Cà phê",
@@ -487,8 +482,7 @@
     ],
     "factory": {
       "title": "Cơ sở của đối tác",
-      "subtitle": "Việc sản xuất diễn ra tại cơ sở của nhà cung cấp và đối tác, được chúng tôi đánh giá theo đúng sản phẩm và thị trường bạn cần. Thông tin cơ sở và chứng nhận liên quan được chia sẻ với khách hàng theo từng đơn hàng.",
-      "imageNote": "Ảnh minh họa — không phải cơ sở của một đối tác cụ thể."
+      "subtitle": "Việc sản xuất diễn ra tại cơ sở của nhà cung cấp và đối tác, được chúng tôi đánh giá theo đúng sản phẩm và thị trường bạn cần. Thông tin cơ sở và chứng nhận liên quan được chia sẻ với khách hàng theo từng đơn hàng."
     },
     "cta": {
       "title": "Có câu hỏi cụ thể về quy trình hoặc chứng từ?",
@@ -517,8 +511,6 @@
         "description": "Mục tiêu giai đoạn 1 của chúng tôi là một nhóm nòng cốt 30–50 nhà cung cấp đạt chuẩn. Trang này được cập nhật khi các nhà cung cấp hoàn tất thẩm định."
       }
     },
-    "testimonialsTitle": "Đối tác nói gì về chúng tôi",
-    "testimonialsSubtitle": "[Nội dung mẫu — bổ sung đánh giá thực tế từ khách hàng khi có.]",
     "cta": {
       "title": "Nhà cung cấp hoặc đối tác muốn hợp tác cùng chúng tôi?",
       "cta": "Bắt đầu trao đổi"

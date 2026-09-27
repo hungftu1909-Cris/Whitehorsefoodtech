@@ -9,6 +9,7 @@ import { PRODUCT_CATEGORIES } from "@/lib/nav";
 
 export function ProductsPreview() {
   const t = useTranslations("home.productsPreview");
+  const tp = useTranslations("products");
   const items = t.raw("items") as {
     title: string;
     tagline: string;
@@ -35,8 +36,8 @@ export function ProductsPreview() {
                 >
                   <SmartImage
                     src={`/images/products/${category.slug}-card.jpg`}
-                    alt={item.title}
-                    placeholderLabel={`${item.title} — photo needed`}
+                    alt={`${item.title} — ${tp("artworkAlt")}`}
+                    badge={tp("artworkBadge")}
                     aspect="aspect-[4/3]"
                     className="rounded-none border-0 border-b border-border"
                   />

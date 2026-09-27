@@ -6,13 +6,13 @@ import { Reveal } from "@/components/ui/reveal";
 import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
-// Illustrative photography only. factory.jpg is deliberately not a hero
-// slide: its provenance is unconfirmed and, placed next to the company
-// name, it reads as the company's own plant, while the business model is
-// coordinating supplier and partner facilities.
+// about.jpg and factory.jpg are deliberately NOT rendered anywhere: the
+// artwork itself carries unsupported claims ("> 3,000 cooperatives",
+// "hundreds of factories/markets", a Whitehorse-branded factory and
+// trucks, a global-delivery slogan). The files stay in public/images until
+// replaced; see docs/claim-registry.md row 15.
 const CANDIDATE_SLIDES: CarouselSlide[] = [
   { src: "/images/hero.jpg", alt: "Illustrative image: coffee cherries and freeze-dried fruit" },
-  { src: "/images/about.jpg", alt: "Illustrative image: Vietnamese agricultural ingredients" },
 ];
 
 export function Hero() {
@@ -22,7 +22,9 @@ export function Hero() {
   return (
     <section className="border-b border-border bg-muted/40">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2 lg:items-center lg:px-8">
-        <Reveal>
+        {/* Not wrapped in <Reveal>: essential copy must be visible in the
+            server HTML without JS (and must not delay LCP). */}
+        <div>
           <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
             {t("eyebrow")}
           </p>
@@ -49,12 +51,11 @@ export function Hero() {
               {t("ctaSecondary")}
             </Link>
           </div>
-        </Reveal>
+        </div>
 
         <Reveal delay={150} className="relative">
           <ImageCarousel
             slides={slides}
-            placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit (to replace)"
             aspect="aspect-[16/9]"
             className="w-full"
             priority

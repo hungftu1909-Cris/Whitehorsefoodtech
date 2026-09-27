@@ -32,11 +32,7 @@
     "legalTitle": "Legal",
     "privacy": "Privacy Notice",
     "terms": "Website Terms",
-    "rights": "All rights reserved.",
-    "newsletterTitle": "Trade updates",
-    "newsletterSubtitle": "Harvest schedules, pricing trends and new product lines — no spam.",
-    "newsletterPlaceholder": "Your business email",
-    "newsletterCta": "Subscribe"
+    "rights": "All rights reserved."
   },
   "common": {
     "learnMore": "Learn more",
@@ -279,10 +275,6 @@
       "note": "Vision — not a current service",
       "body": "Over time, we want to help build an open platform for Vietnamese agriculture, where buyers can check supplier qualification, product specifications and lot information more easily."
     },
-    "team": {
-      "title": "Leadership",
-      "subtitle": "[Placeholder — add leadership team names, titles and short bios once available.]"
-    },
     "cta": {
       "title": "Looking for an ingredient solution from Vietnam?",
       "subtitle": "Tell us about your product, application, standards, expected volume and target market. The Whitehorse team will work with you to define the right sourcing and product development approach.",
@@ -297,6 +289,9 @@
       "subtitle": "Coffee is our focus category. Coconut, bird's nest, fruit and nut, spice & botanical ingredients are sourced or developed on request. Specifications on this site are indicative until confirmed in your contract and certificate of analysis (COA)."
     },
     "specNote": "Indicative reference only. Final specifications are confirmed in your contract and the certificate of analysis (COA) for each order.",
+    "artworkAlt": "illustrative concept artwork",
+    "artworkBadge": "Concept artwork",
+    "artworkNote": "Concept artwork. Packaging and label text in the image is illustrative — not a product specification, certification or claim.",
     "categories": {
       "coffee": {
         "name": "Coffee Ingredients",
@@ -487,8 +482,7 @@
     ],
     "factory": {
       "title": "Partner facilities",
-      "subtitle": "Production takes place at supplier and partner facilities, which we assess for the specific product and market you need. We share the relevant site information and certificates with buyers per order.",
-      "imageNote": "Illustrative image — not a specific partner facility."
+      "subtitle": "Production takes place at supplier and partner facilities, which we assess for the specific product and market you need. We share the relevant site information and certificates with buyers per order."
     },
     "cta": {
       "title": "Have a specific process or documentation question?",
@@ -517,8 +511,6 @@
         "description": "Our Phase 1 goal is a qualified core of 30–50 suppliers. This page is updated as suppliers complete qualification."
       }
     },
-    "testimonialsTitle": "What partners say",
-    "testimonialsSubtitle": "[Placeholder — add approved testimonials from real buyers once available.]",
     "cta": {
       "title": "Supplier or partner interested in working with us?",
       "cta": "Start a conversation"

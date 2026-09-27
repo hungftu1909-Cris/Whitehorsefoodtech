@@ -51,8 +51,8 @@ export default async function ProductsPage({
               >
                 <SmartImage
                   src={`/images/products/${c.slug}-card.jpg`}
-                  alt={t(`categories.${c.categoryKey}.name`)}
-                  placeholderLabel={`${t(`categories.${c.categoryKey}.name`)} — photo needed`}
+                  alt={`${t(`categories.${c.categoryKey}.name`)} — ${t("artworkAlt")}`}
+                  badge={t("artworkBadge")}
                   aspect="aspect-[4/3]"
                   className="rounded-none border-0 border-b border-border"
                 />

@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
@@ -24,7 +23,6 @@ export async function generateMetadata({
     path: "/process",
     title: t("title"),
     description: t("subtitle"),
-    images: ["/images/factory.jpg"],
   });
 }
 
@@ -74,17 +72,9 @@ export default async function ProcessPage({
 
       <section className="border-t border-border bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-          <Reveal>
-            <SmartImage
-              src="/images/factory.jpg"
-              alt="Illustrative image of food processing — not a specific partner facility"
-              placeholderLabel="Factory / facility photography needed"
-              aspect="aspect-[16/9]"
-              sizes="(min-width: 1024px) 80rem, 100vw"
-            />
-            <p className="mt-2 text-xs text-muted-foreground italic">{t("factory.imageNote")}</p>
-          </Reveal>
-          <Reveal delay={150} className="mx-auto mt-10 max-w-2xl text-center">
+          {/* No facility photo: the old factory.jpg shows a Whitehorse-branded
+              plant, which would contradict the partner-facility model. */}
+          <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("factory.title")}
             </h2>

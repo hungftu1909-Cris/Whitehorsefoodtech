@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { ImagePlaceholder } from "./image-placeholder";
 
 export type CarouselSlide = { src: string; alt: string };
 
@@ -13,8 +12,8 @@ function withMounted(mounted: Set<number>, i: number) {
 
 /**
  * Auto-advancing, cross-fading image carousel. Falls back to a single
- * static image (no controls) when only one slide is available, and to
- * <ImagePlaceholder> when none are. Pauses on hover/focus and respects
+ * static image (no controls) when only one slide is available, and renders
+ * nothing when none are. Pauses on hover/focus and respects
  * prefers-reduced-motion (no auto-advance, but dots still work).
  *
  * `index` and `mounted` are updated together (in the same setState call)
@@ -23,14 +22,12 @@ function withMounted(mounted: Set<number>, i: number) {
  */
 export function ImageCarousel({
   slides,
-  placeholderLabel,
   aspect = "aspect-[16/9]",
   className,
   intervalMs = 5000,
   priority,
 }: {
   slides: CarouselSlide[];
-  placeholderLabel: string;
   aspect?: string;
   className?: string;
   intervalMs?: number;
@@ -62,7 +59,7 @@ export function ImageCarousel({
   }, [slides.length, paused, intervalMs]);
 
   if (slides.length === 0) {
-    return <ImagePlaceholder label={placeholderLabel} aspect={aspect} className={className} />;
+    return null;
   }
 
   function goTo(i: number) {
