@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing, type Locale } from "@/i18n/routing";
 import { getPostMeta, getTranslationMap } from "@/lib/blog";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
+import { CATALOG_SKUS } from "@/lib/catalog";
 import { localizedAlternates, samePathEverywhere } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
@@ -39,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   INDEXABLE_STATIC_PATHS.forEach(addEverywhere);
   PRODUCT_CATEGORIES.forEach((c) => addEverywhere(`/products/${c.slug}`));
+  CATALOG_SKUS.forEach((sku) => addEverywhere(`/products/${sku.family}/${sku.slug}`));
 
   for (const group of Object.values(getTranslationMap())) {
     const versions = Object.entries(group) as [Locale, string][];

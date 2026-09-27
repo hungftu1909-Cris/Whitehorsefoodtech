@@ -1,4 +1,5 @@
 import type { ContactInput, RfqInput } from "@/lib/validations";
+import { CATALOG_RANGES } from "./catalog.ts";
 
 // Internal notification emails for the sales inbox — English labels
 // regardless of the buyer's site language (the buyer's locale is included
@@ -68,6 +69,7 @@ export function buildRfqEmail(data: RfqInput, leadId: string) {
       ["Reference", leadId],
       ["Intent", data.intent],
       ["Product family", productLabel],
+      ["Range of interest", data.range ? CATALOG_RANGES.find((r) => r.id === data.range)?.name.en ?? data.range : undefined],
       ["Coffee format of interest", formatLabel(data.sku || undefined)],
       ["Application", data.application],
       ["Specification / certification needs", data.specRequirements],

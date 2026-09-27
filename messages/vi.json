@@ -287,7 +287,6 @@
       "title": "Ưu tiên cà phê. Các nguyên liệu Việt Nam khác theo yêu cầu.",
       "subtitle": "Cà phê là danh mục trọng tâm của chúng tôi. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu. Thông số trên website chỉ mang tính tham khảo cho đến khi được xác nhận trong hợp đồng và phiếu kết quả phân tích (COA)."
     },
-    "specNote": "Chỉ mang tính tham khảo. Thông số cuối cùng được xác nhận trong hợp đồng và phiếu kết quả phân tích (COA) của từng đơn hàng.",
     "artworkAlt": "hình minh họa ý tưởng",
     "artworkBadge": "Hình minh họa ý tưởng",
     "artworkNote": "Hình minh họa ý tưởng. Chữ trên bao bì và nhãn trong hình chỉ mang tính minh họa — không phải thông số, chứng nhận hay tuyên bố về sản phẩm.",
@@ -298,16 +297,6 @@
         "tagline": "Nhân, rang, hòa tan & cold brew",
         "status": "Danh mục trọng tâm",
         "description": "Nguyên liệu cà phê từ các vùng trồng chính của Việt Nam, điều phối cho nhà kinh doanh thương mại, nhà phân phối nguyên liệu và nhà sản xuất đồ uống. Các định dạng có thể trao đổi gồm cà phê nhân và cà phê rang, cà phê rang xay, cà phê hòa tan (sấy phun, tạo hạt hoặc sấy thăng hoa) và cold brew, đóng gói số lượng lớn hoặc nhãn hàng riêng. Khả năng cung ứng phụ thuộc vào việc thẩm định nhà cung cấp theo thông số và thị trường của bạn.",
-        "specTitle": "Thông số tham khảo",
-        "specs": [
-          "Robusta: Sàng 16/18, độ ẩm tối đa 12,5%, đen & vỡ tối đa 3–5%",
-          "Arabica: Sàng 15+, độ ẩm tối đa 12%, chế biến ướt hoàn toàn hoặc tự nhiên",
-          "Dòng chế biến: cà phê hòa tan (sấy phun, tạo hạt hoặc sấy thăng hoa), tinh chất và cà phê cô đặc, cold brew cô đặc không đường — nồng độ thống nhất theo từng đơn hàng",
-          "Đóng gói: bao đay 60kg có lót GrainPro (cà phê nhân); hũ, thùng phuy hoặc bag-in-box cho bột, tinh chất và cold brew; gói single-serve và hộp bán lẻ cho dòng nhãn hàng riêng",
-          "Rang, phối chế và đóng gói nhãn hàng riêng được trao đổi theo từng dự án"
-        ],
-        "groupsTitle": "Nhóm sản phẩm",
-        "groups": ["Nhân & Rang", "Hòa tan", "Chiết xuất", "Cold Brew"],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Kinh doanh cà phê nhân", "Sản xuất cà phê hòa tan & RTD", "Thương hiệu cold brew & cà phê lon", "Pha trộn nhãn hàng riêng", "Dịch vụ ăn uống"]
       },
@@ -317,16 +306,6 @@
         "tagline": "Sữa, kem, nước dừa, bột, dầu & MCT",
         "status": "Tìm nguồn theo yêu cầu",
         "description": "Nguyên liệu dừa tìm nguồn theo yêu cầu — sữa và kem dừa, dạng bột, nước dừa cô đặc, dầu dừa nguyên chất và MCT — từ nhà cung cấp có sản phẩm, cơ sở và chứng nhận phù hợp với thông số và thị trường của bạn, đóng gói số lượng lớn hoặc nhãn hàng riêng.",
-        "specTitle": "Thông số tham khảo",
-        "specs": [
-          "Dạng lỏng: sữa dừa (hộp giấy) và kem dừa (hũ) với hàm lượng béo tiêu chuẩn hoặc theo yêu cầu, đóng gói UHT/vô trùng theo đơn hàng",
-          "Dạng bột: bột sữa dừa và bột kem dừa (thuần thực vật, không gluten, không thêm đường), nước dừa NFC, nước dừa cô đặc và bột nước dừa",
-          "Dầu & lipid chức năng: dầu dừa nguyên chất ép lạnh, dầu MCT không hương liệu và bột MCT",
-          "Đóng gói: hộp giấy, hũ, túi đứng, túi vô trùng, thùng phuy hoặc số lượng lớn — xác nhận theo từng đơn hàng",
-          "Sản xuất OEM và nhãn hàng riêng được trao đổi theo từng dự án"
-        ],
-        "groupsTitle": "Nhóm sản phẩm",
-        "groups": ["Sữa & Kem dừa", "Nước dừa", "Dầu & Lipid chức năng", "Dừa dạng rắn", "Đặc biệt"],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Đồ uống thực vật thay thế sữa", "Bánh & bánh kẹo", "Thực phẩm chức năng", "Dịch vụ ăn uống & sản xuất OEM"]
       },
@@ -336,15 +315,6 @@
         "tagline": "Yến tuyển chọn, chiết xuất, cô đặc & dạng bột",
         "status": "Phát triển theo yêu cầu",
         "description": "Yến sào Việt Nam được phát triển theo yêu cầu thành yến tuyển chọn, dạng cô đặc, chiết xuất, dạng bột và công thức tùy chỉnh cho thực phẩm dinh dưỡng và cao cấp, từ nguyên liệu số lượng lớn đến sản phẩm bán lẻ nhãn hàng riêng.",
-        "specTitle": "Thông số tham khảo",
-        "specs": [
-          "Dòng sản phẩm: yến thô tuyển chọn và yến tinh chế, dạng cô đặc, tinh chất nguyên chất và dạng bột — dạng nước yến đóng chai theo yêu cầu",
-          "Tùy chỉnh công thức: độ ngọt, thành phần bổ sung (đường phèn, nhân sâm và các vị khác) và bao bì theo yêu cầu khách hàng",
-          "Đóng gói: chai thủy tinh bán lẻ (thường 70ml, dạng lốc nhiều chai) cho dòng nước yến; hũ hoặc hút chân không cho yến tuyển chọn/khô; hộp quà và bao bì nhãn hàng riêng theo yêu cầu",
-          "Hạn sử dụng và yêu cầu bảo quản lạnh khác nhau theo từng dòng sản phẩm — xác nhận cùng đội ngũ của chúng tôi theo từng đơn hàng"
-        ],
-        "groupsTitle": "Nhóm sản phẩm",
-        "groups": ["Yến tuyển chọn", "Cô đặc & Chiết xuất", "Dạng bột", "Công thức chức năng"],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Bán lẻ thực phẩm sức khỏe", "Thương hiệu đồ uống RTD nhãn hàng riêng", "Công thức thực phẩm chức năng", "Phân phối dịch vụ ăn uống & nhà thuốc"]
       },
@@ -354,16 +324,6 @@
         "tagline": "Sấy thăng hoa, dạng bột, miếng & cô đặc",
         "status": "Tìm nguồn theo yêu cầu",
         "description": "Trái cây nhiệt đới Việt Nam được tìm nguồn theo yêu cầu dưới dạng bột và miếng sấy thăng hoa, cô đặc và chiết xuất cho ngành thực phẩm, đồ uống và dinh dưỡng, từ nhà cung cấp có năng lực chế biến phù hợp thông số của bạn.",
-        "specTitle": "Thông số tham khảo",
-        "specs": [
-          "Bột sấy thăng hoa: chanh dây, xoài, thanh long, sầu riêng, mãng cầu, dứa, chuối, cam và trái cây khác theo yêu cầu — độ ẩm tối đa 3–5%, thường 80–100 mesh",
-          "Miếng sấy thăng hoa: dạng lát, khối vuông và mảnh vỡ cho bánh, ngũ cốc và snack",
-          "Cô đặc trái cây: puree và nước ép cô đặc cho đồ uống và hương liệu",
-          "Chiết xuất: tinh chất trái cây tự nhiên và hương liệu nền dạng chai nhỏ giọt, định lượng chính xác",
-          "Đóng gói: túi nhôm kèm gói hút ẩm (1kg–25kg) hoặc thùng phuy số lượng lớn cho bột/miếng; chai thủy tinh cho cô đặc và chiết xuất — tùy chỉnh kích thước hạt và bao bì theo yêu cầu"
-        ],
-        "groupsTitle": "Nhóm sản phẩm",
-        "groups": ["Bột sấy thăng hoa", "Miếng sấy thăng hoa", "Cô đặc trái cây", "Chiết xuất"],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Bột pha smoothie & đồ uống", "Bánh & bánh kẹo", "Thực phẩm chức năng", "Tạo màu/hương vị tự nhiên"]
       },
@@ -373,15 +333,6 @@
         "tagline": "Điều, tiêu, quế, hồi & thảo mộc",
         "status": "Tìm nguồn theo yêu cầu",
         "description": "Các loại hạt, gia vị và thảo mộc Việt Nam được tìm nguồn theo yêu cầu cho các nhà sản xuất thực phẩm và đối tác nguyên liệu quốc tế, với thông số và chứng từ được thống nhất theo từng đơn hàng.",
-        "specTitle": "Thông số tham khảo",
-        "specs": [
-          "Hạt: hạt điều (các cấp WW240/WW320/SW240, đóng lon hút chân không 22,68kg) và mắc ca, nguyên vỏ hoặc đã tách nhân",
-          "Gia vị: hồ tiêu đen (dung trọng 500–570 g/l, độ ẩm tối đa 13%) và hồ tiêu trắng, quế và hoa hồi (nguyên cây, gãy vụn hoặc xay, phân loại theo hàm lượng tinh dầu và độ ẩm), ớt — tiệt trùng hơi nước theo yêu cầu",
-          "Thảo mộc: gừng, nghệ, sả, lá dứa và các loại thảo mộc Việt Nam khác, dạng tươi, khô hoặc bột theo yêu cầu",
-          "Đóng gói: hũ và gói bán lẻ cho dòng nhãn hàng riêng; lon hút chân không, bao hoặc thùng phuy số lượng lớn cho bán buôn — xác nhận theo từng đơn hàng"
-        ],
-        "groupsTitle": "Nhóm sản phẩm",
-        "groups": ["Hạt", "Gia vị", "Thảo mộc"],
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Sản xuất thực phẩm", "Pha trộn & phân phối gia vị", "Sản xuất hương liệu & chiết xuất", "Đóng gói bán lẻ & dịch vụ ăn uống"]
       }
@@ -392,6 +343,66 @@
       "cta": "Yêu cầu mẫu hàng",
       "secondaryCta": "Yêu cầu báo giá"
     }
+  },
+  "catalog": {
+    "breadcrumbHome": "Trang chủ",
+    "breadcrumbProducts": "Sản phẩm",
+    "breadcrumbLabel": "Đường dẫn",
+    "confirmedTitle": "Mã sản phẩm đã xác định",
+    "confirmedSubtitle": "Sản phẩm Whitehorse đã xác định và có thể báo giá theo mã. Khả năng cung ứng, thông số cuối cùng và phạm vi COA được xác nhận theo từng yêu cầu.",
+    "rangesTitle": "Dòng tìm nguồn & phát triển theo yêu cầu",
+    "rangesSubtitle": "Các dạng sản phẩm rộng hơn chúng tôi có thể tìm nguồn hoặc phát triển theo yêu cầu, với nhà cung cấp có sản phẩm, cơ sở và hồ sơ phù hợp thông số của bạn.",
+    "rangeLabel": "Dòng",
+    "formatsLabel": "Dạng",
+    "specifyLabel": "Thông số bạn chỉ định",
+    "applicationsLabel": "Ứng dụng",
+    "filterLabel": "Lọc theo dòng",
+    "filterAll": "Tất cả",
+    "searchLabel": "Tìm kiếm",
+    "searchPlaceholder": "Tên, mã hoặc dạng",
+    "results": "{count, plural, other {# kết quả}}",
+    "clearAll": "Xóa bộ lọc",
+    "noResults": "Không có kết quả phù hợp. Hãy xóa bộ lọc, hoặc cho chúng tôi biết nhu cầu của bạn qua yêu cầu.",
+    "viewDetails": "Xem chi tiết",
+    "requestSample": "Yêu cầu mẫu",
+    "requestSpec": "Yêu cầu thông số",
+    "requestQuote": "Yêu cầu báo giá",
+    "requestRange": "Yêu cầu dòng này",
+    "editorialBadge": "Ảnh minh họa",
+    "perRequestNote": "Việc liệt kê một sản phẩm hoặc dòng sản phẩm không có nghĩa là hàng có sẵn hoặc sẵn sàng xuất khẩu. Khả năng cung ứng, thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được xác nhận theo từng yêu cầu.",
+    "referenceTitle": "Thông số tham chiếu điển hình",
+    "referenceDisclaimer": "Thông số tham chiếu điển hình — thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng.",
+    "paramHeader": "Chỉ tiêu",
+    "referenceHeader": "Tham chiếu điển hình",
+    "methodHeader": "Phương pháp / căn cứ",
+    "codeLabel": "Mã sản phẩm",
+    "tileRange": "Dòng",
+    "tileOrigin": "Xuất xứ",
+    "tileOriginValue": "Việt Nam — vùng trồng thống nhất theo đơn",
+    "tilePackaging": "Bao bì",
+    "tilePackagingValue": "Xác nhận theo đơn hàng",
+    "tileDocuments": "Hồ sơ",
+    "tileDocumentsValue": "Phạm vi COA thống nhất theo đơn",
+    "docsTitle": "Hồ sơ, mẫu & COA",
+    "docsBody": "Mẫu, kiểm nghiệm và phiếu kết quả phân tích (COA) được sắp xếp theo từng yêu cầu. Chỉ tiêu kiểm nghiệm, phòng thí nghiệm và phạm vi COA được thống nhất với bạn trước khi sản xuất, cùng các chứng nhận của nhà cung cấp mà thị trường của bạn yêu cầu.",
+    "packagingTitle": "Các phương án bao bì để trao đổi",
+    "packagingDefault": "Bao bì được xác định cùng bạn và xác nhận theo từng đơn hàng.",
+    "orderingTitle": "Quy trình xử lý yêu cầu",
+    "orderingSteps": [
+      "Cho chúng tôi biết mã hoặc dòng sản phẩm, sản lượng, điểm đến và yêu cầu về thông số hoặc chứng nhận.",
+      "Chúng tôi chọn nhà cung cấp có sản phẩm, cơ sở và hồ sơ phù hợp, và cho bạn biết trạng thái thẩm định của từng nhà cung cấp.",
+      "Mẫu chuẩn và thông số bằng văn bản được thực hiện trước; mẫu được duyệt trở thành chuẩn tham chiếu của đơn hàng.",
+      "Điều khoản thương mại, chứng từ và giao hàng được xác nhận trong báo giá và hợp đồng."
+    ],
+    "relatedTitle": "Mã sản phẩm liên quan",
+    "broaderTitle": "Cần một dạng sản phẩm khác?",
+    "broaderBody": "Ngoài các mã đã xác định, chúng tôi tìm nguồn và phát triển các dạng khác trong nhóm này theo thông số của bạn.",
+    "broaderCta": "Xem tất cả dòng {family}",
+    "codesCount": "{count, plural, other {# mã đã xác định}}",
+    "rangesCount": "{count, plural, other {# dòng sản phẩm}}",
+    "stickyLabel": "Yêu cầu mẫu hoặc báo giá",
+    "galleryLabel": "Hình ảnh sản phẩm",
+    "showImage": "Xem ảnh {index}"
   },
   "certifications": {
     "hero": {
@@ -585,6 +596,8 @@
       "productFruit": "Nguyên liệu Trái cây",
       "productNutsSpicesBotanicals": "Hạt, Gia vị & Thảo mộc",
       "productOther": "Khác / chưa có trong danh sách",
+      "range": "Dòng sản phẩm quan tâm (không bắt buộc)",
+      "rangeNone": "Chưa chọn dòng cụ thể",
       "sku": "Định dạng cà phê quan tâm (không bắt buộc)",
       "skuNone": "Chưa chọn định dạng cụ thể",
       "skuHint": "Các định dạng có thể trao đổi. Việc chọn một định dạng không có nghĩa là hàng có sẵn hoặc sẵn sàng xuất khẩu — khả năng cung ứng được xác nhận theo từng yêu cầu.",

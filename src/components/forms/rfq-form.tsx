@@ -5,6 +5,7 @@ import { Controller, useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { CATALOG_SKUS, pick } from "@/lib/catalog";
 import {
   COFFEE_FORMAT_CODES,
   INCOTERMS,
@@ -13,6 +14,7 @@ import {
   PACKAGING_TIERS,
   PRIVATE_LABEL_OPTIONS,
   RFQ_INTENTS,
+  rangesForProduct,
   rfqSchema,
   type RfqInput,
   type RfqPrefill,
@@ -91,11 +93,12 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
   const locale = useLocale();
   const [state, setState] = useState<SubmitState>({ kind: "idle" });
 
-  // Prefill from ?product=&intent=&sku= (parsed and whitelisted on the
-  // server by parseRfqPrefill) — kept as the reset target after submit.
+  // Prefill from ?product=&range=&sku=&intent= (parsed and whitelisted on
+  // the server by parseRfqPrefill) — kept as the reset target after submit.
   const defaultValues: Partial<RfqInput> = {
     intent: defaults.intent ?? "quote",
     product: defaults.product,
+    range: defaults.range ?? "",
     sku: defaults.sku ?? "",
     consent: false,
   };
@@ -106,6 +109,7 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
     control,
     reset,
     setValue,
+    getValues,
     formState: { errors, isSubmitting, submitCount },
   } = useForm<RfqInput>({ resolver: zodResolver(rfqSchema), defaultValues });
   const product = useWatch({ control, name: "product" });
@@ -168,7 +172,8 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
                   value={field.value}
                   onChange={(v) => {
                     field.onChange(v);
-                    // Coffee format codes only apply to coffee.
+                    // Ranges and coffee format codes belong to one family.
+                    setValue("range", "");
                     if (v !== "coffee") setValue("sku", "");
                   }}
                   placeholder={t("productPlaceholder")}
@@ -180,6 +185,32 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
           </Field>
         </div>
 
+        {rangesForProduct(product).length > 0 && (
+          <Field label={t("range")} htmlFor="range">
+            <Controller
+              control={control}
+              name="range"
+              render={({ field }) => (
+                <ChoiceSelect
+                  id="range"
+                  value={field.value || NO_FORMAT}
+                  onChange={(v) => {
+                    field.onChange(v === NO_FORMAT ? "" : v);
+                    // A format code from another range no longer fits.
+                    const code = getValues("sku");
+                    if (code && CATALOG_SKUS.find((s) => s.code === code)?.range !== v) setValue("sku", "");
+                  }}
+                  placeholder={t("rangeNone")}
+                  options={[
+                    { value: NO_FORMAT, label: t("rangeNone") },
+                    ...rangesForProduct(product).map((r) => ({ value: r.id, label: pick(r.name, locale) })),
+                  ]}
+                />
+              )}
+            />
+          </Field>
+        )}
+
         {product === "coffee" && (
           <Field label={t("sku")} htmlFor="sku">
             <Controller
@@ -189,7 +220,12 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
                 <ChoiceSelect
                   id="sku"
                   value={field.value || NO_FORMAT}
-                  onChange={(v) => field.onChange(v === NO_FORMAT ? "" : v)}
+                  onChange={(v) => {
+                    field.onChange(v === NO_FORMAT ? "" : v);
+                    // Keep the range consistent with the chosen code.
+                    const skuRange = CATALOG_SKUS.find((s) => s.code === v)?.range;
+                    if (skuRange) setValue("range", skuRange);
+                  }}
                   placeholder={t("skuNone")}
                   options={formatOptions}
                 />

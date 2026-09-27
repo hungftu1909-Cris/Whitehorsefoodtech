@@ -1,14 +1,29 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { CheckCircle2 } from "lucide-react";
-import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
+import { SectionHeading } from "@/components/sections/section-heading";
 import { SmartImage } from "@/components/ui/smart-image";
-import { Reveal } from "@/components/ui/reveal";
 import { Badge } from "@/components/ui/badge";
+import { Breadcrumbs } from "@/components/catalog/breadcrumbs";
+import { RequestActions } from "@/components/catalog/request-actions";
+import { FilterGrid } from "@/components/catalog/filter-grid";
+import { ImageBadge, RangeCard, SkuCard } from "@/components/catalog/cards";
+import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
+import {
+  FAMILY_HERO_IMAGE,
+  findRange,
+  pick,
+  rangesFor,
+  skusFor,
+  type FamilySlug,
+} from "@/lib/catalog";
+import { rfqHref } from "@/lib/rfq-links";
 import { pageMetadata } from "@/lib/seo";
+import { serializeJsonLd } from "@/lib/json-ld";
+import { siteConfig } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import { hasPublicFile } from "@/lib/media";
 
@@ -30,20 +45,18 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const category = findCategory(slug);
   if (!category) return {};
-  const t = await getTranslations({
-    locale,
-    namespace: `products.categories.${category.categoryKey}`,
-  });
+  const t = await getTranslations({ locale, namespace: `products.categories.${category.categoryKey}` });
+  const hero = FAMILY_HERO_IMAGE[slug as FamilySlug];
   return pageMetadata({
     locale,
     path: `/products/${slug}`,
     title: t("name"),
     description: t("description"),
-    images: [`/images/products/${slug}-detail.jpg`],
+    images: [hero?.src ?? `/images/products/${slug}-detail.jpg`],
   });
 }
 
-export default async function ProductCategoryPage({
+export default async function ProductFamilyPage({
   params,
 }: {
   params: Promise<{ locale: string; slug: string }>;
@@ -52,92 +65,177 @@ export default async function ProductCategoryPage({
   setRequestLocale(locale);
   const category = findCategory(slug);
   if (!category) notFound();
+  const family = category.slug as FamilySlug;
 
-  const t = await getTranslations({
-    locale,
-    namespace: `products.categories.${category.categoryKey}`,
-  });
+  const t = await getTranslations({ locale, namespace: `products.categories.${category.categoryKey}` });
   const tp = await getTranslations({ locale, namespace: "products" });
-  const specs = t.raw("specs") as string[];
+  const tc = await getTranslations({ locale, namespace: "catalog" });
   const applications = t.raw("applications") as string[];
-  const groups = t.raw("groups") as string[];
+
+  const ranges = rangesFor(family);
+  const skus = skusFor(family);
+  const hero = FAMILY_HERO_IMAGE[family];
+  const heroArtwork = `/images/products/${family}-detail.jpg`;
+  const name = t("name");
+
+  const actionLabels = { sample: tc("requestSample"), spec: tc("requestSpec"), quote: tc("requestQuote") };
+  const filterLabels = (count: number) => ({
+    filter: tc("filterLabel"),
+    all: tc("filterAll"),
+    search: tc("searchLabel"),
+    searchPlaceholder: tc("searchPlaceholder"),
+    clear: tc("clearAll"),
+    noResults: tc("noResults"),
+    results: Array.from({ length: count + 1 }, (_, n) => tc("results", { count: n })),
+  });
+  const rangeLabels = { formats: tc("formatsLabel"), specify: tc("specifyLabel"), request: tc("requestRange") };
+  const rangeCards = ranges.map((range) => ({
+    id: range.id,
+    group: range.id,
+    search: [range.name.en, range.name.vi, ...range.formats.flatMap((f) => [f.en, f.vi])].join(" ").toLowerCase(),
+    card: <RangeCard range={range} locale={locale} labels={rangeLabels} />,
+  }));
+
+  // ItemList only where each item has its own page (confirmed codes).
+  const itemList =
+    skus.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: `${name} — ${tc("confirmedTitle")}`,
+          itemListElement: skus.map((sku, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: `${sku.code} ${pick(sku.name, locale)}`,
+            url: `${siteConfig.url}/${locale}/products/${family}/${sku.slug}`,
+          })),
+        }
+      : null;
 
   return (
     <>
-      <PageHero eyebrow={tp("hero.eyebrow")} title={t("name")} subtitle={t("tagline")} />
+      <Breadcrumbs
+        locale={locale}
+        label={tc("breadcrumbLabel")}
+        crumbs={[
+          { label: tc("breadcrumbHome"), href: "/" },
+          { label: tc("breadcrumbProducts"), href: "/products" },
+          { label: name },
+        ]}
+      />
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-          <Reveal>
-            <SmartImage
-              src={`/images/products/${category.slug}-detail.jpg`}
-              alt={`${t("name")} — ${tp("artworkAlt")}`}
-              badge={tp("artworkBadge")}
-              aspect="aspect-[4/3]"
+      {/* Compact hero: copy + actions left, imagery right */}
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 pt-8 pb-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+        <div>
+          <Badge
+            variant={family === "coffee" ? "default" : "outline"}
+            className={family === "coffee" ? "bg-accent text-accent-foreground" : "text-muted-foreground"}
+          >
+            {t("status")}
+          </Badge>
+          <h1 className="mt-4 font-serif text-4xl leading-[1.1] font-semibold tracking-tight text-balance text-foreground md:text-5xl">
+            {name}
+          </h1>
+          <p className="mt-2 text-sm font-medium text-accent">{t("tagline")}</p>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">{t("description")}</p>
+          <p className="mt-4 text-xs text-muted-foreground">
+            {skus.length > 0 && <>{tc("codesCount", { count: skus.length })} · </>}
+            {tc("rangesCount", { count: ranges.length })}
+          </p>
+          <RequestActions family={family} labels={actionLabels} className="mt-7" />
+        </div>
+        <div>
+          {hero ? (
+            <div className="relative aspect-[3/2] overflow-hidden rounded-lg border border-border">
+              <Image src={hero.src} alt={pick(hero.alt, locale)} fill priority sizes="(min-width: 1024px) 40rem, 100vw" className="object-cover" />
+              <ImageBadge>{tc("editorialBadge")}</ImageBadge>
+            </div>
+          ) : (
+            <>
+              <SmartImage
+                src={heroArtwork}
+                alt={`${name} — ${tp("artworkAlt")}`}
+                badge={tp("artworkBadge")}
+                aspect="aspect-[4/3]"
+                priority
+              />
+              {/* Concept mock-up whose packaging text is not a product claim. */}
+              {hasPublicFile(heroArtwork) && (
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground italic">{tp("artworkNote")}</p>
+              )}
+            </>
+          )}
+        </div>
+      </section>
+
+      {skus.length > 0 && (
+        <section id="codes" className="border-t border-border bg-muted/30">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <SectionHeading title={tc("confirmedTitle")} subtitle={tc("confirmedSubtitle")} />
+            <FilterGrid
+              className="mt-8"
+              groups={ranges.filter((range) => skus.some((s) => s.range === range.id)).map((range) => ({ id: range.id, label: pick(range.name, locale) }))}
+              labels={filterLabels(skus.length)}
+              items={skus.map((sku) => ({
+                id: sku.code,
+                group: sku.range,
+                search: [sku.code, sku.name.en, sku.name.vi, sku.line.en, sku.line.vi].join(" ").toLowerCase(),
+                card: (
+                  <SkuCard
+                    sku={sku}
+                    locale={locale}
+                    labels={{
+                      view: tc("viewDetails"),
+                      sample: tc("requestSample"),
+                      badge: tc("editorialBadge"),
+                      rangeLabel: tc("rangeLabel"),
+                      rangeName: pick(findRange(sku.range)!.name, locale),
+                    }}
+                  />
+                ),
+              }))}
             />
-            {/* The artwork is a concept mock-up whose packaging text
-                ("100% natural", "organic", …) is not a product claim. */}
-            {hasPublicFile(`/images/products/${category.slug}-detail.jpg`) && (
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground italic">
-                {tp("artworkNote")}
-              </p>
-            )}
-          </Reveal>
+          </div>
+        </section>
+      )}
 
-          <Reveal delay={150}>
-            <Badge
-              variant={category.slug === "coffee" ? "default" : "outline"}
-              className={category.slug === "coffee" ? "mb-4 bg-accent text-accent-foreground" : "mb-4 text-muted-foreground"}
-            >
-              {t("status")}
-            </Badge>
-            <p className="text-base leading-relaxed text-muted-foreground">
-              {t("description")}
-            </p>
-
-            <h2 className="mt-8 font-serif text-xl font-semibold text-foreground">
-              {t("specTitle")}
-            </h2>
-            <ul className="mt-4 space-y-3">
-              {specs.map((spec) => (
-                <li key={spec} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                  <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
-                  <span>{spec}</span>
+      <section id="ranges" className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <SectionHeading title={tc("rangesTitle")} subtitle={tc("rangesSubtitle")} />
+          {skus.length > 0 ? (
+            <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {rangeCards.map((item) => (
+                <li key={item.id} className="flex">
+                  {item.card}
                 </li>
               ))}
             </ul>
-            {/* Specs are indicative until a contract/COA confirms them —
-                keep this note next to the list, not in a footer. */}
-            <p className="mt-4 text-xs leading-relaxed text-muted-foreground italic">
-              {tp("specNote")}
-            </p>
+          ) : (
+            <FilterGrid
+              className="mt-8"
+              groups={ranges.map((range) => ({ id: range.id, label: pick(range.name, locale) }))}
+              labels={filterLabels(rangeCards.length)}
+              items={rangeCards}
+            />
+          )}
 
-            {groups?.length > 0 && (
-              <>
-                <h2 className="mt-8 font-serif text-xl font-semibold text-foreground">
-                  {t("groupsTitle")}
-                </h2>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {groups.map((group) => (
-                    <Badge key={group} variant="outline" className="border-accent/40 text-foreground">
-                      {group}
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <h2 className="font-serif text-xl font-semibold text-foreground">{t("applicationsTitle")}</h2>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {applications.map((app) => (
+                  <li key={app}>
+                    <Badge variant="secondary" className="bg-muted text-foreground">
+                      {app}
                     </Badge>
-                  ))}
-                </div>
-              </>
-            )}
-
-            <h2 className="mt-8 font-serif text-xl font-semibold text-foreground">
-              {t("applicationsTitle")}
-            </h2>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {applications.map((app) => (
-                <Badge key={app} variant="secondary" className="bg-muted text-foreground">
-                  {app}
-                </Badge>
-              ))}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </Reveal>
+            <p className="rounded-lg border border-dashed border-border bg-muted/30 p-4 text-xs leading-relaxed text-muted-foreground">
+              {tc("perRequestNote")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -145,10 +243,16 @@ export default async function ProductCategoryPage({
         title={tp("sampleCta.title")}
         subtitle={tp("sampleCta.subtitle")}
         cta={tp("sampleCta.cta")}
-        href={{ pathname: "/rfq", query: { product: category.slug, intent: "sample" } }}
+        href={rfqHref({ family, intent: "sample" })}
         secondaryCta={tp("sampleCta.secondaryCta")}
-        secondaryHref={{ pathname: "/rfq", query: { product: category.slug, intent: "quote" } }}
+        secondaryHref={rfqHref({ family, intent: "quote" })}
       />
+
+      <RequestBar href={rfqHref({ family, intent: "sample" })} label={tc("stickyLabel")} context={name} />
+
+      {itemList && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(itemList) }} />
+      )}
     </>
   );
 }

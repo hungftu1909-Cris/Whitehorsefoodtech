@@ -37,7 +37,7 @@ test("claim-bearing artwork (about.jpg, factory.jpg) is not rendered anywhere", 
 
 test("product mock-ups carry a VISIBLE concept-artwork label everywhere they render", () => {
   // Alt text alone is not a disclosure a sighted buyer sees.
-  const renders = sourceFiles("src").filter((f) => /src=\{`\/images\/products\//.test(fs.readFileSync(f, "utf8")));
+  const renders = sourceFiles("src").filter((f) => /`\/images\/products\/\$\{/.test(fs.readFileSync(f, "utf8")));
   assert.deepEqual(renders.sort(), [
     path.join("src", "app", "[locale]", "products", "[slug]", "page.tsx"),
     path.join("src", "app", "[locale]", "products", "page.tsx"),

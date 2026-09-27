@@ -1,9 +1,11 @@
 import { z } from "zod";
+import { CATALOG_RANGES, CATALOG_SKUS } from "./catalog.ts";
 
 // This module is shared by the client forms, the API routes and the
-// node:test suite, so it must not import local modules (node:test can't
-// resolve extensionless/aliased paths). tests/rfq-schema.test.ts checks
-// that PRODUCT_SLUG_TO_FAMILY matches src/lib/nav.ts.
+// node:test suite. Local imports must be import-free modules referenced
+// with an explicit ".ts" extension (node:test can't resolve extensionless
+// or "@/" paths). tests/rfq-schema.test.ts checks that
+// PRODUCT_SLUG_TO_FAMILY matches src/lib/nav.ts.
 
 // Honeypot field: real users never fill this in (it's visually hidden). Any
 // non-empty value still passes *validation* — the route handler is what
@@ -93,6 +95,8 @@ export const rfqSchema = z
     intent: z.enum(RFQ_INTENTS),
     product: z.enum(PRODUCT_FAMILIES),
     sku: optionalChoice(COFFEE_FORMAT_CODES),
+    // Catalog range id (src/lib/catalog.ts); must belong to `product`.
+    range: optionalText(60),
     application: optionalText(300),
     specRequirements: optionalText(2000),
     volume: z.string().trim().min(1).max(200),
@@ -117,15 +121,41 @@ export const rfqSchema = z
   .refine((d) => !d.sku || d.product === "coffee", {
     path: ["sku"],
     message: "Format codes apply to coffee only",
+  })
+  .refine((d) => !d.range || rangeFamily(d.range) === d.product, {
+    path: ["range"],
+    message: "Range must belong to the selected product family",
   });
 export type RfqInput = z.infer<typeof rfqSchema>;
 
-export type RfqPrefill = Partial<Pick<RfqInput, "product" | "intent" | "sku">>;
+/** Product family key for a catalog range id, or undefined if unknown. */
+export function rangeFamily(rangeId: string): ProductFamily | undefined {
+  const range = CATALOG_RANGES.find((r) => r.id === rangeId);
+  return range ? PRODUCT_SLUG_TO_FAMILY[range.family] : undefined;
+}
+
+/** Ranges selectable in the RFQ form for a product family key. */
+export function rangesForProduct(product: string | undefined) {
+  return CATALOG_RANGES.filter((r) => PRODUCT_SLUG_TO_FAMILY[r.family] === product);
+}
+
+// Friendly intent names used in links, mapped to the stored enum. Old
+// links (?intent=spec-sheet) keep working.
+const INTENT_ALIASES: Record<string, (typeof RFQ_INTENTS)[number]> = {
+  quote: "quote",
+  sample: "sample",
+  "spec-sheet": "spec-sheet",
+  specification: "spec-sheet",
+  spec: "spec-sheet",
+};
+
+export type RfqPrefill = Partial<Pick<RfqInput, "product" | "intent" | "sku" | "range">>;
 
 /**
- * Reads ?product=&intent=&sku= from an RFQ link (e.g. a product page CTA)
- * into form defaults. Anything unrecognized is dropped rather than
- * trusted; a coffee format code implies product=coffee.
+ * Reads ?product=&range=&sku=&intent= from an RFQ link (e.g. a catalog
+ * CTA) into form defaults. Anything unrecognized is dropped rather than
+ * trusted. A coffee format code implies product=coffee and its range; a
+ * range implies its family; a range from another family is dropped.
  */
 export function parseRfqPrefill(
   params: Record<string, string | string[] | undefined>
@@ -141,15 +171,22 @@ export function parseRfqPrefill(
     if (family) prefill.product = family;
   }
 
-  const intent = first(params.intent);
-  if (intent && (RFQ_INTENTS as readonly string[]).includes(intent)) {
-    prefill.intent = intent as RfqPrefill["intent"];
+  const intent = INTENT_ALIASES[first(params.intent)?.toLowerCase() ?? ""];
+  if (intent) prefill.intent = intent;
+
+  const range = first(params.range)?.toLowerCase();
+  const family = range ? rangeFamily(range) : undefined;
+  if (range && family && (!prefill.product || prefill.product === family)) {
+    prefill.range = range;
+    prefill.product = family;
   }
 
   const sku = first(params.sku)?.toUpperCase();
   if (sku && (COFFEE_FORMAT_CODES as readonly string[]).includes(sku)) {
     prefill.sku = sku as RfqPrefill["sku"];
     prefill.product = "coffee";
+    const skuRange = CATALOG_SKUS.find((s) => s.code === sku)?.range;
+    if (skuRange) prefill.range = skuRange;
   }
 
   return prefill;

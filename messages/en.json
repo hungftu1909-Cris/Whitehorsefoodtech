@@ -287,7 +287,6 @@
       "title": "Coffee first. Other Vietnamese ingredients on request.",
       "subtitle": "Coffee is our focus category. Coconut, bird's nest, fruit and nut, spice & botanical ingredients are sourced or developed on request. Specifications on this site are indicative until confirmed in your contract and certificate of analysis (COA)."
     },
-    "specNote": "Indicative reference only. Final specifications are confirmed in your contract and the certificate of analysis (COA) for each order.",
     "artworkAlt": "illustrative concept artwork",
     "artworkBadge": "Concept artwork",
     "artworkNote": "Concept artwork. Packaging and label text in the image is illustrative — not a product specification, certification or claim.",
@@ -298,16 +297,6 @@
         "tagline": "Green, roasted, instant & cold brew",
         "status": "Focus category",
         "description": "Coffee ingredients from Vietnam's main growing regions, coordinated for trading houses, ingredient distributors and beverage manufacturers. Formats we can discuss include green and roasted beans, roasted & ground coffee, instant coffee (spray-dried, agglomerated or freeze-dried) and cold brew, in bulk or private-label packaging. Availability depends on supplier qualification for your specification and market.",
-        "specTitle": "Indicative specifications",
-        "specs": [
-          "Robusta: Screen 16/18, moisture 12.5% max, black & broken 3–5% max",
-          "Arabica: Screen 15+, moisture 12% max, fully washed or natural process",
-          "Processed formats: instant coffee (spray-dried, agglomerated or freeze-dried), coffee extract and concentrate, unsweetened cold brew concentrate — concentration agreed per order",
-          "Packaging: 60kg jute bags with GrainPro liner (green beans); jars, drums or bag-in-box for powder, extract and cold brew; single-serve sachets and retail boxes for private-label formats",
-          "Custom roasting, formulation and private-label packaging discussed per project"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Green & Roasted", "Instant", "Extracts", "Cold Brew"],
         "applicationsTitle": "Common applications",
         "applications": ["Green coffee trading", "Instant & RTD coffee manufacturing", "Cold brew & canned coffee brands", "Private-label retail blends", "Foodservice"]
       },
@@ -317,16 +306,6 @@
         "tagline": "Milk, cream, water, powder, oil & MCT",
         "status": "Sourced on request",
         "description": "Coconut ingredients sourced on request — milk and cream, powders, water concentrates, virgin coconut oil and MCT — matched to suppliers whose product, site and certifications fit your specification and market, in bulk or private-label packaging.",
-        "specTitle": "Indicative specifications",
-        "specs": [
-          "Liquid formats: coconut milk (carton) and coconut cream (jar) at standard or custom fat content, UHT/aseptic packaging on request",
-          "Powder formats: coconut milk powder and coconut cream powder (plant-based, gluten-free, no added sugar), NFC coconut water, coconut water concentrate and coconut water powder",
-          "Oils & functional lipids: cold-pressed virgin coconut oil, unflavored MCT oil and MCT powder",
-          "Packaging: cartons, jars, stand-up pouches, aseptic bags, drums or bulk — format and packaging confirmed per order",
-          "OEM and private-label formulation discussed per project"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Milk & Cream", "Coconut Water", "Oils & Functional Lipids", "Coconut Solids", "Specialty"],
         "applicationsTitle": "Common applications",
         "applications": ["Dairy alternatives & plant-based beverages", "Bakery & confectionery", "Functional foods & nutraceuticals", "Foodservice & OEM formulation"]
       },
@@ -336,15 +315,6 @@
         "tagline": "Selected nest, extract, concentrate & powder",
         "status": "Developed on request",
         "description": "Vietnamese edible bird's nest developed on request into selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications, from bulk ingredients to private-label retail formats.",
-        "specTitle": "Indicative specifications",
-        "specs": [
-          "Formats: selected raw and cleaned bird's nest, concentrate, pure extract and powder — bottled ready-to-drink formats on request",
-          "Custom formulation: sugar level, added ingredients (rock sugar, ginseng and other variants) and packaging configured to buyer requirements",
-          "Packaging: retail glass bottles (typically 70ml multi-packs) for RTD formats; jars or vacuum packs for selected/dried nest; gift box and private-label packaging on request",
-          "Shelf life and cold-chain requirements vary by format — confirmed with our team per order"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Selected Bird's Nest", "Concentrated & Extracted", "Powders", "Functional Formulations"],
         "applicationsTitle": "Common applications",
         "applications": ["Health food & wellness retail", "Private-label RTD beverage brands", "Nutraceuticals & functional formulations", "Foodservice & pharmacy distribution"]
       },
@@ -354,16 +324,6 @@
         "tagline": "Freeze-dried, powder, pieces & concentrate",
         "status": "Sourced on request",
         "description": "Vietnamese tropical fruits sourced on request as freeze-dried powders and pieces, concentrates and extracts for food, beverage and nutrition applications, matched to suppliers whose processing fits your specification.",
-        "specTitle": "Indicative specifications",
-        "specs": [
-          "Freeze-dried powders: passion fruit, mango, dragon fruit, durian, soursop, pineapple, banana, orange and other fruits on request — moisture 3–5% max, 80–100 mesh typical",
-          "Freeze-dried pieces: slices, cubes and crumbles for bakery, cereal and snack applications",
-          "Fruit concentrates: puree and juice concentrate for beverage and flavor applications",
-          "Extracts: natural fruit extract and fruit flavor base in dropper-bottle format for precise dosing",
-          "Packaging: aluminum foil bags with desiccant (1kg–25kg) or bulk drums for powders/pieces; glass bottles for concentrates and extracts — custom particle size and packaging on request"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Freeze-Dried Powders", "Freeze-Dried Pieces", "Fruit Concentrates", "Extracts"],
         "applicationsTitle": "Common applications",
         "applications": ["Smoothie & beverage powders", "Bakery & confectionery", "Nutraceuticals & supplements", "Natural food coloring/flavoring"]
       },
@@ -373,15 +333,6 @@
         "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
         "status": "Sourced on request",
         "description": "Vietnamese nuts, spices and botanicals sourced on request for international food manufacturers and ingredient partners, with specifications and documentation agreed per order.",
-        "specTitle": "Indicative specifications",
-        "specs": [
-          "Nuts: cashew (WW240/WW320/SW240 grades, vacuum-packed 22.68kg tins) and macadamia, in-shell or kernel",
-          "Spices: black pepper (500–570 g/l density, moisture 13% max) and white pepper, cinnamon and star anise (whole, broken or ground, graded by oil content and moisture), chili — steam-sterilized on request",
-          "Botanicals: ginger, turmeric, lemongrass, pandan and other Vietnamese botanicals, fresh, dried or powdered on request",
-          "Packaging: retail jars and packs for private-label lines; bulk vacuum-packed tins, bags or drums for wholesale — format confirmed per order"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Nuts", "Spices", "Botanicals"],
         "applicationsTitle": "Common applications",
         "applications": ["Food manufacturing", "Spice blending & distribution", "Flavor & extract production", "Foodservice & retail packing"]
       }
@@ -392,6 +343,66 @@
       "cta": "Request samples",
       "secondaryCta": "Request a quote"
     }
+  },
+  "catalog": {
+    "breadcrumbHome": "Home",
+    "breadcrumbProducts": "Products",
+    "breadcrumbLabel": "Breadcrumb",
+    "confirmedTitle": "Confirmed product codes",
+    "confirmedSubtitle": "Products Whitehorse has defined and can quote by code. Availability, final specification and COA scope are confirmed for each request.",
+    "rangesTitle": "Sourcing & custom-development ranges",
+    "rangesSubtitle": "Broader formats we can source or develop on request, matched to suppliers whose product, site and documentation fit your specification.",
+    "rangeLabel": "Range",
+    "formatsLabel": "Formats",
+    "specifyLabel": "What you specify",
+    "applicationsLabel": "Applications",
+    "filterLabel": "Filter by range",
+    "filterAll": "All",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Name, code or format",
+    "results": "{count, plural, one {# result} other {# results}}",
+    "clearAll": "Clear filters",
+    "noResults": "Nothing matches these filters. Clear them, or tell us what you need in a request.",
+    "viewDetails": "View details",
+    "requestSample": "Request sample",
+    "requestSpec": "Request specification",
+    "requestQuote": "Request quote",
+    "requestRange": "Request this range",
+    "editorialBadge": "Editorial image",
+    "perRequestNote": "A listed product or range is not a statement of stock or export readiness. Availability, final specification, test method, documentation and COA scope are confirmed for each request.",
+    "referenceTitle": "Typical reference parameters",
+    "referenceDisclaimer": "Typical reference parameters — final specification, test method, documentation and COA scope are agreed per order.",
+    "paramHeader": "Parameter",
+    "referenceHeader": "Typical reference",
+    "methodHeader": "Method / basis",
+    "codeLabel": "Product code",
+    "tileRange": "Range",
+    "tileOrigin": "Origin",
+    "tileOriginValue": "Vietnam — growing area agreed per order",
+    "tilePackaging": "Packaging",
+    "tilePackagingValue": "Confirmed per order",
+    "tileDocuments": "Documents",
+    "tileDocumentsValue": "COA scope agreed per order",
+    "docsTitle": "Documentation, samples & COA",
+    "docsBody": "Samples, lab testing and the certificate of analysis are arranged per request. The tests, laboratory and COA scope are agreed with you before production, together with any supplier certificates your market requires.",
+    "packagingTitle": "Packaging options to discuss",
+    "packagingDefault": "Packaging is specified with you and confirmed per order.",
+    "orderingTitle": "How a request works",
+    "orderingSteps": [
+      "Tell us the code or range, volume, destination and any specification or certification needs.",
+      "We match suppliers whose product, site and documentation fit, and tell you each one's qualification status.",
+      "Reference samples and a written specification come first; the approved sample becomes the order reference.",
+      "Commercial terms, documents and delivery are confirmed in the quotation and contract."
+    ],
+    "relatedTitle": "Related product codes",
+    "broaderTitle": "Need a different format?",
+    "broaderBody": "Beyond confirmed codes, we source and develop other formats in this family to your specification.",
+    "broaderCta": "See all {family} ranges",
+    "codesCount": "{count, plural, one {# confirmed code} other {# confirmed codes}}",
+    "rangesCount": "{count, plural, one {# range} other {# ranges}}",
+    "stickyLabel": "Request sample or quote",
+    "galleryLabel": "Product images",
+    "showImage": "Show image {index}"
   },
   "certifications": {
     "hero": {
@@ -585,6 +596,8 @@
       "productFruit": "Fruit Ingredients",
       "productNutsSpicesBotanicals": "Nuts, Spices & Botanicals",
       "productOther": "Other / not listed",
+      "range": "Range of interest (optional)",
+      "rangeNone": "No specific range",
       "sku": "Coffee format of interest (optional)",
       "skuNone": "No specific format",
       "skuHint": "Formats we can discuss. Choosing one doesn't mean it is in stock or export-ready — availability is confirmed per request.",
