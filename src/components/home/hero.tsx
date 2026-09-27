@@ -36,7 +36,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/rfq"
+              href={{ pathname: "/rfq", query: { product: "coffee", intent: "quote" } }}
               className={cn(buttonVariants({ size: "lg" }), "cursor-pointer px-6")}
             >
               {t("ctaPrimary")}

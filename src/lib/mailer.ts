@@ -1,58 +1,28 @@
 import nodemailer from "nodemailer";
+import { deliverLead, type LeadMessage, type SendFn } from "@/lib/lead-delivery";
 
 /**
- * Sends a notification email via SMTP.
- *
- * Requires SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_TO, MAIL_FROM in
- * .env (see .env.example). Until those are configured, this logs the
- * submission to the server console instead of failing the request — so the
- * forms work end-to-end in development before real credentials exist.
- *
- * `kind` picks the recipient: RFQ submissions (sales intent) go to
- * RFQ_MAIL_TO when it's set, falling back to MAIL_TO otherwise — so setting
- * only MAIL_TO keeps both forms landing in one inbox, and adding
- * RFQ_MAIL_TO later splits quote requests into sales@ without a code change.
+ * The only place that talks to SMTP. Delivery rules (log vs smtp mode,
+ * 503/502 outcomes, redacted logging) live in src/lib/lead-delivery.ts;
+ * this file just supplies the real nodemailer transport and the process
+ * environment. See .env.example for the variables.
  */
-export async function sendMail(opts: {
-  subject: string;
-  html: string;
-  replyTo?: string;
-  kind?: "contact" | "rfq";
-}) {
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_TO, RFQ_MAIL_TO, MAIL_FROM } =
-    process.env;
-  const to = (opts.kind === "rfq" && RFQ_MAIL_TO) || MAIL_TO;
-
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !to) {
-    console.warn(
-      "[mailer] SMTP not configured — logging submission instead of sending email.\n" +
-        `Subject: ${opts.subject}\n${opts.html.replace(/<[^>]+>/g, " ")}`
-    );
-    return { delivered: false as const };
-  }
-
+const smtpSend: SendFn = async (config, message) => {
   const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: Number(SMTP_PORT ?? 587),
-    secure: Number(SMTP_PORT ?? 587) === 465,
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
+    host: config.host,
+    port: config.port,
+    secure: config.secure,
+    auth: { user: config.user, pass: config.pass },
   });
-
   await transporter.sendMail({
-    from: MAIL_FROM ?? SMTP_USER,
-    to,
-    replyTo: opts.replyTo,
-    subject: opts.subject,
-    html: opts.html,
+    from: config.from,
+    to: config.to,
+    replyTo: message.replyTo,
+    subject: message.subject,
+    html: message.html,
   });
+};
 
-  return { delivered: true as const };
-}
-
-export function escapeHtml(input: string) {
-  return input
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+export function deliver(message: LeadMessage) {
+  return deliverLead(message, { env: process.env, send: smtpSend });
 }

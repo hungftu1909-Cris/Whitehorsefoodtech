@@ -2,6 +2,8 @@ import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+type Href = React.ComponentProps<typeof Link>["href"];
+
 export function CtaSection({
   title,
   subtitle,
@@ -14,9 +16,9 @@ export function CtaSection({
   title: string;
   subtitle?: string;
   cta: string;
-  href?: string;
+  href?: Href;
   secondaryCta?: string;
-  secondaryHref?: string;
+  secondaryHref?: Href;
   className?: string;
 }) {
   return (

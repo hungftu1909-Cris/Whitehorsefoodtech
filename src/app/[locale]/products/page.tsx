@@ -87,7 +87,9 @@ export default async function ProductsPage({
         title={t("sampleCta.title")}
         subtitle={t("sampleCta.subtitle")}
         cta={t("sampleCta.cta")}
-        href="/rfq"
+        href={{ pathname: "/rfq", query: { intent: "sample" } }}
+        secondaryCta={t("sampleCta.secondaryCta")}
+        secondaryHref={{ pathname: "/rfq", query: { intent: "quote" } }}
       />
     </>
   );

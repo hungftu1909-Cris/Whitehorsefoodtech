@@ -550,8 +550,12 @@
       "message": "Nội dung",
       "messagePlaceholder": "Cho chúng tôi biết bạn đang tìm kiếm điều gì…",
       "submit": "Gửi tin nhắn",
+      "successTitle": "Đã gửi tin nhắn",
       "success": "Cảm ơn bạn — tin nhắn đã được gửi đến đội ngũ của chúng tôi.",
-      "error": "Đã có lỗi khi gửi tin nhắn. Vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi."
+      "reference": "Mã tham chiếu của bạn: {leadId}",
+      "errorDelivery": "Hiện chưa thể chuyển tin nhắn của bạn nên chưa có gì được gửi đi. Vui lòng gửi email trực tiếp đến {email}.",
+      "error": "Đã có lỗi khi gửi tin nhắn. Vui lòng kiểm tra lại form và thử lại, hoặc gửi email trực tiếp cho chúng tôi.",
+      "privacyNote": "Chúng tôi chỉ dùng thông tin này để phản hồi bạn. Xem <privacy>thông báo bảo mật</privacy>."
     }
   },
   "rfq": {
@@ -562,11 +566,17 @@
     },
     "form": {
       "title": "Yêu cầu báo giá",
-      "name": "Họ và tên",
-      "company": "Tên công ty",
-      "email": "Email công việc",
-      "phone": "Điện thoại / WhatsApp (không bắt buộc)",
-      "country": "Quốc gia điểm đến",
+      "sectionRequest": "Yêu cầu của bạn",
+      "sectionDelivery": "Sản lượng & giao hàng",
+      "sectionSpec": "Thông số & đóng gói",
+      "sectionContact": "Thông tin của bạn",
+      "selectPlaceholder": "Chọn…",
+      "intent": "Tôi muốn",
+      "intents": {
+        "quote": "Yêu cầu báo giá",
+        "sample": "Yêu cầu mẫu hàng",
+        "spec-sheet": "Yêu cầu bảng thông số kỹ thuật"
+      },
       "product": "Sản phẩm quan tâm",
       "productPlaceholder": "Chọn sản phẩm",
       "productCoffee": "Nguyên liệu Cà phê",
@@ -575,15 +585,76 @@
       "productFruit": "Nguyên liệu Trái cây",
       "productNutsSpicesBotanicals": "Hạt, Gia vị & Thảo mộc",
       "productOther": "Khác / chưa có trong danh sách",
+      "sku": "Định dạng cà phê quan tâm (không bắt buộc)",
+      "skuNone": "Chưa chọn định dạng cụ thể",
+      "skuHint": "Các định dạng có thể trao đổi. Việc chọn một định dạng không có nghĩa là hàng có sẵn hoặc sẵn sàng xuất khẩu — khả năng cung ứng được xác nhận theo từng yêu cầu.",
+      "formats": {
+        "WHCF001": "Robusta nhân xanh",
+        "WHCF002": "Arabica nhân xanh",
+        "WHCF003": "Robusta nhân xanh loại Fine",
+        "WHCF004": "Robusta rang",
+        "WHCF005": "Cà phê rang xay",
+        "WHCF006": "Cold brew",
+        "WHCF007": "Cà phê hòa tan sấy phun",
+        "WHCF008": "Cà phê hòa tan tạo hạt",
+        "WHCF009": "Cà phê hòa tan sấy thăng hoa"
+      },
+      "application": "Ứng dụng / mục đích sử dụng (không bắt buộc)",
+      "applicationPlaceholder": "ví dụ: hòa tan, RTD, bán lẻ",
       "volume": "Số lượng đặt hàng dự kiến",
-      "volumePlaceholder": "ví dụ: 1 container 20ft, 5 tấn/tháng",
+      "volumePlaceholder": "ví dụ: 1 cont 20ft, 5 tấn/tháng",
+      "frequency": "Tần suất đặt hàng (không bắt buộc)",
+      "frequencies": {
+        "one-off": "Một lần / đơn thử",
+        "monthly": "Hằng tháng",
+        "quarterly": "Hằng quý",
+        "annual": "Hợp đồng năm",
+        "not-sure": "Chưa xác định"
+      },
+      "country": "Quốc gia điểm đến",
+      "destinationPort": "Cảng đích (không bắt buộc)",
+      "destinationPortPlaceholder": "ví dụ: Hamburg, Los Angeles, Busan",
+      "timing": "Thời gian (không bắt buộc)",
+      "timings": {
+        "asap": "Càng sớm càng tốt",
+        "1-3-months": "Trong 1–3 tháng",
+        "3-6-months": "Trong 3–6 tháng",
+        "6-plus-months": "Sau 6 tháng",
+        "exploring": "Đang tìm hiểu"
+      },
       "incoterm": "Điều kiện Incoterm mong muốn (không bắt buộc)",
-      "incotermPlaceholder": "ví dụ: FOB, CIF, EXW",
-      "message": "Thông tin bổ sung",
-      "messagePlaceholder": "Yêu cầu đóng gói, mức giá mục tiêu, chứng nhận cần có, thời gian giao hàng…",
-      "submit": "Gửi yêu cầu báo giá",
-      "success": "Cảm ơn bạn — yêu cầu báo giá đã được gửi đến đội ngũ kinh doanh. Chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo.",
-      "error": "Đã có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi."
+      "incotermNotSure": "Chưa xác định",
+      "specRequirements": "Yêu cầu thông số & chứng nhận (không bắt buộc)",
+      "specRequirementsPlaceholder": "ví dụ: sàng 16+, độ ẩm ≤12,5%, FSSC 22000, hữu cơ, halal…",
+      "packagingTier": "Cấp độ đóng gói (không bắt buộc)",
+      "packagingTiers": {
+        "discovery-sample": "Mẫu khám phá",
+        "professional-horeca": "Chuyên nghiệp / HORECA",
+        "retail-private-label": "Bán lẻ / sẵn sàng nhãn hàng riêng",
+        "industrial-export": "Xuất khẩu công nghiệp (hàng rời)",
+        "not-sure": "Chưa xác định"
+      },
+      "privateLabel": "Nhãn hàng riêng (không bắt buộc)",
+      "privateLabels": {
+        "yes": "Có, dưới thương hiệu của chúng tôi",
+        "no": "Không",
+        "not-sure": "Chưa xác định"
+      },
+      "message": "Thông tin bổ sung (không bắt buộc)",
+      "messagePlaceholder": "Mức giá mục tiêu, chi tiết đóng gói, hoặc thông tin khác chúng tôi nên biết…",
+      "name": "Họ và tên",
+      "company": "Tên công ty",
+      "email": "Email công việc",
+      "phone": "Điện thoại / WhatsApp (không bắt buộc)",
+      "consent": "Tôi đồng ý để Whitehorse Foodtech sử dụng thông tin này để phản hồi yêu cầu, như mô tả trong <privacy>thông báo bảo mật</privacy>.",
+      "consentRequired": "Vui lòng xác nhận để tiếp tục.",
+      "fixErrors": "Còn thiếu một số thông tin bắt buộc. Vui lòng kiểm tra các trường được đánh dấu phía trên.",
+      "submit": "Gửi yêu cầu",
+      "successTitle": "Đã nhận yêu cầu",
+      "success": "Yêu cầu của bạn đã được gửi đến đội ngũ kinh doanh. Chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo.",
+      "reference": "Mã tham chiếu của bạn: {leadId}",
+      "errorDelivery": "Hiện chưa thể chuyển yêu cầu của bạn nên chưa có gì được gửi đi. Vui lòng gửi email trực tiếp đến {email}.",
+      "error": "Đã có lỗi khi gửi yêu cầu. Vui lòng kiểm tra lại form và thử lại, hoặc gửi email trực tiếp cho chúng tôi."
     }
   },
   "legal": {
