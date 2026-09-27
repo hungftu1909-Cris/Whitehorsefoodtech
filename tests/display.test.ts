@@ -35,21 +35,26 @@ test("claim-bearing artwork (about.jpg, factory.jpg) is not rendered anywhere", 
   assert.deepEqual(users, []);
 });
 
-test("product mock-ups carry a VISIBLE concept-artwork label everywhere they render", () => {
+test("family visuals carry a VISIBLE editorial/studio label everywhere they render", () => {
   // Alt text alone is not a disclosure a sighted buyer sees.
-  const renders = sourceFiles("src").filter((f) => /`\/images\/products\/\$\{/.test(fs.readFileSync(f, "utf8")));
+  const renders = sourceFiles("src").filter((f) => /<FamilyVisual\b/.test(fs.readFileSync(f, "utf8")));
   assert.deepEqual(renders.sort(), [
+    path.join("src", "app", "[locale]", "about", "page.tsx"),
     path.join("src", "app", "[locale]", "products", "[slug]", "page.tsx"),
     path.join("src", "app", "[locale]", "products", "page.tsx"),
     path.join("src", "components", "home", "products-preview.tsx"),
   ].sort());
   for (const f of renders) {
     const src = fs.readFileSync(f, "utf8");
-    assert.match(src, /badge=\{t?p?\("artworkBadge"\)\}/, `${f} must pass the visible badge`);
-    assert.match(src, /artworkAlt/, f);
+    assert.match(src, /editorial: tc(at)?\("editorialBadge"\)|editorialBadge/, `${f} passes the editorial label`);
+    assert.match(src, /studio: tp?\("studioBadge"\)/, `${f} passes the studio label`);
   }
-  assert.match(fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8"), /artworkNote/);
-  assert.match(fs.readFileSync("src/components/ui/smart-image.tsx", "utf8"), /\{badge && \(/);
+  const visual = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");
+  assert.match(visual, /<ImageBadge>\{image\.kind === "studio" \? labels\.studio : labels\.editorial\}<\/ImageBadge>/);
+  assert.match(visual, /object-cover/);
+  const detail = fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8");
+  assert.match(detail, /studioNote/, "detail page explains the studio representation");
+  assert.match(detail, /<FamilyVisual[\s\S]*?priority/, "detail hero image has priority");
 });
 
 test("hero copy is server-visible (not wrapped in <Reveal>)", () => {

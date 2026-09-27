@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { SmartImage } from "@/components/ui/smart-image";
+import { FamilyVisual } from "@/components/catalog/family-visual";
 import { Reveal } from "@/components/ui/reveal";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
@@ -64,12 +64,13 @@ export default async function ProductsPage({
                 href={`/products/${c.slug}`}
                 className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
               >
-                <SmartImage
-                  src={`/images/products/${c.slug}-card.jpg`}
-                  alt={`${t(`categories.${c.categoryKey}.name`)} — ${t("artworkAlt")}`}
-                  badge={t("artworkBadge")}
-                  aspect="aspect-[4/3]"
-                  className="rounded-none border-0 border-b border-border"
+                <FamilyVisual
+                  family={c.slug as FamilySlug}
+                  locale={locale}
+                  name={t(`categories.${c.categoryKey}.name`)}
+                  labels={{ editorial: tcat("editorialBadge"), studio: t("studioBadge") }}
+                  priority={i < 3}
+                  className="border-b border-border"
                 />
                 <div className="flex flex-1 flex-col p-6">
                   <Badge

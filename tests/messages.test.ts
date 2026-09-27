@@ -78,6 +78,14 @@ test("the scanner still catches the claims Phase 1 removed", () => {
     "[Placeholder — add leadership]",
     "WHC001 Green Robusta",
     "Partnered with VPBank",
+    "a world-class ingredient platform",
+    "a revolutionary supply chain",
+    "your one-stop sourcing partner",
+    "tinh hoa nông sản Việt",
+    "chắp cánh cho nông sản Việt",
+    "vươn tầm thế giới",
+    "Whitehorse bảo chứng chất lượng",
+    "Vietnam's leading ingredient platform",
   ];
   for (const claim of removed) {
     assert.ok(scanText(claim).length > 0, `not caught: ${claim}`);
@@ -128,7 +136,7 @@ test("positioning is the five-family platform, not coffee-only", () => {
     const heroes = [get(catalog as Json, "meta.title"), get(catalog as Json, "meta.description"), get(catalog as Json, "home.hero.title")].join(" ");
     assert.doesNotMatch(heroes, /coffee ingredients for|nguyên liệu cà phê việt nam cho/i);
   }
-  assert.match(String(get(en as Json, "about.origin.paragraphs.2")), /premium agricultural ingredient sourcing and connection platform/);
+  assert.match(String(get(en as Json, "about.hero.subtitle")), /premium B2B ingredient platform that connects farmers and processors more directly/);
 });
 
 test("public concepts use the Phase 1 names", () => {
@@ -176,10 +184,12 @@ test("value-prop and hero copy is confident, not apologetic", () => {
 });
 
 test("vision and ecosystem copy stays labelled and logo-free", () => {
-  assert.match(String(get(en as Json, "about.vision.note")), /not a current service/i);
+  assert.match(String(get(en as Json, "about.direction.note")), /not a current service/i);
   // Direct QA/QC is strategic direction, only inside the labelled vision.
-  assert.match(String(get(en as Json, "about.vision.body")), /direct quality-assurance and quality-control capability/);
-  assert.match(String(get(vi as Json, "about.vision.note")), /chưa phải dịch vụ/i);
+  assert.match(String(get(en as Json, "about.direction.body")), /direct quality-assurance and quality-control capability/);
+  assert.match(String(get(vi as Json, "about.direction.note")), /chưa phải dịch vụ/i);
+  assert.match(String(get(en as Json, "about.vision.rolesNote")), /not current services/i);
+  assert.match(String(get(vi as Json, "about.vision.rolesNote")), /chưa phải dịch vụ/i);
   for (const catalog of [en, vi]) {
     const body = String(get(catalog as Json, "about.ecosystem.body"));
     assert.match(body, /Balance Life/);

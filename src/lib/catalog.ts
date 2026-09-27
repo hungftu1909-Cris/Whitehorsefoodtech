@@ -102,10 +102,8 @@ const IMG = {
   },
 } satisfies Record<string, CatalogImage>;
 
-/** Family hero images (editorial). Families without one fall back to their card artwork. */
-export const FAMILY_HERO_IMAGE: Partial<Record<FamilySlug, CatalogImage>> = {
-  coffee: IMG.cups,
-};
+// Family-level visuals (cards, family hero, About mosaic) live in
+// src/lib/family-images.ts.
 
 // ---------------------------------------------------------------- ranges
 const r = (

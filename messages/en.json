@@ -180,59 +180,143 @@
   },
   "about": {
     "hero": {
-      "eyebrow": "About Whitehorse Foodtech",
-      "title": "Elevating Vietnamese ingredients for global food & beverage supply chains",
-      "subtitle": "Whitehorse Foodtech connects sourcing, R&D and product development, quality management, and the right manufacturing partners to build ingredient solutions that are consistent, adaptable and ready for international markets."
+      "eyebrow": "Whitehorse Foodtech / Premium ingredient platform",
+      "title": "Raising the standard of Vietnamese ingredients for global value chains.",
+      "subtitle": "Whitehorse Foodtech is building a premium B2B ingredient platform that connects farmers and processors more directly with food manufacturers, brands, ingredient users and distribution partners. By reducing non-value-adding layers, we aim to create a supply chain that is more transparent, efficient and trusted.",
+      "ctaProducts": "Explore ingredient families",
+      "ctaRfq": "Send an ingredient request",
+      "mosaicLabel": "Ingredient families Whitehorse works with"
     },
-    "origin": {
-      "title": "Our story",
-      "paragraphs": [
-        "Vietnam is home to a rich, diverse range of agricultural raw materials. But turning a local ingredient into a product that meets the standards of international food and beverage brands takes more than a good source of supply.",
-        "The product has to be developed for the right application, controlled against clear specifications, produced consistently, and backed by documentation that matches the requirements of each destination market.",
-        "Whitehorse Foodtech is a premium agricultural ingredient sourcing and connection platform. We link suitable farms, cooperatives and processing factories in Vietnam with international distributors, food and beverage manufacturers, foodservice groups and brands, and we organise the path in between: purchase requirements, source selection, samples and specifications, quality documents, commercial alignment and delivery.",
-        "Rather than starting from a fixed product, we start from what the customer actually needs: what application the product serves, what standards it has to meet, how it should be packaged, and what's required to enter the target market.",
-        "Whitehorse Foodtech was registered in Hanoi in August 2026. Coffee is the family with confirmed product codes today; coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request as suppliers complete qualification."
-      ]
+    "thesis": {
+      "eyebrow": "Why Whitehorse",
+      "body": "Vietnam does not lack quality agricultural produce. What is missing is a system strong enough to turn that advantage into ingredients with clear standards, the right applications and sustainable access to markets.",
+      "close": "Whitehorse was formed to close that gap."
     },
-    "valueCreation": {
-      "eyebrow": "How we work",
-      "title": "How we create value",
-      "subtitle": "A good ingredient solution has to balance four things: the right source, a product built for its application, consistent quality, and the ability to commercialize it efficiently.",
+    "bottlenecks": {
+      "eyebrow": "Where value is lost",
+      "title": "Large potential. Too little of the value retained.",
+      "intro": "Many Vietnamese crops still leave the chain as raw or lightly processed commodities, while more of the value is created further along — in processing, application development, standards and brand. The gap sits at six points.",
       "items": [
         {
-          "title": "Source development",
-          "description": "Identifying raw material sources that match product requirements, seasonality, processing capability and destination-market standards."
+          "title": "Post-harvest technology",
+          "description": "Uneven drying, storage and primary processing make quality hard to hold steady from growing area to factory."
         },
         {
-          "title": "R&D & product design",
-          "description": "Developing formats, formulations, sensory profile and technical specifications around the customer's real application."
+          "title": "R&D and application development",
+          "description": "Ingredients are usually sold as commodities and rarely developed around a buyer's specific application — beverages, bakery, confectionery or nutrition."
         },
         {
-          "title": "Quality management",
-          "description": "Establishing reference samples, technical specifications, testing requirements and quality documentation before commercial production."
+          "title": "Standards and quality documentation",
+          "description": "Specifications, test methods and lot records are rarely organised in a way an international buyer can assess quickly."
         },
         {
-          "title": "Production & export",
-          "description": "Connecting the right manufacturing partners, choosing packaging specifications, and coordinating documentation and logistics for each order."
+          "title": "Ingredient branding",
+          "description": "Vietnamese ingredients are mostly recognised by general origin, not by their characteristics, quality or supply capability."
+        },
+        {
+          "title": "Market-access networks",
+          "description": "Farmers and smaller processors struggle to reach manufacturers and brands directly, so value is spread across many intermediary layers."
+        },
+        {
+          "title": "Platform enterprises",
+          "description": "Few enterprises act as infrastructure — connecting supply, processing capability, product data and market demand in one system."
         }
       ]
     },
-    "operatingModel": {
-      "eyebrow": "Operating model",
-      "title": "One point of contact, from concept to order",
-      "subtitle": "Whitehorse Foodtech coordinates the full path from product development to commercialization. Each project is built around the customer's specific requirements rather than a one-size-fits-all approach.",
-      "steps": [
-        { "title": "Customer requirements", "description": "Product application, target market, standards, volume and target price." },
-        { "title": "Sourcing selection", "description": "Evaluating origin, raw material characteristics, seasonality and supply capability." },
-        { "title": "Product development", "description": "Building trial samples, technical specifications, process and packaging approach." },
-        { "title": "Production control", "description": "Managing reference samples, batch quality and related documentation." },
-        { "title": "International delivery", "description": "Coordinating documentation, trade terms and logistics." }
+    "role": {
+      "eyebrow": "The role Whitehorse plays",
+      "title": "From fragmented supply to an ingredient platform buyers can rely on.",
+      "body": "Whitehorse does not own every farm, factory or technology. We are the connection and orchestration layer across four parts of the chain — supply, processing capability within our partner network, product and application data, and market demand — so each ingredient request is met with a suitable source, a clear specification and records that can be checked.",
+      "capabilities": [
+        {
+          "title": "Curated Supply",
+          "description": "Farmers, cooperatives and processors selected and assessed for the product, site and market in question — not an open listing."
+        },
+        {
+          "title": "Application-led Products",
+          "description": "Formats and specifications developed from the buyer's application, with processing partners whose capability fits it."
+        },
+        {
+          "title": "Quality & Product Intelligence",
+          "description": "Specifications, test methods, supplier documents and lot records organised so a buyer can assess them."
+        },
+        {
+          "title": "Market Connection",
+          "description": "A more direct route from Vietnamese supply to manufacturers, brands, ingredient users and distribution partners."
+        }
       ]
     },
+    "control": {
+      "eyebrow": "QA/QC control point",
+      "title": "Value does not start at the transaction. It starts at the control point.",
+      "flowLabel": "Quality control points from growing area to buyer feedback",
+      "steps": [
+        {
+          "title": "Growing area",
+          "description": "Origin, season and growing conditions"
+        },
+        {
+          "title": "Procurement",
+          "description": "Purchase criteria agreed before intake"
+        },
+        {
+          "title": "Processing",
+          "description": "Process and parameters at the partner site"
+        },
+        {
+          "title": "Testing",
+          "description": "Parameters and methods agreed per order"
+        },
+        {
+          "title": "Lot records",
+          "description": "Specification, results and documents per lot"
+        },
+        {
+          "title": "Feedback & improvement",
+          "description": "Buyer feedback returned to source"
+        }
+      ],
+      "body": "Whitehorse is progressively building quality-assurance infrastructure — organising evidence, process and accountability around each of these points — so buyers can assess supply with clearer evidence, not promises.",
+      "note": "Testing scope, documentation and COA are agreed for each order. Certifications belong to a specific supplier, site and scope."
+    },
     "mission": {
-      "title": "Our mission",
-      "body": "We build a better food system — connecting Vietnam's finest ingredients with technology, quality, and global markets.",
-      "extra": "Whitehorse Foodtech works to create durable value across the whole supply chain: raising the value of Vietnamese raw materials, helping manufacturing partners reach higher standards, and giving international customers a single, transparent point of contact for flexible, efficient product development."
+      "label": "Mission",
+      "body": "To elevate the position of Vietnamese agriculture in global value chains through deep-processing capabilities, product development and a quality system that enables Vietnamese ingredients to be chosen for their value—not only their origin."
+    },
+    "vision": {
+      "label": "Vision",
+      "body": "To become Vietnam's premium ingredient platform, where deep-processing capability, quality management and value-chain orchestration converge to bring Vietnamese ingredients into high-value supply chains worldwide.",
+      "rolesTitle": "Four long-term roles",
+      "rolesNote": "Roles we are building toward — not current services.",
+      "roles": [
+        {
+          "title": "Premium Ingredient Platform",
+          "description": "Where professional buyers find Vietnamese ingredients defined by specification, application and evidence."
+        },
+        {
+          "title": "Deep-processing Technology Layer",
+          "description": "Connecting processing partners and technologies that move raw produce toward higher-value ingredient formats."
+        },
+        {
+          "title": "Vietnamese Agricultural Value-chain Architect",
+          "description": "Designing how growing areas, processors, laboratories and buyers work together, with accountability at each step."
+        },
+        {
+          "title": "Bridge to Global Ingredient Markets",
+          "description": "A dependable route for Vietnamese ingredients into the supply chains of international manufacturers and brands."
+        }
+      ]
+    },
+    "direction": {
+      "label": "Long-term direction",
+      "note": "Vision — not a current service",
+      "title": "Starting with ingredients. Designed for the whole agricultural chain.",
+      "body": "We start with ingredients because that is where standards and applications make the clearest difference. As data, standards and the network mature, the platform is designed to connect cooperatives, farmers, factories, laboratories, logistics providers and professional buyers — including direct quality-assurance and quality-control capability at key sourcing points."
+    },
+    "ecosystem": {
+      "eyebrow": "Ecosystem development",
+      "title": "Working with Balance Life on circular agriculture",
+      "body": "Whitehorse Foodtech is currently working with Balance Life around a circular-agriculture initiative. The broader initiative brings together production, value-chain and finance participants. Participant names, scale and implementation scope are disclosed only when formally confirmed."
     },
     "status": {
       "title": "Where Whitehorse stands, and where it is heading",
@@ -259,30 +343,15 @@
         }
       ]
     },
-    "values": {
-      "title": "The principles we work by",
-      "items": [
-        { "title": "Transparency & traceability", "description": "We prioritize clear management of raw material sources, product specifications, production sites and documentation tied to each project." },
-        { "title": "Consistent from sample to production", "description": "The approved sample is the basis for the technical specifications and quality control applied through commercial production." },
-        { "title": "Fast, direct response", "description": "Customers work directly with the team running their project, cutting down the time spent on discussion, sampling and decisions." },
-        { "title": "Responsible partnership", "description": "We aim for long-term relationships that fairly balance the interests of customers, manufacturing partners and raw material sources." }
-      ]
-    },
-    "ecosystem": {
-      "eyebrow": "Ecosystem development",
-      "title": "Working with Balance Life on circular agriculture",
-      "body": "Whitehorse Foodtech is currently working with Balance Life around a circular-agriculture initiative. The broader initiative brings together production, value-chain and finance participants. Participant names, scale and implementation scope are disclosed only when formally confirmed."
-    },
-    "vision": {
-      "label": "Long-term direction",
-      "note": "Vision — not a current service",
-      "body": "Over time, we intend to add direct quality-assurance and quality-control capability at key sourcing points, and to help build an open platform for Vietnamese agriculture where buyers can check supplier qualification, product specifications and lot information more easily."
-    },
     "cta": {
-      "title": "Looking for an ingredient solution from Vietnam?",
-      "subtitle": "Tell us about your product, application, standards, expected volume and target market. The Whitehorse team will work with you to define the right sourcing and product development approach.",
-      "cta": "Send a product inquiry",
-      "secondaryCta": "Explore our products"
+      "title": "Start with a specific ingredient request.",
+      "subtitle": "Share the application, specification, expected volume and destination market. Our sales team reviews qualified requests and follows up with the next commercial step.",
+      "buyerLabel": "For buyers",
+      "buyerBody": "Manufacturers, brands, ingredient users and distribution partners.",
+      "buyerCta": "Send an ingredient request",
+      "supplierLabel": "For suppliers",
+      "supplierBody": "Farmers, cooperatives and processors interested in assessment.",
+      "supplierCta": "Contact Whitehorse"
     }
   },
   "products": {
@@ -291,9 +360,8 @@
       "title": "Five ingredient families. One sourcing process.",
       "subtitle": "Coffee has nine confirmed product codes. Coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request. Final specification, test method, documentation and COA scope are agreed per order."
     },
-    "artworkAlt": "illustrative concept artwork",
-    "artworkBadge": "Concept artwork",
-    "artworkNote": "Concept artwork. Packaging and label text in the image is illustrative — not a product specification, certification or claim.",
+    "studioBadge": "Studio representation",
+    "studioNote": "A studio representation of ingredient formats in this family; product, source and final specification are confirmed per request.",
     "categories": {
       "coffee": {
         "name": "Coffee Ingredients",

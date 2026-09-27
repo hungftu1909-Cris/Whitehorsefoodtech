@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "@/components/sections/section-heading";
-import { SmartImage } from "@/components/ui/smart-image";
+import { FamilyVisual } from "@/components/catalog/family-visual";
+import type { FamilySlug } from "@/lib/catalog";
 import { Reveal } from "@/components/ui/reveal";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
@@ -10,6 +11,8 @@ import { PRODUCT_CATEGORIES } from "@/lib/nav";
 export function ProductsPreview() {
   const t = useTranslations("home.productsPreview");
   const tp = useTranslations("products");
+  const tc = useTranslations("catalog");
+  const locale = useLocale();
   const items = t.raw("items") as {
     title: string;
     tagline: string;
@@ -34,12 +37,12 @@ export function ProductsPreview() {
                   href={`/products/${category.slug}`}
                   className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
                 >
-                  <SmartImage
-                    src={`/images/products/${category.slug}-card.jpg`}
-                    alt={`${item.title} — ${tp("artworkAlt")}`}
-                    badge={tp("artworkBadge")}
-                    aspect="aspect-[4/3]"
-                    className="rounded-none border-0 border-b border-border"
+                  <FamilyVisual
+                    family={category.slug as FamilySlug}
+                    locale={locale}
+                    name={item.title}
+                    labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge") }}
+                    className="border-b border-border"
                   />
                   <div className="flex flex-1 flex-col p-6">
                     {/* Coffee is the focus category; every other family is

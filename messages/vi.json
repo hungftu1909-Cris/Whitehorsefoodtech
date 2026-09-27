@@ -180,59 +180,143 @@
   },
   "about": {
     "hero": {
-      "eyebrow": "Về Whitehorse Foodtech",
-      "title": "Nâng tầm nguyên liệu Việt Nam cho chuỗi cung ứng thực phẩm toàn cầu",
-      "subtitle": "Whitehorse Foodtech kết nối nguồn nguyên liệu, nghiên cứu và phát triển sản phẩm, quản trị chất lượng cùng các đối tác sản xuất phù hợp để tạo ra những giải pháp nguyên liệu nhất quán, linh hoạt và sẵn sàng cho thị trường quốc tế."
+      "eyebrow": "Whitehorse Foodtech / Nền tảng nguyên liệu cao cấp",
+      "title": "Nâng chuẩn nguyên liệu Việt cho chuỗi giá trị toàn cầu.",
+      "subtitle": "Whitehorse Foodtech đang xây dựng nền tảng nguyên liệu B2B kết nối trực tiếp hơn giữa nông hộ, nhà máy chế biến với các nhà sản xuất thực phẩm, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối. Bằng cách rút ngắn những tầng trung gian không tạo thêm giá trị, chúng tôi hướng tới một chuỗi cung ứng minh bạch hơn, hiệu quả hơn và đáng tin cậy hơn.",
+      "ctaProducts": "Khám phá nhóm nguyên liệu",
+      "ctaRfq": "Gửi yêu cầu nguyên liệu",
+      "mosaicLabel": "Các nhóm nguyên liệu Whitehorse đang làm việc"
     },
-    "origin": {
-      "title": "Câu chuyện của chúng tôi",
-      "paragraphs": [
-        "Việt Nam sở hữu nguồn nguyên liệu nông nghiệp phong phú, đa dạng và giàu bản sắc. Tuy nhiên, để một nguyên liệu địa phương có thể trở thành sản phẩm phù hợp với các thương hiệu thực phẩm và đồ uống quốc tế, cần nhiều hơn một nguồn cung tốt.",
-        "Sản phẩm phải được phát triển theo đúng ứng dụng, kiểm soát bằng tiêu chuẩn rõ ràng, sản xuất ổn định và đi kèm hệ thống tài liệu phù hợp với từng thị trường.",
-        "Whitehorse Foodtech là nền tảng kết nối nguồn nguyên liệu nông nghiệp cao cấp của Việt Nam — từ nông hộ, hợp tác xã và nhà máy chế biến phù hợp — với các nhà phân phối, nhà sản xuất thực phẩm và đồ uống, hệ thống foodservice và thương hiệu tại thị trường quốc tế. Chúng tôi tổ chức quy trình từ yêu cầu mua hàng, lựa chọn nguồn cung, mẫu và thông số, tài liệu chất lượng đến phối hợp thương mại và giao hàng.",
-        "Thay vì chỉ cung cấp một sản phẩm có sẵn, chúng tôi bắt đầu từ nhu cầu thực tế của khách hàng: sản phẩm được sử dụng trong ứng dụng nào, cần đạt tiêu chuẩn gì, quy cách đóng gói ra sao và phải đáp ứng những yêu cầu nào tại thị trường đích.",
-        "Whitehorse Foodtech được đăng ký thành lập tại Hà Nội vào tháng 8 năm 2026. Hiện nay cà phê là nhóm có mã sản phẩm đã xác định; nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu khi các nhà cung cấp hoàn tất thẩm định."
-      ]
+    "thesis": {
+      "eyebrow": "Vì sao có Whitehorse",
+      "body": "Việt Nam không thiếu nông sản chất lượng. Điều còn thiếu là một hệ thống đủ mạnh để chuyển lợi thế ấy thành nguyên liệu có tiêu chuẩn rõ ràng, ứng dụng phù hợp và khả năng tiếp cận thị trường bền vững.",
+      "close": "Whitehorse được hình thành để thu hẹp khoảng cách đó."
     },
-    "valueCreation": {
-      "eyebrow": "Cách chúng tôi làm việc",
-      "title": "Cách chúng tôi tạo ra giá trị",
-      "subtitle": "Một giải pháp nguyên liệu tốt phải cân bằng được bốn yếu tố: nguồn nguyên liệu phù hợp, sản phẩm đúng ứng dụng, chất lượng nhất quán và khả năng triển khai thương mại hiệu quả.",
+    "bottlenecks": {
+      "eyebrow": "Nơi giá trị bị thất thoát",
+      "title": "Tiềm năng lớn. Giá trị giữ lại còn hạn chế.",
+      "intro": "Nhiều nông sản Việt vẫn rời chuỗi ở dạng thô hoặc sơ chế, trong khi phần giá trị cao hơn được tạo ra ở các khâu phía sau — chế biến, phát triển ứng dụng, tiêu chuẩn và thương hiệu. Khoảng cách ấy nằm ở sáu điểm.",
       "items": [
         {
-          "title": "Phát triển nguồn nguyên liệu",
-          "description": "Xác định nguồn nguyên liệu phù hợp với yêu cầu sản phẩm, mùa vụ, khả năng chế biến và tiêu chuẩn của thị trường đích."
+          "title": "Công nghệ sau thu hoạch",
+          "description": "Sấy, bảo quản và sơ chế chưa đồng đều khiến chất lượng khó giữ ổn định từ vùng nguyên liệu đến nhà máy."
         },
         {
-          "title": "R&D và thiết kế sản phẩm",
-          "description": "Phát triển định dạng, công thức, đặc tính cảm quan và thông số kỹ thuật dựa trên ứng dụng thực tế của khách hàng."
+          "title": "R&D và phát triển ứng dụng",
+          "description": "Nguyên liệu thường được bán như hàng hóa thô, ít khi được phát triển theo ứng dụng cụ thể của người mua — đồ uống, bánh kẹo hay dinh dưỡng."
         },
         {
-          "title": "Quản trị chất lượng",
-          "description": "Thiết lập mẫu chuẩn, chỉ tiêu kỹ thuật, yêu cầu kiểm nghiệm và hồ sơ chất lượng phù hợp trước khi sản xuất thương mại."
+          "title": "Tiêu chuẩn và hồ sơ chất lượng",
+          "description": "Thông số, phương pháp kiểm nghiệm và hồ sơ lô hàng hiếm khi được tổ chức theo cách người mua quốc tế có thể đánh giá nhanh."
         },
         {
-          "title": "Sản xuất và xuất khẩu",
-          "description": "Kết nối đối tác sản xuất phù hợp, lựa chọn quy cách đóng gói và phối hợp chứng từ, logistics cho từng đơn hàng."
+          "title": "Thương hiệu nguyên liệu",
+          "description": "Nguyên liệu Việt chủ yếu được nhận diện theo xuất xứ chung, chưa theo đặc tính, chất lượng và năng lực cung ứng."
+        },
+        {
+          "title": "Mạng lưới tiếp cận thị trường",
+          "description": "Nông hộ và nhà máy nhỏ khó tiếp cận trực tiếp nhà sản xuất và thương hiệu, nên giá trị bị phân tán qua nhiều tầng trung gian."
+        },
+        {
+          "title": "Doanh nghiệp nền tảng",
+          "description": "Còn ít doanh nghiệp đóng vai trò hạ tầng — kết nối nguồn cung, năng lực chế biến, dữ liệu sản phẩm và nhu cầu thị trường trong một hệ thống."
         }
       ]
     },
-    "operatingModel": {
-      "eyebrow": "Mô hình vận hành",
-      "title": "Một đầu mối xuyên suốt từ ý tưởng đến đơn hàng",
-      "subtitle": "Whitehorse Foodtech đóng vai trò điều phối xuyên suốt quá trình phát triển và thương mại hóa sản phẩm. Mỗi dự án được triển khai dựa trên yêu cầu cụ thể của khách hàng thay vì áp dụng một giải pháp giống nhau cho mọi thị trường.",
-      "steps": [
-        { "title": "Yêu cầu khách hàng", "description": "Ứng dụng sản phẩm, thị trường đích, tiêu chuẩn, sản lượng và mức giá mục tiêu." },
-        { "title": "Lựa chọn nguyên liệu", "description": "Đánh giá nguồn gốc, đặc tính nguyên liệu, mùa vụ và khả năng cung ứng." },
-        { "title": "Phát triển sản phẩm", "description": "Xây dựng mẫu thử, thông số kỹ thuật, quy trình và phương án đóng gói." },
-        { "title": "Kiểm soát sản xuất", "description": "Quản lý mẫu chuẩn, chất lượng lô hàng và hồ sơ liên quan." },
-        { "title": "Giao hàng quốc tế", "description": "Phối hợp chứng từ, điều kiện thương mại và phương án logistics." }
+    "role": {
+      "eyebrow": "Vai trò của Whitehorse",
+      "title": "Từ nguồn cung phân mảnh đến một nền tảng nguyên liệu có thể tin cậy.",
+      "body": "Whitehorse không sở hữu mọi nông trại, nhà máy hay công nghệ. Chúng tôi là lớp kết nối và điều phối giữa bốn thành phần của chuỗi — nguồn cung, năng lực chế biến trong mạng lưới đối tác, dữ liệu sản phẩm và ứng dụng, và nhu cầu thị trường — để mỗi yêu cầu nguyên liệu được đáp ứng bằng nguồn phù hợp, thông số rõ ràng và hồ sơ có thể kiểm tra.",
+      "capabilities": [
+        {
+          "title": "Nguồn cung chọn lọc",
+          "description": "Nông hộ, hợp tác xã và nhà máy chế biến được lựa chọn và đánh giá theo từng sản phẩm, cơ sở và thị trường — không phải một danh sách mở."
+        },
+        {
+          "title": "Sản phẩm theo ứng dụng",
+          "description": "Định dạng và thông số được phát triển từ ứng dụng của người mua, cùng đối tác chế biến có năng lực phù hợp."
+        },
+        {
+          "title": "Dữ liệu chất lượng & sản phẩm",
+          "description": "Thông số, phương pháp kiểm nghiệm, hồ sơ nhà cung cấp và hồ sơ lô hàng được tổ chức để người mua có thể đánh giá."
+        },
+        {
+          "title": "Kết nối thị trường",
+          "description": "Con đường trực tiếp hơn từ nguồn cung Việt Nam đến nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối."
+        }
       ]
     },
+    "control": {
+      "eyebrow": "Điểm kiểm soát QA/QC",
+      "title": "Giá trị không bắt đầu ở giao dịch. Nó bắt đầu tại điểm kiểm soát.",
+      "flowLabel": "Các điểm kiểm soát chất lượng từ vùng nguyên liệu đến phản hồi của người mua",
+      "steps": [
+        {
+          "title": "Vùng nguyên liệu",
+          "description": "Nguồn gốc, mùa vụ và điều kiện canh tác"
+        },
+        {
+          "title": "Thu mua",
+          "description": "Tiêu chí thu mua thống nhất trước khi nhận hàng"
+        },
+        {
+          "title": "Chế biến",
+          "description": "Quy trình và thông số tại cơ sở đối tác"
+        },
+        {
+          "title": "Kiểm nghiệm",
+          "description": "Chỉ tiêu và phương pháp thống nhất theo đơn hàng"
+        },
+        {
+          "title": "Hồ sơ lô hàng",
+          "description": "Thông số, kết quả và chứng từ theo từng lô"
+        },
+        {
+          "title": "Phản hồi và cải tiến",
+          "description": "Phản hồi của người mua được đưa về nguồn"
+        }
+      ],
+      "body": "Whitehorse đang từng bước xây dựng hạ tầng đảm bảo chất lượng — tổ chức bằng chứng, quy trình và trách nhiệm giải trình quanh từng điểm kiểm soát — để người mua đánh giá nguồn cung bằng bằng chứng rõ ràng hơn, không phải bằng lời hứa.",
+      "note": "Phạm vi kiểm nghiệm, tài liệu và COA được thống nhất cho từng đơn hàng. Chứng nhận thuộc về từng nhà cung cấp, cơ sở và phạm vi cụ thể."
+    },
     "mission": {
-      "title": "Sứ mệnh của chúng tôi",
-      "body": "Chúng tôi xây dựng một hệ thống thực phẩm tốt đẹp hơn — kết nối những nguyên liệu tinh túy của Việt Nam với công nghệ, chất lượng và thị trường toàn cầu.",
-      "extra": "Whitehorse Foodtech hướng tới việc tạo ra giá trị bền vững cho toàn bộ chuỗi cung ứng: nâng cao giá trị của nguyên liệu Việt Nam, giúp các đối tác sản xuất tiếp cận những tiêu chuẩn cao hơn và mang đến cho khách hàng quốc tế một đầu mối phát triển sản phẩm minh bạch, linh hoạt và hiệu quả."
+      "label": "Sứ mệnh",
+      "body": "Nâng vị thế nông sản Việt Nam trong chuỗi giá trị toàn cầu thông qua công nghệ chế biến sâu, năng lực phát triển sản phẩm và một hệ thống chất lượng đủ tin cậy để nguyên liệu Việt được lựa chọn vì giá trị — không chỉ vì xuất xứ."
+    },
+    "vision": {
+      "label": "Tầm nhìn",
+      "body": "Trở thành nền tảng nguyên liệu cao cấp của Việt Nam, nơi năng lực chế biến sâu, quản trị chất lượng và điều phối chuỗi giá trị hội tụ để đưa nguyên liệu Việt vào những chuỗi cung ứng có giá trị cao trên toàn cầu.",
+      "rolesTitle": "Bốn vai trò dài hạn",
+      "rolesNote": "Những vai trò chúng tôi đang xây dựng hướng tới — chưa phải dịch vụ hiện có.",
+      "roles": [
+        {
+          "title": "Nền tảng nguyên liệu cao cấp",
+          "description": "Nơi người mua chuyên nghiệp tìm thấy nguyên liệu Việt được xác định bằng thông số, ứng dụng và bằng chứng."
+        },
+        {
+          "title": "Lớp công nghệ chế biến sâu",
+          "description": "Kết nối đối tác và công nghệ chế biến giúp nông sản thô trở thành những dạng nguyên liệu có giá trị cao hơn."
+        },
+        {
+          "title": "Kiến trúc sư chuỗi giá trị nông nghiệp Việt",
+          "description": "Thiết kế cách vùng nguyên liệu, nhà máy chế biến, phòng kiểm nghiệm và người mua phối hợp, với trách nhiệm rõ ràng ở từng khâu."
+        },
+        {
+          "title": "Cầu nối tới thị trường nguyên liệu toàn cầu",
+          "description": "Con đường đáng tin cậy để nguyên liệu Việt đi vào chuỗi cung ứng của các nhà sản xuất và thương hiệu quốc tế."
+        }
+      ]
+    },
+    "direction": {
+      "label": "Định hướng dài hạn",
+      "note": "Tầm nhìn — chưa phải dịch vụ hiện có",
+      "title": "Bắt đầu từ nguyên liệu. Thiết kế cho toàn bộ chuỗi nông nghiệp.",
+      "body": "Chúng tôi bắt đầu từ nguyên liệu vì đó là nơi tiêu chuẩn và ứng dụng tạo ra khác biệt rõ nhất. Khi dữ liệu, tiêu chuẩn và mạng lưới trưởng thành, nền tảng được thiết kế để kết nối hợp tác xã, nông hộ, nhà máy, phòng kiểm nghiệm, đơn vị logistics và người mua chuyên nghiệp — bao gồm năng lực đảm bảo và kiểm soát chất lượng trực tiếp tại các điểm nguồn cung then chốt."
+    },
+    "ecosystem": {
+      "eyebrow": "Phát triển hệ sinh thái",
+      "title": "Cùng Balance Life phát triển nông nghiệp tuần hoàn",
+      "body": "Whitehorse Foodtech hiện đang làm việc cùng Balance Life xoay quanh một sáng kiến nông nghiệp tuần hoàn. Sáng kiến rộng hơn này quy tụ các bên tham gia từ sản xuất, chuỗi giá trị và tài chính. Tên các bên tham gia, quy mô và phạm vi triển khai chỉ được công bố khi đã được xác nhận chính thức."
     },
     "status": {
       "title": "Whitehorse hôm nay và định hướng phía trước",
@@ -259,30 +343,15 @@
         }
       ]
     },
-    "values": {
-      "title": "Những nguyên tắc chúng tôi theo đuổi",
-      "items": [
-        { "title": "Minh bạch và truy xuất", "description": "Chúng tôi ưu tiên quản lý rõ ràng nguồn nguyên liệu, thông số sản phẩm, cơ sở sản xuất và hồ sơ liên quan đến từng dự án." },
-        { "title": "Nhất quán từ mẫu đến sản xuất", "description": "Mẫu được phê duyệt là cơ sở để xây dựng tiêu chuẩn kỹ thuật và kiểm soát chất lượng trong quá trình sản xuất thương mại." },
-        { "title": "Phản hồi nhanh và trực tiếp", "description": "Khách hàng làm việc trực tiếp với đội ngũ phụ trách dự án để rút ngắn thời gian trao đổi, thử mẫu và ra quyết định." },
-        { "title": "Hợp tác có trách nhiệm", "description": "Chúng tôi hướng tới những mối quan hệ dài hạn, trong đó lợi ích của khách hàng, đối tác sản xuất và nguồn cung nguyên liệu được cân bằng một cách hợp lý." }
-      ]
-    },
-    "ecosystem": {
-      "eyebrow": "Phát triển hệ sinh thái",
-      "title": "Cùng Balance Life phát triển nông nghiệp tuần hoàn",
-      "body": "Whitehorse Foodtech hiện đang làm việc cùng Balance Life xoay quanh một sáng kiến nông nghiệp tuần hoàn. Sáng kiến rộng hơn này quy tụ các bên tham gia từ sản xuất, chuỗi giá trị và tài chính. Tên các bên tham gia, quy mô và phạm vi triển khai chỉ được công bố khi đã được xác nhận chính thức."
-    },
-    "vision": {
-      "label": "Định hướng dài hạn",
-      "note": "Tầm nhìn — chưa phải dịch vụ hiện có",
-      "body": "Về lâu dài, chúng tôi hướng tới xây dựng năng lực đảm bảo và kiểm soát chất lượng trực tiếp tại các điểm nguồn cung then chốt, đồng thời góp phần xây dựng một nền tảng mở cho nông nghiệp Việt Nam, nơi người mua có thể kiểm tra việc thẩm định nhà cung cấp, thông số sản phẩm và thông tin lô hàng dễ dàng hơn."
-    },
     "cta": {
-      "title": "Đang tìm kiếm một giải pháp nguyên liệu từ Việt Nam?",
-      "subtitle": "Hãy chia sẻ với chúng tôi về sản phẩm, ứng dụng, tiêu chuẩn, sản lượng dự kiến và thị trường mục tiêu. Đội ngũ Whitehorse sẽ cùng bạn xác định phương án nguyên liệu và phát triển sản phẩm phù hợp.",
-      "cta": "Gửi yêu cầu sản phẩm",
-      "secondaryCta": "Khám phá sản phẩm"
+      "title": "Bắt đầu từ một yêu cầu nguyên liệu cụ thể.",
+      "subtitle": "Hãy chia sẻ ứng dụng, thông số, sản lượng dự kiến và thị trường đích. Đội ngũ kinh doanh sẽ xem xét các yêu cầu phù hợp và trao đổi bước thương mại tiếp theo.",
+      "buyerLabel": "Dành cho người mua",
+      "buyerBody": "Nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối.",
+      "buyerCta": "Gửi yêu cầu nguyên liệu",
+      "supplierLabel": "Dành cho nhà cung cấp",
+      "supplierBody": "Nông hộ, hợp tác xã và nhà máy chế biến muốn tham gia đánh giá.",
+      "supplierCta": "Liên hệ Whitehorse"
     }
   },
   "products": {
@@ -291,9 +360,8 @@
       "title": "Năm nhóm nguyên liệu. Một quy trình tìm nguồn.",
       "subtitle": "Cà phê có chín mã sản phẩm đã xác định. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu. Thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng."
     },
-    "artworkAlt": "hình minh họa ý tưởng",
-    "artworkBadge": "Hình minh họa ý tưởng",
-    "artworkNote": "Hình minh họa ý tưởng. Chữ trên bao bì và nhãn trong hình chỉ mang tính minh họa — không phải thông số, chứng nhận hay tuyên bố về sản phẩm.",
+    "studioBadge": "Hình ảnh studio minh họa",
+    "studioNote": "Hình ảnh minh họa các dạng nguyên liệu trong nhóm; sản phẩm, nguồn cung và thông số được xác nhận theo từng yêu cầu.",
     "categories": {
       "coffee": {
         "name": "Nguyên liệu Cà phê",

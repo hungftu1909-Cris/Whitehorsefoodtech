@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
  * Renders a real <Image> if the file exists under /public, otherwise
  * renders nothing — a visible "missing photo" panel reads as an unfinished
  * site, so layouts are built to work text-only. Drop a licensed photo at
- * `src` (relative to /public, e.g. "/images/products/coffee-card.jpg") and
+ * `src` (relative to /public, e.g. "/images/blog/<slug>.jpg") and
  * it appears automatically — no code changes needed. See
  * public/images/README.md.
  *
- * `badge` puts a small visible label on the image (e.g. "Concept artwork")
+ * `badge` puts a small visible label on the image (e.g. "Editorial image")
  * — use it whenever the artwork is not a literal product photo, since alt
  * text alone is not a disclosure a sighted buyer ever sees.
  */

@@ -6,13 +6,13 @@ import path from "node:path";
 import {
   CATALOG_RANGES,
   CATALOG_SKUS,
-  FAMILY_HERO_IMAGE,
   relatedSkus,
   type Localized,
 } from "../src/lib/catalog.ts";
 import { COFFEE_FORMAT_CODES, parseRfqPrefill, rfqSchema } from "../src/lib/validations.ts";
 import { rfqHref } from "../src/lib/rfq-links.ts";
 import { PRODUCT_CATEGORIES } from "../src/lib/nav.ts";
+import { FAMILY_IMAGES } from "../src/lib/family-images.ts";
 
 const SOURCES = fs.readFileSync("docs/product-range-sources.md", "utf8");
 const PROVENANCE = fs.readFileSync("docs/asset-provenance.md", "utf8");
@@ -82,7 +82,8 @@ test("brief values without a primary source are not published", () => {
 });
 
 test("every catalog image exists, is optimised and has provenance", () => {
-  const images = [...CATALOG_SKUS.flatMap((s) => s.images), ...Object.values(FAMILY_HERO_IMAGE)];
+  const editorialFamilyImages = Object.values(FAMILY_IMAGES).filter((i) => i.kind === "editorial");
+  const images = [...CATALOG_SKUS.flatMap((s) => s.images), ...editorialFamilyImages];
   for (const image of images) {
     const file = path.join("public", image!.src);
     assert.ok(fs.existsSync(file), `${image!.src} missing`);

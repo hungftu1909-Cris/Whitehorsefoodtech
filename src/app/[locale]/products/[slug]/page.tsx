@@ -1,19 +1,18 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SectionHeading } from "@/components/sections/section-heading";
-import { SmartImage } from "@/components/ui/smart-image";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumbs } from "@/components/catalog/breadcrumbs";
 import { RequestActions } from "@/components/catalog/request-actions";
 import { FilterGrid } from "@/components/catalog/filter-grid";
-import { ImageBadge, RangeCard, SkuCard } from "@/components/catalog/cards";
+import { FamilyVisual } from "@/components/catalog/family-visual";
+import { RangeCard, SkuCard } from "@/components/catalog/cards";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
+import { familyImage } from "@/lib/family-images";
 import {
-  FAMILY_HERO_IMAGE,
   findRange,
   pick,
   rangesFor,
@@ -46,13 +45,13 @@ export async function generateMetadata({
   const category = findCategory(slug);
   if (!category) return {};
   const t = await getTranslations({ locale, namespace: `products.categories.${category.categoryKey}` });
-  const hero = FAMILY_HERO_IMAGE[slug as FamilySlug];
+  const hero = familyImage(slug as FamilySlug);
   return pageMetadata({
     locale,
     path: `/products/${slug}`,
     title: t("name"),
     description: t("description"),
-    images: [hero?.src ?? `/images/products/${slug}-detail.jpg`],
+    ...(hasPublicFile(hero.src) ? { images: [hero.src] } : {}),
   });
 }
 
@@ -74,8 +73,7 @@ export default async function ProductFamilyPage({
 
   const ranges = rangesFor(family);
   const skus = skusFor(family);
-  const hero = FAMILY_HERO_IMAGE[family];
-  const heroArtwork = `/images/products/${family}-detail.jpg`;
+  const hero = familyImage(family);
   const name = t("name");
 
   const actionLabels = { sample: tc("requestSample"), spec: tc("requestSpec"), quote: tc("requestQuote") };
@@ -145,25 +143,19 @@ export default async function ProductFamilyPage({
           <RequestActions family={family} labels={actionLabels} className="mt-7" />
         </div>
         <div>
-          {hero ? (
-            <div className="relative aspect-[3/2] overflow-hidden rounded-lg border border-border">
-              <Image src={hero.src} alt={pick(hero.alt, locale)} fill priority sizes="(min-width: 1024px) 40rem, 100vw" className="object-cover" />
-              <ImageBadge>{tc("editorialBadge")}</ImageBadge>
-            </div>
-          ) : (
-            <>
-              <SmartImage
-                src={heroArtwork}
-                alt={`${name} — ${tp("artworkAlt")}`}
-                badge={tp("artworkBadge")}
-                aspect="aspect-[4/3]"
-                priority
-              />
-              {/* Concept mock-up whose packaging text is not a product claim. */}
-              {hasPublicFile(heroArtwork) && (
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground italic">{tp("artworkNote")}</p>
-              )}
-            </>
+          <FamilyVisual
+            family={family}
+            locale={locale}
+            name={name}
+            labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge") }}
+            sizes="(min-width: 1280px) 38rem, (min-width: 1024px) 50vw, 100vw"
+            priority
+            className="rounded-lg border border-border"
+          />
+          {/* A studio representation is never inventory, a supplier batch or
+              evidence — say so under the image. */}
+          {hero.kind === "studio" && hasPublicFile(hero.src) && (
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tp("studioNote")}</p>
           )}
         </div>
       </section>

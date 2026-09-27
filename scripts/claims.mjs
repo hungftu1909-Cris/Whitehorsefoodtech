@@ -39,6 +39,10 @@ export const FORBIDDEN_CLAIMS = [
   // Scoped to self-description: blog posts legitimately discuss bank
   // guarantees and Vietnam's national export rankings.
   { id: "leading", pattern: /\b(world|industry|market)[- ]leading\b|(doanh nghiệp|nhà cung cấp|công ty) hàng đầu/i, reason: "Unsupported superlative." },
+  // Premium is shown through specifications, evidence and restraint — never
+  // self-awarded (Phase 3 brief).
+  { id: "self-awarded", pattern: /world[- ]class|revolutionary|one[- ]stop|tinh hoa|chắp cánh|vươn tầm|\b(vietnam'?s?|the) leading (ingredient|agri|food|sourcing|b2b)/i, reason: "Self-awarded premium claim; demonstrate with specifications and evidence instead." },
+  { id: "quality-endorsement", pattern: /bảo chứng chất lượng|\bwe certify\b|quality[- ]guaranteed/i, reason: "Whitehorse is building QA infrastructure; it does not certify or vouch for quality today." },
   { id: "guarantee", pattern: /\bwe guarantee\b|\bguaranteed (quality|supply|delivery|consistency)\b|chúng tôi (cam kết|bảo đảm|đảm bảo) 100%/i, reason: "Guarantee language needs contract backing." },
   { id: "globally-delivered", pattern: /globally delivered|giao khắp toàn cầu/i, reason: "Implies an existing global delivery record." },
   { id: "sku-prefix", pattern: /\bWHC0\d{2}\b/, reason: "Wrong coffee format prefix — codes are WHCF001–WHCF009." },

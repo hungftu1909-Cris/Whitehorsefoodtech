@@ -1,24 +1,26 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { PageHero } from "@/components/sections/page-hero";
-import { SectionHeading } from "@/components/sections/section-heading";
-import { CtaSection } from "@/components/sections/cta-section";
+import { ArrowRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { buttonVariants } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
-import { StatusMarkers } from "@/components/home/status-markers";
+import { FamilyVisual } from "@/components/catalog/family-visual";
+import { ABOUT_MOSAIC_FAMILIES } from "@/lib/family-images";
+import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
-import {
-  Sprout,
-  FlaskConical,
-  ClipboardCheck,
-  Ship,
-  ShieldCheck,
-  Target,
-  MessageCircle,
-  Handshake,
-} from "lucide-react";
+import { cn } from "@/lib/utils";
 
-const VALUE_CREATION_ICONS = [Sprout, FlaskConical, ClipboardCheck, Ship];
-const VALUE_ICONS = [ShieldCheck, Target, MessageCircle, Handshake];
+// Truth boundary for this page (docs/claim-registry.md):
+// - Mission, vision and the four long-term roles are VISION: labelled as
+//   direction being built toward, never as current services.
+// - No 3,000+ / 10,000+ figures here; the tagged proof band stays on Home.
+// - Balance Life is a program signal; no partner logos or other names.
+// - The legacy About/factory artwork is never rendered (unsupported claims
+//   in the images). The hero mosaic comes from src/lib/family-images.ts.
+
+type Item = { title: string; description: string };
+
+const num = (i: number) => String(i + 1).padStart(2, "0");
 
 export async function generateMetadata({
   params,
@@ -35,6 +37,12 @@ export async function generateMetadata({
   });
 }
 
+function Eyebrow({ children, className }: { children: React.ReactNode; className?: string }) {
+  return (
+    <p className={cn("text-xs font-semibold tracking-[0.2em] text-accent uppercase", className)}>{children}</p>
+  );
+}
+
 export default async function AboutPage({
   params,
 }: {
@@ -43,182 +51,276 @@ export default async function AboutPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
-  const paragraphs = t.raw("origin.paragraphs") as string[];
-  const valueCreationItems = t.raw("valueCreation.items") as {
-    title: string;
-    description: string;
-  }[];
-  const steps = t.raw("operatingModel.steps") as { title: string; description: string }[];
-  const values = t.raw("values.items") as { title: string; description: string }[];
+  const tp = await getTranslations({ locale, namespace: "products" });
+  const tc = await getTranslations({ locale, namespace: "catalog" });
+
+  const bottlenecks = t.raw("bottlenecks.items") as Item[];
+  const capabilities = t.raw("role.capabilities") as Item[];
+  const steps = t.raw("control.steps") as Item[];
+  const roles = t.raw("vision.roles") as Item[];
+  const visualLabels = { editorial: tc("editorialBadge"), studio: tp("studioBadge") };
+  const familyName = (slug: string) => {
+    const category = PRODUCT_CATEGORIES.find((c) => c.slug === slug)!;
+    return tp(`categories.${category.categoryKey}.name`);
+  };
 
   return (
     <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
-
-      {/* Our story — text only: the old about.jpg banner is not rendered
-          because its artwork carries unsupported claims (see hero.tsx). */}
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto max-w-3xl space-y-4">
-          <h2 className="font-serif text-2xl font-semibold text-foreground">
-            {t("origin.title")}
-          </h2>
-          {paragraphs.map((paragraph) => (
-            <p key={paragraph} className="text-base leading-relaxed text-muted-foreground">
-              {paragraph}
+      {/* 1 · Hero — copy left, 2×2 ingredient mosaic right */}
+      <section className="border-b border-border">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 pt-16 pb-20 sm:px-6 md:pt-24 md:pb-28 lg:grid-cols-12 lg:items-center lg:gap-16 lg:px-8">
+          <div className="lg:col-span-7">
+            <Eyebrow>{t("hero.eyebrow")}</Eyebrow>
+            <h1 className="mt-6 font-serif text-4xl leading-[1.08] font-semibold tracking-tight text-balance text-foreground sm:text-5xl lg:text-[3.5rem]">
+              {t("hero.title")}
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-pretty text-muted-foreground">
+              {t("hero.subtitle")}
             </p>
-          ))}
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/products"
+                className={cn(buttonVariants({ size: "lg" }), "h-11 cursor-pointer px-5 text-sm")}
+              >
+                {t("hero.ctaProducts")}
+              </Link>
+              <Link
+                href="/rfq"
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-11 cursor-pointer px-5 text-sm")}
+              >
+                {t("hero.ctaRfq")}
+              </Link>
+            </div>
+          </div>
+          <ul
+            aria-label={t("hero.mosaicLabel")}
+            className="grid grid-cols-2 gap-2 sm:gap-3 lg:col-span-5"
+          >
+            {ABOUT_MOSAIC_FAMILIES.map((family, i) => (
+              <li key={family}>
+                <FamilyVisual
+                  family={family}
+                  locale={locale}
+                  name={familyName(family)}
+                  labels={visualLabels}
+                  sizes="(min-width: 1024px) 18rem, 50vw"
+                  priority={i < 2}
+                  compact
+                  className="rounded-md border border-border"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 2 · Brand thesis */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-32 lg:px-8">
+        <Reveal className="grid gap-8 lg:grid-cols-12">
+          <Eyebrow className="lg:col-span-3 lg:pt-3">{t("thesis.eyebrow")}</Eyebrow>
+          <div className="lg:col-span-9">
+            <p className="font-serif text-2xl leading-snug text-balance text-foreground md:text-4xl md:leading-[1.25]">
+              {t("thesis.body")}
+            </p>
+            <p className="mt-8 border-t border-border pt-6 font-serif text-xl text-accent italic md:text-2xl">
+              {t("thesis.close")}
+            </p>
+          </div>
         </Reveal>
       </section>
 
-      {/* How we create value */}
+      {/* 3 · Bottlenecks — numbered editorial list, not icon cards */}
+      <section className="border-t border-border bg-muted/30">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-12 lg:px-8">
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <Eyebrow>{t("bottlenecks.eyebrow")}</Eyebrow>
+              <h2 className="mt-4 font-serif text-3xl leading-tight font-semibold text-balance text-foreground md:text-4xl">
+                {t("bottlenecks.title")}
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">{t("bottlenecks.intro")}</p>
+            </div>
+          </div>
+          <ol className="grid gap-x-10 sm:grid-cols-2 lg:col-span-8">
+            {bottlenecks.map((item, i) => (
+              <Reveal key={item.title} as="li" delay={(i % 2) * 80} className="border-t border-border py-8">
+                <span className="font-serif text-sm text-accent tabular-nums" aria-hidden="true">
+                  {num(i)}
+                </span>
+                <h3 className="mt-3 font-serif text-xl font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* 4 · Whitehorse role — orchestration layer + four capabilities */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-12">
+          <Reveal className="lg:col-span-7">
+            <Eyebrow>{t("role.eyebrow")}</Eyebrow>
+            <h2 className="mt-4 font-serif text-3xl leading-tight font-semibold text-balance text-foreground md:text-4xl">
+              {t("role.title")}
+            </h2>
+          </Reveal>
+          <Reveal delay={100} className="lg:col-span-5 lg:pt-10">
+            <p className="text-base leading-relaxed text-muted-foreground">{t("role.body")}</p>
+          </Reveal>
+        </div>
+        <dl className="mt-16 border-b border-border">
+          {capabilities.map((item, i) => (
+            <Reveal
+              key={item.title}
+              delay={i * 60}
+              className="grid gap-2 border-t border-border py-7 md:grid-cols-12 md:gap-8"
+            >
+              <dt className="flex items-baseline gap-4 md:col-span-5">
+                <span className="font-serif text-sm text-accent tabular-nums" aria-hidden="true">
+                  {num(i)}
+                </span>
+                <span className="font-serif text-xl font-semibold text-foreground md:text-2xl">{item.title}</span>
+              </dt>
+              <dd className="pl-9 text-sm leading-relaxed text-muted-foreground md:col-span-7 md:pt-1.5 md:pl-0 md:text-base">
+                {item.description}
+              </dd>
+            </Reveal>
+          ))}
+        </dl>
+      </section>
+
+      {/* 5 · QA/QC control point — horizontal flow on desktop, vertical on mobile */}
       <section className="border-t border-border bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-          <SectionHeading
-            eyebrow={t("valueCreation.eyebrow")}
-            title={t("valueCreation.title")}
-            subtitle={t("valueCreation.subtitle")}
-          />
-          <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {valueCreationItems.map((item, i) => {
-              const Icon = VALUE_CREATION_ICONS[i % VALUE_CREATION_ICONS.length];
-              return (
-                <Reveal key={item.title} delay={i * 100}>
-                  <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
-                    <Icon className="size-5" aria-hidden="true" />
-                  </div>
-                  <h3 className="mt-4 font-serif text-lg font-semibold text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {item.description}
-                  </p>
-                </Reveal>
-              );
-            })}
+          <Reveal className="max-w-3xl">
+            <Eyebrow>{t("control.eyebrow")}</Eyebrow>
+            <h2 className="mt-4 font-serif text-3xl leading-tight font-semibold text-balance text-foreground md:text-4xl">
+              {t("control.title")}
+            </h2>
+          </Reveal>
+          <ol
+            aria-label={t("control.flowLabel")}
+            className="relative mt-16 space-y-8 border-l border-foreground/20 pl-8 lg:grid lg:grid-cols-6 lg:gap-6 lg:space-y-0 lg:border-t lg:border-l-0 lg:pt-10 lg:pl-0"
+          >
+            {steps.map((step, i) => (
+              <Reveal key={step.title} as="li" delay={i * 70} className="relative">
+                <span
+                  aria-hidden="true"
+                  className="absolute top-1.5 -left-8 size-2 -translate-x-1/2 rounded-full bg-accent lg:-top-10 lg:left-0 lg:-translate-x-0 lg:-translate-y-1/2"
+                />
+                <span className="font-serif text-sm text-accent tabular-nums" aria-hidden="true">
+                  {num(i)}
+                </span>
+                <h3 className="mt-2 font-serif text-lg font-semibold text-foreground">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+              </Reveal>
+            ))}
+          </ol>
+          <div className="mt-16 grid gap-8 border-t border-border pt-10 lg:grid-cols-12">
+            <p className="text-lg leading-relaxed text-foreground lg:col-span-7">{t("control.body")}</p>
+            <p className="text-sm leading-relaxed text-muted-foreground lg:col-span-4 lg:col-start-9">
+              {t("control.note")}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Operating model */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <SectionHeading
-          eyebrow={t("operatingModel.eyebrow")}
-          title={t("operatingModel.title")}
-          subtitle={t("operatingModel.subtitle")}
-        />
-
-        {/* Desktop: horizontal flow with a connecting line */}
-        <div className="relative mt-16 hidden lg:grid lg:grid-cols-5 lg:gap-6">
-          <div className="absolute top-5 right-0 left-0 h-px bg-border" aria-hidden="true" />
-          {steps.map((step, i) => (
-            <Reveal key={step.title} delay={i * 100} className="relative px-2 text-center">
-              <div className="relative z-10 mx-auto flex size-10 items-center justify-center rounded-full bg-accent font-serif text-sm font-semibold text-accent-foreground">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <h3 className="mt-4 font-serif text-base font-semibold text-foreground">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {step.description}
-              </p>
-            </Reveal>
-          ))}
-        </div>
-
-        {/* Mobile/tablet: vertical timeline */}
-        <ol className="relative mt-14 space-y-10 border-l border-border pl-8 lg:hidden">
-          {steps.map((step, i) => (
-            <Reveal key={step.title} as="li" delay={i * 80} className="relative">
-              <span
-                className="absolute top-1 -left-[calc(2rem+5px)] flex size-2.5 -translate-x-1/2 items-center justify-center rounded-full bg-accent"
-                aria-hidden="true"
-              />
-              <h3 className="font-serif text-base font-semibold text-foreground">
-                {String(i + 1).padStart(2, "0")}. {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {step.description}
-              </p>
-            </Reveal>
-          ))}
-        </ol>
-      </section>
-
-      {/* Mission */}
+      {/* 6 · Mission */}
       <section className="bg-primary text-primary-foreground">
-        <Reveal className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-            {t("mission.title")}
-          </p>
-          <p className="mt-4 font-serif text-2xl leading-snug text-balance italic md:text-3xl">
-            &ldquo;{t("mission.body")}&rdquo;
-          </p>
-          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-primary-foreground/85">
-            {t("mission.extra")}
+        <Reveal className="mx-auto grid max-w-7xl gap-8 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-12 lg:px-8">
+          <h2 className="text-xs font-semibold tracking-[0.2em] text-accent uppercase lg:col-span-3 lg:pt-3">
+            {t("mission.label")}
+          </h2>
+          <p className="font-serif text-2xl leading-snug text-balance md:text-[2rem] md:leading-[1.3] lg:col-span-9">
+            {t("mission.body")}
           </p>
         </Reveal>
       </section>
 
-      {/* Where we stand: current facts vs. clearly labelled targets */}
-      <StatusMarkers variant="muted" />
-
-      {/* Values */}
+      {/* 7 · Vision + four long-term roles (labelled: not current services) */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <SectionHeading title={t("values.title")} align="center" className="mx-auto" />
-        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {values.map((value, i) => {
-            const Icon = VALUE_ICONS[i % VALUE_ICONS.length];
-            return (
-              <Reveal key={value.title} delay={i * 100} className="text-center">
-                <div className="mx-auto flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
-                  <Icon className="size-5" aria-hidden="true" />
-                </div>
-                <h3 className="mt-4 font-serif text-lg font-semibold text-foreground">
-                  {value.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {value.description}
-                </p>
+        <Reveal className="grid gap-8 lg:grid-cols-12">
+          <h2 className="text-xs font-semibold tracking-[0.2em] text-accent uppercase lg:col-span-3 lg:pt-3">
+            {t("vision.label")}
+          </h2>
+          <p className="font-serif text-2xl leading-snug text-balance text-foreground md:text-[2rem] md:leading-[1.3] lg:col-span-9">
+            {t("vision.body")}
+          </p>
+        </Reveal>
+        <div className="mt-20 grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-3">
+            <h3 className="font-serif text-xl font-semibold text-foreground">{t("vision.rolesTitle")}</h3>
+            <p className="mt-3 inline-block border border-dashed border-foreground/30 px-2.5 py-1 text-xs text-muted-foreground">
+              {t("vision.rolesNote")}
+            </p>
+          </div>
+          <ol className="grid gap-x-10 sm:grid-cols-2 lg:col-span-9">
+            {roles.map((role, i) => (
+              <Reveal key={role.title} as="li" delay={(i % 2) * 80} className="border-t border-border py-7">
+                <span className="font-serif text-sm text-accent tabular-nums" aria-hidden="true">
+                  {num(i)}
+                </span>
+                <h4 className="mt-2 font-serif text-lg font-semibold text-foreground">{role.title}</h4>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{role.description}</p>
               </Reveal>
-            );
-          })}
+            ))}
+          </ol>
         </div>
       </section>
 
-      {/* Ecosystem development (program signal) + long-term direction
-          (vision). Deliberately text-only and restrained: no partner logos,
-          and only participants who have formally agreed are named — see
-          docs/claim-registry.md before adding anything here. */}
-      <section className="border-t border-border bg-background">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-5 lg:px-8">
-          <Reveal className="lg:col-span-3">
-            <SectionHeading eyebrow={t("ecosystem.eyebrow")} title={t("ecosystem.title")} />
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              {t("ecosystem.body")}
-            </p>
+      {/* 8 · Long-term platform direction (vision) + 9 · ecosystem (program
+          signal). Text-only: no partner logos, no network figures. */}
+      <section className="border-t border-border bg-muted/30">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-12 lg:px-8">
+          <Reveal className="lg:col-span-7">
+            <Eyebrow>{t("direction.label")}</Eyebrow>
+            <p className="mt-2 text-xs text-muted-foreground">{t("direction.note")}</p>
+            <h2 className="mt-6 font-serif text-3xl leading-tight font-semibold text-balance text-foreground md:text-4xl">
+              {t("direction.title")}
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">{t("direction.body")}</p>
           </Reveal>
-          <Reveal delay={150} className="rounded-lg border border-dashed border-border bg-muted/30 p-6 lg:col-span-2">
-            <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-              {t("vision.label")}
-            </p>
-            <p className="mt-1 text-xs text-muted-foreground">{t("vision.note")}</p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{t("vision.body")}</p>
+          <Reveal delay={120} className="border-t border-border pt-8 lg:col-span-4 lg:col-start-9 lg:border-t-0 lg:border-l lg:pt-2 lg:pl-10">
+            <Eyebrow>{t("ecosystem.eyebrow")}</Eyebrow>
+            <h2 className="mt-4 font-serif text-xl font-semibold text-foreground">{t("ecosystem.title")}</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{t("ecosystem.body")}</p>
           </Reveal>
         </div>
       </section>
 
-      {/* Leadership section intentionally omitted until approved names,
-          titles and bios exist — an empty "coming soon" block reads worse
-          to a buyer doing due diligence than no block at all. */}
-
-      <CtaSection
-        title={t("cta.title")}
-        subtitle={t("cta.subtitle")}
-        cta={t("cta.cta")}
-        href="/rfq"
-        secondaryCta={t("cta.secondaryCta")}
-        secondaryHref="/products"
-      />
+      {/* Closing CTA — buyers to RFQ, suppliers to Contact */}
+      <section className="bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
+          <h2 className="max-w-3xl font-serif text-3xl leading-tight font-semibold text-balance md:text-4xl">
+            {t("cta.title")}
+          </h2>
+          <p className="mt-5 max-w-2xl text-primary-foreground/85">{t("cta.subtitle")}</p>
+          <div className="mt-12 grid gap-px overflow-hidden border border-primary-foreground/20 bg-primary-foreground/20 md:grid-cols-2">
+            {[
+              { label: t("cta.buyerLabel"), body: t("cta.buyerBody"), cta: t("cta.buyerCta"), href: "/rfq" as const },
+              { label: t("cta.supplierLabel"), body: t("cta.supplierBody"), cta: t("cta.supplierCta"), href: "/contact" as const },
+            ].map((path, i) => (
+              <div key={path.href} className="flex flex-col bg-primary p-6 md:p-8">
+                <h3 className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">{path.label}</h3>
+                <p className="mt-3 flex-1 text-base text-primary-foreground/85">{path.body}</p>
+                <Link
+                  href={path.href}
+                  className={cn(
+                    buttonVariants({ variant: i === 0 ? "default" : "outline", size: "lg" }),
+                    "mt-6 h-11 w-full cursor-pointer justify-between px-5 text-sm sm:w-auto sm:self-start",
+                    i === 0
+                      ? "bg-accent text-accent-foreground hover:bg-accent/90"
+                      : "border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+                  )}
+                >
+                  {path.cta}
+                  <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

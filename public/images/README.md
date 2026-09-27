@@ -11,11 +11,10 @@ orientation, at least 1200px wide recommended.
 | Homepage hero | `public/images/hero.jpg` |
 | (not rendered — see Truthfulness) | `public/images/about.jpg`, `public/images/factory.jpg` |
 | Blog cover — per post, optional | `public/images/blog/<post-slug>.jpg` (slug = the `.mdx` filename in `content/blog/en|vi/`; EN and VI slugs differ) |
-| Product card (homepage + `/products` listing, 4:3 crop) | `public/images/products/<slug>-card.jpg` |
-| Product detail page (4:3 crop) | `public/images/products/<slug>-detail.jpg` |
-| Catalog editorial images (family hero, product-code cards and galleries) | `public/images/catalog/<family>/*.jpg`, wired in `src/lib/catalog.ts` — always shown with an "Editorial image" badge |
+| Family visual (homepage preview, `/products`, family hero, About mosaic — 4:3) | `public/images/catalog/studio/<slug>.jpg` for non-coffee families (text-free studio representation); coffee uses a catalog editorial photo. Wired in `src/lib/family-images.ts` |
+| Catalog editorial images (product-code cards and galleries) | `public/images/catalog/<family>/*.jpg`, wired in `src/lib/catalog.ts` — always shown with an "Editorial image" badge |
 
-Product slugs (used in both `-card` and `-detail` filenames):
+Family slugs (studio filenames):
 
 - `coffee`
 - `coconut`
@@ -23,9 +22,9 @@ Product slugs (used in both `-card` and `-detail` filenames):
 - `fruit`
 - `nuts-spices-botanicals`
 
-Example: the Coffee category needs `public/images/products/coffee-card.jpg`
-(shown on homepage + `/products`) and `public/images/products/coffee-detail.jpg`
-(shown on `/products/coffee`).
+Example: `public/images/catalog/studio/coconut.jpg` appears on the homepage,
+`/products`, `/products/coconut` and the About mosaic, with a visible
+"Studio representation" badge. Until it exists, a typographic panel is shown.
 
 ## Truthfulness
 
@@ -40,12 +39,12 @@ Example: the Coffee category needs `public/images/products/coffee-card.jpg`
 - `catalog/coffee/*.jpg` come from the user-supplied website-edit brief;
   they are editorial references (not packshots of a specific code) and
   their production rights are pending — see `docs/asset-provenance.md`.
-- Product images are concept mock-ups with packaging wording ("100%
-  natural", "organic & natural"). Every render shows a visible "Concept
-  artwork" badge (pass `badge` to `SmartImage`; tests enforce it) and the
-  detail page adds a caption. Alt text alone is not a disclosure. Replacing them
-  with claim-free artwork is a pending founder decision
-  (`docs/claim-registry.md` row 15).
+- The old `products/*-card.jpg` / `*-detail.jpg` mock-ups carried packaging
+  wording ("100% natural", "organic & natural") and are retired — no code
+  may reference them (tests enforce it).
+- Studio family images must be text-free: no logos, seals, badges, claims
+  or retail packaging. They are always labelled "Studio representation"
+  and never presented as inventory, a supplier batch or evidence.
 - Never present a partner's or stock photo as "our factory".
 - Client/partner logos are not wired into this system: they need the
   company's written permission, and naming suppliers/buyers publicly is a

@@ -35,13 +35,59 @@ and roasted coffee beans with ground coffee"), never a product claim.
 the stock-library licence or photographer's permission) covering
 commercial website use, and record the licence reference here.
 
+## Family imagery (added 2026-09-28, branch `feat/phase3-premium-about-studio`)
+
+Single source of truth: `src/lib/family-images.ts` (`FAMILY_IMAGES`),
+rendered only through `src/components/catalog/family-visual.tsx` on the
+homepage preview, `/products`, each family page hero and the About mosaic.
+All renders are 4:3, `next/image`, `object-cover`; the family hero has
+`priority`.
+
+| Family | File | Kind | Visible label | Status |
+|---|---|---|---|---|
+| Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` | Editorial (real photograph, see table above) | "Editorial image" / "Ảnh minh họa" | Rendered. Chosen because it shows green, roasted and ground coffee on an ivory ground. Production rights pending (as above). |
+| Coconut | `public/images/catalog/studio/coconut.jpg` | Studio representation (generated) | "Studio representation" / "Hình ảnh studio minh họa" + note | **Not delivered** — see below |
+| Bird's nest | `public/images/catalog/studio/birds-nest.jpg` | Studio representation (generated) | same | **Not delivered** |
+| Fruit | `public/images/catalog/studio/fruit.jpg` | Studio representation (generated) | same | **Not delivered** |
+| Nuts, spices & botanicals | `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Studio representation (generated) | same | **Not delivered** |
+
+**Studio files not delivered.** The approved generated studio images sit
+in the Codex handoff workspace; GitHub's browser upload bridge failed and
+the files were not available on the build machine, and no Claude Design
+project was reachable from this session. Until a file exists at the path
+above, the family renders a quiet typographic panel (family number, name
+and ranges; `aria-hidden`, because the same text is in the adjacent copy).
+Nothing else changes when a file is added.
+
+**Rules for a studio file** (check visually before committing):
+text-free; no logos, seals, badges, certification marks, claims or retail
+packaging; 4:3 (1600×1200 recommended), JPEG under 400 KB; `alt` in
+`FAMILY_IMAGES` must describe what the image actually shows (the current
+alt text was written from the family taxonomy and must be re-checked
+against the delivered image). Record the generator/tool, prompt or source
+project, date, SHA-256 and licence terms in a new row here.
+
+**How they are presented:** always with the visible "Studio
+representation" badge and, on the family page, the note "A studio
+representation of ingredient formats in this family; product, source and
+final specification are confirmed per request." Never as photographed
+inventory, a supplier batch, certification/traceability evidence or stock
+availability.
+
+**Retired:** `public/images/products/*-card.jpg` / `*-detail.jpg`
+(packaging mock-ups with "100% natural", "organic & natural" and similar
+wording) are no longer referenced by any code
+(`tests/about-imagery.test.ts` blocks the paths). The files remain on disk
+in this branch; delete them before Production so they are not publicly
+reachable by URL.
+
 ## Pre-existing imagery
 
 | File | Status |
 |---|---|
 | `public/images/hero.jpg` | Generated/concept artwork, no text. Rendered (homepage). Licence/provenance confirmation pending (claim registry row 15). |
-| `public/images/products/*-card.jpg`, `*-detail.jpg` | Concept mock-ups with packaging wording ("100% natural", "organic & natural"). Rendered only with a visible "Concept artwork" badge. Replacement with claim-free artwork is a pending owner decision. |
-| `public/images/about.jpg`, `public/images/factory.jpg` | **Not rendered** — the artwork contains unsupported claims. Kept on disk only. |
+| `public/images/products/*-card.jpg`, `*-detail.jpg` | Concept mock-ups with packaging wording ("100% natural", "organic & natural"). **Retired 2026-09-28 — not rendered** (replaced by `FAMILY_IMAGES`). |
+| `public/images/about.jpg`, `public/images/factory.jpg` | **Not rendered** — the artwork contains unsupported claims. Kept on disk only. The About page uses the family mosaic instead. |
 | `public/images/blog/*` | Not in this branch (user-owned, untracked in the original worktree). |
 
 ## Rules
