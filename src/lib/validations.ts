@@ -38,9 +38,10 @@ export const PRODUCT_SLUG_TO_FAMILY: Record<string, ProductFamily> = {
 export const RFQ_INTENTS = ["quote", "sample", "spec-sheet"] as const;
 
 /**
- * Coffee formats a buyer can name as "format of interest". Internal codes,
- * shown only as RFQ choices — listing one does not mean it is available,
- * sample-ready or export-ready (no per-SKU pages in Phase 1).
+ * Whitehorse's confirmed coffee product codes (details in
+ * src/lib/catalog.ts). Offered as RFQ "format of interest" choices and
+ * shown as product-code pages; listing one does not mean it is available,
+ * sample-ready or export-ready — that is confirmed per request.
  */
 export const COFFEE_FORMAT_CODES = [
   "WHCF001", // Green Robusta

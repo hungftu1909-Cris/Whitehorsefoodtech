@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Whitehorse Foodtech",
-    "title": "Whitehorse Foodtech — Vietnamese Coffee Ingredients for B2B Buyers",
-    "description": "Hanoi-based ingredient company coordinating Vietnamese coffee ingredients — green, roasted, instant and cold brew — for trading houses, ingredient distributors and beverage manufacturers. Coconut, bird's nest, fruit and spice ingredients sourced on request."
+    "title": "Whitehorse Foodtech — Premium Vietnamese Agricultural Ingredients for International Buyers",
+    "description": "Whitehorse Foodtech connects suitable Vietnamese farms, cooperatives and processing factories with international distributors, food and beverage manufacturers, foodservice groups and brands — coffee, coconut, bird's nest, fruit, nuts, spices and botanicals, sourced to specification."
   },
   "nav": {
     "home": "Home",
@@ -21,7 +21,7 @@
     "requestQuote": "Request a Quote"
   },
   "footer": {
-    "tagline": "Vietnamese coffee ingredients, coordinated to your specification.",
+    "tagline": "Premium Vietnamese agricultural ingredients, sourced and coordinated to your specification.",
     "addressLabel": "Head Office",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
@@ -51,35 +51,39 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Hanoi, Vietnam · Coffee ingredients for B2B buyers",
-      "title": "Vietnamese coffee ingredients for trading houses, ingredient distributors and beverage manufacturers.",
-      "subtitle": "Whitehorse Foodtech coordinates green, roasted, instant and cold brew coffee from Vietnamese suppliers, matched to your specification and destination market. For each order, we agree sample availability, specifications, documentation requirements and COA scope with you.",
-      "ctaPrimary": "Request a coffee quote",
-      "ctaSecondary": "Explore coffee ingredients"
+      "eyebrow": "Vietnam · Premium agricultural ingredients",
+      "title": "Premium Vietnamese ingredients, connected to the buyers who need them.",
+      "subtitle": "Whitehorse Foodtech links suitable farms, cooperatives and processing factories in Vietnam with international distributors, food and beverage manufacturers, foodservice groups and brands. For each order, we agree sample availability, specifications, documentation requirements and COA scope with you.",
+      "ctaPrimary": "Request a quote",
+      "ctaSecondary": "Explore product families"
     },
     "segments": {
       "eyebrow": "Who we work with",
-      "title": "Coffee first, for three kinds of buyers",
-      "subtitle": "We start with coffee because it's where Vietnam's supply base is deepest. Our process is built around the buyers who need it most.",
+      "title": "Built for international B2B buyers",
+      "subtitle": "We organise the path from purchase requirement to delivery — source selection, samples and specifications, quality documents, commercial alignment and logistics — around the way each buyer works.",
       "items": [
         {
-          "title": "Trading houses",
-          "description": "Green Robusta and Arabica to an agreed screen size, moisture and defect specification, with lot documentation agreed in the contract."
+          "title": "International distributors",
+          "description": "Supplier matching across five ingredient families, with documentation and packaging agreed for each destination market."
         },
         {
-          "title": "Ingredient distributors",
-          "description": "Roasted, ground and instant formats for your customers' applications, with packaging and private-label options discussed per order."
+          "title": "Food & beverage manufacturers",
+          "description": "Ingredients specified to your application, with reference samples and a written specification before commercial production."
         },
         {
-          "title": "Beverage manufacturers",
-          "description": "Instant and cold brew formats developed against your application, with reference samples and a written specification before commercial production."
+          "title": "Foodservice groups",
+          "description": "Formats and pack sizes for kitchens and chains, from roasted coffee to frozen fruit and coconut products, confirmed per order."
+        },
+        {
+          "title": "Brands & private label",
+          "description": "Product development and private-label packaging for retail programmes, from single-serve coffee to bird's nest drinks."
         }
       ]
     },
     "trustStrip": {
       "title": "How we work with buyers",
       "items": [
-        "Coffee-first: green, roasted, instant & cold brew",
+        "Five ingredient families, from coffee to botanicals",
         "Specification agreed in writing before production",
         "Samples and COA arranged per order",
         "Export documents coordinated with logistics partners"
@@ -110,15 +114,15 @@
     },
     "productsPreview": {
       "eyebrow": "What we source",
-      "title": "Coffee first. Other Vietnamese ingredients on request.",
-      "subtitle": "Coffee is our focus category. Coconut, bird's nest, fruit and nut, spice & botanical ingredients are sourced or developed on request, matched to suppliers who fit your specification.",
+      "title": "Five ingredient families, sourced to specification",
+      "subtitle": "Coffee leads with nine confirmed product codes. Coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request, matched to suppliers who fit your specification.",
       "items": [
         {
           "title": "Coffee Ingredients",
-          "tagline": "Green, roasted, instant & cold brew",
-          "description": "Robusta and Arabica from Vietnam's main growing regions, coordinated as green or roasted beans, roasted & ground, instant and cold brew formats. Built around trading houses, ingredient distributors and beverage manufacturers.",
+          "tagline": "Green, roasted, soluble, extract & cold brew",
+          "description": "Green and roasted beans, soluble coffee, extracts and cold brew, with nine confirmed product codes for trading, manufacturing and private label.",
           "cta": "Explore Coffee",
-          "status": "Focus category"
+          "status": "Confirmed product codes"
         },
         {
           "title": "Coconut Ingredients",
@@ -185,9 +189,9 @@
       "paragraphs": [
         "Vietnam is home to a rich, diverse range of agricultural raw materials. But turning a local ingredient into a product that meets the standards of international food and beverage brands takes more than a good source of supply.",
         "The product has to be developed for the right application, controlled against clear specifications, produced consistently, and backed by documentation that matches the requirements of each destination market.",
-        "Whitehorse Foodtech exists to connect those pieces into a single, coordinated process. We bring together sourcing, R&D capability, quality management, the right manufacturing partners and export operations to turn the potential of Vietnamese ingredients into solutions that can be commercialized internationally.",
+        "Whitehorse Foodtech is a premium agricultural ingredient sourcing and connection platform. We link suitable farms, cooperatives and processing factories in Vietnam with international distributors, food and beverage manufacturers, foodservice groups and brands, and we organise the path in between: purchase requirements, source selection, samples and specifications, quality documents, commercial alignment and delivery.",
         "Rather than starting from a fixed product, we start from what the customer actually needs: what application the product serves, what standards it has to meet, how it should be packaged, and what's required to enter the target market.",
-        "Whitehorse Foodtech was registered in Hanoi in August 2026. We are starting with coffee, and sourcing or developing other ingredients on request while our supplier network goes through qualification."
+        "Whitehorse Foodtech was registered in Hanoi in August 2026. Coffee is the family with confirmed product codes today; coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request as suppliers complete qualification."
       ]
     },
     "valueCreation": {
@@ -231,27 +235,27 @@
       "extra": "Whitehorse Foodtech works to create durable value across the whole supply chain: raising the value of Vietnamese raw materials, helping manufacturing partners reach higher standards, and giving international customers a single, transparent point of contact for flexible, efficient product development."
     },
     "status": {
-      "title": "Where Whitehorse stands today",
+      "title": "Where Whitehorse stands, and where it is heading",
       "items": [
         {
           "tag": "Current",
-          "value": "2026",
-          "label": "Registered in Hanoi as a Vietnamese joint stock company"
+          "value": "10+",
+          "label": "Markets with active buyer relationships and commercial conversations"
         },
         {
-          "tag": "Current",
-          "value": "20+",
-          "label": "Supplier organisations in our working network, across engagement and assessment stages — not all are qualified or export-ready"
-        },
-        {
-          "tag": "Phase 1 target",
+          "tag": "2026 objective",
           "value": "30–50",
-          "label": "Qualified suppliers, each qualified for a specific product, site and market"
+          "label": "Export-qualified suppliers, assessed and ranked against a rigorous Whitehorse framework aligned with international buyer requirements"
         },
         {
-          "tag": "Current",
-          "value": "Coffee",
-          "label": "Our focus category; other ingredients are sourced or developed on request"
+          "tag": "Three-year vision",
+          "value": "3,000+",
+          "label": "Cooperatives and source groups within the network's visibility and relationship reach"
+        },
+        {
+          "tag": "Three-year vision",
+          "value": "10,000+",
+          "label": "Active buyers within the network's relationship reach"
         }
       ]
     },
@@ -272,7 +276,7 @@
     "vision": {
       "label": "Long-term direction",
       "note": "Vision — not a current service",
-      "body": "Over time, we want to help build an open platform for Vietnamese agriculture, where buyers can check supplier qualification, product specifications and lot information more easily."
+      "body": "Over time, we intend to add direct quality-assurance and quality-control capability at key sourcing points, and to help build an open platform for Vietnamese agriculture where buyers can check supplier qualification, product specifications and lot information more easily."
     },
     "cta": {
       "title": "Looking for an ingredient solution from Vietnam?",
@@ -284,8 +288,8 @@
   "products": {
     "hero": {
       "eyebrow": "Our products",
-      "title": "Coffee first. Other Vietnamese ingredients on request.",
-      "subtitle": "Coffee is our focus category. Coconut, bird's nest, fruit and nut, spice & botanical ingredients are sourced or developed on request. Specifications on this site are indicative until confirmed in your contract and certificate of analysis (COA)."
+      "title": "Five ingredient families. One sourcing process.",
+      "subtitle": "Coffee has nine confirmed product codes. Coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request. Final specification, test method, documentation and COA scope are agreed per order."
     },
     "artworkAlt": "illustrative concept artwork",
     "artworkBadge": "Concept artwork",
@@ -294,11 +298,18 @@
       "coffee": {
         "name": "Coffee Ingredients",
         "slug": "coffee",
-        "tagline": "Green, roasted, instant & cold brew",
-        "status": "Focus category",
-        "description": "Coffee ingredients from Vietnam's main growing regions, coordinated for trading houses, ingredient distributors and beverage manufacturers. Formats we can discuss include green and roasted beans, roasted & ground coffee, instant coffee (spray-dried, agglomerated or freeze-dried) and cold brew, in bulk or private-label packaging. Availability depends on supplier qualification for your specification and market.",
+        "tagline": "Green, roasted, soluble, extract & cold brew",
+        "status": "Confirmed product codes",
+        "description": "Coffee ingredients from Vietnam's main growing regions for food and beverage applications — green and roasted beans, soluble coffee, extracts and cold brew. Bulk, private-label and single-serve formats are discussed per project, with specification and packaging agreed to each product and market.",
         "applicationsTitle": "Common applications",
-        "applications": ["Green coffee trading", "Instant & RTD coffee manufacturing", "Cold brew & canned coffee brands", "Private-label retail blends", "Foodservice"]
+        "applications": [
+          "Roasters",
+          "Green coffee trading",
+          "Instant & RTD coffee manufacturing",
+          "Cold brew & canned coffee brands",
+          "Private-label retail blends",
+          "Foodservice"
+        ]
       },
       "coconut": {
         "name": "Coconut Ingredients",
@@ -501,24 +512,30 @@
   },
   "clients": {
     "hero": {
-      "eyebrow": "Supplier & origin network",
-      "title": "Supplier & origin network",
-      "subtitle": "Whitehorse works with Vietnamese supplier organisations at different stages of engagement and assessment, and is building buyer relationships in a small number of focus export markets."
+      "eyebrow": "Network",
+      "title": "A network on both sides of the trade",
+      "subtitle": "Whitehorse works with Vietnamese supplier organisations — cooperatives, processors and growing groups — at different stages of engagement and assessment, and with buyers across more than ten markets."
     },
-    "regionsTitle": "Focus export markets",
-    "regions": "North America, the European Union, East Asia and the Middle East are established destinations for Vietnamese coffee and agricultural ingredients. These are the markets Whitehorse Foodtech is prioritising as it builds buyer relationships.",
+    "regionsTitle": "Markets with active buyer relationships and conversations",
+    "regions": "Russia, Japan, Qatar, Israel, South Korea, China, the United States, Canada, Australia, Germany, Italy, France, Belgium and the Netherlands.",
     "network": {
       "current": {
         "tag": "Current",
-        "stat": "20+",
-        "statLabel": "Supplier organisations in our working network",
-        "description": "Across engagement and assessment stages. Not all of them are qualified, active or export-ready: qualification is specific to each product, site and market, and we tell buyers which stage a proposed supplier is at."
+        "stat": "10+",
+        "statLabel": "Markets with active buyer relationships and conversations",
+        "description": "Relationships and commercial conversations with buyers across Asia, Europe, the Middle East, North America and Oceania."
       },
-      "target": {
-        "tag": "Phase 1 target",
+      "objective": {
+        "tag": "2026 objective",
         "stat": "30–50",
-        "statLabel": "Qualified suppliers",
-        "description": "Our Phase 1 goal is a qualified core of 30–50 suppliers. This page is updated as suppliers complete qualification."
+        "statLabel": "Export-qualified suppliers",
+        "description": "Each assessed and ranked against a rigorous Whitehorse framework aligned with international buyer requirements. Qualification is specific to product, site and market."
+      },
+      "vision": {
+        "tag": "Three-year vision",
+        "stat": "3,000+ · 10,000+",
+        "statLabel": "Cooperatives and source groups · active buyers",
+        "description": "The visibility and relationship reach we are building the network towards over the next three years."
       }
     },
     "cta": {

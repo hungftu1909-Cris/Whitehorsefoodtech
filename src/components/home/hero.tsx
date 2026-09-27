@@ -36,13 +36,13 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href={{ pathname: "/rfq", query: { product: "coffee", intent: "quote" } }}
+              href={{ pathname: "/rfq", query: { intent: "quote" } }}
               className={cn(buttonVariants({ size: "lg" }), "cursor-pointer px-6")}
             >
               {t("ctaPrimary")}
             </Link>
             <Link
-              href="/products/coffee"
+              href="/products"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "cursor-pointer px-6"

@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Whitehorse Foodtech",
-    "title": "Whitehorse Foodtech — Nguyên liệu Cà phê Việt Nam cho khách hàng B2B",
-    "description": "Doanh nghiệp nguyên liệu tại Hà Nội, điều phối nguyên liệu cà phê Việt Nam — cà phê nhân, rang, hòa tan và cold brew — cho nhà kinh doanh thương mại, nhà phân phối nguyên liệu và nhà sản xuất đồ uống. Nguyên liệu dừa, yến sào, trái cây và gia vị được tìm nguồn theo yêu cầu."
+    "title": "Whitehorse Foodtech — Nguyên liệu nông nghiệp cao cấp Việt Nam cho khách hàng quốc tế",
+    "description": "Whitehorse Foodtech kết nối nông hộ, hợp tác xã và nhà máy chế biến phù hợp tại Việt Nam với các nhà phân phối, nhà sản xuất thực phẩm và đồ uống, hệ thống foodservice và thương hiệu quốc tế — cà phê, dừa, yến sào, trái cây, hạt, gia vị và thảo mộc, tìm nguồn theo thông số."
   },
   "nav": {
     "home": "Trang chủ",
@@ -21,7 +21,7 @@
     "requestQuote": "Yêu cầu báo giá"
   },
   "footer": {
-    "tagline": "Nguyên liệu cà phê Việt Nam, điều phối đúng thông số bạn cần.",
+    "tagline": "Nguyên liệu nông nghiệp cao cấp Việt Nam, tìm nguồn và điều phối theo thông số của bạn.",
     "addressLabel": "Trụ sở chính",
     "phoneLabel": "Điện thoại",
     "emailLabel": "Email",
@@ -51,35 +51,39 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Hà Nội, Việt Nam · Nguyên liệu cà phê cho khách hàng B2B",
-      "title": "Nguyên liệu cà phê Việt Nam cho nhà kinh doanh thương mại, nhà phân phối nguyên liệu và nhà sản xuất đồ uống.",
-      "subtitle": "Whitehorse Foodtech điều phối cà phê nhân, cà phê rang, cà phê hòa tan và cold brew từ các nhà cung cấp Việt Nam, phù hợp với thông số và thị trường đích của bạn. Với từng đơn hàng, chúng tôi thống nhất cùng bạn về khả năng cung cấp mẫu, thông số kỹ thuật, yêu cầu chứng từ và phạm vi COA.",
-      "ctaPrimary": "Yêu cầu báo giá cà phê",
-      "ctaSecondary": "Khám phá nguyên liệu cà phê"
+      "eyebrow": "Việt Nam · Nguyên liệu nông nghiệp cao cấp",
+      "title": "Nguyên liệu nông nghiệp cao cấp của Việt Nam, kết nối với đúng người mua.",
+      "subtitle": "Whitehorse Foodtech kết nối nông hộ, hợp tác xã và nhà máy chế biến phù hợp tại Việt Nam với các nhà phân phối, nhà sản xuất thực phẩm và đồ uống, hệ thống foodservice và thương hiệu quốc tế. Với từng đơn hàng, chúng tôi thống nhất cùng bạn về khả năng cung cấp mẫu, thông số kỹ thuật, yêu cầu chứng từ và phạm vi COA.",
+      "ctaPrimary": "Yêu cầu báo giá",
+      "ctaSecondary": "Khám phá nhóm sản phẩm"
     },
     "segments": {
-      "eyebrow": "Chúng tôi phục vụ ai",
-      "title": "Ưu tiên cà phê, cho ba nhóm khách hàng",
-      "subtitle": "Chúng tôi bắt đầu từ cà phê vì đây là ngành hàng có nền tảng cung ứng sâu nhất của Việt Nam. Quy trình của chúng tôi được xây dựng quanh những khách hàng cần nó nhất.",
+      "eyebrow": "Chúng tôi làm việc với ai",
+      "title": "Dành cho khách hàng B2B quốc tế",
+      "subtitle": "Chúng tôi tổ chức quy trình từ yêu cầu mua hàng đến giao hàng — lựa chọn nguồn cung, mẫu và thông số, tài liệu chất lượng, phối hợp thương mại và logistics — theo cách mỗi khách hàng làm việc.",
       "items": [
         {
-          "title": "Nhà kinh doanh thương mại",
-          "description": "Robusta và Arabica nhân xanh theo cỡ sàng, độ ẩm và tỷ lệ lỗi đã thống nhất, với hồ sơ lô hàng được quy định trong hợp đồng."
+          "title": "Nhà phân phối quốc tế",
+          "description": "Chọn nhà cung cấp trên năm nhóm nguyên liệu, với chứng từ và bao bì được thống nhất theo từng thị trường đích."
         },
         {
-          "title": "Nhà phân phối nguyên liệu",
-          "description": "Cà phê rang, rang xay và hòa tan cho ứng dụng của khách hàng bạn, với phương án đóng gói và nhãn hàng riêng được trao đổi theo từng đơn."
+          "title": "Nhà sản xuất thực phẩm & đồ uống",
+          "description": "Nguyên liệu theo đúng ứng dụng của bạn, có mẫu chuẩn và thông số kỹ thuật bằng văn bản trước khi sản xuất thương mại."
         },
         {
-          "title": "Nhà sản xuất đồ uống",
-          "description": "Cà phê hòa tan và cold brew phát triển theo ứng dụng của bạn, có mẫu chuẩn và thông số kỹ thuật bằng văn bản trước khi sản xuất thương mại."
+          "title": "Hệ thống foodservice",
+          "description": "Dạng sản phẩm và quy cách đóng gói cho bếp và chuỗi, từ cà phê rang đến trái cây đông lạnh và sản phẩm dừa, xác nhận theo từng đơn."
+        },
+        {
+          "title": "Thương hiệu & nhãn hàng riêng",
+          "description": "Phát triển sản phẩm và bao bì nhãn hàng riêng cho chương trình bán lẻ, từ cà phê single-serve đến nước yến."
         }
       ]
     },
     "trustStrip": {
       "title": "Cách chúng tôi làm việc với khách hàng",
       "items": [
-        "Ưu tiên cà phê: nhân, rang, hòa tan & cold brew",
+        "Năm nhóm nguyên liệu, từ cà phê đến thảo mộc",
         "Thông số được thống nhất bằng văn bản trước khi sản xuất",
         "Mẫu và COA được sắp xếp theo từng đơn hàng",
         "Chứng từ xuất khẩu phối hợp cùng đối tác logistics"
@@ -110,15 +114,15 @@
     },
     "productsPreview": {
       "eyebrow": "Nguyên liệu chúng tôi tìm nguồn",
-      "title": "Ưu tiên cà phê. Các nguyên liệu Việt Nam khác theo yêu cầu.",
-      "subtitle": "Cà phê là danh mục trọng tâm của chúng tôi. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu, với nhà cung cấp phù hợp thông số của bạn.",
+      "title": "Năm nhóm nguyên liệu, tìm nguồn theo thông số",
+      "subtitle": "Cà phê dẫn đầu với chín mã sản phẩm đã xác định. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu, với nhà cung cấp phù hợp thông số của bạn.",
       "items": [
         {
           "title": "Nguyên liệu Cà phê",
-          "tagline": "Nhân, rang, hòa tan & cold brew",
-          "description": "Robusta và Arabica từ các vùng trồng chính của Việt Nam, điều phối dưới dạng cà phê nhân hoặc rang, rang xay, hòa tan và cold brew. Xây dựng cho nhà kinh doanh thương mại, nhà phân phối nguyên liệu và nhà sản xuất đồ uống.",
+          "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew",
+          "description": "Cà phê nhân và rang, cà phê hòa tan, chiết xuất và cold brew, với chín mã sản phẩm đã xác định cho thương mại, sản xuất và nhãn hàng riêng.",
           "cta": "Khám phá Cà phê",
-          "status": "Danh mục trọng tâm"
+          "status": "Mã sản phẩm đã xác định"
         },
         {
           "title": "Nguyên liệu Dừa",
@@ -185,9 +189,9 @@
       "paragraphs": [
         "Việt Nam sở hữu nguồn nguyên liệu nông nghiệp phong phú, đa dạng và giàu bản sắc. Tuy nhiên, để một nguyên liệu địa phương có thể trở thành sản phẩm phù hợp với các thương hiệu thực phẩm và đồ uống quốc tế, cần nhiều hơn một nguồn cung tốt.",
         "Sản phẩm phải được phát triển theo đúng ứng dụng, kiểm soát bằng tiêu chuẩn rõ ràng, sản xuất ổn định và đi kèm hệ thống tài liệu phù hợp với từng thị trường.",
-        "Whitehorse Foodtech được xây dựng để kết nối các mắt xích đó trong một quy trình thống nhất. Chúng tôi phối hợp nguồn nguyên liệu, năng lực nghiên cứu và phát triển, quản trị chất lượng, các đối tác sản xuất phù hợp và hoạt động xuất khẩu để biến tiềm năng của nguyên liệu Việt Nam thành những giải pháp có thể thương mại hóa trên thị trường quốc tế.",
+        "Whitehorse Foodtech là nền tảng kết nối nguồn nguyên liệu nông nghiệp cao cấp của Việt Nam — từ nông hộ, hợp tác xã và nhà máy chế biến phù hợp — với các nhà phân phối, nhà sản xuất thực phẩm và đồ uống, hệ thống foodservice và thương hiệu tại thị trường quốc tế. Chúng tôi tổ chức quy trình từ yêu cầu mua hàng, lựa chọn nguồn cung, mẫu và thông số, tài liệu chất lượng đến phối hợp thương mại và giao hàng.",
         "Thay vì chỉ cung cấp một sản phẩm có sẵn, chúng tôi bắt đầu từ nhu cầu thực tế của khách hàng: sản phẩm được sử dụng trong ứng dụng nào, cần đạt tiêu chuẩn gì, quy cách đóng gói ra sao và phải đáp ứng những yêu cầu nào tại thị trường đích.",
-        "Whitehorse Foodtech được đăng ký thành lập tại Hà Nội vào tháng 8 năm 2026. Chúng tôi bắt đầu từ cà phê, đồng thời tìm nguồn hoặc phát triển các nguyên liệu khác theo yêu cầu trong khi mạng lưới nhà cung cấp đang được thẩm định."
+        "Whitehorse Foodtech được đăng ký thành lập tại Hà Nội vào tháng 8 năm 2026. Hiện nay cà phê là nhóm có mã sản phẩm đã xác định; nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu khi các nhà cung cấp hoàn tất thẩm định."
       ]
     },
     "valueCreation": {
@@ -231,27 +235,27 @@
       "extra": "Whitehorse Foodtech hướng tới việc tạo ra giá trị bền vững cho toàn bộ chuỗi cung ứng: nâng cao giá trị của nguyên liệu Việt Nam, giúp các đối tác sản xuất tiếp cận những tiêu chuẩn cao hơn và mang đến cho khách hàng quốc tế một đầu mối phát triển sản phẩm minh bạch, linh hoạt và hiệu quả."
     },
     "status": {
-      "title": "Whitehorse hiện đang ở đâu",
+      "title": "Whitehorse hôm nay và định hướng phía trước",
       "items": [
         {
           "tag": "Hiện tại",
-          "value": "2026",
-          "label": "Đăng ký tại Hà Nội, là công ty cổ phần Việt Nam"
+          "value": "10+",
+          "label": "Thị trường có quan hệ khách hàng và trao đổi thương mại đang diễn ra"
         },
         {
-          "tag": "Hiện tại",
-          "value": "20+",
-          "label": "Tổ chức cung ứng trong mạng lưới đang làm việc, ở các giai đoạn tiếp cận và đánh giá — chưa phải tất cả đều đạt chuẩn hoặc sẵn sàng xuất khẩu"
-        },
-        {
-          "tag": "Mục tiêu giai đoạn 1",
+          "tag": "Mục tiêu 2026",
           "value": "30–50",
-          "label": "Nhà cung cấp đạt chuẩn, mỗi nhà cung cấp được thẩm định cho một sản phẩm, cơ sở và thị trường cụ thể"
+          "label": "Nhà cung cấp đạt chuẩn xuất khẩu, được đánh giá và xếp hạng theo bộ tiêu chí chặt chẽ của Whitehorse, phù hợp yêu cầu của khách hàng quốc tế"
         },
         {
-          "tag": "Hiện tại",
-          "value": "Cà phê",
-          "label": "Danh mục trọng tâm; các nguyên liệu khác được tìm nguồn hoặc phát triển theo yêu cầu"
+          "tag": "Tầm nhìn 3 năm",
+          "value": "3.000+",
+          "label": "Hợp tác xã và nhóm nguồn cung trong phạm vi kết nối của mạng lưới"
+        },
+        {
+          "tag": "Tầm nhìn 3 năm",
+          "value": "10.000+",
+          "label": "Khách hàng đang hoạt động trong phạm vi quan hệ của mạng lưới"
         }
       ]
     },
@@ -272,7 +276,7 @@
     "vision": {
       "label": "Định hướng dài hạn",
       "note": "Tầm nhìn — chưa phải dịch vụ hiện có",
-      "body": "Về lâu dài, chúng tôi mong muốn góp phần xây dựng một nền tảng mở cho nông nghiệp Việt Nam, nơi người mua có thể kiểm tra việc thẩm định nhà cung cấp, thông số sản phẩm và thông tin lô hàng dễ dàng hơn."
+      "body": "Về lâu dài, chúng tôi hướng tới xây dựng năng lực đảm bảo và kiểm soát chất lượng trực tiếp tại các điểm nguồn cung then chốt, đồng thời góp phần xây dựng một nền tảng mở cho nông nghiệp Việt Nam, nơi người mua có thể kiểm tra việc thẩm định nhà cung cấp, thông số sản phẩm và thông tin lô hàng dễ dàng hơn."
     },
     "cta": {
       "title": "Đang tìm kiếm một giải pháp nguyên liệu từ Việt Nam?",
@@ -284,8 +288,8 @@
   "products": {
     "hero": {
       "eyebrow": "Sản phẩm của chúng tôi",
-      "title": "Ưu tiên cà phê. Các nguyên liệu Việt Nam khác theo yêu cầu.",
-      "subtitle": "Cà phê là danh mục trọng tâm của chúng tôi. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu. Thông số trên website chỉ mang tính tham khảo cho đến khi được xác nhận trong hợp đồng và phiếu kết quả phân tích (COA)."
+      "title": "Năm nhóm nguyên liệu. Một quy trình tìm nguồn.",
+      "subtitle": "Cà phê có chín mã sản phẩm đã xác định. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu. Thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng."
     },
     "artworkAlt": "hình minh họa ý tưởng",
     "artworkBadge": "Hình minh họa ý tưởng",
@@ -294,11 +298,18 @@
       "coffee": {
         "name": "Nguyên liệu Cà phê",
         "slug": "coffee",
-        "tagline": "Nhân, rang, hòa tan & cold brew",
-        "status": "Danh mục trọng tâm",
-        "description": "Nguyên liệu cà phê từ các vùng trồng chính của Việt Nam, điều phối cho nhà kinh doanh thương mại, nhà phân phối nguyên liệu và nhà sản xuất đồ uống. Các định dạng có thể trao đổi gồm cà phê nhân và cà phê rang, cà phê rang xay, cà phê hòa tan (sấy phun, tạo hạt hoặc sấy thăng hoa) và cold brew, đóng gói số lượng lớn hoặc nhãn hàng riêng. Khả năng cung ứng phụ thuộc vào việc thẩm định nhà cung cấp theo thông số và thị trường của bạn.",
+        "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew",
+        "status": "Mã sản phẩm đã xác định",
+        "description": "Nguyên liệu cà phê từ các vùng trồng chính của Việt Nam cho ngành thực phẩm và đồ uống — cà phê nhân và rang, cà phê hòa tan, chiết xuất và cold brew. Hàng rời, nhãn hàng riêng và dạng single-serve được trao đổi theo từng dự án, với thông số và bao bì thống nhất theo từng sản phẩm và thị trường.",
         "applicationsTitle": "Ứng dụng phổ biến",
-        "applications": ["Kinh doanh cà phê nhân", "Sản xuất cà phê hòa tan & RTD", "Thương hiệu cold brew & cà phê lon", "Pha trộn nhãn hàng riêng", "Dịch vụ ăn uống"]
+        "applications": [
+          "Nhà rang xay",
+          "Kinh doanh cà phê nhân",
+          "Sản xuất cà phê hòa tan & RTD",
+          "Thương hiệu cold brew & cà phê lon",
+          "Pha trộn nhãn hàng riêng",
+          "Dịch vụ ăn uống"
+        ]
       },
       "coconut": {
         "name": "Nguyên liệu Dừa",
@@ -501,24 +512,30 @@
   },
   "clients": {
     "hero": {
-      "eyebrow": "Mạng lưới nhà cung cấp & vùng nguyên liệu",
-      "title": "Mạng lưới nhà cung cấp & vùng nguyên liệu",
-      "subtitle": "Whitehorse làm việc với các tổ chức cung ứng Việt Nam ở những giai đoạn tiếp cận và đánh giá khác nhau, đồng thời đang xây dựng quan hệ với khách hàng tại một số thị trường xuất khẩu trọng tâm."
+      "eyebrow": "Mạng lưới",
+      "title": "Mạng lưới ở cả hai phía của giao thương",
+      "subtitle": "Whitehorse làm việc với các tổ chức cung ứng Việt Nam — hợp tác xã, cơ sở chế biến và nhóm vùng trồng — ở những giai đoạn tiếp cận và đánh giá khác nhau, cùng khách hàng tại hơn mười thị trường."
     },
-    "regionsTitle": "Thị trường xuất khẩu trọng tâm",
-    "regions": "Bắc Mỹ, Liên minh châu Âu, Đông Á và Trung Đông là những điểm đến quen thuộc của cà phê và nguyên liệu nông sản Việt Nam. Đây là những thị trường Whitehorse Foodtech ưu tiên phát triển quan hệ khách hàng.",
+    "regionsTitle": "Thị trường có quan hệ khách hàng và trao đổi thương mại",
+    "regions": "Nga, Nhật Bản, Qatar, Israel, Hàn Quốc, Trung Quốc, Hoa Kỳ, Canada, Úc, Đức, Ý, Pháp, Bỉ và Hà Lan.",
     "network": {
       "current": {
         "tag": "Hiện tại",
-        "stat": "20+",
-        "statLabel": "Tổ chức cung ứng trong mạng lưới đang làm việc",
-        "description": "Ở các giai đoạn tiếp cận và đánh giá. Chưa phải tất cả đều đạt chuẩn, đang hoạt động hay sẵn sàng xuất khẩu: việc thẩm định gắn với từng sản phẩm, cơ sở và thị trường, và chúng tôi cho khách hàng biết nhà cung cấp được đề xuất đang ở giai đoạn nào."
+        "stat": "10+",
+        "statLabel": "Thị trường có quan hệ khách hàng và trao đổi thương mại",
+        "description": "Quan hệ và trao đổi thương mại với khách hàng tại châu Á, châu Âu, Trung Đông, Bắc Mỹ và châu Đại Dương."
       },
-      "target": {
-        "tag": "Mục tiêu giai đoạn 1",
+      "objective": {
+        "tag": "Mục tiêu 2026",
         "stat": "30–50",
-        "statLabel": "Nhà cung cấp đạt chuẩn",
-        "description": "Mục tiêu giai đoạn 1 của chúng tôi là một nhóm nòng cốt 30–50 nhà cung cấp đạt chuẩn. Trang này được cập nhật khi các nhà cung cấp hoàn tất thẩm định."
+        "statLabel": "Nhà cung cấp đạt chuẩn xuất khẩu",
+        "description": "Mỗi nhà cung cấp được đánh giá và xếp hạng theo bộ tiêu chí chặt chẽ của Whitehorse, phù hợp yêu cầu của khách hàng quốc tế. Việc thẩm định gắn với từng sản phẩm, cơ sở và thị trường."
+      },
+      "vision": {
+        "tag": "Tầm nhìn 3 năm",
+        "stat": "3.000+ · 10.000+",
+        "statLabel": "Hợp tác xã và nhóm nguồn cung · khách hàng đang hoạt động",
+        "description": "Phạm vi kết nối và quan hệ mà chúng tôi đang xây dựng mạng lưới hướng tới trong ba năm tới."
       }
     },
     "cta": {

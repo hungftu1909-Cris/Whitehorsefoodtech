@@ -85,23 +85,50 @@ test("the scanner still catches the claims Phase 1 removed", () => {
   assert.ok(FORBIDDEN_CLAIMS.length >= 10);
 });
 
-test("status markers keep facts and targets distinguishable", () => {
-  for (const [locale, catalog, targetWord] of [
-    ["en", en, "target"],
-    ["vi", vi, "Mục tiêu"],
-  ] as const) {
-    const items = get(catalog as Json, "about.status.items") as { tag: string; value: string }[];
-    const target = items.find((i) => i.value === "30–50");
-    assert.ok(target, `${locale}: 30–50 target missing`);
-    assert.match(target.tag, new RegExp(targetWord, "i"), `${locale}: 30–50 must be tagged as a target`);
-    const network = items.find((i) => i.value === "20+");
-    assert.ok(network, `${locale}: 20+ network marker missing`);
-    assert.doesNotMatch(network.tag, new RegExp(targetWord, "i"), `${locale}: 20+ is current, not a target`);
+test("proof markers separate current fact, dated objective and vision", () => {
+  const TAGS = {
+    en: { current: /^Current$/, objective: /^2026 objective$/, vision: /^Three-year vision$/ },
+    vi: { current: /^Hiện tại$/, objective: /^Mục tiêu 2026$/, vision: /^Tầm nhìn 3 năm$/ },
+  } as const;
+  for (const [locale, catalog] of [["en", en], ["vi", vi]] as const) {
+    const tags = TAGS[locale];
+    const items = get(catalog as Json, "about.status.items") as { tag: string; value: string; label: string }[];
+    const byValue = (v: string) => items.find((i) => i.value.replace(".", ",") === v);
+    assert.match(byValue("10+")!.tag, tags.current, `${locale}: 10+ markets is the current fact`);
+    assert.match(byValue("30–50")!.tag, tags.objective, `${locale}: 30–50 is the 2026 objective`);
+    assert.match(byValue("3,000+")!.tag, tags.vision, `${locale}: 3,000+ is vision`);
+    assert.match(byValue("10,000+")!.tag, tags.vision, `${locale}: 10,000+ is vision`);
+    assert.equal(items.find((i) => i.value === "20+"), undefined, `${locale}: no 20+ headline`);
     for (const item of items) assert.notEqual(item.value.trim(), "0", `${locale}: zero-value marker`);
+    // The Network page repeats the same three with the same tags.
+    assert.match(String(get(catalog as Json, "clients.network.current.tag")), tags.current);
+    assert.match(String(get(catalog as Json, "clients.network.objective.tag")), tags.objective);
+    assert.match(String(get(catalog as Json, "clients.network.vision.tag")), tags.vision);
   }
-  // The network page repeats the same pair with the same tagging.
-  assert.match(String(get(en as Json, "clients.network.target.tag")), /target/i);
-  assert.match(String(get(vi as Json, "clients.network.target.tag")), /Mục tiêu/);
+  // Vision/objective figures never appear outside their tagged items.
+  for (const catalog of [en, vi]) {
+    for (const [key, value] of leafValues(catalog as Json)) {
+      if (/(3[.,]000|10[.,]000)\+|30–50/.test(value)) {
+        assert.match(key, /^(about\.status\.items\[\d\]\.value|clients\.network\.(objective|vision)\.(stat|description))$/, `untagged figure at ${key}: ${value}`);
+      }
+    }
+  }
+});
+
+test("markets are described as relationships, never as shipments or service", () => {
+  for (const catalog of [en, vi]) {
+    const all = leafValues(catalog as Json).map(([, v]) => v).join("\n");
+    assert.doesNotMatch(all, /countries (we )?serve|exported to|export track record|recurring buyers|highest standards|\bWB(IS|OS)\b/i);
+  }
+  assert.match(String(get(en as Json, "clients.regions")), /Russia, Japan, Qatar, Israel, South Korea, China, the United States, Canada, Australia, Germany, Italy, France, Belgium and the Netherlands/);
+});
+
+test("positioning is the five-family platform, not coffee-only", () => {
+  for (const catalog of [en, vi]) {
+    const heroes = [get(catalog as Json, "meta.title"), get(catalog as Json, "meta.description"), get(catalog as Json, "home.hero.title")].join(" ");
+    assert.doesNotMatch(heroes, /coffee ingredients for|nguyên liệu cà phê việt nam cho/i);
+  }
+  assert.match(String(get(en as Json, "about.origin.paragraphs.2")), /premium agricultural ingredient sourcing and connection platform/);
 });
 
 test("public concepts use the Phase 1 names", () => {
@@ -150,6 +177,8 @@ test("value-prop and hero copy is confident, not apologetic", () => {
 
 test("vision and ecosystem copy stays labelled and logo-free", () => {
   assert.match(String(get(en as Json, "about.vision.note")), /not a current service/i);
+  // Direct QA/QC is strategic direction, only inside the labelled vision.
+  assert.match(String(get(en as Json, "about.vision.body")), /direct quality-assurance and quality-control capability/);
   assert.match(String(get(vi as Json, "about.vision.note")), /chưa phải dịch vụ/i);
   for (const catalog of [en, vi]) {
     const body = String(get(catalog as Json, "about.ecosystem.body"));

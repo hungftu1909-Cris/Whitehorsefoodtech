@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Globe2, Users, Target } from "lucide-react";
+import { Globe2, Users, Target, Telescope } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { Reveal } from "@/components/ui/reveal";
@@ -43,12 +43,13 @@ export default async function ClientsPage({
         {/* Aggregate figures, not named suppliers/buyers on purpose —
             showing specific factory or trading-partner names here would let
             either side identify and approach the other directly. The current
-            figure and the target are always shown side by side with their
-            tags so a target is never read as a track record; both are
+            fact, the dated objective and the three-year vision are always
+            shown side by side with their tags so an objective or vision is
+            never read as a track record; all three are
             recorded in docs/claim-registry.md. */}
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {(["current", "target"] as const).map((group, i) => {
-            const Icon = group === "current" ? Users : Target;
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {(["current", "objective", "vision"] as const).map((group, i) => {
+            const Icon = { current: Users, objective: Target, vision: Telescope }[group];
             return (
               <Reveal key={group} delay={i * 100} className="rounded-lg border border-border bg-card p-8">
                 <div className="flex items-center justify-between gap-3">

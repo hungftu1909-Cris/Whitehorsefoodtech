@@ -3,7 +3,7 @@ import { CATALOG_RANGES } from "./catalog.ts";
 
 // Internal notification emails for the sales inbox — English labels
 // regardless of the buyer's site language (the buyer's locale is included
-// as a field). Field order is fixed so a future CRM/WBIS import can rely
+// as a field). Field order is fixed so a future CRM import can rely
 // on it.
 
 const PRODUCT_LABEL: Record<RfqInput["product"], string> = {

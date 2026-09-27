@@ -20,7 +20,15 @@ import path from "node:path";
 export const FORBIDDEN_CLAIMS = [
   { id: "volume-100k", pattern: /\b100\s?K\b/i, reason: "Unsupported export volume (100K+ t/yr)." },
   { id: "tons-exported", pattern: /metric tons? exported|tấn xuất khẩu mỗi năm/i, reason: "Unsupported export volume." },
-  { id: "regions-3000", pattern: /\b3[.,]000\s?\+/, reason: "Unsupported partner-region count." },
+  // 3,000+ / 10,000+ are permitted only as the tagged three-year VISION
+  // (claim registry rows 18–19; tests/messages.test.ts enforces the tag).
+  // The retired "3,000+ partner growing regions" wording stays blocked.
+  { id: "regions-3000", pattern: /\b3[.,]000\s?\+\s*(partner|growing|vùng)/i, reason: "Retired partner-region claim; 3,000+ may only appear as the tagged three-year vision." },
+  { id: "supplier-20", pattern: /\b20\+\s*(supplier|organisation|organization|tổ chức|nhà cung cấp)/i, reason: "The 20+ supplier figure is not used as a public headline." },
+  { id: "served-exported", pattern: /\b(countries|markets)\s+(we\s+)?(serve|served)\b|\bexported\s+to\b|\b(our|whitehorse(?:'s)?)\s+export track record|recurring buyers|repeat buyers|quốc gia đã xuất khẩu|đã xuất khẩu (sang|tới)/i, reason: "Market relationships are not shipments, service or a track record." },
+  { id: "highest-standards", pattern: /highest (quality )?standards|tiêu chuẩn cao nhất/i, reason: "Use rigorous defined criteria aligned with buyer requirements instead." },
+  { id: "internal-systems", pattern: /\bWB(IS|OS)\b/, reason: "Internal system names are not public." },
+  { id: "phase-language", pattern: /\bphase\s*[12]\b|giai đoạn [12]\b/i, reason: "No public phase/stage language in the core story." },
   { id: "countries-30", pattern: /\b30\+?\s+(countries|quốc gia)/i, reason: "Unsupported countries-served claim." },
   { id: "years-export", pattern: /\b\d+\s+years?\s+(in|of)\s+(export|experience)|năm kinh nghiệm/i, reason: "Unsupported years-of-experience claim (company registered 2026)." },
   { id: "every-lot", pattern: /\bevery\s+(lot|facility|facilities|shipment)\b/i, reason: "Universal QA/traceability claim." },
