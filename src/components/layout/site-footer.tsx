@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
 import { LinkedInIcon, FacebookIcon, WhatsAppIcon } from "./social-icons";
 import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
-import { siteConfig } from "@/lib/site";
+import { localizedAddress, siteConfig } from "@/lib/site";
 
 const SOCIAL_LINKS = [
   { href: siteConfig.whatsapp, label: "WhatsApp", Icon: WhatsAppIcon },
@@ -70,7 +70,7 @@ export function SiteFooter() {
               {tf("addressLabel")}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-primary-foreground/80">
-              <li>{siteConfig.address}</li>
+              <li>{localizedAddress(locale)}</li>
               <li>
                 <a href={`tel:${siteConfig.phone}`} className="cursor-pointer hover:text-primary-foreground">
                   {siteConfig.phone}

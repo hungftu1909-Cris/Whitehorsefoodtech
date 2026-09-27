@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/forms/contact-form";
-import { siteConfig } from "@/lib/site";
+import { localizedAddress, siteConfig } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -40,7 +40,7 @@ export default async function ContactPage({
                 <MapPin className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
                 <div>
                   <dt className="text-muted-foreground">{t("info.addressLabel")}</dt>
-                  <dd className="text-foreground">{siteConfig.address}</dd>
+                  <dd className="text-foreground">{localizedAddress(locale)}</dd>
                 </div>
               </div>
               <div className="flex items-start gap-3">

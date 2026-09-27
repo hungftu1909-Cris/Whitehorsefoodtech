@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { getAllSlugs, getPost } from "@/lib/blog";
+import { getAllSlugs, getPost, getTranslatedSlugs } from "@/lib/blog";
 import { routing, type Locale } from "@/i18n/routing";
 import { SmartImage } from "@/components/ui/smart-image";
 import { pageMetadata } from "@/lib/seo";
@@ -25,12 +25,19 @@ export async function generateMetadata({
   const post = getPost(locale as Locale, slug);
   if (!post) return {};
   const coverPath = `/images/blog/${slug}.jpg`;
+  // hreflang only for translations that actually exist (slugs differ per
+  // locale) — see translationKey in the post frontmatter.
+  const languages = Object.fromEntries(
+    Object.entries(getTranslatedSlugs(locale as Locale, slug)).map(([l, s]) => [l, `/blog/${s}`])
+  );
   return pageMetadata({
     locale,
     path: `/blog/${slug}`,
     title: post.title,
     description: post.description,
     images: hasPublicFile(coverPath) ? [coverPath] : undefined,
+    languages,
+    type: "article",
   });
 }
 
