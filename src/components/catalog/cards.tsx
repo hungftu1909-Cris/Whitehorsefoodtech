@@ -81,7 +81,7 @@ export function RangeCard({
 }: {
   range: CatalogRange;
   locale: string;
-  labels: { formats: string; specify: string; request: string };
+  labels: { formats: string; specify: string; request: string; indicative: string; indicativeNote: string };
 }) {
   return (
     <article className="flex w-full flex-col rounded-lg border border-border bg-card p-6">
@@ -104,6 +104,17 @@ export function RangeCard({
           </li>
         ))}
       </ul>
+      {range.indicative && (
+        <div className="mt-4 border-t border-border pt-4">
+          <p className="text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{labels.indicative}</p>
+          <ul className="mt-2 space-y-1 text-xs text-foreground/85">
+            {range.indicative.map((line) => (
+              <li key={line.en}>{pick(line, locale)}</li>
+            ))}
+          </ul>
+          <p className="mt-2 text-[0.7rem] leading-relaxed text-muted-foreground italic">{labels.indicativeNote}</p>
+        </div>
+      )}
       <div className="mt-auto pt-5">
         <Link
           href={rfqHref({ family: range.family, range: range.id, intent: "spec-sheet" })}

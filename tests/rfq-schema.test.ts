@@ -91,10 +91,10 @@ test("prefill accepts slugs, family keys, intents and format codes only", () => 
   assert.deepEqual(parseRfqPrefill({ sku: "whcf007" }), { product: "coffee", sku: "WHCF007", range: "coffee-soluble" });
   assert.deepEqual(parseRfqPrefill({ product: "fruit", sku: "WHCF001" }), { product: "coffee", sku: "WHCF001", range: "coffee-green" });
   // Catalog links: range implies family; "specification" is an alias.
-  assert.deepEqual(parseRfqPrefill({ product: "coconut", range: "coconut-oil", intent: "specification" }), { product: "coconut", range: "coconut-oil", intent: "spec-sheet" });
-  assert.deepEqual(parseRfqPrefill({ range: "fruit-puree" }), { product: "fruit", range: "fruit-puree" });
+  assert.deepEqual(parseRfqPrefill({ product: "coconut", range: "coconut-blossom-sugar", intent: "specification" }), { product: "coconut", range: "coconut-blossom-sugar", intent: "spec-sheet" });
+  assert.deepEqual(parseRfqPrefill({ range: "fruit-frozen-puree" }), { product: "fruit", range: "fruit-frozen-puree" });
   // A range from another family, or an unknown range, is dropped.
-  assert.deepEqual(parseRfqPrefill({ product: "coffee", range: "fruit-puree" }), { product: "coffee" });
+  assert.deepEqual(parseRfqPrefill({ product: "coffee", range: "fruit-frozen-puree" }), { product: "coffee" });
   assert.deepEqual(parseRfqPrefill({ range: "../etc" }), {});
   assert.deepEqual(parseRfqPrefill({ product: ["coffee", "fruit"], intent: "spec-sheet" }), { product: "coffee", intent: "spec-sheet" });
   assert.deepEqual(parseRfqPrefill({ product: "<script>", intent: "free", sku: "WHC001" }), {});

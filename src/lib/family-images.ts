@@ -45,32 +45,32 @@ export const FAMILY_IMAGES: Record<FamilySlug, FamilyImage> = {
   coconut: {
     src: `${STUDIO_IMAGE_DIR}/coconut.jpg`,
     alt: {
-      en: "Studio arrangement of coconut ingredient formats: desiccated coconut, coconut milk powder and coconut oil",
-      vi: "Sắp đặt studio các dạng nguyên liệu dừa: dừa sấy, bột sữa dừa và dầu dừa",
+      en: "A half coconut beside a wooden tray of coconut formats: coconut pieces, coconut oil, cream, coconut water, flakes, milk, milk powder and coconut sugar",
+      vi: "Nửa quả dừa bên khay gỗ chứa các dạng nguyên liệu dừa: cơm dừa, dầu dừa, kem dừa, nước dừa, dừa sấy, sữa dừa, bột sữa dừa và đường dừa",
     },
     kind: "studio",
   },
   "birds-nest": {
     src: `${STUDIO_IMAGE_DIR}/birds-nest.jpg`,
     alt: {
-      en: "Studio arrangement of cleaned bird's nest pieces and bird's nest in dried form",
-      vi: "Sắp đặt studio yến sào đã làm sạch dạng tổ và dạng sợi khô",
+      en: "Cleaned edible bird's nest on ceramic trays with a bowl of prepared bird's nest, red dates, rock sugar, lotus seeds and a jar of honey",
+      vi: "Tổ yến làm sạch trên khay gốm cùng chén yến chưng, táo đỏ, đường phèn, hạt sen và hũ mật ong",
     },
     kind: "studio",
   },
   fruit: {
     src: `${STUDIO_IMAGE_DIR}/fruit.jpg`,
     alt: {
-      en: "Studio arrangement of fruit ingredient formats: fruit powders, freeze-dried pieces and fruit concentrate",
-      vi: "Sắp đặt studio các dạng nguyên liệu trái cây: bột trái cây, miếng sấy thăng hoa và nước cốt cô đặc",
+      en: "Soft-dried and freeze-dried mango, dried soursop, passion fruit concentrate and purée, and fruit powders beside whole mango, soursop and passion fruit",
+      vi: "Xoài sấy dẻo và sấy thăng hoa, mãng cầu sấy, chanh dây cô đặc và puree, cùng bột trái cây bên xoài, mãng cầu và chanh dây tươi",
     },
     kind: "studio",
   },
   "nuts-spices-botanicals": {
     src: `${STUDIO_IMAGE_DIR}/nuts-spices-botanicals.jpg`,
     alt: {
-      en: "Studio arrangement of cashew nuts, black pepper, cinnamon and star anise",
-      vi: "Sắp đặt studio hạt điều, hạt tiêu đen, quế và hoa hồi",
+      en: "Cashew kernels with black peppercorns, star anise and cinnamon sticks",
+      vi: "Nhân hạt điều cùng hạt tiêu đen, hoa hồi và thanh quế",
     },
     kind: "studio",
   },

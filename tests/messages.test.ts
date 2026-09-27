@@ -86,6 +86,9 @@ test("the scanner still catches the claims Phase 1 removed", () => {
     "vươn tầm thế giới",
     "Whitehorse bảo chứng chất lượng",
     "Vietnam's leading ingredient platform",
+    "100% organic coconut blossom sugar",
+    "Cleaned bird's nest, export-grade",
+    "đường hoa dừa hữu cơ 100%",
   ];
   for (const claim of removed) {
     assert.ok(scanText(claim).length > 0, `not caught: ${claim}`);

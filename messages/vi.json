@@ -126,29 +126,29 @@
         },
         {
           "title": "Nguyên liệu Dừa",
-          "tagline": "Sữa, kem, nước dừa, bột, dầu & MCT",
-          "description": "Sữa và kem dừa, dạng bột, nước dừa cô đặc, dầu dừa nguyên chất và MCT, tìm nguồn theo yêu cầu từ nhà cung cấp có sản phẩm và hồ sơ phù hợp thông số của bạn.",
+          "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa",
+          "description": "Sữa và kem dừa, dừa sấy khô, bột sữa dừa và đường hoa dừa, tìm nguồn theo yêu cầu dưới dạng số lượng lớn hoặc nhãn hàng riêng.",
           "cta": "Khám phá Dừa",
           "status": "Tìm nguồn theo yêu cầu"
         },
         {
           "title": "Nguyên liệu Yến sào",
-          "tagline": "Yến tuyển chọn, chiết xuất, cô đặc & dạng bột",
-          "description": "Yến sào Việt Nam dưới dạng yến tuyển chọn, cô đặc, chiết xuất hoặc dạng bột, phát triển theo yêu cầu cho các thương hiệu dinh dưỡng và thực phẩm cao cấp.",
+          "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn",
+          "description": "Yến sào tuyển chọn và làm sạch, cùng dạng ăn liền và chế biến sẵn, phát triển theo yêu cầu cho các thương hiệu dinh dưỡng và thực phẩm cao cấp.",
           "cta": "Khám phá Yến sào",
           "status": "Phát triển theo yêu cầu"
         },
         {
           "title": "Nguyên liệu Trái cây",
-          "tagline": "Sấy thăng hoa, dạng bột, miếng & cô đặc",
-          "description": "Chanh dây, xoài, thanh long và các loại trái cây nhiệt đới khác dưới dạng bột và miếng sấy thăng hoa, cô đặc hoặc chiết xuất, tìm nguồn theo yêu cầu và thông số của bạn.",
+          "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree",
+          "description": "Xoài sấy dẻo và sấy thăng hoa, mãng cầu sấy dẻo, cùng chanh dây cô đặc, puree đông lạnh và bột, tìm nguồn theo yêu cầu và thông số của bạn.",
           "cta": "Khám phá Trái cây",
           "status": "Tìm nguồn theo yêu cầu"
         },
         {
           "title": "Hạt, Gia vị & Thảo mộc",
-          "tagline": "Điều, tiêu, quế, hồi & thảo mộc",
-          "description": "Hạt điều, hồ tiêu, quế, hoa hồi và thảo mộc Việt Nam, tìm nguồn theo yêu cầu với thông số và chứng từ được thống nhất theo từng đơn hàng.",
+          "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa",
+          "description": "Nhân hạt điều, hồ tiêu đen nguyên hạt, quế và hoa hồi sấy thăng hoa, tìm nguồn theo yêu cầu với thông số và hồ sơ thống nhất theo từng đơn hàng.",
           "cta": "Khám phá Nguyên liệu",
           "status": "Tìm nguồn theo yêu cầu"
         }
@@ -382,36 +382,36 @@
       "coconut": {
         "name": "Nguyên liệu Dừa",
         "slug": "coconut",
-        "tagline": "Sữa, kem, nước dừa, bột, dầu & MCT",
+        "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa",
         "status": "Tìm nguồn theo yêu cầu",
-        "description": "Nguyên liệu dừa tìm nguồn theo yêu cầu — sữa và kem dừa, dạng bột, nước dừa cô đặc, dầu dừa nguyên chất và MCT — từ nhà cung cấp có sản phẩm, cơ sở và chứng nhận phù hợp với thông số và thị trường của bạn, đóng gói số lượng lớn hoặc nhãn hàng riêng.",
+        "description": "Dừa Việt Nam được chế biến thành nguyên liệu đa dụng cho thực phẩm và đồ uống — từ sữa và kem dừa đến bột dừa và đường hoa dừa. Phù hợp cho sản xuất thực phẩm công nghiệp và bán lẻ, với lựa chọn hàng số lượng lớn và nhãn hàng riêng theo yêu cầu của từng thị trường.",
         "applicationsTitle": "Ứng dụng phổ biến",
-        "applications": ["Đồ uống thực vật thay thế sữa", "Bánh & bánh kẹo", "Thực phẩm chức năng", "Dịch vụ ăn uống & sản xuất OEM"]
+        "applications": ["Nấu ăn & chế biến thực phẩm", "Đồ uống", "Bánh & bánh kẹo", "Kem & tráng miệng", "Sản phẩm từ thực vật", "Dịch vụ ăn uống & OEM"]
       },
       "birdsNest": {
         "name": "Nguyên liệu Yến sào",
         "slug": "birds-nest",
-        "tagline": "Yến tuyển chọn, chiết xuất, cô đặc & dạng bột",
+        "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn",
         "status": "Phát triển theo yêu cầu",
-        "description": "Yến sào Việt Nam được phát triển theo yêu cầu thành yến tuyển chọn, dạng cô đặc, chiết xuất, dạng bột và công thức tùy chỉnh cho thực phẩm dinh dưỡng và cao cấp, từ nguyên liệu số lượng lớn đến sản phẩm bán lẻ nhãn hàng riêng.",
+        "description": "Yến sào Việt Nam được tuyển chọn và làm sạch, cung cấp dưới dạng yến làm sạch và yến ăn liền hoặc chế biến sẵn cho thực phẩm sức khỏe, bán lẻ chăm sóc sức khỏe, đồ uống RTD nhãn hàng riêng và thực phẩm chức năng. Dạng cô đặc, chiết xuất, bột và công thức chức năng được phát triển theo OEM khi có yêu cầu.",
         "applicationsTitle": "Ứng dụng phổ biến",
-        "applications": ["Bán lẻ thực phẩm sức khỏe", "Thương hiệu đồ uống RTD nhãn hàng riêng", "Công thức thực phẩm chức năng", "Phân phối dịch vụ ăn uống & nhà thuốc"]
+        "applications": ["Bán lẻ thực phẩm sức khỏe", "Đồ uống RTD nhãn hàng riêng", "Thực phẩm chức năng", "OEM & công thức tùy chỉnh"]
       },
       "fruit": {
         "name": "Nguyên liệu Trái cây",
         "slug": "fruit",
-        "tagline": "Sấy thăng hoa, dạng bột, miếng & cô đặc",
+        "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree",
         "status": "Tìm nguồn theo yêu cầu",
-        "description": "Trái cây nhiệt đới Việt Nam được tìm nguồn theo yêu cầu dưới dạng bột và miếng sấy thăng hoa, cô đặc và chiết xuất cho ngành thực phẩm, đồ uống và dinh dưỡng, từ nhà cung cấp có năng lực chế biến phù hợp thông số của bạn.",
+        "description": "Trái cây nhiệt đới Việt Nam được chế biến thành nguyên liệu ổn định. Dòng chính gồm xoài sấy dẻo và sấy thăng hoa, mãng cầu sấy dẻo, và chanh dây dạng cô đặc, puree đông lạnh và bột, cho thực phẩm, đồ uống và dinh dưỡng. Các dạng trái cây khác có thể cung cấp theo yêu cầu hoặc OEM.",
         "applicationsTitle": "Ứng dụng phổ biến",
-        "applications": ["Bột pha smoothie & đồ uống", "Bánh & bánh kẹo", "Thực phẩm chức năng", "Tạo màu/hương vị tự nhiên"]
+        "applications": ["Nền smoothie & đồ uống", "Bánh & bánh kẹo", "Thực phẩm chức năng & bổ sung", "Tạo hương & màu tự nhiên"]
       },
       "nutsSpicesBotanicals": {
         "name": "Hạt, Gia vị & Thảo mộc",
         "slug": "nuts-spices-botanicals",
-        "tagline": "Điều, tiêu, quế, hồi & thảo mộc",
+        "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa",
         "status": "Tìm nguồn theo yêu cầu",
-        "description": "Các loại hạt, gia vị và thảo mộc Việt Nam được tìm nguồn theo yêu cầu cho các nhà sản xuất thực phẩm và đối tác nguyên liệu quốc tế, với thông số và chứng từ được thống nhất theo từng đơn hàng.",
+        "description": "Hạt và gia vị Việt Nam tuyển chọn, phân loại theo thông số của khách hàng. Dòng chính gồm nhân hạt điều, hồ tiêu đen nguyên hạt, quế sấy thăng hoa và hoa hồi sấy thăng hoa, với hồ sơ được thống nhất theo từng đơn hàng cho nhà sản xuất thực phẩm và đối tác nguyên liệu. Các loại thảo mộc khác cung cấp theo yêu cầu.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": ["Sản xuất thực phẩm", "Pha trộn & phân phối gia vị", "Sản xuất hương liệu & chiết xuất", "Đóng gói bán lẻ & dịch vụ ăn uống"]
       }
@@ -451,6 +451,8 @@
     "perRequestNote": "Việc liệt kê một sản phẩm hoặc dòng sản phẩm không có nghĩa là hàng có sẵn hoặc sẵn sàng xuất khẩu. Khả năng cung ứng, thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được xác nhận theo từng yêu cầu.",
     "referenceTitle": "Thông số tham chiếu điển hình",
     "referenceDisclaimer": "Thông số tham chiếu điển hình — thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng.",
+    "indicativeLabel": "Thông số tham khảo",
+    "indicativeNote": "Giá trị tham khảo — được xác nhận theo bảng thông số của nhà cung cấp cho từng đơn hàng.",
     "paramHeader": "Chỉ tiêu",
     "referenceHeader": "Tham chiếu điển hình",
     "methodHeader": "Phương pháp / căn cứ",

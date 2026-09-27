@@ -6,6 +6,7 @@ import path from "node:path";
 import {
   CATALOG_RANGES,
   CATALOG_SKUS,
+  PACKAGING_OPTIONS,
   relatedSkus,
   type Localized,
 } from "../src/lib/catalog.ts";
@@ -54,6 +55,31 @@ test("families, ranges and codes are consistent", () => {
     assert.ok(range && range.family === sku.family, `${sku.code} range`);
     assert.ok(relatedSkus(sku).every((s) => s.code !== sku.code));
   }
+});
+
+test("non-coffee ranges follow the CEO product briefs", () => {
+  const ids = (family: string) => CATALOG_RANGES.filter((r) => r.family === family).map((r) => r.id);
+  assert.deepEqual(ids("coconut"), ["coconut-milk-cream", "coconut-powders-solids", "coconut-blossom-sugar"]);
+  assert.deepEqual(ids("birds-nest"), ["birds-nest-cleaned", "birds-nest-instant", "birds-nest-oem"]);
+  assert.deepEqual(ids("fruit"), ["fruit-soft-dried", "fruit-freeze-dried", "fruit-concentrate-powder", "fruit-frozen-puree"]);
+  assert.deepEqual(ids("nuts-spices-botanicals"), ["nsb-nuts", "nsb-spices"]);
+  for (const family of ["coconut", "birds-nest", "fruit", "nuts-spices-botanicals"] as const) {
+    assert.ok(PACKAGING_OPTIONS[family]?.length, `${family} has packaging options`);
+  }
+});
+
+test("indicative values stay on ranges, never on confirmed codes, and carry no certification claims", () => {
+  for (const range of CATALOG_RANGES) {
+    if (!range.indicative) continue;
+    assert.notEqual(range.family, "coffee", "coffee uses primary-sourced reference parameters only");
+    for (const line of range.indicative) {
+      assert.ok(line.en.trim() && line.vi.trim(), JSON.stringify(line));
+      assert.doesNotMatch(line.en + line.vi, /100\s?%|export[- ]grade|guarantee|certified|đạt chuẩn|bảo đảm/i, line.en);
+    }
+  }
+  const all = JSON.stringify(CATALOG_RANGES);
+  assert.doesNotMatch(all, /BNE-(CLN|INS)/, "bird's nest codes are not published as confirmed codes");
+  assert.doesNotMatch(all, /full documentation and quality control|carefully selected|high-quality/i);
 });
 
 test("a number in a reference value always cites a primary source", () => {

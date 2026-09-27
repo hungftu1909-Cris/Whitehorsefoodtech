@@ -126,29 +126,29 @@
         },
         {
           "title": "Coconut Ingredients",
-          "tagline": "Milk, cream, water, powder, oil & MCT",
-          "description": "Coconut milk and cream, powders, water concentrate, virgin oil and MCT, sourced on request from suppliers whose product and documentation fit your specification.",
+          "tagline": "Milk & cream, powders & solids, blossom sugar",
+          "description": "Coconut milk and cream, desiccated coconut, coconut milk powder and coconut blossom sugar, sourced on request in bulk or private-label formats.",
           "cta": "Explore Coconut",
           "status": "Sourced on request"
         },
         {
           "title": "Bird's Nest Ingredients",
-          "tagline": "Selected nest, extract, concentrate & powder",
-          "description": "Vietnamese swiftlet nest as selected nest, concentrate, extract or powder, developed on request for nutrition and premium food brands.",
+          "tagline": "Cleaned nest & instant / ready-to-prepare formats",
+          "description": "Selected and cleaned edible bird's nest, plus instant and ready-to-prepare formats, developed on request for nutrition and premium food brands.",
           "cta": "Explore Bird's Nest",
           "status": "Developed on request"
         },
         {
           "title": "Fruit Ingredients",
-          "tagline": "Freeze-dried, powder, pieces & concentrate",
-          "description": "Passion fruit, mango, dragon fruit and other tropical fruits as freeze-dried powders and pieces, concentrates or extracts, sourced on request to your specification.",
+          "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
+          "description": "Soft-dried and freeze-dried mango, soft-dried soursop, and passion fruit concentrate, frozen purée and powder, sourced on request to your specification.",
           "cta": "Explore Fruits",
           "status": "Sourced on request"
         },
         {
           "title": "Nuts, Spices & Botanicals",
-          "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
-          "description": "Cashew, pepper, cinnamon, star anise and Vietnamese botanicals, sourced on request with specifications and documentation agreed per order.",
+          "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
+          "description": "Cashew kernels, whole black pepper, freeze-dried cinnamon and star anise, sourced on request with specifications and documentation agreed per order.",
           "cta": "Explore Ingredients",
           "status": "Sourced on request"
         }
@@ -382,36 +382,36 @@
       "coconut": {
         "name": "Coconut Ingredients",
         "slug": "coconut",
-        "tagline": "Milk, cream, water, powder, oil & MCT",
+        "tagline": "Milk & cream, powders & solids, blossom sugar",
         "status": "Sourced on request",
-        "description": "Coconut ingredients sourced on request — milk and cream, powders, water concentrates, virgin coconut oil and MCT — matched to suppliers whose product, site and certifications fit your specification and market, in bulk or private-label packaging.",
+        "description": "Vietnamese coconut made into versatile ingredients for food and beverage applications — from coconut milk and cream to coconut powders and coconut blossom sugar. Suitable for industrial food production and retail, with bulk supply and private-label options agreed to each market's requirements.",
         "applicationsTitle": "Common applications",
-        "applications": ["Dairy alternatives & plant-based beverages", "Bakery & confectionery", "Functional foods & nutraceuticals", "Foodservice & OEM formulation"]
+        "applications": ["Cooking & food processing", "Beverages", "Bakery & confectionery", "Ice cream & desserts", "Plant-based products", "Foodservice & OEM"]
       },
       "birdsNest": {
         "name": "Bird's Nest Ingredients",
         "slug": "birds-nest",
-        "tagline": "Selected nest, extract, concentrate & powder",
+        "tagline": "Cleaned nest & instant / ready-to-prepare formats",
         "status": "Developed on request",
-        "description": "Vietnamese edible bird's nest developed on request into selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications, from bulk ingredients to private-label retail formats.",
+        "description": "Vietnamese edible bird's nest, selected and cleaned, as cleaned nest and instant or ready-to-prepare formats for health food, wellness retail, private-label RTD and nutraceutical applications. Concentrates, extracts, powders and functional blends are developed as OEM on request.",
         "applicationsTitle": "Common applications",
-        "applications": ["Health food & wellness retail", "Private-label RTD beverage brands", "Nutraceuticals & functional formulations", "Foodservice & pharmacy distribution"]
+        "applications": ["Health food & wellness retail", "Private-label RTD beverages", "Nutraceutical applications", "OEM & custom formulations"]
       },
       "fruit": {
         "name": "Fruit Ingredients",
         "slug": "fruit",
-        "tagline": "Freeze-dried, powder, pieces & concentrate",
+        "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
         "status": "Sourced on request",
-        "description": "Vietnamese tropical fruits sourced on request as freeze-dried powders and pieces, concentrates and extracts for food, beverage and nutrition applications, matched to suppliers whose processing fits your specification.",
+        "description": "Vietnamese tropical fruits processed into shelf-stable ingredients. The core range covers soft-dried and freeze-dried mango, soft-dried soursop, and passion fruit as concentrate, frozen purée and powder, for food, beverage and nutrition applications. Other fruit formats are available on request or as OEM.",
         "applicationsTitle": "Common applications",
-        "applications": ["Smoothie & beverage powders", "Bakery & confectionery", "Nutraceuticals & supplements", "Natural food coloring/flavoring"]
+        "applications": ["Smoothie & beverage bases", "Bakery & confectionery", "Nutraceuticals & supplements", "Natural flavouring & colouring"]
       },
       "nutsSpicesBotanicals": {
         "name": "Nuts, Spices & Botanicals",
         "slug": "nuts-spices-botanicals",
-        "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
+        "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
         "status": "Sourced on request",
-        "description": "Vietnamese nuts, spices and botanicals sourced on request for international food manufacturers and ingredient partners, with specifications and documentation agreed per order.",
+        "description": "Selected Vietnamese nuts and spices graded to the buyer's specification. The core range covers cashew kernels, whole black pepper, freeze-dried cinnamon and freeze-dried star anise, with documentation agreed per order for food manufacturers and ingredient partners. Other botanicals are available on request.",
         "applicationsTitle": "Common applications",
         "applications": ["Food manufacturing", "Spice blending & distribution", "Flavor & extract production", "Foodservice & retail packing"]
       }
@@ -451,6 +451,8 @@
     "perRequestNote": "A listed product or range is not a statement of stock or export readiness. Availability, final specification, test method, documentation and COA scope are confirmed for each request.",
     "referenceTitle": "Typical reference parameters",
     "referenceDisclaimer": "Typical reference parameters — final specification, test method, documentation and COA scope are agreed per order.",
+    "indicativeLabel": "Indicative specification",
+    "indicativeNote": "Indicative values — confirmed against the supplier's specification sheet for each order.",
     "paramHeader": "Parameter",
     "referenceHeader": "Typical reference",
     "methodHeader": "Method / basis",

@@ -3,6 +3,14 @@
 Primary sources behind the catalog's range taxonomy and the few
 reference values shown on the site. All accessed **2026-09-27**.
 
+**Since 2026-09-28** non-coffee range cards may also carry *indicative*
+values supplied by the CEO in the product briefs "Đề xuất chỉnh sửa
+Website 1–4" (claim registry row 24). They are a separate class: not
+primary-sourced, always labelled "Indicative specification" with
+"confirmed against the supplier's specification sheet for each order",
+and never used on confirmed product-code pages as typical reference
+parameters.
+
 **Rule:** a number may appear on the site only as a *typical reference
 parameter* with the disclaimer "final specification, test method,
 documentation and COA scope are agreed per order", and only when a source
@@ -54,7 +62,7 @@ numeric specifications.
 
 | Source | URL | Supports | Caution |
 |---|---|---|---|
-| Codex CXS 326-2017 — Black, white and green pepper | https://www.fao.org/fao-who-codexalimentarius/sh-proxy/ru/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXS+326-2017%2FCXS_326e.pdf | Pepper range (whole/cracked/ground) | Bulk density and moisture values **not** published (previous "500–570 g/l, ≤13%" removed). |
+| Codex CXS 326-2017 — Black, white and green pepper | https://www.fao.org/fao-who-codexalimentarius/sh-proxy/ru/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXS+326-2017%2FCXS_326e.pdf | Pepper range (whole/cracked/ground) | Not a source for bulk density or moisture. "500–570 g/l, ≤ 13%" is now shown only as a CEO-supplied indicative value (claim registry row 24). |
 | Codex CXC 42-1995 — Code of hygienic practice for spices and dried aromatic herbs | https://www.fao.org/input/download/standards/27/CXP_042e_2014.pdf | Hygiene expectations buyers may ask about (e.g. steam treatment) | Process topic to discuss, not a claim. |
 | Codex — cashew kernels | (no finalised Codex standard found) | — | Cashew grade names (e.g. WW240, WW320) are trade designations; shown only as examples to specify, never as held stock. |
 

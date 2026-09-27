@@ -14,6 +14,7 @@ import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { familyImage } from "@/lib/family-images";
 import {
   findRange,
+  PACKAGING_OPTIONS,
   pick,
   rangesFor,
   skusFor,
@@ -86,7 +87,14 @@ export default async function ProductFamilyPage({
     noResults: tc("noResults"),
     results: Array.from({ length: count + 1 }, (_, n) => tc("results", { count: n })),
   });
-  const rangeLabels = { formats: tc("formatsLabel"), specify: tc("specifyLabel"), request: tc("requestRange") };
+  const rangeLabels = {
+    formats: tc("formatsLabel"),
+    specify: tc("specifyLabel"),
+    request: tc("requestRange"),
+    indicative: tc("indicativeLabel"),
+    indicativeNote: tc("indicativeNote"),
+  };
+  const packaging = PACKAGING_OPTIONS[family];
   const rangeCards = ranges.map((range) => ({
     id: range.id,
     group: range.id,
@@ -224,9 +232,24 @@ export default async function ProductFamilyPage({
                 ))}
               </ul>
             </div>
-            <p className="rounded-lg border border-dashed border-border bg-muted/30 p-4 text-xs leading-relaxed text-muted-foreground">
-              {tc("perRequestNote")}
-            </p>
+            <div className="space-y-4">
+              {packaging && (
+                <div>
+                  <h2 className="font-serif text-xl font-semibold text-foreground">{tc("packagingTitle")}</h2>
+                  <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {packaging.map((option) => (
+                      <li key={option.en} className="flex gap-2">
+                        <span className="mt-2 size-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                        {pick(option, locale)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              <p className="rounded-lg border border-dashed border-border bg-muted/30 p-4 text-xs leading-relaxed text-muted-foreground">
+                {tc("perRequestNote")}
+              </p>
+            </div>
           </div>
         </div>
       </section>

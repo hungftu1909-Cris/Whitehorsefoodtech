@@ -106,7 +106,14 @@ test("coffee uses a real editorial coffee image; other families use studio repre
 test("family images on disk are optimised, 4:3-ready and have provenance", () => {
   for (const image of Object.values(FAMILY_IMAGES)) {
     const file = path.join("public", image.src);
-    if (!fs.existsSync(file)) continue; // studio files not yet delivered render as a typographic panel
+    assert.ok(fs.existsSync(file), `${image.src} missing`);
+    if (image.kind === "studio") {
+      // JPEG SOF0/SOF2 header: height then width.
+      const buf = fs.readFileSync(file);
+      const sof = buf.findIndex((b, i) => b === 0xff && (buf[i + 1] === 0xc0 || buf[i + 1] === 0xc2));
+      const h = buf.readUInt16BE(sof + 5), w = buf.readUInt16BE(sof + 7);
+      assert.ok(Math.abs(w / h - 4 / 3) < 0.01, `${image.src} is ${w}×${h}, not 4:3`);
+    }
     assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
     assert.ok(PROVENANCE.includes(image.src.replace(/^\//, "public/")), `${image.src} not in asset-provenance.md`);
   }

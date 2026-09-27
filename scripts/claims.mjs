@@ -43,6 +43,9 @@ export const FORBIDDEN_CLAIMS = [
   // self-awarded (Phase 3 brief).
   { id: "self-awarded", pattern: /world[- ]class|revolutionary|one[- ]stop|tinh hoa|chắp cánh|vươn tầm|\b(vietnam'?s?|the) leading (ingredient|agri|food|sourcing|b2b)/i, reason: "Self-awarded premium claim; demonstrate with specifications and evidence instead." },
   { id: "quality-endorsement", pattern: /bảo chứng chất lượng|\bwe certify\b|quality[- ]guaranteed/i, reason: "Whitehorse is building QA infrastructure; it does not certify or vouch for quality today." },
+  // Product-brief wording that reads as certification or grading evidence.
+  { id: "absolute-purity", pattern: /100\s?%\s*(organic|natural|pure)|(hữu cơ|tự nhiên|nguyên chất) 100\s?%|100\s?% (hữu cơ|tự nhiên|nguyên chất)/i, reason: "Certification/purity claim; organic is per supplier certificate, confirmed per order." },
+  { id: "export-grade", pattern: /export[- ]grade/i, reason: "Grading/readiness claim; market access is confirmed per supplier and market." },
   { id: "guarantee", pattern: /\bwe guarantee\b|\bguaranteed (quality|supply|delivery|consistency)\b|chúng tôi (cam kết|bảo đảm|đảm bảo) 100%/i, reason: "Guarantee language needs contract backing." },
   { id: "globally-delivered", pattern: /globally delivered|giao khắp toàn cầu/i, reason: "Implies an existing global delivery record." },
   { id: "sku-prefix", pattern: /\bWHC0\d{2}\b/, reason: "Wrong coffee format prefix — codes are WHCF001–WHCF009." },

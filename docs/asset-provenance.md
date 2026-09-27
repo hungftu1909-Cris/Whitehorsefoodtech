@@ -46,26 +46,46 @@ All renders are 4:3, `next/image`, `object-cover`; the family hero has
 | Family | File | Kind | Visible label | Status |
 |---|---|---|---|---|
 | Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` | Editorial (real photograph, see table above) | "Editorial image" / "Ảnh minh họa" | Rendered. Chosen because it shows green, roasted and ground coffee on an ivory ground. Production rights pending (as above). |
-| Coconut | `public/images/catalog/studio/coconut.jpg` | Studio representation (generated) | "Studio representation" / "Hình ảnh studio minh họa" + note | **Not delivered** — see below |
-| Bird's nest | `public/images/catalog/studio/birds-nest.jpg` | Studio representation (generated) | same | **Not delivered** |
-| Fruit | `public/images/catalog/studio/fruit.jpg` | Studio representation (generated) | same | **Not delivered** |
-| Nuts, spices & botanicals | `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Studio representation (generated) | same | **Not delivered** |
+| Coconut | `public/images/catalog/studio/coconut.jpg` | Studio representation | "Studio representation" / "Hình ảnh studio minh họa" + note | Rendered — see sources below |
+| Bird's nest | `public/images/catalog/studio/birds-nest.jpg` | Studio representation | same | Rendered |
+| Fruit | `public/images/catalog/studio/fruit.jpg` | Studio representation | same | Rendered |
+| Nuts, spices & botanicals | `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Studio representation | same | Rendered |
 
-**Studio files not delivered.** The approved generated studio images sit
-in the Codex handoff workspace; GitHub's browser upload bridge failed and
-the files were not available on the build machine, and no Claude Design
-project was reachable from this session. Until a file exists at the path
-above, the family renders a quiet typographic panel (family number, name
-and ranges; `aria-hidden`, because the same text is in the adjacent copy).
-Nothing else changes when a file is added.
+### Studio image sources (added 2026-09-28)
+
+Source: the owner's shared Google Drive folder
+`https://drive.google.com/drive/folders/1Qs95WmumHthaNYqngoZrWBmv_qIJVVLt`
+(downloaded 2026-09-28). The same compositions are embedded in the CEO
+product briefs "Đề xuất chỉnh sửa Website 1–4.docx" (uploaded to the
+session 2026-09-28). The files carry no author/credit metadata; their
+style is consistent with AI-generated studio imagery. They show generic
+ingredient formats with **no text, logos, seals, badges or retail
+packaging** (checked visually at full resolution, including all four
+corners for generator watermarks).
+
+| Public file | Drive source file | Source size | Source SHA-256 | Derived size | Derived SHA-256 | Processing |
+|---|---|---|---|---|---|---|
+| `public/images/catalog/studio/coconut.jpg` | `Coconut.jpg` | 1248×816 | `53768f91476dcab15deb1cb1d69dfb83f543df5f5469c3a46b811e58be26414f` | 1088×816 | `78e2eaa5da6afdc60c43c2f921c593648318ad3d1ca38b4c2faac2754862c3a1` | Centre crop to 4:3, JPEG q82 progressive, no upscaling |
+| `public/images/catalog/studio/birds-nest.jpg` | `Yến.jpg` | 1248×832 | `cbebe6f6d9ed29ca6ddaacf35c7e1f0195836b8f30b4b79e73c2ea53915cfc26` | 1109×832 | `71010527711a4776771b749328c8f7006f84f8208777bee292cf3f7d3975b404` | same |
+| `public/images/catalog/studio/fruit.jpg` | `Trái cây.jpg` | 1248×832 | `f1bfcd7b95b0dc20023cb355d77261fb9a0b0aea2b3a2a39a8873d02265bdb2e` | 1109×832 | `fccbd9200637531d6bafb4ba6a67bbbbff6549f324cd0e4013bc44c316930c3e` | same |
+| `public/images/catalog/studio/nuts-spices-botanicals.jpg` | `Hạt quế hồi.jpg` | 1008×1024 | `8f0b4fe9870d26ef94ac156060333c1d520d7000942f821889a717c1f87a2773` | 1008×756 | `39648b9765be38e16e816915ac6729fe869891f5cf28c7254deba44b6b9c4721` | same |
+
+**Licence status:** owner-supplied; **generator/licence terms not yet
+recorded** — confirm the tool and its commercial-use terms (or the
+photographer's permission) before Production.
+
+**Not used from the same folder:** factory, warehouse, freeze-dryer,
+truck/air-cargo and farm/harvest photos. They would read as Whitehorse
+facilities, logistics or suppliers (unsupported) or as stock farmer
+imagery, which the Phase 3 design direction excludes. The folder's coffee
+photos duplicate or resemble the existing catalog coffee images, which
+are left unchanged.
 
 **Rules for a studio file** (check visually before committing):
 text-free; no logos, seals, badges, certification marks, claims or retail
-packaging; 4:3 (1600×1200 recommended), JPEG under 400 KB; `alt` in
-`FAMILY_IMAGES` must describe what the image actually shows (the current
-alt text was written from the family taxonomy and must be re-checked
-against the delivered image). Record the generator/tool, prompt or source
-project, date, SHA-256 and licence terms in a new row here.
+packaging; 4:3, JPEG under 400 KB; `alt` in `FAMILY_IMAGES` must describe
+what the image actually shows. Record the source, date, SHA-256 and
+licence terms in a new row here.
 
 **How they are presented:** always with the visible "Studio
 representation" badge and, on the family page, the note "A studio
