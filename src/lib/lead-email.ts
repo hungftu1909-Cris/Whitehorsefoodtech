@@ -1,4 +1,4 @@
-import type { ContactInput, RfqInput } from "@/lib/validations";
+import type { ContactInput, RfqInput, SupplierInput } from "@/lib/validations";
 import { CATALOG_RANGES } from "./catalog.ts";
 
 // Internal notification emails for the sales inbox — English labels
@@ -130,6 +130,62 @@ export function buildContactEmail(data: ContactInput, leadId: string) {
       ["UTM term", data.utm_term],
       ["UTM content", data.utm_content],
     ])}</table>
+  `;
+  return { subject, html };
+}
+
+const SUPPLIER_TYPE_LABEL: Record<string, string> = {
+  farmer: "Farmer / grower",
+  cooperative: "Cooperative",
+  factory: "Processing factory",
+  company: "Company",
+};
+
+const SUPPLIER_FAMILY_LABEL: Record<string, string> = {
+  coffee: "Coffee",
+  coconut: "Coconut",
+  birdsNest: "Bird's Nest",
+  fruit: "Fruit",
+  nutsSpicesBotanicals: "Nuts, Spices & Botanicals",
+};
+
+export function buildSupplierEmail(data: SupplierInput, leadId: string) {
+  const subject = `[Supplier intake][${subjectPart(SUPPLIER_TYPE_LABEL[data.supplierType])}] ${subjectPart(data.companyName)} — ${leadId}`;
+  const html = `
+    <h2>New supplier registration — ${escapeHtml(leadId)}</h2>
+    <p><strong>Contract:</strong> supplier_public_intake@1. This submission requests review only; it is not supplier approval.</p>
+    <table cellspacing="0" cellpadding="0">${renderRows([
+      ["Reference", leadId],
+      ["Idempotency key", data.idempotencyKey],
+      ["Submitted at", data.submittedAt],
+      ["Supplier type", SUPPLIER_TYPE_LABEL[data.supplierType] ?? data.supplierType],
+      ["Legal / trading name", data.companyName],
+      ["Country", data.country],
+      ["Province / origin region", data.originRegion],
+      ["Contact name", data.contactName],
+      ["Work email", data.email],
+      ["Phone / Zalo", data.phoneZalo],
+      ["Product families", data.productFamilies.map((v) => SUPPLIER_FAMILY_LABEL[v] ?? v).join(", ")],
+      ["Capabilities", data.capabilities.join(", ")],
+      ["QA / certificate state", data.qaState],
+      ["Products / formats", data.productsFormats],
+      ["Production site", data.productionSite],
+      ["Processing capability", data.processingCapability],
+      ["MOQ", data.moq],
+      ["Capacity", data.capacity],
+      ["Lead time", data.leadTime],
+      ["Certification names", data.certificationNames],
+      ["Website", data.website],
+      ["Evidence links", data.evidenceLinks],
+      ["Notes", data.notes],
+      ["Consent to be contacted", data.consent ? "yes" : "no"],
+      ["Site language", data.locale],
+      ["Source page", data.sourcePath],
+      ["UTM source", data.utm_source],
+      ["UTM medium", data.utm_medium],
+      ["UTM campaign", data.utm_campaign],
+    ])}</table>
+    <p style="color:#666">Supporting documents must be collected through a secure follow-up channel; this public form does not upload files or update the internal supplier master.</p>
   `;
   return { subject, html };
 }

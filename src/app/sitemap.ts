@@ -19,6 +19,7 @@ const INDEXABLE_STATIC_PATHS = [
   "/blog",
   "/contact",
   "/rfq",
+  "/suppliers/apply",
 ];
 
 /**

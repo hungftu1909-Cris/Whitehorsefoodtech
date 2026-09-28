@@ -72,7 +72,7 @@ export default async function ClientsPage({
         </div>
       </section>
 
-      <CtaSection title={t("cta.title")} cta={t("cta.cta")} href="/contact" />
+      <CtaSection title={t("cta.title")} cta={t("cta.cta")} href="/suppliers/apply" />
     </>
   );
 }

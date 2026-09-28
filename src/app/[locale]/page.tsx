@@ -32,7 +32,7 @@ export default async function Home({
           cta: t("buyerCta"),
           href: { pathname: "/rfq", query: { intent: "quote" } },
         }}
-        supplier={{ label: t("supplierLabel"), body: t("supplierBody"), cta: t("supplierCta"), href: "/contact" }}
+        supplier={{ label: t("supplierLabel"), body: t("supplierBody"), cta: t("supplierCta"), href: "/suppliers/apply" }}
       />
     </>
   );

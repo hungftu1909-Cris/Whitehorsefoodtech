@@ -322,7 +322,7 @@ export default async function AboutPage({
         title={t("cta.title")}
         subtitle={t("cta.subtitle")}
         buyer={{ label: t("cta.buyerLabel"), body: t("cta.buyerBody"), cta: t("cta.buyerCta"), href: "/rfq" }}
-        supplier={{ label: t("cta.supplierLabel"), body: t("cta.supplierBody"), cta: t("cta.supplierCta"), href: "/contact" }}
+        supplier={{ label: t("cta.supplierLabel"), body: t("cta.supplierBody"), cta: t("cta.supplierCta"), href: "/suppliers/apply" }}
       />
     </>
   );

@@ -112,6 +112,66 @@ export const contactSchema = z.object({
 });
 export type ContactInput = z.infer<typeof contactSchema>;
 
+export const SUPPLIER_TYPES = ["farmer", "cooperative", "factory", "company"] as const;
+export const SUPPLIER_PRODUCT_FAMILIES = [
+  "coffee",
+  "coconut",
+  "birdsNest",
+  "fruit",
+  "nutsSpicesBotanicals",
+] as const;
+export const SUPPLIER_CAPABILITIES = [
+  "growing",
+  "processing",
+  "manufacturing",
+  "tradingExport",
+] as const;
+export const SUPPLIER_QA_STATES = [
+  "documentsAvailable",
+  "availableNotUploaded",
+  "none",
+  "unknown",
+] as const;
+
+/**
+ * Public website intake contract. This captures a review request only; it
+ * does not approve a supplier or write to the canonical internal supplier master.
+ */
+export const supplierSchema = z
+  .object({
+    contract: z.literal("supplier_public_intake@1"),
+    idempotencyKey: z.string().uuid(),
+    supplierType: z.enum(SUPPLIER_TYPES),
+    companyName: z.string().trim().min(1).max(160),
+    country: z.string().trim().min(1).max(100),
+    originRegion: z.string().trim().min(1).max(160),
+    contactName: z.string().trim().min(1).max(120),
+    email: z.string().trim().max(254).email().optional().or(z.literal("")),
+    phoneZalo: optionalText(60),
+    productFamilies: z.array(z.enum(SUPPLIER_PRODUCT_FAMILIES)).min(1).max(5),
+    capabilities: z.array(z.enum(SUPPLIER_CAPABILITIES)).min(1).max(4),
+    qaState: z.enum(SUPPLIER_QA_STATES),
+    productsFormats: optionalText(1200),
+    productionSite: optionalText(300),
+    processingCapability: optionalText(1200),
+    moq: optionalText(200),
+    capacity: optionalText(300),
+    leadTime: optionalText(200),
+    certificationNames: optionalText(600),
+    website: z.string().trim().max(300).url().optional().or(z.literal("")),
+    evidenceLinks: optionalText(2000),
+    notes: optionalText(2000),
+    consent: z.boolean().refine((v) => v === true, { message: "consent_required" }),
+    submittedAt: z.string().datetime(),
+    ...leadContext,
+    company_website: honeypot,
+  })
+  .refine((d) => Boolean(d.email || d.phoneZalo), {
+    path: ["email"],
+    message: "email_or_phone_required",
+  });
+export type SupplierInput = z.infer<typeof supplierSchema>;
+
 export const rfqSchema = z
   .object({
     intent: z.enum(RFQ_INTENTS),

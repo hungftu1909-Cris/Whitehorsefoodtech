@@ -16,7 +16,7 @@
  *   dev, Vercel Preview).
  */
 
-export type LeadKind = "rfq" | "contact";
+export type LeadKind = "rfq" | "contact" | "supplier";
 export type DeliveryMode = "log" | "smtp";
 export type LeadEnv = Record<string, string | undefined>;
 
@@ -47,6 +47,9 @@ export type LeadSummary = {
   sku?: string;
   intent?: string;
   model?: string;
+  supplierType?: string;
+  qaState?: string;
+  capabilities?: string;
   country?: string;
   volume?: string;
   locale?: string;
@@ -83,14 +86,18 @@ export function resolveDeliveryMode(env: LeadEnv): DeliveryMode {
 
 /**
  * SMTP settings for a lead kind, or null if anything required is missing.
- * RFQs go to RFQ_MAIL_TO when set, else MAIL_TO; contact messages to
- * MAIL_TO.
+ * RFQs go to RFQ_MAIL_TO when set; supplier registrations go to
+ * SUPPLIER_MAIL_TO when set; both fall back to MAIL_TO.
  */
 export function resolveSmtpConfig(env: LeadEnv, kind: LeadKind): SmtpConfig | null {
   const host = env.SMTP_HOST?.trim();
   const user = env.SMTP_USER?.trim();
   const pass = env.SMTP_PASS;
-  const to = ((kind === "rfq" && env.RFQ_MAIL_TO?.trim()) || env.MAIL_TO?.trim()) ?? "";
+  const to =
+    ((kind === "rfq" && env.RFQ_MAIL_TO?.trim()) ||
+      (kind === "supplier" && env.SUPPLIER_MAIL_TO?.trim()) ||
+      env.MAIL_TO?.trim()) ??
+    "";
   if (!host || !user || !pass || !to) return null;
   const port = Number(env.SMTP_PORT?.trim() || 587);
   return {
@@ -116,7 +123,7 @@ export function generateLeadId(
   now: Date = new Date(),
   randomValues: (bytes: Uint8Array) => Uint8Array = (b) => crypto.getRandomValues(b)
 ): string {
-  const prefix = kind === "rfq" ? "RFQ" : "MSG";
+  const prefix = kind === "rfq" ? "RFQ" : kind === "supplier" ? "SUP" : "MSG";
   const date = now.toISOString().slice(0, 10).replace(/-/g, "");
   const bytes = randomValues(new Uint8Array(6));
   const suffix = Array.from(bytes, (b) => ID_ALPHABET[b % ID_ALPHABET.length]).join("");
@@ -142,6 +149,9 @@ export function formatLogSummary(message: LeadMessage): string {
     ["kind", message.kind],
     ["intent", s.intent],
     ["model", s.model],
+    ["supplier_type", s.supplierType],
+    ["qa_state", s.qaState],
+    ["capabilities", s.capabilities && truncate(oneLine(s.capabilities), 80)],
     ["product", s.product],
     ["sku", s.sku],
     ["country", s.country && truncate(oneLine(s.country), 60)],

@@ -76,7 +76,7 @@ test("About keeps its truth boundaries", () => {
   }
   assert.doesNotMatch(ABOUT_PAGE, /StatusMarkers|about\.jpg|factory\.jpg/);
   assert.match(ABOUT_PAGE, /href: "\/rfq"/, "buyer CTA goes to RFQ");
-  assert.match(ABOUT_PAGE, /href: "\/contact"/, "supplier CTA goes to Contact");
+  assert.match(ABOUT_PAGE, /href: "\/suppliers\/apply"/, "supplier CTA goes to the localized registration route");
   assert.equal((ABOUT_PAGE.match(/<h1\b/g) ?? []).length, 1, "one h1");
 });
 

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 type Href = React.ComponentProps<typeof Link>["href"];
 type Path = { label: string; body: string; cta: string; href: Href };
 
-/** Closing CTA with two pathways: buyers to the RFQ, suppliers to Contact. */
+/** Closing CTA with two pathways: buyers to RFQ, suppliers to registration. */
 export function SplitCta({
   title,
   subtitle,

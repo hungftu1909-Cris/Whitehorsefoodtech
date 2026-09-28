@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import mark from "../../../public/brand/mark-256.png";
 
 /**
  * Real brand mark (from brand/logo-source.png, cropped to just the emblem —
@@ -18,7 +17,14 @@ export function Logo({ className }: { className?: string }) {
       )}
     >
       <span className="flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#fbf7ee] p-1 ring-1 ring-black/5">
-        <Image src={mark} alt="" className="h-full w-full object-contain" priority />
+        <Image
+          src="/brand/mark-256.png"
+          alt=""
+          width={256}
+          height={256}
+          className="h-full w-full object-contain"
+          priority
+        />
       </span>
       <span className="flex flex-col leading-none">
         <span>Whitehorse</span>
