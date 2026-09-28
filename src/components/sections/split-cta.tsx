@@ -4,7 +4,14 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type Href = React.ComponentProps<typeof Link>["href"];
-type Path = { label: string; body: string; cta: string; href: Href };
+type Path = {
+  label: string;
+  body: string;
+  cta: string;
+  href: Href;
+  secondaryCta?: string;
+  secondaryHref?: Href;
+};
 
 /** Closing CTA with two pathways: buyers to RFQ, suppliers to registration. */
 export function SplitCta({
@@ -12,14 +19,16 @@ export function SplitCta({
   subtitle,
   buyer,
   supplier,
+  id,
 }: {
   title: string;
   subtitle?: string;
   buyer: Path;
   supplier: Path;
+  id?: string;
 }) {
   return (
-    <section className="bg-muted/40">
+    <section id={id} className="scroll-mt-20 bg-muted/40">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
         <h2 className="max-w-3xl font-serif text-3xl leading-tight font-semibold text-balance text-foreground md:text-5xl">
           {title}
@@ -33,19 +42,33 @@ export function SplitCta({
                 <span className={cn("font-mono text-xs", i === 0 ? "text-primary-foreground/45" : "text-muted-foreground")}>0{i + 1}</span>
               </div>
               <p className={cn("mt-auto max-w-lg pt-12 text-lg leading-relaxed", i === 0 ? "text-primary-foreground/80" : "text-muted-foreground")}>{path.body}</p>
-              <Link
-                href={path.href}
-                className={cn(
-                  buttonVariants({ variant: i === 0 ? "default" : "outline", size: "lg" }),
-                  "mt-6 h-11 w-full cursor-pointer justify-between px-5 text-sm sm:w-auto sm:self-start",
-                  i === 0
-                    ? "bg-accent text-accent-foreground hover:bg-accent/90"
-                    : "border-border bg-transparent text-foreground hover:border-accent hover:bg-muted"
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link
+                  href={path.href}
+                  className={cn(
+                    buttonVariants({ variant: i === 0 ? "default" : "outline", size: "lg" }),
+                    "h-11 w-full cursor-pointer justify-between px-5 text-sm sm:w-auto",
+                    i === 0
+                      ? "bg-accent text-accent-foreground hover:bg-accent/90"
+                      : "border-border bg-transparent text-foreground hover:border-accent hover:bg-muted"
+                  )}
+                >
+                  {path.cta}
+                  <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+                </Link>
+                {path.secondaryCta && path.secondaryHref && (
+                  <Link
+                    href={path.secondaryHref}
+                    className={cn(
+                      buttonVariants({ variant: "outline", size: "lg" }),
+                      "h-11 w-full cursor-pointer justify-between border-primary-foreground/35 bg-transparent px-5 text-sm text-primary-foreground hover:bg-primary-foreground/10 sm:w-auto"
+                    )}
+                  >
+                    {path.secondaryCta}
+                    <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+                  </Link>
                 )}
-              >
-                {path.cta}
-                <ArrowRight className="ml-2 size-4" aria-hidden="true" />
-              </Link>
+              </div>
             </div>
           ))}
         </div>

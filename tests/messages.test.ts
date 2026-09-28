@@ -176,13 +176,20 @@ test("digital supply-chain technology is complete but clearly future-facing", ()
     const technology = get(catalog as Json, "certifications.technology") as {
       status: string;
       subtitle: string;
-      layers: { title: string }[];
+      backboneNodes: string[];
+      layers: { title: string; status: "current" | "building" | "roadmap" }[];
       aiTitle: string;
       note: string;
     };
     const titles = technology.layers.map((layer) => layer.title).join(" ");
 
     assert.equal(technology.layers.length, 6, `${locale}: six connected technology layers`);
+    assert.equal(technology.backboneNodes.length, 8, `${locale}: eight records in the data backbone`);
+    assert.deepEqual(
+      technology.layers.map((layer) => layer.status),
+      ["roadmap", "building", "roadmap", "current", "roadmap", "current"],
+      `${locale}: each layer has a truthful delivery status`,
+    );
     assert.match(titles, /IoT/);
     assert.match(titles, /WMS/);
     assert.match(titles, /TMS/);

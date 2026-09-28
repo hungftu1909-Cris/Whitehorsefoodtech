@@ -18,10 +18,14 @@ export async function generateMetadata({
 
 export default async function ContactPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { locale } = await params;
+  const topic = (await searchParams).topic;
+  const isDistribution = topic === "distribution";
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "contact" });
 
@@ -99,10 +103,10 @@ export default async function ContactPage({
 
           <div className="rounded-lg border border-border bg-card p-6 md:p-8 lg:col-span-3">
             <h2 className="font-serif text-xl font-semibold text-foreground">
-              {t("form.title")}
+              {isDistribution ? t("form.distributionTitle") : t("form.title")}
             </h2>
             <div className="mt-6">
-              <ContactForm />
+              <ContactForm defaultMessage={isDistribution ? t("form.distributionPrefill") : undefined} />
             </div>
           </div>
         </div>

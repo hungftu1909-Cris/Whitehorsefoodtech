@@ -165,7 +165,7 @@
       "technology": {
         "status": "Định hướng nền tảng",
         "title": "Công nghệ kết nối chất lượng & chuỗi cung ứng",
-        "body": "Kiến trúc triển khai theo giai đoạn để kết nối dữ liệu tại nguồn, hồ sơ chất lượng, tồn kho, quy trình thương mại và các mốc vận tải quanh từng yêu cầu.",
+        "body": "Một trục dữ liệu kết nối nhu cầu, thông số, năng lực nguồn cung, hồ sơ chất lượng, tồn kho và các mốc vận tải quanh từng yêu cầu.",
         "nodes": [
           "Dữ liệu nguồn & IoT",
           "Hồ sơ QMS / LIMS",
@@ -662,41 +662,65 @@
       "title": "Từ tín hiệu tại nguồn đến quyết định của Buyer — trên một chuỗi dữ liệu kết nối.",
       "subtitle": "Whitehorse đang xây dựng theo từng giai đoạn một lớp công nghệ kết nối hồ sơ chất lượng, tồn kho, quy trình thương mại và các mốc logistics quanh từng yêu cầu.",
       "status": "Định hướng nền tảng · triển khai theo giai đoạn",
+      "backboneEyebrow": "Một trục dữ liệu xuyên suốt",
+      "backboneTitle": "Mỗi lần bàn giao đều giữ nguyên ngữ cảnh thương mại và chất lượng.",
+      "backboneBody": "Mô hình nền tảng liên kết nhu cầu, thông số, năng lực nguồn cung, hồ sơ lô hàng và lịch sử giao nhận thay vì biến mỗi công đoạn thành một cuộc trao đổi rời rạc.",
+      "backboneNodes": [
+        "Nhu cầu Buyer",
+        "Thông số sản phẩm",
+        "Năng lực nhà cung cấp",
+        "Lô hàng khả dụng",
+        "Hồ sơ chất lượng",
+        "Dữ liệu kho",
+        "Mốc vận chuyển",
+        "Phản hồi Buyer"
+      ],
+      "statusLabels": {
+        "current": "Đang vận hành",
+        "building": "Đang xây dựng",
+        "roadmap": "Lộ trình"
+      },
       "layers": [
         {
           "number": "01",
           "title": "IoT & dữ liệu tại nguồn",
-          "description": "Dữ liệu cảm biến và hồ sơ đối tác có thể ghi nhận điều kiện vùng nguyên liệu, lưu kho và chế biến tại các điểm kiểm soát phù hợp."
+          "description": "Dữ liệu cảm biến và hồ sơ đối tác có thể ghi nhận điều kiện vùng nguyên liệu, lưu kho và chế biến tại các điểm kiểm soát phù hợp.",
+          "status": "roadmap"
         },
         {
           "number": "02",
           "title": "Hồ sơ QMS & LIMS",
-          "description": "Thông số, mẫu, kiểm nghiệm, COA, sai lệch và phê duyệt gắn với đúng nhà cung cấp, cơ sở và lô hàng."
+          "description": "Thông số, mẫu, kiểm nghiệm, COA, sai lệch và phê duyệt gắn với đúng nhà cung cấp, cơ sở và lô hàng.",
+          "status": "building"
         },
         {
           "number": "03",
           "title": "WMS · Quản trị kho",
-          "description": "Tồn kho, lô hàng, vị trí, đóng gói, điều kiện và dịch chuyển được cấu trúc để hỗ trợ khả năng quan sát vận hành."
+          "description": "Tồn kho, lô hàng, vị trí, đóng gói, điều kiện và dịch chuyển được cấu trúc để hỗ trợ khả năng quan sát vận hành.",
+          "status": "roadmap"
         },
         {
           "number": "04",
           "title": "Luồng nhà cung cấp & đơn hàng",
-          "description": "Yêu cầu, ghép nối, báo giá, phê duyệt và chứng từ được điều phối trong một lịch sử hồ sơ xuyên suốt."
+          "description": "Yêu cầu, ghép nối, báo giá, phê duyệt và chứng từ được điều phối trong một lịch sử hồ sơ xuyên suốt.",
+          "status": "current"
         },
         {
           "number": "05",
           "title": "TMS · Quản trị vận tải",
-          "description": "Đặt chỗ, tuyến vận chuyển, Incoterm, chứng từ, các mốc hành trình và ngoại lệ được kết nối với đơn hàng."
+          "description": "Đặt chỗ, tuyến vận chuyển, Incoterm, chứng từ, các mốc hành trình và ngoại lệ được kết nối với đơn hàng.",
+          "status": "roadmap"
         },
         {
           "number": "06",
           "title": "Mạng lưới Buyer & phân phối",
-          "description": "Tín hiệu nhu cầu, bằng chứng giao hàng và phản hồi của Buyer được đưa trở lại quyết định về sản phẩm và nguồn cung."
+          "description": "Tín hiệu nhu cầu, bằng chứng giao hàng và phản hồi của Buyer được đưa trở lại quyết định về sản phẩm và nguồn cung.",
+          "status": "current"
         }
       ],
       "aiTitle": "AI + dữ liệu thông minh xuyên suốt mọi lớp",
       "aiBody": "Được thiết kế để tăng tốc ghép nối từ nhà cung cấp tới Buyer, phát hiện sớm hồ sơ còn thiếu và tín hiệu rủi ro, đồng thời biến mỗi yêu cầu đã hoàn tất thành dữ liệu tốt hơn cho quyết định tiếp theo.",
-      "note": "Đây là kiến trúc đích và đang được triển khai theo từng giai đoạn. Phạm vi hệ thống, dữ liệu IoT, tích hợp đối tác và khả năng quan sát trực tiếp thay đổi theo nhà cung cấp, cơ sở và dự án."
+      "note": "Trạng thái phân biệt quy trình và mạng lưới quan hệ đang vận hành với các hệ thống đang xây dựng hoặc nằm trong lộ trình. Phạm vi hệ thống, dữ liệu IoT, tích hợp đối tác và khả năng quan sát trực tiếp thay đổi theo nhà cung cấp, cơ sở và dự án."
     },
     "sustainability": {
       "eyebrow": "Nguyên tắc",
@@ -809,7 +833,8 @@
       "buyer": {
         "label": "Dành cho Buyer & đối tác phân phối",
         "body": "Nhà nhập khẩu, nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối có thể gửi yêu cầu sản phẩm, thị trường và sản lượng để bắt đầu kết nối nguồn cung phù hợp.",
-        "cta": "Tham gia mạng lưới Buyer"
+        "cta": "Tìm nguồn nguyên liệu",
+        "distributionCta": "Trao đổi hợp tác phân phối"
       },
       "supplier": {
         "label": "Dành cho nhà cung cấp Việt Nam",
@@ -846,6 +871,8 @@
     },
     "form": {
       "title": "Gửi tin nhắn cho chúng tôi",
+      "distributionTitle": "Trao đổi cơ hội hợp tác phân phối",
+      "distributionPrefill": "Tôi muốn trao đổi về việc trở thành đối tác phân phối của Whitehorse.\n\nThị trường hoặc khu vực phụ trách:\nNhóm sản phẩm quan tâm:\nKênh phân phối hiện có:\nThông tin bổ sung:",
       "name": "Họ và tên",
       "company": "Công ty",
       "email": "Email công việc",

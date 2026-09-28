@@ -165,7 +165,7 @@
       "technology": {
         "status": "Platform direction",
         "title": "Connected quality & supply-chain technology",
-        "body": "A phased architecture designed to connect source data, quality evidence, inventory, commercial workflow and transport milestones around each request.",
+        "body": "One data backbone connects demand, specification, supply capability, quality evidence, inventory and transport milestones around each request.",
         "nodes": [
           "Source & IoT data",
           "QMS / LIMS evidence",
@@ -662,41 +662,65 @@
       "title": "From source signals to buyer decisions—one connected data chain.",
       "subtitle": "Whitehorse is building a phased technology layer to connect quality evidence, inventory, commercial workflow and logistics milestones around each request.",
       "status": "Platform direction · phased implementation",
+      "backboneEyebrow": "One data backbone",
+      "backboneTitle": "Every handoff keeps the commercial and quality context.",
+      "backboneBody": "The platform model links demand, specification, supply capability, lot evidence and delivery history instead of treating each step as a separate conversation.",
+      "backboneNodes": [
+        "Buyer need",
+        "Product specification",
+        "Supplier capability",
+        "Available lot",
+        "Quality evidence",
+        "Warehouse record",
+        "Shipment milestone",
+        "Buyer feedback"
+      ],
+      "statusLabels": {
+        "current": "Operating now",
+        "building": "Being built",
+        "roadmap": "Roadmap"
+      },
       "layers": [
         {
           "number": "01",
           "title": "IoT & source capture",
-          "description": "Sensor readings and partner records can capture source, storage and process conditions at the relevant control points."
+          "description": "Sensor readings and partner records can capture source, storage and process conditions at the relevant control points.",
+          "status": "roadmap"
         },
         {
           "number": "02",
           "title": "QMS & LIMS evidence",
-          "description": "Specifications, samples, tests, COA, deviations and approvals tied to the supplier, site and lot."
+          "description": "Specifications, samples, tests, COA, deviations and approvals tied to the supplier, site and lot.",
+          "status": "building"
         },
         {
           "number": "03",
           "title": "WMS · Warehouse management",
-          "description": "Inventory, lot, location, packing, condition and movement records structured for operational visibility."
+          "description": "Inventory, lot, location, packing, condition and movement records structured for operational visibility.",
+          "status": "roadmap"
         },
         {
           "number": "04",
           "title": "Supplier & order workflow",
-          "description": "Requirements, matching, quotations, approvals and documents coordinated in one case history."
+          "description": "Requirements, matching, quotations, approvals and documents coordinated in one case history.",
+          "status": "current"
         },
         {
           "number": "05",
           "title": "TMS · Transportation management",
-          "description": "Bookings, routes, Incoterms, shipping documents, milestones and exceptions connected to the order."
+          "description": "Bookings, routes, Incoterms, shipping documents, milestones and exceptions connected to the order.",
+          "status": "roadmap"
         },
         {
           "number": "06",
           "title": "Buyer & distribution network",
-          "description": "Demand signals, delivery evidence and buyer feedback returned to product and source decisions."
+          "description": "Demand signals, delivery evidence and buyer feedback returned to product and source decisions.",
+          "status": "current"
         }
       ],
       "aiTitle": "AI + data intelligence across every layer",
       "aiBody": "Designed to accelerate supplier-to-buyer matching, surface missing evidence and risk signals, and turn each completed request into better decisions for the next.",
-      "note": "This is the target architecture and is being implemented in phases. System coverage, IoT data, partner integrations and live visibility vary by supplier, facility and project."
+      "note": "Statuses distinguish the operating workflow and current relationship network from systems being built or planned. System coverage, IoT data, partner integrations and live visibility vary by supplier, facility and project."
     },
     "sustainability": {
       "eyebrow": "Principles",
@@ -809,7 +833,8 @@
       "buyer": {
         "label": "For buyers & distributors",
         "body": "Importers, manufacturers, brands, ingredient users and distribution partners can share a product brief, market and volume for a qualified supply conversation.",
-        "cta": "Join the buyer network"
+        "cta": "Source ingredients",
+        "distributionCta": "Discuss distribution partnership"
       },
       "supplier": {
         "label": "For Vietnamese suppliers",
@@ -846,6 +871,8 @@
     },
     "form": {
       "title": "Send us a message",
+      "distributionTitle": "Discuss a distribution partnership",
+      "distributionPrefill": "I would like to discuss becoming a Whitehorse distribution partner.\n\nMarkets or territories:\nProduct families of interest:\nCurrent distribution channels:\nAdditional context:",
       "name": "Full name",
       "company": "Company",
       "email": "Business email",
