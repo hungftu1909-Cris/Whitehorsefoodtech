@@ -22,7 +22,7 @@
 
 import type { FamilySlug, Localized } from "./catalog";
 
-export type FamilyImageKind = "editorial" | "studio";
+export type FamilyImageKind = "editorial" | "studio" | "concept-pack";
 
 export type FamilyImage = {
   src: string;
@@ -73,6 +73,30 @@ export const FAMILY_IMAGES: Record<FamilySlug, FamilyImage> = {
       vi: "Nhân hạt điều cùng hạt tiêu đen, hoa hồi và thanh quế",
     },
     kind: "studio",
+  },
+};
+
+/**
+ * Second image in a family-page hero gallery: the owner's packaging
+ * line-up render, label untouched (docs/image-inventory.md). Shown with the
+ * "Concept packaging" badge, never as approved packaging or stock.
+ */
+export const FAMILY_LINEUP: Partial<Record<FamilySlug, FamilyImage>> = {
+  coconut: {
+    src: "/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp",
+    alt: {
+      en: "Packaging concept line-up for coconut: milk and cream cartons, desiccated coconut, coconut milk powder and coconut blossom sugar pouches",
+      vi: "Bộ bao bì ý tưởng nhóm dừa: hộp sữa và kem dừa, túi dừa sấy, bột sữa dừa và đường hoa dừa",
+    },
+    kind: "concept-pack",
+  },
+  "birds-nest": {
+    src: "/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp",
+    alt: {
+      en: "Packaging concept line-up for bird's nest: a cleaned-nest rigid box and an instant bird's nest carton",
+      vi: "Bộ bao bì ý tưởng nhóm yến: hộp cứng yến làm sạch và hộp yến ăn liền",
+    },
+    kind: "concept-pack",
   },
 };
 

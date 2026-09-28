@@ -11,7 +11,8 @@ import { FamilyVisual } from "@/components/catalog/family-visual";
 import { RangeCard, SkuCard } from "@/components/catalog/cards";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
-import { familyImage } from "@/lib/family-images";
+import { FAMILY_LINEUP, familyImage } from "@/lib/family-images";
+import { SkuGallery } from "@/components/catalog/sku-gallery";
 import {
   findRange,
   PACKAGING_OPTIONS,
@@ -93,7 +94,13 @@ export default async function ProductFamilyPage({
     request: tc("requestRange"),
     indicative: tc("indicativeLabel"),
     indicativeNote: tc("indicativeNote"),
+    conceptBadge: tc("conceptPackBadge"),
+    studioBadge: tp("studioBadge"),
+    editorialBadge: tc("editorialBadge"),
   };
+  const badgeFor = (kind: string) =>
+    kind === "concept-pack" ? tc("conceptPackBadge") : kind === "studio" ? tp("studioBadge") : tc("editorialBadge");
+  const lineup = FAMILY_LINEUP[family];
   const packaging = PACKAGING_OPTIONS[family];
   const rangeCards = ranges.map((range) => ({
     id: range.id,
@@ -151,20 +158,34 @@ export default async function ProductFamilyPage({
           <RequestActions family={family} labels={actionLabels} className="mt-7" />
         </div>
         <div>
-          <FamilyVisual
-            family={family}
-            locale={locale}
-            name={name}
-            labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge") }}
-            sizes="(min-width: 1280px) 38rem, (min-width: 1024px) 50vw, 100vw"
-            priority
-            className="rounded-lg border border-border"
-          />
+          {lineup ? (
+            // Studio image first (LCP), then the packaging line-up render.
+            <SkuGallery
+              images={[hero, lineup].map((image) => ({
+                src: image.src,
+                alt: pick(image.alt, locale),
+                badge: badgeFor(image.kind),
+              }))}
+              label={tc("galleryLabel")}
+              showLabel={tc("showImage", { index: "{index}" })}
+            />
+          ) : (
+            <FamilyVisual
+              family={family}
+              locale={locale}
+              name={name}
+              labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge") }}
+              sizes="(min-width: 1280px) 38rem, (min-width: 1024px) 50vw, 100vw"
+              priority
+              className="rounded-lg border border-border"
+            />
+          )}
           {/* A studio representation is never inventory, a supplier batch or
-              evidence — say so under the image. */}
+              evidence — say so under the image; same for concept packaging. */}
           {hero.kind === "studio" && hasPublicFile(hero.src) && (
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tp("studioNote")}</p>
           )}
+          {lineup && <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{tc("conceptPackNote")}</p>}
         </div>
       </section>
 

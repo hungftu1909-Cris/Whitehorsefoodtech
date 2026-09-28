@@ -7,13 +7,14 @@ import {
   CATALOG_RANGES,
   CATALOG_SKUS,
   PACKAGING_OPTIONS,
+  RANGE_IMAGES,
   relatedSkus,
   type Localized,
 } from "../src/lib/catalog.ts";
 import { COFFEE_FORMAT_CODES, parseRfqPrefill, rfqSchema } from "../src/lib/validations.ts";
 import { rfqHref } from "../src/lib/rfq-links.ts";
 import { PRODUCT_CATEGORIES } from "../src/lib/nav.ts";
-import { FAMILY_IMAGES } from "../src/lib/family-images.ts";
+import { FAMILY_IMAGES, FAMILY_LINEUP } from "../src/lib/family-images.ts";
 
 const SOURCES = fs.readFileSync("docs/product-range-sources.md", "utf8");
 const PROVENANCE = fs.readFileSync("docs/asset-provenance.md", "utf8");
@@ -133,6 +134,31 @@ test("each confirmed code leads with its own packaging render, never a shared im
   }
   const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
   for (const sku of CATALOG_SKUS) assert.ok(INVENTORY.includes(sku.images[0].src.replace(/^\//, "public/")), `${sku.code} in inventory`);
+});
+
+test("range images are distinct, optimised, inventoried and never borrowed across ranges", () => {
+  const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
+  const seen = new Map<string, string>();
+  for (const range of CATALOG_RANGES) {
+    assert.equal(range.images, RANGE_IMAGES[range.id], `${range.id} images come from RANGE_IMAGES`);
+    for (const image of range.images ?? []) {
+      assert.ok(!seen.has(image.src), `${image.src} used by ${seen.get(image.src)} and ${range.id}`);
+      seen.set(image.src, range.id);
+      assert.ok(image.src.startsWith(`/images/catalog/${range.family}/`), `${image.src} sits under its family`);
+      const file = path.join("public", image.src);
+      assert.ok(fs.existsSync(file), `${image.src} missing`);
+      assert.ok(fs.statSync(file).size < 200 * 1024, `${image.src} not optimised`);
+      assert.ok(INVENTORY.includes(image.src.replace(/^\//, "public/")), `${image.src} not in image-inventory.md`);
+      assert.ok(image.alt.en.trim() && image.alt.vi.trim());
+      assert.doesNotMatch(image.alt.en + image.alt.vi, /\bWH(CO|BN|FR)\d/, "range alt text never names an unconfirmed code");
+    }
+  }
+  for (const family of ["coconut", "birds-nest"] as const) {
+    const lineup = FAMILY_LINEUP[family];
+    assert.ok(lineup && fs.existsSync(path.join("public", lineup.src)), `${family} line-up`);
+    assert.equal(lineup!.kind, "concept-pack");
+    assert.ok(INVENTORY.includes(lineup!.src.replace(/^\//, "public/")));
+  }
 });
 
 test("catalog request links prefill the RFQ and validate", () => {

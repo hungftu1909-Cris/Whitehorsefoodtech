@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { pick, type CatalogRange, type CatalogSku } from "@/lib/catalog";
+import { pick, type CatalogImage, type CatalogRange, type CatalogSku } from "@/lib/catalog";
 import { rfqHref } from "@/lib/rfq-links";
+import { cn } from "@/lib/utils";
 
 /** Small visible label for editorial (non-packshot) imagery. */
 export function ImageBadge({ children }: { children: React.ReactNode }) {
@@ -70,9 +71,11 @@ export function SkuCard({
 }
 
 /**
- * Text-led tile for a sourcing / custom-development range: name, summary,
- * formats, the general specification fields a buyer specifies, and a
- * prefilled request. No imagery — ranges are not specific products.
+ * Tile for a sourcing / custom-development range: optional range-level
+ * visuals (one distinct image per named product, each with its visible
+ * badge), name, summary, formats, the general specification fields a buyer
+ * specifies, and a prefilled request. A range is not a confirmed code, so
+ * no code or stock status is shown.
  */
 export function RangeCard({
   range,
@@ -81,10 +84,38 @@ export function RangeCard({
 }: {
   range: CatalogRange;
   locale: string;
-  labels: { formats: string; specify: string; request: string; indicative: string; indicativeNote: string };
+  labels: {
+    formats: string;
+    specify: string;
+    request: string;
+    indicative: string;
+    indicativeNote: string;
+    conceptBadge: string;
+    studioBadge: string;
+    editorialBadge: string;
+  };
 }) {
+  const badge = (kind: CatalogImage["kind"]) =>
+    kind === "concept-pack" ? labels.conceptBadge : kind === "studio" ? labels.studioBadge : labels.editorialBadge;
   return (
-    <article className="flex w-full flex-col rounded-lg border border-border bg-card p-6">
+    <article className="flex w-full flex-col overflow-hidden rounded-lg border border-border bg-card">
+      {range.images && range.images.length > 0 && (
+        <div className={cn("grid gap-px border-b border-border bg-border", range.images.length > 1 && "grid-cols-2")}>
+          {range.images.map((image) => (
+            <div key={image.src} className="relative aspect-[4/3] bg-card">
+              <Image
+                src={image.src}
+                alt={pick(image.alt, locale)}
+                fill
+                sizes={range.images!.length > 1 ? "(min-width: 1024px) 13rem, 50vw" : "(min-width: 1024px) 26rem, 100vw"}
+                className="object-cover"
+              />
+              <ImageBadge>{badge(image.kind)}</ImageBadge>
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="flex flex-1 flex-col p-6">
       <h3 className="font-serif text-lg font-semibold text-foreground">{pick(range.name, locale)}</h3>
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pick(range.summary, locale)}</p>
       <p className="mt-4 text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{labels.formats}</p>
@@ -123,6 +154,7 @@ export function RangeCard({
           {labels.request}
           <ArrowRight className="size-4" aria-hidden="true" />
         </Link>
+      </div>
       </div>
     </article>
   );

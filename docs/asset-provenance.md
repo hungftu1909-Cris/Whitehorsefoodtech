@@ -101,6 +101,15 @@ wording) are no longer referenced by any code
 in this branch; delete them before Production so they are not publicly
 reachable by URL.
 
+## Range packaging concept renders — coconut, bird's nest (added 2026-09-28)
+
+Same source folder and label rule as the coffee renders below. Files under
+`public/images/catalog/coconut/packs/` and
+`public/images/catalog/birds-nest/packs/`, with per-file source, hash,
+label status and range mapping in `docs/image-inventory.md`. Shown only at
+range level (no confirmed codes) with "Concept packaging" / "Bao bì ý
+tưởng"; the family-page line-up carries the concept-packaging note.
+
 ## Coffee packaging concept renders (added 2026-09-28)
 
 Source: CEO folder `D:\Working\WK 2\White Horse\BM Foodtech\Anh SKU\Anh san pham\WHITEHORSE_01_COFFEE.zip`

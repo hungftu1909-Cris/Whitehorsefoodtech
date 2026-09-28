@@ -28,10 +28,12 @@ export type CatalogImage = {
   /**
    * "editorial": generic photographs from the website-edit brief.
    * "concept-pack": the owner's packaging concept render for that exact
-   * code (docs/image-inventory.md) — provisional artwork, never a photo of
-   * stock or a final label. Both carry a visible badge.
+   * code or range (docs/image-inventory.md) — provisional artwork with the
+   * source label untouched, never a photo of stock or a final label.
+   * "studio": text-free studio representation of an ingredient format.
+   * Every kind carries a visible badge.
    */
-  kind: "editorial" | "concept-pack";
+  kind: "editorial" | "concept-pack" | "studio";
 };
 
 export type SpecRow = {
@@ -59,6 +61,12 @@ export type CatalogRange = {
    * (docs/claim-registry.md row 24).
    */
   indicative?: Localized[];
+  /**
+   * Range-level visuals, filled from RANGE_IMAGES below. A range has no
+   * official SKU code, so these illustrate the product form and are never
+   * presented as a confirmed code, stock or approved packaging.
+   */
+  images?: CatalogImage[];
 };
 
 export type CatalogSku = {
@@ -272,6 +280,41 @@ export const CATALOG_RANGES: CatalogRange[] = [
      L("Particle size (mesh), colour and aroma", "Cỡ hạt (mesh), màu sắc và mùi thơm"), L("Packaging", "Bao bì")],
     [L("Whole black pepper: density 500–570 g/l; moisture ≤ 13%", "Hồ tiêu đen nguyên hạt: dung trọng 500–570 g/l; độ ẩm ≤ 13%")]),
 ];
+
+// ---------------------------------------------------------------- range images
+// Source renders from the CEO folder, label untouched (docs/image-inventory.md).
+// One distinct pack per named product; ranges without a suitable source
+// stay text-only rather than borrow another product's image.
+const RPACK = (family: FamilySlug, file: string, en: string, vi: string): CatalogImage => ({
+  src: `/images/catalog/${family}/packs/${file}.webp`,
+  alt: { en: `Packaging concept render: ${en}`, vi: `Hình render bao bì ý tưởng: ${vi}` },
+  kind: "concept-pack",
+});
+
+export const RANGE_IMAGES: Partial<Record<string, CatalogImage[]>> = {
+  "coconut-milk-cream": [
+    RPACK("coconut", "coconut-milk-carton-concept-pack", "coconut milk in a 1 L aseptic carton", "sữa dừa trong hộp giấy vô trùng 1 L"),
+    RPACK("coconut", "coconut-cream-bib-concept-pack", "coconut cream in a 20 kg bag-in-box carton", "kem dừa trong thùng bag-in-box 20 kg"),
+  ],
+  "coconut-powders-solids": [
+    RPACK("coconut", "desiccated-coconut-pouch-concept-pack", "desiccated coconut, fine grade, in a 1 kg pouch with window", "dừa sấy khô loại mịn trong túi 1 kg có cửa sổ"),
+    RPACK("coconut", "coconut-milk-powder-pouch-concept-pack", "coconut milk powder in a 500 g / 1 kg pouch", "bột sữa dừa trong túi 500 g / 1 kg"),
+  ],
+  "coconut-blossom-sugar": [
+    RPACK("coconut", "coconut-blossom-sugar-pouch-concept-pack", "coconut blossom sugar in a retail pouch with window", "đường hoa dừa trong túi bán lẻ có cửa sổ"),
+  ],
+  "birds-nest-cleaned": [
+    RPACK("birds-nest", "cleaned-birds-nest-box-concept-pack", "cleaned edible bird's nest in a 50 g rigid box", "yến sào làm sạch trong hộp cứng 50 g"),
+  ],
+  "birds-nest-instant": [
+    RPACK("birds-nest", "instant-birds-nest-sachet-concept-pack", "instant bird's nest in a 10 g serving sachet", "yến ăn liền trong gói 10 g"),
+    RPACK("birds-nest", "instant-birds-nest-carton-concept-pack", "instant bird's nest in a carton of 10 × 10 g sachets", "yến ăn liền trong hộp 10 gói 10 g"),
+  ],
+};
+for (const range of CATALOG_RANGES) {
+  const images = RANGE_IMAGES[range.id];
+  if (images) range.images = images;
+}
 
 // ---------------------------------------------------------------- confirmed coffee codes
 const MOISTURE_GREEN: SpecRow = {
