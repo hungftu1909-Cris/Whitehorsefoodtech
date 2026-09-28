@@ -94,6 +94,7 @@ export default async function ProductFamilyPage({
     request: tc("requestRange"),
     indicative: tc("indicativeLabel"),
     indicativeNote: tc("indicativeNote"),
+    moreDetail: tc("moreDetail"),
     conceptBadge: tc("conceptPackBadge"),
     studioBadge: tp("studioBadge"),
     editorialBadge: tc("editorialBadge"),

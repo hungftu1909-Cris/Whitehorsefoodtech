@@ -71,12 +71,16 @@ export function SkuCard({
 }
 
 /**
- * Tile for a sourcing / custom-development range: optional range-level
- * visuals (one distinct image per named product, each with its visible
- * badge), name, summary, formats, the general specification fields a buyer
- * specifies, and a prefilled request. A range is not a confirmed code, so
- * no code or stock status is shown.
+ * Tile for a sourcing / custom-development range. The default view stays
+ * short on mobile: a distinct image, name + one-line value, formats, the
+ * first key specification dimensions and one CTA. Remaining dimensions and
+ * the indicative values (with their disclaimer) sit in a native <details>
+ * — no client JS. A single image renders server-side; only ranges with
+ * several images use the client gallery. A range is not a confirmed code,
+ * so no code or stock status is shown.
  */
+const KEY_SPEC_COUNT = 3;
+
 export function RangeCard({
   range,
   locale,
@@ -90,6 +94,7 @@ export function RangeCard({
     request: string;
     indicative: string;
     indicativeNote: string;
+    moreDetail: string;
     conceptBadge: string;
     studioBadge: string;
     editorialBadge: string;
@@ -100,60 +105,78 @@ export function RangeCard({
 }) {
   const badge = (kind: CatalogImage["kind"]) =>
     kind === "concept-pack" ? labels.conceptBadge : kind === "studio" ? labels.studioBadge : labels.editorialBadge;
+  const images = range.images ?? [];
+  const sizes = "(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw";
+  const keySpecs = range.specFields.slice(0, KEY_SPEC_COUNT);
+  const moreSpecs = range.specFields.slice(KEY_SPEC_COUNT);
+  const hasMore = moreSpecs.length > 0 || !!range.indicative;
+
   return (
     <article className="flex w-full flex-col overflow-hidden rounded-lg border border-border bg-card">
-      {range.images && range.images.length > 0 && (
-        // One full-width image at a time (with its own badge), thumbnails to
-        // switch — packs stay legible instead of shrinking side by side.
+      {images.length > 1 ? (
         <SkuGallery
-          images={range.images.map((image) => ({ src: image.src, alt: pick(image.alt, locale), badge: badge(image.kind) }))}
+          images={images.map((image) => ({ src: image.src, alt: pick(image.alt, locale), badge: badge(image.kind) }))}
           label={`${pick(range.name, locale)} — ${labels.galleryLabel}`}
           showLabel={labels.showImage}
           priority={false}
-          sizes="(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw"
+          sizes={sizes}
           embedded
         />
-      )}
-      <div className="flex flex-1 flex-col p-6">
-      <h3 className="font-serif text-lg font-semibold text-foreground">{pick(range.name, locale)}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pick(range.summary, locale)}</p>
-      <p className="mt-4 text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{labels.formats}</p>
-      <ul className="mt-2 flex flex-wrap gap-1.5">
-        {range.formats.map((f) => (
-          <li key={f.en} className="rounded-full bg-muted px-2.5 py-0.5 text-xs text-foreground">
-            {pick(f, locale)}
-          </li>
-        ))}
-      </ul>
-      <p className="mt-4 text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{labels.specify}</p>
-      <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
-        {range.specFields.map((f) => (
-          <li key={f.en} className="flex gap-2">
-            <span className="mt-1.5 size-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-            {pick(f, locale)}
-          </li>
-        ))}
-      </ul>
-      {range.indicative && (
-        <div className="mt-4 border-t border-border pt-4">
-          <p className="text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{labels.indicative}</p>
-          <ul className="mt-2 space-y-1 text-xs text-foreground/85">
-            {range.indicative.map((line) => (
-              <li key={line.en}>{pick(line, locale)}</li>
-            ))}
-          </ul>
-          <p className="mt-2 text-[0.7rem] leading-relaxed text-muted-foreground italic">{labels.indicativeNote}</p>
+      ) : images.length === 1 ? (
+        <div className="relative aspect-[4/3] overflow-hidden border-b border-border bg-muted">
+          <Image src={images[0].src} alt={pick(images[0].alt, locale)} fill sizes={sizes} className="object-cover" />
+          <ImageBadge>{badge(images[0].kind)}</ImageBadge>
         </div>
-      )}
-      <div className="mt-auto pt-5">
-        <Link
-          href={rfqHref({ family: range.family, range: range.id, intent: "spec-sheet" })}
-          className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-accent hover:underline"
-        >
-          {labels.request}
-          <ArrowRight className="size-4" aria-hidden="true" />
-        </Link>
-      </div>
+      ) : null}
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="font-serif text-lg font-semibold text-foreground">{pick(range.name, locale)}</h3>
+        <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{pick(range.summary, locale)}</p>
+        <ul aria-label={labels.formats} className="mt-3 flex flex-wrap gap-1.5">
+          {range.formats.map((f) => (
+            <li key={f.en} className="rounded-full bg-muted px-2.5 py-0.5 text-xs text-foreground">
+              {pick(f, locale)}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+          <span className="font-medium text-foreground/80">{labels.specify}:</span>{" "}
+          {keySpecs.map((f) => pick(f, locale)).join(" · ")}
+        </p>
+        {hasMore && (
+          <details className="group/details mt-3 border-t border-border pt-3 text-xs">
+            <summary className="cursor-pointer font-medium text-foreground/80 hover:text-accent">{labels.moreDetail}</summary>
+            {moreSpecs.length > 0 && (
+              <ul className="mt-2 space-y-1 text-muted-foreground">
+                {moreSpecs.map((f) => (
+                  <li key={f.en} className="flex gap-2">
+                    <span className="mt-1.5 size-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                    {pick(f, locale)}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {range.indicative && (
+              <div className="mt-3">
+                <p className="text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{labels.indicative}</p>
+                <ul className="mt-1.5 space-y-1 text-foreground/85">
+                  {range.indicative.map((line) => (
+                    <li key={line.en}>{pick(line, locale)}</li>
+                  ))}
+                </ul>
+                <p className="mt-2 leading-relaxed text-muted-foreground italic">{labels.indicativeNote}</p>
+              </div>
+            )}
+          </details>
+        )}
+        <div className="mt-auto pt-4">
+          <Link
+            href={rfqHref({ family: range.family, range: range.id, intent: "spec-sheet" })}
+            className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-accent hover:underline"
+          >
+            {labels.request}
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        </div>
       </div>
     </article>
   );

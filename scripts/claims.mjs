@@ -25,6 +25,9 @@ export const FORBIDDEN_CLAIMS = [
   // The retired "3,000+ partner growing regions" wording stays blocked.
   { id: "regions-3000", pattern: /\b3[.,]000\s?\+\s*(partner|growing|vùng)/i, reason: "Retired partner-region claim; 3,000+ may only appear as the tagged three-year vision." },
   { id: "supplier-20", pattern: /\b20\+\s*(supplier|organisation|organization|tổ chức|nhà cung cấp)/i, reason: "The 20+ supplier figure is not used as a public headline." },
+  // 50+ screened suppliers is the current fact (claim registry row 4); the
+  // retired 2026 objective of 30–50 suppliers must not come back.
+  { id: "supplier-target", pattern: /\b30\s?[–-]\s?50\b|2026 objective|mục tiêu 2026|dự kiến trong (năm )?2026/i, reason: "Retired 30–50 supplier objective; use the current 50+ screened-supplier statement." },
   { id: "served-exported", pattern: /\b(countries|markets)\s+(we\s+)?(serve|served)\b|\bexported\s+to\b|\b(our|whitehorse(?:'s)?)\s+export track record|recurring buyers|repeat buyers|quốc gia đã xuất khẩu|đã xuất khẩu (sang|tới)/i, reason: "Market relationships are not shipments, service or a track record." },
   { id: "highest-standards", pattern: /highest (quality )?standards|tiêu chuẩn cao nhất/i, reason: "Use rigorous defined criteria aligned with buyer requirements instead." },
   { id: "internal-systems", pattern: /\bWB(IS|OS)\b/, reason: "Internal system names are not public." },

@@ -25,7 +25,7 @@ export function SkuGallery({
   /** Page-hero galleries are the LCP; galleries inside cards are not. */
   priority?: boolean;
   sizes?: string;
-  /** Flush inside a card: no outer frame, thumbnails padded. */
+  /** Flush inside a card: no outer frame, numbered switches instead of thumbnails. */
   embedded?: boolean;
 }) {
   const [active, setActive] = useState(0);
@@ -52,25 +52,48 @@ export function SkuGallery({
           {current.badge}
         </span>
       </div>
-      {images.length > 1 && (
-        <div className={cn("flex gap-3", embedded ? "px-6 pt-4" : "mt-3")}>
-          {images.map((image, i) => (
-            <button
-              key={image.src}
-              type="button"
-              aria-label={showLabel.replace("{index}", String(i + 1))}
-              aria-pressed={i === active}
-              onClick={() => setActive(i)}
-              className={cn(
-                "relative aspect-[4/3] w-24 cursor-pointer overflow-hidden rounded-md border-2 transition-colors",
-                i === active ? "border-accent" : "border-transparent opacity-80 hover:opacity-100"
-              )}
-            >
-              <Image src={image.src} alt="" fill sizes="6rem" className="object-cover" />
-            </button>
-          ))}
-        </div>
-      )}
+      {images.length > 1 &&
+        (embedded ? (
+          // Inside cards: numbered switches instead of image thumbnails, so a
+          // card fetches one image until the visitor asks for another.
+          <div className="flex gap-2 px-5 pt-3">
+            {images.map((image, i) => (
+              <button
+                key={image.src}
+                type="button"
+                aria-label={showLabel.replace("{index}", String(i + 1))}
+                aria-pressed={i === active}
+                onClick={() => setActive(i)}
+                className={cn(
+                  "flex size-8 cursor-pointer items-center justify-center rounded-full border text-xs font-medium tabular-nums transition-colors",
+                  i === active
+                    ? "border-accent bg-accent text-accent-foreground"
+                    : "border-border text-muted-foreground hover:border-accent hover:text-accent"
+                )}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-3 flex gap-3">
+            {images.map((image, i) => (
+              <button
+                key={image.src}
+                type="button"
+                aria-label={showLabel.replace("{index}", String(i + 1))}
+                aria-pressed={i === active}
+                onClick={() => setActive(i)}
+                className={cn(
+                  "relative aspect-[4/3] w-24 cursor-pointer overflow-hidden rounded-md border-2 transition-colors",
+                  i === active ? "border-accent" : "border-transparent opacity-80 hover:opacity-100"
+                )}
+              >
+                <Image src={image.src} alt="" fill sizes="6rem" className="object-cover" />
+              </button>
+            ))}
+          </div>
+        ))}
     </div>
   );
 }

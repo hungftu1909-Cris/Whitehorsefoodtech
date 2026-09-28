@@ -53,129 +53,98 @@
     "hero": {
       "eyebrow": "Vietnam · Premium agricultural ingredients",
       "title": "Premium Vietnamese ingredients, connected to the buyers who need them.",
-      "subtitle": "Whitehorse Foodtech links suitable farms, cooperatives and processing factories in Vietnam with international distributors, food and beverage manufacturers, foodservice groups and brands. For each order, we agree sample availability, specifications, documentation requirements and COA scope with you.",
+      "subtitle": "Bulk ingredients, and OEM, ODM and OBM through suitable manufacturing partners — for distributors, manufacturers, foodservice groups and brands.",
       "ctaPrimary": "Request a quote",
       "ctaSecondary": "Explore product families"
     },
-    "segments": {
-      "eyebrow": "Who we work with",
-      "title": "Built for international B2B buyers",
-      "subtitle": "We organise the path from purchase requirement to delivery — source selection, samples and specifications, quality documents, commercial alignment and logistics — around the way each buyer works.",
+    "proof": {
+      "title": "Whitehorse today",
       "items": [
         {
-          "title": "International distributors",
-          "description": "Supplier matching across five ingredient families, with documentation and packaging agreed for each destination market."
+          "value": "50+",
+          "label": "Suppliers screened by product capability, facility and market requirements"
         },
         {
-          "title": "Food & beverage manufacturers",
-          "description": "Ingredients specified to your application, with reference samples and a written specification before commercial production."
+          "value": "10+",
+          "label": "Markets with active buyer and trading relationships"
         },
         {
-          "title": "Foodservice groups",
-          "description": "Formats and pack sizes for kitchens and chains, from roasted coffee to frozen fruit and coconut products, confirmed per order."
-        },
-        {
-          "title": "Brands & private label",
-          "description": "Product development and private-label packaging for retail programmes, from single-serve coffee to bird's nest drinks."
-        }
-      ]
-    },
-    "trustStrip": {
-      "title": "How we work with buyers",
-      "items": [
-        "Five ingredient families, from coffee to botanicals",
-        "Specification agreed in writing before production",
-        "Samples and COA arranged per order",
-        "Export documents coordinated with logistics partners"
-      ]
-    },
-    "valueProps": {
-      "eyebrow": "Why Whitehorse",
-      "title": "Built for buyers who need consistency they can verify",
-      "subtitle": "Established in 2026, Whitehorse builds buyer confidence through a transparent process: requirements are agreed in writing, and you know each proposed supplier's qualification status before you commit.",
-      "items": [
-        {
-          "title": "Coordinated supply",
-          "description": "We match your requirement to suppliers in our network whose product, site and documentation fit it — and tell you plainly when a supplier is still in assessment."
-        },
-        {
-          "title": "Specification before shipment",
-          "description": "The sample you approve and the specification you sign off become the reference for the order. Testing scope and COA are agreed in the contract."
-        },
-        {
-          "title": "Export documents, coordinated",
-          "description": "Certificate of origin, phytosanitary and fumigation certificates and customs paperwork are prepared with our logistics and documentation partners, then checked against your order before loading."
-        },
-        {
-          "title": "One accountable contact",
-          "description": "You work directly with the Whitehorse team on specifications, packaging and delivery schedules. Not a call center, not a ticket queue."
+          "value": "5",
+          "label": "Ingredient families, from coffee to botanicals"
         }
       ]
     },
     "productsPreview": {
       "eyebrow": "What we source",
-      "title": "Five ingredient families, sourced to specification",
-      "subtitle": "Coffee leads with nine confirmed product codes. Coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request, matched to suppliers who fit your specification.",
+      "title": "Five ingredient families",
+      "subtitle": "Coffee with nine confirmed product codes; four more families sourced or developed to your specification.",
       "items": [
         {
           "title": "Coffee Ingredients",
           "tagline": "Green, roasted, soluble, extract & cold brew",
-          "description": "Green and roasted beans, soluble coffee, extracts and cold brew, with nine confirmed product codes for trading, manufacturing and private label.",
-          "cta": "Explore Coffee",
           "status": "Confirmed product codes"
         },
         {
           "title": "Coconut Ingredients",
           "tagline": "Milk & cream, powders & solids, blossom sugar",
-          "description": "Coconut milk and cream, desiccated coconut, coconut milk powder and coconut blossom sugar, sourced on request in bulk or private-label formats.",
-          "cta": "Explore Coconut",
           "status": "Sourced on request"
         },
         {
           "title": "Bird's Nest Ingredients",
           "tagline": "Cleaned nest & instant / ready-to-prepare formats",
-          "description": "Selected and cleaned edible bird's nest, plus instant and ready-to-prepare formats, developed on request for nutrition and premium food brands.",
-          "cta": "Explore Bird's Nest",
           "status": "Developed on request"
         },
         {
           "title": "Fruit Ingredients",
           "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
-          "description": "Soft-dried and freeze-dried mango, soft-dried soursop, and passion fruit concentrate, frozen purée and powder, sourced on request to your specification.",
-          "cta": "Explore Fruits",
           "status": "Sourced on request"
         },
         {
           "title": "Nuts, Spices & Botanicals",
           "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
-          "description": "Cashew kernels, whole black pepper, freeze-dried cinnamon and star anise, sourced on request with specifications and documentation agreed per order.",
-          "cta": "Explore Ingredients",
           "status": "Sourced on request"
         }
       ]
     },
-    "process": {
-      "eyebrow": "How we work",
-      "title": "A process you can check at each stage",
-      "subtitle": "Each requirement is agreed in writing before the order moves forward.",
-      "steps": [
-        { "title": "Requirement", "description": "Your application, specification, volume, destination and certification needs." },
-        { "title": "Supplier matching", "description": "Shortlisting suppliers from our network whose product, site and market fit the request." },
-        { "title": "Sampling & specification", "description": "Reference samples and a written specification, with testing scope agreed before commercial production." },
-        { "title": "Order & export", "description": "Documents, loading and shipping coordinated with logistics partners to the agreed Incoterm." }
+    "value": {
+      "eyebrow": "How Whitehorse creates value",
+      "title": "Screened supply, coordinated quality, flexible business models.",
+      "sourcingTitle": "Sourcing and QA/QC coordination",
+      "sourcingBody": "A network of 50+ suppliers screened by product capability, facility and market requirements. For each order we coordinate requirements, supplier evidence, testing scope and lot documentation.",
+      "qualityCta": "Quality & qualification",
+      "modelsTitle": "Bulk ingredients and OEM · ODM · OBM",
+      "modelsBody": "Beyond bulk ingredients, Whitehorse supports OEM, ODM and OBM models through suitable manufacturing partners — from product-format and packaging development to agreed brand solutions.",
+      "processCta": "How we work",
+      "models": [
+        {
+          "term": "Bulk",
+          "description": "Ingredients to the agreed specification, packing and delivery terms."
+        },
+        {
+          "term": "OEM",
+          "description": "Manufactured to your agreed specification and packaging brief."
+        },
+        {
+          "term": "ODM",
+          "description": "Product format, formulation or packaging developed or adapted with qualified partners."
+        },
+        {
+          "term": "OBM",
+          "description": "Finished products under an agreed brand model, subject to product and market scope."
+        }
       ],
-      "cta": "See how we work"
-    },
-    "certifications": {
-      "eyebrow": "Quality & supplier qualification",
-      "title": "Supplier qualification, specific to product, site and market",
-      "subtitle": "We assess suppliers against the standards your product and destination market require — such as ISO 22000 or FSSC 22000, HACCP, organic certification or FDA registration where relevant. Certificates belong to a specific supplier, site and product scope, and are shared per order.",
-      "cta": "How we qualify suppliers"
+      "note": "Availability, MOQ, formulation, packaging, certification and market compliance are confirmed per product, partner facility and project. Certificates belong to a specific supplier, site and product scope."
     },
     "ctaBanner": {
       "title": "Tell us what you need to source",
       "subtitle": "Share your product, volume and destination port. Our sales team reviews qualified requests and follows up with the next commercial step.",
-      "cta": "Request a quote"
+      "cta": "Request a quote",
+      "buyerLabel": "For buyers",
+      "buyerBody": "Bulk ingredients or an OEM, ODM or OBM project — share the product, volume and destination.",
+      "buyerCta": "Request a quote",
+      "supplierLabel": "For suppliers",
+      "supplierBody": "Farmers, cooperatives and processors interested in assessment.",
+      "supplierCta": "Apply as a supplier"
     }
   },
   "about": {
@@ -235,7 +204,7 @@
         },
         {
           "title": "Application-led Products",
-          "description": "Formats and specifications developed from the buyer's application, with processing partners whose capability fits it."
+          "description": "Formats and specifications developed from the buyer's application with processing partners whose capability fits it — including OEM, ODM and OBM where the product, partner facility and market allow."
         },
         {
           "title": "Quality & Product Intelligence",
@@ -321,16 +290,17 @@
     },
     "status": {
       "title": "Where Whitehorse stands, and where it is heading",
+      "note": "Current figures describe the network today. Three-year vision figures are direction, not a current track record.",
       "items": [
+        {
+          "tag": "Current",
+          "value": "50+",
+          "label": "Suppliers screened by product capability, facility and market requirements"
+        },
         {
           "tag": "Current",
           "value": "10+",
           "label": "Markets with active buyer relationships and commercial conversations"
-        },
-        {
-          "tag": "2026 objective",
-          "value": "30–50",
-          "label": "Export-qualified suppliers, assessed and ranked against a rigorous Whitehorse framework aligned with international buyer requirements"
         },
         {
           "tag": "Three-year vision",
@@ -387,7 +357,14 @@
         "status": "Sourced on request",
         "description": "Vietnamese coconut made into versatile ingredients for food and beverage applications — from coconut milk and cream to coconut powders and coconut blossom sugar. Suitable for industrial food production and retail, with bulk supply and private-label options agreed to each market's requirements.",
         "applicationsTitle": "Common applications",
-        "applications": ["Cooking & food processing", "Beverages", "Bakery & confectionery", "Ice cream & desserts", "Plant-based products", "Foodservice & OEM"]
+        "applications": [
+          "Cooking & food processing",
+          "Beverages",
+          "Bakery & confectionery",
+          "Ice cream & desserts",
+          "Plant-based products",
+          "Foodservice & OEM"
+        ]
       },
       "birdsNest": {
         "name": "Bird's Nest Ingredients",
@@ -396,7 +373,12 @@
         "status": "Developed on request",
         "description": "Vietnamese edible bird's nest, selected and cleaned, as cleaned nest and instant or ready-to-prepare formats for health food, wellness retail, private-label RTD and nutraceutical applications. Concentrates, extracts, powders and functional blends are developed as OEM on request.",
         "applicationsTitle": "Common applications",
-        "applications": ["Health food & wellness retail", "Private-label RTD beverages", "Nutraceutical applications", "OEM & custom formulations"]
+        "applications": [
+          "Health food & wellness retail",
+          "Private-label RTD beverages",
+          "Nutraceutical applications",
+          "OEM & custom formulations"
+        ]
       },
       "fruit": {
         "name": "Fruit Ingredients",
@@ -405,7 +387,12 @@
         "status": "Sourced on request",
         "description": "Vietnamese tropical fruits processed into shelf-stable ingredients. The core range covers soft-dried and freeze-dried mango, soft-dried soursop, and passion fruit as concentrate, frozen purée and powder, for food, beverage and nutrition applications. Other fruit formats are available on request or as OEM.",
         "applicationsTitle": "Common applications",
-        "applications": ["Smoothie & beverage bases", "Bakery & confectionery", "Nutraceuticals & supplements", "Natural flavouring & colouring"]
+        "applications": [
+          "Smoothie & beverage bases",
+          "Bakery & confectionery",
+          "Nutraceuticals & supplements",
+          "Natural flavouring & colouring"
+        ]
       },
       "nutsSpicesBotanicals": {
         "name": "Nuts, Spices & Botanicals",
@@ -414,7 +401,12 @@
         "status": "Sourced on request",
         "description": "Selected Vietnamese nuts and spices graded to the buyer's specification. The core range covers cashew kernels, whole black pepper, freeze-dried cinnamon and freeze-dried star anise, with documentation agreed per order for food manufacturers and ingredient partners. Other botanicals are available on request.",
         "applicationsTitle": "Common applications",
-        "applications": ["Food manufacturing", "Spice blending & distribution", "Flavor & extract production", "Foodservice & retail packing"]
+        "applications": [
+          "Food manufacturing",
+          "Spice blending & distribution",
+          "Flavor & extract production",
+          "Foodservice & retail packing"
+        ]
       }
     },
     "sampleCta": {
@@ -451,10 +443,11 @@
     "editorialBadge": "Editorial image",
     "conceptPackBadge": "Concept packaging",
     "conceptPackNote": "Packaging concept render. Label text is illustrative — the final pack, label and specification are confirmed with the supplier or co-packer for each order. Not a photograph of stock.",
-    "perRequestNote": "A listed product or range is not a statement of stock or export readiness. Availability, final specification, test method, documentation and COA scope are confirmed for each request.",
+    "perRequestNote": "A listed product or range is not a statement of stock or export readiness. Availability, final specification, test method, documentation and COA scope are confirmed for each request. OEM, ODM and OBM options depend on the product, partner facility and market.",
     "referenceTitle": "Typical reference parameters",
     "referenceDisclaimer": "Typical reference parameters — final specification, test method, documentation and COA scope are agreed per order.",
     "indicativeLabel": "Indicative specification",
+    "moreDetail": "More specification detail",
     "indicativeNote": "Indicative values — confirmed against the supplier's specification sheet for each order.",
     "paramHeader": "Parameter",
     "referenceHeader": "Typical reference",
@@ -500,10 +493,22 @@
       "subtitle": "Which standards apply depends on the product and where it's going. These are the schemes we most often check during supplier assessment; which ones apply to a given supplier is confirmed per product and site."
     },
     "items": [
-      { "name": "ISO 22000 / FSSC 22000", "description": "A certified food safety management system — ISO 22000, FSSC 22000 or an equivalent recognized scheme — checked for the site and product scope in question." },
-      { "name": "HACCP", "description": "Hazard Analysis and Critical Control Point plans reviewed for the product and process being quoted." },
-      { "name": "Organic Certification", "description": "Where a buyer needs organic product, we look for valid USDA Organic, EU Organic or equivalent certification covering that specific product and supplier." },
-      { "name": "FDA Registration", "description": "For US-bound orders, we check the facility's FDA food facility registration and the supplier information your importer needs for FSVP." }
+      {
+        "name": "ISO 22000 / FSSC 22000",
+        "description": "A certified food safety management system — ISO 22000, FSSC 22000 or an equivalent recognized scheme — checked for the site and product scope in question."
+      },
+      {
+        "name": "HACCP",
+        "description": "Hazard Analysis and Critical Control Point plans reviewed for the product and process being quoted."
+      },
+      {
+        "name": "Organic Certification",
+        "description": "Where a buyer needs organic product, we look for valid USDA Organic, EU Organic or equivalent certification covering that specific product and supplier."
+      },
+      {
+        "name": "FDA Registration",
+        "description": "For US-bound orders, we check the facility's FDA food facility registration and the supplier information your importer needs for FSVP."
+      }
     ],
     "sustainability": {
       "eyebrow": "Principles",
@@ -576,7 +581,7 @@
     ],
     "factory": {
       "title": "Partner facilities",
-      "subtitle": "Production takes place at supplier and partner facilities, which we assess for the specific product and market you need. We share the relevant site information and certificates with buyers per order."
+      "subtitle": "Production takes place at supplier and partner facilities, which we assess for the specific product and market you need. We share the relevant site information and certificates with buyers per order. OEM, ODM and OBM projects are carried out with suitable partner facilities, subject to product, facility and market confirmation."
     },
     "cta": {
       "title": "Have a specific process or documentation question?",
@@ -598,17 +603,11 @@
         "statLabel": "Markets with active buyer relationships and conversations",
         "description": "Relationships and commercial conversations with buyers across Asia, Europe, the Middle East, North America and Oceania."
       },
-      "objective": {
-        "tag": "2026 objective",
-        "stat": "30–50",
-        "statLabel": "Export-qualified suppliers",
-        "description": "Each assessed and ranked against a rigorous Whitehorse framework aligned with international buyer requirements. Qualification is specific to product, site and market."
-      },
-      "vision": {
-        "tag": "Three-year vision",
-        "stat": "3,000+ · 10,000+",
-        "statLabel": "Cooperatives and source groups · active buyers",
-        "description": "The visibility and relationship reach we are building the network towards over the next three years."
+      "suppliers": {
+        "tag": "Current",
+        "stat": "50+",
+        "statLabel": "Screened suppliers",
+        "description": "A network of 50+ suppliers screened by product capability, facility and market requirements. Qualification is specific to product, site and market — not every supplier holds every certificate or is approved for every market."
       }
     },
     "cta": {
@@ -668,8 +667,6 @@
     "form": {
       "title": "Quote request",
       "sectionRequest": "Your request",
-      "sectionDelivery": "Volume & delivery",
-      "sectionSpec": "Specification & packaging",
       "sectionContact": "Your details",
       "selectPlaceholder": "Select…",
       "intent": "I'd like to",
@@ -729,18 +726,11 @@
       "incotermNotSure": "Not sure yet",
       "specRequirements": "Specification & certification requirements (optional)",
       "specRequirementsPlaceholder": "e.g. screen 16+, moisture ≤12.5%, FSSC 22000, organic, halal…",
-      "packagingTier": "Packaging tier (optional)",
       "packagingTiers": {
         "discovery-sample": "Discovery sample",
         "professional-horeca": "Professional / HORECA",
         "retail-private-label": "Retail / private-label ready",
         "industrial-export": "Industrial export (bulk)",
-        "not-sure": "Not sure yet"
-      },
-      "privateLabel": "Private label (optional)",
-      "privateLabels": {
-        "yes": "Yes, under our own brand",
-        "no": "No",
         "not-sure": "Not sure yet"
       },
       "message": "Additional details (optional)",
@@ -757,7 +747,37 @@
       "success": "Your request has been sent to our sales team. They review qualified requests and follow up with the next commercial step.",
       "reference": "Your reference: {leadId}",
       "errorDelivery": "Your request could not be delivered right now, so nothing was sent. Please email {email} directly.",
-      "error": "Something went wrong submitting your request. Please check the form and try again, or email us directly."
+      "error": "Something went wrong submitting your request. Please check the form and try again, or email us directly.",
+      "model": "Business model",
+      "models": {
+        "bulk": "Bulk ingredient",
+        "oem": "OEM",
+        "odm": "ODM",
+        "obm": "OBM"
+      },
+      "modelHints": {
+        "bulk": "Ingredients to your specification, packing and delivery terms.",
+        "oem": "Manufactured to your specification and packaging brief.",
+        "odm": "Format, formulation or packaging developed with qualified partners.",
+        "obm": "Finished products under an agreed brand model."
+      },
+      "modelNote": "OEM, ODM and OBM are arranged through suitable manufacturing partners; availability depends on the product, partner facility and market.",
+      "details": "Add technical and logistics details (optional)",
+      "detailsHint": "Only the fields relevant to the business model you chose.",
+      "sectionModel": "Project details",
+      "sectionLogistics": "Logistics",
+      "specRequirementsOem": "Your specification (optional)",
+      "specRequirementsOemPlaceholder": "e.g. composition, moisture, particle size, certification needs…",
+      "packagingBrief": "Packaging and artwork brief (optional)",
+      "packagingBriefPlaceholder": "e.g. 250 g stand-up pouch, your artwork ready / to be adapted",
+      "packagingBriefOdm": "Packaging direction (optional)",
+      "formatBrief": "Target format or formulation brief (optional)",
+      "formatBriefPlaceholder": "e.g. 3-in-1 instant stick, low-sugar blend, powder for beverages",
+      "targetMarket": "Intended market and sales channel (optional)",
+      "targetMarketPlaceholder": "e.g. EU retail, Japan e-commerce, Middle East foodservice",
+      "brandModel": "Brand model to discuss (optional)",
+      "brandModelPlaceholder": "e.g. finished product under your brand, co-branded range",
+      "packing": "Packing (optional)"
     }
   },
   "legal": {

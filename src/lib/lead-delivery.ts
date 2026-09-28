@@ -46,6 +46,7 @@ export type LeadSummary = {
   product?: string;
   sku?: string;
   intent?: string;
+  model?: string;
   country?: string;
   volume?: string;
   locale?: string;
@@ -140,6 +141,7 @@ export function formatLogSummary(message: LeadMessage): string {
   const parts: [string, string | undefined][] = [
     ["kind", message.kind],
     ["intent", s.intent],
+    ["model", s.model],
     ["product", s.product],
     ["sku", s.sku],
     ["country", s.country && truncate(oneLine(s.country), 60)],

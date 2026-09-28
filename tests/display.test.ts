@@ -57,17 +57,19 @@ test("family visuals carry a VISIBLE editorial/studio label everywhere they rend
   assert.match(detail, /<FamilyVisual[\s\S]*?priority/, "detail hero image has priority");
 });
 
-test("hero copy is server-visible (not wrapped in <Reveal>)", () => {
-  const hero = fs
-    .readFileSync("src/components/home/hero.tsx", "utf8")
-    .replace(/\{\/\*[\s\S]*?\*\/\}/g, "") // JSX comments may mention <Reveal>
-    .replace(/\/\/.*$/gm, "");
-  const h1 = hero.indexOf("<h1");
-  const lastRevealOpen = hero.lastIndexOf("<Reveal", h1);
-  const lastRevealClose = hero.lastIndexOf("</Reveal>", h1);
-  assert.ok(lastRevealOpen === -1 || lastRevealClose > lastRevealOpen, "H1 must not sit inside <Reveal>");
-  const layout = fs.readFileSync("src/app/[locale]/layout.tsx", "utf8");
-  assert.match(layout, /<noscript>/);
+test("homepage is five server-rendered sections, without page-wide reveal hydration", () => {
+  const page = fs.readFileSync("src/app/[locale]/page.tsx", "utf8");
+  const order = ["<Hero", "<ProofStrip", "<ProductsPreview", "<ValueProposition", "<SplitCta"].map((tag) => page.indexOf(tag));
+  assert.ok(order.every((pos, i) => pos > -1 && (i === 0 || pos > order[i - 1])), "Hero → proof → families → value → split CTA");
+  assert.equal((page.match(/^ {6}<[A-Z]/gm) ?? []).length, 5, "exactly five sections");
+  for (const file of fs.readdirSync("src/components/home")) {
+    assert.doesNotMatch(fs.readFileSync(`src/components/home/${file}`, "utf8"), /^"use client"/m, `${file} is a Server Component`);
+  }
+  assert.equal(fs.existsSync("src/components/ui/reveal.tsx"), false, "no IntersectionObserver reveal wrapper");
+  const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
+  assert.equal((hero.match(/^\s+priority\s*$/gm) ?? []).length, 1, "the hero image is the only priority image");
+  const preview = fs.readFileSync("src/components/home/products-preview.tsx", "utf8");
+  assert.doesNotMatch(preview, /priority/, "family cards below the fold stay lazy");
 });
 
 test("JSON-LD serialization cannot close its <script> tag", () => {
@@ -82,7 +84,7 @@ test("RFQ email escapes buyer input and keeps the subject on one line", () => {
     "RFQ-20260927-ABCDEF"
   );
   assert.doesNotMatch(subject, /[\r\n]/);
-  assert.match(subject, /^\[RFQ\]\[sample\]\[Coffee Ingredients \/ WHCF007\]\[Germany\]/);
+  assert.match(subject, /^\[RFQ\]\[sample\]\[OEM\]\[Coffee Ingredients \/ WHCF007\]\[Germany\]/);
   assert.doesNotMatch(html, /<script>/);
   assert.match(html, /&lt;script&gt;/);
   assert.equal(escapeHtml(`<a href="x">'&`), "&lt;a href=&quot;x&quot;&gt;&#39;&amp;");

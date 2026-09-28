@@ -68,7 +68,7 @@ test("About keeps its truth boundaries", () => {
   for (const about of [en.about, vi.about]) {
     // QA/QC is being built, not a current guarantee.
     assert.match(about.control.body, /progressively building|đang từng bước xây dựng/);
-    // Network figures stay on the tagged homepage band only.
+    // Vision figures appear only in the tagged status items (about.status).
     const rendered = Object.fromEntries(Object.entries(about).filter(([key]) => key !== "status"));
     assert.doesNotMatch(JSON.stringify(rendered), /(3[.,]000|10[.,]000)\+/);
     // Nothing claims to remove every intermediary.

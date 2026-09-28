@@ -1,5 +1,6 @@
 {
   "intent": "sample",
+  "model": "oem",
   "product": "coffee",
   "sku": "WHCF007",
   "application": "Instant coffee blend for private-label retail",
@@ -10,7 +11,7 @@
   "destinationPort": "Hamburg",
   "timing": "1-3-months",
   "packagingTier": "industrial-export",
-  "privateLabel": "not-sure",
+  "packagingBrief": "250 g stand-up pouch, buyer artwork ready",
   "incoterm": "FOB",
   "message": "Local UAT fixture - not a real buyer. <script>alert(1)</script>",
   "name": "UAT Tester",

@@ -15,6 +15,13 @@ const PRODUCT_LABEL: Record<RfqInput["product"], string> = {
   other: "Other / not listed",
 };
 
+const MODEL_LABEL: Record<RfqInput["model"], string> = {
+  bulk: "Bulk ingredient",
+  oem: "OEM",
+  odm: "ODM",
+  obm: "OBM",
+};
+
 const COFFEE_FORMAT_LABEL: Record<string, string> = {
   WHCF001: "Green Robusta",
   WHCF002: "Green Arabica",
@@ -60,7 +67,7 @@ export function buildRfqEmail(data: RfqInput, leadId: string) {
   const productLabel = PRODUCT_LABEL[data.product];
   const productPart = data.sku ? `${productLabel} / ${data.sku}` : productLabel;
   const subject =
-    `[RFQ][${data.intent}][${subjectPart(productPart)}][${subjectPart(data.country, 40)}] ` +
+    `[RFQ][${data.intent}][${MODEL_LABEL[data.model]}][${subjectPart(productPart)}][${subjectPart(data.country, 40)}] ` +
     `${subjectPart(data.company)} — ${leadId}`;
 
   const html = `
@@ -68,6 +75,7 @@ export function buildRfqEmail(data: RfqInput, leadId: string) {
     <table cellspacing="0" cellpadding="0">${renderRows([
       ["Reference", leadId],
       ["Intent", data.intent],
+      ["Business model", MODEL_LABEL[data.model]],
       ["Product family", productLabel],
       ["Range of interest", data.range ? CATALOG_RANGES.find((r) => r.id === data.range)?.name.en ?? data.range : undefined],
       ["Coffee format of interest", formatLabel(data.sku || undefined)],
@@ -79,7 +87,10 @@ export function buildRfqEmail(data: RfqInput, leadId: string) {
       ["Destination port", data.destinationPort],
       ["Timing", data.timing],
       ["Packaging tier", data.packagingTier],
-      ["Private label", data.privateLabel],
+      ["Packaging / artwork brief", data.packagingBrief],
+      ["Target format / formulation brief", data.formatBrief],
+      ["Intended market and channel", data.targetMarket],
+      ["Brand model", data.brandModel],
       ["Preferred Incoterm", data.incoterm],
       ["Additional details", data.message],
       ["Name", data.name],

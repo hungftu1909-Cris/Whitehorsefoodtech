@@ -1,8 +1,7 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
-import { ImageCarousel, type CarouselSlide } from "@/components/ui/image-carousel";
-import { Reveal } from "@/components/ui/reveal";
 import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
@@ -11,19 +10,22 @@ import { cn } from "@/lib/utils";
 // "hundreds of factories/markets", a Whitehorse-branded factory and
 // trucks, a global-delivery slogan). The files stay in public/images until
 // replaced; see docs/claim-registry.md row 15.
-const CANDIDATE_SLIDES: CarouselSlide[] = [
-  { src: "/images/hero.jpg", alt: "Illustrative image: coffee cherries and freeze-dried fruit" },
-];
+const HERO_IMAGE = {
+  src: "/images/hero.jpg",
+  alt: "Illustrative image: coffee cherries and freeze-dried fruit",
+};
 
+/**
+ * Server-rendered hero: one positioning sentence, one support line, RFQ +
+ * Products CTAs. The single image is the page's LCP, so it is the only
+ * priority image on the homepage — no carousel or client JS.
+ */
 export function Hero() {
   const t = useTranslations("home.hero");
-  const slides = CANDIDATE_SLIDES.filter((s) => hasPublicFile(s.src));
 
   return (
     <section className="border-b border-border bg-muted/40">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2 lg:items-center lg:px-8">
-        {/* Not wrapped in <Reveal>: essential copy must be visible in the
-            server HTML without JS (and must not delay LCP). */}
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-2 lg:items-center lg:px-8">
         <div>
           <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
             {t("eyebrow")}
@@ -53,14 +55,18 @@ export function Hero() {
           </div>
         </div>
 
-        <Reveal delay={150} className="relative">
-          <ImageCarousel
-            slides={slides}
-            aspect="aspect-[16/9]"
-            className="w-full"
-            priority
-          />
-        </Reveal>
+        {hasPublicFile(HERO_IMAGE.src) && (
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border">
+            <Image
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              fill
+              priority
+              sizes="(min-width: 1280px) 38rem, (min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        )}
       </div>
     </section>
   );

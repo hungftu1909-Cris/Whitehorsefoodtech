@@ -4,7 +4,6 @@ import { Award, ClipboardCheck, Leaf, ShieldCheck, FileText, Route, Users, Badge
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
-import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
 // Matches the order of certifications.items: ISO 22000 / FSSC 22000, HACCP,
@@ -51,7 +50,7 @@ export default async function CertificationsPage({
           {items.map((item, i) => {
             const Icon = CERT_ICONS[i % CERT_ICONS.length];
             return (
-              <Reveal key={item.name} delay={i * 100} className="rounded-lg border border-border bg-card p-6">
+              <div key={item.name} className="rounded-lg border border-border bg-card p-6">
                 <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
                   <Icon className="size-5" aria-hidden="true" />
                 </div>
@@ -61,7 +60,7 @@ export default async function CertificationsPage({
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
-              </Reveal>
+              </div>
             );
           })}
         </div>
@@ -78,7 +77,7 @@ export default async function CertificationsPage({
             {pillars.map((pillar, i) => {
               const Icon = PILLAR_ICONS[i % PILLAR_ICONS.length];
               return (
-                <Reveal key={pillar.title} delay={i * 100}>
+                <div key={pillar.title}>
                   <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
                     <Icon className="size-5" aria-hidden="true" />
                   </div>
@@ -88,7 +87,7 @@ export default async function CertificationsPage({
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {pillar.description}
                   </p>
-                </Reveal>
+                </div>
               );
             })}
           </div>

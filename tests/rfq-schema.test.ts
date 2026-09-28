@@ -3,7 +3,9 @@ import assert from "node:assert/strict";
 import fixture from "./fixtures/rfq-valid.json" with { type: "json" };
 import {
   COFFEE_FORMAT_CODES,
+  MODEL_FIELDS,
   PRODUCT_SLUG_TO_FAMILY,
+  RFQ_MODELS,
   contactSchema,
   parseRfqPrefill,
   rfqSchema,
@@ -13,6 +15,7 @@ import { PRODUCT_CATEGORIES } from "../src/lib/nav.ts";
 const valid = () => structuredClone(fixture) as Record<string, unknown>;
 const minimal = {
   intent: "quote",
+  model: "bulk",
   product: "coconut",
   volume: "5 t/month",
   country: "Japan",
@@ -29,7 +32,7 @@ test("the full fixture is valid", () => {
 
 test("only the core fields are required", () => {
   assert.ok(rfqSchema.safeParse(minimal).success);
-  for (const key of ["intent", "product", "volume", "country", "name", "company", "email", "consent"]) {
+  for (const key of ["intent", "model", "product", "volume", "country", "name", "company", "email", "consent"]) {
     const input: Record<string, unknown> = { ...minimal };
     delete input[key];
     assert.equal(rfqSchema.safeParse(input).success, false, `${key} should be required`);
@@ -64,7 +67,7 @@ test("enumerated fields reject unknown values", () => {
     ["frequency", "daily"],
     ["timing", "yesterday"],
     ["packagingTier", "gold"],
-    ["privateLabel", "maybe"],
+    ["model", "private-label"],
     ["incoterm", "XYZ"],
     ["locale", "fr"],
   ] as const) {
@@ -99,6 +102,22 @@ test("prefill accepts slugs, family keys, intents and format codes only", () => 
   assert.deepEqual(parseRfqPrefill({ product: ["coffee", "fruit"], intent: "spec-sheet" }), { product: "coffee", intent: "spec-sheet" });
   assert.deepEqual(parseRfqPrefill({ product: "<script>", intent: "free", sku: "WHC001" }), {});
   assert.deepEqual(parseRfqPrefill({}), {});
+  // Business model: whitelisted, case-insensitive.
+  assert.deepEqual(parseRfqPrefill({ product: "coconut", model: "OEM" }), { product: "coconut", model: "oem" });
+  assert.deepEqual(parseRfqPrefill({ model: "private-label" }), {});
+});
+
+test("business models: bulk, OEM, ODM, OBM — each reveals its own fields, never all at once", () => {
+  assert.deepEqual([...RFQ_MODELS], ["bulk", "oem", "odm", "obm"]);
+  const all = new Set(Object.values(MODEL_FIELDS).flat());
+  for (const model of RFQ_MODELS) {
+    const fields = MODEL_FIELDS[model];
+    assert.ok(fields.length > 0 && fields.length < all.size, `${model} asks a subset`);
+    assert.ok(rfqSchema.safeParse({ ...minimal, model }).success, model);
+  }
+  assert.deepEqual([...MODEL_FIELDS.oem], ["specRequirements", "packagingBrief"]);
+  assert.deepEqual([...MODEL_FIELDS.odm], ["application", "formatBrief", "packagingBrief"]);
+  assert.deepEqual([...MODEL_FIELDS.obm], ["targetMarket", "brandModel"]);
 });
 
 test("prefill slug map covers exactly the product routes", () => {

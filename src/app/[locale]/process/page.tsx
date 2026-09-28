@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
 // Matches the order of process.steps: Requirement & specification,
@@ -45,7 +44,7 @@ export default async function ProcessPage({
           {steps.map((step, i) => {
             const Icon = STEP_ICONS[i % STEP_ICONS.length];
             return (
-              <Reveal key={step.title} as="li" delay={i * 100} className="relative pb-16 pl-24 last:pb-0">
+              <li key={step.title} className="relative pb-16 pl-24 last:pb-0">
                 {i < steps.length - 1 && (
                   <span
                     className="absolute top-16 left-8 h-[calc(100%-4rem)] w-px bg-border"
@@ -64,7 +63,7 @@ export default async function ProcessPage({
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {step.description}
                 </p>
-              </Reveal>
+              </li>
             );
           })}
         </ol>
@@ -74,14 +73,14 @@ export default async function ProcessPage({
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
           {/* No facility photo: the old factory.jpg shows a Whitehorse-branded
               plant, which would contradict the partner-facility model. */}
-          <Reveal className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("factory.title")}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {t("factory.subtitle")}
             </p>
-          </Reveal>
+          </div>
         </div>
       </section>
 

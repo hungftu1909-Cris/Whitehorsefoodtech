@@ -86,8 +86,10 @@ brand/                    Source brand assets (logo, etc.)
   [`docs/product-range-sources.md`](docs/product-range-sources.md)
   (tests enforce this); otherwise it reads "agreed per order". Only
   BreadcrumbList/ItemList schema — no Product/Offer schema.
-- **Proof figures** — current fact, 2026 objective and three-year vision
-  are always tagged as such; see the claim registry rows 3–6.
+- **Proof figures** — current facts (50+ screened suppliers, 10+ markets)
+  and the three-year vision (3,000+ / 10,000+) are always tagged as such.
+  The homepage proof strip shows current facts only; vision figures
+  appear on About only. See the claim registry rows 3–6.
 - **Blog translations** — EN and VI slugs differ. Give both versions of an
   article the same `translationKey` in frontmatter; hreflang, the sitemap
   and the language switcher use it (tests fail on a missing or duplicated
@@ -132,8 +134,8 @@ the rest in "Additional details").
       are optional.
 - [ ] **Claim evidence** — see "Evidence needed" in
       [`docs/claim-registry.md`](docs/claim-registry.md): dated market log
-      behind "10+ markets", written supplier qualification framework behind
-      the 2026 objective, Balance Life naming permission, supplier
+      behind "10+ markets", dated supplier list and screening criteria behind
+      "50+ screened suppliers", Balance Life naming permission, supplier
       assessment checklist.
 - [ ] **Catalog image rights** — the four coffee images from the
       website-edit brief are user-supplied and stock-style; confirm

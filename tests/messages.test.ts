@@ -89,6 +89,9 @@ test("the scanner still catches the claims Phase 1 removed", () => {
     "100% organic coconut blossom sugar",
     "Cleaned bird's nest, export-grade",
     "đường hoa dừa hữu cơ 100%",
+    "30–50 export-qualified suppliers (2026 objective)",
+    "Mục tiêu 2026: 30-50 nhà cung cấp",
+    "dự kiến trong 2026",
   ];
   for (const claim of removed) {
     assert.ok(scanText(claim).length > 0, `not caught: ${claim}`);
@@ -96,33 +99,52 @@ test("the scanner still catches the claims Phase 1 removed", () => {
   assert.ok(FORBIDDEN_CLAIMS.length >= 10);
 });
 
-test("proof markers separate current fact, dated objective and vision", () => {
+test("proof markers: 50+ suppliers and 10+ markets are current; 3,000+ / 10,000+ are vision on About only", () => {
   const TAGS = {
-    en: { current: /^Current$/, objective: /^2026 objective$/, vision: /^Three-year vision$/ },
-    vi: { current: /^Hiện tại$/, objective: /^Mục tiêu 2026$/, vision: /^Tầm nhìn 3 năm$/ },
+    en: { current: /^Current$/, vision: /^Three-year vision$/ },
+    vi: { current: /^Hiện tại$/, vision: /^Tầm nhìn 3 năm$/ },
   } as const;
   for (const [locale, catalog] of [["en", en], ["vi", vi]] as const) {
     const tags = TAGS[locale];
     const items = get(catalog as Json, "about.status.items") as { tag: string; value: string; label: string }[];
     const byValue = (v: string) => items.find((i) => i.value.replace(".", ",") === v);
-    assert.match(byValue("10+")!.tag, tags.current, `${locale}: 10+ markets is the current fact`);
-    assert.match(byValue("30–50")!.tag, tags.objective, `${locale}: 30–50 is the 2026 objective`);
+    assert.match(byValue("50+")!.tag, tags.current, `${locale}: 50+ suppliers is a current fact`);
+    assert.match(byValue("10+")!.tag, tags.current, `${locale}: 10+ markets is a current fact`);
     assert.match(byValue("3,000+")!.tag, tags.vision, `${locale}: 3,000+ is vision`);
     assert.match(byValue("10,000+")!.tag, tags.vision, `${locale}: 10,000+ is vision`);
     assert.equal(items.find((i) => i.value === "20+"), undefined, `${locale}: no 20+ headline`);
     for (const item of items) assert.notEqual(item.value.trim(), "0", `${locale}: zero-value marker`);
-    // The Network page repeats the same three with the same tags.
+    // Network page: current facts only, same tag.
     assert.match(String(get(catalog as Json, "clients.network.current.tag")), tags.current);
-    assert.match(String(get(catalog as Json, "clients.network.objective.tag")), tags.objective);
-    assert.match(String(get(catalog as Json, "clients.network.vision.tag")), tags.vision);
+    assert.match(String(get(catalog as Json, "clients.network.suppliers.tag")), tags.current);
+    assert.equal(String(get(catalog as Json, "clients.network.suppliers.stat")), "50+");
+    // Homepage proof strip: current facts only, no vision figures.
+    const proof = (get(catalog as Json, "home.proof.items") as { value: string }[]).map((i) => i.value);
+    assert.deepEqual(proof, ["50+", "10+", "5"]);
+    assert.doesNotMatch(JSON.stringify(get(catalog as Json, "home")), /(3[.,]000|10[.,]000)\+/);
   }
-  // Vision/objective figures never appear outside their tagged items.
+  // The old 30–50 / 2026 supplier objective is retired everywhere, and the
+  // vision figures only appear in their tagged About items.
   for (const catalog of [en, vi]) {
     for (const [key, value] of leafValues(catalog as Json)) {
-      if (/(3[.,]000|10[.,]000)\+|30–50/.test(value)) {
-        assert.match(key, /^(about\.status\.items\[\d\]\.value|clients\.network\.(objective|vision)\.(stat|description))$/, `untagged figure at ${key}: ${value}`);
+      assert.doesNotMatch(value, /30\s?[–-]\s?50|2026 objective|Mục tiêu 2026/, `retired supplier objective at ${key}`);
+      if (/(3[.,]000|10[.,]000)\+/.test(value)) {
+        assert.match(key, /^about\.status\.items\[\d\]\.value$/, `untagged figure at ${key}: ${value}`);
       }
     }
+  }
+});
+
+test("OEM/ODM/OBM is stated as partner-delivered capability, never universal", () => {
+  for (const [catalog, partners] of [[en, /suitable manufacturing partners/], [vi, /đối tác sản xuất phù hợp/]] as const) {
+    assert.match(String(get(catalog as Json, "home.hero.subtitle")), partners);
+    assert.match(String(get(catalog as Json, "home.value.modelsBody")), partners);
+    assert.match(String(get(catalog as Json, "home.value.note")), /MOQ/);
+    assert.match(String(get(catalog as Json, "rfq.form.modelNote")), /OEM, ODM/);
+  }
+  for (const catalog of [en, vi]) {
+    const all = leafValues(catalog as Json).map(([, v]) => v).join("\n");
+    assert.doesNotMatch(all, /(OEM|ODM|OBM)[^.\n]*(for (all|every) (product|SKU|famil))|mọi (sản phẩm|SKU)[^.\n]*(OEM|ODM|OBM)/i);
   }
 });
 
@@ -183,7 +205,7 @@ test("value-prop and hero copy is confident, not apologetic", () => {
     const all = leafValues(catalog as Json).map(([, v]) => v).join("\n");
     assert.doesNotMatch(all, /track record we don't have|thành tích chúng tôi chưa có|as a new company|là một công ty mới/i);
   }
-  assert.match(String(get(en as Json, "home.hero.subtitle")), /For each order, we agree sample availability, specifications, documentation requirements and COA scope with you\./);
+  assert.match(String(get(en as Json, "home.hero.subtitle")), /for distributors, manufacturers, foodservice groups and brands\.$/);
 });
 
 test("vision and ecosystem copy stays labelled and logo-free", () => {

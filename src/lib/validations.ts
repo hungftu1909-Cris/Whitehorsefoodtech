@@ -38,6 +38,28 @@ export const PRODUCT_SLUG_TO_FAMILY: Record<string, ProductFamily> = {
 export const RFQ_INTENTS = ["quote", "sample", "spec-sheet"] as const;
 
 /**
+ * Business model the buyer asks about. OEM/ODM/OBM are delivered through
+ * suitable manufacturing partners and confirmed per product, facility and
+ * market (docs/claim-registry.md row 26) — choosing one is a request, not
+ * a statement that every family or SKU supports it.
+ */
+export const RFQ_MODELS = ["bulk", "oem", "odm", "obm"] as const;
+export type RfqModel = (typeof RFQ_MODELS)[number];
+
+/**
+ * Optional fields the RFQ form reveals for each business model. Only these
+ * are asked (and submitted) for the chosen model; logistics fields are
+ * shared by every model.
+ */
+export const MODEL_FIELDS = {
+  bulk: ["specRequirements", "packagingTier"],
+  oem: ["specRequirements", "packagingBrief"],
+  odm: ["application", "formatBrief", "packagingBrief"],
+  obm: ["targetMarket", "brandModel"],
+} as const satisfies Record<RfqModel, readonly string[]>;
+export const MODEL_SPECIFIC_FIELDS = [...new Set(Object.values(MODEL_FIELDS).flat())];
+
+/**
  * Whitehorse's confirmed coffee product codes (details in
  * src/lib/catalog.ts). Offered as RFQ "format of interest" choices and
  * shown as product-code pages; listing one does not mean it is available,
@@ -64,7 +86,6 @@ export const PACKAGING_TIERS = [
   "industrial-export",
   "not-sure",
 ] as const;
-export const PRIVATE_LABEL_OPTIONS = ["yes", "no", "not-sure"] as const;
 export const INCOTERMS = ["EXW", "FCA", "FOB", "CFR", "CIF", "DAP", "DDP", "not-sure"] as const;
 const FORM_LOCALES = ["en", "vi"] as const;
 
@@ -94,6 +115,7 @@ export type ContactInput = z.infer<typeof contactSchema>;
 export const rfqSchema = z
   .object({
     intent: z.enum(RFQ_INTENTS),
+    model: z.enum(RFQ_MODELS),
     product: z.enum(PRODUCT_FAMILIES),
     sku: optionalChoice(COFFEE_FORMAT_CODES),
     // Catalog range id (src/lib/catalog.ts); must belong to `product`.
@@ -106,7 +128,10 @@ export const rfqSchema = z
     destinationPort: optionalText(120),
     timing: optionalChoice(ORDER_TIMINGS),
     packagingTier: optionalChoice(PACKAGING_TIERS),
-    privateLabel: optionalChoice(PRIVATE_LABEL_OPTIONS),
+    packagingBrief: optionalText(1000),
+    formatBrief: optionalText(1000),
+    targetMarket: optionalText(300),
+    brandModel: optionalText(300),
     incoterm: optionalChoice(INCOTERMS),
     message: optionalText(3000),
     name: z.string().trim().min(1).max(120),
@@ -150,10 +175,10 @@ const INTENT_ALIASES: Record<string, (typeof RFQ_INTENTS)[number]> = {
   spec: "spec-sheet",
 };
 
-export type RfqPrefill = Partial<Pick<RfqInput, "product" | "intent" | "sku" | "range">>;
+export type RfqPrefill = Partial<Pick<RfqInput, "product" | "intent" | "model" | "sku" | "range">>;
 
 /**
- * Reads ?product=&range=&sku=&intent= from an RFQ link (e.g. a catalog
+ * Reads ?product=&range=&sku=&intent=&model= from an RFQ link (e.g. a catalog
  * CTA) into form defaults. Anything unrecognized is dropped rather than
  * trusted. A coffee format code implies product=coffee and its range; a
  * range implies its family; a range from another family is dropped.
@@ -174,6 +199,9 @@ export function parseRfqPrefill(
 
   const intent = INTENT_ALIASES[first(params.intent)?.toLowerCase() ?? ""];
   if (intent) prefill.intent = intent;
+
+  const model = first(params.model)?.toLowerCase();
+  if (model && (RFQ_MODELS as readonly string[]).includes(model)) prefill.model = model as RfqModel;
 
   const range = first(params.range)?.toLowerCase();
   const family = range ? rangeFamily(range) : undefined;

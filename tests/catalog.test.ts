@@ -175,7 +175,7 @@ test("catalog request links prefill the RFQ and validate", () => {
       const prefill = parseRfqPrefill(query);
       assert.deepEqual(prefill, { product: "coffee", range: sku.range, sku: sku.code, intent });
       const parsed = rfqSchema.safeParse({
-        ...prefill, volume: "1 t", country: "Japan", name: "A", company: "B", email: "a@example.com", consent: true,
+        ...prefill, model: "bulk", volume: "1 t", country: "Japan", name: "A", company: "B", email: "a@example.com", consent: true,
       });
       assert.ok(parsed.success, `${sku.code} ${intent}`);
     }

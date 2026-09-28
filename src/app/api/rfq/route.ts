@@ -38,6 +38,7 @@ export async function POST(request: Request) {
       product: data.product,
       sku: data.sku || undefined,
       intent: data.intent,
+      model: data.model,
       country: data.country,
       volume: data.volume,
       locale: data.locale || undefined,

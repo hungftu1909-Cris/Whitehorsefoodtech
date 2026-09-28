@@ -4,7 +4,6 @@ import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { FamilyVisual } from "@/components/catalog/family-visual";
-import { Reveal } from "@/components/ui/reveal";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
@@ -59,7 +58,7 @@ export default async function ProductsPage({
             in a 4-column layout. */}
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUCT_CATEGORIES.map((c, i) => (
-            <Reveal key={c.slug} delay={i * 100}>
+            <div key={c.slug}>
               <Link
                 href={`/products/${c.slug}`}
                 className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
@@ -104,7 +103,7 @@ export default async function ProductsPage({
                   </span>
                 </div>
               </Link>
-            </Reveal>
+            </div>
           ))}
         </div>
       </section>

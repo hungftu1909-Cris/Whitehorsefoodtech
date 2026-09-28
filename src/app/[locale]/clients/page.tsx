@@ -1,9 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Globe2, Users, Target, Telescope } from "lucide-react";
+import { Globe2, Users } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -30,7 +29,7 @@ export default async function ClientsPage({
       <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <Reveal className="rounded-lg border border-border bg-card p-8 text-center">
+        <div className="rounded-lg border border-border bg-card p-8 text-center">
           <div className="mx-auto flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
             <Globe2 className="size-5" aria-hidden="true" />
           </div>
@@ -38,20 +37,18 @@ export default async function ClientsPage({
             {t("regionsTitle")}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">{t("regions")}</p>
-        </Reveal>
+        </div>
 
         {/* Aggregate figures, not named suppliers/buyers on purpose —
             showing specific factory or trading-partner names here would let
-            either side identify and approach the other directly. The current
-            fact, the dated objective and the three-year vision are always
-            shown side by side with their tags so an objective or vision is
-            never read as a track record; all three are
-            recorded in docs/claim-registry.md. */}
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {(["current", "objective", "vision"] as const).map((group, i) => {
-            const Icon = { current: Users, objective: Target, vision: Telescope }[group];
+            either side identify and approach the other directly. Only
+            current, tagged facts appear here (docs/claim-registry.md rows
+            3–4); the three-year vision figures are shown on About only. */}
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {(["current", "suppliers"] as const).map((group) => {
+            const Icon = { current: Globe2, suppliers: Users }[group];
             return (
-              <Reveal key={group} delay={i * 100} className="rounded-lg border border-border bg-card p-8">
+              <div key={group} className="rounded-lg border border-border bg-card p-8">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex size-10 items-center justify-center rounded-md bg-accent/15 text-accent">
                     <Icon className="size-5" aria-hidden="true" />
@@ -69,7 +66,7 @@ export default async function ClientsPage({
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {t(`network.${group}.description`)}
                 </p>
-              </Reveal>
+              </div>
             );
           })}
         </div>

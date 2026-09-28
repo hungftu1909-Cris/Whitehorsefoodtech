@@ -9,14 +9,17 @@ import { CATALOG_SKUS, pick } from "@/lib/catalog";
 import {
   COFFEE_FORMAT_CODES,
   INCOTERMS,
+  MODEL_FIELDS,
+  MODEL_SPECIFIC_FIELDS,
   ORDER_FREQUENCIES,
   ORDER_TIMINGS,
   PACKAGING_TIERS,
-  PRIVATE_LABEL_OPTIONS,
   RFQ_INTENTS,
+  RFQ_MODELS,
   rangesForProduct,
   rfqSchema,
   type RfqInput,
+  type RfqModel,
   type RfqPrefill,
 } from "@/lib/validations";
 import { Field } from "./field";
@@ -87,16 +90,31 @@ function FieldGroup({ legend, children }: { legend: string; children: React.Reac
   );
 }
 
+/** Blanks the optional fields that don't belong to the chosen business model. */
+function forModel(data: RfqInput): RfqInput {
+  const keep = new Set<string>(MODEL_FIELDS[data.model]);
+  const cleaned: Record<string, unknown> = { ...data };
+  for (const field of MODEL_SPECIFIC_FIELDS) if (!keep.has(field)) cleaned[field] = "";
+  return cleaned as RfqInput;
+}
+
+/**
+ * One-page RFQ with progressive disclosure: business model, product and
+ * the commercial minimum are always visible; everything optional sits in a
+ * native <details>, which only shows the fields for the chosen model.
+ */
 export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
   const t = useTranslations("rfq.form");
   const tc = useTranslations("common");
   const locale = useLocale();
   const [state, setState] = useState<SubmitState>({ kind: "idle" });
 
-  // Prefill from ?product=&range=&sku=&intent= (parsed and whitelisted on
-  // the server by parseRfqPrefill) — kept as the reset target after submit.
+  // Prefill from ?product=&range=&sku=&intent=&model= (parsed and
+  // whitelisted on the server by parseRfqPrefill) — kept as the reset
+  // target after submit.
   const defaultValues: Partial<RfqInput> = {
     intent: defaults.intent ?? "quote",
+    model: defaults.model ?? "bulk",
     product: defaults.product,
     range: defaults.range ?? "",
     sku: defaults.sku ?? "",
@@ -113,10 +131,12 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
     formState: { errors, isSubmitting, submitCount },
   } = useForm<RfqInput>({ resolver: zodResolver(rfqSchema), defaultValues });
   const product = useWatch({ control, name: "product" });
+  const model: RfqModel = useWatch({ control, name: "model" }) ?? "bulk";
+  const modelFields: readonly string[] = MODEL_FIELDS[model];
 
   async function onSubmit(data: RfqInput) {
     setState({ kind: "idle" });
-    const result = await submitLead("/api/rfq", { ...data, ...collectLeadContext(locale) });
+    const result = await submitLead("/api/rfq", { ...forModel(data), ...collectLeadContext(locale) });
     setState(result);
     if (result.kind === "success") reset(defaultValues);
   }
@@ -145,6 +165,25 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
       <Honeypot register={register} />
 
       <FieldGroup legend={t("sectionRequest")}>
+        <fieldset>
+          <legend className="mb-2 text-sm font-medium text-foreground">{t("model")}</legend>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {RFQ_MODELS.map((value) => (
+              <label
+                key={value}
+                className="flex cursor-pointer items-center justify-center rounded-md border border-border px-3 py-2.5 text-center text-sm font-medium text-foreground transition-colors hover:border-accent has-[:checked]:border-accent has-[:checked]:bg-accent/10 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring"
+              >
+                <input type="radio" value={value} className="sr-only" {...register("model")} />
+                {t(`models.${value}`)}
+              </label>
+            ))}
+          </div>
+          <p className="mt-2 text-xs text-muted-foreground" aria-live="polite">
+            {t(`modelHints.${model}`)}
+            {model !== "bulk" && <> {t("modelNote")}</>}
+          </p>
+        </fieldset>
+
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label={t("intent")} htmlFor="intent" error={errors.intent && tc("required")}>
             <Controller
@@ -235,122 +274,14 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
           </Field>
         )}
 
-        <Field label={t("application")} htmlFor="application">
-          <Input id="application" placeholder={t("applicationPlaceholder")} {...register("application")} />
-        </Field>
-      </FieldGroup>
-
-      <FieldGroup legend={t("sectionDelivery")}>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label={t("volume")} htmlFor="volume" error={errors.volume && tc("required")}>
             <Input id="volume" placeholder={t("volumePlaceholder")} {...register("volume")} />
           </Field>
-          <Field label={t("frequency")} htmlFor="frequency">
-            <Controller
-              control={control}
-              name="frequency"
-              render={({ field }) => (
-                <ChoiceSelect
-                  id="frequency"
-                  value={field.value}
-                  onChange={field.onChange}
-                  placeholder={t("selectPlaceholder")}
-                  options={options(ORDER_FREQUENCIES, "frequencies")}
-                />
-              )}
-            />
-          </Field>
-        </div>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label={t("country")} htmlFor="country" error={errors.country && tc("required")}>
             <Input id="country" autoComplete="country-name" {...register("country")} />
           </Field>
-          <Field label={t("destinationPort")} htmlFor="destinationPort">
-            <Input
-              id="destinationPort"
-              placeholder={t("destinationPortPlaceholder")}
-              {...register("destinationPort")}
-            />
-          </Field>
         </div>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <Field label={t("timing")} htmlFor="timing">
-            <Controller
-              control={control}
-              name="timing"
-              render={({ field }) => (
-                <ChoiceSelect
-                  id="timing"
-                  value={field.value}
-                  onChange={field.onChange}
-                  placeholder={t("selectPlaceholder")}
-                  options={options(ORDER_TIMINGS, "timings")}
-                />
-              )}
-            />
-          </Field>
-          <Field label={t("incoterm")} htmlFor="incoterm">
-            <Controller
-              control={control}
-              name="incoterm"
-              render={({ field }) => (
-                <ChoiceSelect
-                  id="incoterm"
-                  value={field.value}
-                  onChange={field.onChange}
-                  placeholder={t("selectPlaceholder")}
-                  options={incotermOptions}
-                />
-              )}
-            />
-          </Field>
-        </div>
-      </FieldGroup>
-
-      <FieldGroup legend={t("sectionSpec")}>
-        <Field label={t("specRequirements")} htmlFor="specRequirements">
-          <Textarea
-            id="specRequirements"
-            rows={3}
-            placeholder={t("specRequirementsPlaceholder")}
-            {...register("specRequirements")}
-          />
-        </Field>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <Field label={t("packagingTier")} htmlFor="packagingTier">
-            <Controller
-              control={control}
-              name="packagingTier"
-              render={({ field }) => (
-                <ChoiceSelect
-                  id="packagingTier"
-                  value={field.value}
-                  onChange={field.onChange}
-                  placeholder={t("selectPlaceholder")}
-                  options={options(PACKAGING_TIERS, "packagingTiers")}
-                />
-              )}
-            />
-          </Field>
-          <Field label={t("privateLabel")} htmlFor="privateLabel">
-            <Controller
-              control={control}
-              name="privateLabel"
-              render={({ field }) => (
-                <ChoiceSelect
-                  id="privateLabel"
-                  value={field.value}
-                  onChange={field.onChange}
-                  placeholder={t("selectPlaceholder")}
-                  options={options(PRIVATE_LABEL_OPTIONS, "privateLabels")}
-                />
-              )}
-            />
-          </Field>
-        </div>
-        <Field label={t("message")} htmlFor="message">
-          <Textarea id="message" rows={4} placeholder={t("messagePlaceholder")} {...register("message")} />
-        </Field>
       </FieldGroup>
 
       <FieldGroup legend={t("sectionContact")}>
@@ -362,24 +293,164 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
             <Input id="company" autoComplete="organization" {...register("company")} />
           </Field>
         </div>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <Field
-            label={t("email")}
-            htmlFor="email"
-            error={
-              errors.email &&
-              (errors.email.type === "invalid_string" || errors.email.type === "invalid_format"
-                ? tc("invalidEmail")
-                : tc("required"))
-            }
-          >
-            <Input id="email" type="email" autoComplete="email" {...register("email")} />
-          </Field>
-          <Field label={t("phone")} htmlFor="phone">
-            <Input id="phone" type="tel" autoComplete="tel" {...register("phone")} />
-          </Field>
-        </div>
+        <Field
+          label={t("email")}
+          htmlFor="email"
+          error={
+            errors.email &&
+            (errors.email.type === "invalid_string" || errors.email.type === "invalid_format"
+              ? tc("invalidEmail")
+              : tc("required"))
+          }
+        >
+          <Input id="email" type="email" autoComplete="email" {...register("email")} />
+        </Field>
       </FieldGroup>
+
+      {/* Optional detail stays folded (native <details>, no extra JS) and
+          only asks for the fields of the chosen business model. */}
+      <details className="group rounded-lg border border-border">
+        <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-medium text-foreground hover:text-accent [&::-webkit-details-marker]:hidden">
+          <span aria-hidden="true" className="inline-block transition-transform group-open:rotate-90">
+            ›
+          </span>
+          {t("details")}
+        </summary>
+        <div className="space-y-8 border-t border-border px-4 pt-5 pb-6">
+          <p className="text-xs text-muted-foreground">{t("detailsHint")}</p>
+
+          <FieldGroup legend={t("sectionModel")}>
+            {modelFields.includes("specRequirements") && (
+              <Field
+                label={t(model === "oem" ? "specRequirementsOem" : "specRequirements")}
+                htmlFor="specRequirements"
+              >
+                <Textarea
+                  id="specRequirements"
+                  rows={3}
+                  placeholder={t(model === "oem" ? "specRequirementsOemPlaceholder" : "specRequirementsPlaceholder")}
+                  {...register("specRequirements")}
+                />
+              </Field>
+            )}
+            {modelFields.includes("packagingTier") && (
+              <Field label={t("packing")} htmlFor="packagingTier">
+                <Controller
+                  control={control}
+                  name="packagingTier"
+                  render={({ field }) => (
+                    <ChoiceSelect
+                      id="packagingTier"
+                      value={field.value}
+                      onChange={field.onChange}
+                      placeholder={t("selectPlaceholder")}
+                      options={options(PACKAGING_TIERS, "packagingTiers")}
+                    />
+                  )}
+                />
+              </Field>
+            )}
+            {modelFields.includes("application") && (
+              <Field label={t("application")} htmlFor="application">
+                <Input id="application" placeholder={t("applicationPlaceholder")} {...register("application")} />
+              </Field>
+            )}
+            {modelFields.includes("formatBrief") && (
+              <Field label={t("formatBrief")} htmlFor="formatBrief">
+                <Textarea id="formatBrief" rows={3} placeholder={t("formatBriefPlaceholder")} {...register("formatBrief")} />
+              </Field>
+            )}
+            {modelFields.includes("packagingBrief") && (
+              <Field label={t(model === "odm" ? "packagingBriefOdm" : "packagingBrief")} htmlFor="packagingBrief">
+                <Textarea
+                  id="packagingBrief"
+                  rows={2}
+                  placeholder={t("packagingBriefPlaceholder")}
+                  {...register("packagingBrief")}
+                />
+              </Field>
+            )}
+            {modelFields.includes("targetMarket") && (
+              <Field label={t("targetMarket")} htmlFor="targetMarket">
+                <Input id="targetMarket" placeholder={t("targetMarketPlaceholder")} {...register("targetMarket")} />
+              </Field>
+            )}
+            {modelFields.includes("brandModel") && (
+              <Field label={t("brandModel")} htmlFor="brandModel">
+                <Input id="brandModel" placeholder={t("brandModelPlaceholder")} {...register("brandModel")} />
+              </Field>
+            )}
+          </FieldGroup>
+
+          <FieldGroup legend={t("sectionLogistics")}>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <Field label={t("frequency")} htmlFor="frequency">
+                <Controller
+                  control={control}
+                  name="frequency"
+                  render={({ field }) => (
+                    <ChoiceSelect
+                      id="frequency"
+                      value={field.value}
+                      onChange={field.onChange}
+                      placeholder={t("selectPlaceholder")}
+                      options={options(ORDER_FREQUENCIES, "frequencies")}
+                    />
+                  )}
+                />
+              </Field>
+              <Field label={t("timing")} htmlFor="timing">
+                <Controller
+                  control={control}
+                  name="timing"
+                  render={({ field }) => (
+                    <ChoiceSelect
+                      id="timing"
+                      value={field.value}
+                      onChange={field.onChange}
+                      placeholder={t("selectPlaceholder")}
+                      options={options(ORDER_TIMINGS, "timings")}
+                    />
+                  )}
+                />
+              </Field>
+            </div>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <Field label={t("destinationPort")} htmlFor="destinationPort">
+                <Input
+                  id="destinationPort"
+                  placeholder={t("destinationPortPlaceholder")}
+                  {...register("destinationPort")}
+                />
+              </Field>
+              <Field label={t("incoterm")} htmlFor="incoterm">
+                <Controller
+                  control={control}
+                  name="incoterm"
+                  render={({ field }) => (
+                    <ChoiceSelect
+                      id="incoterm"
+                      value={field.value}
+                      onChange={field.onChange}
+                      placeholder={t("selectPlaceholder")}
+                      options={incotermOptions}
+                    />
+                  )}
+                />
+              </Field>
+            </div>
+          </FieldGroup>
+
+          <div className="space-y-5">
+            <Field label={t("message")} htmlFor="message">
+              <Textarea id="message" rows={4} placeholder={t("messagePlaceholder")} {...register("message")} />
+            </Field>
+            <Field label={t("phone")} htmlFor="phone">
+              <Input id="phone" type="tel" autoComplete="tel" {...register("phone")} />
+            </Field>
+          </div>
+        </div>
+      </details>
 
       <div className="space-y-1.5">
         <label htmlFor="consent" className="flex cursor-pointer items-start gap-3 text-sm text-muted-foreground">
@@ -403,8 +474,8 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
         {errors.consent && <p className="text-xs text-destructive">{t("consentRequired")}</p>}
       </div>
 
-      {/* The form is long on mobile and the selects at the top can't take
-          focus, so a failed submit must say so next to the button. */}
+      {/* The selects at the top can't take focus, so a failed submit must
+          say so next to the button. */}
       {submitCount > 0 && Object.keys(errors).length > 0 && (
         <p role="alert" className="text-sm text-destructive">
           {t("fixErrors")}
