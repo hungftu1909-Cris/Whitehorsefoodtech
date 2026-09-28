@@ -1,6 +1,22 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Award, ClipboardCheck, Leaf, ShieldCheck, FileText, Route, Users, BadgeCheck } from "lucide-react";
+import {
+  Award,
+  BadgeCheck,
+  BrainCircuit,
+  CircleDashed,
+  ClipboardCheck,
+  FileText,
+  Leaf,
+  Network,
+  RadioTower,
+  Route,
+  ShieldCheck,
+  Truck,
+  Users,
+  Warehouse,
+  Workflow,
+} from "lucide-react";
 import { PlatformPageHero } from "@/components/sections/platform-page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
@@ -13,6 +29,7 @@ const CERT_ICONS = [Award, ClipboardCheck, Leaf, ShieldCheck];
 // Matches certifications.sustainability.pillars: traceability per order,
 // supplier relationships, environmental responsibility, quality vs. spec.
 const PILLAR_ICONS = [Route, Users, Leaf, BadgeCheck];
+const TECHNOLOGY_ICONS = [RadioTower, ShieldCheck, Warehouse, Workflow, Truck, Network];
 
 export async function generateMetadata({
   params,
@@ -33,6 +50,7 @@ export default async function CertificationsPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "certifications" });
   const items = t.raw("items") as { name: string; description: string }[];
+  const technologyLayers = t.raw("technology.layers") as { number: string; title: string; description: string }[];
   const documents = t.raw("documents") as string[];
   const pillars = t.raw("sustainability.pillars") as { title: string; description: string }[];
   const isVi = locale === "vi";
@@ -79,6 +97,67 @@ export default async function CertificationsPage({
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-y border-primary-foreground/10 bg-primary text-primary-foreground">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:48px_48px]"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.65fr] lg:items-end">
+            <div>
+              <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
+                {t("technology.eyebrow")}
+              </p>
+              <h2 className="mt-4 max-w-3xl font-serif text-3xl leading-tight font-semibold tracking-tight text-balance md:text-5xl">
+                {t("technology.title")}
+              </h2>
+            </div>
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-accent/45 bg-accent/10 px-3 py-1.5 text-xs font-semibold text-primary-foreground">
+                <CircleDashed className="size-3.5 text-accent" aria-hidden="true" />
+                {t("technology.status")}
+              </span>
+              <p className="mt-4 text-sm leading-relaxed text-primary-foreground/75 sm:text-base">
+                {t("technology.subtitle")}
+              </p>
+            </div>
+          </div>
+
+          <ol className="mt-10 grid gap-px overflow-hidden rounded-xl border border-primary-foreground/15 bg-primary-foreground/15 sm:grid-cols-2 lg:grid-cols-3">
+            {technologyLayers.map((layer, i) => {
+              const Icon = TECHNOLOGY_ICONS[i % TECHNOLOGY_ICONS.length];
+              return (
+                <li key={layer.number} className="flex min-h-56 flex-col bg-primary/95 p-6 md:p-7">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="font-mono text-xs tracking-[0.18em] text-accent">{layer.number}</span>
+                    <span className="flex size-10 items-center justify-center rounded-md border border-primary-foreground/15 bg-primary-foreground/5 text-accent">
+                      <Icon className="size-5" aria-hidden="true" />
+                    </span>
+                  </div>
+                  <h3 className="mt-auto pt-10 font-serif text-xl font-semibold">{layer.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">{layer.description}</p>
+                </li>
+              );
+            })}
+          </ol>
+
+          <div className="mt-5 grid gap-5 rounded-xl border border-accent/35 bg-accent/[0.08] p-6 md:grid-cols-[auto_1fr] md:items-start md:p-8">
+            <div className="flex size-12 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+              <BrainCircuit className="size-6" aria-hidden="true" />
+            </div>
+            <div>
+              <h3 className="font-serif text-xl font-semibold md:text-2xl">{t("technology.aiTitle")}</h3>
+              <p className="mt-2 max-w-4xl text-sm leading-relaxed text-primary-foreground/75 sm:text-base">
+                {t("technology.aiBody")}
+              </p>
+            </div>
+          </div>
+          <p className="mt-5 max-w-4xl text-xs leading-relaxed text-primary-foreground/55">
+            {t("technology.note")}
+          </p>
         </div>
       </section>
 

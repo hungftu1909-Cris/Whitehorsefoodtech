@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Globe2 } from "lucide-react";
 import { PlatformPageHero } from "@/components/sections/platform-page-hero";
-import { CtaSection } from "@/components/sections/cta-section";
+import { SplitCta } from "@/components/sections/split-cta";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -46,7 +46,8 @@ export default async function ClientsPage({
           { value: "50+", label: t("network.suppliers.statLabel") },
           { value: "10+", label: t("network.current.statLabel") },
         ]}
-        action={{ label: t("hero.action"), href: "/suppliers/apply" }}
+        action={{ label: t("hero.buyerAction"), href: "/rfq" }}
+        secondaryAction={{ label: t("hero.supplierAction"), href: "/suppliers/apply" }}
       />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
@@ -64,7 +65,22 @@ export default async function ClientsPage({
         </div>
       </section>
 
-      <CtaSection title={t("cta.title")} cta={t("cta.cta")} href="/suppliers/apply" />
+      <SplitCta
+        title={t("cta.title")}
+        subtitle={t("cta.subtitle")}
+        buyer={{
+          label: t("cta.buyer.label"),
+          body: t("cta.buyer.body"),
+          cta: t("cta.buyer.cta"),
+          href: "/rfq",
+        }}
+        supplier={{
+          label: t("cta.supplier.label"),
+          body: t("cta.supplier.body"),
+          cta: t("cta.supplier.cta"),
+          href: "/suppliers/apply",
+        }}
+      />
     </>
   );
 }
