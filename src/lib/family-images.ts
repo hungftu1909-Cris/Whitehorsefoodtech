@@ -1,13 +1,11 @@
 // Family imagery — the single source for every product-family visual
 // (homepage preview, /products listing, family detail hero, About mosaic).
 //
-// Two kinds, each with its own visible label (docs/asset-provenance.md):
+// Three image kinds, with a visible label only for concept packaging:
 // - "editorial": a real photograph from the website-edit brief (coffee).
-//   Badge: "Editorial image" / "Ảnh minh họa".
 // - "studio": a text-free 4:3 studio representation of the ingredient
-//   formats in a family. Badge: "Studio representation" / "Hình ảnh studio
-//   minh họa", plus a note that product, source and final specification are
-//   confirmed per request. Never presented as photographed inventory, a
+//   formats in a family. Neither type carries a visible image badge; concept
+//   packaging remains explicitly labelled. Never present imagery as inventory, a
 //   supplier batch, certification/traceability evidence or availability.
 //
 // A studio file that is not yet on disk renders as a quiet typographic
@@ -109,16 +107,16 @@ export const FAMILY_SECONDARY_IMAGES: Record<FamilySlug, FamilyImage> = {
   fruit: {
     src: `${STUDIO_IMAGE_DIR}/fruit.jpg`,
     alt: {
-      en: "Studio representation of soft-dried and freeze-dried fruit, concentrate, purée and fruit powders",
-      vi: "Hình ảnh studio minh họa trái cây sấy dẻo, sấy thăng hoa, cô đặc, puree và bột trái cây",
+      en: "Soft-dried and freeze-dried fruit, concentrate, purée and fruit powders",
+      vi: "Trái cây sấy dẻo, sấy thăng hoa, cô đặc, puree và bột trái cây",
     },
     kind: "studio",
   },
   "nuts-spices-botanicals": {
     src: `${STUDIO_IMAGE_DIR}/nuts-spices-botanicals.jpg`,
     alt: {
-      en: "Studio representation of cashew kernels, black peppercorns, star anise and cinnamon sticks",
-      vi: "Hình ảnh studio minh họa nhân hạt điều, hồ tiêu đen, hoa hồi và quế thanh",
+      en: "Cashew kernels, black peppercorns, star anise and cinnamon sticks",
+      vi: "Nhân hạt điều, hồ tiêu đen, hoa hồi và quế thanh",
     },
     kind: "studio",
   },

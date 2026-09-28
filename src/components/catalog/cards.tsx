@@ -4,15 +4,6 @@ import { pick, type CatalogImage, type CatalogRange, type CatalogSku } from "@/l
 import { rfqHref } from "@/lib/rfq-links";
 import { DualImageFrame } from "@/components/catalog/dual-image-frame";
 
-/** Small visible label for editorial (non-packshot) imagery. */
-export function ImageBadge({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="absolute bottom-2 left-2 rounded-full border border-border/60 bg-background/90 px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
-      {children}
-    </span>
-  );
-}
-
 /**
  * Large image-led card for a confirmed product code: image, code, name,
  * one-line format/application, "View details" and a quick sample request.
@@ -25,7 +16,7 @@ export function SkuCard({
 }: {
   sku: CatalogSku;
   locale: string;
-  labels: { view: string; sample: string; badge: string; conceptBadge: string; rangeLabel: string; rangeName: string };
+  labels: { view: string; sample: string; conceptBadge: string; rangeLabel: string; rangeName: string };
 }) {
   const image = sku.images[0];
   const secondary = sku.images[1];
@@ -35,9 +26,9 @@ export function SkuCard({
       <Link href={href} className="block cursor-pointer border-b border-border" tabIndex={-1} aria-hidden="true">
         <DualImageFrame
           images={[
-            { src: image.src, alt: "", badge: image.kind === "concept-pack" ? labels.conceptBadge : labels.badge },
+            { src: image.src, alt: "", badge: image.kind === "concept-pack" ? labels.conceptBadge : undefined },
             ...(secondary
-              ? [{ src: secondary.src, alt: "", badge: secondary.kind === "concept-pack" ? labels.conceptBadge : labels.badge }]
+              ? [{ src: secondary.src, alt: "", badge: secondary.kind === "concept-pack" ? labels.conceptBadge : undefined }]
               : []),
           ]}
           sizes="(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw"
@@ -98,8 +89,6 @@ export function RangeCard({
     indicativeNote: string;
     moreDetail: string;
     conceptBadge: string;
-    studioBadge: string;
-    editorialBadge: string;
     galleryLabel: string;
     familyLabel?: string;
     /** "Show image {index}" */
@@ -107,7 +96,7 @@ export function RangeCard({
   };
 }) {
   const badge = (kind: CatalogImage["kind"]) =>
-    kind === "concept-pack" ? labels.conceptBadge : kind === "studio" ? labels.studioBadge : labels.editorialBadge;
+    kind === "concept-pack" ? labels.conceptBadge : undefined;
   const images = range.images ?? [];
   const sizes = "(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw";
   const keySpecs = range.specFields.slice(0, KEY_SPEC_COUNT);

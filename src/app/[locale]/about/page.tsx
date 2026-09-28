@@ -62,8 +62,6 @@ export default async function AboutPage({
   const roles = t.raw("vision.roles") as Item[];
   const status = t.raw("status.items") as { tag: string; value: string; label: string }[];
   const visualLabels = {
-    editorial: tc("editorialBadge"),
-    studio: tp("studioBadge"),
     concept: tc("conceptPackBadge"),
   };
   const familyName = (slug: string) => {

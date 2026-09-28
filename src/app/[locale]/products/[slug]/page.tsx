@@ -102,13 +102,11 @@ export default async function ProductFamilyPage({
     indicativeNote: tc("indicativeNote"),
     moreDetail: tc("moreDetail"),
     conceptBadge: tc("conceptPackBadge"),
-    studioBadge: tp("studioBadge"),
-    editorialBadge: tc("editorialBadge"),
     galleryLabel: tc("galleryLabel"),
     showImage: tc("showImage", { index: "{index}" }),
   };
   const badgeFor = (kind: string) =>
-    kind === "concept-pack" ? tc("conceptPackBadge") : kind === "studio" ? tp("studioBadge") : tc("editorialBadge");
+    kind === "concept-pack" ? tc("conceptPackBadge") : undefined;
   const secondaryVisual = FAMILY_SECONDARY_IMAGES[family];
   const packaging = PACKAGING_OPTIONS[family];
   const rangeCards = ranges.map((range) => ({
@@ -180,9 +178,9 @@ export default async function ProductFamilyPage({
           {/* The first view is an owner-supplied/editorial ingredient image;
               the second is a concept pack or studio representation. Neither
               is a statement of current stock or final production artwork. */}
-          <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-            {secondaryVisual.kind === "concept-pack" ? tc("conceptPackNote") : tp("studioNote")}
-          </p>
+          {secondaryVisual.kind === "concept-pack" && (
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tc("conceptPackNote")}</p>
+          )}
         </div>
       </section>
 
@@ -239,7 +237,6 @@ export default async function ProductFamilyPage({
                     labels={{
                       view: tc("viewDetails"),
                       sample: tc("requestSample"),
-                      badge: tc("editorialBadge"),
                       conceptBadge: tc("conceptPackBadge"),
                       rangeLabel: tc("rangeLabel"),
                       rangeName: pick(findRange(sku.range)!.name, locale),

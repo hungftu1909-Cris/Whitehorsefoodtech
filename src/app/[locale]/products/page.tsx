@@ -113,8 +113,6 @@ export default async function ProductsPage({
                     indicativeNote: tcat("indicativeNote"),
                     moreDetail: tcat("moreDetail"),
                     conceptBadge: tcat("conceptPackBadge"),
-                    studioBadge: t("studioBadge"),
-                    editorialBadge: tcat("editorialBadge"),
                     galleryLabel: tcat("galleryLabel"),
                     showImage: tcat("showImage", { index: "{index}" }),
                   }}

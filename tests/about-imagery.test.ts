@@ -123,12 +123,11 @@ test("family images on disk are optimised, 4:3-ready and have provenance", () =>
   }
 });
 
-test("About discloses its imagery once, with a shared caption", () => {
+test("About keeps one concise request-specific image caption", () => {
   assert.match(ABOUT_PAGE, /showBadge=\{false\}/);
   assert.match(ABOUT_PAGE, /<figcaption[\s\S]*?t\("hero\.imageCaption"\)/);
-  assert.match(en.about.hero.imageCaption, /editorial photograph.*studio representations.*confirmed per request/);
-  assert.match(vi.about.hero.imageCaption, /ảnh biên tập.*hình ảnh studio.*xác nhận theo từng yêu cầu/);
-  // Every other FamilyVisual keeps its per-image badge.
+  assert.match(en.about.hero.imageCaption, /Ingredient-family imagery.*confirmed per request/);
+  assert.match(vi.about.hero.imageCaption, /Hình ảnh theo nhóm nguyên liệu.*xác nhận theo từng yêu cầu/);
   for (const f of ["src/app/[locale]/products/page.tsx", "src/app/[locale]/products/[slug]/page.tsx", "src/components/home/products-preview.tsx"]) {
     assert.doesNotMatch(fs.readFileSync(f, "utf8"), /showBadge/, f);
   }
@@ -142,26 +141,17 @@ test("About lead is tightened but keeps the thesis", () => {
   assert.match(vi.about.hero.subtitle, /trực tiếp hơn nông hộ và nhà máy chế biến/);
 });
 
-test("image labels use one consistent family of wording", () => {
-  assert.equal(en.catalog.editorialBadge, "Editorial image");
-  assert.equal(vi.catalog.editorialBadge, "Hình ảnh biên tập minh họa");
+test("only concept packaging keeps a visible image label", () => {
+  assert.equal("editorialBadge" in en.catalog, false);
+  assert.equal("editorialBadge" in vi.catalog, false);
+  assert.equal("studioBadge" in en.products, false);
+  assert.equal("studioBadge" in vi.products, false);
+  assert.equal("studioNote" in en.products, false);
+  assert.equal("studioNote" in vi.products, false);
   assert.equal(en.catalog.conceptPackBadge, "Concept packaging");
   assert.equal(vi.catalog.conceptPackBadge, "Bao bì ý tưởng");
   assert.match(en.catalog.conceptPackNote, /Not a photograph of stock/);
   assert.match(vi.catalog.conceptPackNote, /Không phải ảnh chụp hàng có sẵn/);
-});
-
-test("studio labels match the approved wording", () => {
-  assert.equal(vi.products.studioBadge, "Hình ảnh studio minh họa");
-  assert.equal(en.products.studioBadge, "Studio representation");
-  assert.equal(
-    vi.products.studioNote,
-    "Hình ảnh minh họa các dạng nguyên liệu trong nhóm; sản phẩm, nguồn cung và thông số được xác nhận theo từng yêu cầu."
-  );
-  assert.equal(
-    en.products.studioNote,
-    "A studio representation of ingredient formats in this family; product, source and final specification are confirmed per request."
-  );
 });
 
 test("no retired concept-art paths or labels in user-facing code", () => {

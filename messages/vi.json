@@ -240,7 +240,7 @@
       "eyebrow": "Whitehorse Foodtech / Nền tảng nguyên liệu cao cấp",
       "title": "Nâng chuẩn nguyên liệu Việt cho chuỗi giá trị toàn cầu.",
       "subtitle": "Whitehorse Foodtech đang xây dựng nền tảng nguyên liệu B2B, kết nối trực tiếp hơn nông hộ và nhà máy chế biến với nhà sản xuất, thương hiệu và nhà phân phối — hướng tới ít tầng trung gian không tạo giá trị hơn và một chuỗi cung ứng minh bạch, đáng tin cậy hơn.",
-      "imageCaption": "Hình ảnh minh họa theo nhóm nguyên liệu: cà phê là ảnh biên tập, các nhóm còn lại là hình ảnh studio. Sản phẩm, nguồn cung và thông số được xác nhận theo từng yêu cầu.",
+      "imageCaption": "Hình ảnh theo nhóm nguyên liệu. Sản phẩm, nguồn cung và thông số cuối cùng được xác nhận theo từng yêu cầu.",
       "ctaProducts": "Khám phá nhóm nguyên liệu",
       "ctaRfq": "Gửi yêu cầu nguyên liệu",
       "mosaicLabel": "Các nhóm nguyên liệu Whitehorse đang làm việc"
@@ -426,8 +426,6 @@
       "filterLabel": "Lọc theo nhóm nguyên liệu",
       "searchPlaceholder": "Dạng, sản phẩm hoặc ứng dụng"
     },
-    "studioBadge": "Hình ảnh studio minh họa",
-    "studioNote": "Hình ảnh minh họa các dạng nguyên liệu trong nhóm; sản phẩm, nguồn cung và thông số được xác nhận theo từng yêu cầu.",
     "categories": {
       "coffee": {
         "name": "Nguyên liệu Cà phê",
@@ -542,7 +540,6 @@
     "requestSpec": "Gửi thông số cần thiết",
     "requestQuote": "Yêu cầu báo giá",
     "requestRange": "Cho chúng tôi biết thông số bạn cần",
-    "editorialBadge": "Hình ảnh biên tập minh họa",
     "conceptPackBadge": "Bao bì ý tưởng",
     "conceptPackNote": "Hình render bao bì ý tưởng. Chữ trên nhãn chỉ mang tính minh họa — bao bì, nhãn và thông số cuối cùng được xác nhận với nhà cung cấp hoặc đơn vị đóng gói cho từng đơn hàng. Không phải ảnh chụp hàng có sẵn.",
     "perRequestNote": "Toàn bộ thông số hiển thị là tham chiếu chung. Việc liệt kê sản phẩm hoặc dòng sản phẩm không có nghĩa là hàng có sẵn hay sẵn sàng xuất khẩu. Hãy cho chúng tôi biết thông số bạn cần; khả năng cung ứng, giá trị cuối cùng, phương pháp thử, hồ sơ và phạm vi COA sẽ được xác nhận cho yêu cầu đó. Phương án OEM, ODM và OBM tùy thuộc sản phẩm, cơ sở đối tác và thị trường.",

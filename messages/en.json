@@ -240,7 +240,7 @@
       "eyebrow": "Whitehorse Foodtech / Premium ingredient platform",
       "title": "Raising the standard of Vietnamese ingredients for global value chains.",
       "subtitle": "Whitehorse Foodtech is building a premium B2B ingredient platform connecting farmers and processors more directly with manufacturers, brands and distributors — designed for fewer layers that add no value, and a more transparent, trusted supply chain.",
-      "imageCaption": "Illustrative images by ingredient family: coffee is an editorial photograph; the others are studio representations. Product, source and specification are confirmed per request.",
+      "imageCaption": "Ingredient-family imagery. Product, source and final specification are confirmed per request.",
       "ctaProducts": "Explore ingredient families",
       "ctaRfq": "Send an ingredient request",
       "mosaicLabel": "Ingredient families Whitehorse works with"
@@ -426,8 +426,6 @@
       "filterLabel": "Filter by ingredient family",
       "searchPlaceholder": "Format, product or application"
     },
-    "studioBadge": "Studio representation",
-    "studioNote": "A studio representation of ingredient formats in this family; product, source and final specification are confirmed per request.",
     "categories": {
       "coffee": {
         "name": "Coffee Ingredients",
@@ -542,7 +540,6 @@
     "requestSpec": "Send required specification",
     "requestQuote": "Request quote",
     "requestRange": "Tell us your required specification",
-    "editorialBadge": "Editorial image",
     "conceptPackBadge": "Concept packaging",
     "conceptPackNote": "Packaging concept render. Label text is illustrative — the final pack, label and specification are confirmed with the supplier or co-packer for each order. Not a photograph of stock.",
     "perRequestNote": "All specifications shown are general references. A listed product or range is not a statement of stock or export readiness. Tell us the specification you need; availability, final values, test method, documentation and COA scope are then confirmed for that request. OEM, ODM and OBM options depend on the product, partner facility and market.",

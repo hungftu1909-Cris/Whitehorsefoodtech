@@ -6,10 +6,6 @@ import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
 export type FamilyVisualLabels = {
-  /** "Editorial image" / "Ảnh minh họa" */
-  editorial: string;
-  /** "Studio representation" / "Hình ảnh studio minh họa" */
-  studio: string;
   /** "Concept packaging" / "Bao bì ý tưởng" */
   concept: string;
 };
@@ -51,7 +47,7 @@ export function FamilyVisual({
   const secondary = FAMILY_SECONDARY_IMAGES[family];
   const frame = cn("relative aspect-[4/3] overflow-hidden", className);
   const badge = (kind: typeof image.kind) =>
-    kind === "concept-pack" ? labels.concept : kind === "studio" ? labels.studio : labels.editorial;
+    kind === "concept-pack" ? labels.concept : undefined;
 
   if (hasPublicFile(image.src)) {
     return (

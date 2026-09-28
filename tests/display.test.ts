@@ -35,8 +35,7 @@ test("claim-bearing artwork (about.jpg, factory.jpg) is not rendered anywhere", 
   assert.deepEqual(users, []);
 });
 
-test("family visuals carry a visible image-type label everywhere they render", () => {
-  // Alt text alone is not a disclosure a sighted buyer sees.
+test("family visuals keep only the concept-pack disclosure", () => {
   const renders = sourceFiles("src").filter((f) => /<FamilyVisual\b/.test(fs.readFileSync(f, "utf8")));
   assert.deepEqual(renders.sort(), [
     path.join("src", "app", "[locale]", "about", "page.tsx"),
@@ -44,9 +43,8 @@ test("family visuals carry a visible image-type label everywhere they render", (
   ].sort());
   for (const f of renders) {
     const src = fs.readFileSync(f, "utf8");
-    assert.match(src, /editorial: tc(at)?\("editorialBadge"\)|editorialBadge/, `${f} passes the editorial label`);
-    assert.match(src, /studio: tp?\("studioBadge"\)/, `${f} passes the studio label`);
     assert.match(src, /concept:/, `${f} passes the concept-pack label`);
+    assert.doesNotMatch(src, /editorialBadge|studioBadge/);
   }
   const visual = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");
   assert.match(visual, /<DualImageFrame/);
@@ -57,9 +55,9 @@ test("family visuals carry a visible image-type label everywhere they render", (
   assert.match(frame, /\{secondary\.badge\}/);
   assert.match(frame, /object-cover/);
   const detail = fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8");
-  assert.match(detail, /studioNote/, "detail page explains the studio representation");
+  assert.doesNotMatch(detail, /studioNote|editorialBadge|studioBadge/);
   assert.match(detail, /<DualImageFrame/, "detail page uses the shared two-image frame");
-  assert.match(detail, /badgeFor\(image\.kind\)/, "detail frame labels each image type");
+  assert.match(detail, /badgeFor\(image\.kind\)/, "detail frame labels concept packaging when applicable");
 });
 
 test("homepage is six server-rendered platform sections, without page-wide reveal hydration", () => {

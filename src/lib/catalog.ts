@@ -361,7 +361,7 @@ const RANGE_FALLBACKS: Record<FamilySlug, CatalogImage[]> = {
     FAMILY_EDITORIAL.coconut,
     {
       src: "/images/catalog/studio/coconut.jpg",
-      alt: L("Studio representation of coconut ingredient formats", "Hình ảnh studio minh họa các dạng nguyên liệu dừa"),
+      alt: L("Coconut ingredient formats", "Các dạng nguyên liệu dừa"),
       kind: "studio",
     },
   ],
@@ -369,7 +369,7 @@ const RANGE_FALLBACKS: Record<FamilySlug, CatalogImage[]> = {
     FAMILY_EDITORIAL["birds-nest"],
     {
       src: "/images/catalog/studio/birds-nest.jpg",
-      alt: L("Studio representation of bird's nest ingredient formats", "Hình ảnh studio minh họa các dạng nguyên liệu yến"),
+      alt: L("Bird's nest ingredient formats", "Các dạng nguyên liệu yến"),
       kind: "studio",
     },
   ],
@@ -377,7 +377,7 @@ const RANGE_FALLBACKS: Record<FamilySlug, CatalogImage[]> = {
     FAMILY_EDITORIAL.fruit,
     {
       src: "/images/catalog/studio/fruit.jpg",
-      alt: L("Studio representation of fruit ingredient formats", "Hình ảnh studio minh họa các dạng nguyên liệu trái cây"),
+      alt: L("Fruit ingredient formats", "Các dạng nguyên liệu trái cây"),
       kind: "studio",
     },
   ],
@@ -385,7 +385,7 @@ const RANGE_FALLBACKS: Record<FamilySlug, CatalogImage[]> = {
     FAMILY_EDITORIAL["nuts-spices-botanicals"],
     {
       src: "/images/catalog/studio/nuts-spices-botanicals.jpg",
-      alt: L("Studio representation of cashew kernels and spices", "Hình ảnh studio minh họa nhân hạt điều và gia vị"),
+      alt: L("Cashew kernels and spice formats", "Nhân hạt điều và các dạng gia vị"),
       kind: "studio",
     },
   ],

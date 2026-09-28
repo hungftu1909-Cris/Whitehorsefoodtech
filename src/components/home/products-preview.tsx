@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils";
 /** Image-led routing to the five family pages; detail lives there. */
 export function ProductsPreview() {
   const t = useTranslations("home.productsPreview");
-  const tp = useTranslations("products");
   const tc = useTranslations("catalog");
   const locale = useLocale();
   const items = t.raw("items") as { title: string; tagline: string; status: string }[];
@@ -40,7 +39,7 @@ export function ProductsPreview() {
                   family={category.slug as FamilySlug}
                   locale={locale}
                   name={item.title}
-                  labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge"), concept: tc("conceptPackBadge") }}
+                  labels={{ concept: tc("conceptPackBadge") }}
                   className="border-b border-border"
                 />
                 <div className="flex flex-1 flex-col p-5">
