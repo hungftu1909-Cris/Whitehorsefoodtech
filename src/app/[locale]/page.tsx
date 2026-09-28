@@ -2,12 +2,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
 import { ProofStrip } from "@/components/home/proof-strip";
 import { ProductsPreview } from "@/components/home/products-preview";
-import { ValueProposition } from "@/components/home/value-proposition";
+import { PlatformMap } from "@/components/home/platform-map";
+import { EvidenceLayer } from "@/components/home/evidence-layer";
 import { SplitCta } from "@/components/sections/split-cta";
 
-// Five sections, all Server Components. Company story, process, quality
-// detail and the three-year vision live on their own pages (About, How We
-// Work, Quality) and are reached through links, not repeated here.
+// Six server-rendered sections tell one platform story. Interactive product
+// filtering lives on /products, keeping the homepage fast and indexable.
 export default async function Home({
   params,
 }: {
@@ -22,7 +22,8 @@ export default async function Home({
       <Hero />
       <ProofStrip />
       <ProductsPreview />
-      <ValueProposition />
+      <PlatformMap />
+      <EvidenceLayer />
       <SplitCta
         title={t("title")}
         subtitle={t("subtitle")}

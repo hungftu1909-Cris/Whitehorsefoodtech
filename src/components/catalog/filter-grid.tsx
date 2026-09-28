@@ -23,6 +23,7 @@ export function FilterGrid({
   items,
   groups,
   labels,
+  queryKey = "range",
   className,
 }: {
   items: FilterItem[];
@@ -37,6 +38,8 @@ export function FilterGrid({
     /** Pre-rendered "N results" label per count (index = count); functions can't cross the server/client boundary. */
     results: string[];
   };
+  /** URL key for the selected group; family explorers use `family`. */
+  queryKey?: string;
   className?: string;
 }) {
   const [group, setGroup] = useState("");
@@ -45,22 +48,22 @@ export function FilterGrid({
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const fromUrl = params.get("range") ?? "";
+    const fromUrl = params.get(queryKey) ?? "";
     // Deferred so hydration matches the server HTML (unfiltered) first.
     queueMicrotask(() => {
       if (groups.some((g) => g.id === fromUrl)) setGroup(fromUrl);
       setQuery((params.get("q") ?? "").slice(0, 60));
     });
-  }, [groups]);
+  }, [groups, queryKey]);
 
   useEffect(() => {
     const url = new URL(window.location.href);
-    if (group) url.searchParams.set("range", group);
-    else url.searchParams.delete("range");
+    if (group) url.searchParams.set(queryKey, group);
+    else url.searchParams.delete(queryKey);
     if (query.trim()) url.searchParams.set("q", query.trim());
     else url.searchParams.delete("q");
     if (url.href !== window.location.href) window.history.replaceState(window.history.state, "", url);
-  }, [group, query]);
+  }, [group, query, queryKey]);
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -136,7 +139,7 @@ export function FilterGrid({
 
       <ul className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
-          <li key={item.id} hidden={!visible.has(item.id)} className="flex">
+          <li key={item.id} hidden={!visible.has(item.id)} className="flex [content-visibility:auto] [contain-intrinsic-size:560px]">
             {item.card}
           </li>
         ))}
