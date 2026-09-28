@@ -139,7 +139,7 @@ test("positioning is the five-family platform, not coffee-only", () => {
     const heroes = [get(catalog as Json, "meta.title"), get(catalog as Json, "meta.description"), get(catalog as Json, "home.hero.title")].join(" ");
     assert.doesNotMatch(heroes, /coffee ingredients for|nguyên liệu cà phê việt nam cho/i);
   }
-  assert.match(String(get(en as Json, "about.hero.subtitle")), /premium B2B ingredient platform that connects farmers and processors more directly/);
+  assert.match(String(get(en as Json, "about.hero.subtitle")), /premium B2B ingredient platform connecting farmers and processors more directly/);
 });
 
 test("public concepts use the Phase 1 names", () => {

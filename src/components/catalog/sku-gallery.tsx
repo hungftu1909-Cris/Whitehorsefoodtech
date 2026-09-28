@@ -7,17 +7,15 @@ import { cn } from "@/lib/utils";
 /**
  * Main image + thumbnail switcher for a product-code page. The first image
  * is server-rendered with priority (LCP); thumbnails only swap the main
- * image. Every image carries a visible badge because these are editorial
- * references, not packshots of the exact product.
+ * image. Every image carries its own visible badge ("Concept packaging" or
+ * "Editorial image"): none of them is a photograph of the exact stock.
  */
 export function SkuGallery({
   images,
-  badge,
   label,
   showLabel,
 }: {
-  images: { src: string; alt: string }[];
-  badge: string;
+  images: { src: string; alt: string; badge: string }[];
   label: string;
   /** "Show image {index}" with {index} to be replaced. */
   showLabel: string;
@@ -38,7 +36,7 @@ export function SkuGallery({
           className="object-cover"
         />
         <span className="absolute bottom-2 left-2 rounded-full border border-border/60 bg-background/90 px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
-          {badge}
+          {current.badge}
         </span>
       </div>
       {images.length > 1 && (

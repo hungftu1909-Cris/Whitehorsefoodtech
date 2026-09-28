@@ -12,6 +12,7 @@ orientation, at least 1200px wide recommended.
 | (not rendered — see Truthfulness) | `public/images/about.jpg`, `public/images/factory.jpg` |
 | Blog cover — per post, optional | `public/images/blog/<post-slug>.jpg` (slug = the `.mdx` filename in `content/blog/en|vi/`; EN and VI slugs differ) |
 | Family visual (homepage preview, `/products`, family hero, About mosaic — 4:3) | `public/images/catalog/studio/<slug>.jpg` for non-coffee families (text-free studio representation); coffee uses a catalog editorial photo. Wired in `src/lib/family-images.ts` |
+| Coffee SKU packaging concept renders (first image per code) | `public/images/catalog/coffee/packs/whcf00N-concept-pack.webp` — see `docs/image-inventory.md`; always shown with "Concept packaging" |
 | Catalog editorial images (product-code cards and galleries) | `public/images/catalog/<family>/*.jpg`, wired in `src/lib/catalog.ts` — always shown with an "Editorial image" badge |
 
 Family slugs (studio filenames):

@@ -92,25 +92,30 @@ export default async function AboutPage({
               </Link>
             </div>
           </div>
-          <ul
-            aria-label={t("hero.mosaicLabel")}
-            className="grid grid-cols-2 gap-2 sm:gap-3 lg:col-span-5"
-          >
-            {ABOUT_MOSAIC_FAMILIES.map((family, i) => (
-              <li key={family}>
-                <FamilyVisual
-                  family={family}
-                  locale={locale}
-                  name={familyName(family)}
-                  labels={visualLabels}
-                  sizes="(min-width: 1024px) 18rem, 50vw"
-                  priority={i < 2}
-                  compact
-                  className="rounded-md border border-border"
-                />
-              </li>
-            ))}
-          </ul>
+          {/* Five families: two larger tiles over three. One shared caption
+              discloses the imagery instead of a badge on every tile. */}
+          <figure className="lg:col-span-5">
+            <ul aria-label={t("hero.mosaicLabel")} className="grid grid-cols-6 gap-2 sm:gap-3">
+              {ABOUT_MOSAIC_FAMILIES.map((family, i) => (
+                <li key={family} className={i < 2 ? "col-span-3" : "col-span-2"}>
+                  <FamilyVisual
+                    family={family}
+                    locale={locale}
+                    name={familyName(family)}
+                    labels={visualLabels}
+                    sizes={i < 2 ? "(min-width: 1024px) 14rem, 50vw" : "(min-width: 1024px) 9rem, 33vw"}
+                    priority={i < 2}
+                    compact
+                    showBadge={false}
+                    className="rounded-md border border-border"
+                  />
+                </li>
+              ))}
+            </ul>
+            <figcaption className="mt-4 border-t border-border pt-3 text-xs leading-relaxed text-muted-foreground">
+              {t("hero.imageCaption")}
+            </figcaption>
+          </figure>
         </div>
       </section>
 

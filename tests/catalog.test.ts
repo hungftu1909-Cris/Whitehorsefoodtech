@@ -115,9 +115,24 @@ test("every catalog image exists, is optimised and has provenance", () => {
     assert.ok(fs.existsSync(file), `${image!.src} missing`);
     assert.ok(fs.statSync(file).size < 400 * 1024, `${image!.src} not optimised`);
     assert.ok(PROVENANCE.includes(image!.src.replace(/^\//, "public/")), `${image!.src} not in asset-provenance.md`);
-    assert.equal(image!.kind, "editorial");
+    assert.ok(image!.kind === "editorial" || image!.kind === "concept-pack");
   }
   assert.match(PROVENANCE, /production rights confirmation pending/i);
+});
+
+test("each confirmed code leads with its own packaging render, never a shared image", () => {
+  const primaries = CATALOG_SKUS.map((s) => s.images[0].src);
+  assert.equal(new Set(primaries).size, primaries.length, "primary SKU images are unique");
+  for (const sku of CATALOG_SKUS) {
+    const [first, ...rest] = sku.images;
+    assert.equal(first.kind, "concept-pack", `${sku.code} leads with its pack`);
+    assert.ok(first.src.includes(sku.slug), `${sku.code} pack file is named for the code`);
+    assert.ok(first.src.endsWith(".webp"));
+    assert.ok(first.alt.en.includes(sku.code) && first.alt.vi.includes(sku.code), `${sku.code} alt names the code`);
+    assert.ok(rest.every((i) => i.kind === "editorial"));
+  }
+  const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
+  for (const sku of CATALOG_SKUS) assert.ok(INVENTORY.includes(sku.images[0].src.replace(/^\//, "public/")), `${sku.code} in inventory`);
 });
 
 test("catalog request links prefill the RFQ and validate", () => {

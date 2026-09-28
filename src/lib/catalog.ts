@@ -25,8 +25,13 @@ export type FamilySlug = "coffee" | "coconut" | "birds-nest" | "fruit" | "nuts-s
 export type CatalogImage = {
   src: string;
   alt: Localized;
-  /** Editorial references from the website-edit brief (docs/asset-provenance.md). */
-  kind: "editorial";
+  /**
+   * "editorial": generic photographs from the website-edit brief.
+   * "concept-pack": the owner's packaging concept render for that exact
+   * code (docs/image-inventory.md) — provisional artwork, never a photo of
+   * stock or a final label. Both carry a visible badge.
+   */
+  kind: "editorial" | "concept-pack";
 };
 
 export type SpecRow = {
@@ -108,6 +113,16 @@ const IMG = {
     kind: "editorial",
   },
 } satisfies Record<string, CatalogImage>;
+
+/** One packaging concept render per confirmed code (front three-quarter view). */
+const PACK = (code: string, en: string, vi: string): CatalogImage => ({
+  src: `/images/catalog/coffee/packs/${code.toLowerCase()}-concept-pack.webp`,
+  alt: {
+    en: `Packaging concept render for ${code}: ${en}`,
+    vi: `Hình render bao bì ý tưởng cho ${code}: ${vi}`,
+  },
+  kind: "concept-pack",
+});
 
 // Family-level visuals (cards, family hero, About mosaic) live in
 // src/lib/family-images.ts.
@@ -286,7 +301,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Processing", "Phương pháp chế biến") },
       PACKAGING,
     ],
-    images: [IMG.bowls, IMG.flatlay],
+    images: [PACK("WHCF001", "green Robusta coffee beans in a 2–5 kg barrier pouch", "cà phê nhân Robusta trong túi barrier 2–5 kg"), IMG.bowls],
   },
   {
     code: "WHCF002", slug: "whcf002", family: "coffee", range: "coffee-green",
@@ -302,7 +317,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Processing", "Phương pháp chế biến"), reference: L("Washed or natural — agreed per order", "Chế biến ướt hoặc tự nhiên — thống nhất theo đơn") },
       PACKAGING,
     ],
-    images: [IMG.flatlay, IMG.bowls],
+    images: [PACK("WHCF002", "green Arabica coffee beans in a 2–5 kg barrier pouch", "cà phê nhân Arabica trong túi barrier 2–5 kg"), IMG.flatlay],
   },
   {
     code: "WHCF003", slug: "whcf003", family: "coffee", range: "coffee-green",
@@ -318,7 +333,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Cup profile", "Hương vị (cupping)") },
       PACKAGING,
     ],
-    images: [IMG.bowls, IMG.flatlay],
+    images: [PACK("WHCF003", "fine green Robusta in a 2–5 kg barrier pouch", "Robusta nhân loại Fine trong túi barrier 2–5 kg"), IMG.bowls],
   },
   {
     code: "WHCF004", slug: "whcf004", family: "coffee", range: "coffee-roasted",
@@ -333,7 +348,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Blend", "Phối trộn"), reference: L("Straight Robusta or blend — agreed", "Robusta nguyên chất hoặc phối trộn — thống nhất") },
       PACKAGING,
     ],
-    images: [IMG.cups, IMG.spoons],
+    images: [PACK("WHCF004", "roasted whole-bean coffee in a 1 kg pouch", "cà phê rang nguyên hạt trong túi 1 kg"), IMG.cups],
   },
   {
     code: "WHCF005", slug: "whcf005", family: "coffee", range: "coffee-roasted",
@@ -348,7 +363,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Moisture", "Độ ẩm"), method: "ISO 11294" },
       PACKAGING,
     ],
-    images: [IMG.spoons, IMG.cups],
+    images: [PACK("WHCF005", "roasted and ground coffee in a 250 g pouch", "cà phê rang xay trong túi 250 g"), IMG.spoons],
   },
   {
     code: "WHCF006", slug: "whcf006", family: "coffee", range: "coffee-cold-brew",
@@ -364,7 +379,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Processing and shelf life", "Xử lý và hạn dùng") },
       PACKAGING,
     ],
-    images: [IMG.spoons, IMG.cups],
+    images: [PACK("WHCF006", "cold brew black coffee in a 250 ml can", "cold brew cà phê đen trong lon 250 ml"), IMG.spoons],
   },
   {
     code: "WHCF007", slug: "whcf007", family: "coffee", range: "coffee-soluble",
@@ -380,7 +395,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Bulk density and solubility", "Tỷ trọng khối và độ hòa tan") },
       PACKAGING,
     ],
-    images: [IMG.cups, IMG.spoons],
+    images: [PACK("WHCF007", "spray-dried instant coffee in a 20–25 kg lined carton", "cà phê hòa tan sấy phun trong thùng carton có lót 20–25 kg"), IMG.cups],
   },
   {
     code: "WHCF008", slug: "whcf008", family: "coffee", range: "coffee-soluble",
@@ -396,7 +411,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Granule size and density", "Cỡ hạt và tỷ trọng") },
       PACKAGING,
     ],
-    images: [IMG.spoons, IMG.cups],
+    images: [PACK("WHCF008", "agglomerated instant coffee in a carton of 20 × 2 g sticks", "cà phê hòa tan tạo hạt trong hộp 20 gói 2 g"), IMG.spoons],
   },
   {
     code: "WHCF009", slug: "whcf009", family: "coffee", range: "coffee-soluble",
@@ -412,7 +427,7 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Particle size and colour", "Cỡ hạt và màu sắc") },
       PACKAGING,
     ],
-    images: [IMG.cups, IMG.spoons],
+    images: [PACK("WHCF009", "freeze-dried instant coffee in a 100 g jar", "cà phê hòa tan sấy thăng hoa trong hũ 100 g"), IMG.cups],
   },
 ];
 

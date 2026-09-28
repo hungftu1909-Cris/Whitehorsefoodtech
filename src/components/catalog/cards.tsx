@@ -25,7 +25,7 @@ export function SkuCard({
 }: {
   sku: CatalogSku;
   locale: string;
-  labels: { view: string; sample: string; badge: string; rangeLabel: string; rangeName: string };
+  labels: { view: string; sample: string; badge: string; conceptBadge: string; rangeLabel: string; rangeName: string };
 }) {
   const image = sku.images[0];
   const href = `/products/${sku.family}/${sku.slug}`;
@@ -39,7 +39,7 @@ export function SkuCard({
           sizes="(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        <ImageBadge>{labels.badge}</ImageBadge>
+        <ImageBadge>{image.kind === "concept-pack" ? labels.conceptBadge : labels.badge}</ImageBadge>
       </Link>
       <div className="flex flex-1 flex-col p-5">
         <p className="font-mono text-xs font-semibold tracking-wider text-accent">{sku.code}</p>

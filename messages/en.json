@@ -182,7 +182,8 @@
     "hero": {
       "eyebrow": "Whitehorse Foodtech / Premium ingredient platform",
       "title": "Raising the standard of Vietnamese ingredients for global value chains.",
-      "subtitle": "Whitehorse Foodtech is building a premium B2B ingredient platform that connects farmers and processors more directly with food manufacturers, brands, ingredient users and distribution partners. By reducing non-value-adding layers, we aim to create a supply chain that is more transparent, efficient and trusted.",
+      "subtitle": "Whitehorse Foodtech is building a premium B2B ingredient platform connecting farmers and processors more directly with manufacturers, brands and distributors — designed for fewer layers that add no value, and a more transparent, trusted supply chain.",
+      "imageCaption": "Illustrative images by ingredient family: coffee is an editorial photograph; the others are studio representations. Product, source and specification are confirmed per request.",
       "ctaProducts": "Explore ingredient families",
       "ctaRfq": "Send an ingredient request",
       "mosaicLabel": "Ingredient families Whitehorse works with"
@@ -448,6 +449,8 @@
     "requestQuote": "Request quote",
     "requestRange": "Request this range",
     "editorialBadge": "Editorial image",
+    "conceptPackBadge": "Concept packaging",
+    "conceptPackNote": "Packaging concept render. Label text is illustrative — the final pack, label and specification are confirmed with the supplier or co-packer for each order. Not a photograph of stock.",
     "perRequestNote": "A listed product or range is not a statement of stock or export readiness. Availability, final specification, test method, documentation and COA scope are confirmed for each request.",
     "referenceTitle": "Typical reference parameters",
     "referenceDisclaimer": "Typical reference parameters — final specification, test method, documentation and COA scope are agreed per order.",

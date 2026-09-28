@@ -88,7 +88,8 @@ test("every family maps to exactly one image with EN/VI alt text", () => {
     assert.ok(image.alt.en.trim() && image.alt.vi.trim(), `${family} alt`);
     assert.ok(image.src.startsWith("/images/catalog/"), `${family} lives under /images/catalog`);
   }
-  assert.equal(ABOUT_MOSAIC_FAMILIES.length, 4);
+  assert.deepEqual([...ABOUT_MOSAIC_FAMILIES].sort(), PRODUCT_CATEGORIES.map((c) => c.slug).sort(), "About mosaic shows all five families");
+  assert.equal(ABOUT_MOSAIC_FAMILIES[1], "birds-nest", "bird's nest sits in the top row");
 });
 
 test("coffee uses a real editorial coffee image; other families use studio representations", () => {
@@ -117,6 +118,34 @@ test("family images on disk are optimised, 4:3-ready and have provenance", () =>
     assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
     assert.ok(PROVENANCE.includes(image.src.replace(/^\//, "public/")), `${image.src} not in asset-provenance.md`);
   }
+});
+
+test("About discloses its imagery once, with a shared caption", () => {
+  assert.match(ABOUT_PAGE, /showBadge=\{false\}/);
+  assert.match(ABOUT_PAGE, /<figcaption[\s\S]*?t\("hero\.imageCaption"\)/);
+  assert.match(en.about.hero.imageCaption, /editorial photograph.*studio representations.*confirmed per request/);
+  assert.match(vi.about.hero.imageCaption, /ảnh biên tập.*hình ảnh studio.*xác nhận theo từng yêu cầu/);
+  // Every other FamilyVisual keeps its per-image badge.
+  for (const f of ["src/app/[locale]/products/page.tsx", "src/app/[locale]/products/[slug]/page.tsx", "src/components/home/products-preview.tsx"]) {
+    assert.doesNotMatch(fs.readFileSync(f, "utf8"), /showBadge/, f);
+  }
+});
+
+test("About lead is tightened but keeps the thesis", () => {
+  const words = (s: string) => s.trim().split(/\s+/).length;
+  assert.ok(words(en.about.hero.subtitle) <= 36, `EN lead ${words(en.about.hero.subtitle)} words`);
+  assert.ok(words(vi.about.hero.subtitle) <= 58, `VI lead ${words(vi.about.hero.subtitle)} words`);
+  assert.match(en.about.hero.subtitle, /farmers and processors more directly/);
+  assert.match(vi.about.hero.subtitle, /trực tiếp hơn nông hộ và nhà máy chế biến/);
+});
+
+test("image labels use one consistent family of wording", () => {
+  assert.equal(en.catalog.editorialBadge, "Editorial image");
+  assert.equal(vi.catalog.editorialBadge, "Hình ảnh biên tập minh họa");
+  assert.equal(en.catalog.conceptPackBadge, "Concept packaging");
+  assert.equal(vi.catalog.conceptPackBadge, "Bao bì ý tưởng");
+  assert.match(en.catalog.conceptPackNote, /Not a photograph of stock/);
+  assert.match(vi.catalog.conceptPackNote, /Không phải ảnh chụp hàng có sẵn/);
 });
 
 test("studio labels match the approved wording", () => {

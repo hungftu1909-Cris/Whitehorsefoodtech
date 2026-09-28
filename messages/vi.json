@@ -182,7 +182,8 @@
     "hero": {
       "eyebrow": "Whitehorse Foodtech / Nền tảng nguyên liệu cao cấp",
       "title": "Nâng chuẩn nguyên liệu Việt cho chuỗi giá trị toàn cầu.",
-      "subtitle": "Whitehorse Foodtech đang xây dựng nền tảng nguyên liệu B2B kết nối trực tiếp hơn giữa nông hộ, nhà máy chế biến với các nhà sản xuất thực phẩm, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối. Bằng cách rút ngắn những tầng trung gian không tạo thêm giá trị, chúng tôi hướng tới một chuỗi cung ứng minh bạch hơn, hiệu quả hơn và đáng tin cậy hơn.",
+      "subtitle": "Whitehorse Foodtech đang xây dựng nền tảng nguyên liệu B2B, kết nối trực tiếp hơn nông hộ và nhà máy chế biến với nhà sản xuất, thương hiệu và nhà phân phối — hướng tới ít tầng trung gian không tạo giá trị hơn và một chuỗi cung ứng minh bạch, đáng tin cậy hơn.",
+      "imageCaption": "Hình ảnh minh họa theo nhóm nguyên liệu: cà phê là ảnh biên tập, các nhóm còn lại là hình ảnh studio. Sản phẩm, nguồn cung và thông số được xác nhận theo từng yêu cầu.",
       "ctaProducts": "Khám phá nhóm nguyên liệu",
       "ctaRfq": "Gửi yêu cầu nguyên liệu",
       "mosaicLabel": "Các nhóm nguyên liệu Whitehorse đang làm việc"
@@ -447,7 +448,9 @@
     "requestSpec": "Yêu cầu thông số",
     "requestQuote": "Yêu cầu báo giá",
     "requestRange": "Yêu cầu dòng này",
-    "editorialBadge": "Ảnh minh họa",
+    "editorialBadge": "Hình ảnh biên tập minh họa",
+    "conceptPackBadge": "Bao bì ý tưởng",
+    "conceptPackNote": "Hình render bao bì ý tưởng. Chữ trên nhãn chỉ mang tính minh họa — bao bì, nhãn và thông số cuối cùng được xác nhận với nhà cung cấp hoặc đơn vị đóng gói cho từng đơn hàng. Không phải ảnh chụp hàng có sẵn.",
     "perRequestNote": "Việc liệt kê một sản phẩm hoặc dòng sản phẩm không có nghĩa là hàng có sẵn hoặc sẵn sàng xuất khẩu. Khả năng cung ứng, thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được xác nhận theo từng yêu cầu.",
     "referenceTitle": "Thông số tham chiếu điển hình",
     "referenceDisclaimer": "Thông số tham chiếu điển hình — thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng.",

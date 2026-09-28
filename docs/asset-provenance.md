@@ -101,6 +101,34 @@ wording) are no longer referenced by any code
 in this branch; delete them before Production so they are not publicly
 reachable by URL.
 
+## Coffee packaging concept renders (added 2026-09-28)
+
+Source: CEO folder `D:\Working\WK 2\White Horse\BM Foodtech\Anh SKU\Anh san pham\WHITEHORSE_01_COFFEE.zip`
+(README: "Concept renders, not production artwork"). Full per-file
+mapping, source hashes, selection reasons and every file **not** used:
+`docs/image-inventory.md`.
+
+| Public file |
+|---|
+| `public/images/catalog/coffee/packs/whcf001-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf002-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf003-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf004-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf005-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf006-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf007-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf008-concept-pack.webp` |
+| `public/images/catalog/coffee/packs/whcf009-concept-pack.webp` |
+
+**How they are presented:** first image on the SKU page and SKU cards,
+with the visible badge "Concept packaging" / "Bao bì ý tưởng" and the SKU
+page note that label text is illustrative and the final pack, label and
+specification are confirmed with the supplier or co-packer per order.
+Never as a photograph of stock or a final label.
+
+**Licence status:** owner-supplied renders of Whitehorse's own concept
+packaging; tool/designer and rights to be recorded before Production.
+
 ## Pre-existing imagery
 
 | File | Status |

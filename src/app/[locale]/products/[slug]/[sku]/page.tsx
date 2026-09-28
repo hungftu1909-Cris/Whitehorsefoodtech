@@ -91,12 +91,20 @@ export default async function SkuPage({
       />
 
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 pt-8 pb-14 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <SkuGallery
-          images={sku.images.map((image) => ({ src: image.src, alt: pick(image.alt, locale) }))}
-          badge={tc("editorialBadge")}
-          label={tc("galleryLabel")}
-          showLabel={tc("showImage", { index: "{index}" })}
-        />
+        <div>
+          <SkuGallery
+            images={sku.images.map((image) => ({
+              src: image.src,
+              alt: pick(image.alt, locale),
+              badge: image.kind === "concept-pack" ? tc("conceptPackBadge") : tc("editorialBadge"),
+            }))}
+            label={tc("galleryLabel")}
+            showLabel={tc("showImage", { index: "{index}" })}
+          />
+          {sku.images.some((image) => image.kind === "concept-pack") && (
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tc("conceptPackNote")}</p>
+          )}
+        </div>
 
         <div>
           <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
@@ -237,6 +245,7 @@ export default async function SkuPage({
                       view: tc("viewDetails"),
                       sample: tc("requestSample"),
                       badge: tc("editorialBadge"),
+                      conceptBadge: tc("conceptPackBadge"),
                       rangeLabel: tc("rangeLabel"),
                       rangeName: pick(findRange(item.range)!.name, locale),
                     }}

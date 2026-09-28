@@ -188,6 +188,7 @@ export default async function ProductFamilyPage({
                       view: tc("viewDetails"),
                       sample: tc("requestSample"),
                       badge: tc("editorialBadge"),
+                      conceptBadge: tc("conceptPackBadge"),
                       rangeLabel: tc("rangeLabel"),
                       rangeName: pick(findRange(sku.range)!.name, locale),
                     }}

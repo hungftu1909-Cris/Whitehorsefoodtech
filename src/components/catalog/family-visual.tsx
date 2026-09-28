@@ -28,6 +28,7 @@ export function FamilyVisual({
   sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
   priority,
   compact,
+  showBadge = true,
   className,
 }: {
   family: FamilySlug;
@@ -38,6 +39,11 @@ export function FamilyVisual({
   priority?: boolean;
   /** Smaller type for mosaic tiles. */
   compact?: boolean;
+  /**
+   * Hide the per-image badge only where one shared, visible caption labels
+   * the whole group (the About mosaic).
+   */
+  showBadge?: boolean;
   className?: string;
 }) {
   const image = familyImage(family);
@@ -54,7 +60,7 @@ export function FamilyVisual({
           priority={priority}
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
-        <ImageBadge>{image.kind === "studio" ? labels.studio : labels.editorial}</ImageBadge>
+        {showBadge && <ImageBadge>{image.kind === "studio" ? labels.studio : labels.editorial}</ImageBadge>}
       </div>
     );
   }

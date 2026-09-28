@@ -80,5 +80,8 @@ export function familyImage(family: FamilySlug): FamilyImage {
   return FAMILY_IMAGES[family];
 }
 
-/** The four families shown in the About hero mosaic, in reading order. */
-export const ABOUT_MOSAIC_FAMILIES: FamilySlug[] = ["coffee", "coconut", "fruit", "nuts-spices-botanicals"];
+/**
+ * About hero composition: all five families. Two larger tiles on top
+ * (coffee, the family with confirmed codes, and bird's nest), three below.
+ */
+export const ABOUT_MOSAIC_FAMILIES: FamilySlug[] = ["coffee", "birds-nest", "coconut", "fruit", "nuts-spices-botanicals"];
