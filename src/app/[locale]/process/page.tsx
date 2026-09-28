@@ -1,15 +1,14 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Sprout, Filter, FlaskConical, Package, FileText, Ship } from "lucide-react";
+import { ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { SmartImage } from "@/components/ui/smart-image";
-import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
-// Matches the order of process.steps: Sourcing, Processing & Grading,
-// Quality Control, Packing, Export Documentation, Shipping & Delivery.
-const STEP_ICONS = [Sprout, Filter, FlaskConical, Package, FileText, Ship];
+// Matches the order of process.steps: Requirement & specification,
+// Supplier matching & qualification, Sampling & approval, Quality control,
+// Packing & documentation, Shipping & delivery.
+const STEP_ICONS = [ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship];
 
 export async function generateMetadata({
   params,
@@ -23,7 +22,6 @@ export async function generateMetadata({
     path: "/process",
     title: t("title"),
     description: t("subtitle"),
-    images: ["/images/factory.jpg"],
   });
 }
 
@@ -46,7 +44,7 @@ export default async function ProcessPage({
           {steps.map((step, i) => {
             const Icon = STEP_ICONS[i % STEP_ICONS.length];
             return (
-              <Reveal key={step.title} as="li" delay={i * 100} className="relative pb-16 pl-24 last:pb-0">
+              <li key={step.title} className="relative pb-16 pl-24 last:pb-0">
                 {i < steps.length - 1 && (
                   <span
                     className="absolute top-16 left-8 h-[calc(100%-4rem)] w-px bg-border"
@@ -65,7 +63,7 @@ export default async function ProcessPage({
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {step.description}
                 </p>
-              </Reveal>
+              </li>
             );
           })}
         </ol>
@@ -73,23 +71,16 @@ export default async function ProcessPage({
 
       <section className="border-t border-border bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-          <Reveal>
-            <SmartImage
-              src="/images/factory.jpg"
-              alt="Whitehorse Foodtech processing facility — from raw ingredients to export logistics"
-              placeholderLabel="Factory / facility photography needed"
-              aspect="aspect-[16/9]"
-              sizes="(min-width: 1024px) 80rem, 100vw"
-            />
-          </Reveal>
-          <Reveal delay={150} className="mx-auto mt-10 max-w-2xl text-center">
+          {/* No facility photo: the old factory.jpg shows a Whitehorse-branded
+              plant, which would contradict the partner-facility model. */}
+          <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("factory.title")}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {t("factory.subtitle")}
             </p>
-          </Reveal>
+          </div>
         </div>
       </section>
 

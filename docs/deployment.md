@@ -43,8 +43,11 @@ site.
    ```
 5. Add environment variables (hPanel → Node.js app → Environment
    variables) — copy every key from `.env.example`:
-   `NEXT_PUBLIC_SITE_URL`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`,
-   `SMTP_PASS`, `MAIL_FROM`, `MAIL_TO`.
+   `NEXT_PUBLIC_SITE_URL` (`https://www.whitehorsefoodtech.com`),
+   `LEAD_DELIVERY_MODE` (`smtp`), `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`,
+   `SMTP_PASS`, `MAIL_FROM`, `MAIL_TO`, optional `RFQ_MAIL_TO`. Without
+   SMTP the forms return 503 and ask visitors to email instead — they never
+   report a lead as received when it wasn't.
 6. Point your domain (hPanel → Domains) at this Node.js application, and
    issue an SSL certificate (hPanel → SSL — free Let's Encrypt).
 7. Restart the app from hPanel after the first deploy and after any env
@@ -66,8 +69,9 @@ If Git-based deploy isn't available on your plan:
 
 - Visit `https://<yourdomain>/en` and `https://<yourdomain>/vi` to confirm
   both locales load.
-- Submit a test message through `/contact` and `/rfq` and confirm it
-  arrives at `MAIL_TO` (check spam folder on first test).
+- Submit one internal test through `/rfq` (company "TEST — ignore") and
+  confirm it arrives at `RFQ_MAIL_TO`/`MAIL_TO` with its reference in the
+  subject (check spam folder on first test).
 - Verify `/sitemap.xml` and `/robots.txt` resolve, and submit the sitemap
   in Google Search Console / Bing Webmaster Tools.
 

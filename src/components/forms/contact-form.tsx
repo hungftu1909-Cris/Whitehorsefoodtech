@@ -1,12 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useTranslations } from "next-intl";
-import { toast } from "sonner";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { contactSchema, type ContactInput } from "@/lib/validations";
+import { siteConfig } from "@/lib/site";
 import { Field } from "./field";
 import { Honeypot } from "./honeypot";
+import { collectLeadContext, submitLead, SubmitStatus, type SubmitState } from "./submit-lead";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -14,6 +17,8 @@ import { Button } from "@/components/ui/button";
 export function ContactForm() {
   const t = useTranslations("contact.form");
   const tc = useTranslations("common");
+  const locale = useLocale();
+  const [state, setState] = useState<SubmitState>({ kind: "idle" });
 
   const {
     register,
@@ -23,18 +28,10 @@ export function ContactForm() {
   } = useForm<ContactInput>({ resolver: zodResolver(contactSchema) });
 
   async function onSubmit(data: ContactInput) {
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error("Request failed");
-      toast.success(t("success"));
-      reset();
-    } catch {
-      toast.error(t("error"));
-    }
+    setState({ kind: "idle" });
+    const result = await submitLead("/api/contact", { ...data, ...collectLeadContext(locale) });
+    setState(result);
+    if (result.kind === "success") reset();
   }
 
   return (
@@ -71,6 +68,26 @@ export function ContactForm() {
           {...register("message")}
         />
       </Field>
+
+      <p className="text-xs text-muted-foreground">
+        {t.rich("privacyNote", {
+          privacy: (chunks) => (
+            <Link href="/privacy" target="_blank" rel="noopener" className="text-accent underline-offset-2 hover:underline">
+              {chunks}
+            </Link>
+          ),
+        })}
+      </p>
+
+      <SubmitStatus
+        state={state}
+        successTitle={t("successTitle")}
+        successText={t("success")}
+        referenceText={(leadId) => t("reference", { leadId })}
+        errorText={t("error")}
+        undeliveredText={(email) => t("errorDelivery", { email })}
+        fallbackEmail={siteConfig.email}
+      />
 
       <Button type="submit" size="lg" disabled={isSubmitting} className="cursor-pointer">
         {isSubmitting ? tc("sending") : t("submit")}

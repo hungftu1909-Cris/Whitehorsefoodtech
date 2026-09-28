@@ -1,8 +1,12 @@
 # Whitehorse Foodtech — Website
 
-Bilingual (EN/VI) B2B export website for Whitehorse Foodtech (coffee,
-freeze-dried fruit powder and premium agri raw materials), built with
-Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui and
+Bilingual (EN/VI) B2B website for Whitehorse Foodtech, a premium
+agricultural ingredient sourcing and connection platform linking suitable
+Vietnamese farms, cooperatives and processing factories with international
+distributors, food and beverage manufacturers, foodservice groups and
+brands. Five product families (coffee, coconut, bird's nest, fruit, nuts,
+spices & botanicals); coffee has nine confirmed product codes. Built
+with Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui and
 `next-intl`.
 
 ## Stack
@@ -12,7 +16,8 @@ Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui and
 - **i18n:** `next-intl` — locales `en` (default) and `vi`, always-prefixed
   routes (`/en/...`, `/vi/...`)
 - **Forms:** `react-hook-form` + `zod`, submitted to `/api/contact` and
-  `/api/rfq`, emailed via `nodemailer` (see `src/lib/mailer.ts`)
+  `/api/rfq`. Delivery rules in `src/lib/lead-delivery.ts`, SMTP transport
+  in `src/lib/mailer.ts` (see "Lead delivery" below)
 - **Blog:** MDX files in `content/blog/<locale>/*.mdx`, rendered with
   `next-mdx-remote`
 - **Design system:** see [`design-system/whitehorse-foodtech/MASTER.md`](design-system/whitehorse-foodtech/MASTER.md)
@@ -21,17 +26,23 @@ Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui and
 ## Getting started
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
 Visit `http://localhost:3000` (redirects to `/en`).
 
 ```bash
-npm run build   # production build
-npm run start   # run the production build locally
-npm run lint    # ESLint
+npm run build          # production build
+npm run start          # run the production build locally
+npm run lint           # ESLint
+npm test               # node:test suites in tests/ (no extra dependencies)
+npm run check:claims   # public-claims + placeholder scan (exit 1 on findings)
 ```
+
+Run `npx tsc --noEmit --incremental false` for a full type check (on a
+fresh checkout, run `npx next typegen` or a build first so `next-env.d.ts`
+exists).
 
 ## Project structure
 
@@ -40,55 +51,110 @@ src/app/[locale]/        Pages (App Router, one segment per locale)
 src/app/api/              Contact + RFQ form API routes
 src/components/           UI components (layout, sections, forms, home, ui/)
 src/i18n/                 next-intl routing, navigation, request config
+src/lib/                  site facts, SEO, blog, validation, lead delivery
 messages/en.json          English copy
-messages/vi.json          Vietnamese copy
+messages/vi.json          Vietnamese copy (same keys — enforced by tests)
 content/blog/en|vi/*.mdx  Blog posts per locale
+scripts/                  claims scanner
+tests/                    node:test suites + fixtures
+docs/                     deployment guides, claim registry
 design-system/            Brand design system reference (MASTER.md)
 brand/                    Source brand assets (logo, etc.)
 ```
 
+## Content rules
+
+- **Public claims** — every number, partner, certification, capacity or
+  response-time statement must have a row in
+  [`docs/claim-registry.md`](docs/claim-registry.md) with its truth class
+  (FACT / PROGRAM SIGNAL / TARGET / VISION). Targets and vision are always
+  labelled as such. `npm run check:claims` blocks the wording that was
+  removed in Phase 1 (unsupported volumes, "every lot", "exclusively",
+  response-time promises, placeholders…).
+- **Legal identity** — name, registration/tax code, date and address live
+  only in `src/lib/site.ts`; copy that needs them uses placeholders filled
+  from there.
+- **Specifications** are indicative until confirmed in a contract/COA; the
+  product pages say so next to the spec list.
+- **Product catalog** — one typed, bilingual source: `src/lib/catalog.ts`
+  (families' sourcing ranges + confirmed codes). Three layers:
+  `/products` → `/products/<family>` (ranges, filterable confirmed codes)
+  → `/products/<family>/<code>` (e.g. `/products/coffee/whcf007`).
+  Confirmed codes `WHCF001`–`WHCF009` are defined products, not a
+  statement of stock or export readiness. A number may appear in a
+  "typical reference parameter" only with a primary source listed in
+  [`docs/product-range-sources.md`](docs/product-range-sources.md)
+  (tests enforce this); otherwise it reads "agreed per order". Only
+  BreadcrumbList/ItemList schema — no Product/Offer schema.
+- **Proof figures** — current facts (50+ screened suppliers, 10+ markets)
+  and the three-year vision (3,000+ / 10,000+) are always tagged as such.
+  The homepage proof strip shows current facts only; vision figures
+  appear on About only. See the claim registry rows 3–6.
+- **Blog translations** — EN and VI slugs differ. Give both versions of an
+  article the same `translationKey` in frontmatter; hreflang, the sitemap
+  and the language switcher use it (tests fail on a missing or duplicated
+  pair). An article without a translation simply omits the key.
+- **Photos** — a missing image renders nothing (no placeholder panel).
+  Every rendered image needs a row in
+  [`docs/asset-provenance.md`](docs/asset-provenance.md). See
+  [`public/images/README.md`](public/images/README.md).
+
+## Lead delivery
+
+`LEAD_DELIVERY_MODE` controls Contact/RFQ delivery (details in
+`.env.example`):
+
+- `smtp` — email via SMTP. SMTP not configured → HTTP 503; send failure →
+  502. The form only shows success when the email was accepted.
+- `log` — redacted summary in the server log, success returned. Local dev /
+  Vercel Preview only; refused in Vercel Production.
+- unset — `smtp` in production, `log` elsewhere.
+
+Every accepted lead gets a reference such as `RFQ-20260927-7K3QXM`, shown to
+the buyer and put in the email subject. `/rfq` accepts
+`?product=<slug>&range=<range-id>&sku=WHCF00x&intent=quote|sample|spec-sheet`
+(`specification` is an alias of `spec-sheet`) to prefill the form; every
+value is whitelisted and older links keep working. Catalog pages build
+these links with `src/lib/rfq-links.ts`. Multi-product requests in one
+form are a documented follow-up (today: one family/range/code per request,
+the rest in "Additional details").
+
 ## Before you launch
 
-This site was scaffolded with **placeholder content** (marked `[Placeholder — ...]`
-in `messages/en.json` / `messages/vi.json`) because real content wasn't
-available yet. Search both files for `[Placeholder` and `TODO` to find every
-spot that needs a real answer before this goes live. In particular:
-
-- [x] **Logo** — real logo received and wired in: `brand/logo-source.png` is
-      the original; `brand/logo-mark.png` is the cropped emblem (source of
-      truth for re-exports); `public/brand/mark-*.png`, `src/app/icon.png`,
-      `src/app/apple-icon.png` and the OG image are all generated from it.
-      If a vector/SVG source becomes available later, re-export from that
-      instead for crisper edges at all sizes.
-- [x] **Product photography** — the 4 product category images and the About
-      page banner are in (`public/images/products/*`, `public/images/about.jpg`;
-      originals in `brand/marketing/`).
-- [ ] **Remaining photography** — hero (`hero.jpg`), factory (`factory.jpg`)
-      and blog cover images are still placeholders. Drop files into
-      `public/images/...` using the exact filenames listed in
-      [`public/images/README.md`](public/images/README.md) and they replace
-      the placeholders automatically (see `src/components/ui/smart-image.tsx`).
-      Product images use a 3:2 aspect ratio to match the supplied artwork.
-- [ ] **Company details** — `src/lib/site.ts` has placeholder address, phone
-      and email. Update these (they feed the footer, contact page and
-      structured data).
-- [ ] **Certifications** — `certifications.items` in both message files list
-      generic certification types (ISO 22000, HACCP, organic, FDA). **Only
-      list certifications actually held**, with certificate numbers/validity
-      where applicable — do not publish unverified claims.
-- [ ] **Testimonials & client logos** — `home.testimonial` and the `/clients`
-      page are placeholders. Never publish a company's name, logo or quote
-      without their written permission.
-- [ ] **About page stats/team** — `about.stats.items` and `about.team` need
-      real figures and leadership bios.
-- [ ] **Legal pages** — `/privacy` and `/terms` are stubs. Have a lawyer
-      familiar with your target markets (e.g. GDPR for EU buyers) review
-      before launch.
-- [ ] **Email delivery** — copy `.env.example` to `.env.local` and fill in
-      real SMTP credentials, or the contact/RFQ forms will only log
-      submissions to the server console instead of emailing them.
-- [ ] **Domain** — set `NEXT_PUBLIC_SITE_URL` to the real production domain
-      (used in canonical URLs, sitemap.xml, OG tags).
+- [x] **Logo** — `brand/logo-source.png` is the original;
+      `brand/logo-mark.png` the cropped emblem; `public/brand/mark-*.png`,
+      `src/app/icon.png`, `src/app/apple-icon.png` are generated from it.
+- [x] **Product artwork** — all 5 families (`public/images/products/*`,
+      4:3 crop) are in (concept mock-ups; see "Imagery" below).
+- [ ] **Imagery** — `about.jpg`/`factory.jpg` are not rendered because
+      the artwork contains unsupported claims; product mock-ups carry
+      packaging wording ("organic & natural") and are captioned as
+      illustrative. Replace with claim-free, licensed imagery (see
+      [`public/images/README.md`](public/images/README.md)). Blog covers
+      are optional.
+- [ ] **Claim evidence** — see "Evidence needed" in
+      [`docs/claim-registry.md`](docs/claim-registry.md): dated market log
+      behind "10+ markets", dated supplier list and screening criteria behind
+      "50+ screened suppliers", Balance Life naming permission, supplier
+      assessment checklist.
+- [ ] **Catalog image rights** — the four coffee images from the
+      website-edit brief are user-supplied and stock-style; confirm
+      commercial licence before Production (see
+      [`docs/asset-provenance.md`](docs/asset-provenance.md)).
+- [ ] **Leadership & testimonials** — sections are hidden until approved
+      names/bios/quotes exist. Never publish a company's name, logo or quote
+      without written permission.
+- [ ] **Legal review** — `/privacy` (Privacy Notice) and `/terms` (Website
+      Terms) are concise notices that have **not** been reviewed by counsel.
+      They stay `noindex` and out of the sitemap until a lawyer familiar
+      with the target markets (e.g. Decree 13/2023/NĐ-CP, GDPR) approves
+      final text (claim registry row 16).
+- [ ] **Email delivery** — SMTP env vars set in Vercel **Production** scope
+      only, `RFQ_MAIL_TO` owned by the sales team (see
+      [`docs/deployment-vercel.md`](docs/deployment-vercel.md)).
+- [ ] **Domain** — production `NEXT_PUBLIC_SITE_URL` must be
+      `https://www.whitehorsefoodtech.com` (apex redirects to www).
+- [ ] **Social links** — `siteConfig.social` is still empty.
 
 ## Deployment
 

@@ -9,7 +9,10 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { FloatingCtaBar } from "@/components/layout/floating-cta-bar";
 import { JsonLd } from "@/components/seo/json-ld";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
+import { getLocaleSwitchMap } from "@/lib/blog";
+import { localizedAlternates, OG_LOCALE, samePathEverywhere } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
 export const viewport: Viewport = {
@@ -44,10 +47,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://whitehorsefoodtech.com";
-
   return {
-    metadataBase: new URL(siteUrl),
+    // Single source for the canonical host (www) — see src/lib/site.ts.
+    metadataBase: new URL(siteConfig.url),
     title: {
       default: t("title"),
       template: `%s | ${t("siteName")}`,
@@ -55,16 +57,14 @@ export async function generateMetadata({
     description: t("description"),
     alternates: {
       canonical: `/${locale}`,
-      languages: {
-        en: "/en",
-        vi: "/vi",
-      },
+      languages: localizedAlternates(samePathEverywhere("")),
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
       siteName: t("siteName"),
-      locale,
+      locale: OG_LOCALE[locale as Locale] ?? OG_LOCALE[routing.defaultLocale],
+      alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => OG_LOCALE[l]),
       type: "website",
     },
     twitter: {
@@ -88,6 +88,9 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "meta" });
+  // Blog slugs differ per locale; the header's language switcher needs this
+  // map to land on the translated article (or /blog) instead of a 404.
+  const blogSlugMap = getLocaleSwitchMap(locale);
 
   return (
     <html
@@ -99,7 +102,7 @@ export default async function LocaleLayout({
         <JsonLd locale={locale} siteName={t("siteName")} description={t("description")} />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider>
-            <SiteHeader />
+            <SiteHeader blogSlugMap={blogSlugMap} />
             <main className="flex-1">{children}</main>
             <SiteFooter />
             <FloatingCtaBar />

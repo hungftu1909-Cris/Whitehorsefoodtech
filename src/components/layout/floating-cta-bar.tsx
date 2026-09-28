@@ -35,7 +35,7 @@ import { cn } from "@/lib/utils";
  */
 export function FloatingCtaBar() {
   const tNav = useTranslations("nav");
-  const tHero = useTranslations("home.hero");
+  const tCommon = useTranslations("common");
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
@@ -48,8 +48,10 @@ export function FloatingCtaBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const showProducts = pathname !== "/products";
-  const showRfq = pathname !== "/rfq";
+  // Family and product-code pages render their own prefilled RequestBar.
+  const onCatalogDetail = /^\/products\/.+/.test(pathname);
+  const showProducts = pathname !== "/products" && !onCatalogDetail;
+  const showRfq = pathname !== "/rfq" && !onCatalogDetail;
 
   const shared =
     "fixed bottom-4 z-30 flex size-12 items-center justify-center gap-1.5 rounded-full p-0 shadow-lg transition-all duration-300 sm:bottom-6 sm:h-11 sm:w-auto sm:rounded-lg sm:px-5 sm:py-2.5";
@@ -61,7 +63,7 @@ export function FloatingCtaBar() {
       {showProducts && (
         <Link
           href="/products"
-          aria-label={tHero("ctaSecondary")}
+          aria-label={tCommon("exploreProducts")}
           aria-hidden={!visible}
           tabIndex={visible ? 0 : -1}
           className={cn(
@@ -71,7 +73,7 @@ export function FloatingCtaBar() {
             state(visible)
           )}
         >
-          <span className="hidden sm:inline">{tHero("ctaSecondary")}</span>
+          <span className="hidden sm:inline">{tCommon("exploreProducts")}</span>
           <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
         </Link>
       )}

@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Whitehorse Foodtech",
-    "title": "Whitehorse Foodtech — Premium Coffee, Coconut, Bird's Nest & Fruit Ingredients",
-    "description": "Vietnam-based ingredient partner turning coffee, coconut, bird's nest, fruit and premium spices into export-grade ingredients for food & beverage manufacturers, roasters and distributors worldwide."
+    "title": "Whitehorse Foodtech — Premium Vietnamese Agricultural Ingredients for International Buyers",
+    "description": "Whitehorse Foodtech connects suitable Vietnamese farms, cooperatives and processing factories with international distributors, food and beverage manufacturers, foodservice groups and brands — coffee, coconut, bird's nest, fruit, nuts, spices and botanicals, sourced to specification."
   },
   "nav": {
     "home": "Home",
@@ -13,30 +13,25 @@
     "productsBirdsNest": "Bird's Nest Ingredients",
     "productsFruit": "Fruit Ingredients",
     "productsNutsSpicesBotanicals": "Nuts, Spices & Botanicals",
-    "certifications": "Certifications",
-    "process": "Process & Factory",
-    "clients": "Clients & Partners",
+    "certifications": "Quality & Qualification",
+    "process": "How We Work",
+    "clients": "Network",
     "blog": "Insights",
     "contact": "Contact",
     "requestQuote": "Request a Quote"
   },
   "footer": {
-    "tagline": "Premium agricultural products, globally delivered.",
+    "tagline": "Premium Vietnamese agricultural ingredients, sourced and coordinated to your specification.",
     "addressLabel": "Head Office",
-    "address": "27 Đức Diễn Alley 23/72/39, Phú Diễn Ward, Hanoi, Vietnam",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "businessRegNo": "Business Registration No.",
     "quickLinksTitle": "Company",
     "productsTitle": "Products",
     "legalTitle": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Trade",
-    "rights": "All rights reserved.",
-    "newsletterTitle": "Trade updates",
-    "newsletterSubtitle": "Harvest schedules, pricing trends and new product lines — no spam.",
-    "newsletterPlaceholder": "Your business email",
-    "newsletterCta": "Subscribe"
+    "privacy": "Privacy Notice",
+    "terms": "Website Terms",
+    "rights": "All rights reserved."
   },
   "common": {
     "learnMore": "Learn more",
@@ -51,385 +46,542 @@
     "downloadCatalog": "Download product catalog",
     "getInTouch": "Get in touch",
     "requestQuote": "Request a quote",
+    "exploreProducts": "Explore our products",
     "minutesRead": "min read"
   },
   "home": {
     "hero": {
-      "eyebrow": "Vietnam-based · Global export",
-      "title": "Premium ingredients from Vietnam's harvest, ready for your production line.",
-      "subtitle": "Whitehorse Foodtech sources and grades coffee, coconut, bird's nest, fruit and spice for food & beverage manufacturers, roasters and distributors worldwide. Every lot is traceable back to its growing region, tested before it ships, and packed to the specification you actually asked for.",
+      "eyebrow": "Vietnam · Premium agricultural ingredients",
+      "title": "Premium Vietnamese ingredients, connected to the buyers who need them.",
+      "subtitle": "Bulk ingredients, and OEM, ODM and OBM through suitable manufacturing partners — for distributors, manufacturers, foodservice groups and brands.",
       "ctaPrimary": "Request a quote",
-      "ctaSecondary": "Explore our products",
-      "badgeValue": "100K+",
-      "badgeLabel": "Metric tons exported every year"
+      "ctaSecondary": "Explore product families"
     },
-    "trustStrip": {
-      "title": "Trusted across the supply chain",
-      "items": [
-        "Direct sourcing from growing regions",
-        "Full lot traceability",
-        "Flexible order volumes (LCL to FCL)",
-        "Export documentation handled end-to-end"
-      ]
-    },
-    "valueProps": {
-      "eyebrow": "Why Whitehorse",
-      "title": "Built for buyers who can't afford inconsistency",
-      "subtitle": "Every shipment is graded, tested and packed to the same standard. It doesn't matter if it's a trial order or your tenth container this year.",
+    "proof": {
+      "title": "Whitehorse today",
       "items": [
         {
-          "title": "Direct-from-origin sourcing",
-          "description": "We work directly with growing cooperatives and processing facilities across Vietnam's key agricultural regions. No unnecessary intermediaries. No price swings you can't explain to your own customers."
+          "value": "50+",
+          "label": "Suppliers screened by product capability, facility and market requirements"
         },
         {
-          "title": "Consistent, documented quality",
-          "description": "Every lot is graded against the specification you signed off on. Lab results and physical samples go out before the container does, so there are no surprises when it arrives."
+          "value": "10+",
+          "label": "Markets with active buyer and trading relationships"
         },
         {
-          "title": "Export logistics, handled",
-          "description": "Certificate of origin, phytosanitary certificate, fumigation certificate, customs paperwork: we prepare and verify all of it before your container leaves port."
-        },
-        {
-          "title": "A partner, not just a supplier",
-          "description": "You'll deal directly with our team on specifications, packaging and delivery schedules. Not a call center, not a ticket queue."
+          "value": "5",
+          "label": "Ingredient families, from coffee to botanicals"
         }
       ]
     },
     "productsPreview": {
-      "eyebrow": "What we export",
-      "title": "Five ingredient families. One quality standard.",
-      "subtitle": "From coffee and coconut to bird's nest, fruit and premium spices, every ingredient family is sourced and graded to a single export specification.",
+      "eyebrow": "What we source",
+      "title": "Five ingredient families",
+      "subtitle": "Coffee with nine confirmed product codes; four more families sourced or developed to your specification.",
       "items": [
         {
           "title": "Coffee Ingredients",
-          "tagline": "Beans, powder, extract & cold brew",
-          "description": "Grown across the Central Highlands and processed to spec: green and roasted beans, soluble powder, liquid extract, cold brew concentrate. Built for roasters, RTD brands and private-label manufacturers alike.",
-          "cta": "Explore Coffee"
+          "tagline": "Green, roasted, soluble, extract & cold brew",
+          "status": "Confirmed product codes"
         },
         {
           "title": "Coconut Ingredients",
-          "tagline": "Milk, cream, water, powder, oil & MCT",
-          "description": "Bến Tre coconut, processed into the format your production line actually needs: milk, cream, powder, water concentrate, virgin oil, MCT. Bulk or private-label retail packaging, both on the table.",
-          "cta": "Explore Coconut"
+          "tagline": "Milk & cream, powders & solids, blossom sugar",
+          "status": "Sourced on request"
         },
         {
           "title": "Bird's Nest Ingredients",
-          "tagline": "Selected nest, extract, concentrate & powder",
-          "description": "Vietnam's swiftlet nest, developed into functional ingredients for nutrition and premium food brands: selected nest, concentrate, extract, powder, or a formulation built to your spec.",
-          "cta": "Explore Bird's Nest"
+          "tagline": "Cleaned nest & instant / ready-to-prepare formats",
+          "status": "Developed on request"
         },
         {
           "title": "Fruit Ingredients",
-          "tagline": "Freeze-dried, powder, pieces & concentrate",
-          "description": "Passion fruit, mango, dragon fruit and more, freeze-dried or concentrated without losing the color and aroma that make them worth using in the first place. Powders, pieces, concentrates, extracts: pick the format.",
-          "cta": "Explore Fruits"
+          "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
+          "status": "Sourced on request"
         },
         {
           "title": "Nuts, Spices & Botanicals",
-          "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
-          "description": "Cashew from Bình Phước, pepper and cinnamon from the Central Highlands and northern provinces, plus a growing list of Vietnamese botanicals. Export-grade, documented, ready for blending or private label.",
-          "cta": "Explore Ingredients"
+          "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
+          "status": "Sourced on request"
         }
       ]
     },
-    "process": {
-      "eyebrow": "From farm to container",
-      "title": "A transparent process, at every stage",
-      "subtitle": "Traceability isn't a claim — it's how every order is built.",
-      "steps": [
-        { "title": "Sourcing", "description": "Direct relationships with growers and cooperatives in Vietnam's core producing regions." },
-        { "title": "Processing & Grading", "description": "Lots are cleaned, graded and tested against buyer specifications before approval." },
-        { "title": "Quality Control", "description": "Pre-shipment samples, lab reports and third-party inspection available on request." },
-        { "title": "Export & Logistics", "description": "Documentation, container loading and shipping coordinated for on-time delivery." }
+    "value": {
+      "eyebrow": "How Whitehorse creates value",
+      "title": "Screened supply, coordinated quality, flexible business models.",
+      "sourcingTitle": "Sourcing and QA/QC coordination",
+      "sourcingBody": "A network of 50+ suppliers screened by product capability, facility and market requirements. For each order we coordinate requirements, supplier evidence, testing scope and lot documentation.",
+      "qualityCta": "Quality & qualification",
+      "modelsTitle": "Bulk ingredients and OEM · ODM · OBM",
+      "modelsBody": "Beyond bulk ingredients, Whitehorse supports OEM, ODM and OBM models through suitable manufacturing partners — from product-format and packaging development to agreed brand solutions.",
+      "processCta": "How we work",
+      "models": [
+        {
+          "term": "Bulk",
+          "description": "Ingredients to the agreed specification, packing and delivery terms."
+        },
+        {
+          "term": "OEM",
+          "description": "Manufactured to your agreed specification and packaging brief."
+        },
+        {
+          "term": "ODM",
+          "description": "Product format, formulation or packaging developed or adapted with qualified partners."
+        },
+        {
+          "term": "OBM",
+          "description": "Finished products under an agreed brand model, subject to product and market scope."
+        }
       ],
-      "cta": "See our full process"
-    },
-    "certifications": {
-      "eyebrow": "Quality & compliance",
-      "title": "Held to international food-safety standards",
-      "subtitle": "Every manufacturing partner we work with is screened against international standards: ISO 22000, HACCP, and destination-specific requirements like Organic certification or FDA registration where they apply.",
-      "cta": "View certifications"
+      "note": "Availability, MOQ, formulation, packaging, certification and market compliance are confirmed per product, partner facility and project. Certificates belong to a specific supplier, site and product scope."
     },
     "ctaBanner": {
-      "title": "Ready to source your next container?",
-      "subtitle": "Tell us your product, volume and destination port — we'll respond with a formal quote within 1–2 business days.",
-      "cta": "Request a quote"
+      "title": "Tell us what you need to source",
+      "subtitle": "Share your product, volume and destination port. Our sales team reviews qualified requests and follows up with the next commercial step.",
+      "cta": "Request a quote",
+      "buyerLabel": "For buyers",
+      "buyerBody": "Bulk ingredients or an OEM, ODM or OBM project — share the product, volume and destination.",
+      "buyerCta": "Request a quote",
+      "supplierLabel": "For suppliers",
+      "supplierBody": "Farmers, cooperatives and processors interested in assessment.",
+      "supplierCta": "Apply as a supplier"
     }
   },
   "about": {
     "hero": {
-      "eyebrow": "About Whitehorse Foodtech",
-      "title": "Elevating Vietnamese ingredients for global food & beverage supply chains",
-      "subtitle": "Whitehorse Foodtech connects sourcing, R&D and product development, quality management, and the right manufacturing capacity to build ingredient solutions that are consistent, adaptable and ready for international markets."
+      "eyebrow": "Whitehorse Foodtech / Premium ingredient platform",
+      "title": "Raising the standard of Vietnamese ingredients for global value chains.",
+      "subtitle": "Whitehorse Foodtech is building a premium B2B ingredient platform connecting farmers and processors more directly with manufacturers, brands and distributors — designed for fewer layers that add no value, and a more transparent, trusted supply chain.",
+      "imageCaption": "Illustrative images by ingredient family: coffee is an editorial photograph; the others are studio representations. Product, source and specification are confirmed per request.",
+      "ctaProducts": "Explore ingredient families",
+      "ctaRfq": "Send an ingredient request",
+      "mosaicLabel": "Ingredient families Whitehorse works with"
     },
-    "origin": {
-      "title": "Our story",
-      "paragraphs": [
-        "Vietnam is home to a rich, diverse range of agricultural raw materials. But turning a local ingredient into a product that meets the standards of international food and beverage brands takes more than a good source of supply.",
-        "The product has to be developed for the right application, controlled against clear specifications, produced consistently, and backed by documentation that matches the requirements of each destination market.",
-        "Whitehorse Foodtech exists to connect those pieces into a single, coordinated process. We bring together sourcing, R&D capability, quality management, the right manufacturing partners and export operations to turn the potential of Vietnamese ingredients into solutions that can be commercialized at international scale.",
-        "Rather than starting from a fixed product, we start from what the customer actually needs: what application the product serves, what standards it has to meet, how it should be packaged, and what's required to enter the target market."
-      ]
+    "thesis": {
+      "eyebrow": "Why Whitehorse",
+      "body": "Vietnam does not lack quality agricultural produce. What is missing is a system strong enough to turn that advantage into ingredients with clear standards, the right applications and sustainable access to markets.",
+      "close": "Whitehorse was formed to close that gap."
     },
-    "valueCreation": {
-      "eyebrow": "How we work",
-      "title": "How we create value",
-      "subtitle": "A good ingredient solution has to balance four things: the right source, a product built for its application, consistent quality, and the ability to commercialize it efficiently.",
+    "bottlenecks": {
+      "eyebrow": "Where value is lost",
+      "title": "Large potential. Too little of the value retained.",
+      "intro": "Many Vietnamese crops still leave the chain as raw or lightly processed commodities, while more of the value is created further along — in processing, application development, standards and brand. The gap sits at six points.",
       "items": [
         {
-          "title": "Source development",
-          "description": "Identifying raw material sources that match product requirements, seasonality, processing capability and destination-market standards."
+          "title": "Post-harvest technology",
+          "description": "Uneven drying, storage and primary processing make quality hard to hold steady from growing area to factory."
         },
         {
-          "title": "R&D & product design",
-          "description": "Developing formats, formulations, sensory profile and technical specifications around the customer's real application."
+          "title": "R&D and application development",
+          "description": "Ingredients are usually sold as commodities and rarely developed around a buyer's specific application — beverages, bakery, confectionery or nutrition."
         },
         {
-          "title": "Quality management",
-          "description": "Establishing reference samples, technical specifications, testing requirements and quality documentation before commercial production."
+          "title": "Standards and quality documentation",
+          "description": "Specifications, test methods and lot records are rarely organised in a way an international buyer can assess quickly."
         },
         {
-          "title": "Production & export",
-          "description": "Connecting the right manufacturing capacity, choosing packaging specifications, and coordinating documentation and logistics for each order."
+          "title": "Ingredient branding",
+          "description": "Vietnamese ingredients are mostly recognised by general origin, not by their characteristics, quality or supply capability."
+        },
+        {
+          "title": "Market-access networks",
+          "description": "Farmers and smaller processors struggle to reach manufacturers and brands directly, so value is spread across many intermediary layers."
+        },
+        {
+          "title": "Platform enterprises",
+          "description": "Few enterprises act as infrastructure — connecting supply, processing capability, product data and market demand in one system."
         }
       ]
     },
-    "operatingModel": {
-      "eyebrow": "Operating model",
-      "title": "One point of contact, from concept to order",
-      "subtitle": "Whitehorse Foodtech coordinates the full path from product development to commercialization. Every project is built around the customer's specific requirements rather than a one-size-fits-all approach.",
-      "steps": [
-        { "title": "Customer requirements", "description": "Product application, target market, standards, volume and target price." },
-        { "title": "Sourcing selection", "description": "Evaluating origin, raw material characteristics, seasonality and supply capability." },
-        { "title": "Product development", "description": "Building trial samples, technical specifications, process and packaging approach." },
-        { "title": "Production control", "description": "Managing reference samples, batch quality and related documentation." },
-        { "title": "International delivery", "description": "Coordinating documentation, trade terms and logistics." }
+    "role": {
+      "eyebrow": "The role Whitehorse plays",
+      "title": "From fragmented supply to an ingredient platform buyers can rely on.",
+      "body": "Whitehorse does not own every farm, factory or technology. We are the connection and orchestration layer across four parts of the chain — supply, processing capability within our partner network, product and application data, and market demand — so each ingredient request is met with a suitable source, a clear specification and records that can be checked.",
+      "capabilities": [
+        {
+          "title": "Curated Supply",
+          "description": "Farmers, cooperatives and processors selected and assessed for the product, site and market in question — not an open listing."
+        },
+        {
+          "title": "Application-led Products",
+          "description": "Formats and specifications developed from the buyer's application with processing partners whose capability fits it — including OEM, ODM and OBM where the product, partner facility and market allow."
+        },
+        {
+          "title": "Quality & Product Intelligence",
+          "description": "Specifications, test methods, supplier documents and lot records organised so a buyer can assess them."
+        },
+        {
+          "title": "Market Connection",
+          "description": "A more direct route from Vietnamese supply to manufacturers, brands, ingredient users and distribution partners."
+        }
       ]
+    },
+    "control": {
+      "eyebrow": "QA/QC control point",
+      "title": "Value does not start at the transaction. It starts at the control point.",
+      "flowLabel": "Quality control points from growing area to buyer feedback",
+      "steps": [
+        {
+          "title": "Growing area",
+          "description": "Origin, season and growing conditions"
+        },
+        {
+          "title": "Procurement",
+          "description": "Purchase criteria agreed before intake"
+        },
+        {
+          "title": "Processing",
+          "description": "Process and parameters at the partner site"
+        },
+        {
+          "title": "Testing",
+          "description": "Parameters and methods agreed per order"
+        },
+        {
+          "title": "Lot records",
+          "description": "Specification, results and documents per lot"
+        },
+        {
+          "title": "Feedback & improvement",
+          "description": "Buyer feedback returned to source"
+        }
+      ],
+      "body": "Whitehorse is progressively building quality-assurance infrastructure — organising evidence, process and accountability around each of these points — so buyers can assess supply with clearer evidence, not promises.",
+      "note": "Testing scope, documentation and COA are agreed for each order. Certifications belong to a specific supplier, site and scope."
     },
     "mission": {
-      "title": "Our mission",
-      "body": "We build a better food system — connecting Vietnam's finest ingredients with technology, quality, and global markets.",
-      "extra": "Whitehorse Foodtech works to create durable value across the whole supply chain: raising the value of Vietnamese raw materials, helping manufacturing partners reach higher standards, and giving international customers a single, transparent point of contact for flexible, efficient product development."
+      "label": "Mission",
+      "body": "To elevate the position of Vietnamese agriculture in global value chains through deep-processing capabilities, product development and a quality system that enables Vietnamese ingredients to be chosen for their value—not only their origin."
     },
-    "stats": {
-      "title": "Whitehorse Foodtech at a glance",
-      "items": [
-        { "value": "30", "label": "Countries served" },
-        { "value": "100K+", "label": "Metric tons exported / year" },
-        { "value": "3,000+", "label": "Partner growing regions" },
-        { "value": "5", "label": "Years in export trade" }
+    "vision": {
+      "label": "Vision",
+      "body": "To become Vietnam's premium ingredient platform, where deep-processing capability, quality management and value-chain orchestration converge to bring Vietnamese ingredients into high-value supply chains worldwide.",
+      "rolesTitle": "Four long-term roles",
+      "rolesNote": "Roles we are building toward — not current services.",
+      "roles": [
+        {
+          "title": "Premium Ingredient Platform",
+          "description": "Where professional buyers find Vietnamese ingredients defined by specification, application and evidence."
+        },
+        {
+          "title": "Deep-processing Technology Layer",
+          "description": "Connecting processing partners and technologies that move raw produce toward higher-value ingredient formats."
+        },
+        {
+          "title": "Vietnamese Agricultural Value-chain Architect",
+          "description": "Designing how growing areas, processors, laboratories and buyers work together, with accountability at each step."
+        },
+        {
+          "title": "Bridge to Global Ingredient Markets",
+          "description": "A dependable route for Vietnamese ingredients into the supply chains of international manufacturers and brands."
+        }
       ]
     },
-    "values": {
-      "title": "The principles we work by",
-      "items": [
-        { "title": "Transparency & traceability", "description": "We prioritize clear management of raw material sources, product specifications, production sites and documentation tied to every project." },
-        { "title": "Consistent from sample to production", "description": "The approved sample is the basis for the technical specifications and quality control applied through commercial production." },
-        { "title": "Fast, direct response", "description": "Customers work directly with the team running their project, cutting down the time spent on discussion, sampling and decisions." },
-        { "title": "Responsible partnership", "description": "We aim for long-term relationships that fairly balance the interests of customers, manufacturing partners and raw material sources." }
-      ]
+    "direction": {
+      "label": "Long-term direction",
+      "note": "Vision — not a current service",
+      "title": "Starting with ingredients. Designed for the whole agricultural chain.",
+      "body": "We start with ingredients because that is where standards and applications make the clearest difference. As data, standards and the network mature, the platform is designed to connect cooperatives, farmers, factories, laboratories, logistics providers and professional buyers — including direct quality-assurance and quality-control capability at key sourcing points."
     },
-    "team": {
-      "title": "Leadership",
-      "subtitle": "[Placeholder — add leadership team names, titles and short bios once available.]"
+    "ecosystem": {
+      "eyebrow": "Ecosystem development",
+      "title": "Working with Balance Life on circular agriculture",
+      "body": "Whitehorse Foodtech is currently working with Balance Life around a circular-agriculture initiative. The broader initiative brings together production, value-chain and finance participants. Participant names, scale and implementation scope are disclosed only when formally confirmed."
+    },
+    "status": {
+      "title": "Where Whitehorse stands, and where it is heading",
+      "note": "Current figures describe the network today. Three-year vision figures are direction, not a current track record.",
+      "items": [
+        {
+          "tag": "Current",
+          "value": "50+",
+          "label": "Suppliers screened by product capability, facility and market requirements"
+        },
+        {
+          "tag": "Current",
+          "value": "10+",
+          "label": "Markets with active buyer relationships and commercial conversations"
+        },
+        {
+          "tag": "Three-year vision",
+          "value": "3,000+",
+          "label": "Cooperatives and source groups within the network's visibility and relationship reach"
+        },
+        {
+          "tag": "Three-year vision",
+          "value": "10,000+",
+          "label": "Active buyers within the network's relationship reach"
+        }
+      ]
     },
     "cta": {
-      "title": "Looking for an ingredient solution from Vietnam?",
-      "subtitle": "Tell us about your product, application, standards, expected volume and target market. The Whitehorse team will work with you to define the right sourcing and product development approach.",
-      "cta": "Send a product inquiry",
-      "secondaryCta": "Explore our products"
+      "title": "Start with a specific ingredient request.",
+      "subtitle": "Share the application, specification, expected volume and destination market. Our sales team reviews qualified requests and follows up with the next commercial step.",
+      "buyerLabel": "For buyers",
+      "buyerBody": "Manufacturers, brands, ingredient users and distribution partners.",
+      "buyerCta": "Send an ingredient request",
+      "supplierLabel": "For suppliers",
+      "supplierBody": "Farmers, cooperatives and processors interested in assessment.",
+      "supplierCta": "Contact Whitehorse"
     }
   },
   "products": {
     "hero": {
       "eyebrow": "Our products",
-      "title": "Five ingredient families, sourced and processed to export specification",
-      "subtitle": "Every ingredient family is sourced, graded and packed to buyer specification — with samples and lab documentation available before shipment."
+      "title": "Five ingredient families. One sourcing process.",
+      "subtitle": "Coffee has nine confirmed product codes. Coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request. Final specification, test method, documentation and COA scope are agreed per order."
     },
+    "studioBadge": "Studio representation",
+    "studioNote": "A studio representation of ingredient formats in this family; product, source and final specification are confirmed per request.",
     "categories": {
       "coffee": {
         "name": "Coffee Ingredients",
         "slug": "coffee",
-        "tagline": "Beans, powder, extract & cold brew",
-        "description": "From Vietnam's renowned coffee regions, we supply carefully selected coffee ingredients for global food and beverage applications — from green and roasted beans to soluble powders, extracts and cold brew concentrates, available in bulk or private-label single-serve formats.",
-        "specTitle": "Typical specifications",
-        "specs": [
-          "Robusta: Screen 16/18, moisture 12.5% max, black & broken 3–5% max",
-          "Arabica: Screen 15+, moisture 12% max, fully washed or natural process",
-          "Processed formats: soluble coffee powder (Arabica & Robusta blend), coffee extract and concentrated coffee extract in dropper-bottle format, unsweetened cold brew concentrate — custom concentration on request",
-          "Packaging: 60kg jute bags with GrainPro liner (green beans); jars, dropper bottles, drums or bag-in-box for powder/extract/cold brew; single-serve sachets and retail boxes for private-label formats",
-          "Custom roasting, formulation and private-label packaging available"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Raw & Roasted", "Powders", "Extracts", "Cold Brew", "Specialty"],
+        "tagline": "Green, roasted, soluble, extract & cold brew",
+        "status": "Confirmed product codes",
+        "description": "Coffee ingredients from Vietnam's main growing regions for food and beverage applications — green and roasted beans, soluble coffee, extracts and cold brew. Bulk, private-label and single-serve formats are discussed per project, with specification and packaging agreed to each product and market.",
         "applicationsTitle": "Common applications",
-        "applications": ["Roasters", "Instant & RTD coffee manufacturing", "Cold brew & canned coffee brands", "Private-label retail blends", "Foodservice"]
+        "applications": [
+          "Roasters",
+          "Green coffee trading",
+          "Instant & RTD coffee manufacturing",
+          "Cold brew & canned coffee brands",
+          "Private-label retail blends",
+          "Foodservice"
+        ]
       },
       "coconut": {
         "name": "Coconut Ingredients",
         "slug": "coconut",
-        "tagline": "Milk, cream, water, powder, oil & MCT",
-        "description": "Premium Vietnamese coconut transformed into versatile food ingredients — including coconut milk and cream, powders, water concentrates, virgin coconut oil and functional lipid solutions for international food and beverage brands, supplied in bulk or private-label retail packaging.",
-        "specTitle": "Typical specifications",
-        "specs": [
-          "Liquid formats: coconut milk (carton) and coconut cream (jar) at standard or custom fat content, UHT/aseptic packaging on request",
-          "Powder formats: coconut milk powder and coconut cream powder (plant-based, gluten-free, no added sugar), NFC coconut water, coconut water concentrate and coconut water powder",
-          "Oils & functional lipids: cold-pressed virgin coconut oil, unflavored MCT oil and MCT powder",
-          "Packaging: cartons, jars, stand-up pouches, aseptic bags, drums or bulk — format and packaging confirmed per order",
-          "OEM and private-label formulation available across all formats"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Milk & Cream", "Coconut Water", "Oils & Functional Lipids", "Coconut Solids", "Specialty"],
+        "tagline": "Milk & cream, powders & solids, blossom sugar",
+        "status": "Sourced on request",
+        "description": "Vietnamese coconut made into versatile ingredients for food and beverage applications — from coconut milk and cream to coconut powders and coconut blossom sugar. Suitable for industrial food production and retail, with bulk supply and private-label options agreed to each market's requirements.",
         "applicationsTitle": "Common applications",
-        "applications": ["Dairy alternatives & plant-based beverages", "Bakery & confectionery", "Functional foods & nutraceuticals", "Foodservice & OEM formulation"]
+        "applications": [
+          "Cooking & food processing",
+          "Beverages",
+          "Bakery & confectionery",
+          "Ice cream & desserts",
+          "Plant-based products",
+          "Foodservice & OEM"
+        ]
       },
       "birdsNest": {
         "name": "Bird's Nest Ingredients",
         "slug": "birds-nest",
-        "tagline": "Selected nest, extract, concentrate & powder",
-        "description": "Premium Vietnamese edible bird's nest developed into high-value functional ingredients, including selected nest, concentrates, extracts, powders and customized formulations for nutrition and premium food applications, from bulk ingredients to retail-ready private-label formats.",
-        "specTitle": "Typical specifications",
-        "specs": [
-          "Formats: selected raw and cleaned bird's nest, concentrate, pure extract and powder — bottled ready-to-drink formats available",
-          "Custom formulation: sugar level, added ingredients (rock sugar, ginseng and other variants) and packaging configured to buyer requirements",
-          "Packaging: retail glass bottles (typically 70ml multi-packs) for RTD formats; jars or vacuum packs for selected/dried nest; premium gift box sets available — private-label packaging available",
-          "Shelf life and cold-chain requirements vary by format — confirmed with our export team per order"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Selected Bird's Nest", "Concentrated & Extracted", "Powders", "Functional Formulations"],
+        "tagline": "Cleaned nest & instant / ready-to-prepare formats",
+        "status": "Developed on request",
+        "description": "Vietnamese edible bird's nest, selected and cleaned, as cleaned nest and instant or ready-to-prepare formats for health food, wellness retail, private-label RTD and nutraceutical applications. Concentrates, extracts, powders and functional blends are developed as OEM on request.",
         "applicationsTitle": "Common applications",
-        "applications": ["Health food & wellness retail", "Private-label RTD beverage brands", "Nutraceuticals & functional formulations", "Foodservice & pharmacy distribution"]
+        "applications": [
+          "Health food & wellness retail",
+          "Private-label RTD beverages",
+          "Nutraceutical applications",
+          "OEM & custom formulations"
+        ]
       },
       "fruit": {
         "name": "Fruit Ingredients",
         "slug": "fruit",
-        "tagline": "Freeze-dried, powder, pieces & concentrate",
-        "description": "Vietnam's tropical fruits transformed into stable, high-quality ingredients through advanced processing — preserving natural color, aroma and nutritional value for food, beverage and nutrition applications, available as powders, pieces, concentrates and extracts.",
-        "specTitle": "Typical specifications",
-        "specs": [
-          "Freeze-dried powders: passion fruit, mango, dragon fruit, durian, soursop, pineapple, banana, orange and other fruits on request — moisture 3–5% max, 80–100 mesh standard",
-          "Freeze-dried pieces: slices, cubes and crumbles for bakery, cereal and snack applications",
-          "Fruit concentrates: puree and juice concentrate for beverage and flavor applications",
-          "Extracts: natural fruit extract and fruit flavor base in dropper-bottle format for precise dosing",
-          "Packaging: aluminum foil bags with desiccant (1kg–25kg) or bulk drums for powders/pieces; glass bottles for concentrates and extracts — custom particle size and packaging on request"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Freeze-Dried Powders", "Freeze-Dried Pieces", "Fruit Concentrates", "Extracts"],
+        "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
+        "status": "Sourced on request",
+        "description": "Vietnamese tropical fruits processed into shelf-stable ingredients. The core range covers soft-dried and freeze-dried mango, soft-dried soursop, and passion fruit as concentrate, frozen purée and powder, for food, beverage and nutrition applications. Other fruit formats are available on request or as OEM.",
         "applicationsTitle": "Common applications",
-        "applications": ["Smoothie & beverage powders", "Bakery & confectionery", "Nutraceuticals & supplements", "Natural food coloring/flavoring"]
+        "applications": [
+          "Smoothie & beverage bases",
+          "Bakery & confectionery",
+          "Nutraceuticals & supplements",
+          "Natural flavouring & colouring"
+        ]
       },
       "nutsSpicesBotanicals": {
         "name": "Nuts, Spices & Botanicals",
         "slug": "nuts-spices-botanicals",
-        "tagline": "Cashew, pepper, cinnamon, star anise & botanicals",
-        "description": "Selected Vietnamese nuts, spices and botanicals sourced for international food manufacturers and ingredient partners, with export-grade specifications, quality control and full documentation.",
-        "specTitle": "Typical specifications",
-        "specs": [
-          "Nuts: cashew (WW240/WW320/SW240 grades, vacuum-packed 22.68kg tins) and macadamia, in-shell or kernel",
-          "Spices: black pepper (500–570 g/l density, moisture 13% max) and white pepper, cinnamon and star anise (whole, broken or ground, graded by oil content and moisture), chili — steam-sterilized on request",
-          "Botanicals: ginger, turmeric, lemongrass, pandan and other selected Vietnamese botanicals available fresh, dried or powdered on request",
-          "Packaging: retail jars and packs for private-label lines; bulk vacuum-packed tins, bags or drums for wholesale — format confirmed per order"
-        ],
-        "groupsTitle": "Product groups",
-        "groups": ["Nuts", "Spices", "Botanicals"],
+        "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
+        "status": "Sourced on request",
+        "description": "Selected Vietnamese nuts and spices graded to the buyer's specification. The core range covers cashew kernels, whole black pepper, freeze-dried cinnamon and freeze-dried star anise, with documentation agreed per order for food manufacturers and ingredient partners. Other botanicals are available on request.",
         "applicationsTitle": "Common applications",
-        "applications": ["Food manufacturing", "Spice blending & distribution", "Flavor & extract production", "Foodservice & retail packing"]
+        "applications": [
+          "Food manufacturing",
+          "Spice blending & distribution",
+          "Flavor & extract production",
+          "Foodservice & retail packing"
+        ]
       }
     },
     "sampleCta": {
-      "title": "Need product samples or a formal spec sheet?",
-      "subtitle": "We can send samples and lab documentation ahead of any commercial order.",
-      "cta": "Request samples"
+      "title": "Need samples or a specification sheet?",
+      "subtitle": "Tell us the product and format you're evaluating. Samples and documentation are arranged per request, depending on the product and supplier.",
+      "cta": "Request samples",
+      "secondaryCta": "Request a quote"
     }
+  },
+  "catalog": {
+    "breadcrumbHome": "Home",
+    "breadcrumbProducts": "Products",
+    "breadcrumbLabel": "Breadcrumb",
+    "confirmedTitle": "Confirmed product codes",
+    "confirmedSubtitle": "Products Whitehorse has defined and can quote by code. Availability, final specification and COA scope are confirmed for each request.",
+    "rangesTitle": "Sourcing & custom-development ranges",
+    "rangesSubtitle": "Broader formats we can source or develop on request, matched to suppliers whose product, site and documentation fit your specification.",
+    "rangeLabel": "Range",
+    "formatsLabel": "Formats",
+    "specifyLabel": "What you specify",
+    "applicationsLabel": "Applications",
+    "filterLabel": "Filter by range",
+    "filterAll": "All",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Name, code or format",
+    "results": "{count, plural, one {# result} other {# results}}",
+    "clearAll": "Clear filters",
+    "noResults": "Nothing matches these filters. Clear them, or tell us what you need in a request.",
+    "viewDetails": "View details",
+    "requestSample": "Request sample",
+    "requestSpec": "Request specification",
+    "requestQuote": "Request quote",
+    "requestRange": "Request this range",
+    "editorialBadge": "Editorial image",
+    "conceptPackBadge": "Concept packaging",
+    "conceptPackNote": "Packaging concept render. Label text is illustrative — the final pack, label and specification are confirmed with the supplier or co-packer for each order. Not a photograph of stock.",
+    "perRequestNote": "A listed product or range is not a statement of stock or export readiness. Availability, final specification, test method, documentation and COA scope are confirmed for each request. OEM, ODM and OBM options depend on the product, partner facility and market.",
+    "referenceTitle": "Typical reference parameters",
+    "referenceDisclaimer": "Typical reference parameters — final specification, test method, documentation and COA scope are agreed per order.",
+    "indicativeLabel": "Indicative specification",
+    "moreDetail": "More specification detail",
+    "indicativeNote": "Indicative values — confirmed against the supplier's specification sheet for each order.",
+    "paramHeader": "Parameter",
+    "referenceHeader": "Typical reference",
+    "methodHeader": "Method / basis",
+    "codeLabel": "Product code",
+    "tileRange": "Range",
+    "tileOrigin": "Origin",
+    "tileOriginValue": "Vietnam — growing area agreed per order",
+    "tilePackaging": "Packaging",
+    "tilePackagingValue": "Confirmed per order",
+    "tileDocuments": "Documents",
+    "tileDocumentsValue": "COA scope agreed per order",
+    "docsTitle": "Documentation, samples & COA",
+    "docsBody": "Samples, lab testing and the certificate of analysis are arranged per request. The tests, laboratory and COA scope are agreed with you before production, together with any supplier certificates your market requires.",
+    "packagingTitle": "Packaging options to discuss",
+    "packagingDefault": "Packaging is specified with you and confirmed per order.",
+    "orderingTitle": "How a request works",
+    "orderingSteps": [
+      "Tell us the code or range, volume, destination and any specification or certification needs.",
+      "We match suppliers whose product, site and documentation fit, and tell you each one's qualification status.",
+      "Reference samples and a written specification come first; the approved sample becomes the order reference.",
+      "Commercial terms, documents and delivery are confirmed in the quotation and contract."
+    ],
+    "relatedTitle": "Related product codes",
+    "broaderTitle": "Need a different format?",
+    "broaderBody": "Beyond confirmed codes, we source and develop other formats in this family to your specification.",
+    "broaderCta": "See all {family} ranges",
+    "codesCount": "{count, plural, one {# confirmed code} other {# confirmed codes}}",
+    "rangesCount": "{count, plural, one {# range} other {# ranges}}",
+    "stickyLabel": "Request sample or quote",
+    "galleryLabel": "Product images",
+    "showImage": "Show image {index}"
   },
   "certifications": {
     "hero": {
-      "eyebrow": "Quality & compliance",
-      "title": "Certifications & standards",
-      "subtitle": "We partner exclusively with manufacturing facilities that meet international food safety and export compliance standards — so every shipment is backed by the certifications your market requires."
+      "eyebrow": "Quality & supplier qualification",
+      "title": "Quality & supplier qualification",
+      "subtitle": "Certificates belong to a specific supplier, site and product scope. We assess suppliers against the requirements of your product and destination market, and share the relevant certificates per order."
     },
     "standards": {
-      "eyebrow": "Manufacturing partner standards",
-      "title": "What we require from every manufacturing partner",
-      "subtitle": "Before we work with a facility, it has to meet baseline international food-safety and export-compliance standards — these are the ones we screen for."
+      "eyebrow": "What we assess",
+      "title": "Standards we check, by product and market",
+      "subtitle": "Which standards apply depends on the product and where it's going. These are the schemes we most often check during supplier assessment; which ones apply to a given supplier is confirmed per product and site."
     },
     "items": [
-      { "name": "ISO 22000", "description": "Manufacturing partners are selected for a certified food safety management system — ISO 22000 or an equivalent recognized standard." },
-      { "name": "HACCP", "description": "Hazard Analysis and Critical Control Points protocols are a baseline requirement across every facility in our partner network." },
-      { "name": "Organic Certification", "description": "For product lines requiring organic-certified raw material, we source only through partners holding valid USDA Organic, EU Organic or an equivalent certification." },
-      { "name": "FDA Registration", "description": "For US-bound shipments, we work exclusively with FDA-registered facilities to meet FSVP and US import requirements." }
+      {
+        "name": "ISO 22000 / FSSC 22000",
+        "description": "A certified food safety management system — ISO 22000, FSSC 22000 or an equivalent recognized scheme — checked for the site and product scope in question."
+      },
+      {
+        "name": "HACCP",
+        "description": "Hazard Analysis and Critical Control Point plans reviewed for the product and process being quoted."
+      },
+      {
+        "name": "Organic Certification",
+        "description": "Where a buyer needs organic product, we look for valid USDA Organic, EU Organic or equivalent certification covering that specific product and supplier."
+      },
+      {
+        "name": "FDA Registration",
+        "description": "For US-bound orders, we check the facility's FDA food facility registration and the supplier information your importer needs for FSVP."
+      }
     ],
     "sustainability": {
-      "eyebrow": "Sustainability",
-      "title": "Built on traceable, responsible sourcing",
-      "subtitle": "Quality and sustainability aren't separate goals for us — a supply chain we can trace back to the grower is also the one most likely to be consistent, season after season.",
+      "eyebrow": "Principles",
+      "title": "How we approach traceability and responsible sourcing",
+      "subtitle": "The principles that guide how we develop and work with our supplier network.",
       "pillars": [
         {
-          "title": "Traceable sourcing",
-          "description": "Every lot is tracked back to its growing region and processing facility, so quality issues can be diagnosed at the source rather than guessed at downstream."
+          "title": "Traceability agreed per order",
+          "description": "The origin, supplier and lot information a buyer needs is agreed in the order documents, so quality questions can be taken back to the source."
         },
         {
-          "title": "Grower & cooperative partnerships",
-          "description": "Long-term relationships with the cooperatives and growers we buy from, built on fair, transparent pricing rather than one-off spot purchases."
+          "title": "Long-term supplier relationships",
+          "description": "We aim for durable relationships with suppliers and cooperatives, built on transparent pricing rather than one-off spot purchases."
         },
         {
-          "title": "Environmental stewardship",
-          "description": "We prioritize manufacturing partners who invest in resource-efficient processing, reduced packaging waste, and responsible farming practices across their sourcing regions."
+          "title": "Environmental responsibility",
+          "description": "We prefer suppliers who invest in resource-efficient processing, reduced packaging waste and responsible farming practices in their sourcing regions."
         },
         {
-          "title": "Quality & food safety",
-          "description": "Lot-level testing and documented specifications before shipment, so what's approved is what arrives — see our certifications above and process page for detail."
+          "title": "Quality against specification",
+          "description": "Approved samples and written specifications are the reference for each order; testing scope and COA are agreed in the contract. See How We Work for detail."
         }
       ]
     },
-    "documentsTitle": "Documentation available on request",
+    "documentsTitle": "Documentation arranged per order",
     "documents": [
       "Certificate of Origin",
       "Phytosanitary Certificate",
       "Fumigation Certificate",
-      "Lab test / Certificate of Analysis",
-      "Bill of Lading & commercial invoice templates"
+      "Lab test report / Certificate of Analysis (scope agreed per order)",
+      "Supplier certificates relevant to the product and market",
+      "Commercial invoice, packing list and bill of lading"
     ],
     "cta": {
-      "title": "Need a specific certificate for customs clearance?",
-      "cta": "Contact our export team"
+      "title": "Need specific supplier documents or a COA?",
+      "cta": "Contact our team"
     }
   },
   "process": {
     "hero": {
       "eyebrow": "How we work",
-      "title": "From growing region to your container",
-      "subtitle": "A structured process designed for consistency, traceability and on-time delivery."
+      "title": "How we work: from requirement to container",
+      "subtitle": "Whitehorse coordinates suppliers, testing laboratories and logistics partners around your specification. Here's what that looks like, step by step."
     },
     "steps": [
       {
-        "title": "Sourcing",
-        "description": "We work directly with growing cooperatives and processing partners across Vietnam's key producing regions, building long-term relationships rather than one-off purchases."
+        "title": "Requirement & specification",
+        "description": "We start from your application, specification, volume, destination market and certification needs — and put them in writing."
       },
       {
-        "title": "Processing & Grading",
-        "description": "Raw material is cleaned, sorted and graded against agreed specifications — screen size, moisture, defect count and other buyer-specific criteria."
+        "title": "Supplier matching & qualification",
+        "description": "We shortlist suppliers from our network whose product, site and documentation fit the request. Qualification is specific to product, site and market, and we tell you when a proposed supplier is still in assessment."
       },
       {
-        "title": "Quality Control",
-        "description": "Every lot is sampled and tested before approval. Lab reports and physical samples are shared with the buyer prior to shipment, and third-party inspection can be arranged."
+        "title": "Sampling & approval",
+        "description": "Reference samples are prepared for your evaluation. The sample you approve becomes the reference for the order."
       },
       {
-        "title": "Packing",
-        "description": "Products are packed to buyer specification — standard export packaging or custom private-label packaging — with moisture and pest control appropriate to each product line."
+        "title": "Quality control",
+        "description": "Testing scope, laboratory and COA requirements are agreed per order. Third-party pre-shipment inspection can be arranged on request."
       },
       {
-        "title": "Export Documentation",
-        "description": "Certificate of Origin, phytosanitary certificate, fumigation certificate and commercial documents are prepared and verified ahead of container loading."
+        "title": "Packing & documentation",
+        "description": "Products are packed to the agreed specification. Export documents — certificate of origin, phytosanitary and fumigation certificates, commercial documents — are prepared with our documentation partners and checked before loading."
       },
       {
-        "title": "Shipping & Delivery",
-        "description": "We coordinate container loading and shipping schedules to the agreed Incoterms, keeping buyers updated from port of loading to port of destination."
+        "title": "Shipping & delivery",
+        "description": "Loading and shipping are coordinated with logistics partners to the agreed Incoterm, with updates from port of loading to port of destination."
       }
     ],
     "factory": {
-      "title": "Facilities",
-      "subtitle": "From raw material intake to final packaging, our manufacturing partners run modern, temperature-controlled facilities equipped for consistent, export-grade output at scale."
+      "title": "Partner facilities",
+      "subtitle": "Production takes place at supplier and partner facilities, which we assess for the specific product and market you need. We share the relevant site information and certificates with buyers per order. OEM, ODM and OBM projects are carried out with suitable partner facilities, subject to product, facility and market confirmation."
     },
     "cta": {
       "title": "Have a specific process or documentation question?",
@@ -438,28 +590,28 @@
   },
   "clients": {
     "hero": {
-      "eyebrow": "Who we work with",
-      "title": "Clients & partners",
-      "subtitle": "We work closely with growing cooperatives and processing partners in Vietnam, and with trading partners abroad, to bring our coffee, coconut, bird's nest, fruit and spice ingredients to international food and beverage brands."
+      "eyebrow": "Network",
+      "title": "A network on both sides of the trade",
+      "subtitle": "Whitehorse works with Vietnamese supplier organisations — cooperatives, processors and growing groups — at different stages of engagement and assessment, and with buyers across more than ten markets."
     },
-    "regionsTitle": "Our focus export markets",
-    "regions": "Vietnamese coffee, coconut, bird's nest, fruit and spice ingredients are already established across North America, the European Union, East Asia and the Middle East. Through our trading partner network, these are the regions Whitehorse Foodtech is focused on reaching.",
+    "regionsTitle": "Markets with active buyer relationships and conversations",
+    "regions": "Russia, Japan, Qatar, Israel, South Korea, China, the United States, Canada, Australia, Germany, Italy, France, Belgium and the Netherlands.",
     "network": {
-      "sourcing": {
-        "stat": "3,000+",
-        "statLabel": "Partner growing regions across Vietnam",
-        "description": "We work with a broad, diversified network of growing cooperatives and processing facilities across Vietnam's key producing regions — giving buyers flexibility in volume, timing and specification, without dependency on any single source."
+      "current": {
+        "tag": "Current",
+        "stat": "10+",
+        "statLabel": "Markets with active buyer relationships and conversations",
+        "description": "Relationships and commercial conversations with buyers across Asia, Europe, the Middle East, North America and Oceania."
       },
-      "distribution": {
-        "stat": "30+",
-        "statLabel": "Countries reached through our trading network",
-        "description": "Through established trading partners, our ingredients reach food and beverage buyers across North America, the EU, East Asia and the Middle East — with the flexibility to open new markets as demand grows."
+      "suppliers": {
+        "tag": "Current",
+        "stat": "50+",
+        "statLabel": "Screened suppliers",
+        "description": "A network of 50+ suppliers screened by product capability, facility and market requirements. Qualification is specific to product, site and market — not every supplier holds every certificate or is approved for every market."
       }
     },
-    "testimonialsTitle": "What partners say",
-    "testimonialsSubtitle": "[Placeholder — add approved testimonials from real buyers once available.]",
     "cta": {
-      "title": "Interested in becoming a partner?",
+      "title": "Supplier or partner interested in working with us?",
       "cta": "Start a conversation"
     }
   },
@@ -467,7 +619,7 @@
     "hero": {
       "eyebrow": "Insights",
       "title": "News & industry insights",
-      "subtitle": "Harvest updates, market trends and export guidance from the Whitehorse Foodtech team."
+      "subtitle": "Market research roundups and export guidance from the Whitehorse Foodtech team."
     },
     "empty": "New articles are on the way — check back soon.",
     "backToList": "Back to all articles"
@@ -475,13 +627,12 @@
   "contact": {
     "hero": {
       "eyebrow": "Contact",
-      "title": "Let's talk about your next order",
-      "subtitle": "For general inquiries, partnership questions or documentation requests, reach out and our export team will respond within 1–2 business days."
+      "title": "Let's talk about what you need to source",
+      "subtitle": "For general inquiries, partnership questions or documentation requests, reach out. Our team reviews incoming messages and follows up on relevant inquiries."
     },
     "info": {
       "title": "Contact details",
       "addressLabel": "Office",
-      "address": "27 Đức Diễn Alley 23/72/39, Phú Diễn Ward, Hanoi, Vietnam",
       "phoneLabel": "Phone",
       "emailLabel": "Email",
       "emailGeneral": "General inquiries",
@@ -499,23 +650,31 @@
       "message": "Message",
       "messagePlaceholder": "Tell us what you're looking for…",
       "submit": "Send message",
-      "success": "Thank you — your message has been sent. We'll be in touch shortly.",
-      "error": "Something went wrong sending your message. Please try again or email us directly."
+      "successTitle": "Message sent",
+      "success": "Thank you — your message has been sent to our team.",
+      "reference": "Your reference: {leadId}",
+      "errorDelivery": "Your message could not be delivered right now, so nothing was sent. Please email {email} directly.",
+      "error": "Something went wrong sending your message. Please check the form and try again, or email us directly.",
+      "privacyNote": "We use these details only to reply to you. See our <privacy>privacy notice</privacy>."
     }
   },
   "rfq": {
     "hero": {
       "eyebrow": "Request a quote",
-      "title": "Get a formal quotation",
-      "subtitle": "Share your product, volume and destination and our export team will respond with pricing, lead time and shipping terms within 1–2 business days."
+      "title": "Request a quote or samples",
+      "subtitle": "Share your product, specification, volume and destination. Our sales team reviews qualified requests and follows up with the next commercial step."
     },
     "form": {
       "title": "Quote request",
-      "name": "Full name",
-      "company": "Company name",
-      "email": "Business email",
-      "phone": "Phone / WhatsApp (optional)",
-      "country": "Destination country",
+      "sectionRequest": "Your request",
+      "sectionContact": "Your details",
+      "selectPlaceholder": "Select…",
+      "intent": "I'd like to",
+      "intents": {
+        "quote": "Request a quote",
+        "sample": "Request samples",
+        "spec-sheet": "Request a specification sheet"
+      },
       "product": "Product of interest",
       "productPlaceholder": "Select a product",
       "productCoffee": "Coffee Ingredients",
@@ -524,22 +683,118 @@
       "productFruit": "Fruit Ingredients",
       "productNutsSpicesBotanicals": "Nuts, Spices & Botanicals",
       "productOther": "Other / not listed",
+      "range": "Range of interest (optional)",
+      "rangeNone": "No specific range",
+      "sku": "Coffee format of interest (optional)",
+      "skuNone": "No specific format",
+      "skuHint": "Formats we can discuss. Choosing one doesn't mean it is in stock or export-ready — availability is confirmed per request.",
+      "formats": {
+        "WHCF001": "Green Robusta",
+        "WHCF002": "Green Arabica",
+        "WHCF003": "Fine Green Robusta",
+        "WHCF004": "Roasted Robusta",
+        "WHCF005": "Roasted & Ground",
+        "WHCF006": "Cold Brew",
+        "WHCF007": "Spray-Dried Instant",
+        "WHCF008": "Agglomerated Instant",
+        "WHCF009": "Freeze-Dried Instant"
+      },
+      "application": "Application / end use (optional)",
+      "applicationPlaceholder": "e.g. instant blend, RTD, retail",
       "volume": "Estimated order volume",
-      "volumePlaceholder": "e.g. 1 x 20ft container, 5 metric tons/month",
+      "volumePlaceholder": "e.g. 1 × 20ft or 5 t/month",
+      "frequency": "Order frequency (optional)",
+      "frequencies": {
+        "one-off": "One-off / trial order",
+        "monthly": "Monthly",
+        "quarterly": "Quarterly",
+        "annual": "Annual contract",
+        "not-sure": "Not sure yet"
+      },
+      "country": "Destination country",
+      "destinationPort": "Destination port (optional)",
+      "destinationPortPlaceholder": "e.g. Hamburg, Los Angeles, Busan",
+      "timing": "Timing (optional)",
+      "timings": {
+        "asap": "As soon as possible",
+        "1-3-months": "Within 1–3 months",
+        "3-6-months": "In 3–6 months",
+        "6-plus-months": "In 6+ months",
+        "exploring": "Just exploring"
+      },
       "incoterm": "Preferred Incoterm (optional)",
-      "incotermPlaceholder": "e.g. FOB, CIF, EXW",
-      "message": "Additional details",
-      "messagePlaceholder": "Packaging preferences, target price, certifications required, timeline…",
-      "submit": "Submit quote request",
-      "success": "Thank you — your quote request has been received. Our export team will respond within 1–2 business days.",
-      "error": "Something went wrong submitting your request. Please try again or email us directly."
+      "incotermNotSure": "Not sure yet",
+      "specRequirements": "Specification & certification requirements (optional)",
+      "specRequirementsPlaceholder": "e.g. screen 16+, moisture ≤12.5%, FSSC 22000, organic, halal…",
+      "packagingTiers": {
+        "discovery-sample": "Discovery sample",
+        "professional-horeca": "Professional / HORECA",
+        "retail-private-label": "Retail / private-label ready",
+        "industrial-export": "Industrial export (bulk)",
+        "not-sure": "Not sure yet"
+      },
+      "message": "Additional details (optional)",
+      "messagePlaceholder": "Target price, packaging details, anything else we should know…",
+      "name": "Full name",
+      "company": "Company name",
+      "email": "Business email",
+      "phone": "Phone / WhatsApp (optional)",
+      "consent": "I agree that Whitehorse Foodtech may use these details to respond to this request, as described in the <privacy>privacy notice</privacy>.",
+      "consentRequired": "Please confirm to continue.",
+      "fixErrors": "Some required details are missing. Please check the highlighted fields above.",
+      "submit": "Submit request",
+      "successTitle": "Request received",
+      "success": "Your request has been sent to our sales team. They review qualified requests and follow up with the next commercial step.",
+      "reference": "Your reference: {leadId}",
+      "errorDelivery": "Your request could not be delivered right now, so nothing was sent. Please email {email} directly.",
+      "error": "Something went wrong submitting your request. Please check the form and try again, or email us directly.",
+      "model": "Business model",
+      "models": {
+        "bulk": "Bulk ingredient",
+        "oem": "OEM",
+        "odm": "ODM",
+        "obm": "OBM"
+      },
+      "modelHints": {
+        "bulk": "Ingredients to your specification, packing and delivery terms.",
+        "oem": "Manufactured to your specification and packaging brief.",
+        "odm": "Format, formulation or packaging developed with qualified partners.",
+        "obm": "Finished products under an agreed brand model."
+      },
+      "modelNote": "OEM, ODM and OBM are arranged through suitable manufacturing partners; availability depends on the product, partner facility and market.",
+      "details": "Add technical and logistics details (optional)",
+      "detailsHint": "Only the fields relevant to the business model you chose.",
+      "sectionModel": "Project details",
+      "sectionLogistics": "Logistics",
+      "specRequirementsOem": "Your specification (optional)",
+      "specRequirementsOemPlaceholder": "e.g. composition, moisture, particle size, certification needs…",
+      "packagingBrief": "Packaging and artwork brief (optional)",
+      "packagingBriefPlaceholder": "e.g. 250 g stand-up pouch, your artwork ready / to be adapted",
+      "packagingBriefOdm": "Packaging direction (optional)",
+      "formatBrief": "Target format or formulation brief (optional)",
+      "formatBriefPlaceholder": "e.g. 3-in-1 instant stick, low-sugar blend, powder for beverages",
+      "targetMarket": "Intended market and sales channel (optional)",
+      "targetMarketPlaceholder": "e.g. EU retail, Japan e-commerce, Middle East foodservice",
+      "brandModel": "Brand model to discuss (optional)",
+      "brandModelPlaceholder": "e.g. finished product under your brand, co-branded range",
+      "packing": "Packing (optional)"
     }
   },
   "legal": {
-    "privacyTitle": "Privacy Policy",
-    "privacyBody": "[Placeholder — replace with a real privacy policy before launch, covering what data is collected via the contact/RFQ forms, how it's stored and used, and how visitors can request deletion. Consider consulting a lawyer familiar with your target markets' data protection laws (e.g. GDPR for EU buyers).]",
-    "termsTitle": "Terms of Trade",
-    "termsBody": "[Placeholder — replace with your actual terms of trade: payment terms, order minimums, lead times, warranty/claims policy and dispute resolution process, before launch.]"
+    "privacyTitle": "Privacy Notice",
+    "privacyBody": [
+      "Last updated: 27 September 2026.",
+      "What we collect: when you use our contact or quote-request forms, we collect the details you enter (such as your name, company, email, phone, destination and request details) and basic context such as the page you submitted from, your site language and any campaign (UTM) parameters in the link you followed.",
+      "How we use it: only to respond to your inquiry, prepare quotations and follow up on the commercial conversation you started. We do not sell your data. Submissions are delivered to our team by email and processed by our website hosting and email providers.",
+      "Your choices: to access, correct or delete your data, email {email}. Data controller: {legalName}, business registration no. {taxCode}, Hanoi, Vietnam."
+    ],
+    "termsTitle": "Website Terms",
+    "termsBody": [
+      "Last updated: 27 September 2026.",
+      "Website content, including product descriptions and specifications, is indicative and for information only. It is not an offer to sell and does not indicate that a product is in stock or export-ready.",
+      "Commercial terms — price, specification, quantity, payment, Incoterm, delivery, inspection and claims — are set out in each written quotation and sales contract, which take precedence over anything on this website.",
+      "Questions: {email}. {legalName}, business registration no. {taxCode}."
+    ]
   },
   "notFound": {
     "title": "Page not found",

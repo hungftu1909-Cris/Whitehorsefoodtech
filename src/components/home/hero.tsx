@@ -1,27 +1,32 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Package } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
-import { ImageCarousel, type CarouselSlide } from "@/components/ui/image-carousel";
-import { Reveal } from "@/components/ui/reveal";
-import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
-const CANDIDATE_SLIDES: CarouselSlide[] = [
-  { src: "/images/hero.jpg", alt: "Coffee cherries and freeze-dried fruit — Whitehorse Foodtech premium agricultural exports" },
-  { src: "/images/about.jpg", alt: "Whitehorse Foodtech — sourcing, R&D, factories and global export network" },
-  { src: "/images/factory.jpg", alt: "Whitehorse Foodtech processing facility" },
-];
+// about.jpg and factory.jpg are deliberately NOT rendered anywhere: the
+// artwork itself carries unsupported claims ("> 3,000 cooperatives",
+// "hundreds of factories/markets", a Whitehorse-branded factory and
+// trucks, a global-delivery slogan). The files stay in public/images until
+// replaced; see docs/claim-registry.md row 15.
+const HERO_IMAGE = {
+  src: "/images/hero.jpg",
+  alt: "Illustrative image: coffee cherries and freeze-dried fruit",
+};
 
+/**
+ * Server-rendered hero: one positioning sentence, one support line, RFQ +
+ * Products CTAs. The single image is the page's LCP, so it is the only
+ * priority image on the homepage — no carousel or client JS.
+ */
 export function Hero() {
   const t = useTranslations("home.hero");
-  const slides = CANDIDATE_SLIDES.filter((s) => hasPublicFile(s.src));
 
   return (
     <section className="border-b border-border bg-muted/40">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2 lg:items-center lg:px-8">
-        <Reveal>
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-2 lg:items-center lg:px-8">
+        <div>
           <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
             {t("eyebrow")}
           </p>
@@ -33,7 +38,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/rfq"
+              href={{ pathname: "/rfq", query: { intent: "quote" } }}
               className={cn(buttonVariants({ size: "lg" }), "cursor-pointer px-6")}
             >
               {t("ctaPrimary")}
@@ -48,29 +53,20 @@ export function Hero() {
               {t("ctaSecondary")}
             </Link>
           </div>
-        </Reveal>
+        </div>
 
-        <Reveal delay={150} className="relative">
-          <ImageCarousel
-            slides={slides}
-            placeholderLabel="Hero photography — coffee cherries / freeze-dried fruit / factory (to replace)"
-            aspect="aspect-[16/9]"
-            className="w-full"
-            priority
-          />
-
-          <div className="absolute -bottom-6 left-4 flex items-center gap-3 rounded-lg border border-border bg-card py-3 pr-5 pl-4 shadow-lg sm:left-6">
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-md bg-accent/15 text-accent">
-              <Package className="size-5" aria-hidden="true" />
-            </div>
-            <div className="leading-tight">
-              <p className="font-serif text-xl font-semibold text-foreground">
-                <AnimatedCounter value={t("badgeValue")} />
-              </p>
-              <p className="text-xs text-muted-foreground">{t("badgeLabel")}</p>
-            </div>
+        {hasPublicFile(HERO_IMAGE.src) && (
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border">
+            <Image
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              fill
+              priority
+              sizes="(min-width: 1280px) 38rem, (min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
           </div>
-        </Reveal>
+        )}
       </div>
     </section>
   );

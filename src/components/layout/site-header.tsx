@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
-import { LocaleSwitcher } from "./locale-switcher";
+import { LocaleSwitcher, type BlogSlugMap } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
-export function SiteHeader() {
+export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
   const t = useTranslations("nav");
 
   return (
@@ -85,7 +85,7 @@ export function SiteHeader() {
         </NavigationMenu>
 
         <div className="flex items-center gap-3">
-          <LocaleSwitcher className="hidden sm:flex" />
+          <LocaleSwitcher className="hidden sm:flex" blogSlugMap={blogSlugMap} />
           <ThemeToggle className="cursor-pointer" />
           <Link
             href="/rfq"
@@ -93,7 +93,7 @@ export function SiteHeader() {
           >
             {t("requestQuote")}
           </Link>
-          <MobileNav />
+          <MobileNav blogSlugMap={blogSlugMap} />
         </div>
       </div>
     </header>

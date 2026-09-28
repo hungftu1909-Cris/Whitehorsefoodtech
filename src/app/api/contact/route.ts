@@ -1,41 +1,47 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validations";
-import { sendMail, escapeHtml } from "@/lib/mailer";
+import { deliver } from "@/lib/mailer";
+import { buildContactEmail } from "@/lib/lead-email";
+import { generateLeadId, outcomeToHttp } from "@/lib/lead-delivery";
 
 export async function POST(request: Request) {
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "invalid" }, { status: 400 });
   }
 
   const parsed = contactSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json({ ok: false }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "invalid" }, { status: 400 });
   }
+  const data = parsed.data;
 
-  const { name, company, email, phone, message, company_website } = parsed.data;
-
-  // Honeypot tripped — pretend success, drop silently.
-  if (company_website) {
+  // Honeypot tripped — pretend success, deliver and log nothing.
+  if (data.company_website) {
     return NextResponse.json({ ok: true });
   }
 
-  await sendMail({
-    subject: `New contact form message — ${company}`,
-    replyTo: email,
+  const leadId = generateLeadId("contact");
+  const { subject, html } = buildContactEmail(data, leadId);
+  const outcome = await deliver({
+    leadId,
     kind: "contact",
-    html: `
-      <h2>New contact form submission</h2>
-      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-      <p><strong>Company:</strong> ${escapeHtml(company)}</p>
-      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Phone:</strong> ${escapeHtml(phone || "—")}</p>
-      <p><strong>Message:</strong></p>
-      <p>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>
-    `,
+    subject,
+    html,
+    replyTo: data.email,
+    summary: {
+      company: data.company,
+      email: data.email,
+      locale: data.locale || undefined,
+      sourcePath: data.sourcePath || undefined,
+      utm_source: data.utm_source || undefined,
+      utm_campaign: data.utm_campaign || undefined,
+      message: data.message,
+    },
   });
 
-  return NextResponse.json({ ok: true });
+  const { status, body: responseBody } = outcomeToHttp(outcome, leadId);
+  return NextResponse.json(responseBody, { status });
 }

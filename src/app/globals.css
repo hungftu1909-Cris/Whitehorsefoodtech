@@ -146,10 +146,15 @@
   }
 }
 
+/* Motion is decorative only (hover zooms, colour fades); switch it off for
+   visitors who ask for less. */
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }

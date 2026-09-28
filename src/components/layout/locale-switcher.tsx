@@ -3,19 +3,26 @@
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { localeSwitchPath } from "@/lib/locale-switch";
 import { cn } from "@/lib/utils";
-import { useParams } from "next/navigation";
+
+export type BlogSlugMap = Record<string, Partial<Record<string, string>>>;
 
 const LOCALE_LABEL: Record<string, string> = {
   en: "EN",
   vi: "VI",
 };
 
-export function LocaleSwitcher({ className }: { className?: string }) {
+export function LocaleSwitcher({
+  className,
+  blogSlugMap = {},
+}: {
+  className?: string;
+  blogSlugMap?: BlogSlugMap;
+}) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const params = useParams();
 
   return (
     <div className={cn("flex items-center gap-0.5 text-sm", className)}>
@@ -26,9 +33,10 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             type="button"
             aria-current={cur === locale}
             onClick={() =>
+              // Query string read at click time (not useSearchParams) so the
+              // header stays statically renderable; keeps e.g. RFQ prefill.
               router.replace(
-                // @ts-expect-error -- pathname is dynamic but valid for this locale set
-                { pathname, params },
+                localeSwitchPath(pathname, cur, blogSlugMap) + window.location.search,
                 { locale: cur }
               )
             }

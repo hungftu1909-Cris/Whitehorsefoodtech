@@ -61,9 +61,13 @@ nano .env.local   # fill in real values — see below
 ```
 
 Set in `.env.local`:
-- `NEXT_PUBLIC_SITE_URL=https://yourdomain.com`
-- `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM`, `MAIL_TO`
-  (contact/RFQ form email delivery — see main README "Before you launch")
+- `NEXT_PUBLIC_SITE_URL=https://www.whitehorsefoodtech.com` (the www host
+  if the apex redirects to it)
+- `LEAD_DELIVERY_MODE=smtp`
+- `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM`, `MAIL_TO`,
+  optional `RFQ_MAIL_TO` (contact/RFQ form email delivery — see main README
+  "Lead delivery"; without SMTP the forms return 503 instead of pretending
+  to succeed)
 
 If the GitHub repo is **private**, `git clone` over HTTPS will prompt for a
 username/GitHub personal access token instead of a password — generate one
@@ -157,8 +161,8 @@ Actions workflow that SSHes in and runs it automatically on every push to
 ## After deploy — sanity checks
 
 - `https://yourdomain.com/en` and `/vi` both load
-- Submit a test message via `/contact` and `/rfq`, confirm it arrives at
-  `MAIL_TO`
+- Submit one internal test via `/rfq` (company "TEST — ignore"), confirm
+  it arrives at `RFQ_MAIL_TO`/`MAIL_TO` with its reference in the subject
 - `/sitemap.xml` and `/robots.txt` resolve
 - `pm2 status` shows the app as `online`; `pm2 logs` has no repeating errors
 

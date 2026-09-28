@@ -1,14 +1,13 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
-import { StatsStrip } from "@/components/home/stats-strip";
-import { TrustStrip } from "@/components/home/trust-strip";
-import { ValueProps } from "@/components/home/value-props";
+import { ProofStrip } from "@/components/home/proof-strip";
 import { ProductsPreview } from "@/components/home/products-preview";
-import { ProcessPreview } from "@/components/home/process-preview";
-import { CertificationsTeaser } from "@/components/home/certifications-teaser";
-import { CtaSection } from "@/components/sections/cta-section";
-import { getTranslations } from "next-intl/server";
+import { ValueProposition } from "@/components/home/value-proposition";
+import { SplitCta } from "@/components/sections/split-cta";
 
+// Five sections, all Server Components. Company story, process, quality
+// detail and the three-year vision live on their own pages (About, How We
+// Work, Quality) and are reached through links, not repeated here.
 export default async function Home({
   params,
 }: {
@@ -21,13 +20,20 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <ProofStrip />
       <ProductsPreview />
-      <StatsStrip />
-      <TrustStrip />
-      <ValueProps />
-      <ProcessPreview />
-      <CertificationsTeaser />
-      <CtaSection title={t("title")} subtitle={t("subtitle")} cta={t("cta")} />
+      <ValueProposition />
+      <SplitCta
+        title={t("title")}
+        subtitle={t("subtitle")}
+        buyer={{
+          label: t("buyerLabel"),
+          body: t("buyerBody"),
+          cta: t("buyerCta"),
+          href: { pathname: "/rfq", query: { intent: "quote" } },
+        }}
+        supplier={{ label: t("supplierLabel"), body: t("supplierBody"), cta: t("supplierCta"), href: "/suppliers/apply" }}
+      />
     </>
   );
 }

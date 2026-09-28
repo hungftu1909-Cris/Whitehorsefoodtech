@@ -21,18 +21,32 @@ assistant can't do on your behalf.
 Before clicking Deploy, add these (Project Settings → Environment
 Variables — or during the import screen), same keys as `.env.example`:
 
-| Key | Value |
-|---|---|
-| `NEXT_PUBLIC_SITE_URL` | `https://whitehorsefoodtech.com` (or your `*.vercel.app` URL until the domain is connected) |
-| `SMTP_HOST` | your SMTP host |
-| `SMTP_PORT` | `587` |
-| `SMTP_USER` | your SMTP username |
-| `SMTP_PASS` | your SMTP password |
-| `MAIL_FROM` | sender address |
-| `MAIL_TO` | inbox that should receive contact/RFQ submissions |
+| Key | Scope | Value |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Production | `https://www.whitehorsefoodtech.com` — the **www** host. The apex domain redirects to www, so an apex value would make every canonical/hreflang/sitemap URL point at a redirect. Leave unset on Preview (the code default is also www). |
+| `LEAD_DELIVERY_MODE` | Production: `smtp` (or leave unset) · Preview: leave unset | Unset resolves to `smtp` in Production and `log` in Preview. Never set `log` in Production — it is refused with HTTP 503. |
+| `SMTP_HOST` | **Production only** | SMTP host (`smtp.gmail.com` for Google Workspace) |
+| `SMTP_PORT` | Production only | `587` |
+| `SMTP_USER` | Production only | sending mailbox |
+| `SMTP_PASS` | Production only | Google App Password (not the account password) |
+| `MAIL_FROM` | Production only | sender address |
+| `MAIL_TO` | Production only | inbox for Contact messages (and RFQs if `RFQ_MAIL_TO` is unset) |
+| `RFQ_MAIL_TO` | Production only | optional sales inbox for quote requests |
 
-Without these, the contact/RFQ forms still work but only log submissions to
-Vercel's function logs instead of emailing them.
+**Delivery behaviour** (see `src/lib/lead-delivery.ts`):
+
+- Production with SMTP configured → the form succeeds only after the SMTP
+  server accepts the email; the buyer sees a reference such as
+  `RFQ-20260927-7K3QXM`, which is also in the email subject.
+- Production **without** SMTP → HTTP 503 and the form tells the buyer to
+  email sales@ directly. This is intentional: a lead is never reported as
+  received when it wasn't. Fix the env vars rather than switching to `log`.
+- SMTP send error → HTTP 502, same message to the buyer; the Vercel
+  function log has a redacted line with the reference, product, country,
+  company and masked email so sales can follow up.
+- Preview deployments (SMTP vars scoped to Production only) → `log` mode:
+  submissions succeed and appear only as redacted lines in the function
+  logs. Preview can therefore never email the real inbox.
 
 ## 3. Deploy
 
@@ -66,8 +80,16 @@ those A records with the ones above.
 
 ## After deploy — sanity checks
 
-- `https://whitehorsefoodtech.com/en` and `/vi` both load
-- Submit a test message via `/contact` and `/rfq`, confirm it arrives at
-  `MAIL_TO` (check Vercel → Project → Logs if it doesn't, to see the
-  server-side error)
-- `/sitemap.xml` and `/robots.txt` resolve
+- `https://www.whitehorsefoodtech.com/en` and `/vi` both load, and the
+  apex `https://whitehorsefoodtech.com` redirects to www
+- View source: `<link rel="canonical">`, `hreflang` links and
+  `/sitemap.xml` `<loc>` values all start with `https://www.`
+- `/sitemap.xml` and `/robots.txt` resolve; `/sitemap.xml` has no
+  `/privacy` or `/terms` entries
+- On a **Preview** URL: submit `/rfq` and `/contact` and confirm a
+  `[lead] … logged (mode=log)` line in the function logs
+- **Production inbox check** — only as a single internal test, done by the
+  founder on purpose after promotion: submit one RFQ with the subject
+  company "TEST — ignore" and confirm it arrives at `RFQ_MAIL_TO` (or
+  `MAIL_TO`) with the reference in the subject. Do not script or repeat
+  submissions against production.
