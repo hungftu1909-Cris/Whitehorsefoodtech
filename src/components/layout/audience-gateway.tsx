@@ -13,25 +13,42 @@ import {
 
 const STORAGE_KEY = "whitehorse-audience-selected";
 
+function readChoice() {
+  try {
+    return window.localStorage?.getItem(STORAGE_KEY) ?? null;
+  } catch {
+    return null;
+  }
+}
+
+function writeChoice(value: string) {
+  try {
+    window.localStorage?.setItem(STORAGE_KEY, value);
+  } catch {
+    // Some privacy modes disable storage. The gateway still works for the
+    // current page lifecycle; it may simply reappear after a full reload.
+  }
+}
+
 export function AudienceGateway() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/" && !window.localStorage.getItem(STORAGE_KEY)) {
+    if (pathname === "/" && !readChoice()) {
       const frame = window.requestAnimationFrame(() => setOpen(true));
       return () => window.cancelAnimationFrame(frame);
     }
   }, [pathname]);
 
   function rememberChoice() {
-    window.localStorage.setItem(STORAGE_KEY, "1");
+    writeChoice("1");
     setOpen(false);
   }
 
   function handleOpenChange(nextOpen: boolean) {
     if (!nextOpen) {
-      window.localStorage.setItem(STORAGE_KEY, "dismissed");
+      writeChoice("dismissed");
     }
     setOpen(nextOpen);
   }
