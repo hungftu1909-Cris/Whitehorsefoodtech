@@ -16,6 +16,24 @@ test("quality, process and network open with image-led concise platform heroes",
   }
 });
 
+test("network gives buyers and Vietnamese suppliers equal entry paths", () => {
+  const network = fs.readFileSync("src/app/[locale]/clients/page.tsx", "utf8");
+
+  assert.match(network, /buyerAction[\s\S]*href: "\/rfq"/);
+  assert.match(network, /supplierAction[\s\S]*href: "\/suppliers\/apply"/);
+  assert.match(network, /<SplitCta/);
+});
+
+test("quality page presents the phased digital supply-chain architecture", () => {
+  const quality = fs.readFileSync("src/app/[locale]/certifications/page.tsx", "utf8");
+  const home = fs.readFileSync("src/components/home/platform-map.tsx", "utf8");
+
+  assert.match(quality, /technology\.layers/);
+  assert.match(quality, /BrainCircuit/);
+  assert.match(home, /technology\.nodes/);
+  assert.match(home, /technology\.ai/);
+});
+
 test("catalog two-view imagery is shared and touch devices rotate automatically", () => {
   const cards = fs.readFileSync("src/components/catalog/cards.tsx", "utf8");
   const family = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");

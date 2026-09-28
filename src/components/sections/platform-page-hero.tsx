@@ -14,6 +14,7 @@ export function PlatformPageHero({
   imageNote,
   facts,
   action,
+  secondaryAction,
 }: {
   eyebrow: string;
   title: string;
@@ -22,6 +23,7 @@ export function PlatformPageHero({
   imageNote: string;
   facts?: { value: string; label: string }[];
   action?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string };
 }) {
   const primary = images[0];
   const secondary = images[1];
@@ -45,13 +47,25 @@ export function PlatformPageHero({
               ))}
             </dl>
           )}
-          {action && (
-            <Link
-              href={action.href}
-              className="mt-8 inline-flex min-h-11 cursor-pointer items-center rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              {action.label}
-            </Link>
+          {(action || secondaryAction) && (
+            <div className="mt-8 flex flex-wrap gap-3">
+              {action && (
+                <Link
+                  href={action.href}
+                  className="inline-flex min-h-11 cursor-pointer items-center rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  {action.label}
+                </Link>
+              )}
+              {secondaryAction && (
+                <Link
+                  href={secondaryAction.href}
+                  className="inline-flex min-h-11 cursor-pointer items-center rounded-md border border-border bg-background px-5 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:bg-muted"
+                >
+                  {secondaryAction.label}
+                </Link>
+              )}
+            </div>
           )}
         </div>
 

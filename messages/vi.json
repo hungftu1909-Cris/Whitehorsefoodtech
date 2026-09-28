@@ -162,6 +162,20 @@
           "status": "building"
         }
       ],
+      "technology": {
+        "status": "Định hướng nền tảng",
+        "title": "Công nghệ kết nối chất lượng & chuỗi cung ứng",
+        "body": "Kiến trúc triển khai theo giai đoạn để kết nối dữ liệu tại nguồn, hồ sơ chất lượng, tồn kho, quy trình thương mại và các mốc vận tải quanh từng yêu cầu.",
+        "nodes": [
+          "Dữ liệu nguồn & IoT",
+          "Hồ sơ QMS / LIMS",
+          "Tồn kho WMS",
+          "Luồng nhà cung cấp & đơn hàng",
+          "Logistics TMS",
+          "Phản hồi Buyer"
+        ],
+        "ai": "AI + dữ liệu thông minh xuyên suốt mọi lớp"
+      },
       "note": "Hiện tại nghĩa là quy trình Whitehorse đang vận hành. Đang xây dựng nghĩa là định hướng sản phẩm trong quá trình phát triển; không hàm ý cổng thông tin, khu vực tài khoản hay theo dõi lô hàng thời gian thực đã hoạt động.",
       "cta": "Xem quy trình xử lý yêu cầu"
     },
@@ -643,6 +657,47 @@
         "description": "Đăng ký cơ sở và thông tin nhà cung cấp được kiểm tra cho đơn hàng đi Hoa Kỳ."
       }
     ],
+    "technology": {
+      "eyebrow": "Kiến trúc công nghệ chất lượng & chuỗi cung ứng",
+      "title": "Từ tín hiệu tại nguồn đến quyết định của Buyer — trên một chuỗi dữ liệu kết nối.",
+      "subtitle": "Whitehorse đang xây dựng theo từng giai đoạn một lớp công nghệ kết nối hồ sơ chất lượng, tồn kho, quy trình thương mại và các mốc logistics quanh từng yêu cầu.",
+      "status": "Định hướng nền tảng · triển khai theo giai đoạn",
+      "layers": [
+        {
+          "number": "01",
+          "title": "IoT & dữ liệu tại nguồn",
+          "description": "Dữ liệu cảm biến và hồ sơ đối tác có thể ghi nhận điều kiện vùng nguyên liệu, lưu kho và chế biến tại các điểm kiểm soát phù hợp."
+        },
+        {
+          "number": "02",
+          "title": "Hồ sơ QMS & LIMS",
+          "description": "Thông số, mẫu, kiểm nghiệm, COA, sai lệch và phê duyệt gắn với đúng nhà cung cấp, cơ sở và lô hàng."
+        },
+        {
+          "number": "03",
+          "title": "WMS · Quản trị kho",
+          "description": "Tồn kho, lô hàng, vị trí, đóng gói, điều kiện và dịch chuyển được cấu trúc để hỗ trợ khả năng quan sát vận hành."
+        },
+        {
+          "number": "04",
+          "title": "Luồng nhà cung cấp & đơn hàng",
+          "description": "Yêu cầu, ghép nối, báo giá, phê duyệt và chứng từ được điều phối trong một lịch sử hồ sơ xuyên suốt."
+        },
+        {
+          "number": "05",
+          "title": "TMS · Quản trị vận tải",
+          "description": "Đặt chỗ, tuyến vận chuyển, Incoterm, chứng từ, các mốc hành trình và ngoại lệ được kết nối với đơn hàng."
+        },
+        {
+          "number": "06",
+          "title": "Mạng lưới Buyer & phân phối",
+          "description": "Tín hiệu nhu cầu, bằng chứng giao hàng và phản hồi của Buyer được đưa trở lại quyết định về sản phẩm và nguồn cung."
+        }
+      ],
+      "aiTitle": "AI + dữ liệu thông minh xuyên suốt mọi lớp",
+      "aiBody": "Được thiết kế để tăng tốc ghép nối từ nhà cung cấp tới Buyer, phát hiện sớm hồ sơ còn thiếu và tín hiệu rủi ro, đồng thời biến mỗi yêu cầu đã hoàn tất thành dữ liệu tốt hơn cho quyết định tiếp theo.",
+      "note": "Đây là kiến trúc đích và đang được triển khai theo từng giai đoạn. Phạm vi hệ thống, dữ liệu IoT, tích hợp đối tác và khả năng quan sát trực tiếp thay đổi theo nhà cung cấp, cơ sở và dự án."
+    },
     "sustainability": {
       "eyebrow": "Nguyên tắc",
       "title": "Bốn nguyên tắc vận hành",
@@ -729,7 +784,8 @@
       "title": "Nguồn cung Việt Nam. Đối thoại với người mua toàn cầu.",
       "subtitle": "Chúng tôi kết nối năng lực cung ứng Việt Nam đã được sàng lọc với yêu cầu người mua tại châu Á, châu Âu, Trung Đông, Bắc Mỹ và châu Đại Dương.",
       "imageNote": "Hình ảnh đại diện cho các công đoạn vùng nguyên liệu và logistics trong mạng lưới; không xác định một cơ sở hoặc lô hàng cụ thể.",
-      "action": "Tham gia mạng lưới cung ứng"
+      "buyerAction": "Trở thành Buyer / đối tác phân phối",
+      "supplierAction": "Tham gia mạng lưới cung ứng"
     },
     "regionsTitle": "Các thị trường trong bản đồ trao đổi hiện tại",
     "regions": "Nga, Nhật Bản, Qatar, Israel, Hàn Quốc, Trung Quốc, Hoa Kỳ, Canada, Úc, Đức, Ý, Pháp, Bỉ và Hà Lan.",
@@ -748,8 +804,18 @@
       }
     },
     "cta": {
-      "title": "Nhà cung cấp hoặc đối tác muốn hợp tác cùng chúng tôi?",
-      "cta": "Bắt đầu trao đổi"
+      "title": "Chọn vai trò của bạn trong mạng lưới.",
+      "subtitle": "Buyer và đối tác phân phối bắt đầu từ nhu cầu. Nhà cung cấp Việt Nam bắt đầu từ năng lực và hồ sơ.",
+      "buyer": {
+        "label": "Dành cho Buyer & đối tác phân phối",
+        "body": "Nhà nhập khẩu, nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối có thể gửi yêu cầu sản phẩm, thị trường và sản lượng để bắt đầu kết nối nguồn cung phù hợp.",
+        "cta": "Tham gia mạng lưới Buyer"
+      },
+      "supplier": {
+        "label": "Dành cho nhà cung cấp Việt Nam",
+        "body": "Nông hộ, hợp tác xã và nhà máy chế biến có thể gửi năng lực sản phẩm, thông tin cơ sở và hồ sơ để được đánh giá.",
+        "cta": "Tham gia mạng lưới cung ứng"
+      }
     }
   },
   "blog": {

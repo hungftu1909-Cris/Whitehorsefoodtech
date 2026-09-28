@@ -171,6 +171,27 @@ test("public navigation retains the approved concepts while page headlines stay 
   assert.equal(get(en as Json, "certifications.hero.title"), "Evidence before claims.");
 });
 
+test("digital supply-chain technology is complete but clearly future-facing", () => {
+  for (const [locale, catalog] of [["en", en], ["vi", vi]] as const) {
+    const technology = get(catalog as Json, "certifications.technology") as {
+      status: string;
+      subtitle: string;
+      layers: { title: string }[];
+      aiTitle: string;
+      note: string;
+    };
+    const titles = technology.layers.map((layer) => layer.title).join(" ");
+
+    assert.equal(technology.layers.length, 6, `${locale}: six connected technology layers`);
+    assert.match(titles, /IoT/);
+    assert.match(titles, /WMS/);
+    assert.match(titles, /TMS/);
+    assert.match(technology.aiTitle, /AI/);
+    assert.match(`${technology.status} ${technology.subtitle} ${technology.note}`, /phased|giai đoạn/i);
+    assert.match(technology.note, /vary|thay đổi/i);
+  }
+});
+
 test("sales copy promises follow-up, not a response time", () => {
   for (const catalog of [en, vi]) {
     const all = leafValues(catalog as Json).map(([, v]) => v).join("\n");

@@ -1,4 +1,4 @@
-import { ArrowRight, Check, CircleDashed } from "lucide-react";
+import { ArrowRight, BrainCircuit, Check, CircleDashed } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -13,6 +13,7 @@ type Stage = {
 export function PlatformMap() {
   const t = useTranslations("home.platform");
   const stages = t.raw("stages") as Stage[];
+  const technologyNodes = t.raw("technology.nodes") as string[];
 
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
@@ -59,6 +60,38 @@ export function PlatformMap() {
               </li>
             ))}
           </ol>
+        </div>
+
+        <div className="mt-10 rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-5 sm:p-6 md:p-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.16em] text-accent uppercase">
+                <CircleDashed className="size-3.5" aria-hidden="true" />
+                {t("technology.status")}
+              </span>
+              <h3 className="mt-3 font-serif text-2xl font-semibold md:text-3xl">{t("technology.title")}</h3>
+            </div>
+            <p className="max-w-2xl text-sm leading-relaxed text-primary-foreground/70">
+              {t("technology.body")}
+            </p>
+          </div>
+
+          <ol className="mt-7 grid gap-2 sm:grid-cols-2 lg:grid-cols-6">
+            {technologyNodes.map((node, i) => (
+              <li
+                key={node}
+                className="flex min-h-20 items-center gap-3 rounded-md border border-primary-foreground/15 bg-primary/70 px-4 py-3 text-sm leading-snug text-primary-foreground/80"
+              >
+                <span className="font-mono text-xs text-accent">{String(i + 1).padStart(2, "0")}</span>
+                <span>{node}</span>
+              </li>
+            ))}
+          </ol>
+
+          <div className="mt-3 flex items-center gap-3 rounded-md border border-accent/35 bg-accent/10 px-4 py-3 text-sm font-semibold text-primary-foreground">
+            <BrainCircuit className="size-5 shrink-0 text-accent" aria-hidden="true" />
+            {t("technology.ai")}
+          </div>
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-primary-foreground/15 pt-6 sm:flex-row sm:items-center sm:justify-between">

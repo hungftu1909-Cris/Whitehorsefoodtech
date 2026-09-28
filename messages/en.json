@@ -162,6 +162,20 @@
           "status": "building"
         }
       ],
+      "technology": {
+        "status": "Platform direction",
+        "title": "Connected quality & supply-chain technology",
+        "body": "A phased architecture designed to connect source data, quality evidence, inventory, commercial workflow and transport milestones around each request.",
+        "nodes": [
+          "Source & IoT data",
+          "QMS / LIMS evidence",
+          "WMS inventory",
+          "Supplier & order workflow",
+          "TMS logistics",
+          "Buyer feedback"
+        ],
+        "ai": "AI + data intelligence across every layer"
+      },
       "note": "Current means an operating Whitehorse workflow. Building means a product direction under development; it does not imply a live portal, account area or real-time lot tracking.",
       "cta": "See how a request moves"
     },
@@ -643,6 +657,47 @@
         "description": "Facility registration and importer-facing supplier information checked for US-bound orders."
       }
     ],
+    "technology": {
+      "eyebrow": "Digital quality & supply-chain architecture",
+      "title": "From source signals to buyer decisions—one connected data chain.",
+      "subtitle": "Whitehorse is building a phased technology layer to connect quality evidence, inventory, commercial workflow and logistics milestones around each request.",
+      "status": "Platform direction · phased implementation",
+      "layers": [
+        {
+          "number": "01",
+          "title": "IoT & source capture",
+          "description": "Sensor readings and partner records can capture source, storage and process conditions at the relevant control points."
+        },
+        {
+          "number": "02",
+          "title": "QMS & LIMS evidence",
+          "description": "Specifications, samples, tests, COA, deviations and approvals tied to the supplier, site and lot."
+        },
+        {
+          "number": "03",
+          "title": "WMS · Warehouse management",
+          "description": "Inventory, lot, location, packing, condition and movement records structured for operational visibility."
+        },
+        {
+          "number": "04",
+          "title": "Supplier & order workflow",
+          "description": "Requirements, matching, quotations, approvals and documents coordinated in one case history."
+        },
+        {
+          "number": "05",
+          "title": "TMS · Transportation management",
+          "description": "Bookings, routes, Incoterms, shipping documents, milestones and exceptions connected to the order."
+        },
+        {
+          "number": "06",
+          "title": "Buyer & distribution network",
+          "description": "Demand signals, delivery evidence and buyer feedback returned to product and source decisions."
+        }
+      ],
+      "aiTitle": "AI + data intelligence across every layer",
+      "aiBody": "Designed to accelerate supplier-to-buyer matching, surface missing evidence and risk signals, and turn each completed request into better decisions for the next.",
+      "note": "This is the target architecture and is being implemented in phases. System coverage, IoT data, partner integrations and live visibility vary by supplier, facility and project."
+    },
     "sustainability": {
       "eyebrow": "Principles",
       "title": "Four working principles",
@@ -729,7 +784,8 @@
       "title": "Vietnam supply. Global buyer conversations.",
       "subtitle": "We connect screened Vietnamese supply capabilities with buyer requirements across Asia, Europe, the Middle East, North America and Oceania.",
       "imageNote": "Representative images of sourcing and logistics stages across the network; they do not identify a specific contracted site or shipment.",
-      "action": "Join the supplier network"
+      "buyerAction": "Join as a buyer or distributor",
+      "supplierAction": "Join the supplier network"
     },
     "regionsTitle": "Markets in the current conversation map",
     "regions": "Russia, Japan, Qatar, Israel, South Korea, China, the United States, Canada, Australia, Germany, Italy, France, Belgium and the Netherlands.",
@@ -748,8 +804,18 @@
       }
     },
     "cta": {
-      "title": "Supplier or partner interested in working with us?",
-      "cta": "Start a conversation"
+      "title": "Choose your role in the network.",
+      "subtitle": "Buyers and distribution partners start with demand. Vietnamese suppliers start with capability and evidence.",
+      "buyer": {
+        "label": "For buyers & distributors",
+        "body": "Importers, manufacturers, brands, ingredient users and distribution partners can share a product brief, market and volume for a qualified supply conversation.",
+        "cta": "Join the buyer network"
+      },
+      "supplier": {
+        "label": "For Vietnamese suppliers",
+        "body": "Farmers, cooperatives and processors can submit product capability, facility and document information for assessment.",
+        "cta": "Join the supplier network"
+      }
     }
   },
   "blog": {
