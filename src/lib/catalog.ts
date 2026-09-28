@@ -42,7 +42,7 @@ export const DEFINED_SKU_PREFIXES = {
   coconut: "WHCO",
   "birds-nest": "WHBN",
   fruit: "WHFR",
-  "nuts-spices-botanicals": "WHNSP",
+  "nuts-spices-botanicals": "WHNSB",
 } as const satisfies Record<FamilySlug, string>;
 
 /**
@@ -332,6 +332,65 @@ const STUDIO = (family: FamilySlug, file: string, en: string, vi: string): Catal
   kind: "studio",
 });
 
+const FAMILY_EDITORIAL: Record<Exclude<FamilySlug, "coffee">, CatalogImage> = {
+  coconut: {
+    src: "/images/catalog/editorial/coconut-real-products.webp",
+    alt: L("Owner-supplied coconut product photograph", "Ảnh sản phẩm dừa do Whitehorse cung cấp"),
+    kind: "editorial",
+  },
+  "birds-nest": {
+    src: "/images/catalog/editorial/birds-nest-real-products.webp",
+    alt: L("Owner-supplied bird's nest product photograph", "Ảnh sản phẩm yến do Whitehorse cung cấp"),
+    kind: "editorial",
+  },
+  fruit: {
+    src: "/images/catalog/editorial/fruit-real-products.webp",
+    alt: L("Owner-supplied fruit product photograph", "Ảnh sản phẩm trái cây do Whitehorse cung cấp"),
+    kind: "editorial",
+  },
+  "nuts-spices-botanicals": {
+    src: "/images/catalog/editorial/nuts-spices-real-products.webp",
+    alt: L("Owner-supplied nuts and spices product photograph", "Ảnh sản phẩm hạt và gia vị do Whitehorse cung cấp"),
+    kind: "editorial",
+  },
+};
+
+const RANGE_FALLBACKS: Record<FamilySlug, CatalogImage[]> = {
+  coffee: [IMG.flatlay, IMG.spoons],
+  coconut: [
+    FAMILY_EDITORIAL.coconut,
+    {
+      src: "/images/catalog/studio/coconut.jpg",
+      alt: L("Studio representation of coconut ingredient formats", "Hình ảnh studio minh họa các dạng nguyên liệu dừa"),
+      kind: "studio",
+    },
+  ],
+  "birds-nest": [
+    FAMILY_EDITORIAL["birds-nest"],
+    {
+      src: "/images/catalog/studio/birds-nest.jpg",
+      alt: L("Studio representation of bird's nest ingredient formats", "Hình ảnh studio minh họa các dạng nguyên liệu yến"),
+      kind: "studio",
+    },
+  ],
+  fruit: [
+    FAMILY_EDITORIAL.fruit,
+    {
+      src: "/images/catalog/studio/fruit.jpg",
+      alt: L("Studio representation of fruit ingredient formats", "Hình ảnh studio minh họa các dạng nguyên liệu trái cây"),
+      kind: "studio",
+    },
+  ],
+  "nuts-spices-botanicals": [
+    FAMILY_EDITORIAL["nuts-spices-botanicals"],
+    {
+      src: "/images/catalog/studio/nuts-spices-botanicals.jpg",
+      alt: L("Studio representation of cashew kernels and spices", "Hình ảnh studio minh họa nhân hạt điều và gia vị"),
+      kind: "studio",
+    },
+  ],
+};
+
 export const RANGE_IMAGES: Partial<Record<string, CatalogImage[]>> = {
   "coconut-milk-cream": [
     RPACK("coconut", "coconut-milk-carton-concept-pack", "coconut milk in a 1 L aseptic carton", "sữa dừa trong hộp giấy vô trùng 1 L"),
@@ -373,8 +432,12 @@ export const RANGE_IMAGES: Partial<Record<string, CatalogImage[]>> = {
   ],
 };
 for (const range of CATALOG_RANGES) {
-  const images = RANGE_IMAGES[range.id];
-  if (images) range.images = images;
+  const images = [...(RANGE_IMAGES[range.id] ?? [])];
+  for (const fallback of RANGE_FALLBACKS[range.family]) {
+    if (images.length >= 2) break;
+    if (!images.some((image) => image.src === fallback.src)) images.push(fallback);
+  }
+  range.images = images;
 }
 
 // ---------------------------------------------------------------- confirmed coffee codes

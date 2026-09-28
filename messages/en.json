@@ -13,6 +13,7 @@
     "productsBirdsNest": "Bird's Nest Ingredients",
     "productsFruit": "Fruit Ingredients",
     "productsNutsSpicesBotanicals": "Nuts, Spices & Botanicals",
+    "packaging": "Packaging Architecture",
     "documents": "Documents",
     "certifications": "Quality & Qualification",
     "process": "How We Work",
@@ -565,6 +566,7 @@
     "docsBody": "Samples, lab testing and the certificate of analysis are arranged per request. The tests, laboratory and COA scope are agreed with you before production, together with any supplier certificates your market requires.",
     "packagingTitle": "Packaging options to discuss",
     "packagingDefault": "Packaging is specified with you and confirmed per order.",
+    "packagingExplore": "Explore packaging architecture",
     "orderingTitle": "How a request works",
     "orderingSteps": [
       "Tell us the code or range, volume, destination and any specification or certification needs.",
@@ -586,7 +588,7 @@
     "hero": {
       "eyebrow": "Commercial documents",
       "title": "Product and company materials for buyer review.",
-      "subtitle": "Download the current Whitehorse brochure. The detailed Company Profile will appear here as soon as the approved edition is ready."
+      "subtitle": "Download the current Whitehorse brochure and Packaging Architecture. The detailed Company Profile will appear here as soon as the approved edition is ready."
     },
     "library": {
       "eyebrow": "Download centre",
@@ -597,6 +599,12 @@
         "description": "A concise overview of Whitehorse, the five ingredient families and the current product portfolio for buyer introductions.",
         "meta": "PDF · 4 pages",
         "cta": "Download brochure"
+      },
+      "packaging": {
+        "title": "Whitehorse Packaging Architecture",
+        "description": "The reference pack ladder across five ingredient families, four commercial channels and 27 master structures, with buyer-custom design available by brief.",
+        "meta": "PDF · 18 pages",
+        "cta": "Download packaging guide"
       },
       "profile": {
         "title": "Whitehorse Company Profile",
@@ -904,6 +912,52 @@
       "brandModel": "Brand model to discuss (optional)",
       "brandModelPlaceholder": "e.g. finished product under your brand, co-branded range",
       "packing": "Packing (optional)"
+    }
+  },
+  "packaging": {
+    "hero": {
+      "eyebrow": "Packaging architecture",
+      "title": "One system. The right structure for each product.",
+      "subtitle": "Explore Whitehorse's reference pack ladder for samples, HORECA, retail/private label and industrial export. Every value shown is provisional; the final pack is engineered to your product, channel and destination market."
+    },
+    "stats": {
+      "structures": "master structures",
+      "forms": "product forms mapped",
+      "positions": "pack positions",
+      "channels": "commercial channels"
+    },
+    "channels": {
+      "eyebrow": "Four commercial channels",
+      "title": "Start with how the buyer will use the pack.",
+      "subtitle": "Product physics and buyer use determine the structure. The structure then determines the barrier, closure, dimensions and graphic system."
+    },
+    "structures": {
+      "eyebrow": "Reference structure library",
+      "title": "27 master structures, built around product physics.",
+      "subtitle": "Dimensions and fill weights below are design references from the current Packaging Architecture. They help frame the brief; they are not production dielines or supplier commitments.",
+      "usedBy": "Ingredient families using this structure"
+    },
+    "reference": {
+      "label": "General packaging specification.",
+      "body": "Final dimensions, fill tolerance, film or board, barrier values, seal width, closure, valve position, printable area and case cube are confirmed with the selected supplier or co-packer after machinery, shipping and destination-label requirements are known."
+    },
+    "principles": {
+      "eyebrow": "Technical non-negotiables",
+      "title": "Premium design begins with product protection.",
+      "items": [
+        { "title": "Valve logic", "body": "Roasted coffee in a sealed pack needs a one-way degassing valve. Green coffee never does. Instant coffee and powders stay dust-tight with no valve." },
+        { "title": "Product visibility", "body": "A restrained window may be used for selected whole dry products after film and shelf-life validation. Powders and freeze-dried products remain opaque by default." },
+        { "title": "Single serve", "body": "Drip coffee, pure soluble coffee and premix use different structures and fill ranges. They are never collapsed into one generic sachet." },
+        { "title": "Liquid process", "body": "Chilled, hot-fill and aseptic formats are different systems. The vessel follows the approved fill process before any ambient-stability claim is made." },
+        { "title": "Industrial expression", "body": "Premium industrial packs rely on disciplined typography, lot identity and traceability—not decorative luxury finishing." }
+      ]
+    },
+    "custom": {
+      "eyebrow": "Custom by buyer brief",
+      "title": "Need another fill weight, channel, artwork system or pack structure?",
+      "body": "Tell us the product, format, application, destination market, volume, shelf-life target and brand model. Whitehorse will develop or source the suitable option with the selected supplier or co-packer and confirm feasibility before artwork.",
+      "download": "Download full architecture",
+      "cta": "Send your packaging brief"
     }
   },
   "legal": {

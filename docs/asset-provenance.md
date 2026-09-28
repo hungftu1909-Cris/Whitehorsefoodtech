@@ -37,7 +37,8 @@ commercial website use, and record the licence reference here.
 
 ## Family imagery (added 2026-09-28, branch `feat/phase3-premium-about-studio`)
 
-Single source of truth: `src/lib/family-images.ts` (`FAMILY_IMAGES`),
+Single source of truth: `src/lib/family-images.ts` (`FAMILY_IMAGES` and
+`FAMILY_SECONDARY_IMAGES`),
 rendered only through `src/components/catalog/family-visual.tsx` on the
 homepage preview, `/products`, each family page hero and the About mosaic.
 All renders are 4:3, `next/image`, `object-cover`; the family hero has
@@ -45,11 +46,32 @@ All renders are 4:3, `next/image`, `object-cover`; the family hero has
 
 | Family | File | Kind | Visible label | Status |
 |---|---|---|---|---|
-| Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` | Editorial (real photograph, see table above) | "Editorial image" / "Ảnh minh họa" | Rendered. Chosen because it shows green, roasted and ground coffee on an ivory ground. Production rights pending (as above). |
-| Coconut | `public/images/catalog/studio/coconut.jpg` | Studio representation | "Studio representation" / "Hình ảnh studio minh họa" + note | Rendered — see sources below |
-| Bird's nest | `public/images/catalog/studio/birds-nest.jpg` | Studio representation | same | Rendered |
-| Fruit | `public/images/catalog/studio/fruit.jpg` | Studio representation | same | Rendered |
-| Nuts, spices & botanicals | `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Studio representation | same | Rendered |
+| Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` + `public/images/catalog/coffee/coffee-ground-whole-instant.jpg` | Editorial photographs (see table above) | "Editorial image" / "Ảnh minh họa" | Rendered as a two-image family visual. Production rights pending (as above). |
+| Coconut | `public/images/catalog/editorial/coconut-real-products.webp` + `public/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp` | Owner product composition + concept packaging | "Editorial image" then "Concept packaging" | Rendered as a two-image family visual |
+| Bird's nest | `public/images/catalog/editorial/birds-nest-real-products.webp` + `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | Owner product composition + concept packaging | same | Rendered as a two-image family visual |
+| Fruit | `public/images/catalog/editorial/fruit-real-products.webp` + `public/images/catalog/studio/fruit.jpg` | Owner product composition + studio representation | "Editorial image" then "Studio representation" | Rendered as a two-image family visual |
+| Nuts, spices & botanicals | `public/images/catalog/editorial/nuts-spices-real-products.webp` + `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Owner product composition + studio representation | same | Rendered as a two-image family visual |
+
+### Owner-supplied product photographs (added 2026-09-28)
+
+The four original product compositions in the owner's image folder are now
+used as the primary family visuals. They are paired with a different visual
+mode (source-label 3D packaging for coconut and bird's nest; a restrained
+studio composition for fruit and nuts/spices), giving every family two
+images without presenting a concept pack as photographed stock. Processing
+is limited to a centred 4:3 crop, resize to 1600×1200 and WebP encoding.
+
+| Public file | Owner source | Source SHA-256 | Derived SHA-256 | Intended use | Licence status |
+|---|---|---|---|---|---|
+| `public/images/catalog/editorial/coconut-real-products.webp` | `Coconut.jpg` | `53768f91476dcab15deb1cb1d69dfb83f543df5f5469c3a46b811e58be26414f` | `6bde4811c434613d74e19a7cdeefc9c96801fb47abbe9894c92d6a694c52ac51` | Coconut family primary image | Owner-supplied; generator/photographer and commercial-use terms to be recorded |
+| `public/images/catalog/editorial/birds-nest-real-products.webp` | `Yến.jpg` | `cbebe6f6d9ed29ca6ddaacf35c7e1f0195836b8f30b4b79e73c2ea53915cfc26` | `dfc38df498234de0ace71d0f6a84478135d62903e5b1b3d294e207fb5e2b506b` | Bird's-nest family primary image | same |
+| `public/images/catalog/editorial/fruit-real-products.webp` | `Trái cây.jpg` | `f1bfcd7b95b0dc20023cb355d77261fb9a0b0aea2b3a2a39a8873d02265bdb2e` | `08fc3ca3ddef7805d50ccb97cfa1fac77051a5f9e5e03bbab37e0f1a835553cf` | Fruit family primary image | same |
+| `public/images/catalog/editorial/nuts-spices-real-products.webp` | `Hạt quế hồi.jpg` | `8f0b4fe9870d26ef94ac156060333c1d520d7000942f821889a717c1f87a2773` | `b529b888a1e478d2c602369bd755e6c97c41b0d225fd193c071891ee7469f0c0` | Nuts, spices & botanicals family primary image | same |
+
+**Public meaning:** “owner-supplied product photograph” describes the
+composition shown, not a specific inventory lot, supplier batch, certificate,
+origin record or availability claim. Exact product, source and final
+specification are still confirmed per request.
 
 ### Studio image sources (added 2026-09-28)
 
@@ -87,12 +109,12 @@ packaging; 4:3, JPEG under 400 KB; `alt` in `FAMILY_IMAGES` must describe
 what the image actually shows. Record the source, date, SHA-256 and
 licence terms in a new row here.
 
-**How they are presented:** always with the visible "Studio
-representation" badge and, on the family page, the note "A studio
-representation of ingredient formats in this family; product, source and
-final specification are confirmed per request." Never as photographed
-inventory, a supplier batch, certification/traceability evidence or stock
-availability.
+**How they are presented:** studio compositions keep the visible "Studio
+representation" badge; the owner-supplied product compositions use the
+"Editorial image" badge. Family pages state that product, source and final
+specification are confirmed per request. Neither mode is presented as a
+specific inventory lot, supplier batch, certification/traceability evidence
+or stock availability.
 
 **Retired:** `public/images/products/*-card.jpg` / `*-detail.jpg`
 (packaging mock-ups with "100% natural", "organic & natural" and similar

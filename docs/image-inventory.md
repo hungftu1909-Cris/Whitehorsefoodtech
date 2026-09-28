@@ -56,8 +56,8 @@ existing coffee editorial photo stays as the second image.
 The source packs print WHCO001–005. They are part of the 29-SKU defined
 core portfolio (claim registry row 9), but do not yet have public detail
 pages, so the images remain mapped to **ranges** and alt text does not use
-the codes. Family hero gallery: Drive studio image (studio
-representation) + line-up render (concept packaging).
+the codes. Family hero gallery: owner-supplied product composition
+(editorial) + line-up render (concept packaging).
 
 | Range → product | Public file | Source file (`WHITEHORSE_02_COCONUT/`) | Source SHA-256 (16) | Label status | Why |
 |---|---|---|---|---|---|
@@ -93,7 +93,9 @@ JPEG packs. Neutral crops come from the owner's Drive image `Trái cây
 2.png` (1536×1024, SHA-256 `31c885e0a3480591…`), a different photograph
 from the family hero (`Trái cây.jpg`). No family line-up is shown: the
 source line-up features jackfruit and dragon fruit, which are not in the
-CEO brief ranges. Family hero stays the single studio image.
+CEO brief ranges. The family hero therefore pairs the owner-supplied product
+composition with a restrained studio composition rather than using that
+misaligned line-up.
 
 | Range → product | Public file | Source | Source SHA-256 (16) | Label status | Why |
 |---|---|---|---|---|---|
@@ -113,7 +115,9 @@ WHFR006 180–200 kg drum (same product as the BIB).
 
 ## Nuts, spices & botanicals — range level
 
-**No source zip exists for this family.** Neutral crops only, no packs:
+**No source zip exists for this family.** Neutral crops only, no packs. The
+family hero pairs the owner-supplied product composition with its restrained
+studio composition:
 
 | Range → product | Public file | Source | Source SHA-256 (16) | Label status | Why |
 |---|---|---|---|---|---|

@@ -1,4 +1,4 @@
-import { Download, FileClock, FileText } from "lucide-react";
+import { Download, FileClock, FileText, PackageCheck } from "lucide-react";
 import { hasPublicFile } from "@/lib/media";
 
 type DocumentCopy = {
@@ -13,11 +13,13 @@ type CommercialDocumentsLabels = {
   title: string;
   subtitle: string;
   brochure: DocumentCopy;
+  packaging: DocumentCopy;
   profile: DocumentCopy;
   note: string;
 };
 
 const BROCHURE_PATH = "/documents/whitehorse-foodtech-brochure.pdf";
+const PACKAGING_PATH = "/documents/whitehorse-foodtech-packaging-architecture.pdf";
 const COMPANY_PROFILE_PATH = "/documents/whitehorse-foodtech-company-profile.pdf";
 
 /** Public commercial-document library with an honest pre-release state. */
@@ -29,6 +31,13 @@ export function CommercialDocuments({ labels }: { labels: CommercialDocumentsLab
       copy: labels.brochure,
       Icon: FileText,
       available: hasPublicFile(BROCHURE_PATH),
+    },
+    {
+      key: "packaging",
+      path: PACKAGING_PATH,
+      copy: labels.packaging,
+      Icon: PackageCheck,
+      available: hasPublicFile(PACKAGING_PATH),
     },
     {
       key: "profile",
@@ -52,7 +61,7 @@ export function CommercialDocuments({ labels }: { labels: CommercialDocumentsLab
           <p className="max-w-2xl leading-relaxed text-muted-foreground lg:justify-self-end">{labels.subtitle}</p>
         </div>
 
-        <ul className="mt-8 grid gap-5 md:grid-cols-2">
+        <ul className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {documents.map(({ key, path, copy, Icon, available }) => (
             <li key={key} className="flex min-h-64 flex-col rounded-xl border border-border bg-card p-6 shadow-sm md:p-8">
               <div className="flex items-start justify-between gap-4">

@@ -43,36 +43,36 @@ export const FAMILY_IMAGES: Record<FamilySlug, FamilyImage> = {
     kind: "editorial",
   },
   coconut: {
-    src: `${STUDIO_IMAGE_DIR}/coconut.jpg`,
+    src: "/images/catalog/editorial/coconut-real-products.webp",
     alt: {
-      en: "A half coconut beside a wooden tray of coconut formats: coconut pieces, coconut oil, cream, coconut water, flakes, milk, milk powder and coconut sugar",
-      vi: "Nửa quả dừa bên khay gỗ chứa các dạng nguyên liệu dừa: cơm dừa, dầu dừa, kem dừa, nước dừa, dừa sấy, sữa dừa, bột sữa dừa và đường dừa",
+      en: "Owner-supplied product photograph of coconut, milk, cream, flakes, milk powder and coconut sugar",
+      vi: "Ảnh sản phẩm do Whitehorse cung cấp gồm dừa, sữa, kem, dừa sấy, bột sữa dừa và đường dừa",
     },
-    kind: "studio",
+    kind: "editorial",
   },
   "birds-nest": {
-    src: `${STUDIO_IMAGE_DIR}/birds-nest.jpg`,
+    src: "/images/catalog/editorial/birds-nest-real-products.webp",
     alt: {
-      en: "Cleaned edible bird's nest on ceramic trays with a bowl of prepared bird's nest, red dates, rock sugar, lotus seeds and a jar of honey",
-      vi: "Tổ yến làm sạch trên khay gốm cùng chén yến chưng, táo đỏ, đường phèn, hạt sen và hũ mật ong",
+      en: "Owner-supplied product photograph of cleaned bird's nest with prepared bird's nest, red dates, rock sugar and honey",
+      vi: "Ảnh sản phẩm do Whitehorse cung cấp gồm tổ yến làm sạch, yến chưng, táo đỏ, đường phèn và mật ong",
     },
-    kind: "studio",
+    kind: "editorial",
   },
   fruit: {
-    src: `${STUDIO_IMAGE_DIR}/fruit.jpg`,
+    src: "/images/catalog/editorial/fruit-real-products.webp",
     alt: {
-      en: "Soft-dried and freeze-dried mango, dried soursop, passion fruit concentrate and purée, and fruit powders beside whole mango, soursop and passion fruit",
-      vi: "Xoài sấy dẻo và sấy thăng hoa, mãng cầu sấy, chanh dây cô đặc và puree, cùng bột trái cây bên xoài, mãng cầu và chanh dây tươi",
+      en: "Owner-supplied product photograph showing mango, soursop and passion fruit in dried, powder, concentrate and purée formats",
+      vi: "Ảnh sản phẩm do Whitehorse cung cấp, thể hiện xoài, mãng cầu và chanh dây ở dạng sấy, bột, cô đặc và puree",
     },
-    kind: "studio",
+    kind: "editorial",
   },
   "nuts-spices-botanicals": {
-    src: `${STUDIO_IMAGE_DIR}/nuts-spices-botanicals.jpg`,
+    src: "/images/catalog/editorial/nuts-spices-real-products.webp",
     alt: {
-      en: "Cashew kernels with black peppercorns, star anise and cinnamon sticks",
-      vi: "Nhân hạt điều cùng hạt tiêu đen, hoa hồi và thanh quế",
+      en: "Owner-supplied product photograph of cashew kernels, black pepper, star anise and cinnamon",
+      vi: "Ảnh sản phẩm do Whitehorse cung cấp gồm nhân hạt điều, hồ tiêu đen, hoa hồi và quế",
     },
-    kind: "studio",
+    kind: "editorial",
   },
 };
 
@@ -81,7 +81,15 @@ export const FAMILY_IMAGES: Record<FamilySlug, FamilyImage> = {
  * line-up render, label untouched (docs/image-inventory.md). Shown with the
  * "Concept packaging" badge, never as approved packaging or stock.
  */
-export const FAMILY_LINEUP: Partial<Record<FamilySlug, FamilyImage>> = {
+export const FAMILY_SECONDARY_IMAGES: Record<FamilySlug, FamilyImage> = {
+  coffee: {
+    src: "/images/catalog/coffee/coffee-ground-whole-instant.jpg",
+    alt: {
+      en: "Ground coffee, roasted coffee beans and instant coffee granules in three cups",
+      vi: "Cà phê xay, cà phê hạt rang và cà phê hòa tan dạng hạt trong ba chiếc cốc",
+    },
+    kind: "editorial",
+  },
   coconut: {
     src: "/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp",
     alt: {
@@ -98,7 +106,27 @@ export const FAMILY_LINEUP: Partial<Record<FamilySlug, FamilyImage>> = {
     },
     kind: "concept-pack",
   },
+  fruit: {
+    src: `${STUDIO_IMAGE_DIR}/fruit.jpg`,
+    alt: {
+      en: "Studio representation of soft-dried and freeze-dried fruit, concentrate, purée and fruit powders",
+      vi: "Hình ảnh studio minh họa trái cây sấy dẻo, sấy thăng hoa, cô đặc, puree và bột trái cây",
+    },
+    kind: "studio",
+  },
+  "nuts-spices-botanicals": {
+    src: `${STUDIO_IMAGE_DIR}/nuts-spices-botanicals.jpg`,
+    alt: {
+      en: "Studio representation of cashew kernels, black peppercorns, star anise and cinnamon sticks",
+      vi: "Hình ảnh studio minh họa nhân hạt điều, hồ tiêu đen, hoa hồi và quế thanh",
+    },
+    kind: "studio",
+  },
 };
+
+// Every family deliberately pairs two different visual modes: an
+// owner-supplied photograph with either a source-label 3D packaging render
+// or a restrained, text-free studio composition.
 
 export function familyImage(family: FamilySlug): FamilyImage {
   return FAMILY_IMAGES[family];

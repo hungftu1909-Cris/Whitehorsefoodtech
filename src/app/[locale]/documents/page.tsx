@@ -37,6 +37,12 @@ export default async function DocumentsPage({
             meta: t("library.brochure.meta"),
             cta: t("library.brochure.cta"),
           },
+          packaging: {
+            title: t("library.packaging.title"),
+            description: t("library.packaging.description"),
+            meta: t("library.packaging.meta"),
+            cta: t("library.packaging.cta"),
+          },
           profile: {
             title: t("library.profile.title"),
             description: t("library.profile.description"),

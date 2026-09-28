@@ -40,7 +40,7 @@ export function ProductsPreview() {
                   family={category.slug as FamilySlug}
                   locale={locale}
                   name={item.title}
-                  labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge") }}
+                  labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge"), concept: tc("conceptPackBadge") }}
                   className="border-b border-border"
                 />
                 <div className="flex flex-1 flex-col p-5">

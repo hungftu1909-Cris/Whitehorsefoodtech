@@ -74,6 +74,13 @@ export function MobileNav({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                     {t(c.key)}
                   </Link>
                 ))}
+                <Link
+                  href="/packaging"
+                  onClick={() => setOpen(false)}
+                  className="mt-1 cursor-pointer rounded-md border-t border-border px-2 py-2 pt-3 text-sm font-medium hover:bg-muted"
+                >
+                  {t("packaging")}
+                </Link>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
