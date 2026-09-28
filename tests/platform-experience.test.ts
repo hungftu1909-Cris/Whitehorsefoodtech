@@ -38,6 +38,7 @@ test("one-time audience gateway routes buyers to English and suppliers to Vietna
   assert.match(gateway, /pathname === "\/"/);
   assert.match(gateway, /href="\/products"[\s\S]*locale="en"/);
   assert.match(gateway, /href="\/suppliers\/apply"[\s\S]*locale="vi"/);
-  assert.match(gateway, /localStorage\.setItem/);
+  assert.match(gateway, /localStorage\?\.setItem/);
+  assert.match(gateway, /catch \{/);
   assert.match(supplier, /siteConfig\.zalo/);
 });
