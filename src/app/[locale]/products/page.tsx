@@ -6,7 +6,7 @@ import { FilterGrid } from "@/components/catalog/filter-grid";
 import { RangeCard } from "@/components/catalog/cards";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
-import { CATALOG_RANGES, rangesFor, skusFor, type FamilySlug } from "@/lib/catalog";
+import { CATALOG_RANGES, DEFINED_SKU_COUNTS, rangesFor, type FamilySlug } from "@/lib/catalog";
 import { serializeJsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site";
 
@@ -72,7 +72,7 @@ export default async function ProductsPage({
               <dt className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">{category.name}</dt>
               <dd className="mt-1 font-serif text-lg font-semibold text-foreground">
                 {tcat("rangesCount", { count: rangesFor(category.family).length })}
-                {skusFor(category.family).length > 0 && <span className="ml-2 text-xs font-normal text-accent">+ {tcat("codesCount", { count: skusFor(category.family).length })}</span>}
+                <span className="ml-2 text-xs font-normal text-accent">+ {tcat("codesCount", { count: DEFINED_SKU_COUNTS[category.family] })}</span>
               </dd>
             </div>
           ))}

@@ -63,8 +63,8 @@
           "value": "5 families"
         },
         {
-          "label": "Defined",
-          "value": "9 coffee codes"
+          "label": "Portfolio",
+          "value": "29 core SKUs"
         },
         {
           "label": "Network",
@@ -96,33 +96,33 @@
     "productsPreview": {
       "eyebrow": "Ingredient intelligence",
       "title": "One catalog, five ingredient families.",
-      "subtitle": "Navigate from product family to format, specification dimensions and request-ready detail. Coffee includes nine confirmed product codes; four more families are sourced or developed to specification.",
+      "subtitle": "Navigate 29 defined core SKUs across five families, plus mix, blend and custom-formulation development to buyer specification.",
       "exploreCta": "Open Product Explorer",
       "items": [
         {
           "title": "Coffee Ingredients",
           "tagline": "Green, roasted, soluble, extract & cold brew",
-          "status": "Confirmed product codes"
+          "status": "9 defined SKUs"
         },
         {
           "title": "Coconut Ingredients",
           "tagline": "Milk & cream, powders & solids, blossom sugar",
-          "status": "Sourced on request"
+          "status": "5 defined SKUs"
         },
         {
           "title": "Bird's Nest Ingredients",
           "tagline": "Cleaned nest & instant / ready-to-prepare formats",
-          "status": "Developed on request"
+          "status": "2 defined SKUs"
         },
         {
           "title": "Fruit Ingredients",
           "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
-          "status": "Sourced on request"
+          "status": "9 defined SKUs"
         },
         {
           "title": "Nuts, Spices & Botanicals",
           "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
-          "status": "Sourced on request"
+          "status": "4 defined SKUs"
         }
       ]
     },
@@ -415,12 +415,12 @@
     "hero": {
       "eyebrow": "Product Explorer",
       "title": "Find the ingredient format your brief needs.",
-      "subtitle": "Explore eighteen sourcing and development ranges across five ingredient families. Coffee also has nine confirmed product codes. Final specification, test method, documentation and COA scope are agreed per order."
+      "subtitle": "Explore 29 defined core SKUs through eighteen sourcing and development ranges across five ingredient families. Mixes, blends and custom formulations can also be developed to request. Final specification, availability, test method, documentation and COA scope are agreed per order."
     },
     "explorer": {
       "eyebrow": "Structured catalog",
       "title": "Filter by family. Search by format or application.",
-      "subtitle": "Each range shows available formats and the specification dimensions to resolve. Select a family or search the full bilingual catalog, then open a request from the relevant range.",
+      "subtitle": "Each range organises the core SKUs, open formats and specification dimensions to resolve. Select a family or search the bilingual catalog; mixes, blends and custom formulations can be briefed through the relevant range.",
       "filterLabel": "Filter by ingredient family",
       "searchPlaceholder": "Format, product or application"
     },
@@ -431,7 +431,7 @@
         "name": "Coffee Ingredients",
         "slug": "coffee",
         "tagline": "Green, roasted, soluble, extract & cold brew",
-        "status": "Confirmed product codes",
+        "status": "9 defined SKUs",
         "description": "Coffee ingredients from Vietnam's main growing regions for food and beverage applications — green and roasted beans, soluble coffee, extracts and cold brew. Bulk, private-label and single-serve formats are discussed per project, with specification and packaging agreed to each product and market.",
         "applicationsTitle": "Common applications",
         "applications": [
@@ -447,7 +447,7 @@
         "name": "Coconut Ingredients",
         "slug": "coconut",
         "tagline": "Milk & cream, powders & solids, blossom sugar",
-        "status": "Sourced on request",
+        "status": "5 defined SKUs",
         "description": "Vietnamese coconut made into versatile ingredients for food and beverage applications — from coconut milk and cream to coconut powders and coconut blossom sugar. Suitable for industrial food production and retail, with bulk supply and private-label options agreed to each market's requirements.",
         "applicationsTitle": "Common applications",
         "applications": [
@@ -463,7 +463,7 @@
         "name": "Bird's Nest Ingredients",
         "slug": "birds-nest",
         "tagline": "Cleaned nest & instant / ready-to-prepare formats",
-        "status": "Developed on request",
+        "status": "2 defined SKUs",
         "description": "Vietnamese edible bird's nest, selected and cleaned, as cleaned nest and instant or ready-to-prepare formats for health food, wellness retail, private-label RTD and nutraceutical applications. Concentrates, extracts, powders and functional blends are developed as OEM on request.",
         "applicationsTitle": "Common applications",
         "applications": [
@@ -477,7 +477,7 @@
         "name": "Fruit Ingredients",
         "slug": "fruit",
         "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
-        "status": "Sourced on request",
+        "status": "9 defined SKUs",
         "description": "Vietnamese tropical fruits processed into shelf-stable ingredients. The core range covers soft-dried and freeze-dried mango, soft-dried soursop, and passion fruit as concentrate, frozen purée and powder, for food, beverage and nutrition applications. Other fruit formats are available on request or as OEM.",
         "applicationsTitle": "Common applications",
         "applications": [
@@ -491,7 +491,7 @@
         "name": "Nuts, Spices & Botanicals",
         "slug": "nuts-spices-botanicals",
         "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
-        "status": "Sourced on request",
+        "status": "4 defined SKUs",
         "description": "Selected Vietnamese nuts and spices graded to the buyer's specification. The core range covers cashew kernels, whole black pepper, freeze-dried cinnamon and freeze-dried star anise, with documentation agreed per order for food manufacturers and ingredient partners. Other botanicals are available on request.",
         "applicationsTitle": "Common applications",
         "applications": [
@@ -513,8 +513,8 @@
     "breadcrumbHome": "Home",
     "breadcrumbProducts": "Products",
     "breadcrumbLabel": "Breadcrumb",
-    "confirmedTitle": "Confirmed product codes",
-    "confirmedSubtitle": "Products Whitehorse has defined and can quote by code. Availability, final specification and COA scope are confirmed for each request.",
+    "confirmedTitle": "Detailed SKU pages",
+    "confirmedSubtitle": "Nine coffee SKUs currently have public code-level detail. The wider defined portfolio is organised by range; availability, final specification and COA scope are confirmed for each request.",
     "rangesTitle": "Sourcing & custom-development ranges",
     "rangesSubtitle": "Broader formats we can source or develop on request, matched to suppliers whose product, site and documentation fit your specification.",
     "rangeLabel": "Range",
@@ -566,9 +566,9 @@
     ],
     "relatedTitle": "Related product codes",
     "broaderTitle": "Need a different format?",
-    "broaderBody": "Beyond confirmed codes, we source and develop other formats in this family to your specification.",
+    "broaderBody": "Beyond the detailed SKU pages, we source and develop mixes, blends and other formats in this family to your specification.",
     "broaderCta": "See all {family} ranges",
-    "codesCount": "{count, plural, one {# confirmed code} other {# confirmed codes}}",
+    "codesCount": "{count, plural, one {# defined SKU} other {# defined SKUs}}",
     "rangesCount": "{count, plural, one {# range} other {# ranges}}",
     "stickyLabel": "Request sample or quote",
     "galleryLabel": "Product images",

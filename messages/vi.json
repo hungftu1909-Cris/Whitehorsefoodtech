@@ -63,8 +63,8 @@
           "value": "5 nhóm"
         },
         {
-          "label": "Đã xác định",
-          "value": "9 mã cà phê"
+          "label": "Danh mục",
+          "value": "29 SKU cốt lõi"
         },
         {
           "label": "Mạng lưới",
@@ -96,33 +96,33 @@
     "productsPreview": {
       "eyebrow": "Dữ liệu nguyên liệu",
       "title": "Một danh mục, năm nhóm nguyên liệu.",
-      "subtitle": "Đi từ nhóm sản phẩm đến dạng nguyên liệu, các chiều thông số và chi tiết sẵn sàng cho yêu cầu. Cà phê có chín mã đã xác định; bốn nhóm còn lại được tìm nguồn hoặc phát triển theo thông số.",
+      "subtitle": "Khám phá 29 SKU cốt lõi đã xác định trong năm nhóm, cùng năng lực phát triển mix, blend và công thức tùy chỉnh theo thông số của người mua.",
       "exploreCta": "Mở Product Explorer",
       "items": [
         {
           "title": "Nguyên liệu Cà phê",
           "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew",
-          "status": "Mã sản phẩm đã xác định"
+          "status": "9 SKU đã xác định"
         },
         {
           "title": "Nguyên liệu Dừa",
           "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa",
-          "status": "Tìm nguồn theo yêu cầu"
+          "status": "5 SKU đã xác định"
         },
         {
           "title": "Nguyên liệu Yến sào",
           "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn",
-          "status": "Phát triển theo yêu cầu"
+          "status": "2 SKU đã xác định"
         },
         {
           "title": "Nguyên liệu Trái cây",
           "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree",
-          "status": "Tìm nguồn theo yêu cầu"
+          "status": "9 SKU đã xác định"
         },
         {
           "title": "Hạt, Gia vị & Thảo mộc",
           "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa",
-          "status": "Tìm nguồn theo yêu cầu"
+          "status": "4 SKU đã xác định"
         }
       ]
     },
@@ -415,12 +415,12 @@
     "hero": {
       "eyebrow": "Product Explorer",
       "title": "Tìm đúng dạng nguyên liệu cho yêu cầu của bạn.",
-      "subtitle": "Khám phá mười tám dòng tìm nguồn và phát triển trong năm nhóm nguyên liệu. Cà phê còn có chín mã sản phẩm đã xác định. Thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng."
+      "subtitle": "Khám phá 29 SKU cốt lõi đã xác định qua mười tám dòng tìm nguồn và phát triển trong năm nhóm nguyên liệu. Các dòng mix, blend và công thức tùy chỉnh cũng có thể được phát triển theo yêu cầu. Thông số cuối cùng, khả năng cung ứng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng."
     },
     "explorer": {
       "eyebrow": "Danh mục có cấu trúc",
       "title": "Lọc theo nhóm. Tìm theo dạng hoặc ứng dụng.",
-      "subtitle": "Mỗi dòng thể hiện các định dạng và chiều thông số cần xác định. Chọn nhóm hoặc tìm trên toàn bộ danh mục song ngữ, sau đó mở yêu cầu từ đúng dòng sản phẩm.",
+      "subtitle": "Mỗi dòng tổ chức các SKU cốt lõi, định dạng mở và chiều thông số cần xác định. Chọn nhóm hoặc tìm trên danh mục song ngữ; mix, blend và công thức tùy chỉnh có thể được brief từ dòng phù hợp.",
       "filterLabel": "Lọc theo nhóm nguyên liệu",
       "searchPlaceholder": "Dạng, sản phẩm hoặc ứng dụng"
     },
@@ -431,7 +431,7 @@
         "name": "Nguyên liệu Cà phê",
         "slug": "coffee",
         "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew",
-        "status": "Mã sản phẩm đã xác định",
+        "status": "9 SKU đã xác định",
         "description": "Nguyên liệu cà phê từ các vùng trồng chính của Việt Nam cho ngành thực phẩm và đồ uống — cà phê nhân và rang, cà phê hòa tan, chiết xuất và cold brew. Hàng rời, nhãn hàng riêng và dạng single-serve được trao đổi theo từng dự án, với thông số và bao bì thống nhất theo từng sản phẩm và thị trường.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
@@ -447,7 +447,7 @@
         "name": "Nguyên liệu Dừa",
         "slug": "coconut",
         "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa",
-        "status": "Tìm nguồn theo yêu cầu",
+        "status": "5 SKU đã xác định",
         "description": "Dừa Việt Nam được chế biến thành nguyên liệu đa dụng cho thực phẩm và đồ uống — từ sữa và kem dừa đến bột dừa và đường hoa dừa. Phù hợp cho sản xuất thực phẩm công nghiệp và bán lẻ, với lựa chọn hàng số lượng lớn và nhãn hàng riêng theo yêu cầu của từng thị trường.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
@@ -463,7 +463,7 @@
         "name": "Nguyên liệu Yến sào",
         "slug": "birds-nest",
         "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn",
-        "status": "Phát triển theo yêu cầu",
+        "status": "2 SKU đã xác định",
         "description": "Yến sào Việt Nam được tuyển chọn và làm sạch, cung cấp dưới dạng yến làm sạch và yến ăn liền hoặc chế biến sẵn cho thực phẩm sức khỏe, bán lẻ chăm sóc sức khỏe, đồ uống RTD nhãn hàng riêng và thực phẩm chức năng. Dạng cô đặc, chiết xuất, bột và công thức chức năng được phát triển theo OEM khi có yêu cầu.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
@@ -477,7 +477,7 @@
         "name": "Nguyên liệu Trái cây",
         "slug": "fruit",
         "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree",
-        "status": "Tìm nguồn theo yêu cầu",
+        "status": "9 SKU đã xác định",
         "description": "Trái cây nhiệt đới Việt Nam được chế biến thành nguyên liệu ổn định. Dòng chính gồm xoài sấy dẻo và sấy thăng hoa, mãng cầu sấy dẻo, và chanh dây dạng cô đặc, puree đông lạnh và bột, cho thực phẩm, đồ uống và dinh dưỡng. Các dạng trái cây khác có thể cung cấp theo yêu cầu hoặc OEM.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
@@ -491,7 +491,7 @@
         "name": "Hạt, Gia vị & Thảo mộc",
         "slug": "nuts-spices-botanicals",
         "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa",
-        "status": "Tìm nguồn theo yêu cầu",
+        "status": "4 SKU đã xác định",
         "description": "Hạt và gia vị Việt Nam tuyển chọn, phân loại theo thông số của khách hàng. Dòng chính gồm nhân hạt điều, hồ tiêu đen nguyên hạt, quế sấy thăng hoa và hoa hồi sấy thăng hoa, với hồ sơ được thống nhất theo từng đơn hàng cho nhà sản xuất thực phẩm và đối tác nguyên liệu. Các loại thảo mộc khác cung cấp theo yêu cầu.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
@@ -513,8 +513,8 @@
     "breadcrumbHome": "Trang chủ",
     "breadcrumbProducts": "Sản phẩm",
     "breadcrumbLabel": "Đường dẫn",
-    "confirmedTitle": "Mã sản phẩm đã xác định",
-    "confirmedSubtitle": "Sản phẩm Whitehorse đã xác định và có thể báo giá theo mã. Khả năng cung ứng, thông số cuối cùng và phạm vi COA được xác nhận theo từng yêu cầu.",
+    "confirmedTitle": "Trang chi tiết SKU",
+    "confirmedSubtitle": "Chín SKU cà phê hiện có chi tiết công khai theo mã. Danh mục đã xác định rộng hơn được tổ chức theo dòng; khả năng cung ứng, thông số cuối cùng và phạm vi COA được xác nhận theo từng yêu cầu.",
     "rangesTitle": "Dòng tìm nguồn & phát triển theo yêu cầu",
     "rangesSubtitle": "Các dạng sản phẩm rộng hơn chúng tôi có thể tìm nguồn hoặc phát triển theo yêu cầu, với nhà cung cấp có sản phẩm, cơ sở và hồ sơ phù hợp thông số của bạn.",
     "rangeLabel": "Dòng",
@@ -566,9 +566,9 @@
     ],
     "relatedTitle": "Mã sản phẩm liên quan",
     "broaderTitle": "Cần một dạng sản phẩm khác?",
-    "broaderBody": "Ngoài các mã đã xác định, chúng tôi tìm nguồn và phát triển các dạng khác trong nhóm này theo thông số của bạn.",
+    "broaderBody": "Ngoài các trang SKU chi tiết, chúng tôi tìm nguồn và phát triển mix, blend cùng các định dạng khác trong nhóm này theo thông số của bạn.",
     "broaderCta": "Xem tất cả dòng {family}",
-    "codesCount": "{count, plural, other {# mã đã xác định}}",
+    "codesCount": "{count, plural, other {# SKU đã xác định}}",
     "rangesCount": "{count, plural, other {# dòng sản phẩm}}",
     "stickyLabel": "Yêu cầu mẫu hoặc báo giá",
     "galleryLabel": "Hình ảnh sản phẩm",

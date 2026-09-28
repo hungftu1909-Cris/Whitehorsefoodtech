@@ -22,6 +22,21 @@ export type Localized = { en: string; vi: string };
 
 export type FamilySlug = "coffee" | "coconut" | "birds-nest" | "fruit" | "nuts-spices-botanicals";
 
+/**
+ * CEO-confirmed core portfolio as of 2026-09-28. These are defined SKUs,
+ * not a statement of stock, supplier availability or export readiness.
+ * Only the nine coffee SKUs currently have public detail pages.
+ */
+export const DEFINED_SKU_COUNTS = {
+  coffee: 9,
+  coconut: 5,
+  "birds-nest": 2,
+  fruit: 9,
+  "nuts-spices-botanicals": 4,
+} as const satisfies Record<FamilySlug, number>;
+
+export const DEFINED_SKU_TOTAL = Object.values(DEFINED_SKU_COUNTS).reduce((total, count) => total + count, 0);
+
 export type CatalogImage = {
   src: string;
   alt: Localized;

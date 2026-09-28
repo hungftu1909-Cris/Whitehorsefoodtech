@@ -109,7 +109,7 @@ rendered from the source GLB). Neutral crops:
 `public/images/catalog/{fruit,nuts-spices-botanicals}/studio/` — from the
 owner's Drive images and the CEO brief DOCX. Per-file source, hash, label
 status and range mapping: `docs/image-inventory.md`. Shown only at range
-level (no confirmed codes) with "Concept packaging" / "Bao bì ý tưởng" or
+level (defined SKUs without public code-level pages) with "Concept packaging" / "Bao bì ý tưởng" or
 "Studio representation" / "Hình ảnh studio minh họa".
 
 ## Coffee packaging concept renders (added 2026-09-28)
