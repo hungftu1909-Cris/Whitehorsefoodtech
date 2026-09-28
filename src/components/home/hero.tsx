@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, Check, CircleDashed } from "lucide-react";
-import { ImageBadge } from "@/components/catalog/cards";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { hasPublicFile } from "@/lib/media";
@@ -21,7 +20,6 @@ const HERO_IMAGE = "/images/catalog/coffee/coffee-ground-whole-instant.jpg";
  */
 export function Hero() {
   const t = useTranslations("home.hero");
-  const tc = useTranslations("catalog");
   const locale = useLocale();
   const signals = t.raw("signals") as { label: string; value: string }[];
 
@@ -83,7 +81,6 @@ export function Hero() {
                 sizes="(min-width: 1280px) 38rem, (min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
-              <ImageBadge>{tc("editorialBadge")}</ImageBadge>
             </div>
             <div className="relative -mt-10 ml-6 rounded-lg border border-border bg-card p-5 shadow-xl sm:ml-auto sm:w-[80%] lg:-mr-8">
               <div className="flex items-center justify-between gap-4">

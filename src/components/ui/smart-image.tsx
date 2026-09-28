@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
  * it appears automatically — no code changes needed. See
  * public/images/README.md.
  *
- * `badge` puts a small visible label on the image (e.g. "Editorial image")
+ * `badge` puts a small visible label on the image when disclosure is needed
  * — use it whenever the artwork is not a literal product photo, since alt
  * text alone is not a disclosure a sighted buyer ever sees.
  */

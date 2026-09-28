@@ -26,10 +26,10 @@ coffee) with **no text, logos, seals or claims**.
 | `public/images/catalog/coffee/coffee-green-roasted-ground-bowls.jpg` | `image3.jpg` (2048×1365) | `e13e514397e214ca4d2e589279e95b71e55bde11bbd0f2b9107c934acbc1519b` | `e66463d5ebe916c4b5ed8a047279e4c3280fb24652348c1a2c449d997734c5a0` | Resized to 1600×1066, JPEG q80 progressive | Green coffee range and SKU galleries | User-supplied; **production rights confirmation pending** |
 | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` | `image4.jpg` (2048×1365) | `7361b182a8df0113e4a2d491f22f1cec7b4a32f129f19a561005bb298bb1b55b` | `c304ff1e397bf22eb50ae79ff8ba80a790506d6ac8dfe07d0cd48673f79dd0c4` | Resized to 1600×1066, JPEG q80 progressive | Green/roasted range and SKU galleries | User-supplied; **production rights confirmation pending** |
 
-**How they are presented:** as *editorial references*, not packshots of a
-specific Whitehorse SKU. Every render carries a visible "Editorial image" /
-"Ảnh minh họa" badge, and alt text describes what is shown (e.g. "green
-and roasted coffee beans with ground coffee"), never a product claim.
+**How they are presented:** as product-family imagery, not packshots of a
+specific Whitehorse SKU. Visual-type badges were removed on 2026-09-28 for
+a cleaner catalog; descriptive alt text states what is shown, never a
+product claim.
 
 **Before Production:** obtain written confirmation of the licence (e.g.
 the stock-library licence or photographer's permission) covering
@@ -46,11 +46,11 @@ All renders are 4:3, `next/image`, `object-cover`; the family hero has
 
 | Family | File | Kind | Visible label | Status |
 |---|---|---|---|---|
-| Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` + `public/images/catalog/coffee/coffee-ground-whole-instant.jpg` | Editorial photographs (see table above) | "Editorial image" / "Ảnh minh họa" | Rendered as a two-image family visual. Production rights pending (as above). |
-| Coconut | `public/images/catalog/editorial/coconut-real-products.webp` + `public/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp` | Owner product composition + concept packaging | "Editorial image" then "Concept packaging" | Rendered as a two-image family visual |
-| Bird's nest | `public/images/catalog/editorial/birds-nest-real-products.webp` + `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | Owner product composition + concept packaging | same | Rendered as a two-image family visual |
-| Fruit | `public/images/catalog/editorial/fruit-real-products.webp` + `public/images/catalog/studio/fruit.jpg` | Owner product composition + studio representation | "Editorial image" then "Studio representation" | Rendered as a two-image family visual |
-| Nuts, spices & botanicals | `public/images/catalog/editorial/nuts-spices-real-products.webp` + `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Owner product composition + studio representation | same | Rendered as a two-image family visual |
+| Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` + `public/images/catalog/coffee/coffee-ground-whole-instant.jpg` | Editorial photographs (see table above) | None | Rendered as a two-image family visual. Production rights pending (as above). |
+| Coconut | `public/images/catalog/editorial/coconut-real-products.webp` + `public/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp` | Owner product composition + concept packaging | Concept packaging only | Rendered as a two-image family visual |
+| Bird's nest | `public/images/catalog/editorial/birds-nest-real-products.webp` + `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | Owner product composition + concept packaging | Concept packaging only | Rendered as a two-image family visual |
+| Fruit | `public/images/catalog/editorial/fruit-real-products.webp` + `public/images/catalog/studio/fruit.jpg` | Owner product composition + studio representation | None | Rendered as a two-image family visual |
+| Nuts, spices & botanicals | `public/images/catalog/editorial/nuts-spices-real-products.webp` + `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Owner product composition + studio representation | None | Rendered as a two-image family visual |
 
 ### Owner-supplied product photographs (added 2026-09-28)
 
@@ -107,10 +107,9 @@ packaging; 4:3, JPEG under 400 KB; `alt` in `FAMILY_IMAGES` must describe
 what the image actually shows. Record the source, date, SHA-256 and
 licence terms in a new row here.
 
-**How they are presented:** studio compositions keep the visible "Studio
-representation" badge; the owner-supplied product compositions use the
-"Editorial image" badge. Family pages state that product, source and final
-specification are confirmed per request. Neither mode is presented as a
+**How they are presented:** editorial and studio compositions have no
+visual-type badge. Concept packaging remains labelled and carries its
+per-order disclosure. Neither mode is presented as a
 specific inventory lot, supplier batch, certification/traceability evidence
 or stock availability.
 
@@ -129,8 +128,9 @@ rendered from the source GLB). Neutral crops:
 `public/images/catalog/{fruit,nuts-spices-botanicals}/studio/` — from the
 owner's Drive images and the CEO brief DOCX. Per-file source, hash, label
 status and range mapping: `docs/image-inventory.md`. Shown only at range
-level (defined SKUs without public code-level pages) with "Concept packaging" / "Bao bì ý tưởng" or
-"Studio representation" / "Hình ảnh studio minh họa".
+level (defined SKUs without public code-level pages). Concept packaging
+keeps the visible "Concept packaging" / "Bao bì ý tưởng" label; ordinary
+product imagery has no visual-type badge.
 
 ## Coffee packaging concept renders (added 2026-09-28)
 

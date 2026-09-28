@@ -96,7 +96,7 @@ export default async function SkuPage({
             images={sku.images.map((image) => ({
               src: image.src,
               alt: pick(image.alt, locale),
-              badge: image.kind === "concept-pack" ? tc("conceptPackBadge") : tc("editorialBadge"),
+              badge: image.kind === "concept-pack" ? tc("conceptPackBadge") : undefined,
             }))}
             label={tc("galleryLabel")}
             showLabel={tc("showImage", { index: "{index}" })}
@@ -244,7 +244,6 @@ export default async function SkuPage({
                     labels={{
                       view: tc("viewDetails"),
                       sample: tc("requestSample"),
-                      badge: tc("editorialBadge"),
                       conceptBadge: tc("conceptPackBadge"),
                       rangeLabel: tc("rangeLabel"),
                       rangeName: pick(findRange(item.range)!.name, locale),
