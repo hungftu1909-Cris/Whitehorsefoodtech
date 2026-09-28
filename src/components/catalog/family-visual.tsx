@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { ImageBadge } from "@/components/catalog/cards";
+import { DualImageFrame } from "@/components/catalog/dual-image-frame";
 import { FAMILY_SECONDARY_IMAGES, familyImage } from "@/lib/family-images";
 import { pick, rangesFor, type FamilySlug } from "@/lib/catalog";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
@@ -56,38 +55,18 @@ export function FamilyVisual({
 
   if (hasPublicFile(image.src)) {
     return (
-      <div className={cn(frame, "group/media")}>
-        <Image
-          src={image.src}
-          alt={pick(image.alt, locale)}
-          fill
-          sizes={sizes}
-          priority={priority}
-          className="object-cover transition-all duration-700 ease-out group-hover/media:scale-[1.03] group-hover/media:opacity-0 group-focus-within/media:opacity-0"
-        />
-        {hasPublicFile(secondary.src) && (
-          <Image
-            src={secondary.src}
-            alt={pick(secondary.alt, locale)}
-            fill
-            sizes={sizes}
-            className="object-cover opacity-0 transition-all duration-700 ease-out group-hover/media:scale-[1.03] group-hover/media:opacity-100 group-focus-within/media:opacity-100"
-          />
-        )}
-        {showBadge && (
-          <>
-            <span className="transition-opacity duration-300 group-hover/media:opacity-0 group-focus-within/media:opacity-0">
-              <ImageBadge>{badge(image.kind)}</ImageBadge>
-            </span>
-            <span className="opacity-0 transition-opacity duration-300 group-hover/media:opacity-100 group-focus-within/media:opacity-100">
-              <ImageBadge>{badge(secondary.kind)}</ImageBadge>
-            </span>
-          </>
-        )}
-        <span className="absolute top-3 right-3 rounded-full border border-background/50 bg-background/85 px-2 py-1 font-mono text-[0.65rem] tracking-wider text-foreground">
-          01 / 02
-        </span>
-      </div>
+      <DualImageFrame
+        images={[
+          { src: image.src, alt: pick(image.alt, locale), badge: badge(image.kind) },
+          ...(hasPublicFile(secondary.src)
+            ? [{ src: secondary.src, alt: pick(secondary.alt, locale), badge: badge(secondary.kind) }]
+            : []),
+        ]}
+        sizes={sizes}
+        priority={priority}
+        showBadge={showBadge}
+        className={frame}
+      />
     );
   }
 

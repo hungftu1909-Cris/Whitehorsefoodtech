@@ -96,12 +96,10 @@ corners for generator watermarks).
 recorded** — confirm the tool and its commercial-use terms (or the
 photographer's permission) before Production.
 
-**Not used from the same folder:** factory, warehouse, freeze-dryer,
-truck/air-cargo and farm/harvest photos. They would read as Whitehorse
-facilities, logistics or suppliers (unsupported) or as stock farmer
-imagery, which the Phase 3 design direction excludes. The folder's coffee
-photos duplicate or resemble the existing catalog coffee images, which
-are left unchanged.
+The folder's remaining coffee and product photos duplicate or resemble
+existing catalog imagery and are not used. Selected process, logistics and
+farm-stage images are documented below and are captioned as representative
+network stages, never as Whitehorse-owned facilities or a specific shipment.
 
 **Rules for a studio file** (check visually before committing):
 text-free; no logos, seals, badges, certification marks, claims or retail
@@ -158,6 +156,27 @@ with the visible badge "Concept packaging" / "Bao bì ý tưởng" and the SKU
 page note that label text is illustrative and the final pack, label and
 specification are confirmed with the supplier or co-packer per order.
 Never as a photograph of stock or a final label.
+
+## Platform and supply-network imagery (added 2026-09-28)
+
+Source: owner-supplied folder `Ảnh WEB-20260928T141117Z-1-001.zip`.
+Selected images show real stages that can occur across the supply network:
+processing, partner facilities, harvest/collection and logistics. They are
+shown only with an explicit representative-image caption. They must not be
+read as a claim that Whitehorse owns the pictured facility, contracted the
+pictured people, or handled the pictured shipment.
+
+| Public file | Source file | Derived size | Derived SHA-256 | Processing / use |
+|---|---|---|---|---|
+| `public/images/platform/quality-processing.webp` | `1.jpg` | 1200×675 | `1a06b5f57437bde9d03b8a7b1623fba33eda8953431ca53f14f7468b177c771b` | Centre crop 16:9, WebP q82; Quality hero |
+| `public/images/platform/process-container-loading.webp` | `1.png` | 1200×675 | `32c40939c3934d36b3c88a0e428b1cc0c8e5611281561a6b6365af14ab4e5d63` | Centre crop 16:9, WebP q82; How We Work hero |
+| `public/images/platform/process-partner-facility.webp` | `4.jpg` | 1200×675 | `0c4252e96ed2f332b7330f527432ac81e50d6a1943d9d3e347590177ad343b95` | Centre crop 16:9, WebP q82; partner-facility section |
+| `public/images/platform/network-coffee-harvest.webp` | `THU GOM CAFE.jpg` | 1200×675 | `90d84593a2f414d48ce5c2164dba84a270a377542dbb7b5494a84fada51d7740` | Centre crop 16:9, WebP q82; Network hero |
+| `public/images/platform/network-air-freight.webp` | `ảnh máy bay.jpg` | 1200×675 | `90081b405ef9d7fd77a7b62f1900c6a90b1b225278553e25ddc5469e1feace9f` | Centre crop 16:9, WebP q82; Network inset |
+
+**Licence status:** owner-supplied; photographer/source and commercial-use
+rights still need to be recorded before Production replacement or reuse
+outside this website.
 
 **Licence status:** owner-supplied renders of Whitehorse's own concept
 packaging; tool/designer and rights to be recorded before Production.

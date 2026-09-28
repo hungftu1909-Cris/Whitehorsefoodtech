@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Award, ClipboardCheck, Leaf, ShieldCheck, FileText, Route, Users, BadgeCheck } from "lucide-react";
-import { PageHero } from "@/components/sections/page-hero";
+import { PlatformPageHero } from "@/components/sections/platform-page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { CtaSection } from "@/components/sections/cta-section";
 import { pageMetadata } from "@/lib/seo";
@@ -35,18 +35,34 @@ export default async function CertificationsPage({
   const items = t.raw("items") as { name: string; description: string }[];
   const documents = t.raw("documents") as string[];
   const pillars = t.raw("sustainability.pillars") as { title: string; description: string }[];
+  const isVi = locale === "vi";
 
   return (
     <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
+      <PlatformPageHero
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+        images={[{
+          src: "/images/platform/quality-processing.webp",
+          alt: isVi ? "Công đoạn chế biến tại một cơ sở trong mạng lưới cung ứng" : "Processing stage at a facility in the supply network",
+        }]}
+        imageNote={t("hero.imageNote")}
+        facts={[
+          { value: isVi ? "Sản phẩm" : "Product", label: isVi ? "Đúng phạm vi" : "Scope matched" },
+          { value: isVi ? "Cơ sở" : "Site", label: isVi ? "Đúng địa điểm" : "Facility checked" },
+          { value: isVi ? "Thị trường" : "Market", label: isVi ? "Đúng yêu cầu" : "Requirement fit" },
+        ]}
+        action={{ label: t("hero.action"), href: "/contact" }}
+      />
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <SectionHeading
           eyebrow={t("standards.eyebrow")}
           title={t("standards.title")}
           subtitle={t("standards.subtitle")}
         />
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => {
             const Icon = CERT_ICONS[i % CERT_ICONS.length];
             return (
@@ -67,13 +83,13 @@ export default async function CertificationsPage({
       </section>
 
       <section className="border-t border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
           <SectionHeading
             eyebrow={t("sustainability.eyebrow")}
             title={t("sustainability.title")}
             subtitle={t("sustainability.subtitle")}
           />
-          <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar, i) => {
               const Icon = PILLAR_ICONS[i % PILLAR_ICONS.length];
               return (

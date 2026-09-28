@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { FloatingCtaBar } from "@/components/layout/floating-cta-bar";
+import { AudienceGateway } from "@/components/layout/audience-gateway";
 import { JsonLd } from "@/components/seo/json-ld";
 import { routing, type Locale } from "@/i18n/routing";
 import { getLocaleSwitchMap } from "@/lib/blog";
@@ -103,6 +104,7 @@ export default async function LocaleLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider>
             <SiteHeader blogSlugMap={blogSlugMap} />
+            <AudienceGateway />
             <main className="flex-1">{children}</main>
             <SiteFooter />
             <FloatingCtaBar />

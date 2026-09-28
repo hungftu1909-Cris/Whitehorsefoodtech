@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship } from "lucide-react";
-import { PageHero } from "@/components/sections/page-hero";
+import { PlatformPageHero } from "@/components/sections/platform-page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { pageMetadata } from "@/lib/seo";
 
@@ -34,33 +35,43 @@ export default async function ProcessPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "process" });
   const steps = t.raw("steps") as { title: string; description: string }[];
+  const isVi = locale === "vi";
 
   return (
     <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
+      <PlatformPageHero
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+        images={[{
+          src: "/images/platform/process-container-loading.webp",
+          alt: isVi ? "Đóng hàng xuất khẩu tại một công đoạn logistics trong mạng lưới" : "Export loading at a logistics stage in the network",
+        }]}
+        imageNote={t("hero.imageNote")}
+        facts={[
+          { value: "01–06", label: isVi ? "Một luồng công việc" : "One workflow" },
+          { value: isVi ? "Bằng văn bản" : "Written", label: isVi ? "Thông số làm chuẩn" : "Specification first" },
+          { value: isVi ? "Theo đơn" : "Per order", label: isVi ? "Hồ sơ được xác nhận" : "Evidence confirmed" },
+        ]}
+        action={{ label: t("hero.action"), href: "/rfq" }}
+      />
 
-      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <ol className="relative">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+        <ol className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, i) => {
             const Icon = STEP_ICONS[i % STEP_ICONS.length];
             return (
-              <li key={step.title} className="relative pb-16 pl-24 last:pb-0">
-                {i < steps.length - 1 && (
-                  <span
-                    className="absolute top-16 left-8 h-[calc(100%-4rem)] w-px bg-border"
-                    aria-hidden="true"
-                  />
-                )}
-                <span className="absolute top-0 left-0 flex size-16 items-center justify-center rounded-full bg-primary font-serif text-2xl font-semibold text-primary-foreground shadow-sm">
-                  {i + 1}
-                </span>
-                <div className="flex items-center gap-2 pt-4">
-                  <Icon className="size-4 shrink-0 text-accent" aria-hidden="true" />
-                  <h2 className="font-serif text-xl font-semibold text-foreground sm:text-2xl">
+              <li key={step.title} className="bg-background p-6 md:min-h-56">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="font-mono text-xs tracking-[0.18em] text-accent">{String(i + 1).padStart(2, "0")}</span>
+                  <Icon className="size-5 shrink-0 text-accent" aria-hidden="true" />
+                </div>
+                <div className="mt-8">
+                  <h2 className="font-serif text-xl font-semibold text-foreground">
                     {step.title}
                   </h2>
                 </div>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {step.description}
                 </p>
               </li>
@@ -70,16 +81,24 @@ export default async function ProcessPage({
       </section>
 
       <section className="border-t border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-          {/* No facility photo: the old factory.jpg shows a Whitehorse-branded
-              plant, which would contradict the partner-facility model. */}
-          <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-16 sm:px-6 md:py-20 lg:grid-cols-2 lg:items-center lg:px-8">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-border bg-muted">
+            <Image
+              src="/images/platform/process-partner-facility.webp"
+              alt={isVi ? "Dây chuyền chế biến tại một cơ sở đối tác đại diện" : "Processing line at a representative partner facility"}
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="max-w-xl">
             <h2 className="font-serif text-2xl font-semibold text-foreground">
               {t("factory.title")}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {t("factory.subtitle")}
             </p>
+            <p className="mt-4 text-xs leading-relaxed text-muted-foreground italic">{t("hero.imageNote")}</p>
           </div>
         </div>
       </section>

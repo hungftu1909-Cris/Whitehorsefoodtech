@@ -618,52 +618,54 @@
   "certifications": {
     "hero": {
       "eyebrow": "Chất lượng & thẩm định nhà cung cấp",
-      "title": "Chất lượng & thẩm định nhà cung cấp",
-      "subtitle": "Chứng nhận thuộc về một nhà cung cấp, cơ sở và phạm vi sản phẩm cụ thể. Chúng tôi đánh giá nhà cung cấp theo yêu cầu của sản phẩm và thị trường đích của bạn, và chia sẻ các chứng nhận liên quan theo từng đơn hàng."
+      "title": "Bằng chứng trước cam kết.",
+      "subtitle": "Mỗi yêu cầu được đối chiếu với sản phẩm, cơ sở cung ứng và thị trường đích — sau đó hồ sơ liên quan được xác nhận theo đơn hàng.",
+      "imageNote": "Hình ảnh đại diện cho một công đoạn chế biến trong mạng lưới cung ứng. Nhà cung cấp, cơ sở và phạm vi chứng nhận cụ thể được xác nhận theo từng yêu cầu.",
+      "action": "Trao đổi yêu cầu chất lượng"
     },
     "standards": {
       "eyebrow": "Những gì chúng tôi đánh giá",
-      "title": "Các tiêu chuẩn chúng tôi kiểm tra, theo sản phẩm và thị trường",
-      "subtitle": "Tiêu chuẩn nào được áp dụng phụ thuộc vào sản phẩm và thị trường đích. Đây là những chương trình chúng tôi thường kiểm tra khi đánh giá nhà cung cấp; chương trình nào áp dụng cho từng nhà cung cấp được xác nhận theo sản phẩm và cơ sở."
+      "title": "Tiêu chuẩn được kiểm tra theo yêu cầu thực tế",
+      "subtitle": "Đây là các điểm kiểm tra phổ biến, không phải chứng nhận bao trùm của Whitehorse. Phạm vi áp dụng được xác nhận theo sản phẩm và cơ sở."
     },
     "items": [
       {
         "name": "ISO 22000 / FSSC 22000",
-        "description": "Hệ thống quản lý an toàn thực phẩm được chứng nhận — ISO 22000, FSSC 22000 hoặc chương trình tương đương được công nhận — được kiểm tra cho đúng cơ sở và phạm vi sản phẩm liên quan."
+        "description": "Chứng nhận quản lý an toàn thực phẩm được kiểm tra theo đúng cơ sở và phạm vi sản phẩm."
       },
       {
         "name": "HACCP",
-        "description": "Kế hoạch Phân tích mối nguy và Kiểm soát điểm tới hạn (HACCP) được xem xét cho sản phẩm và quy trình đang được báo giá."
+        "description": "Kế hoạch HACCP được xem xét cho sản phẩm và quy trình đang được báo giá."
       },
       {
         "name": "Chứng nhận hữu cơ",
-        "description": "Khi khách hàng cần sản phẩm hữu cơ, chúng tôi tìm chứng nhận USDA Organic, EU Organic hoặc tương đương còn hiệu lực, áp dụng cho đúng sản phẩm và nhà cung cấp đó."
+        "description": "Phạm vi hữu cơ còn hiệu lực được kiểm tra cho đúng sản phẩm và nhà cung cấp khi có yêu cầu."
       },
       {
         "name": "Đăng ký FDA",
-        "description": "Với đơn hàng đi Hoa Kỳ, chúng tôi kiểm tra đăng ký cơ sở thực phẩm với FDA và thông tin nhà cung cấp mà nhà nhập khẩu của bạn cần cho FSVP."
+        "description": "Đăng ký cơ sở và thông tin nhà cung cấp được kiểm tra cho đơn hàng đi Hoa Kỳ."
       }
     ],
     "sustainability": {
       "eyebrow": "Nguyên tắc",
-      "title": "Cách chúng tôi tiếp cận truy xuất nguồn gốc và thu mua có trách nhiệm",
-      "subtitle": "Những nguyên tắc định hướng cách chúng tôi phát triển và làm việc với mạng lưới nhà cung cấp.",
+      "title": "Bốn nguyên tắc vận hành",
+      "subtitle": "Lớp vận hành cô đọng cho truy xuất, phát triển nhà cung cấp và kiểm soát đơn hàng.",
       "pillars": [
         {
           "title": "Truy xuất thống nhất theo đơn hàng",
-          "description": "Thông tin nguồn gốc, nhà cung cấp và lô hàng mà khách hàng cần được quy định trong chứng từ đơn hàng, để các vấn đề chất lượng có thể được truy ngược về nguồn."
+          "description": "Nguồn gốc, nhà cung cấp và lô hàng được thống nhất trong chứng từ đơn hàng."
         },
         {
           "title": "Quan hệ dài hạn với nhà cung cấp",
-          "description": "Chúng tôi hướng tới quan hệ bền vững với nhà cung cấp và hợp tác xã, dựa trên mức giá minh bạch thay vì thu mua thời vụ, đơn lẻ."
+          "description": "Chúng tôi xây dựng quan hệ bền vững với nhà cung cấp và hợp tác xã."
         },
         {
           "title": "Trách nhiệm với môi trường",
-          "description": "Chúng tôi ưu tiên các nhà cung cấp đầu tư vào chế biến tiết kiệm tài nguyên, giảm thiểu rác thải bao bì và canh tác có trách nhiệm tại vùng nguyên liệu."
+          "description": "Ưu tiên chế biến tiết kiệm tài nguyên và thực hành canh tác có trách nhiệm."
         },
         {
           "title": "Chất lượng theo thông số",
-          "description": "Mẫu đã duyệt và thông số bằng văn bản là chuẩn tham chiếu cho từng đơn hàng; phạm vi kiểm nghiệm và COA được thống nhất trong hợp đồng. Xem thêm trang Cách làm việc."
+          "description": "Mẫu đã duyệt và thông số bằng văn bản là chuẩn tham chiếu của đơn hàng."
         }
       ]
     },
@@ -684,38 +686,40 @@
   "process": {
     "hero": {
       "eyebrow": "Cách chúng tôi làm việc",
-      "title": "Cách chúng tôi làm việc: từ yêu cầu đến container",
-      "subtitle": "Whitehorse điều phối nhà cung cấp, phòng kiểm nghiệm và đối tác logistics xoay quanh thông số của bạn. Dưới đây là từng bước cụ thể."
+      "title": "Từ yêu cầu bằng văn bản đến giao hàng được điều phối.",
+      "subtitle": "Một quy trình xuyên suốt kết nối thông số, lựa chọn nhà cung cấp, duyệt mẫu, chất lượng, chứng từ và logistics.",
+      "imageNote": "Hình ảnh đại diện cho một công đoạn logistics trong mạng lưới cung ứng. Phương thức đóng hàng và điều kiện vận chuyển cuối cùng được xác nhận theo đơn hàng.",
+      "action": "Bắt đầu từ yêu cầu của bạn"
     },
     "steps": [
       {
         "title": "Yêu cầu & thông số",
-        "description": "Chúng tôi bắt đầu từ ứng dụng, thông số, sản lượng, thị trường đích và yêu cầu chứng nhận của bạn — và ghi lại bằng văn bản."
+        "description": "Ứng dụng, thông số, sản lượng, thị trường và yêu cầu chứng nhận được ghi nhận."
       },
       {
         "title": "Chọn & thẩm định nhà cung cấp",
-        "description": "Chúng tôi chọn ra các nhà cung cấp trong mạng lưới có sản phẩm, cơ sở và hồ sơ phù hợp với yêu cầu. Việc thẩm định gắn với từng sản phẩm, cơ sở và thị trường, và chúng tôi nói rõ khi một nhà cung cấp được đề xuất vẫn đang được đánh giá."
+        "description": "Năng lực sản phẩm, cơ sở và hồ sơ phù hợp được lựa chọn."
       },
       {
         "title": "Mẫu & phê duyệt",
-        "description": "Mẫu chuẩn được chuẩn bị để bạn đánh giá. Mẫu bạn phê duyệt trở thành chuẩn tham chiếu cho đơn hàng."
+        "description": "Mẫu được duyệt trở thành chuẩn tham chiếu thương mại của đơn hàng."
       },
       {
         "title": "Kiểm soát chất lượng",
-        "description": "Phạm vi kiểm nghiệm, phòng thí nghiệm và yêu cầu COA được thống nhất theo từng đơn hàng. Có thể sắp xếp giám định bên thứ ba trước khi giao theo yêu cầu."
+        "description": "Kiểm nghiệm, COA và giám định bên thứ ba được thống nhất theo đơn hàng."
       },
       {
         "title": "Đóng gói & chứng từ",
-        "description": "Sản phẩm được đóng gói theo thông số đã thống nhất. Chứng từ xuất khẩu — chứng nhận xuất xứ, kiểm dịch thực vật, hun trùng và chứng từ thương mại — được chuẩn bị cùng đối tác chứng từ và kiểm tra trước khi đóng container."
+        "description": "Quy cách đóng gói và bộ chứng từ xuất khẩu được kiểm tra trước khi đóng hàng."
       },
       {
         "title": "Vận chuyển & giao hàng",
-        "description": "Việc đóng container và vận chuyển được phối hợp cùng đối tác logistics theo điều kiện Incoterm đã thống nhất, cập nhật cho khách hàng từ cảng đi đến cảng đến."
+        "description": "Logistics được điều phối theo Incoterm và các mốc vận chuyển đã thống nhất."
       }
     ],
     "factory": {
       "title": "Cơ sở của đối tác",
-      "subtitle": "Việc sản xuất diễn ra tại cơ sở của nhà cung cấp và đối tác, được chúng tôi đánh giá theo đúng sản phẩm và thị trường bạn cần. Thông tin cơ sở và chứng nhận liên quan được chia sẻ với khách hàng theo từng đơn hàng. Các dự án OEM, ODM và OBM được thực hiện cùng cơ sở đối tác phù hợp, tùy xác nhận theo sản phẩm, cơ sở và thị trường."
+      "subtitle": "Sản xuất diễn ra tại cơ sở của nhà cung cấp và đối tác đã được đánh giá. Thông tin cơ sở, phạm vi chứng nhận và năng lực OEM/ODM/OBM được xác nhận theo sản phẩm và thị trường cụ thể."
     },
     "cta": {
       "title": "Có câu hỏi cụ thể về quy trình hoặc chứng từ?",
@@ -725,23 +729,25 @@
   "clients": {
     "hero": {
       "eyebrow": "Mạng lưới",
-      "title": "Mạng lưới ở cả hai phía của giao thương",
-      "subtitle": "Whitehorse làm việc với các tổ chức cung ứng Việt Nam — hợp tác xã, cơ sở chế biến và nhóm vùng trồng — ở những giai đoạn tiếp cận và đánh giá khác nhau, cùng khách hàng tại hơn mười thị trường."
+      "title": "Nguồn cung Việt Nam. Đối thoại với người mua toàn cầu.",
+      "subtitle": "Chúng tôi kết nối năng lực cung ứng Việt Nam đã được sàng lọc với yêu cầu người mua tại châu Á, châu Âu, Trung Đông, Bắc Mỹ và châu Đại Dương.",
+      "imageNote": "Hình ảnh đại diện cho các công đoạn vùng nguyên liệu và logistics trong mạng lưới; không xác định một cơ sở hoặc lô hàng cụ thể.",
+      "action": "Tham gia mạng lưới cung ứng"
     },
-    "regionsTitle": "Thị trường có quan hệ khách hàng và trao đổi thương mại",
+    "regionsTitle": "Các thị trường trong bản đồ trao đổi hiện tại",
     "regions": "Nga, Nhật Bản, Qatar, Israel, Hàn Quốc, Trung Quốc, Hoa Kỳ, Canada, Úc, Đức, Ý, Pháp, Bỉ và Hà Lan.",
     "network": {
       "current": {
         "tag": "Hiện tại",
         "stat": "10+",
         "statLabel": "Thị trường có quan hệ khách hàng và trao đổi thương mại",
-        "description": "Quan hệ và trao đổi thương mại với khách hàng tại châu Á, châu Âu, Trung Đông, Bắc Mỹ và châu Đại Dương."
+        "description": "Quan hệ khách hàng và trao đổi thương mại đang hoạt động tại năm khu vực."
       },
       "suppliers": {
         "tag": "Hiện tại",
         "stat": "50+",
         "statLabel": "Nhà cung cấp đã được sàng lọc",
-        "description": "Mạng lưới hơn 50 nhà cung cấp được sàng lọc theo năng lực sản phẩm, cơ sở và yêu cầu thị trường. Việc thẩm định gắn với từng sản phẩm, cơ sở và thị trường — không phải nhà cung cấp nào cũng có mọi chứng nhận hay được chấp thuận cho mọi thị trường."
+        "description": "Được sàng lọc theo năng lực sản phẩm, cơ sở và độ phù hợp thị trường; thẩm định cuối cùng vẫn theo từng yêu cầu."
       }
     },
     "cta": {

@@ -13,7 +13,7 @@ import { RangeCard, SkuCard } from "@/components/catalog/cards";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { FAMILY_SECONDARY_IMAGES, familyImage } from "@/lib/family-images";
-import { SkuGallery } from "@/components/catalog/sku-gallery";
+import { DualImageFrame } from "@/components/catalog/dual-image-frame";
 import {
   DEFINED_SKU_COUNTS,
   definedCodesFor,
@@ -167,14 +167,15 @@ export default async function ProductFamilyPage({
           <RequestActions family={family} labels={actionLabels} className="mt-7" />
         </div>
         <div>
-          <SkuGallery
+          <DualImageFrame
             images={[hero, secondaryVisual].map((image) => ({
               src: image.src,
               alt: pick(image.alt, locale),
               badge: badgeFor(image.kind),
             }))}
-            label={tc("galleryLabel")}
-            showLabel={tc("showImage", { index: "{index}" })}
+            sizes="(min-width: 1024px) 40rem, 100vw"
+            priority
+            className="rounded-lg border border-border"
           />
           {/* The first view is an owner-supplied/editorial ingredient image;
               the second is a concept pack or studio representation. Neither

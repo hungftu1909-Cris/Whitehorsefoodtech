@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { pick, type CatalogImage, type CatalogRange, type CatalogSku } from "@/lib/catalog";
 import { rfqHref } from "@/lib/rfq-links";
-import { SkuGallery } from "@/components/catalog/sku-gallery";
+import { DualImageFrame } from "@/components/catalog/dual-image-frame";
 
 /** Small visible label for editorial (non-packshot) imagery. */
 export function ImageBadge({ children }: { children: React.ReactNode }) {
@@ -33,36 +32,16 @@ export function SkuCard({
   const href = `/products/${sku.family}/${sku.slug}`;
   return (
     <article className="group flex w-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md">
-      <Link href={href} className="relative block aspect-[4/3] cursor-pointer overflow-hidden border-b border-border" tabIndex={-1} aria-hidden="true">
-        <Image
-          src={image.src}
-          alt=""
-          fill
+      <Link href={href} className="block cursor-pointer border-b border-border" tabIndex={-1} aria-hidden="true">
+        <DualImageFrame
+          images={[
+            { src: image.src, alt: "", badge: image.kind === "concept-pack" ? labels.conceptBadge : labels.badge },
+            ...(secondary
+              ? [{ src: secondary.src, alt: "", badge: secondary.kind === "concept-pack" ? labels.conceptBadge : labels.badge }]
+              : []),
+          ]}
           sizes="(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.03] group-hover:opacity-0 group-focus-within:opacity-0"
         />
-        {secondary && (
-          <Image
-            src={secondary.src}
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw"
-            className="object-cover opacity-0 transition-all duration-700 ease-out group-hover:scale-[1.03] group-hover:opacity-100 group-focus-within:opacity-100"
-          />
-        )}
-        <span className="transition-opacity duration-300 group-hover:opacity-0 group-focus-within:opacity-0">
-          <ImageBadge>{image.kind === "concept-pack" ? labels.conceptBadge : labels.badge}</ImageBadge>
-        </span>
-        {secondary && (
-          <span className="opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
-            <ImageBadge>{secondary.kind === "concept-pack" ? labels.conceptBadge : labels.badge}</ImageBadge>
-          </span>
-        )}
-        {secondary && (
-          <span className="absolute top-3 right-3 rounded-full border border-background/50 bg-background/85 px-2 py-1 font-mono text-[0.65rem] tracking-wider text-foreground">
-            01 / 02
-          </span>
-        )}
       </Link>
       <div className="flex flex-1 flex-col p-5">
         <p className="font-mono text-xs font-semibold tracking-wider text-accent">{sku.code}</p>
@@ -137,20 +116,16 @@ export function RangeCard({
 
   return (
     <article className="flex w-full flex-col overflow-hidden rounded-lg border border-border bg-card">
-      {images.length > 1 ? (
-        <SkuGallery
-          images={images.map((image) => ({ src: image.src, alt: pick(image.alt, locale), badge: badge(image.kind) }))}
-          label={`${pick(range.name, locale)} — ${labels.galleryLabel}`}
-          showLabel={labels.showImage}
-          priority={false}
+      {images.length > 0 ? (
+        <DualImageFrame
+          images={images.slice(0, 2).map((image) => ({
+            src: image.src,
+            alt: pick(image.alt, locale),
+            badge: badge(image.kind),
+          }))}
           sizes={sizes}
-          embedded
+          className="border-b border-border"
         />
-      ) : images.length === 1 ? (
-        <div className="relative aspect-[4/3] overflow-hidden border-b border-border bg-muted">
-          <Image src={images[0].src} alt={pick(images[0].alt, locale)} fill sizes={sizes} className="object-cover" />
-          <ImageBadge>{badge(images[0].kind)}</ImageBadge>
-        </div>
       ) : null}
       <div className="flex flex-1 flex-col p-5">
         {labels.familyLabel && (

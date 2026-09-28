@@ -49,13 +49,17 @@ test("family visuals carry a visible image-type label everywhere they render", (
     assert.match(src, /concept:/, `${f} passes the concept-pack label`);
   }
   const visual = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");
-  assert.match(visual, /<ImageBadge>\{badge\(image\.kind\)\}<\/ImageBadge>/);
-  assert.match(visual, /<ImageBadge>\{badge\(secondary\.kind\)\}<\/ImageBadge>/);
-  assert.match(visual, /object-cover/);
+  assert.match(visual, /<DualImageFrame/);
+  assert.match(visual, /badge: badge\(image\.kind\)/);
+  assert.match(visual, /badge: badge\(secondary\.kind\)/);
+  const frame = fs.readFileSync("src/components/catalog/dual-image-frame.tsx", "utf8");
+  assert.match(frame, /\{primary\.badge\}/);
+  assert.match(frame, /\{secondary\.badge\}/);
+  assert.match(frame, /object-cover/);
   const detail = fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8");
   assert.match(detail, /studioNote/, "detail page explains the studio representation");
-  assert.match(detail, /<SkuGallery/, "detail page uses the two-image gallery");
-  assert.match(detail, /badgeFor\(image\.kind\)/, "detail gallery labels each image type");
+  assert.match(detail, /<DualImageFrame/, "detail page uses the shared two-image frame");
+  assert.match(detail, /badgeFor\(image\.kind\)/, "detail frame labels each image type");
 });
 
 test("homepage is six server-rendered platform sections, without page-wide reveal hydration", () => {
