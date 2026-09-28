@@ -18,10 +18,18 @@ test("quality, process and network open with image-led concise platform heroes",
 
 test("network gives buyers and Vietnamese suppliers equal entry paths", () => {
   const network = fs.readFileSync("src/app/[locale]/clients/page.tsx", "utf8");
+  const contact = fs.readFileSync("src/app/[locale]/contact/page.tsx", "utf8");
+  const contactForm = fs.readFileSync("src/components/forms/contact-form.tsx", "utf8");
 
-  assert.match(network, /buyerAction[\s\S]*href: "\/rfq"/);
+  assert.match(network, /buyerAction[\s\S]*href: "#join-network"/);
   assert.match(network, /supplierAction[\s\S]*href: "\/suppliers\/apply"/);
+  assert.match(network, /href: "\/rfq"/);
+  assert.match(network, /distributionCta/);
+  assert.match(network, /topic: "distribution"/);
   assert.match(network, /<SplitCta/);
+  assert.match(contact, /topic === "distribution"/);
+  assert.match(contact, /distributionPrefill/);
+  assert.match(contactForm, /defaultMessage/);
 });
 
 test("quality page presents the phased digital supply-chain architecture", () => {
@@ -29,6 +37,9 @@ test("quality page presents the phased digital supply-chain architecture", () =>
   const home = fs.readFileSync("src/components/home/platform-map.tsx", "utf8");
 
   assert.match(quality, /technology\.layers/);
+  assert.match(quality, /technology\.backboneNodes/);
+  assert.match(quality, /technology\.statusLabels/);
+  assert.match(quality, /snap-x/);
   assert.match(quality, /BrainCircuit/);
   assert.match(home, /technology\.nodes/);
   assert.match(home, /technology\.ai/);

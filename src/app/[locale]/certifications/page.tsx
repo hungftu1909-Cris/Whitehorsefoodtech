@@ -30,6 +30,18 @@ const CERT_ICONS = [Award, ClipboardCheck, Leaf, ShieldCheck];
 // supplier relationships, environmental responsibility, quality vs. spec.
 const PILLAR_ICONS = [Route, Users, Leaf, BadgeCheck];
 const TECHNOLOGY_ICONS = [RadioTower, ShieldCheck, Warehouse, Workflow, Truck, Network];
+type TechnologyStatus = "current" | "building" | "roadmap";
+type TechnologyLayer = {
+  number: string;
+  title: string;
+  description: string;
+  status: TechnologyStatus;
+};
+const TECHNOLOGY_STATUS_CLASSES: Record<TechnologyStatus, string> = {
+  current: "border-success/50 bg-success/20 text-primary-foreground",
+  building: "border-accent/50 bg-accent/15 text-primary-foreground",
+  roadmap: "border-primary-foreground/25 bg-primary-foreground/5 text-primary-foreground/65",
+};
 
 export async function generateMetadata({
   params,
@@ -50,7 +62,8 @@ export default async function CertificationsPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "certifications" });
   const items = t.raw("items") as { name: string; description: string }[];
-  const technologyLayers = t.raw("technology.layers") as { number: string; title: string; description: string }[];
+  const technologyLayers = t.raw("technology.layers") as TechnologyLayer[];
+  const technologyBackbone = t.raw("technology.backboneNodes") as string[];
   const documents = t.raw("documents") as string[];
   const pillars = t.raw("sustainability.pillars") as { title: string; description: string }[];
   const isVi = locale === "vi";
@@ -126,11 +139,41 @@ export default async function CertificationsPage({
             </div>
           </div>
 
-          <ol className="mt-10 grid gap-px overflow-hidden rounded-xl border border-primary-foreground/15 bg-primary-foreground/15 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-5 sm:p-6 md:p-8">
+            <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+              {t("technology.backboneEyebrow")}
+            </p>
+            <div className="mt-3 grid gap-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+              <h3 className="font-serif text-2xl leading-tight font-semibold md:text-3xl">
+                {t("technology.backboneTitle")}
+              </h3>
+              <p className="text-sm leading-relaxed text-primary-foreground/70">
+                {t("technology.backboneBody")}
+              </p>
+            </div>
+            <ol
+              aria-label={t("technology.backboneTitle")}
+              className="-mx-5 mt-7 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 sm:-mx-6 sm:px-6 md:mx-0 md:grid md:grid-cols-4 md:gap-2 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-8"
+            >
+              {technologyBackbone.map((node, i) => (
+                <li
+                  key={node}
+                  className="flex min-h-28 w-[68vw] shrink-0 snap-start flex-col justify-between rounded-md border border-primary-foreground/15 bg-primary/70 p-4 md:w-auto"
+                >
+                  <span className="font-mono text-xs tracking-[0.16em] text-accent">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="mt-6 text-sm leading-snug text-primary-foreground/85">{node}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <ol className="-mx-4 mt-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-px sm:overflow-hidden sm:rounded-xl sm:border sm:border-primary-foreground/15 sm:bg-primary-foreground/15 sm:px-0 sm:pb-0 lg:grid-cols-3">
             {technologyLayers.map((layer, i) => {
               const Icon = TECHNOLOGY_ICONS[i % TECHNOLOGY_ICONS.length];
               return (
-                <li key={layer.number} className="flex min-h-56 flex-col bg-primary/95 p-6 md:p-7">
+                <li key={layer.number} className="flex min-h-56 w-[82vw] shrink-0 snap-start flex-col rounded-xl border border-primary-foreground/15 bg-primary/95 p-6 sm:w-auto sm:rounded-none sm:border-0 md:p-7">
                   <div className="flex items-center justify-between gap-4">
                     <span className="font-mono text-xs tracking-[0.18em] text-accent">{layer.number}</span>
                     <span className="flex size-10 items-center justify-center rounded-md border border-primary-foreground/15 bg-primary-foreground/5 text-accent">
@@ -139,6 +182,9 @@ export default async function CertificationsPage({
                   </div>
                   <h3 className="mt-auto pt-10 font-serif text-xl font-semibold">{layer.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">{layer.description}</p>
+                  <span className={`mt-5 inline-flex w-fit rounded-full border px-2.5 py-1 text-[0.65rem] font-semibold tracking-[0.1em] uppercase ${TECHNOLOGY_STATUS_CLASSES[layer.status]}`}>
+                    {t(`technology.statusLabels.${layer.status}`)}
+                  </span>
                 </li>
               );
             })}

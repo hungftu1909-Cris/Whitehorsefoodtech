@@ -46,7 +46,7 @@ export default async function ClientsPage({
           { value: "50+", label: t("network.suppliers.statLabel") },
           { value: "10+", label: t("network.current.statLabel") },
         ]}
-        action={{ label: t("hero.buyerAction"), href: "/rfq" }}
+        action={{ label: t("hero.buyerAction"), href: "#join-network" }}
         secondaryAction={{ label: t("hero.supplierAction"), href: "/suppliers/apply" }}
       />
 
@@ -66,6 +66,7 @@ export default async function ClientsPage({
       </section>
 
       <SplitCta
+        id="join-network"
         title={t("cta.title")}
         subtitle={t("cta.subtitle")}
         buyer={{
@@ -73,6 +74,8 @@ export default async function ClientsPage({
           body: t("cta.buyer.body"),
           cta: t("cta.buyer.cta"),
           href: "/rfq",
+          secondaryCta: t("cta.buyer.distributionCta"),
+          secondaryHref: { pathname: "/contact", query: { topic: "distribution" } },
         }}
         supplier={{
           label: t("cta.supplier.label"),

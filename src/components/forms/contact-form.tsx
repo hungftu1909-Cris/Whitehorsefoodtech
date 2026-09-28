@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
-export function ContactForm() {
+export function ContactForm({ defaultMessage = "" }: { defaultMessage?: string }) {
   const t = useTranslations("contact.form");
   const tc = useTranslations("common");
   const locale = useLocale();
@@ -25,13 +25,16 @@ export function ContactForm() {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<ContactInput>({ resolver: zodResolver(contactSchema) });
+  } = useForm<ContactInput>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: { message: defaultMessage },
+  });
 
   async function onSubmit(data: ContactInput) {
     setState({ kind: "idle" });
     const result = await submitLead("/api/contact", { ...data, ...collectLeadContext(locale) });
     setState(result);
-    if (result.kind === "success") reset();
+    if (result.kind === "success") reset({ message: defaultMessage });
   }
 
   return (
