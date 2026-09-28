@@ -13,6 +13,7 @@
     "productsBirdsNest": "Nguyên liệu Yến sào",
     "productsFruit": "Nguyên liệu Trái cây",
     "productsNutsSpicesBotanicals": "Hạt, Gia vị & Thảo mộc",
+    "packaging": "Kiến trúc bao bì",
     "documents": "Tài liệu",
     "certifications": "Chất lượng & Thẩm định",
     "process": "Cách làm việc",
@@ -565,6 +566,7 @@
     "docsBody": "Mẫu, kiểm nghiệm và phiếu kết quả phân tích (COA) được sắp xếp theo từng yêu cầu. Chỉ tiêu kiểm nghiệm, phòng thí nghiệm và phạm vi COA được thống nhất với bạn trước khi sản xuất, cùng các chứng nhận của nhà cung cấp mà thị trường của bạn yêu cầu.",
     "packagingTitle": "Các phương án bao bì để trao đổi",
     "packagingDefault": "Bao bì được xác định cùng bạn và xác nhận theo từng đơn hàng.",
+    "packagingExplore": "Khám phá kiến trúc bao bì",
     "orderingTitle": "Quy trình xử lý yêu cầu",
     "orderingSteps": [
       "Cho chúng tôi biết mã hoặc dòng sản phẩm, sản lượng, điểm đến và yêu cầu về thông số hoặc chứng nhận.",
@@ -586,7 +588,7 @@
     "hero": {
       "eyebrow": "Tài liệu thương mại",
       "title": "Tài liệu sản phẩm và doanh nghiệp dành cho người mua.",
-      "subtitle": "Tải brochure Whitehorse hiện tại. Company Profile chi tiết sẽ xuất hiện tại đây ngay khi phiên bản được phê duyệt hoàn tất."
+      "subtitle": "Tải brochure và Packaging Architecture hiện tại của Whitehorse. Company Profile chi tiết sẽ xuất hiện tại đây ngay khi phiên bản được phê duyệt hoàn tất."
     },
     "library": {
       "eyebrow": "Trung tâm tải tài liệu",
@@ -597,6 +599,12 @@
         "description": "Tổng quan ngắn gọn về Whitehorse, năm nhóm nguyên liệu và danh mục sản phẩm hiện tại để giới thiệu với người mua.",
         "meta": "PDF · 4 trang",
         "cta": "Tải brochure"
+      },
+      "packaging": {
+        "title": "Packaging Architecture Whitehorse",
+        "description": "Hệ quy cách bao bì tham chiếu cho năm nhóm nguyên liệu, bốn kênh thương mại và 27 cấu trúc chính; có thể thiết kế theo brief của khách hàng.",
+        "meta": "PDF · 18 trang",
+        "cta": "Tải hướng dẫn bao bì"
       },
       "profile": {
         "title": "Company Profile Whitehorse",
@@ -904,6 +912,52 @@
       "brandModel": "Mô hình thương hiệu cần trao đổi (không bắt buộc)",
       "brandModelPlaceholder": "VD: thành phẩm mang thương hiệu của bạn, dòng sản phẩm đồng thương hiệu",
       "packing": "Quy cách đóng gói (không bắt buộc)"
+    }
+  },
+  "packaging": {
+    "hero": {
+      "eyebrow": "Kiến trúc bao bì",
+      "title": "Một hệ thống. Đúng cấu trúc cho từng sản phẩm.",
+      "subtitle": "Khám phá hệ quy cách tham chiếu của Whitehorse cho mẫu thẩm định, HORECA, bán lẻ/nhãn riêng và xuất khẩu công nghiệp. Mọi giá trị hiển thị đều là tham chiếu; bao bì cuối cùng được thiết kế theo sản phẩm, kênh bán và thị trường đích của bạn."
+    },
+    "stats": {
+      "structures": "cấu trúc bao bì chính",
+      "forms": "dạng sản phẩm được ánh xạ",
+      "positions": "vị trí đóng gói",
+      "channels": "kênh thương mại"
+    },
+    "channels": {
+      "eyebrow": "Bốn kênh thương mại",
+      "title": "Bắt đầu từ cách người mua sử dụng bao bì.",
+      "subtitle": "Đặc tính sản phẩm và mục đích sử dụng quyết định cấu trúc. Cấu trúc tiếp tục quyết định lớp cản, kiểu đóng, kích thước và hệ đồ họa."
+    },
+    "structures": {
+      "eyebrow": "Thư viện cấu trúc tham chiếu",
+      "title": "27 cấu trúc chính, xây dựng theo đặc tính sản phẩm.",
+      "subtitle": "Kích thước và định lượng dưới đây là tham chiếu thiết kế từ Packaging Architecture hiện tại. Chúng giúp định hình brief, không phải dieline sản xuất hay cam kết của nhà cung cấp.",
+      "usedBy": "Nhóm nguyên liệu sử dụng cấu trúc này"
+    },
+    "reference": {
+      "label": "Thông số bao bì chung.",
+      "body": "Kích thước, dung sai định lượng, màng hoặc giấy, chỉ số cản, đường hàn, kiểu đóng, vị trí van, vùng in và thể tích thùng cuối cùng được xác nhận với nhà cung cấp hoặc đơn vị đóng gói sau khi biết yêu cầu máy móc, vận chuyển và nhãn tại thị trường đích."
+    },
+    "principles": {
+      "eyebrow": "Nguyên tắc kỹ thuật bắt buộc",
+      "title": "Thiết kế cao cấp bắt đầu từ bảo vệ sản phẩm.",
+      "items": [
+        { "title": "Logic van", "body": "Cà phê rang trong bao kín cần van thoát khí một chiều. Cà phê nhân tuyệt đối không dùng van. Cà phê hòa tan và mọi sản phẩm bột phải kín bụi, không van." },
+        { "title": "Khả năng nhìn thấy sản phẩm", "body": "Có thể dùng cửa sổ tiết chế cho một số sản phẩm khô nguyên dạng sau khi thẩm định màng và hạn dùng. Bột và sản phẩm sấy thăng hoa mặc định dùng bao bì kín sáng." },
+        { "title": "Khẩu phần đơn", "body": "Cà phê túi lọc, cà phê hòa tan nguyên chất và premix dùng cấu trúc và định lượng khác nhau; không gộp thành một dạng gói chung." },
+        { "title": "Quy trình dạng lỏng", "body": "Bảo quản lạnh, chiết nóng và vô trùng là các hệ khác nhau. Bao bì phải theo quy trình chiết rót được phê duyệt trước khi đưa ra tuyên bố ổn định ở nhiệt độ thường." },
+        { "title": "Ngôn ngữ công nghiệp", "body": "Bao bì công nghiệp cao cấp dựa trên typography kỷ luật, nhận diện lô và truy xuất nguồn gốc—không dựa vào trang trí xa xỉ." }
+      ]
+    },
+    "custom": {
+      "eyebrow": "Thiết kế theo brief khách hàng",
+      "title": "Bạn cần định lượng, kênh bán, hệ thiết kế hoặc cấu trúc bao bì khác?",
+      "body": "Hãy cho chúng tôi biết sản phẩm, dạng, ứng dụng, thị trường đích, sản lượng, hạn dùng mục tiêu và mô hình thương hiệu. Whitehorse sẽ phát triển hoặc tìm phương án phù hợp với nhà cung cấp/đơn vị đóng gói được lựa chọn và xác nhận khả thi trước khi triển khai artwork.",
+      "download": "Tải toàn bộ kiến trúc bao bì",
+      "cta": "Gửi brief bao bì của bạn"
     }
   },
   "legal": {

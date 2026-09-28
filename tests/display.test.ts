@@ -35,25 +35,27 @@ test("claim-bearing artwork (about.jpg, factory.jpg) is not rendered anywhere", 
   assert.deepEqual(users, []);
 });
 
-test("family visuals carry a VISIBLE editorial/studio label everywhere they render", () => {
+test("family visuals carry a visible image-type label everywhere they render", () => {
   // Alt text alone is not a disclosure a sighted buyer sees.
   const renders = sourceFiles("src").filter((f) => /<FamilyVisual\b/.test(fs.readFileSync(f, "utf8")));
   assert.deepEqual(renders.sort(), [
     path.join("src", "app", "[locale]", "about", "page.tsx"),
-    path.join("src", "app", "[locale]", "products", "[slug]", "page.tsx"),
     path.join("src", "components", "home", "products-preview.tsx"),
   ].sort());
   for (const f of renders) {
     const src = fs.readFileSync(f, "utf8");
     assert.match(src, /editorial: tc(at)?\("editorialBadge"\)|editorialBadge/, `${f} passes the editorial label`);
     assert.match(src, /studio: tp?\("studioBadge"\)/, `${f} passes the studio label`);
+    assert.match(src, /concept:/, `${f} passes the concept-pack label`);
   }
   const visual = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");
-  assert.match(visual, /<ImageBadge>\{image\.kind === "studio" \? labels\.studio : labels\.editorial\}<\/ImageBadge>/);
+  assert.match(visual, /<ImageBadge>\{badge\(image\.kind\)\}<\/ImageBadge>/);
+  assert.match(visual, /<ImageBadge>\{badge\(secondary\.kind\)\}<\/ImageBadge>/);
   assert.match(visual, /object-cover/);
   const detail = fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8");
   assert.match(detail, /studioNote/, "detail page explains the studio representation");
-  assert.match(detail, /<FamilyVisual[\s\S]*?priority/, "detail hero image has priority");
+  assert.match(detail, /<SkuGallery/, "detail page uses the two-image gallery");
+  assert.match(detail, /badgeFor\(image\.kind\)/, "detail gallery labels each image type");
 });
 
 test("homepage is six server-rendered platform sections, without page-wide reveal hydration", () => {

@@ -38,6 +38,7 @@ export function SiteFooter() {
               {[
                 { href: "/about", key: "about" as const },
                 { href: "/documents", key: "documents" as const },
+                { href: "/packaging", key: "packaging" as const },
                 ...MAIN_NAV.filter((i) => !i.hasChildren && i.key !== "about"),
               ].map(
                 (item) => (

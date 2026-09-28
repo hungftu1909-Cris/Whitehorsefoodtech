@@ -5,7 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import en from "../messages/en.json" with { type: "json" };
 import vi from "../messages/vi.json" with { type: "json" };
-import { FAMILY_IMAGES, STUDIO_IMAGE_DIR, ABOUT_MOSAIC_FAMILIES } from "../src/lib/family-images.ts";
+import { FAMILY_IMAGES, FAMILY_SECONDARY_IMAGES, ABOUT_MOSAIC_FAMILIES } from "../src/lib/family-images.ts";
 import { CATALOG_SKUS } from "../src/lib/catalog.ts";
 import { PRODUCT_CATEGORIES } from "../src/lib/nav.ts";
 
@@ -92,16 +92,19 @@ test("every family maps to exactly one image with EN/VI alt text", () => {
   assert.equal(ABOUT_MOSAIC_FAMILIES[1], "birds-nest", "bird's nest sits in the top row");
 });
 
-test("coffee uses a real editorial coffee image; other families use studio representations", () => {
+test("every family leads with an editorial image and pairs a distinct second visual", () => {
   const coffee = FAMILY_IMAGES.coffee;
   assert.equal(coffee.kind, "editorial");
   assert.ok(coffee.src.startsWith("/images/catalog/coffee/"));
   assert.ok(CATALOG_SKUS.some((s) => s.images.some((i) => i.src === coffee.src)), "same file as a catalog coffee image");
   for (const [family, image] of Object.entries(FAMILY_IMAGES)) {
-    if (family === "coffee") continue;
-    assert.equal(image.kind, "studio", `${family} is a studio representation`);
-    assert.equal(image.src, `${STUDIO_IMAGE_DIR}/${family}.jpg`);
+    assert.equal(image.kind, "editorial", `${family} leads with an editorial image`);
+    assert.notEqual(image.src, FAMILY_SECONDARY_IMAGES[family as keyof typeof FAMILY_SECONDARY_IMAGES].src);
   }
+  assert.equal(FAMILY_SECONDARY_IMAGES.coconut.kind, "concept-pack");
+  assert.equal(FAMILY_SECONDARY_IMAGES["birds-nest"].kind, "concept-pack");
+  assert.equal(FAMILY_SECONDARY_IMAGES.fruit.kind, "studio");
+  assert.equal(FAMILY_SECONDARY_IMAGES["nuts-spices-botanicals"].kind, "studio");
 });
 
 test("family images on disk are optimised, 4:3-ready and have provenance", () => {

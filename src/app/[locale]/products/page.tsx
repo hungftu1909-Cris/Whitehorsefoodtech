@@ -140,6 +140,12 @@ export default async function ProductsPage({
             meta: td("brochure.meta"),
             cta: td("brochure.cta"),
           },
+          packaging: {
+            title: td("packaging.title"),
+            description: td("packaging.description"),
+            meta: td("packaging.meta"),
+            cta: td("packaging.cta"),
+          },
           profile: {
             title: td("profile.title"),
             description: td("profile.description"),

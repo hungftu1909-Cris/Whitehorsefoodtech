@@ -14,6 +14,7 @@ const INDEXABLE_STATIC_PATHS = [
   "/about",
   "/products",
   "/documents",
+  "/packaging",
   "/certifications",
   "/process",
   "/clients",

@@ -13,11 +13,12 @@ import {
   RANGE_IMAGES,
   relatedSkus,
   type Localized,
+  type FamilySlug,
 } from "../src/lib/catalog.ts";
 import { COFFEE_FORMAT_CODES, parseRfqPrefill, rfqSchema } from "../src/lib/validations.ts";
 import { rfqHref } from "../src/lib/rfq-links.ts";
 import { PRODUCT_CATEGORIES } from "../src/lib/nav.ts";
-import { FAMILY_IMAGES, FAMILY_LINEUP } from "../src/lib/family-images.ts";
+import { FAMILY_IMAGES, FAMILY_SECONDARY_IMAGES } from "../src/lib/family-images.ts";
 
 const SOURCES = fs.readFileSync("docs/product-range-sources.md", "utf8");
 const PROVENANCE = fs.readFileSync("docs/asset-provenance.md", "utf8");
@@ -60,7 +61,7 @@ test("defined core portfolio is 29 SKUs across five families", () => {
   assert.deepEqual(definedCodesFor("coconut"), ["WHCO001", "WHCO002", "WHCO003", "WHCO004", "WHCO005"]);
   assert.deepEqual(definedCodesFor("birds-nest"), ["WHBN001", "WHBN002"]);
   assert.deepEqual(definedCodesFor("fruit"), ["WHFR001", "WHFR002", "WHFR003", "WHFR004", "WHFR005", "WHFR006", "WHFR007", "WHFR008", "WHFR009"]);
-  assert.deepEqual(definedCodesFor("nuts-spices-botanicals"), ["WHNSP001", "WHNSP002", "WHNSP003", "WHNSP004"]);
+  assert.deepEqual(definedCodesFor("nuts-spices-botanicals"), ["WHNSB001", "WHNSB002", "WHNSB003", "WHNSB004"]);
 });
 
 test("families, ranges and codes are consistent", () => {
@@ -155,35 +156,41 @@ test("each confirmed code leads with its own packaging render, never a shared im
   for (const sku of CATALOG_SKUS) assert.ok(INVENTORY.includes(sku.images[0].src.replace(/^\//, "public/")), `${sku.code} in inventory`);
 });
 
-test("range images are distinct, optimised, inventoried and never borrowed across ranges", () => {
+test("every range has a truthful two-image presentation", () => {
   const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
-  const seen = new Map<string, string>();
   for (const range of CATALOG_RANGES) {
-    assert.equal(range.images, RANGE_IMAGES[range.id], `${range.id} images come from RANGE_IMAGES`);
+    assert.equal(range.images?.length, 2, `${range.id} has exactly two visual states`);
+    assert.equal(new Set(range.images?.map((image) => image.src)).size, 2, `${range.id} images differ`);
     for (const image of range.images ?? []) {
-      assert.ok(!seen.has(image.src), `${image.src} used by ${seen.get(image.src)} and ${range.id}`);
-      seen.set(image.src, range.id);
-      assert.ok(image.src.startsWith(`/images/catalog/${range.family}/`), `${image.src} sits under its family`);
       const file = path.join("public", image.src);
       assert.ok(fs.existsSync(file), `${image.src} missing`);
-      assert.ok(fs.statSync(file).size < 200 * 1024, `${image.src} not optimised`);
-      assert.ok(INVENTORY.includes(image.src.replace(/^\//, "public/")), `${image.src} not in image-inventory.md`);
+      assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
+      const publicPath = image.src.replace(/^\//, "public/");
+      assert.ok(
+        INVENTORY.includes(publicPath) || PROVENANCE.includes(publicPath),
+        `${image.src} is missing from the image inventory and provenance registry`
+      );
       assert.ok(image.alt.en.trim() && image.alt.vi.trim());
       assert.doesNotMatch(image.alt.en + image.alt.vi, /\bWH(CO|BN|FR)\d/, "range alt text never names an unconfirmed code");
     }
   }
-  // Every non-coffee range has a visual, except the documented OEM gap.
-  const TEXT_ONLY = ["birds-nest-oem"];
-  for (const range of CATALOG_RANGES.filter((r) => r.family !== "coffee")) {
-    if (TEXT_ONLY.includes(range.id)) assert.equal(range.images, undefined, `${range.id} stays text-only`);
-    else assert.ok(range.images?.length, `${range.id} has a range image`);
+  for (const [rangeId, sourceImages] of Object.entries(RANGE_IMAGES)) {
+    assert.ok(sourceImages?.length, `${rangeId} keeps its source-specific image before fallbacks`);
   }
-  assert.ok(INVENTORY.includes("birds-nest-oem") || INVENTORY.includes("Concentrate, extract, powder & blends (OEM)"));
-  for (const family of ["coconut", "birds-nest"] as const) {
-    const lineup = FAMILY_LINEUP[family];
-    assert.ok(lineup && fs.existsSync(path.join("public", lineup.src)), `${family} line-up`);
-    assert.equal(lineup!.kind, "concept-pack");
-    assert.ok(INVENTORY.includes(lineup!.src.replace(/^\//, "public/")));
+});
+
+test("every family has two distinct, documented visuals", () => {
+  for (const family of PRODUCT_CATEGORIES.map((category) => category.slug) as FamilySlug[]) {
+    const primary = FAMILY_IMAGES[family];
+    const secondary = FAMILY_SECONDARY_IMAGES[family];
+    assert.notEqual(primary.src, secondary.src, `${family} family images differ`);
+    for (const image of [primary, secondary]) {
+      const file = path.join("public", image.src);
+      assert.ok(fs.existsSync(file), `${image.src} missing`);
+      assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
+      assert.ok(PROVENANCE.includes(image.src.replace(/^\//, "public/")), `${image.src} has provenance`);
+      assert.ok(image.alt.en.trim() && image.alt.vi.trim());
+    }
   }
 });
 

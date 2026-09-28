@@ -65,6 +65,15 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                       />
                     </li>
                   ))}
+                  <li className="mt-1 border-t border-border pt-1">
+                    <NavigationMenuLink
+                      render={
+                        <Link href="/packaging" className="cursor-pointer font-medium">
+                          {t("packaging")}
+                        </Link>
+                      }
+                    />
+                  </li>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>

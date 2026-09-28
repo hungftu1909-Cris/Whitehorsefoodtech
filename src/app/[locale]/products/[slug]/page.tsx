@@ -9,11 +9,10 @@ import { Badge } from "@/components/ui/badge";
 import { Breadcrumbs } from "@/components/catalog/breadcrumbs";
 import { RequestActions } from "@/components/catalog/request-actions";
 import { FilterGrid } from "@/components/catalog/filter-grid";
-import { FamilyVisual } from "@/components/catalog/family-visual";
 import { RangeCard, SkuCard } from "@/components/catalog/cards";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
-import { FAMILY_LINEUP, familyImage } from "@/lib/family-images";
+import { FAMILY_SECONDARY_IMAGES, familyImage } from "@/lib/family-images";
 import { SkuGallery } from "@/components/catalog/sku-gallery";
 import {
   DEFINED_SKU_COUNTS,
@@ -110,7 +109,7 @@ export default async function ProductFamilyPage({
   };
   const badgeFor = (kind: string) =>
     kind === "concept-pack" ? tc("conceptPackBadge") : kind === "studio" ? tp("studioBadge") : tc("editorialBadge");
-  const lineup = FAMILY_LINEUP[family];
+  const secondaryVisual = FAMILY_SECONDARY_IMAGES[family];
   const packaging = PACKAGING_OPTIONS[family];
   const rangeCards = ranges.map((range) => ({
     id: range.id,
@@ -168,34 +167,21 @@ export default async function ProductFamilyPage({
           <RequestActions family={family} labels={actionLabels} className="mt-7" />
         </div>
         <div>
-          {lineup ? (
-            // Studio image first (LCP), then the packaging line-up render.
-            <SkuGallery
-              images={[hero, lineup].map((image) => ({
-                src: image.src,
-                alt: pick(image.alt, locale),
-                badge: badgeFor(image.kind),
-              }))}
-              label={tc("galleryLabel")}
-              showLabel={tc("showImage", { index: "{index}" })}
-            />
-          ) : (
-            <FamilyVisual
-              family={family}
-              locale={locale}
-              name={name}
-              labels={{ editorial: tc("editorialBadge"), studio: tp("studioBadge") }}
-              sizes="(min-width: 1280px) 38rem, (min-width: 1024px) 50vw, 100vw"
-              priority
-              className="rounded-lg border border-border"
-            />
-          )}
-          {/* A studio representation is never inventory, a supplier batch or
-              evidence — say so under the image; same for concept packaging. */}
-          {hero.kind === "studio" && hasPublicFile(hero.src) && (
-            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tp("studioNote")}</p>
-          )}
-          {lineup && <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{tc("conceptPackNote")}</p>}
+          <SkuGallery
+            images={[hero, secondaryVisual].map((image) => ({
+              src: image.src,
+              alt: pick(image.alt, locale),
+              badge: badgeFor(image.kind),
+            }))}
+            label={tc("galleryLabel")}
+            showLabel={tc("showImage", { index: "{index}" })}
+          />
+          {/* The first view is an owner-supplied/editorial ingredient image;
+              the second is a concept pack or studio representation. Neither
+              is a statement of current stock or final production artwork. */}
+          <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+            {secondaryVisual.kind === "concept-pack" ? tc("conceptPackNote") : tp("studioNote")}
+          </p>
         </div>
       </section>
 
@@ -310,6 +296,10 @@ export default async function ProductFamilyPage({
                       </li>
                     ))}
                   </ul>
+                  <Link href="/packaging" className="mt-4 inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
+                    {tc("packagingExplore")}
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
                 </div>
               )}
               <p className="rounded-lg border border-dashed border-border bg-muted/30 p-4 text-xs leading-relaxed text-muted-foreground">
