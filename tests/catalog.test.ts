@@ -8,6 +8,7 @@ import {
   CATALOG_SKUS,
   DEFINED_SKU_COUNTS,
   DEFINED_SKU_TOTAL,
+  definedCodesFor,
   PACKAGING_OPTIONS,
   RANGE_IMAGES,
   relatedSkus,
@@ -55,6 +56,11 @@ test("defined core portfolio is 29 SKUs across five families", () => {
     "nuts-spices-botanicals": 4,
   });
   assert.equal(DEFINED_SKU_TOTAL, 29);
+  assert.deepEqual(definedCodesFor("coffee"), COFFEE_FORMAT_CODES);
+  assert.deepEqual(definedCodesFor("coconut"), ["WHCO001", "WHCO002", "WHCO003", "WHCO004", "WHCO005"]);
+  assert.deepEqual(definedCodesFor("birds-nest"), ["WHBN001", "WHBN002"]);
+  assert.deepEqual(definedCodesFor("fruit"), ["WHFR001", "WHFR002", "WHFR003", "WHFR004", "WHFR005", "WHFR006", "WHFR007", "WHFR008", "WHFR009"]);
+  assert.deepEqual(definedCodesFor("nuts-spices-botanicals"), ["WHNSP001", "WHNSP002", "WHNSP003", "WHNSP004"]);
 });
 
 test("families, ranges and codes are consistent", () => {

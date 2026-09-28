@@ -13,6 +13,7 @@
     "productsBirdsNest": "Bird's Nest Ingredients",
     "productsFruit": "Fruit Ingredients",
     "productsNutsSpicesBotanicals": "Nuts, Spices & Botanicals",
+    "documents": "Documents",
     "certifications": "Quality & Qualification",
     "process": "How We Work",
     "clients": "Network",
@@ -515,11 +516,18 @@
     "breadcrumbLabel": "Breadcrumb",
     "confirmedTitle": "Detailed SKU pages",
     "confirmedSubtitle": "Nine coffee SKUs currently have public code-level detail. The wider defined portfolio is organised by range; availability, final specification and COA scope are confirmed for each request.",
+    "portfolioEyebrow": "Defined portfolio",
+    "portfolioTitle": "{count} core SKU codes in this family",
+    "portfolioSubtitle": "These codes identify the defined Whitehorse portfolio. They do not imply stock, a fixed supplier or automatic export readiness; detailed public code pages are being expanded family by family.",
+    "portfolioCodesLabel": "Defined SKU codes",
+    "generalSpecLabel": "General specification",
+    "generalSpecLead": "The specifications shown below are general reference frameworks, not a one-size-fits-all offer. Tell us the values, application, destination market, volume, certifications and packaging you need; we will match the supplier and confirm the final specification with you.",
+    "generalSpecCta": "Tell us the specification you need",
     "rangesTitle": "Sourcing & custom-development ranges",
     "rangesSubtitle": "Broader formats we can source or develop on request, matched to suppliers whose product, site and documentation fit your specification.",
     "rangeLabel": "Range",
     "formatsLabel": "Formats",
-    "specifyLabel": "What you specify",
+    "specifyLabel": "Buyer specification fields",
     "applicationsLabel": "Applications",
     "filterLabel": "Filter by range",
     "filterAll": "All",
@@ -530,18 +538,18 @@
     "noResults": "Nothing matches these filters. Clear them, or tell us what you need in a request.",
     "viewDetails": "View details",
     "requestSample": "Request sample",
-    "requestSpec": "Request specification",
+    "requestSpec": "Send required specification",
     "requestQuote": "Request quote",
-    "requestRange": "Request this range",
+    "requestRange": "Tell us your required specification",
     "editorialBadge": "Editorial image",
     "conceptPackBadge": "Concept packaging",
     "conceptPackNote": "Packaging concept render. Label text is illustrative — the final pack, label and specification are confirmed with the supplier or co-packer for each order. Not a photograph of stock.",
-    "perRequestNote": "A listed product or range is not a statement of stock or export readiness. Availability, final specification, test method, documentation and COA scope are confirmed for each request. OEM, ODM and OBM options depend on the product, partner facility and market.",
-    "referenceTitle": "Typical reference parameters",
-    "referenceDisclaimer": "Typical reference parameters — final specification, test method, documentation and COA scope are agreed per order.",
-    "indicativeLabel": "Indicative specification",
+    "perRequestNote": "All specifications shown are general references. A listed product or range is not a statement of stock or export readiness. Tell us the specification you need; availability, final values, test method, documentation and COA scope are then confirmed for that request. OEM, ODM and OBM options depend on the product, partner facility and market.",
+    "referenceTitle": "General specification framework",
+    "referenceDisclaimer": "These are general reference parameters, not a fixed specification for every supplier or lot. Tell us the specification you need; the final values, test methods, documentation and COA scope are agreed for your request.",
+    "indicativeLabel": "General reference specification",
     "moreDetail": "More specification detail",
-    "indicativeNote": "Indicative values — confirmed against the supplier's specification sheet for each order.",
+    "indicativeNote": "General reference only — final values are confirmed against the selected supplier's specification sheet for each request.",
     "paramHeader": "Parameter",
     "referenceHeader": "Typical reference",
     "methodHeader": "Method / basis",
@@ -573,6 +581,31 @@
     "stickyLabel": "Request sample or quote",
     "galleryLabel": "Product images",
     "showImage": "Show image {index}"
+  },
+  "documents": {
+    "hero": {
+      "eyebrow": "Commercial documents",
+      "title": "Product and company materials for buyer review.",
+      "subtitle": "Download the current Whitehorse brochure. The detailed Company Profile will appear here as soon as the approved edition is ready."
+    },
+    "library": {
+      "eyebrow": "Download centre",
+      "title": "Shareable commercial materials.",
+      "subtitle": "Use these documents for an initial review, then send us the product, application and specification your project requires.",
+      "brochure": {
+        "title": "Whitehorse Product Brochure",
+        "description": "A concise overview of Whitehorse, the five ingredient families and the current product portfolio for buyer introductions.",
+        "meta": "PDF · 4 pages",
+        "cta": "Download brochure"
+      },
+      "profile": {
+        "title": "Whitehorse Company Profile",
+        "description": "The detailed corporate profile is being finalised. This download will activate after the approved file is added.",
+        "meta": "Coming soon",
+        "cta": "Available soon"
+      },
+      "note": "Brochure and website specifications are general commercial references. Final specification, supplier, site, certification scope, availability, packaging and order documents are confirmed for each request."
+    }
   },
   "certifications": {
     "hero": {
