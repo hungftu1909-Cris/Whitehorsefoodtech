@@ -13,11 +13,11 @@ export function ProofStrip() {
       <h2 id="proof-title" className="sr-only">
         {t("title")}
       </h2>
-      <ul className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-10 sm:grid-cols-3 sm:gap-8 sm:px-6 lg:px-8">
+      <ul className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-8 sm:grid-cols-3 sm:gap-0 sm:px-6 lg:px-8">
         {items.map((item) => (
-          <li key={item.value} className="flex items-baseline gap-4 sm:block">
+          <li key={item.value} className="flex items-baseline gap-4 sm:block sm:border-r sm:border-primary-foreground/15 sm:px-8 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0">
             <p className="shrink-0 font-serif text-3xl font-semibold text-accent md:text-4xl">{item.value}</p>
-            <p className="text-sm leading-relaxed text-primary-foreground/85 sm:mt-2">{item.label}</p>
+            <p className="text-sm leading-relaxed text-primary-foreground/75 sm:mt-2">{item.label}</p>
           </li>
         ))}
       </ul>

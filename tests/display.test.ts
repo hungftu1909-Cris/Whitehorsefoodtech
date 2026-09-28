@@ -41,7 +41,6 @@ test("family visuals carry a VISIBLE editorial/studio label everywhere they rend
   assert.deepEqual(renders.sort(), [
     path.join("src", "app", "[locale]", "about", "page.tsx"),
     path.join("src", "app", "[locale]", "products", "[slug]", "page.tsx"),
-    path.join("src", "app", "[locale]", "products", "page.tsx"),
     path.join("src", "components", "home", "products-preview.tsx"),
   ].sort());
   for (const f of renders) {
@@ -57,11 +56,11 @@ test("family visuals carry a VISIBLE editorial/studio label everywhere they rend
   assert.match(detail, /<FamilyVisual[\s\S]*?priority/, "detail hero image has priority");
 });
 
-test("homepage is five server-rendered sections, without page-wide reveal hydration", () => {
+test("homepage is six server-rendered platform sections, without page-wide reveal hydration", () => {
   const page = fs.readFileSync("src/app/[locale]/page.tsx", "utf8");
-  const order = ["<Hero", "<ProofStrip", "<ProductsPreview", "<ValueProposition", "<SplitCta"].map((tag) => page.indexOf(tag));
-  assert.ok(order.every((pos, i) => pos > -1 && (i === 0 || pos > order[i - 1])), "Hero → proof → families → value → split CTA");
-  assert.equal((page.match(/^ {6}<[A-Z]/gm) ?? []).length, 5, "exactly five sections");
+  const order = ["<Hero", "<ProofStrip", "<ProductsPreview", "<PlatformMap", "<EvidenceLayer", "<SplitCta"].map((tag) => page.indexOf(tag));
+  assert.ok(order.every((pos, i) => pos > -1 && (i === 0 || pos > order[i - 1])), "Hero → proof → families → platform → evidence → split CTA");
+  assert.equal((page.match(/^ {6}<[A-Z]/gm) ?? []).length, 6, "exactly six sections");
   for (const file of fs.readdirSync("src/components/home")) {
     assert.doesNotMatch(fs.readFileSync(`src/components/home/${file}`, "utf8"), /^"use client"/m, `${file} is a Server Component`);
   }
@@ -70,6 +69,14 @@ test("homepage is five server-rendered sections, without page-wide reveal hydrat
   assert.equal((hero.match(/^\s+priority\s*$/gm) ?? []).length, 1, "the hero image is the only priority image");
   const preview = fs.readFileSync("src/components/home/products-preview.tsx", "utf8");
   assert.doesNotMatch(preview, /priority/, "family cards below the fold stay lazy");
+});
+
+test("product index is a filterable, server-rendered range explorer", () => {
+  const page = fs.readFileSync("src/app/[locale]/products/page.tsx", "utf8");
+  assert.match(page, /<FilterGrid/);
+  assert.match(page, /queryKey="family"/);
+  assert.match(page, /CATALOG_RANGES\.map/);
+  assert.match(page, /<RangeCard/);
 });
 
 test("JSON-LD serialization cannot close its <script> tag", () => {

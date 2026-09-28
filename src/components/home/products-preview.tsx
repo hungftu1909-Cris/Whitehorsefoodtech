@@ -6,6 +6,7 @@ import { FamilyVisual } from "@/components/catalog/family-visual";
 import type { FamilySlug } from "@/lib/catalog";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
+import { cn } from "@/lib/utils";
 
 /** Image-led routing to the five family pages; detail lives there. */
 export function ProductsPreview() {
@@ -16,18 +17,24 @@ export function ProductsPreview() {
   const items = t.raw("items") as { title: string; tagline: string; status: string }[];
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-      <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
+    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
+        <Link href="/products" className="group inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent hover:underline">
+          {t("exploreCta")}
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+        </Link>
+      </div>
       {/* 5 families: 3 + 2 on desktop reads more premium than a cramped
           5-across row, and keeps card width consistent with /products. */}
-      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-6">
         {items.map((item, i) => {
           const category = PRODUCT_CATEGORIES[i];
           return (
-            <li key={item.title} className="flex">
+            <li key={item.title} className={cn("flex", i < 2 ? "lg:col-span-3" : "lg:col-span-2")}>
               <Link
                 href={`/products/${category.slug}`}
-                className="group flex w-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
+                className="group flex w-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
                 <FamilyVisual
                   family={category.slug as FamilySlug}

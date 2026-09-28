@@ -51,11 +51,30 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Vietnam · Premium agricultural ingredients",
-      "title": "Premium Vietnamese ingredients, connected to the buyers who need them.",
-      "subtitle": "Bulk ingredients, and OEM, ODM and OBM through suitable manufacturing partners — for distributors, manufacturers, foodservice groups and brands.",
+      "eyebrow": "Vietnam ingredient platform",
+      "status": "Current platform",
+      "title": "Premium ingredients, structured for global product teams.",
+      "subtitle": "Whitehorse connects defined ingredient ranges, screened suppliers and request-scoped quality evidence — with bulk supply and OEM, ODM and OBM through suitable manufacturing partners, for distributors, manufacturers, foodservice groups and brands.",
       "ctaPrimary": "Request a quote",
-      "ctaSecondary": "Explore product families"
+      "ctaSecondary": "Explore ingredients",
+      "signals": [
+        {
+          "label": "Scope",
+          "value": "5 families"
+        },
+        {
+          "label": "Defined",
+          "value": "9 coffee codes"
+        },
+        {
+          "label": "Network",
+          "value": "50+ screened"
+        }
+      ],
+      "moduleLabel": "Platform layer",
+      "building": "Building",
+      "moduleTitle": "Evidence workspace",
+      "moduleBody": "A future buyer view for specifications, supplier evidence and request progress — being built, not yet a live account service."
     },
     "proof": {
       "title": "Whitehorse today",
@@ -75,9 +94,10 @@
       ]
     },
     "productsPreview": {
-      "eyebrow": "What we source",
-      "title": "Five ingredient families",
-      "subtitle": "Coffee with nine confirmed product codes; four more families sourced or developed to your specification.",
+      "eyebrow": "Ingredient intelligence",
+      "title": "One catalog, five ingredient families.",
+      "subtitle": "Navigate from product family to format, specification dimensions and request-ready detail. Coffee includes nine confirmed product codes; four more families are sourced or developed to specification.",
+      "exploreCta": "Open Product Explorer",
       "items": [
         {
           "title": "Coffee Ingredients",
@@ -105,6 +125,72 @@
           "status": "Sourced on request"
         }
       ]
+    },
+    "platform": {
+      "eyebrow": "The Whitehorse model",
+      "title": "A connected path from ingredient need to qualified supply.",
+      "subtitle": "The platform brings product intelligence, supplier matching and evidence coordination into one commercial workflow — while the digital workspace develops in clearly labelled stages.",
+      "current": "Operating now",
+      "building": "Product layer in development",
+      "currentShort": "Current",
+      "buildingShort": "Building",
+      "stages": [
+        {
+          "number": "01",
+          "title": "Product intelligence",
+          "body": "Defined families, formats, product codes and the specification dimensions a buyer needs to brief.",
+          "status": "current"
+        },
+        {
+          "number": "02",
+          "title": "Supplier matching",
+          "body": "Potential suppliers are screened against product, facility, market and documentation requirements.",
+          "status": "current"
+        },
+        {
+          "number": "03",
+          "title": "Evidence coordination",
+          "body": "Samples, testing scope, supplier documents and lot documentation are agreed for each request.",
+          "status": "current"
+        },
+        {
+          "number": "04",
+          "title": "Digital buyer workspace",
+          "body": "A structured view of requests, specifications and evidence is the next product layer, not a live service today.",
+          "status": "building"
+        }
+      ],
+      "note": "Current means an operating Whitehorse workflow. Building means a product direction under development; it does not imply a live portal, account area or real-time lot tracking.",
+      "cta": "See how a request moves"
+    },
+    "evidence": {
+      "eyebrow": "Evidence layer",
+      "title": "Confidence is assembled around the request.",
+      "subtitle": "Instead of generic trust badges, Whitehorse frames the evidence a buyer may need and confirms what applies to the selected supplier, site, product and order.",
+      "cta": "Quality & qualification",
+      "items": [
+        {
+          "label": "Scope 01",
+          "title": "Supplier & site",
+          "body": "Legal entity, production site, product capability and market-fit checks relevant to the request."
+        },
+        {
+          "label": "Scope 02",
+          "title": "Specification & testing",
+          "body": "A written specification, agreed test methods and sample or laboratory scope where required."
+        },
+        {
+          "label": "Scope 03",
+          "title": "Certificates",
+          "body": "Only certificates held by the selected supplier, site and product scope are presented as applicable."
+        },
+        {
+          "label": "Scope 04",
+          "title": "Order documents",
+          "body": "The document set and certificate-of-analysis scope are confirmed before the commercial order."
+        }
+      ],
+      "note": "Evidence is request-specific. Availability, current validity, test scope and document set are confirmed with the selected supplier for each order."
     },
     "value": {
       "eyebrow": "How Whitehorse creates value",
@@ -136,14 +222,14 @@
       "note": "Availability, MOQ, formulation, packaging, certification and market compliance are confirmed per product, partner facility and project. Certificates belong to a specific supplier, site and product scope."
     },
     "ctaBanner": {
-      "title": "Tell us what you need to source",
+      "title": "Choose your path into the platform.",
       "subtitle": "Share your product, volume and destination port. Our sales team reviews qualified requests and follows up with the next commercial step.",
       "cta": "Request a quote",
       "buyerLabel": "For buyers",
-      "buyerBody": "Bulk ingredients or an OEM, ODM or OBM project — share the product, volume and destination.",
+      "buyerBody": "Explore ingredients, define the specification and start a qualified bulk, OEM, ODM or OBM request.",
       "buyerCta": "Request a quote",
       "supplierLabel": "For suppliers",
-      "supplierBody": "Farmers, cooperatives and processors interested in assessment.",
+      "supplierBody": "Farmers, cooperatives and processors can submit capability, facility and document information for assessment.",
       "supplierCta": "Apply as a supplier"
     }
   },
@@ -327,9 +413,16 @@
   },
   "products": {
     "hero": {
-      "eyebrow": "Our products",
-      "title": "Five ingredient families. One sourcing process.",
-      "subtitle": "Coffee has nine confirmed product codes. Coconut, bird's nest, fruit and nuts, spices & botanicals are sourced or developed on request. Final specification, test method, documentation and COA scope are agreed per order."
+      "eyebrow": "Product Explorer",
+      "title": "Find the ingredient format your brief needs.",
+      "subtitle": "Explore eighteen sourcing and development ranges across five ingredient families. Coffee also has nine confirmed product codes. Final specification, test method, documentation and COA scope are agreed per order."
+    },
+    "explorer": {
+      "eyebrow": "Structured catalog",
+      "title": "Filter by family. Search by format or application.",
+      "subtitle": "Each range shows available formats and the specification dimensions to resolve. Select a family or search the full bilingual catalog, then open a request from the relevant range.",
+      "filterLabel": "Filter by ingredient family",
+      "searchPlaceholder": "Format, product or application"
     },
     "studioBadge": "Studio representation",
     "studioNote": "A studio representation of ingredient formats in this family; product, source and final specification are confirmed per request.",

@@ -1,16 +1,14 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
-import { FamilyVisual } from "@/components/catalog/family-visual";
-import { Badge } from "@/components/ui/badge";
+import { FilterGrid } from "@/components/catalog/filter-grid";
+import { RangeCard } from "@/components/catalog/cards";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
-import { pick, rangesFor, skusFor, type FamilySlug } from "@/lib/catalog";
+import { CATALOG_RANGES, rangesFor, skusFor, type FamilySlug } from "@/lib/catalog";
 import { serializeJsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site";
-import { ArrowRight } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -30,8 +28,13 @@ export default async function ProductsPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "products" });
-  const tc = await getTranslations({ locale, namespace: "common" });
   const tcat = await getTranslations({ locale, namespace: "catalog" });
+  const categories = PRODUCT_CATEGORIES.map((category) => ({
+    ...category,
+    family: category.slug as FamilySlug,
+    name: t(`categories.${category.categoryKey}.name`),
+  }));
+  const results = Array.from({ length: CATALOG_RANGES.length + 1 }, (_, count) => tcat("results", { count }));
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -53,59 +56,74 @@ export default async function ProductsPage({
       />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        {/* 5 families: 3 + 2 on desktop — same grid rhythm as the homepage
-            preview, avoids a cramped 5-across row or an orphaned lone card
-            in a 4-column layout. */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {PRODUCT_CATEGORIES.map((c, i) => (
-            <div key={c.slug}>
-              <Link
-                href={`/products/${c.slug}`}
-                className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
-              >
-                <FamilyVisual
-                  family={c.slug as FamilySlug}
-                  locale={locale}
-                  name={t(`categories.${c.categoryKey}.name`)}
-                  labels={{ editorial: tcat("editorialBadge"), studio: t("studioBadge") }}
-                  priority={i < 3}
-                  className="border-b border-border"
-                />
-                <div className="flex flex-1 flex-col p-6">
-                  <Badge
-                    variant={c.slug === "coffee" ? "default" : "outline"}
-                    className={c.slug === "coffee" ? "mb-3 bg-accent text-accent-foreground" : "mb-3 text-muted-foreground"}
-                  >
-                    {t(`categories.${c.categoryKey}.status`)}
-                  </Badge>
-                  <h2 className="font-serif text-xl font-semibold text-foreground">
-                    {t(`categories.${c.categoryKey}.name`)}
-                  </h2>
-                  <p className="mt-1 text-sm font-medium text-accent">
-                    {t(`categories.${c.categoryKey}.tagline`)}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {t(`categories.${c.categoryKey}.description`)}
-                  </p>
-                  {/* Layer-1 preview of layer 2: what's inside this family. */}
-                  <p className="mt-4 text-xs font-medium text-foreground/80">
-                    {skusFor(c.slug as FamilySlug).length > 0 && (
-                      <>{tcat("codesCount", { count: skusFor(c.slug as FamilySlug).length })} · </>
-                    )}
-                    {tcat("rangesCount", { count: rangesFor(c.slug as FamilySlug).length })}
-                  </p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                    {rangesFor(c.slug as FamilySlug).map((range) => pick(range.name, locale)).join(" · ")}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent">
-                    {tc("learnMore")}
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-                  </span>
-                </div>
-              </Link>
+        <div className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">{t("explorer.eyebrow")}</p>
+            <h2 className="mt-3 font-serif text-3xl leading-tight font-semibold tracking-tight text-balance text-foreground md:text-4xl">
+              {t("explorer.title")}
+            </h2>
+          </div>
+          <p className="max-w-2xl text-base leading-relaxed text-muted-foreground lg:justify-self-end">{t("explorer.subtitle")}</p>
+        </div>
+
+        <dl className="grid border-b border-border sm:grid-cols-5">
+          {categories.map((category) => (
+            <div key={category.slug} className="border-b border-border py-4 last:border-b-0 sm:border-r sm:border-b-0 sm:px-4 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0">
+              <dt className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">{category.name}</dt>
+              <dd className="mt-1 font-serif text-lg font-semibold text-foreground">
+                {tcat("rangesCount", { count: rangesFor(category.family).length })}
+                {skusFor(category.family).length > 0 && <span className="ml-2 text-xs font-normal text-accent">+ {tcat("codesCount", { count: skusFor(category.family).length })}</span>}
+              </dd>
             </div>
           ))}
-        </div>
+        </dl>
+
+        <FilterGrid
+          className="mt-10"
+          queryKey="family"
+          groups={categories.map((category) => ({ id: category.slug, label: category.name }))}
+          labels={{
+            filter: t("explorer.filterLabel"),
+            all: tcat("filterAll"),
+            search: tcat("searchLabel"),
+            searchPlaceholder: t("explorer.searchPlaceholder"),
+            clear: tcat("clearAll"),
+            noResults: tcat("noResults"),
+            results,
+          }}
+          items={CATALOG_RANGES.map((range) => {
+            const category = categories.find((item) => item.slug === range.family)!;
+            return {
+              id: range.id,
+              group: range.family,
+              search: [range.name.en, range.name.vi, range.summary.en, range.summary.vi, ...range.formats.flatMap((format) => [format.en, format.vi])].join(" ").toLowerCase(),
+              card: (
+                <RangeCard
+                  range={range}
+                  locale={locale}
+                  labels={{
+                    familyLabel: category.name,
+                    formats: tcat("formatsLabel"),
+                    specify: tcat("specifyLabel"),
+                    request: tcat("requestRange"),
+                    indicative: tcat("indicativeLabel"),
+                    indicativeNote: tcat("indicativeNote"),
+                    moreDetail: tcat("moreDetail"),
+                    conceptBadge: tcat("conceptPackBadge"),
+                    studioBadge: t("studioBadge"),
+                    editorialBadge: tcat("editorialBadge"),
+                    galleryLabel: tcat("galleryLabel"),
+                    showImage: tcat("showImage", { index: "{index}" }),
+                  }}
+                />
+              ),
+            };
+          })}
+        />
+
+        <p className="mt-10 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-xs leading-relaxed text-muted-foreground">
+          {tcat("perRequestNote")}
+        </p>
       </section>
 
       <CtaSection

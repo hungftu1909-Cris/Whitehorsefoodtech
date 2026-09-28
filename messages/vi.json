@@ -51,11 +51,30 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Việt Nam · Nguyên liệu nông nghiệp cao cấp",
-      "title": "Nguyên liệu nông nghiệp cao cấp của Việt Nam, kết nối với đúng người mua.",
-      "subtitle": "Nguyên liệu số lượng lớn cùng các mô hình OEM, ODM, OBM qua đối tác sản xuất phù hợp — cho nhà phân phối, nhà sản xuất, hệ thống foodservice và thương hiệu.",
+      "eyebrow": "Nền tảng nguyên liệu Việt Nam",
+      "status": "Nền tảng hiện tại",
+      "title": "Nguyên liệu cao cấp, được cấu trúc cho đội ngũ sản phẩm toàn cầu.",
+      "subtitle": "Whitehorse kết nối các dòng nguyên liệu đã xác định, nhà cung cấp được sàng lọc và hồ sơ chất lượng theo từng yêu cầu — cùng nguồn cung số lượng lớn và OEM, ODM, OBM qua đối tác sản xuất phù hợp, cho nhà phân phối, nhà sản xuất, hệ thống foodservice và thương hiệu.",
       "ctaPrimary": "Yêu cầu báo giá",
-      "ctaSecondary": "Khám phá nhóm sản phẩm"
+      "ctaSecondary": "Khám phá nguyên liệu",
+      "signals": [
+        {
+          "label": "Phạm vi",
+          "value": "5 nhóm"
+        },
+        {
+          "label": "Đã xác định",
+          "value": "9 mã cà phê"
+        },
+        {
+          "label": "Mạng lưới",
+          "value": "50+ sàng lọc"
+        }
+      ],
+      "moduleLabel": "Lớp nền tảng",
+      "building": "Đang xây dựng",
+      "moduleTitle": "Không gian hồ sơ",
+      "moduleBody": "Góc nhìn tương lai cho người mua về thông số, hồ sơ nhà cung cấp và tiến độ yêu cầu — đang được xây dựng, chưa phải dịch vụ tài khoản trực tuyến."
     },
     "proof": {
       "title": "Whitehorse hôm nay",
@@ -75,9 +94,10 @@
       ]
     },
     "productsPreview": {
-      "eyebrow": "Nguyên liệu chúng tôi tìm nguồn",
-      "title": "Năm nhóm nguyên liệu",
-      "subtitle": "Cà phê với chín mã sản phẩm đã xác định; bốn nhóm còn lại được tìm nguồn hoặc phát triển theo thông số của bạn.",
+      "eyebrow": "Dữ liệu nguyên liệu",
+      "title": "Một danh mục, năm nhóm nguyên liệu.",
+      "subtitle": "Đi từ nhóm sản phẩm đến dạng nguyên liệu, các chiều thông số và chi tiết sẵn sàng cho yêu cầu. Cà phê có chín mã đã xác định; bốn nhóm còn lại được tìm nguồn hoặc phát triển theo thông số.",
+      "exploreCta": "Mở Product Explorer",
       "items": [
         {
           "title": "Nguyên liệu Cà phê",
@@ -105,6 +125,72 @@
           "status": "Tìm nguồn theo yêu cầu"
         }
       ]
+    },
+    "platform": {
+      "eyebrow": "Mô hình Whitehorse",
+      "title": "Một hành trình kết nối từ nhu cầu nguyên liệu đến nguồn cung phù hợp.",
+      "subtitle": "Nền tảng đưa dữ liệu sản phẩm, ghép nối nhà cung cấp và điều phối hồ sơ vào một quy trình thương mại — trong khi không gian số được phát triển theo từng giai đoạn có nhãn rõ ràng.",
+      "current": "Đang vận hành",
+      "building": "Lớp sản phẩm đang phát triển",
+      "currentShort": "Hiện tại",
+      "buildingShort": "Đang xây dựng",
+      "stages": [
+        {
+          "number": "01",
+          "title": "Dữ liệu sản phẩm",
+          "body": "Nhóm, định dạng, mã sản phẩm và các chiều thông số người mua cần xác định trong brief.",
+          "status": "current"
+        },
+        {
+          "number": "02",
+          "title": "Ghép nối nhà cung cấp",
+          "body": "Nhà cung cấp tiềm năng được sàng lọc theo sản phẩm, cơ sở, thị trường và yêu cầu hồ sơ.",
+          "status": "current"
+        },
+        {
+          "number": "03",
+          "title": "Điều phối hồ sơ",
+          "body": "Mẫu, phạm vi kiểm nghiệm, hồ sơ nhà cung cấp và chứng từ lô hàng được thống nhất cho từng yêu cầu.",
+          "status": "current"
+        },
+        {
+          "number": "04",
+          "title": "Không gian số cho người mua",
+          "body": "Góc nhìn có cấu trúc về yêu cầu, thông số và hồ sơ là lớp sản phẩm tiếp theo, chưa phải dịch vụ đang hoạt động.",
+          "status": "building"
+        }
+      ],
+      "note": "Hiện tại nghĩa là quy trình Whitehorse đang vận hành. Đang xây dựng nghĩa là định hướng sản phẩm trong quá trình phát triển; không hàm ý cổng thông tin, khu vực tài khoản hay theo dõi lô hàng thời gian thực đã hoạt động.",
+      "cta": "Xem quy trình xử lý yêu cầu"
+    },
+    "evidence": {
+      "eyebrow": "Lớp hồ sơ",
+      "title": "Niềm tin được xây dựng quanh từng yêu cầu.",
+      "subtitle": "Thay vì huy hiệu chung chung, Whitehorse xác định hồ sơ người mua có thể cần và xác nhận nội dung áp dụng cho đúng nhà cung cấp, cơ sở, sản phẩm và đơn hàng.",
+      "cta": "Chất lượng & thẩm định",
+      "items": [
+        {
+          "label": "Phạm vi 01",
+          "title": "Nhà cung cấp & cơ sở",
+          "body": "Pháp nhân, cơ sở sản xuất, năng lực sản phẩm và mức độ phù hợp thị trường liên quan đến yêu cầu."
+        },
+        {
+          "label": "Phạm vi 02",
+          "title": "Thông số & kiểm nghiệm",
+          "body": "Thông số bằng văn bản, phương pháp thử đã thống nhất và phạm vi mẫu hoặc phòng thử nghiệm khi cần."
+        },
+        {
+          "label": "Phạm vi 03",
+          "title": "Chứng nhận",
+          "body": "Chỉ chứng nhận thuộc đúng nhà cung cấp, cơ sở và phạm vi sản phẩm được trình bày là phù hợp."
+        },
+        {
+          "label": "Phạm vi 04",
+          "title": "Chứng từ đơn hàng",
+          "body": "Bộ chứng từ và phạm vi phiếu kết quả phân tích được xác nhận trước đơn hàng thương mại."
+        }
+      ],
+      "note": "Hồ sơ gắn với từng yêu cầu. Khả năng cung ứng, hiệu lực hiện tại, phạm vi thử nghiệm và bộ chứng từ được xác nhận với nhà cung cấp được chọn cho từng đơn hàng."
     },
     "value": {
       "eyebrow": "Cách Whitehorse tạo giá trị",
@@ -136,14 +222,14 @@
       "note": "Khả năng cung ứng, MOQ, công thức, bao bì, chứng nhận và tuân thủ thị trường được xác nhận theo từng sản phẩm, cơ sở đối tác và dự án. Chứng nhận thuộc về một nhà cung cấp, cơ sở và phạm vi sản phẩm cụ thể."
     },
     "ctaBanner": {
-      "title": "Cho chúng tôi biết bạn cần tìm nguồn gì",
+      "title": "Chọn lối vào nền tảng của bạn.",
       "subtitle": "Chia sẻ sản phẩm, sản lượng và cảng đích. Đội ngũ kinh doanh của chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo.",
       "cta": "Yêu cầu báo giá",
       "buyerLabel": "Dành cho người mua",
-      "buyerBody": "Nguyên liệu số lượng lớn hoặc dự án OEM, ODM, OBM — hãy chia sẻ sản phẩm, sản lượng và thị trường đích.",
+      "buyerBody": "Khám phá nguyên liệu, xác định thông số và bắt đầu yêu cầu số lượng lớn, OEM, ODM hoặc OBM phù hợp.",
       "buyerCta": "Yêu cầu báo giá",
       "supplierLabel": "Dành cho nhà cung cấp",
-      "supplierBody": "Nông hộ, hợp tác xã và nhà máy chế biến muốn tham gia đánh giá.",
+      "supplierBody": "Nông hộ, hợp tác xã và nhà máy chế biến có thể gửi thông tin năng lực, cơ sở và hồ sơ để đánh giá.",
       "supplierCta": "Đăng ký làm nhà cung cấp"
     }
   },
@@ -327,9 +413,16 @@
   },
   "products": {
     "hero": {
-      "eyebrow": "Sản phẩm của chúng tôi",
-      "title": "Năm nhóm nguyên liệu. Một quy trình tìm nguồn.",
-      "subtitle": "Cà phê có chín mã sản phẩm đã xác định. Nguyên liệu dừa, yến sào, trái cây và hạt, gia vị & thảo mộc được tìm nguồn hoặc phát triển theo yêu cầu. Thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng."
+      "eyebrow": "Product Explorer",
+      "title": "Tìm đúng dạng nguyên liệu cho yêu cầu của bạn.",
+      "subtitle": "Khám phá mười tám dòng tìm nguồn và phát triển trong năm nhóm nguyên liệu. Cà phê còn có chín mã sản phẩm đã xác định. Thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng."
+    },
+    "explorer": {
+      "eyebrow": "Danh mục có cấu trúc",
+      "title": "Lọc theo nhóm. Tìm theo dạng hoặc ứng dụng.",
+      "subtitle": "Mỗi dòng thể hiện các định dạng và chiều thông số cần xác định. Chọn nhóm hoặc tìm trên toàn bộ danh mục song ngữ, sau đó mở yêu cầu từ đúng dòng sản phẩm.",
+      "filterLabel": "Lọc theo nhóm nguyên liệu",
+      "searchPlaceholder": "Dạng, sản phẩm hoặc ứng dụng"
     },
     "studioBadge": "Hình ảnh studio minh họa",
     "studioNote": "Hình ảnh minh họa các dạng nguyên liệu trong nhóm; sản phẩm, nguồn cung và thông số được xác nhận theo từng yêu cầu.",

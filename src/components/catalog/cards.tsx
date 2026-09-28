@@ -99,6 +99,7 @@ export function RangeCard({
     studioBadge: string;
     editorialBadge: string;
     galleryLabel: string;
+    familyLabel?: string;
     /** "Show image {index}" */
     showImage: string;
   };
@@ -129,6 +130,9 @@ export function RangeCard({
         </div>
       ) : null}
       <div className="flex flex-1 flex-col p-5">
+        {labels.familyLabel && (
+          <p className="mb-2 text-[0.65rem] font-semibold tracking-[0.14em] text-accent uppercase">{labels.familyLabel}</p>
+        )}
         <h3 className="font-serif text-lg font-semibold text-foreground">{pick(range.name, locale)}</h3>
         <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{pick(range.summary, locale)}</p>
         <ul aria-label={labels.formats} className="mt-3 flex flex-wrap gap-1.5">
