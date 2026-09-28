@@ -6,6 +6,8 @@ import path from "node:path";
 import {
   CATALOG_RANGES,
   CATALOG_SKUS,
+  DEFINED_SKU_COUNTS,
+  DEFINED_SKU_TOTAL,
   PACKAGING_OPTIONS,
   RANGE_IMAGES,
   relatedSkus,
@@ -35,13 +37,24 @@ test("every text in the catalog exists in EN and VI", () => {
   }
 });
 
-test("confirmed codes are exactly WHCF001–WHCF009, no invented SKUs", () => {
+test("published detail-page codes are exactly WHCF001–WHCF009", () => {
   assert.deepEqual(CATALOG_SKUS.map((s) => s.code), [...COFFEE_FORMAT_CODES]);
   assert.equal(new Set(CATALOG_SKUS.map((s) => s.slug)).size, CATALOG_SKUS.length);
   for (const sku of CATALOG_SKUS) {
     assert.equal(sku.slug, sku.code.toLowerCase());
-    assert.equal(sku.family, "coffee", "only coffee has confirmed codes");
+    assert.equal(sku.family, "coffee", "only coffee has published SKU detail pages");
   }
+});
+
+test("defined core portfolio is 29 SKUs across five families", () => {
+  assert.deepEqual(DEFINED_SKU_COUNTS, {
+    coffee: 9,
+    coconut: 5,
+    "birds-nest": 2,
+    fruit: 9,
+    "nuts-spices-botanicals": 4,
+  });
+  assert.equal(DEFINED_SKU_TOTAL, 29);
 });
 
 test("families, ranges and codes are consistent", () => {

@@ -5,7 +5,8 @@ agricultural ingredient sourcing and connection platform linking suitable
 Vietnamese farms, cooperatives and processing factories with international
 distributors, food and beverage manufacturers, foodservice groups and
 brands. Five product families (coffee, coconut, bird's nest, fruit, nuts,
-spices & botanicals); coffee has nine confirmed product codes. Built
+spices & botanicals) with 29 defined core SKUs; mix, blend and custom
+formulation development is handled per request. Built
 with Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui and
 `next-intl`.
 
@@ -77,11 +78,13 @@ brand/                    Source brand assets (logo, etc.)
 - **Specifications** are indicative until confirmed in a contract/COA; the
   product pages say so next to the spec list.
 - **Product catalog** — one typed, bilingual source: `src/lib/catalog.ts`
-  (families' sourcing ranges + confirmed codes). Three layers:
-  `/products` → `/products/<family>` (ranges, filterable confirmed codes)
+  (families' sourcing ranges + defined SKU counts + published code pages).
+  Three layers: `/products` → `/products/<family>` (ranges and any published codes)
   → `/products/<family>/<code>` (e.g. `/products/coffee/whcf007`).
-  Confirmed codes `WHCF001`–`WHCF009` are defined products, not a
-  statement of stock or export readiness. A number may appear in a
+  The defined portfolio contains 29 core SKUs: coffee 9, coconut 5,
+  bird's nest 2, fruit 9, and nuts/spices/botanicals 4. Coffee codes
+  `WHCF001`–`WHCF009` currently have public detail pages. Defined SKUs are
+  not a statement of stock or export readiness. A number may appear in a
   "typical reference parameter" only with a primary source listed in
   [`docs/product-range-sources.md`](docs/product-range-sources.md)
   (tests enforce this); otherwise it reads "agreed per order". Only

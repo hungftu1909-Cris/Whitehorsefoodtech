@@ -51,12 +51,12 @@ existing coffee editorial photo stays as the second image.
 | WHCF008 Agglomerated Instant | `public/images/catalog/coffee/packs/whcf008-concept-pack.webp` | `24_whcf008_s09_20_2_g_retail_front34_2400.jpg` | `53695576f537a49c` | stick carton, distinct from WHCF007 |
 | WHCF009 Freeze-Dried Instant | `public/images/catalog/coffee/packs/whcf009-concept-pack.webp` | `28_whcf009_s10_100_g_retail_front34_2400.jpg` | `405310ed12988d51` | jar, distinct from WHCF008 |
 
-## Coconut — range level (no confirmed codes on the site)
+## Coconut — 5 defined core SKUs, presented at range level
 
-The source packs print WHCO001–005. Those codes are the owner's working
-codes, not confirmed codes on the site (claim registry row 9), so the
-images are mapped to **ranges**, alt text never names a code, and no SKU
-page is created. Family hero gallery: Drive studio image (studio
+The source packs print WHCO001–005. They are part of the 29-SKU defined
+core portfolio (claim registry row 9), but do not yet have public detail
+pages, so the images remain mapped to **ranges** and alt text does not use
+the codes. Family hero gallery: Drive studio image (studio
 representation) + line-up render (concept packaging).
 
 | Range → product | Public file | Source file (`WHITEHORSE_02_COCONUT/`) | Source SHA-256 (16) | Label status | Why |
@@ -68,10 +68,10 @@ representation) + line-up render (concept packaging).
 | Blossom sugar → coconut blossom sugar | `public/images/catalog/coconut/packs/coconut-blossom-sugar-pouch-concept-pack.webp` | `02_sku_packshots_ivory/17_whco005_s15_250_300_500_g_retail_front34_2400.jpg` | `c13a0e32e8b2f98d` | Source label | window shows the sugar |
 | Family hero, 2nd image | `public/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp` | `01_category_studio/coconut_lineup_square_3000.jpg` | `03c81b8215dfffc8` | Source label (line-up) | one pack per product form |
 
-## Bird's nest — range level (no confirmed codes on the site)
+## Bird's nest — 2 defined core SKUs, presented at range level
 
-The source packs print WHBN001–002 (owner working codes, not confirmed on
-the site) and "From Vietnam's coastal caves" — kept untouched under the
+The source packs print WHBN001–002, part of the 29-SKU defined core
+portfolio, and "From Vietnam's coastal caves" — kept untouched under the
 label rule; the SKU/range note states label text is illustrative, and the
 origin wording is listed as an open claim for owner confirmation.
 
@@ -83,7 +83,7 @@ origin wording is listed as an open claim for owner confirmation.
 | Concentrate, extract, powder & blends (OEM) | — (text-only card) | none | — | Concept / no official label | No source shows these forms; a crop of the Drive "Yến 2" photo showed dates, honey and prepared nest, which would misrepresent OEM formats, so it was rejected |
 | Family hero, 2nd image | `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | `01_category_studio/bird_s_nest_lineup_square_3000.jpg` | `aae4a637232dbf60` | Source label (line-up) | box + carton |
 
-## Fruit — range level (no confirmed codes on the site)
+## Fruit — 9 defined core SKUs, presented at range level
 
 Source zip: packshot JPEGs exist only for WHFR001 (mango, soft-dried) and
 WHFR002 (pineapple, soft-dried); the other 19 packs are GLB models. GLBs
@@ -144,7 +144,7 @@ the tree — not the kernel product).
 
 | Family | Ranges with a distinct visual | Label status mix | Gaps |
 |---|---|---|---|
-| Coffee | 9/9 confirmed codes (+ editorial second image) | Source label | — |
+| Coffee | 9/9 defined SKUs with detail pages (+ editorial second image) | Source label | — |
 | Coconut | 3/3 ranges, 5 product visuals + line-up | Source label | — |
 | Bird's nest | 2/3 ranges, 3 product visuals + line-up | Source label | OEM range (concentrate/extract/powder/blends): no source |
 | Fruit | 4/4 ranges, 6 product visuals | Source label (2) · source-derived (4) | Packs for soursop, freeze-dried mango, passion fruit powder and purée do not exist |
