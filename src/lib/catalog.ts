@@ -290,6 +290,12 @@ const RPACK = (family: FamilySlug, file: string, en: string, vi: string): Catalo
   alt: { en: `Packaging concept render: ${en}`, vi: `Hình render bao bì ý tưởng: ${vi}` },
   kind: "concept-pack",
 });
+/** Source-derived crop of an owner-supplied studio image — no pack, no label. */
+const STUDIO = (family: FamilySlug, file: string, en: string, vi: string): CatalogImage => ({
+  src: `/images/catalog/${family}/studio/${file}.webp`,
+  alt: { en: en[0].toUpperCase() + en.slice(1), vi: vi[0].toUpperCase() + vi.slice(1) },
+  kind: "studio",
+});
 
 export const RANGE_IMAGES: Partial<Record<string, CatalogImage[]>> = {
   "coconut-milk-cream": [
@@ -309,6 +315,26 @@ export const RANGE_IMAGES: Partial<Record<string, CatalogImage[]>> = {
   "birds-nest-instant": [
     RPACK("birds-nest", "instant-birds-nest-sachet-concept-pack", "instant bird's nest in a 10 g serving sachet", "yến ăn liền trong gói 10 g"),
     RPACK("birds-nest", "instant-birds-nest-carton-concept-pack", "instant bird's nest in a carton of 10 × 10 g sachets", "yến ăn liền trong hộp 10 gói 10 g"),
+  ],
+  "fruit-soft-dried": [
+    RPACK("fruit", "soft-dried-mango-pouch-concept-pack", "soft-dried mango in a 500 g pouch", "xoài sấy dẻo trong túi 500 g"),
+    STUDIO("fruit", "soft-dried-soursop-studio", "dried soursop pieces in a wooden bowl beside a halved soursop", "mãng cầu sấy trong bát gỗ bên quả mãng cầu bổ đôi"),
+  ],
+  "fruit-freeze-dried": [
+    STUDIO("fruit", "freeze-dried-mango-studio", "freeze-dried mango cubes in a bowl", "xoài sấy thăng hoa dạng hạt lựu trong bát"),
+  ],
+  "fruit-concentrate-powder": [
+    RPACK("fruit", "passion-fruit-concentrate-bib-concept-pack", "passion fruit concentrate in a 20 kg bag-in-box carton", "chanh dây cô đặc trong thùng bag-in-box 20 kg"),
+    STUDIO("fruit", "passion-fruit-powder-studio", "passion fruit powder in a bowl beside a halved passion fruit", "bột chanh dây trong bát bên quả chanh dây bổ đôi"),
+  ],
+  "fruit-frozen-puree": [
+    STUDIO("fruit", "passion-fruit-puree-studio", "passion fruit purée in a bowl with whole and halved passion fruit", "puree chanh dây trong bát cùng chanh dây nguyên quả và bổ đôi"),
+  ],
+  "nsb-nuts": [
+    STUDIO("nuts-spices-botanicals", "cashew-kernels-studio", "whole cashew kernels with black peppercorns and star anise", "nhân hạt điều nguyên cùng hạt tiêu đen và hoa hồi"),
+  ],
+  "nsb-spices": [
+    STUDIO("nuts-spices-botanicals", "star-anise-studio", "whole star anise on a wooden surface", "hoa hồi nguyên cánh trên mặt gỗ"),
   ],
 };
 for (const range of CATALOG_RANGES) {

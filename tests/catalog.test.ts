@@ -153,6 +153,13 @@ test("range images are distinct, optimised, inventoried and never borrowed acros
       assert.doesNotMatch(image.alt.en + image.alt.vi, /\bWH(CO|BN|FR)\d/, "range alt text never names an unconfirmed code");
     }
   }
+  // Every non-coffee range has a visual, except the documented OEM gap.
+  const TEXT_ONLY = ["birds-nest-oem"];
+  for (const range of CATALOG_RANGES.filter((r) => r.family !== "coffee")) {
+    if (TEXT_ONLY.includes(range.id)) assert.equal(range.images, undefined, `${range.id} stays text-only`);
+    else assert.ok(range.images?.length, `${range.id} has a range image`);
+  }
+  assert.ok(INVENTORY.includes("birds-nest-oem") || INVENTORY.includes("Concentrate, extract, powder & blends (OEM)"));
   for (const family of ["coconut", "birds-nest"] as const) {
     const lineup = FAMILY_LINEUP[family];
     assert.ok(lineup && fs.existsSync(path.join("public", lineup.src)), `${family} line-up`);

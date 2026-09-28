@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { pick, type CatalogImage, type CatalogRange, type CatalogSku } from "@/lib/catalog";
 import { rfqHref } from "@/lib/rfq-links";
-import { cn } from "@/lib/utils";
+import { SkuGallery } from "@/components/catalog/sku-gallery";
 
 /** Small visible label for editorial (non-packshot) imagery. */
 export function ImageBadge({ children }: { children: React.ReactNode }) {
@@ -93,6 +93,9 @@ export function RangeCard({
     conceptBadge: string;
     studioBadge: string;
     editorialBadge: string;
+    galleryLabel: string;
+    /** "Show image {index}" */
+    showImage: string;
   };
 }) {
   const badge = (kind: CatalogImage["kind"]) =>
@@ -100,20 +103,16 @@ export function RangeCard({
   return (
     <article className="flex w-full flex-col overflow-hidden rounded-lg border border-border bg-card">
       {range.images && range.images.length > 0 && (
-        <div className={cn("grid gap-px border-b border-border bg-border", range.images.length > 1 && "grid-cols-2")}>
-          {range.images.map((image) => (
-            <div key={image.src} className="relative aspect-[4/3] bg-card">
-              <Image
-                src={image.src}
-                alt={pick(image.alt, locale)}
-                fill
-                sizes={range.images!.length > 1 ? "(min-width: 1024px) 13rem, 50vw" : "(min-width: 1024px) 26rem, 100vw"}
-                className="object-cover"
-              />
-              <ImageBadge>{badge(image.kind)}</ImageBadge>
-            </div>
-          ))}
-        </div>
+        // One full-width image at a time (with its own badge), thumbnails to
+        // switch — packs stay legible instead of shrinking side by side.
+        <SkuGallery
+          images={range.images.map((image) => ({ src: image.src, alt: pick(image.alt, locale), badge: badge(image.kind) }))}
+          label={`${pick(range.name, locale)} — ${labels.galleryLabel}`}
+          showLabel={labels.showImage}
+          priority={false}
+          sizes="(min-width: 1024px) 26rem, (min-width: 640px) 50vw, 100vw"
+          embedded
+        />
       )}
       <div className="flex flex-1 flex-col p-6">
       <h3 className="font-serif text-lg font-semibold text-foreground">{pick(range.name, locale)}</h3>

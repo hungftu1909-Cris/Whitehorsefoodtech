@@ -14,25 +14,38 @@ export function SkuGallery({
   images,
   label,
   showLabel,
+  priority = true,
+  sizes = "(min-width: 1024px) 40rem, 100vw",
+  embedded,
 }: {
   images: { src: string; alt: string; badge: string }[];
   label: string;
   /** "Show image {index}" with {index} to be replaced. */
   showLabel: string;
+  /** Page-hero galleries are the LCP; galleries inside cards are not. */
+  priority?: boolean;
+  sizes?: string;
+  /** Flush inside a card: no outer frame, thumbnails padded. */
+  embedded?: boolean;
 }) {
   const [active, setActive] = useState(0);
   const current = images[active];
 
   return (
     <div role="group" aria-label={label}>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-muted">
+      <div
+        className={cn(
+          "relative aspect-[4/3] overflow-hidden bg-muted",
+          embedded ? "border-b border-border" : "rounded-lg border border-border"
+        )}
+      >
         <Image
           key={current.src}
           src={current.src}
           alt={current.alt}
           fill
-          priority={active === 0}
-          sizes="(min-width: 1024px) 40rem, 100vw"
+          priority={priority && active === 0}
+          sizes={sizes}
           className="object-cover"
         />
         <span className="absolute bottom-2 left-2 rounded-full border border-border/60 bg-background/90 px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
@@ -40,7 +53,7 @@ export function SkuGallery({
         </span>
       </div>
       {images.length > 1 && (
-        <div className="mt-3 flex gap-3">
+        <div className={cn("flex gap-3", embedded ? "px-6 pt-4" : "mt-3")}>
           {images.map((image, i) => (
             <button
               key={image.src}

@@ -83,6 +83,47 @@ origin wording is listed as an open claim for owner confirmation.
 | Concentrate, extract, powder & blends (OEM) | — (text-only card) | none | — | Concept / no official label | No source shows these forms; a crop of the Drive "Yến 2" photo showed dates, honey and prepared nest, which would misrepresent OEM formats, so it was rejected |
 | Family hero, 2nd image | `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | `01_category_studio/bird_s_nest_lineup_square_3000.jpg` | `aae4a637232dbf60` | Source label (line-up) | box + carton |
 
+## Fruit — range level (no confirmed codes on the site)
+
+Source zip: packshot JPEGs exist only for WHFR001 (mango, soft-dried) and
+WHFR002 (pineapple, soft-dried); the other 19 packs are GLB models. GLBs
+were rendered with `<model-viewer>` in headless Chrome (textures embedded,
+label untouched, ivory ground, front three-quarter), then framed like the
+JPEG packs. Neutral crops come from the owner's Drive image `Trái cây
+2.png` (1536×1024, SHA-256 `31c885e0a3480591…`), a different photograph
+from the family hero (`Trái cây.jpg`). No family line-up is shown: the
+source line-up features jackfruit and dragon fruit, which are not in the
+CEO brief ranges. Family hero stays the single studio image.
+
+| Range → product | Public file | Source | Source SHA-256 (16) | Label status | Why |
+|---|---|---|---|---|---|
+| Soft-dried → mango | `public/images/catalog/fruit/packs/soft-dried-mango-pouch-concept-pack.webp` | `WHITEHORSE_04_FRUIT/02_sku_packshots_ivory/01_whfr001_s15_500_g_professional_front34_2400.jpg` | `4c34ccecd71730b2` | Source label | only mango pack with a packshot; no "Buyer sample" |
+| Soft-dried → soursop | `public/images/catalog/fruit/studio/soft-dried-soursop-studio.webp` | `Trái cây 2.png` crop (980,60)–(1520,465), 540×405 | `31c885e0a3480591` | Source-derived composition (no label) | no soursop pack exists |
+| Freeze-dried → mango | `public/images/catalog/fruit/studio/freeze-dried-mango-studio.webp` | `Trái cây 2.png` crop (530,75)–(990,420), 460×345 | `31c885e0a3480591` | Source-derived composition (no label) | no freeze-dried mango pack exists (jackfruit/dragon fruit packs are outside the brief) |
+| Concentrate & powder → passion fruit concentrate | `public/images/catalog/fruit/packs/passion-fruit-concentrate-bib-concept-pack.webp` | GLB `WHITEHORSE_04_FRUIT/04_3d_glb/25_whfr006_s13_20_kg_industrial.glb` (label reads "Passion Fruit Concentrate") | `23ac565952b3d2ac` | Source label (rendered from source 3D) | 20 kg BIB matches the brief's aseptic pack |
+| Concentrate & powder → passion fruit powder | `public/images/catalog/fruit/studio/passion-fruit-powder-studio.webp` | `Trái cây 2.png` crop (1060,550)–(1520,895), 460×345 | `31c885e0a3480591` | Source-derived composition (no label) | the source "Fruit Powder" pack prints "SKU TBD" and shows no fruit |
+| Frozen purée → passion fruit purée | `public/images/catalog/fruit/studio/passion-fruit-puree-studio.webp` | `Trái cây 2.png` crop (500,530)–(1020,920), 520×390 | `31c885e0a3480591` | Source-derived composition (no label) | no frozen purée pack exists |
+
+Fruit sources not used: WHFR002 pineapple, WHFR003 jackfruit, WHFR004
+banana, WHFR005 dragon fruit (not in the brief — would imply available
+products); WHFR003 jackfruit pack also illustrates a soursop (label/art
+mismatch); "Fruit Powder" `sku_tbd` packs print "SKU TBD"; WHFR006 250–500
+ml sample bottle (label faces away at every source angle, "Buyer sample");
+WHFR006 180–200 kg drum (same product as the BIB).
+
+## Nuts, spices & botanicals — range level
+
+**No source zip exists for this family.** Neutral crops only, no packs:
+
+| Range → product | Public file | Source | Source SHA-256 (16) | Label status | Why |
+|---|---|---|---|---|---|
+| Nuts → cashew kernels | `public/images/catalog/nuts-spices-botanicals/studio/cashew-kernels-studio.webp` | Drive `Hạt quế hồi.jpg` crop (240,300)–(740,675), 500×375 | `8f0b4fe9870d26ef` | Source-derived composition (no label) | tight crop on the kernels; the family hero shows the full composition |
+| Spices → star anise | `public/images/catalog/nuts-spices-botanicals/studio/star-anise-studio.webp` | CEO brief `Đề xuất chỉnh sửa Website 4.docx` image2.png crop (440,540)–(800,810), 360×270 | `d1251224b2d386d9` | Source-derived composition (no label) | the only region of that board with confirmed spices only; the rest shows cardamom, cloves, allspice, fenugreek and mace (not confirmed) and a generator watermark |
+
+Rejected: a black-pepper crop from `Hạt quế hồi.jpg` (280×210, still shows
+cashew — too small and ambiguous); Drive `HẠt điều.jpg` (cashew apple on
+the tree — not the kernel product).
+
 ## Not used, and why
 
 | Files | Reason |
@@ -99,11 +140,19 @@ origin wording is listed as an open claim for owner confirmation.
 | `01_category_studio` family shots and 16:9 heroes | Family visuals stay text-free studio images (Phase 3 brief); only the square line-ups are used, as a labelled second gallery image. |
 | `Claude Code.html` + `_files` | Saved web page, not image source material. |
 
-## Gaps (no image generated)
+## Coverage and gaps
 
-No image-generation tool was available in this session, so no new studio
-images were created. Ranges keep their text-led cards (by design they
-carry no imagery); family visuals keep the owner's Drive studio images.
-To add SKU imagery for coconut, bird's nest, fruit or nuts & spices, the
-owner must first confirm the codes and pack text (then this table gets
-new rows), or supply text-free studio photography per range.
+| Family | Ranges with a distinct visual | Label status mix | Gaps |
+|---|---|---|---|
+| Coffee | 9/9 confirmed codes (+ editorial second image) | Source label | — |
+| Coconut | 3/3 ranges, 5 product visuals + line-up | Source label | — |
+| Bird's nest | 2/3 ranges, 3 product visuals + line-up | Source label | OEM range (concentrate/extract/powder/blends): no source |
+| Fruit | 4/4 ranges, 6 product visuals | Source label (2) · source-derived (4) | Packs for soursop, freeze-dried mango, passion fruit powder and purée do not exist |
+| Nuts, spices & botanicals | 2/2 ranges, 2 visuals | Source-derived (2) | No packs; no standalone pepper or cinnamon image |
+
+No image-generation tool was available in this session, so no new images
+were generated; every gap above stays text-only or uses a neutral crop
+rather than borrowing another product's image. To close them, the owner
+can supply (a) packshots/GLBs for the missing products, or (b) text-free
+studio photos per product (OEM bird's nest formats, black pepper,
+cinnamon).

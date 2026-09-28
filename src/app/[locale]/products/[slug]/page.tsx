@@ -97,6 +97,8 @@ export default async function ProductFamilyPage({
     conceptBadge: tc("conceptPackBadge"),
     studioBadge: tp("studioBadge"),
     editorialBadge: tc("editorialBadge"),
+    galleryLabel: tc("galleryLabel"),
+    showImage: tc("showImage", { index: "{index}" }),
   };
   const badgeFor = (kind: string) =>
     kind === "concept-pack" ? tc("conceptPackBadge") : kind === "studio" ? tp("studioBadge") : tc("editorialBadge");

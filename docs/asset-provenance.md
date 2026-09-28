@@ -101,14 +101,16 @@ wording) are no longer referenced by any code
 in this branch; delete them before Production so they are not publicly
 reachable by URL.
 
-## Range packaging concept renders — coconut, bird's nest (added 2026-09-28)
+## Range visuals — coconut, bird's nest, fruit, nuts & spices (added 2026-09-28)
 
-Same source folder and label rule as the coffee renders below. Files under
-`public/images/catalog/coconut/packs/` and
-`public/images/catalog/birds-nest/packs/`, with per-file source, hash,
-label status and range mapping in `docs/image-inventory.md`. Shown only at
-range level (no confirmed codes) with "Concept packaging" / "Bao bì ý
-tưởng"; the family-page line-up carries the concept-packaging note.
+Packs: `public/images/catalog/{coconut,birds-nest,fruit}/packs/` — same
+source folder and label rule as the coffee renders below (the fruit BIB is
+rendered from the source GLB). Neutral crops:
+`public/images/catalog/{fruit,nuts-spices-botanicals}/studio/` — from the
+owner's Drive images and the CEO brief DOCX. Per-file source, hash, label
+status and range mapping: `docs/image-inventory.md`. Shown only at range
+level (no confirmed codes) with "Concept packaging" / "Bao bì ý tưởng" or
+"Studio representation" / "Hình ảnh studio minh họa".
 
 ## Coffee packaging concept renders (added 2026-09-28)
 
