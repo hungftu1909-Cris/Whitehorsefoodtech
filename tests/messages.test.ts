@@ -164,11 +164,11 @@ test("positioning is the five-family platform, not coffee-only", () => {
   assert.match(String(get(en as Json, "about.hero.subtitle")), /premium B2B ingredient platform connecting farmers and processors more directly/);
 });
 
-test("public concepts use the Phase 1 names", () => {
+test("public navigation retains the approved concepts while page headlines stay concise", () => {
   assert.equal(get(en as Json, "nav.certifications"), "Quality & Qualification");
   assert.equal(get(en as Json, "nav.process"), "How We Work");
   assert.equal(get(en as Json, "nav.clients"), "Network");
-  assert.equal(get(en as Json, "certifications.hero.title"), "Quality & supplier qualification");
+  assert.equal(get(en as Json, "certifications.hero.title"), "Evidence before claims.");
 });
 
 test("sales copy promises follow-up, not a response time", () => {

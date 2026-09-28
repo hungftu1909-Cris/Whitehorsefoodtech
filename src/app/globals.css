@@ -146,6 +146,31 @@
   }
 }
 
+/* On touch devices there is no dependable hover state, so two-view product
+   frames reveal their second image automatically. Desktop remains calm and
+   uses the deliberate hover treatment. */
+@media (hover: none) and (prefers-reduced-motion: no-preference) {
+  .dual-frame-primary,
+  .dual-frame-primary-badge {
+    animation: dual-frame-primary 8s ease-in-out infinite;
+  }
+
+  .dual-frame-secondary,
+  .dual-frame-secondary-badge {
+    animation: dual-frame-secondary 8s ease-in-out infinite;
+  }
+}
+
+@keyframes dual-frame-primary {
+  0%, 42%, 100% { opacity: 1; }
+  52%, 90% { opacity: 0; }
+}
+
+@keyframes dual-frame-secondary {
+  0%, 42%, 100% { opacity: 0; }
+  52%, 90% { opacity: 1; }
+}
+
 /* Motion is decorative only (hover zooms, colour fades); switch it off for
    visitors who ask for less. */
 @media (prefers-reduced-motion: reduce) {

@@ -618,52 +618,54 @@
   "certifications": {
     "hero": {
       "eyebrow": "Quality & supplier qualification",
-      "title": "Quality & supplier qualification",
-      "subtitle": "Certificates belong to a specific supplier, site and product scope. We assess suppliers against the requirements of your product and destination market, and share the relevant certificates per order."
+      "title": "Evidence before claims.",
+      "subtitle": "We match each requirement to a product, supplier site and destination market — then confirm the relevant evidence for the order.",
+      "imageNote": "Representative image of a supply-network processing stage. The exact supplier, site and certification scope are confirmed per request.",
+      "action": "Discuss your quality brief"
     },
     "standards": {
       "eyebrow": "What we assess",
-      "title": "Standards we check, by product and market",
-      "subtitle": "Which standards apply depends on the product and where it's going. These are the schemes we most often check during supplier assessment; which ones apply to a given supplier is confirmed per product and site."
+      "title": "Standards checked for the actual brief",
+      "subtitle": "These are common checkpoints, not blanket Whitehorse certifications. Applicability is confirmed per product and site."
     },
     "items": [
       {
         "name": "ISO 22000 / FSSC 22000",
-        "description": "A certified food safety management system — ISO 22000, FSSC 22000 or an equivalent recognized scheme — checked for the site and product scope in question."
+        "description": "Food-safety management certification checked against the relevant site and product scope."
       },
       {
         "name": "HACCP",
-        "description": "Hazard Analysis and Critical Control Point plans reviewed for the product and process being quoted."
+        "description": "HACCP plans reviewed for the product and process being quoted."
       },
       {
         "name": "Organic Certification",
-        "description": "Where a buyer needs organic product, we look for valid USDA Organic, EU Organic or equivalent certification covering that specific product and supplier."
+        "description": "Valid organic scope checked for the specific product and supplier when required."
       },
       {
         "name": "FDA Registration",
-        "description": "For US-bound orders, we check the facility's FDA food facility registration and the supplier information your importer needs for FSVP."
+        "description": "Facility registration and importer-facing supplier information checked for US-bound orders."
       }
     ],
     "sustainability": {
       "eyebrow": "Principles",
-      "title": "How we approach traceability and responsible sourcing",
-      "subtitle": "The principles that guide how we develop and work with our supplier network.",
+      "title": "Four working principles",
+      "subtitle": "A concise operating layer for traceability, supplier development and order control.",
       "pillars": [
         {
           "title": "Traceability agreed per order",
-          "description": "The origin, supplier and lot information a buyer needs is agreed in the order documents, so quality questions can be taken back to the source."
+          "description": "Origin, supplier and lot information are agreed in the order documents."
         },
         {
           "title": "Long-term supplier relationships",
-          "description": "We aim for durable relationships with suppliers and cooperatives, built on transparent pricing rather than one-off spot purchases."
+          "description": "We build durable relationships with suppliers and cooperatives."
         },
         {
           "title": "Environmental responsibility",
-          "description": "We prefer suppliers who invest in resource-efficient processing, reduced packaging waste and responsible farming practices in their sourcing regions."
+          "description": "We favour resource-efficient processing and responsible farming practices."
         },
         {
           "title": "Quality against specification",
-          "description": "Approved samples and written specifications are the reference for each order; testing scope and COA are agreed in the contract. See How We Work for detail."
+          "description": "Approved samples and written specifications remain the order reference."
         }
       ]
     },
@@ -684,38 +686,40 @@
   "process": {
     "hero": {
       "eyebrow": "How we work",
-      "title": "How we work: from requirement to container",
-      "subtitle": "Whitehorse coordinates suppliers, testing laboratories and logistics partners around your specification. Here's what that looks like, step by step."
+      "title": "From a written brief to coordinated delivery.",
+      "subtitle": "One visible workflow connects specification, supplier matching, approval, quality, documentation and logistics.",
+      "imageNote": "Representative image of a supply-network logistics stage. Final loading method and shipment terms are confirmed per order.",
+      "action": "Start with your brief"
     },
     "steps": [
       {
         "title": "Requirement & specification",
-        "description": "We start from your application, specification, volume, destination market and certification needs — and put them in writing."
+        "description": "Application, specification, volume, market and certification needs are recorded."
       },
       {
         "title": "Supplier matching & qualification",
-        "description": "We shortlist suppliers from our network whose product, site and documentation fit the request. Qualification is specific to product, site and market, and we tell you when a proposed supplier is still in assessment."
+        "description": "Suitable product, site and documentation capabilities are shortlisted."
       },
       {
         "title": "Sampling & approval",
-        "description": "Reference samples are prepared for your evaluation. The sample you approve becomes the reference for the order."
+        "description": "The approved sample becomes the commercial reference for the order."
       },
       {
         "title": "Quality control",
-        "description": "Testing scope, laboratory and COA requirements are agreed per order. Third-party pre-shipment inspection can be arranged on request."
+        "description": "Testing, COA and any third-party inspection are agreed per order."
       },
       {
         "title": "Packing & documentation",
-        "description": "Products are packed to the agreed specification. Export documents — certificate of origin, phytosanitary and fumigation certificates, commercial documents — are prepared with our documentation partners and checked before loading."
+        "description": "Packing and the required export document set are checked before loading."
       },
       {
         "title": "Shipping & delivery",
-        "description": "Loading and shipping are coordinated with logistics partners to the agreed Incoterm, with updates from port of loading to port of destination."
+        "description": "Logistics are coordinated to the agreed Incoterm and shipment milestones."
       }
     ],
     "factory": {
       "title": "Partner facilities",
-      "subtitle": "Production takes place at supplier and partner facilities, which we assess for the specific product and market you need. We share the relevant site information and certificates with buyers per order. OEM, ODM and OBM projects are carried out with suitable partner facilities, subject to product, facility and market confirmation."
+      "subtitle": "Production takes place at assessed supplier and partner facilities. Site information, certification scope and OEM/ODM/OBM suitability are confirmed for the specific product and market."
     },
     "cta": {
       "title": "Have a specific process or documentation question?",
@@ -725,23 +729,25 @@
   "clients": {
     "hero": {
       "eyebrow": "Network",
-      "title": "A network on both sides of the trade",
-      "subtitle": "Whitehorse works with Vietnamese supplier organisations — cooperatives, processors and growing groups — at different stages of engagement and assessment, and with buyers across more than ten markets."
+      "title": "Vietnam supply. Global buyer conversations.",
+      "subtitle": "We connect screened Vietnamese supply capabilities with buyer requirements across Asia, Europe, the Middle East, North America and Oceania.",
+      "imageNote": "Representative images of sourcing and logistics stages across the network; they do not identify a specific contracted site or shipment.",
+      "action": "Join the supplier network"
     },
-    "regionsTitle": "Markets with active buyer relationships and conversations",
+    "regionsTitle": "Markets in the current conversation map",
     "regions": "Russia, Japan, Qatar, Israel, South Korea, China, the United States, Canada, Australia, Germany, Italy, France, Belgium and the Netherlands.",
     "network": {
       "current": {
         "tag": "Current",
         "stat": "10+",
         "statLabel": "Markets with active buyer relationships and conversations",
-        "description": "Relationships and commercial conversations with buyers across Asia, Europe, the Middle East, North America and Oceania."
+        "description": "Active buyer relationships and commercial conversations across five regions."
       },
       "suppliers": {
         "tag": "Current",
         "stat": "50+",
         "statLabel": "Screened suppliers",
-        "description": "A network of 50+ suppliers screened by product capability, facility and market requirements. Qualification is specific to product, site and market — not every supplier holds every certificate or is approved for every market."
+        "description": "Screened by product capability, facility and market fit; final qualification remains request-specific."
       }
     },
     "cta": {
