@@ -35,7 +35,11 @@ export function SiteFooter() {
               {tf("quickLinksTitle")}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {[{ href: "/about", key: "about" as const }, ...MAIN_NAV.filter((i) => !i.hasChildren && i.key !== "about")].map(
+              {[
+                { href: "/about", key: "about" as const },
+                { href: "/documents", key: "documents" as const },
+                ...MAIN_NAV.filter((i) => !i.hasChildren && i.key !== "about"),
+              ].map(
                 (item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="cursor-pointer text-primary-foreground/80 hover:text-primary-foreground">

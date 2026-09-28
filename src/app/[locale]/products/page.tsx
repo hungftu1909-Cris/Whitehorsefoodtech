@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
+import { CommercialDocuments } from "@/components/sections/commercial-documents";
 import { FilterGrid } from "@/components/catalog/filter-grid";
 import { RangeCard } from "@/components/catalog/cards";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
@@ -29,6 +30,7 @@ export default async function ProductsPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "products" });
   const tcat = await getTranslations({ locale, namespace: "catalog" });
+  const td = await getTranslations({ locale, namespace: "documents.library" });
   const categories = PRODUCT_CATEGORIES.map((category) => ({
     ...category,
     family: category.slug as FamilySlug,
@@ -104,6 +106,7 @@ export default async function ProductsPage({
                   labels={{
                     familyLabel: category.name,
                     formats: tcat("formatsLabel"),
+                    generalSpecLabel: tcat("generalSpecLabel"),
                     specify: tcat("specifyLabel"),
                     request: tcat("requestRange"),
                     indicative: tcat("indicativeLabel"),
@@ -125,6 +128,27 @@ export default async function ProductsPage({
           {tcat("perRequestNote")}
         </p>
       </section>
+
+      <CommercialDocuments
+        labels={{
+          eyebrow: td("eyebrow"),
+          title: td("title"),
+          subtitle: td("subtitle"),
+          brochure: {
+            title: td("brochure.title"),
+            description: td("brochure.description"),
+            meta: td("brochure.meta"),
+            cta: td("brochure.cta"),
+          },
+          profile: {
+            title: td("profile.title"),
+            description: td("profile.description"),
+            meta: td("profile.meta"),
+            cta: td("profile.cta"),
+          },
+          note: td("note"),
+        }}
+      />
 
       <CtaSection
         title={t("sampleCta.title")}

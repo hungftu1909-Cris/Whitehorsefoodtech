@@ -1,6 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ArrowRight, FileText } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -14,6 +16,8 @@ import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { FAMILY_LINEUP, familyImage } from "@/lib/family-images";
 import { SkuGallery } from "@/components/catalog/sku-gallery";
 import {
+  DEFINED_SKU_COUNTS,
+  definedCodesFor,
   findRange,
   PACKAGING_OPTIONS,
   pick,
@@ -75,6 +79,8 @@ export default async function ProductFamilyPage({
 
   const ranges = rangesFor(family);
   const skus = skusFor(family);
+  const definedCount = DEFINED_SKU_COUNTS[family];
+  const definedCodes = definedCodesFor(family);
   const hero = familyImage(family);
   const name = t("name");
 
@@ -90,6 +96,7 @@ export default async function ProductFamilyPage({
   });
   const rangeLabels = {
     formats: tc("formatsLabel"),
+    generalSpecLabel: tc("generalSpecLabel"),
     specify: tc("specifyLabel"),
     request: tc("requestRange"),
     indicative: tc("indicativeLabel"),
@@ -155,7 +162,7 @@ export default async function ProductFamilyPage({
           <p className="mt-2 text-sm font-medium text-accent">{t("tagline")}</p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">{t("description")}</p>
           <p className="mt-4 text-xs text-muted-foreground">
-            {skus.length > 0 && <>{tc("codesCount", { count: skus.length })} · </>}
+            {tc("codesCount", { count: definedCount })} · {" "}
             {tc("rangesCount", { count: ranges.length })}
           </p>
           <RequestActions family={family} labels={actionLabels} className="mt-7" />
@@ -189,6 +196,40 @@ export default async function ProductFamilyPage({
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tp("studioNote")}</p>
           )}
           {lineup && <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{tc("conceptPackNote")}</p>}
+        </div>
+      </section>
+
+      <section id="sku-portfolio" className="border-y border-primary-foreground/10 bg-primary text-primary-foreground">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+          <div>
+            <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+              <FileText className="size-4" aria-hidden="true" />
+              {tc("portfolioEyebrow")}
+            </p>
+            <h2 className="mt-3 font-serif text-2xl font-semibold text-balance md:text-3xl">
+              {tc("portfolioTitle", { count: definedCount })}
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-primary-foreground/75">
+              {tc("portfolioSubtitle")}
+            </p>
+          </div>
+          <div>
+            <ul className="flex flex-wrap gap-2" aria-label={tc("portfolioCodesLabel")}>
+              {definedCodes.map((code) => (
+                <li key={code} className="rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-3 py-1.5 font-mono text-xs tracking-wide">
+                  {code}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/75">{tc("generalSpecLead")}</p>
+            <Link
+              href={rfqHref({ family, intent: "spec-sheet" })}
+              className="mt-4 inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-accent hover:underline"
+            >
+              {tc("generalSpecCta")}
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </section>
 

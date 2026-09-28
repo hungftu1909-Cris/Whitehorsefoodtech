@@ -13,6 +13,7 @@
     "productsBirdsNest": "Nguyên liệu Yến sào",
     "productsFruit": "Nguyên liệu Trái cây",
     "productsNutsSpicesBotanicals": "Hạt, Gia vị & Thảo mộc",
+    "documents": "Tài liệu",
     "certifications": "Chất lượng & Thẩm định",
     "process": "Cách làm việc",
     "clients": "Mạng lưới",
@@ -515,11 +516,18 @@
     "breadcrumbLabel": "Đường dẫn",
     "confirmedTitle": "Trang chi tiết SKU",
     "confirmedSubtitle": "Chín SKU cà phê hiện có chi tiết công khai theo mã. Danh mục đã xác định rộng hơn được tổ chức theo dòng; khả năng cung ứng, thông số cuối cùng và phạm vi COA được xác nhận theo từng yêu cầu.",
+    "portfolioEyebrow": "Danh mục đã xác định",
+    "portfolioTitle": "{count} mã SKU cốt lõi trong nhóm này",
+    "portfolioSubtitle": "Các mã này xác định danh mục Whitehorse. Chúng không hàm ý hàng có sẵn, một nhà cung cấp cố định hay tự động sẵn sàng xuất khẩu; các trang chi tiết công khai theo mã đang được mở rộng theo từng nhóm.",
+    "portfolioCodesLabel": "Các mã SKU đã xác định",
+    "generalSpecLabel": "Thông số chung",
+    "generalSpecLead": "Các thông số bên dưới là khung tham chiếu chung, không phải một cấu hình cố định cho mọi nhu cầu. Hãy cho chúng tôi biết giá trị, ứng dụng, thị trường đích, sản lượng, chứng nhận và bao bì bạn cần; chúng tôi sẽ ghép đúng nhà cung cấp và xác nhận thông số cuối cùng cùng bạn.",
+    "generalSpecCta": "Cho chúng tôi biết thông số bạn cần",
     "rangesTitle": "Dòng tìm nguồn & phát triển theo yêu cầu",
     "rangesSubtitle": "Các dạng sản phẩm rộng hơn chúng tôi có thể tìm nguồn hoặc phát triển theo yêu cầu, với nhà cung cấp có sản phẩm, cơ sở và hồ sơ phù hợp thông số của bạn.",
     "rangeLabel": "Dòng",
     "formatsLabel": "Dạng",
-    "specifyLabel": "Thông số bạn chỉ định",
+    "specifyLabel": "Các trường thông số người mua cần xác định",
     "applicationsLabel": "Ứng dụng",
     "filterLabel": "Lọc theo dòng",
     "filterAll": "Tất cả",
@@ -530,18 +538,18 @@
     "noResults": "Không có kết quả phù hợp. Hãy xóa bộ lọc, hoặc cho chúng tôi biết nhu cầu của bạn qua yêu cầu.",
     "viewDetails": "Xem chi tiết",
     "requestSample": "Yêu cầu mẫu",
-    "requestSpec": "Yêu cầu thông số",
+    "requestSpec": "Gửi thông số cần thiết",
     "requestQuote": "Yêu cầu báo giá",
-    "requestRange": "Yêu cầu dòng này",
+    "requestRange": "Cho chúng tôi biết thông số bạn cần",
     "editorialBadge": "Hình ảnh biên tập minh họa",
     "conceptPackBadge": "Bao bì ý tưởng",
     "conceptPackNote": "Hình render bao bì ý tưởng. Chữ trên nhãn chỉ mang tính minh họa — bao bì, nhãn và thông số cuối cùng được xác nhận với nhà cung cấp hoặc đơn vị đóng gói cho từng đơn hàng. Không phải ảnh chụp hàng có sẵn.",
-    "perRequestNote": "Việc liệt kê một sản phẩm hoặc dòng sản phẩm không có nghĩa là hàng có sẵn hoặc sẵn sàng xuất khẩu. Khả năng cung ứng, thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được xác nhận theo từng yêu cầu. Phương án OEM, ODM và OBM tùy thuộc sản phẩm, cơ sở đối tác và thị trường.",
-    "referenceTitle": "Thông số tham chiếu điển hình",
-    "referenceDisclaimer": "Thông số tham chiếu điển hình — thông số cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng.",
-    "indicativeLabel": "Thông số tham khảo",
+    "perRequestNote": "Toàn bộ thông số hiển thị là tham chiếu chung. Việc liệt kê sản phẩm hoặc dòng sản phẩm không có nghĩa là hàng có sẵn hay sẵn sàng xuất khẩu. Hãy cho chúng tôi biết thông số bạn cần; khả năng cung ứng, giá trị cuối cùng, phương pháp thử, hồ sơ và phạm vi COA sẽ được xác nhận cho yêu cầu đó. Phương án OEM, ODM và OBM tùy thuộc sản phẩm, cơ sở đối tác và thị trường.",
+    "referenceTitle": "Khung thông số chung",
+    "referenceDisclaimer": "Đây là các thông số tham chiếu chung, không phải thông số cố định của mọi nhà cung cấp hoặc lô hàng. Hãy cho chúng tôi biết thông số bạn cần; giá trị cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất cho yêu cầu của bạn.",
+    "indicativeLabel": "Thông số tham chiếu chung",
     "moreDetail": "Thêm chi tiết thông số",
-    "indicativeNote": "Giá trị tham khảo — được xác nhận theo bảng thông số của nhà cung cấp cho từng đơn hàng.",
+    "indicativeNote": "Chỉ là tham chiếu chung — giá trị cuối cùng được xác nhận theo bảng thông số của nhà cung cấp được chọn cho từng yêu cầu.",
     "paramHeader": "Chỉ tiêu",
     "referenceHeader": "Tham chiếu điển hình",
     "methodHeader": "Phương pháp / căn cứ",
@@ -573,6 +581,31 @@
     "stickyLabel": "Yêu cầu mẫu hoặc báo giá",
     "galleryLabel": "Hình ảnh sản phẩm",
     "showImage": "Xem ảnh {index}"
+  },
+  "documents": {
+    "hero": {
+      "eyebrow": "Tài liệu thương mại",
+      "title": "Tài liệu sản phẩm và doanh nghiệp dành cho người mua.",
+      "subtitle": "Tải brochure Whitehorse hiện tại. Company Profile chi tiết sẽ xuất hiện tại đây ngay khi phiên bản được phê duyệt hoàn tất."
+    },
+    "library": {
+      "eyebrow": "Trung tâm tải tài liệu",
+      "title": "Tài liệu thương mại sẵn sàng chia sẻ.",
+      "subtitle": "Sử dụng các tài liệu này để đánh giá ban đầu, sau đó gửi cho chúng tôi sản phẩm, ứng dụng và thông số dự án của bạn cần.",
+      "brochure": {
+        "title": "Brochure sản phẩm Whitehorse",
+        "description": "Tổng quan ngắn gọn về Whitehorse, năm nhóm nguyên liệu và danh mục sản phẩm hiện tại để giới thiệu với người mua.",
+        "meta": "PDF · 4 trang",
+        "cta": "Tải brochure"
+      },
+      "profile": {
+        "title": "Company Profile Whitehorse",
+        "description": "Hồ sơ năng lực doanh nghiệp chi tiết sẽ được phát hành sau khi phiên bản chính thức được phê duyệt. Nút tải sẽ tự động hoạt động khi tệp được bổ sung.",
+        "meta": "Sắp cập nhật",
+        "cta": "Sắp có"
+      },
+      "note": "Brochure và các thông số trên website là tài liệu tham chiếu thương mại chung. Thông số cuối cùng, nhà cung cấp, cơ sở, phạm vi chứng nhận, khả năng cung ứng, bao bì và bộ chứng từ được xác nhận theo từng yêu cầu."
+    }
   },
   "certifications": {
     "hero": {

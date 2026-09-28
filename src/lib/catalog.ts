@@ -37,6 +37,26 @@ export const DEFINED_SKU_COUNTS = {
 
 export const DEFINED_SKU_TOTAL = Object.values(DEFINED_SKU_COUNTS).reduce((total, count) => total + count, 0);
 
+export const DEFINED_SKU_PREFIXES = {
+  coffee: "WHCF",
+  coconut: "WHCO",
+  "birds-nest": "WHBN",
+  fruit: "WHFR",
+  "nuts-spices-botanicals": "WHNSP",
+} as const satisfies Record<FamilySlug, string>;
+
+/**
+ * The complete code directory for the CEO-confirmed 29-SKU portfolio.
+ * Non-coffee codes are intentionally presented at family/range level until
+ * their individual public specification pages are approved.
+ */
+export function definedCodesFor(family: FamilySlug): string[] {
+  const prefix = DEFINED_SKU_PREFIXES[family];
+  return Array.from({ length: DEFINED_SKU_COUNTS[family] }, (_, index) =>
+    `${prefix}${String(index + 1).padStart(3, "0")}`
+  );
+}
+
 export type CatalogImage = {
   src: string;
   alt: Localized;

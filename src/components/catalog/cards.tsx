@@ -90,6 +90,7 @@ export function RangeCard({
   locale: string;
   labels: {
     formats: string;
+    generalSpecLabel: string;
     specify: string;
     request: string;
     indicative: string;
@@ -142,7 +143,10 @@ export function RangeCard({
             </li>
           ))}
         </ul>
-        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+        <p className="mt-4 text-[0.65rem] font-semibold tracking-[0.14em] text-accent uppercase">
+          {labels.generalSpecLabel}
+        </p>
+        <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
           <span className="font-medium text-foreground/80">{labels.specify}:</span>{" "}
           {keySpecs.map((f) => pick(f, locale)).join(" · ")}
         </p>
