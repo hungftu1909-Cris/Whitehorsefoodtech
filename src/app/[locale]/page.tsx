@@ -1,13 +1,17 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
+import { OperatingSystem } from "@/components/home/operating-system";
 import { ProofStrip } from "@/components/home/proof-strip";
 import { ProductsPreview } from "@/components/home/products-preview";
-import { PlatformMap } from "@/components/home/platform-map";
 import { EvidenceLayer } from "@/components/home/evidence-layer";
+import { PlatformMap } from "@/components/home/platform-map";
 import { SplitCta } from "@/components/sections/split-cta";
 
-// Six server-rendered sections tell one platform story. Interactive product
-// filtering lives on /products, keeping the homepage fast and indexable.
+// Server-rendered platform story, in a fixed order: promise → operating
+// standard → current proof → current portfolio (+ custom sourcing) →
+// evidence and technology → buyer / supplier entry. The operating standard
+// deliberately precedes the catalogue. Interactive product filtering lives
+// on /products, keeping the homepage fast and indexable.
 export default async function Home({
   params,
 }: {
@@ -20,10 +24,11 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <OperatingSystem />
       <ProofStrip />
       <ProductsPreview />
-      <PlatformMap />
       <EvidenceLayer />
+      <PlatformMap />
       <SplitCta
         title={t("title")}
         subtitle={t("subtitle")}

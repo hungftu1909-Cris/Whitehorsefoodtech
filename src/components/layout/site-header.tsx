@@ -6,7 +6,7 @@ import { Logo } from "./logo";
 import { LocaleSwitcher, type BlogSlugMap } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
-import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
+import { CUSTOM_SOURCING_HREF, MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
 import { buttonVariants } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -54,6 +54,9 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                       }
                     />
                   </li>
+                  <li className="px-2 pt-2 pb-1 text-[0.65rem] font-semibold tracking-[0.16em] text-muted-foreground uppercase">
+                    {t("currentPortfolio")}
+                  </li>
                   {PRODUCT_CATEGORIES.map((c) => (
                     <li key={c.slug}>
                       <NavigationMenuLink
@@ -65,6 +68,15 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                       />
                     </li>
                   ))}
+                  <li>
+                    <NavigationMenuLink
+                      render={
+                        <Link href={CUSTOM_SOURCING_HREF} className="cursor-pointer font-medium text-accent">
+                          {t("customSourcing")}
+                        </Link>
+                      }
+                    />
+                  </li>
                   <li className="mt-1 border-t border-border pt-1">
                     <NavigationMenuLink
                       render={

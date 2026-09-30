@@ -60,17 +60,21 @@ test("family visuals keep only the concept-pack disclosure", () => {
   assert.match(detail, /badgeFor\(image\.kind\)/, "detail frame labels concept packaging when applicable");
 });
 
-test("homepage is six server-rendered platform sections, without page-wide reveal hydration", () => {
+test("homepage is seven server-rendered platform sections, without page-wide reveal hydration", () => {
   const page = fs.readFileSync("src/app/[locale]/page.tsx", "utf8");
-  const order = ["<Hero", "<ProofStrip", "<ProductsPreview", "<PlatformMap", "<EvidenceLayer", "<SplitCta"].map((tag) => page.indexOf(tag));
-  assert.ok(order.every((pos, i) => pos > -1 && (i === 0 || pos > order[i - 1])), "Hero → proof → families → platform → evidence → split CTA");
-  assert.equal((page.match(/^ {6}<[A-Z]/gm) ?? []).length, 6, "exactly six sections");
+  const order = ["<Hero", "<OperatingSystem", "<ProofStrip", "<ProductsPreview", "<EvidenceLayer", "<PlatformMap", "<SplitCta"].map((tag) => page.indexOf(tag));
+  assert.ok(
+    order.every((pos, i) => pos > -1 && (i === 0 || pos > order[i - 1])),
+    "Hero → operating standard → proof → portfolio → evidence → technology → split CTA"
+  );
+  assert.equal((page.match(/^ {6}<[A-Z]/gm) ?? []).length, 7, "exactly seven sections");
   for (const file of fs.readdirSync("src/components/home")) {
     assert.doesNotMatch(fs.readFileSync(`src/components/home/${file}`, "utf8"), /^"use client"/m, `${file} is a Server Component`);
   }
   assert.equal(fs.existsSync("src/components/ui/reveal.tsx"), false, "no IntersectionObserver reveal wrapper");
   const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
-  assert.equal((hero.match(/^\s+priority\s*$/gm) ?? []).length, 1, "the hero image is the only priority image");
+  // One priority prop, and it only applies to the first (LCP) image.
+  assert.equal((hero.match(/^\s+priority(=\{i === 0\})?\s*$/gm) ?? []).length, 1, "the hero image is the only priority image");
   const preview = fs.readFileSync("src/components/home/products-preview.tsx", "utf8");
   assert.doesNotMatch(preview, /priority/, "family cards below the fold stay lazy");
 });

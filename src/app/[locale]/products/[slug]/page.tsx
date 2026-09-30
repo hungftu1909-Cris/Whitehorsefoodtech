@@ -147,10 +147,7 @@ export default async function ProductFamilyPage({
       {/* Compact hero: copy + actions left, imagery right */}
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 pt-8 pb-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
         <div>
-          <Badge
-            variant={family === "coffee" ? "default" : "outline"}
-            className={family === "coffee" ? "bg-accent text-accent-foreground" : "text-muted-foreground"}
-          >
+          <Badge variant="outline" className="text-muted-foreground">
             {t("status")}
           </Badge>
           <h1 className="mt-4 font-serif text-4xl leading-[1.1] font-semibold tracking-tight text-balance text-foreground md:text-5xl">

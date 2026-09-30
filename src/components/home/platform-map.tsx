@@ -1,102 +1,93 @@
-import { ArrowRight, BrainCircuit, Check, CircleDashed } from "lucide-react";
+import { ArrowRight, BrainCircuit, Check, CircleDashed, Route } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 
-type Stage = {
-  number: string;
-  title: string;
-  body: string;
-  status: "current" | "building";
-};
+type Status = "current" | "building" | "roadmap";
+type Node = { label: string; status: Status };
 
-/** A truthful platform diagram: what operates today and what is being built. */
+const STATUS_ICON = { current: Check, building: CircleDashed, roadmap: Route } as const;
+
+/**
+ * Future-facing platform layers, after the operating standard, portfolio
+ * and evidence. Every layer shows its delivery status (claim registry
+ * row 29), matching the Quality page architecture.
+ */
 export function PlatformMap() {
   const t = useTranslations("home.platform");
-  const stages = t.raw("stages") as Stage[];
-  const technologyNodes = t.raw("technology.nodes") as string[];
+  const nodes = t.raw("technology.nodes") as Node[];
+
+  const statusBadge = (status: Status) => {
+    const Icon = STATUS_ICON[status];
+    return (
+      <span
+        className={cn(
+          "inline-flex items-center gap-1.5 text-[0.62rem] font-semibold tracking-[0.14em] uppercase",
+          status === "current" ? "text-accent" : "text-primary-foreground/60"
+        )}
+      >
+        <Icon className="size-3" aria-hidden="true" />
+        {t(`statusLabels.${status}`)}
+      </span>
+    );
+  };
 
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:48px_48px]"
+        className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:48px_48px]"
       />
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-20">
           <div>
             <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">{t("eyebrow")}</p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight font-semibold tracking-tight text-balance md:text-5xl">
+            <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl">
               {t("title")}
             </h2>
             <p className="mt-5 max-w-lg leading-relaxed text-primary-foreground/75">{t("subtitle")}</p>
-            <div className="mt-8 flex flex-wrap gap-3 text-xs">
-              <span className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-3 py-1.5 text-primary-foreground">
-                <Check className="size-3.5 text-accent" aria-hidden="true" />
-                {t("current")}
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 px-3 py-1.5 text-primary-foreground/75">
-                <CircleDashed className="size-3.5" aria-hidden="true" />
-                {t("building")}
-              </span>
-            </div>
           </div>
 
-          <ol className="relative grid gap-px overflow-hidden rounded-xl border border-primary-foreground/15 bg-primary-foreground/15 sm:grid-cols-2">
-            {stages.map((stage) => (
-              <li key={stage.number} className="group relative flex min-h-56 flex-col bg-primary/95 p-6 md:p-7">
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-mono text-xs tracking-[0.18em] text-accent">{stage.number}</span>
-                  <span className="inline-flex items-center gap-1.5 text-[0.65rem] font-semibold tracking-[0.14em] text-primary-foreground/60 uppercase">
-                    {stage.status === "current" ? (
-                      <Check className="size-3 text-accent" aria-hidden="true" />
-                    ) : (
-                      <CircleDashed className="size-3" aria-hidden="true" />
-                    )}
-                    {stage.status === "current" ? t("currentShort") : t("buildingShort")}
-                  </span>
-                </div>
-                <h3 className="mt-auto pt-12 font-serif text-xl font-semibold">{stage.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">{stage.body}</p>
-              </li>
-            ))}
-          </ol>
+          <div className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-6">
+            {statusBadge("building")}
+            <h3 className="mt-3 font-serif text-xl font-semibold">{t("workspace.title")}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">{t("workspace.body")}</p>
+          </div>
         </div>
 
         <div className="mt-10 rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-5 sm:p-6 md:p-8">
-          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.16em] text-accent uppercase">
-                <CircleDashed className="size-3.5" aria-hidden="true" />
-                {t("technology.status")}
-              </span>
-              <h3 className="mt-3 font-serif text-2xl font-semibold md:text-3xl">{t("technology.title")}</h3>
-            </div>
-            <p className="max-w-2xl text-sm leading-relaxed text-primary-foreground/70">
-              {t("technology.body")}
-            </p>
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <h3 className="font-serif text-2xl font-semibold md:text-3xl">{t("technology.title")}</h3>
+            <p className="max-w-2xl text-sm leading-relaxed text-primary-foreground/70">{t("technology.body")}</p>
           </div>
 
           <ol className="mt-7 grid gap-2 sm:grid-cols-2 lg:grid-cols-6">
-            {technologyNodes.map((node, i) => (
+            {nodes.map((node, i) => (
               <li
-                key={node}
-                className="flex min-h-20 items-center gap-3 rounded-md border border-primary-foreground/15 bg-primary/70 px-4 py-3 text-sm leading-snug text-primary-foreground/80"
+                key={node.label}
+                className="flex min-h-24 flex-col justify-between gap-3 rounded-md border border-primary-foreground/15 bg-primary/70 px-4 py-3 text-sm leading-snug text-primary-foreground/85"
               >
-                <span className="font-mono text-xs text-accent">{String(i + 1).padStart(2, "0")}</span>
-                <span>{node}</span>
+                <span className="flex items-center justify-between gap-2">
+                  <span className="font-mono text-xs text-accent">{String(i + 1).padStart(2, "0")}</span>
+                  {statusBadge(node.status)}
+                </span>
+                <span>{node.label}</span>
               </li>
             ))}
           </ol>
 
-          <div className="mt-3 flex items-center gap-3 rounded-md border border-accent/35 bg-accent/10 px-4 py-3 text-sm font-semibold text-primary-foreground">
-            <BrainCircuit className="size-5 shrink-0 text-accent" aria-hidden="true" />
-            {t("technology.ai")}
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-md border border-accent/35 bg-accent/10 px-4 py-3 text-sm font-semibold text-primary-foreground">
+            <span className="flex items-center gap-3">
+              <BrainCircuit className="size-5 shrink-0 text-accent" aria-hidden="true" />
+              {t("technology.ai")}
+            </span>
+            {statusBadge("roadmap")}
           </div>
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-primary-foreground/15 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-3xl text-xs leading-relaxed text-primary-foreground/60">{t("note")}</p>
-          <Link href="/process" className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent hover:underline">
+          <Link href="/certifications" className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent hover:underline">
             {t("cta")}
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>

@@ -52,56 +52,76 @@
 }
 
 :root {
-  /* Whitehorse Foodtech brand tokens — see design-system/whitehorse-foodtech/MASTER.md */
+  /* Whitehorse Foodtech brand tokens — see design-system/whitehorse-foodtech/MASTER.md.
+     Institutional surfaces are deep forest / black olive on warm ivory with a
+     restrained bronze; Whitehorse brown stays as the secondary heritage tone
+     (platform repositioning, 2026-09-30). */
   --background: #fbf8f1;
-  --foreground: #241505;
+  --foreground: #1b221d;
   --card: #ffffff;
-  --card-foreground: #241505;
+  --card-foreground: #1b221d;
   --popover: #ffffff;
-  --popover-foreground: #241505;
-  --primary: #3b2314;
-  --primary-foreground: #fbf7ee;
+  --popover-foreground: #1b221d;
+  --primary: #1f2e25;
+  --primary-foreground: #f8f5ec;
   --secondary: #6b4a2e;
   --secondary-foreground: #fbf7ee;
-  --muted: #f1e7d6;
-  --muted-foreground: #4a3c2c;
-  --accent: #b8863a;
-  --accent-foreground: #241505;
+  --muted: #efeadd;
+  --muted-foreground: #474a3f;
+  /* Darker bronze so accent text (eyebrows, links) passes AA on ivory and
+     muted surfaces; forest surfaces switch to a lighter bronze below. */
+  --accent: #7d5f27;
+  --accent-foreground: #fbf8f1;
   --success: #4b6043;
   --success-foreground: #fbf7ee;
   --destructive: #b3261e;
   --destructive-foreground: #fbf7ee;
-  --border: #e4d6bc;
-  --input: #e4d6bc;
-  --ring: #b8863a;
-  --chart-1: #3b2314;
-  --chart-2: #b8863a;
+  --border: #e3dccb;
+  --input: #e3dccb;
+  --ring: #7d5f27;
+  --chart-1: #1f2e25;
+  --chart-2: #7d5f27;
   --chart-3: #6b4a2e;
   --chart-4: #4b6043;
-  --chart-5: #8a7256;
+  --chart-5: #8a7a5c;
   --radius: 0.5rem;
   --sidebar: #fbf7ee;
-  --sidebar-foreground: #241505;
-  --sidebar-primary: #3b2314;
-  --sidebar-primary-foreground: #fbf7ee;
-  --sidebar-accent: #f1e7d6;
-  --sidebar-accent-foreground: #241505;
-  --sidebar-border: #e4d6bc;
-  --sidebar-ring: #b8863a;
+  --sidebar-foreground: #1b221d;
+  --sidebar-primary: #1f2e25;
+  --sidebar-primary-foreground: #f8f5ec;
+  --sidebar-accent: #efeadd;
+  --sidebar-accent-foreground: #1b221d;
+  --sidebar-border: #e3dccb;
+  --sidebar-ring: #7d5f27;
+}
+
+/* Inverse (primary) surfaces — proof strip, technology, footer, CTA bands —
+   carry a lighter bronze so accent text and accent buttons keep AA contrast
+   on deep forest (and a darker one on the light dark-mode primary). */
+.bg-primary:not(a, button) {
+  --accent: #c9a462;
+  --accent-foreground: #1b221d;
+  --ring: #c9a462;
+}
+
+.dark .bg-primary:not(a, button) {
+  --accent: #5b4418;
+  --accent-foreground: #f1e7d6;
+  --ring: #5b4418;
 }
 
 .dark {
-  --background: #1c120a;
+  --background: #111612;
   --foreground: #f1e7d6;
-  --card: #241708;
+  --card: #18201a;
   --card-foreground: #f1e7d6;
-  --popover: #241708;
+  --popover: #18201a;
   --popover-foreground: #f1e7d6;
   --primary: #e8c88a;
-  --primary-foreground: #1c120a;
+  --primary-foreground: #111612;
   --secondary: #3a2818;
   --secondary-foreground: #f1e7d6;
-  --muted: #2c1e10;
+  --muted: #212a23;
   /* Brightened from #ddcda9 — on low-quality/uncalibrated screens, dark
      backgrounds crush toward gray, eating into the effective contrast even
      when the computed WCAG ratio looks fine. Extra headroom here keeps body
@@ -124,11 +144,11 @@
   --chart-3: #c9b795;
   --chart-4: #7f9873;
   --chart-5: #a98a5c;
-  --sidebar: #241708;
+  --sidebar: #18201a;
   --sidebar-foreground: #f1e7d6;
   --sidebar-primary: #e8c88a;
-  --sidebar-primary-foreground: #1c120a;
-  --sidebar-accent: #2c1e10;
+  --sidebar-primary-foreground: #111612;
+  --sidebar-accent: #212a23;
   --sidebar-accent-foreground: #f1e7d6;
   --sidebar-border: color-mix(in oklab, #f1e7d6 15%, transparent);
   --sidebar-ring: #d4a24e;

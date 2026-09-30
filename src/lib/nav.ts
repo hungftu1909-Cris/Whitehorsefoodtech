@@ -29,6 +29,14 @@ export const PRODUCT_CATEGORIES = [
   },
 ];
 
+// PRODUCT_CATEGORIES is the *current* portfolio, not the platform boundary.
+// Briefs for any other Vietnamese ingredient use the same RFQ with the
+// family preset to "Other / not listed" (whitelisted by parseRfqPrefill).
+export const CUSTOM_SOURCING_HREF = {
+  pathname: "/rfq" as const,
+  query: { product: "other", intent: "quote" },
+};
+
 export const MAIN_NAV = [
   { href: "/about", key: "about" as const },
   { href: "/products", key: "products" as const, hasChildren: true },

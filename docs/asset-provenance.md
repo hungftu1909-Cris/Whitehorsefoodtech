@@ -21,7 +21,7 @@ coffee) with **no text, logos, seals or claims**.
 
 | Public file | Embedded source (DOCX `word/media/`) | Source SHA-256 | Derived SHA-256 | Processing | Intended use | Licence status |
 |---|---|---|---|---|---|---|
-| `public/images/catalog/coffee/coffee-ground-whole-instant.jpg` | `image1.jpg` (2048×1365) | `04c8f8f5072661370da3fc1eff7c72dbb58caba22b8a19146f902678140edb12` | `f8c9eec0001046e349e679de3d9c53ad7df18af51feab256b0aca4d2c9ea0025` | Resized to 1600×1066, JPEG q80 progressive | Coffee family hero; roasted/instant range and SKU galleries | User-supplied; **production rights confirmation pending** |
+| `public/images/catalog/coffee/coffee-ground-whole-instant.jpg` | `image1.jpg` (2048×1365) | `04c8f8f5072661370da3fc1eff7c72dbb58caba22b8a19146f902678140edb12` | `f8c9eec0001046e349e679de3d9c53ad7df18af51feab256b0aca4d2c9ea0025` | Resized to 1600×1066, JPEG q80 progressive | Coffee family secondary image; roasted/instant range and SKU galleries (homepage hero until 2026-09-30) | User-supplied; **production rights confirmation pending** |
 | `public/images/catalog/coffee/coffee-roasted-ground-instant-spoons.jpg` | `image2.jpg` (1600×1068) | `25596b840df03b98470fa8fa82796f02336ef66ba54c679e5d8553f9d92e288a` | `40945f1ec9cb1232317124c07637c94d679961820808b1a146df6a7c49740b2a` | Re-encoded 1600×1068, JPEG q80 progressive | Roasted/ground/instant range and SKU galleries | User-supplied; **production rights confirmation pending** |
 | `public/images/catalog/coffee/coffee-green-roasted-ground-bowls.jpg` | `image3.jpg` (2048×1365) | `e13e514397e214ca4d2e589279e95b71e55bde11bbd0f2b9107c934acbc1519b` | `e66463d5ebe916c4b5ed8a047279e4c3280fb24652348c1a2c449d997734c5a0` | Resized to 1600×1066, JPEG q80 progressive | Green coffee range and SKU galleries | User-supplied; **production rights confirmation pending** |
 | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` | `image4.jpg` (2048×1365) | `7361b182a8df0113e4a2d491f22f1cec7b4a32f129f19a561005bb298bb1b55b` | `c304ff1e397bf22eb50ae79ff8ba80a790506d6ac8dfe07d0cd48673f79dd0c4` | Resized to 1600×1066, JPEG q80 progressive | Green/roasted range and SKU galleries | User-supplied; **production rights confirmation pending** |
@@ -168,11 +168,11 @@ pictured people, or handled the pictured shipment.
 
 | Public file | Source file | Derived size | Derived SHA-256 | Processing / use |
 |---|---|---|---|---|
-| `public/images/platform/quality-processing.webp` | `1.jpg` | 1200×675 | `1a06b5f57437bde9d03b8a7b1623fba33eda8953431ca53f14f7468b177c771b` | Centre crop 16:9, WebP q82; Quality hero |
+| `public/images/platform/quality-processing.webp` | `1.jpg` | 1200×675 | `1a06b5f57437bde9d03b8a7b1623fba33eda8953431ca53f14f7468b177c771b` | Centre crop 16:9, WebP q82; Quality hero; homepage hero primary image (LCP) since 2026-09-30 |
 | `public/images/platform/process-container-loading.webp` | `1.png` | 1200×675 | `32c40939c3934d36b3c88a0e428b1cc0c8e5611281561a6b6365af14ab4e5d63` | Centre crop 16:9, WebP q82; How We Work hero |
 | `public/images/platform/process-partner-facility.webp` | `4.jpg` | 1200×675 | `0c4252e96ed2f332b7330f527432ac81e50d6a1943d9d3e347590177ad343b95` | Centre crop 16:9, WebP q82; partner-facility section |
-| `public/images/platform/network-coffee-harvest.webp` | `THU GOM CAFE.jpg` | 1200×675 | `90d84593a2f414d48ce5c2164dba84a270a377542dbb7b5494a84fada51d7740` | Centre crop 16:9, WebP q82; Network hero |
-| `public/images/platform/network-air-freight.webp` | `ảnh máy bay.jpg` | 1200×675 | `90081b405ef9d7fd77a7b62f1900c6a90b1b225278553e25ddc5469e1feace9f` | Centre crop 16:9, WebP q82; Network inset |
+| `public/images/platform/network-coffee-harvest.webp` | `THU GOM CAFE.jpg` | 1200×675 | `90d84593a2f414d48ce5c2164dba84a270a377542dbb7b5494a84fada51d7740` | Centre crop 16:9, WebP q82; Network hero; homepage hero origin tile since 2026-09-30 |
+| `public/images/platform/network-air-freight.webp` | `ảnh máy bay.jpg` | 1200×675 | `90081b405ef9d7fd77a7b62f1900c6a90b1b225278553e25ddc5469e1feace9f` | Centre crop 16:9, WebP q82; Network inset; homepage hero market tile since 2026-09-30 |
 
 **Licence status:** owner-supplied; photographer/source and commercial-use
 rights still need to be recorded before Production replacement or reuse
@@ -181,11 +181,41 @@ outside this website.
 **Licence status:** owner-supplied renders of Whitehorse's own concept
 packaging; tool/designer and rights to be recorded before Production.
 
+## Homepage hero composition (decided 2026-09-30, branch `feat/platform-repositioning`)
+
+The platform brief removed the coffee-only hero (`coffee-ground-whole-instant.jpg`)
+without replacing it with another single family, a five-product collage,
+carousel, video or generated imagery. Audit of the existing owner-supplied
+and provenance-recorded assets:
+
+| Candidate | Decision | Reason |
+|---|---|---|
+| `platform/quality-processing.webp` | **Used — primary (LCP)** | Real processing stage (freeze-drying trays, hygiene clothing); no logos or text; not tied to one family |
+| `platform/network-coffee-harvest.webp` | **Used — small "Origin" tile** | Only Vietnamese origin/harvest image on file. It shows coffee cherries, so it is kept small and is one of three equal-intent stages, not the lead |
+| `platform/network-air-freight.webp` | **Used — small "Global markets" tile** | Market connection without a branded shipment; generic unmarked cargo |
+| `platform/process-partner-facility.webp` | Not used in hero | Visible third-party equipment brand ("BUHLER") and coffee-sack print ("KHO 03", green coffee) — third-party branding and coffee-led |
+| `platform/process-container-loading.webp` | Not used in hero | Kept on How We Work; a second logistics image would duplicate the market tile |
+| Catalog / studio / concept-pack images | Not used in hero | Product imagery belongs below the platform proposition (current portfolio section) |
+| `hero.jpg`, `about.jpg`, `factory.jpg` | Not used | Generated concept artwork; about/factory carry unsupported claims |
+
+The three images render as one `<figure>` with a visible caption:
+"Representative stages across Vietnam's ingredient supply network —
+processing, origin and air freight. Not Whitehorse-owned facilities or a
+specific shipment." (VI equivalent in `home.hero.imageCaption`). The tile
+labels (Processing / Origin / Global markets) name the stage, not a claim.
+
+**Asset gap:** no single truthful master image shows Vietnamese origin +
+qualification/evidence + global connection across several ingredients. A
+commissioned real photo shoot is needed (see the PR description): sample
+review / specification check with real documents, multi-ingredient origin
+(e.g. coconut, fruit, spices at source) and export packing at a partner
+site — with written permission from each pictured site and person.
+
 ## Pre-existing imagery
 
 | File | Status |
 |---|---|
-| `public/images/hero.jpg` | Generated/concept artwork, no text. Rendered (homepage). Licence/provenance confirmation pending (claim registry row 15). |
+| `public/images/hero.jpg` | Generated/concept artwork, no text. **Not rendered** (no code reference). Licence/provenance confirmation pending (claim registry row 15). |
 | `public/images/products/*-card.jpg`, `*-detail.jpg` | Concept mock-ups with packaging wording ("100% natural", "organic & natural"). **Retired 2026-09-28 — not rendered** (replaced by `FAMILY_IMAGES`). |
 | `public/images/about.jpg`, `public/images/factory.jpg` | **Not rendered** — the artwork contains unsupported claims. Kept on disk only. The About page uses the family mosaic instead. |
 | `public/images/blog/*` | Not in this branch (user-owned, untracked in the original worktree). |

@@ -46,25 +46,38 @@ requirement). Contrast checked against WCAG AA (4.5:1 body text).
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-primary` | `#3B2314` | Dark roast brown — headers, primary buttons, nav bg |
-| `--color-primary-foreground` | `#FBF7EE` | Text/icons on primary |
-| `--color-secondary` | `#6B4A2E` | Mid brown — secondary surfaces, hover states |
-| `--color-accent` | `#B8863A` | Bronze/gold — CTA highlights, links, active states, icons |
-| `--color-accent-foreground` | `#241505` | Text on accent |
-| `--color-background` | `#FBF8F1` | Page background (warm cream, matches logo bg) |
-| `--color-foreground` | `#241505` | Body text (near-black warm brown, not pure black) |
-| `--color-card` | `#FFFFFF` | Card surfaces |
-| `--color-card-foreground` | `#241505` | Text on cards |
-| `--color-muted` | `#F1E7D6` | Muted section backgrounds, tags |
-| `--color-muted-foreground` | `#4A3C2C` | Secondary/caption text (darkened 2026-08 for stronger contrast) |
-| `--color-border` | `#E4D6BC` | Hairline borders/dividers |
-| `--color-success` | `#4B6043` | Organic/certification badges |
-| `--color-destructive` | `#B3261E` | Form errors |
-| `--color-ring` | `#B8863A` | Focus ring (accent) |
+**Platform repositioning (2026-09-30):** Whitehorse is a Vietnam premium
+ingredient platform, not a coffee brand. Institutional surfaces moved from
+dark-roast brown to deep forest / black olive on warm ivory with a
+restrained bronze; Whitehorse brown is retained as the secondary heritage
+colour (logo, `--secondary`). Product-family colours may appear only as
+restrained category accents.
 
-Dark mode (optional, used for footer / optional toggle): background
-`#1C120A`, foreground `#F1E7D6`, card `#241708`, keep the same accent
-`#B8863A` (already passes 4.5:1 on dark backgrounds).
+| Token | Hex | Usage |
+|---|---|---|
+| `--color-primary` | `#1F2E25` | Deep forest — primary buttons, proof/technology/footer bands (was `#3B2314`) |
+| `--color-primary-foreground` | `#F8F5EC` | Text/icons on primary |
+| `--color-secondary` | `#6B4A2E` | Whitehorse heritage brown — secondary surfaces |
+| `--color-accent` | `#7D5F27` | Restrained bronze — eyebrows, links, icons, focus (≥ 4.5:1 on ivory, muted and white) |
+| `--color-accent-foreground` | `#FBF8F1` | Text on accent |
+| `--color-background` | `#FBF8F1` | Page background (warm ivory, matches logo bg) |
+| `--color-foreground` | `#1B221D` | Body text (black olive, not pure black) |
+| `--color-card` | `#FFFFFF` | Card surfaces |
+| `--color-card-foreground` | `#1B221D` | Text on cards |
+| `--color-muted` | `#EFEADD` | Muted section backgrounds, tags |
+| `--color-muted-foreground` | `#474A3F` | Secondary/caption text (7.5:1 on muted) |
+| `--color-border` | `#E3DCCB` | Hairline borders/dividers |
+| `--color-success` | `#4B6043` | "Operating now" / current-status badges |
+| `--color-destructive` | `#B3261E` | Form errors |
+| `--color-ring` | `#7D5F27` | Focus ring (accent) |
+
+Inside any `.bg-primary` surface (not the primary buttons themselves) the accent switches to a lighter bronze
+`#C9A462` (6:1 on `#1F2E25`) with `#1B221D` text on accent fills; see
+`src/app/globals.css`.
+
+Dark mode (optional toggle): background `#111612`, foreground `#F1E7D6`,
+card `#18201A`, accent `#DDB066`; the light-gold dark-mode primary uses a
+dark bronze `#5B4418` accent inside `.bg-primary`.
 
 Do not use pure black (`#000`) or the generic navy/blue the tool's
 auto-search defaulted to — off-brand.

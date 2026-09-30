@@ -92,6 +92,11 @@ test("the scanner still catches the claims Phase 1 removed", () => {
     "30–50 export-qualified suppliers (2026 objective)",
     "Mục tiêu 2026: 30-50 nhà cung cấp",
     "dự kiến trong 2026",
+    "We can supply every premium ingredient from Vietnam",
+    "Source all Vietnamese ingredients through one partner",
+    "Cung ứng mọi nguyên liệu Việt Nam",
+    "50+ qualified suppliers",
+    "50+ nhà cung cấp đạt chuẩn",
   ];
   for (const claim of removed) {
     assert.ok(scanText(claim).length > 0, `not caught: ${claim}`);
@@ -120,7 +125,8 @@ test("proof markers: 50+ suppliers and 10+ markets are current; 3,000+ / 10,000+
     assert.equal(String(get(catalog as Json, "clients.network.suppliers.stat")), "50+");
     // Homepage proof strip: current facts only, no vision figures.
     const proof = (get(catalog as Json, "home.proof.items") as { value: string }[]).map((i) => i.value);
-    assert.deepEqual(proof, ["50+", "10+", "5"]);
+    assert.deepEqual(proof, ["29", "50+", "10+"]);
+    assert.match(String(get(catalog as Json, "home.proof.tag")), tags.current, `${locale}: homepage proof carries the current tag`);
     assert.doesNotMatch(JSON.stringify(get(catalog as Json, "home")), /(3[.,]000|10[.,]000)\+/);
   }
   // The old 30–50 / 2026 supplier objective is retired everywhere, and the
@@ -137,7 +143,8 @@ test("proof markers: 50+ suppliers and 10+ markets are current; 3,000+ / 10,000+
 
 test("OEM/ODM/OBM is stated as partner-delivered capability, never universal", () => {
   for (const [catalog, partners] of [[en, /suitable manufacturing partners/], [vi, /đối tác sản xuất phù hợp/]] as const) {
-    assert.match(String(get(catalog as Json, "home.hero.subtitle")), partners);
+    const execution = (get(catalog as Json, "home.operating.stages") as { body: string }[])[3].body;
+    assert.match(execution, partners);
     assert.match(String(get(catalog as Json, "home.value.modelsBody")), partners);
     assert.match(String(get(catalog as Json, "home.value.note")), /MOQ/);
     assert.match(String(get(catalog as Json, "rfq.form.modelNote")), /OEM, ODM/);
@@ -156,11 +163,29 @@ test("markets are described as relationships, never as shipments or service", ()
   assert.match(String(get(en as Json, "clients.regions")), /Russia, Japan, Qatar, Israel, South Korea, China, the United States, Canada, Australia, Germany, Italy, France, Belgium and the Netherlands/);
 });
 
-test("positioning is the five-family platform, not coffee-only", () => {
+test("positioning is a Vietnam ingredient platform: not coffee-led and not bounded by five families", () => {
   for (const catalog of [en, vi]) {
     const heroes = [get(catalog as Json, "meta.title"), get(catalog as Json, "meta.description"), get(catalog as Json, "home.hero.title")].join(" ");
     assert.doesNotMatch(heroes, /coffee ingredients for|nguyên liệu cà phê việt nam cho/i);
+    // The hero and gateway-level promise never fixes the platform to a
+    // family count or to coffee; the count belongs to the current portfolio.
+    // (Image alt text may still describe what a photo shows, e.g. a harvest.)
+    const hero = ["eyebrow", "title", "subtitle", "standard", "portfolioLabel"]
+      .map((key) => JSON.stringify(get(catalog as Json, `home.hero.${key}`)))
+      .join(" ");
+    assert.doesNotMatch(hero, /\b(5|five) (families|ingredient families)|\b(5|năm) nhóm|coffee|cà phê/i);
+    assert.doesNotMatch(hero, /Building|Đang xây dựng/, "the prime hero card states a current capability");
+    // The current portfolio is labelled as current, with an open second path.
+    assert.ok(String(get(catalog as Json, "home.productsPreview.custom.cta")).length > 0);
   }
+  assert.equal(get(en as Json, "home.hero.title"), "Premium ingredients from Vietnam, qualified around your specification.");
+  assert.equal(get(en as Json, "home.hero.standard.status"), "Operating now");
+  assert.equal(get(vi as Json, "home.hero.standard.status"), "Đang vận hành");
+  assert.equal(get(en as Json, "home.productsPreview.eyebrow"), "Current portfolio");
+  assert.equal(get(vi as Json, "home.productsPreview.eyebrow"), "Danh mục hiện tại");
+  // Custom sourcing is assessed, never promised as availability.
+  assert.match(String(get(en as Json, "home.productsPreview.custom.body")), /assessed[\s\S]*confirmed before any commitment/);
+  assert.match(String(get(vi as Json, "home.productsPreview.custom.body")), /được đánh giá[\s\S]*được xác nhận trước khi có bất kỳ cam kết nào/);
   assert.match(String(get(en as Json, "about.hero.subtitle")), /premium B2B ingredient platform connecting farmers and processors more directly/);
 });
 
@@ -233,7 +258,10 @@ test("value-prop and hero copy is confident, not apologetic", () => {
     const all = leafValues(catalog as Json).map(([, v]) => v).join("\n");
     assert.doesNotMatch(all, /track record we don't have|thành tích chúng tôi chưa có|as a new company|là một công ty mới/i);
   }
-  assert.match(String(get(en as Json, "home.hero.subtitle")), /for distributors, manufacturers, foodservice groups and brands\.$/);
+  assert.equal(
+    get(en as Json, "home.hero.subtitle"),
+    "Whitehorse connects global product requirements with qualified Vietnamese sources, request-specific evidence and coordinated commercial execution."
+  );
 });
 
 test("vision and ecosystem copy stays labelled and logo-free", () => {

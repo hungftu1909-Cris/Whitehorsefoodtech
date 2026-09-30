@@ -29,7 +29,7 @@ export function EvidenceLayer() {
             {items.map((item, index) => {
               const Icon = icons[index];
               return (
-                <li key={item.title} className="rounded-xl border border-border bg-card p-6 shadow-[0_18px_50px_-40px_rgba(36,21,5,0.45)]">
+                <li key={item.title} className="rounded-xl border border-border bg-card p-6 shadow-[0_18px_50px_-40px_rgba(20,30,24,0.45)]">
                   <div className="flex items-center justify-between gap-4">
                     <span className="flex size-10 items-center justify-center rounded-full bg-muted text-accent">
                       <Icon className="size-5" aria-hidden="true" />

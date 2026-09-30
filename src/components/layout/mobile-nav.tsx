@@ -18,7 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
+import { CUSTOM_SOURCING_HREF, MAIN_NAV, PRODUCT_CATEGORIES } from "@/lib/nav";
 import { LocaleSwitcher, type BlogSlugMap } from "./locale-switcher";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { Logo } from "./logo";
@@ -64,6 +64,9 @@ export function MobileNav({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                 >
                   {t("products")}
                 </Link>
+                <p className="px-2 pt-2 text-[0.65rem] font-semibold tracking-[0.16em] text-muted-foreground uppercase">
+                  {t("currentPortfolio")}
+                </p>
                 {PRODUCT_CATEGORIES.map((c) => (
                   <Link
                     key={c.slug}
@@ -74,6 +77,13 @@ export function MobileNav({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                     {t(c.key)}
                   </Link>
                 ))}
+                <Link
+                  href={CUSTOM_SOURCING_HREF}
+                  onClick={() => setOpen(false)}
+                  className="cursor-pointer rounded-md px-2 py-2 text-sm font-medium text-accent hover:bg-muted"
+                >
+                  {t("customSourcing")}
+                </Link>
                 <Link
                   href="/packaging"
                   onClick={() => setOpen(false)}

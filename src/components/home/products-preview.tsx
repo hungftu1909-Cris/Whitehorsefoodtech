@@ -1,14 +1,20 @@
 import { useLocale, useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Compass } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { FamilyVisual } from "@/components/catalog/family-visual";
 import type { FamilySlug } from "@/lib/catalog";
 import { Badge } from "@/components/ui/badge";
-import { PRODUCT_CATEGORIES } from "@/lib/nav";
+import { CUSTOM_SOURCING_HREF, PRODUCT_CATEGORIES } from "@/lib/nav";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-/** Image-led routing to the five family pages; detail lives there. */
+/**
+ * The current portfolio: every collection gets the same card, badge and
+ * weight — none is the brand. The last cell is the open path for any other
+ * Vietnamese ingredient, so the grid reads as today's focus, not the
+ * boundary (2 + 2 + 2 on tablet, 3 + 3 on desktop).
+ */
 export function ProductsPreview() {
   const t = useTranslations("home.productsPreview");
   const tc = useTranslations("catalog");
@@ -24,13 +30,12 @@ export function ProductsPreview() {
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
         </Link>
       </div>
-      {/* 5 families: 3 + 2 on desktop reads more premium than a cramped
-          5-across row, and keeps card width consistent with /products. */}
-      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-6">
-        {items.map((item, i) => {
-          const category = PRODUCT_CATEGORIES[i];
+
+      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {PRODUCT_CATEGORIES.map((category, i) => {
+          const item = items[i];
           return (
-            <li key={item.title} className={cn("flex", i < 2 ? "lg:col-span-3" : "lg:col-span-2")}>
+            <li key={category.slug} className="flex">
               <Link
                 href={`/products/${category.slug}`}
                 className="group flex w-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:shadow-lg"
@@ -43,13 +48,7 @@ export function ProductsPreview() {
                   className="border-b border-border"
                 />
                 <div className="flex flex-1 flex-col p-5">
-                  {/* Coffee is the focus category; every other family is
-                      labelled as sourced/developed on request so the grid
-                      never implies five equally ready product lines. */}
-                  <Badge
-                    variant={category.slug === "coffee" ? "default" : "outline"}
-                    className={category.slug === "coffee" ? "mb-3 bg-accent text-accent-foreground" : "mb-3 text-muted-foreground"}
-                  >
+                  <Badge variant="outline" className="mb-3 text-muted-foreground">
                     {item.status}
                   </Badge>
                   <h3 className="flex items-center justify-between gap-3 font-serif text-xl font-semibold text-foreground">
@@ -65,6 +64,24 @@ export function ProductsPreview() {
             </li>
           );
         })}
+
+        <li id="custom-sourcing" className="flex scroll-mt-24">
+          <div className="flex w-full flex-col rounded-xl border border-dashed border-accent/60 bg-muted/40 p-6 md:p-7">
+            <span className="flex size-11 items-center justify-center rounded-full border border-accent/40 text-accent">
+              <Compass className="size-5" aria-hidden="true" />
+            </span>
+            <p className="mt-6 text-[0.65rem] font-semibold tracking-[0.18em] text-accent uppercase">{t("custom.eyebrow")}</p>
+            <h3 className="mt-2 font-serif text-2xl leading-snug font-semibold text-foreground">{t("custom.title")}</h3>
+            <p className="mt-3 mb-8 text-sm leading-relaxed text-muted-foreground">{t("custom.body")}</p>
+            <Link
+              href={CUSTOM_SOURCING_HREF}
+              className={cn(buttonVariants({ size: "lg" }), "group mt-auto h-auto min-h-11 w-full cursor-pointer justify-between px-5 py-2.5 text-left whitespace-normal")}
+            >
+              {t("custom.cta")}
+              <ArrowRight className="ml-2 size-4 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </Link>
+          </div>
+        </li>
       </ul>
     </section>
   );
