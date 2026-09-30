@@ -49,7 +49,18 @@ keyed by family slug / range id / SKU code), rendered through
 | Coconut | `public/images/catalog/editorial/coconut-real-products.webp` | `public/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp` | Verified pair (concept packaging labelled) |
 | Bird's nest | `public/images/catalog/editorial/birds-nest-real-products.webp` | `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | Verified pair (concept packaging labelled) |
 | Fruit | `public/images/catalog/editorial/fruit-real-products.webp` | — | **02 missing.** `studio/fruit.jpg` was used as 02 until 2026-09-30 but is the same photograph (`Trái cây.jpg`) re-cropped — retired from use |
-| Nuts, spices & botanicals | `public/images/catalog/editorial/nuts-spices-real-products.webp` | — | **02 missing.** `studio/nuts-spices-botanicals.jpg` is the same photograph (`Hạt quế hồi.jpg`) re-cropped — retired from use |
+| Nuts, spices & botanicals | `public/images/catalog/editorial/nuts-spices-real-products.webp` | `public/images/catalog/nuts-spices-botanicals/cashew-tree-origin.webp` | Verified pair since 2026-09-30 (see below). `studio/nuts-spices-botanicals.jpg` re-crops image01 — retired from use |
+
+### Nuts family second image (added 2026-09-30)
+
+| Public file | Source | Source SHA-256 | Derived SHA-256 | Processing | Licence status |
+|---|---|---|---|---|---|
+| `public/images/catalog/nuts-spices-botanicals/cashew-tree-origin.webp` | Owner zip `Ảnh WEB-20260928T141117Z-1-001.zip` → `Ảnh WEB/HẠt điều.jpg` (2048×1366) | `82079de95b0be0f9571a43755d94ddaf48cc184b3f225949bf1a11b0ea18c899` | `03c003d703c43fd2448bc2b748596c083daf229221a6361647c7abe925ac90c4` | Centre crop to 4:3 (1821×1366 at x=114), resize 1600×1200, WebP q80 | Owner-supplied; photographer/licence to be recorded before Production |
+
+Cashew apples with their nuts on the tree — text-free, no logos; a
+different photograph from the family composition. Presented as a family
+origin image (alt says what it shows), never as a kernel lot or a WHNSB001
+product image.
 
 ### Owner-supplied product photographs (added 2026-09-28)
 

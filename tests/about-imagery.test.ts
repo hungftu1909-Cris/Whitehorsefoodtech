@@ -102,9 +102,9 @@ test("every family leads with an editorial image; second views are genuine or ab
   }
   assert.equal(familyMedia("coconut")[1].kind, "concept-pack");
   assert.equal(familyMedia("birds-nest")[1].kind, "concept-pack");
-  // Their only other family image on disk is the same photograph re-cropped.
+  // Fruit has no second family photograph that is not a re-crop or a range source.
   assert.equal(familyMedia("fruit").length, 1);
-  assert.equal(familyMedia("nuts-spices-botanicals").length, 1);
+  assert.equal(familyMedia("nuts-spices-botanicals")[1].id, "nsb-photo-cashew-tree");
 });
 
 test("family images on disk are optimised and have provenance", () => {

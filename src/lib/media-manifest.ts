@@ -72,7 +72,7 @@ const COFFEE_DOCX = "Đề xuất chỉnh sửa Website.docx";
 
 const coffeePack = <I extends string>(id: I, code: string, sha256: string, sourceFile: string, en: string, vi: string) => ({
   id,
-  src: `/images/catalog/coffee/packs/${code.toLowerCase()}-concept-pack.webp`,
+  src: `/images/catalog/coffee/packs/${id.replace(/^coffee-pack-/, "")}-concept-pack.webp`,
   alt: L(`Packaging concept render for ${code}: ${en}`, `Hình render bao bì ý tưởng cho ${code}: ${vi}`),
   kind: "concept-pack",
   family: "coffee",
@@ -156,6 +156,13 @@ const ASSET_LIST = [
     "agglomerated instant coffee in a carton of 20 × 2 g sticks", "cà phê hòa tan tạo hạt trong hộp 20 gói 2 g"),
   coffeePack("coffee-pack-whcf009", "WHCF009", "657ae3c122338b138c1ad8771642d1b299feacc9e7a1d354c6a43fb1ea1f91f7", "28_whcf009_s10_100_g_retail_front34_2400.jpg",
     "freeze-dried instant coffee in a 100 g jar", "cà phê hòa tan sấy thăng hoa trong hũ 100 g"),
+  // Coffee — second approved pack format of the same code (label untouched, code printed)
+  coffeePack("coffee-pack-whcf005-retail-box", "WHCF005", "acde368cf734564e69c55d20b201f10efa310cf9bc0571a33aafb6e6aab5c8f8", "14_whcf005_s07_10_11_g_retail_front34_2400.jpg",
+    "roasted and ground coffee in a retail box of 10 × 11 g", "cà phê rang xay trong hộp bán lẻ 10 × 11 g"),
+  coffeePack("coffee-pack-whcf006-pouch", "WHCF006", "4dd1f2c8394b3691a99fe862d6571a01ef915bd1d40040723b37be47121843d6", "33_whcf006_s25_20_g_retail_front34_2400.jpg",
+    "cold brew black coffee in a 20 g retail pouch", "cold brew cà phê đen trong túi bán lẻ 20 g"),
+  coffeePack("coffee-pack-whcf009-pouch", "WHCF009", "cfb6e3d4298bb2354479c5b509346959b87ed6cd557ee54ce24fb2defe13eb04", "29_whcf009_s15_100_g_retail_front34_2400.jpg",
+    "freeze-dried instant coffee in a 100 g retail pouch", "cà phê hòa tan sấy thăng hoa trong túi bán lẻ 100 g"),
 
   // Coconut
   {
@@ -269,6 +276,13 @@ const ASSET_LIST = [
     kind: "studio", family: "nuts-spices-botanicals", sourceFile: "Đề xuất chỉnh sửa Website 4.docx#image2.png", region: "(440,540)-(800,810)",
     sha256: "e5951c83af121a015c5dc6b2cb8fb2609f90a1a29fc008abd78de329022047aa", rights: "pending-confirmation",
   },
+  {
+    id: "nsb-photo-cashew-tree",
+    src: "/images/catalog/nuts-spices-botanicals/cashew-tree-origin.webp",
+    alt: L("Cashew apples with their nuts on the tree", "Quả điều cùng hạt điều trên cây"),
+    kind: "editorial", family: "nuts-spices-botanicals", sourceFile: "owner:Ảnh WEB/HẠt điều.jpg",
+    sha256: "03c003d703c43fd2448bc2b748596c083daf229221a6361647c7abe925ac90c4", rights: "pending-confirmation",
+  },
 ] as const satisfies readonly MediaAsset[];
 
 export type AssetId = (typeof ASSET_LIST)[number]["id"];
@@ -298,9 +312,8 @@ export const FAMILY_MEDIA: Record<FamilySlug, MediaSlot> = {
   coconut: pair("coconut-photo-composition", "coconut-pack-lineup"),
   "birds-nest": pair("birds-nest-photo-composition", "birds-nest-pack-lineup"),
   fruit: single("fruit-photo-composition",
-    "No second family-level fruit image: studio/fruit.jpg is the same photograph re-cropped; no fruit line-up covers the brief's products"),
-  "nuts-spices-botanicals": single("nsb-photo-composition",
-    "No second family-level image: studio/nuts-spices-botanicals.jpg is the same photograph re-cropped; no packaging source exists"),
+    "No second family-level fruit photograph: studio/fruit.jpg re-crops image01; Trái cây 2.png is the source of four fruit range crops; the zip family/line-up renders show 'Buyer sample', jackfruit and pineapple packs outside the brochure register"),
+  "nuts-spices-botanicals": pair("nsb-photo-composition", "nsb-photo-cashew-tree"),
 };
 
 export const RANGE_MEDIA: Record<RangeId, MediaSlot> = {
@@ -324,10 +337,10 @@ export const RANGE_MEDIA: Record<RangeId, MediaSlot> = {
   "nsb-spices": single("nsb-crop-star-anise", "Star anise only; no standalone black pepper or cinnamon image"),
 };
 
-const COFFEE_SECOND = "No second SKU-specific asset: rear panels were rejected (claims, TBD values, unverified QR); shared editorial photos are not SKU images";
-const coffeeSku = (image01: AssetId): SkuMediaSlot => ({ ...single(image01, COFFEE_SECOND), publicPage: true });
+const COFFEE_SECOND =
+  "No usable second view of this code: other formats are 'Buyer sample', 'TBD' export sacks, edge-on sticks or renders identical to another code's pack; rear panels carry claims/TBD/unverified QR";
+const coffeeSku = (image01: AssetId, gap = COFFEE_SECOND): SkuMediaSlot => ({ ...single(image01, gap), publicPage: true });
 const rangeLevel = (slot: MediaSlot): SkuMediaSlot => ({ ...slot, publicPage: false });
-const NO_REGISTER = "SKU name register not in the repository; no source pack prints this code";
 
 /**
  * All 29 defined codes. Non-coffee codes have no public page yet; their packs
@@ -338,12 +351,12 @@ export const SKU_MEDIA: Record<string, SkuMediaSlot> = {
   WHCF001: coffeeSku("coffee-pack-whcf001"),
   WHCF002: coffeeSku("coffee-pack-whcf002"),
   WHCF003: coffeeSku("coffee-pack-whcf003"),
-  WHCF004: coffeeSku("coffee-pack-whcf004"),
-  WHCF005: coffeeSku("coffee-pack-whcf005"),
-  WHCF006: coffeeSku("coffee-pack-whcf006"),
-  WHCF007: coffeeSku("coffee-pack-whcf007"),
+  WHCF004: coffeeSku("coffee-pack-whcf004", "Only other retail format (250 g pouch) is the same pouch and label as image01 — not a distinct view"),
+  WHCF005: { ...pair("coffee-pack-whcf005", "coffee-pack-whcf005-retail-box"), publicPage: true },
+  WHCF006: { ...pair("coffee-pack-whcf006", "coffee-pack-whcf006-pouch"), publicPage: true },
+  WHCF007: coffeeSku("coffee-pack-whcf007", "20 × 2 g box is visually indistinguishable from WHCF008's pack at card size; 2 g stick is edge-on; 100 g is 'Buyer sample'"),
   WHCF008: coffeeSku("coffee-pack-whcf008"),
-  WHCF009: coffeeSku("coffee-pack-whcf009"),
+  WHCF009: { ...pair("coffee-pack-whcf009", "coffee-pack-whcf009-pouch"), publicPage: true },
   WHCO001: rangeLevel(single("coconut-pack-milk-carton", "One pack render")),
   WHCO002: rangeLevel(single("coconut-pack-cream-bib", "One pack render")),
   WHCO003: rangeLevel(single("coconut-pack-desiccated-pouch", "One pack render")),
@@ -351,19 +364,19 @@ export const SKU_MEDIA: Record<string, SkuMediaSlot> = {
   WHCO005: rangeLevel(single("coconut-pack-blossom-sugar-pouch", "One pack render")),
   WHBN001: rangeLevel(pair("birds-nest-pack-instant-sachet", "birds-nest-pack-instant-carton")),
   WHBN002: rangeLevel(single("birds-nest-pack-cleaned-box", "One usable pack render")),
-  WHFR001: rangeLevel(single("fruit-pack-soft-dried-mango-pouch", "One pack render; SKU name register not in the repository")),
-  WHFR002: rangeLevel(missing("Source pack WHFR002 is pineapple, outside the brief's ranges — not used")),
-  WHFR003: rangeLevel(missing("Source pack WHFR003 is jackfruit with soursop artwork (label/art mismatch) — not used")),
-  WHFR004: rangeLevel(missing("Source pack WHFR004 is banana, outside the brief's ranges — not used")),
-  WHFR005: rangeLevel(missing("Source pack WHFR005 is dragon fruit, outside the brief's ranges — not used")),
-  WHFR006: rangeLevel(single("fruit-pack-passion-fruit-concentrate-bib", "One pack render; SKU name register not in the repository")),
-  WHFR007: rangeLevel(missing(NO_REGISTER)),
-  WHFR008: rangeLevel(missing(NO_REGISTER)),
-  WHFR009: rangeLevel(missing(NO_REGISTER)),
-  WHNSB001: rangeLevel(missing("No packaging source exists for nuts, spices & botanicals")),
-  WHNSB002: rangeLevel(missing("No packaging source exists for nuts, spices & botanicals")),
-  WHNSB003: rangeLevel(missing("No packaging source exists for nuts, spices & botanicals")),
-  WHNSB004: rangeLevel(missing("No packaging source exists for nuts, spices & botanicals")),
+  WHFR001: rangeLevel(single("fruit-pack-soft-dried-mango-pouch", "Brochure and Packaging Architecture agree: soft-dried mango. Other mango formats repeat the same pouch")),
+  WHFR002: rangeLevel(missing("Register conflict: brochure = freeze-dried mango; Packaging Architecture/zip = soft-dried pineapple. No freeze-dried mango pack exists")),
+  WHFR003: rangeLevel(missing("Brochure = soft-dried soursop; the zip WHFR003 pack is labelled jackfruit — not usable")),
+  WHFR004: rangeLevel(missing("Register conflict: brochure = passion fruit (concentrate per per-code artwork); Packaging Architecture = soft-dried banana. No matching pack")),
+  WHFR005: rangeLevel(missing("Brochure = passion fruit (purée per per-code artwork); render zip WHFR005 = dragon fruit. No matching pack")),
+  WHFR006: rangeLevel(missing("Register conflict: the concentrate BIB prints WHFR006 (Packaging Architecture), brochure lists WHFR006 as passion fruit powder. Pack shown at range level only")),
+  WHFR007: rangeLevel(missing("Not in the brochure or Packaging Architecture — code has no named product in any owner document")),
+  WHFR008: rangeLevel(missing("Not in the brochure or Packaging Architecture — code has no named product in any owner document")),
+  WHFR009: rangeLevel(missing("Not in the brochure or Packaging Architecture — code has no named product in any owner document")),
+  WHNSB001: rangeLevel(missing("Cashew kernel (brochure). No pack; only per-code label illustration (captioned WHNSP001), not used")),
+  WHNSB002: rangeLevel(missing("Black pepper (brochure). No pack; only per-code label illustration (captioned WHNSP002), not used")),
+  WHNSB003: rangeLevel(missing("Cinnamon (brochure). No pack; only per-code label illustration (captioned WHNSP003), not used")),
+  WHNSB004: rangeLevel(missing("Star anise (brochure). No pack; only per-code label illustration (captioned WHNSP004), not used")),
 };
 
 // -------------------------------------------------------------- resolvers

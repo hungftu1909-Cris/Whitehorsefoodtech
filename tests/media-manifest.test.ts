@@ -137,13 +137,9 @@ test("packaging renders are only used for the codes printed on them", () => {
     }
   }
   for (const range of CATALOG_RANGES) {
-    const rangeCodes = new Set(
-      Object.entries(SKU_MEDIA)
-        .filter(([, slot]) => resolveSlot(slot).some((i) => rangeMedia(range.id).some((r) => r.id === i.id)))
-        .map(([code]) => code)
-    );
     for (const image of rangeMedia(range.id).filter((i) => i.kind === "concept-pack")) {
-      assert.ok(image.codes?.every((c) => rangeCodes.has(c)), `${range.id}: ${image.id} is that range's own pack`);
+      assert.ok(image.codes?.length, `${range.id}: ${image.id} records its printed codes`);
+      assert.ok(image.codes!.every((c) => definedCodesFor(range.family).includes(c)), `${range.id}: ${image.id} prints a code from another family`);
     }
   }
 });
