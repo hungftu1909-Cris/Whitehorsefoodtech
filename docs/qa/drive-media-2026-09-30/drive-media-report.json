@@ -1,0 +1,332 @@
+[
+ {
+  "name": "en 1440 /products: all 13 new photos rendered and loaded",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "en 1440 /products: no duplicate image, no identical 01/02, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "en 1440 /products: photo-only frames carry no concept badge; pairs have 01/02, singles none",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "en 1440: filter chip priority preserved",
+  "ok": true,
+  "detail": "All|Coffee|Coconut|Fruit|Nuts & Spices|Bird's Nest"
+ },
+ {
+  "name": "en 1440 quick view coffee-green: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-bowls\",\"coffee-photo-green-beans-scoop\"],\"alts\":[\"Green coffee beans and ground coffee in wooden bowls on roasted beans\",\"Green coffee beans heaped on a wooden scoop in a burlap sack\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 quick view coffee-roasted: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-spoons\",\"coffee-photo-roasted-ground-bowls\"],\"alts\":[\"Roasted coffee beans in a wooden bowl with spoons of ground and instant coffee\",\"Roasted coffee beans and ground coffee in two wooden bowls\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 quick view coffee-soluble: 1 distinct loaded image(s) with alts",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-instant-granules\"],\"alts\":[\"Instant coffee granules on a wooden spoon\"],\"loaded\":true},\"toggled\":null}"
+ },
+ {
+  "name": "en 1440 quick view coffee-extract: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-concentrate-jar\",\"coffee-photo-extract-bottle\"],\"alts\":[\"Dark coffee concentrate in a glass jar beside roasted beans\",\"Liquid coffee extract in a corked glass bottle with ice and roasted beans\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 quick view coffee-cold-brew: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-cold-brew-pour\",\"coffee-photo-cold-brew-bottle\"],\"alts\":[\"Cold brew coffee poured over ice into a tall glass\",\"Cold brew coffee in a swing-top glass bottle\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 quick view coffee-single-serve: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-drip-bag-brewing\",\"coffee-photo-drip-bag-pour\"],\"alts\":[\"A drip coffee bag brewing in a glass as hot water is poured\",\"A used drip coffee bag lifted from a white cup\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 quick view birds-nest-cleaned: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"birds-nest-pack-cleaned-box\",\"birds-nest-photo-cleaned-nests\"],\"alts\":[\"Packaging concept render: cleaned edible bird's nest in a 50 g rigid box\",\"Cleaned edible bird's nests on a wooden stand\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 quick view nsb-nuts: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-photo-cashew-kernels\",\"nsb-photo-cashews-bowl\"],\"alts\":[\"Whole cashew kernels, close up\",\"Cashew kernels in a wooden bowl on a dark table\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 quick view nsb-spices: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-crop-star-anise\",\"nsb-photo-spices-still-life\"],\"alts\":[\"Whole star anise on a wooden surface\",\"Cinnamon sticks, star anise and black peppercorns on light wood\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 1440 /products/coffee: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "en 1440 /products/birds-nest: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "en 1440 /products/nuts-spices-botanicals: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "en 390 /products: all 13 new photos rendered and loaded",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "en 390 /products: no duplicate image, no identical 01/02, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "en 390 /products: photo-only frames carry no concept badge; pairs have 01/02, singles none",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "en 390: filter chip priority preserved",
+  "ok": true,
+  "detail": "All|Coffee|Coconut|Fruit|Nuts & Spices|Bird's Nest"
+ },
+ {
+  "name": "en 390 quick view coffee-green: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-bowls\",\"coffee-photo-green-beans-scoop\"],\"alts\":[\"Green coffee beans and ground coffee in wooden bowls on roasted beans\",\"Green coffee beans heaped on a wooden scoop in a burlap sack\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 quick view coffee-roasted: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-spoons\",\"coffee-photo-roasted-ground-bowls\"],\"alts\":[\"Roasted coffee beans in a wooden bowl with spoons of ground and instant coffee\",\"Roasted coffee beans and ground coffee in two wooden bowls\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 quick view coffee-soluble: 1 distinct loaded image(s) with alts",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-instant-granules\"],\"alts\":[\"Instant coffee granules on a wooden spoon\"],\"loaded\":true},\"toggled\":null}"
+ },
+ {
+  "name": "en 390 quick view coffee-extract: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-concentrate-jar\",\"coffee-photo-extract-bottle\"],\"alts\":[\"Dark coffee concentrate in a glass jar beside roasted beans\",\"Liquid coffee extract in a corked glass bottle with ice and roasted beans\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 quick view coffee-cold-brew: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-cold-brew-pour\",\"coffee-photo-cold-brew-bottle\"],\"alts\":[\"Cold brew coffee poured over ice into a tall glass\",\"Cold brew coffee in a swing-top glass bottle\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 quick view coffee-single-serve: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-drip-bag-brewing\",\"coffee-photo-drip-bag-pour\"],\"alts\":[\"A drip coffee bag brewing in a glass as hot water is poured\",\"A used drip coffee bag lifted from a white cup\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 quick view birds-nest-cleaned: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"birds-nest-pack-cleaned-box\",\"birds-nest-photo-cleaned-nests\"],\"alts\":[\"Packaging concept render: cleaned edible bird's nest in a 50 g rigid box\",\"Cleaned edible bird's nests on a wooden stand\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 quick view nsb-nuts: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-photo-cashew-kernels\",\"nsb-photo-cashews-bowl\"],\"alts\":[\"Whole cashew kernels, close up\",\"Cashew kernels in a wooden bowl on a dark table\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 quick view nsb-spices: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-crop-star-anise\",\"nsb-photo-spices-still-life\"],\"alts\":[\"Whole star anise on a wooden surface\",\"Cinnamon sticks, star anise and black peppercorns on light wood\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "en 390 /products/coffee: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "en 390 /products/birds-nest: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "en 390 /products/nuts-spices-botanicals: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "no console or page errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "vi 1440 /products: all 13 new photos rendered and loaded",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "vi 1440 /products: no duplicate image, no identical 01/02, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "vi 1440 /products: photo-only frames carry no concept badge; pairs have 01/02, singles none",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "vi 1440: filter chip priority preserved",
+  "ok": true,
+  "detail": "Tất cả|Cà phê|Dừa|Trái cây|Hạt & Gia vị|Yến sào"
+ },
+ {
+  "name": "vi 1440 quick view coffee-green: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-bowls\",\"coffee-photo-green-beans-scoop\"],\"alts\":[\"Cà phê nhân xanh và cà phê xay trong bát gỗ trên nền cà phê hạt rang\",\"Cà phê nhân xanh trên muỗng gỗ trong bao đay\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 quick view coffee-roasted: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-spoons\",\"coffee-photo-roasted-ground-bowls\"],\"alts\":[\"Cà phê hạt rang trong bát gỗ cùng thìa cà phê xay và cà phê hòa tan\",\"Cà phê hạt rang và cà phê xay trong hai bát gỗ\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 quick view coffee-soluble: 1 distinct loaded image(s) with alts",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-instant-granules\"],\"alts\":[\"Cà phê hòa tan dạng hạt trên thìa gỗ\"],\"loaded\":true},\"toggled\":null}"
+ },
+ {
+  "name": "vi 1440 quick view coffee-extract: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-concentrate-jar\",\"coffee-photo-extract-bottle\"],\"alts\":[\"Cà phê cô đặc trong hũ thủy tinh bên cà phê hạt rang\",\"Chiết xuất cà phê dạng lỏng trong chai thủy tinh nút bần cùng đá và cà phê rang\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 quick view coffee-cold-brew: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-cold-brew-pour\",\"coffee-photo-cold-brew-bottle\"],\"alts\":[\"Cà phê cold brew rót vào ly cao có đá\",\"Cà phê cold brew trong chai thủy tinh nắp gài\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 quick view coffee-single-serve: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-drip-bag-brewing\",\"coffee-photo-drip-bag-pour\"],\"alts\":[\"Túi cà phê lọc đang pha trong ly khi rót nước nóng\",\"Túi cà phê lọc được nhấc khỏi tách trắng\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 quick view birds-nest-cleaned: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"birds-nest-pack-cleaned-box\",\"birds-nest-photo-cleaned-nests\"],\"alts\":[\"Hình render bao bì ý tưởng: yến sào làm sạch trong hộp cứng 50 g\",\"Tổ yến làm sạch trên đế gỗ\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 quick view nsb-nuts: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-photo-cashew-kernels\",\"nsb-photo-cashews-bowl\"],\"alts\":[\"Nhân hạt điều nguyên, chụp cận\",\"Nhân hạt điều trong bát gỗ trên bàn gỗ tối\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 quick view nsb-spices: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-crop-star-anise\",\"nsb-photo-spices-still-life\"],\"alts\":[\"Hoa hồi nguyên cánh trên mặt gỗ\",\"Quế thanh, hoa hồi và hạt tiêu đen trên nền gỗ sáng\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 1440 /products/coffee: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "vi 1440 /products/birds-nest: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "vi 1440 /products/nuts-spices-botanicals: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "vi 390 /products: all 13 new photos rendered and loaded",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "vi 390 /products: no duplicate image, no identical 01/02, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "vi 390 /products: photo-only frames carry no concept badge; pairs have 01/02, singles none",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "vi 390: filter chip priority preserved",
+  "ok": true,
+  "detail": "Tất cả|Cà phê|Dừa|Trái cây|Hạt & Gia vị|Yến sào"
+ },
+ {
+  "name": "vi 390 quick view coffee-green: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-bowls\",\"coffee-photo-green-beans-scoop\"],\"alts\":[\"Cà phê nhân xanh và cà phê xay trong bát gỗ trên nền cà phê hạt rang\",\"Cà phê nhân xanh trên muỗng gỗ trong bao đay\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 quick view coffee-roasted: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-spoons\",\"coffee-photo-roasted-ground-bowls\"],\"alts\":[\"Cà phê hạt rang trong bát gỗ cùng thìa cà phê xay và cà phê hòa tan\",\"Cà phê hạt rang và cà phê xay trong hai bát gỗ\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 quick view coffee-soluble: 1 distinct loaded image(s) with alts",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-instant-granules\"],\"alts\":[\"Cà phê hòa tan dạng hạt trên thìa gỗ\"],\"loaded\":true},\"toggled\":null}"
+ },
+ {
+  "name": "vi 390 quick view coffee-extract: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-concentrate-jar\",\"coffee-photo-extract-bottle\"],\"alts\":[\"Cà phê cô đặc trong hũ thủy tinh bên cà phê hạt rang\",\"Chiết xuất cà phê dạng lỏng trong chai thủy tinh nút bần cùng đá và cà phê rang\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 quick view coffee-cold-brew: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-cold-brew-pour\",\"coffee-photo-cold-brew-bottle\"],\"alts\":[\"Cà phê cold brew rót vào ly cao có đá\",\"Cà phê cold brew trong chai thủy tinh nắp gài\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 quick view coffee-single-serve: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"coffee-photo-drip-bag-brewing\",\"coffee-photo-drip-bag-pour\"],\"alts\":[\"Túi cà phê lọc đang pha trong ly khi rót nước nóng\",\"Túi cà phê lọc được nhấc khỏi tách trắng\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 quick view birds-nest-cleaned: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"birds-nest-pack-cleaned-box\",\"birds-nest-photo-cleaned-nests\"],\"alts\":[\"Hình render bao bì ý tưởng: yến sào làm sạch trong hộp cứng 50 g\",\"Tổ yến làm sạch trên đế gỗ\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 quick view nsb-nuts: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-photo-cashew-kernels\",\"nsb-photo-cashews-bowl\"],\"alts\":[\"Nhân hạt điều nguyên, chụp cận\",\"Nhân hạt điều trong bát gỗ trên bàn gỗ tối\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 quick view nsb-spices: 2 distinct loaded image(s) with alts, keyboard toggle consistent",
+  "ok": true,
+  "detail": "{\"q\":{\"ids\":[\"nsb-crop-star-anise\",\"nsb-photo-spices-still-life\"],\"alts\":[\"Hoa hồi nguyên cánh trên mặt gỗ\",\"Quế thanh, hoa hồi và hạt tiêu đen trên nền gỗ sáng\"],\"loaded\":true},\"toggled\":{\"active\":\"2\",\"o2\":\"1\",\"counter\":\"02 / 02\"}}"
+ },
+ {
+  "name": "vi 390 /products/coffee: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "vi 390 /products/birds-nest: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "vi 390 /products/nuts-spices-botanicals: images loaded, no duplicates, no overflow",
+  "ok": true,
+  "detail": "{\"d\":[],\"o\":0}"
+ },
+ {
+  "name": "no console or page errors",
+  "ok": true,
+  "detail": ""
+ }
+]

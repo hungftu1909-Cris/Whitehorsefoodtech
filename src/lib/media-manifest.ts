@@ -283,6 +283,99 @@ const ASSET_LIST = [
     kind: "editorial", family: "nuts-spices-botanicals", sourceFile: "owner:Ảnh WEB/HẠt điều.jpg",
     sha256: "03c003d703c43fd2448bc2b748596c083daf229221a6361647c7abe925ac90c4", rights: "pending-confirmation",
   },
+  // Owner product-format photographs — Drive folder 1_zKefxiUP9DPWP1h8YIXGp_ExIO3xSkU
+  // (2026-09-30). Range-level only: they show a format, never a specific code.
+  {
+    id: "coffee-photo-green-beans-scoop",
+    src: "/images/catalog/coffee/photos/green-beans-wooden-scoop.webp",
+    alt: L("Green coffee beans heaped on a wooden scoop in a burlap sack", "Cà phê nhân xanh trên muỗng gỗ trong bao đay"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:1zkNZgME65ni8wewYIDQ9TT9J5M1r7NyX/green cafe.jpg",
+    sha256: "d40959d03f333f2333c8a2ef39df08c141b2da51bd5f966865f2bfe2c85e9d6b", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-roasted-ground-bowls",
+    src: "/images/catalog/coffee/photos/roasted-beans-ground-bowls.webp",
+    alt: L("Roasted coffee beans and ground coffee in two wooden bowls", "Cà phê hạt rang và cà phê xay trong hai bát gỗ"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:1qmYObD1u2x4AGmrQWiNgAiPTxRFA4NUv/cafe rang & xay.jpg",
+    sha256: "2a731e98b93a0061522fa10573224a6cbd668e8f02cd0ade2619e1c84157a2b2", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-instant-granules",
+    src: "/images/catalog/coffee/photos/instant-granules-spoon.webp",
+    alt: L("Instant coffee granules on a wooden spoon", "Cà phê hòa tan dạng hạt trên thìa gỗ"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:1OFpNZPyiA0SX5fsCaMR90DTcRmYymW9r/hòa tan.jpg",
+    sha256: "8e13c55670dc50aa721ef601e865eae101fe681de7ffd1efb05e501ffd9f0329", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-concentrate-jar",
+    src: "/images/catalog/coffee/photos/concentrate-jar.webp",
+    alt: L("Dark coffee concentrate in a glass jar beside roasted beans", "Cà phê cô đặc trong hũ thủy tinh bên cà phê hạt rang"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:1rZlu-wXMN1TOJi93BQkmz1xm-ok3I0ZM/cô đặc.jpg",
+    sha256: "a9d2d33c118f7af4d120ca4d212197d881bbdc852c033b2f6ef98fcb8f671908", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-extract-bottle",
+    src: "/images/catalog/coffee/photos/extract-bottle.webp",
+    alt: L("Liquid coffee extract in a corked glass bottle with ice and roasted beans", "Chiết xuất cà phê dạng lỏng trong chai thủy tinh nút bần cùng đá và cà phê rang"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:1nEoyJvtF2HAjXbhDfqasx465HvgIa7ej/Chiết xuất.avif",
+    sha256: "98777662c1b1aa6abad1948b03ccc9caef49058fd47858d28d47e7c9413f08ed", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-cold-brew-pour",
+    src: "/images/catalog/coffee/photos/cold-brew-pour.webp",
+    alt: L("Cold brew coffee poured over ice into a tall glass", "Cà phê cold brew rót vào ly cao có đá"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:10DB_9H61kO2CnRswiJX3Q0LxUdMHEdST/cold brew.jpg",
+    sha256: "361ceaa6572736fd761ad10296770d0b6aa8c21d7ce2980e37f27719754e51a0", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-cold-brew-bottle",
+    src: "/images/catalog/coffee/photos/cold-brew-bottle.webp",
+    alt: L("Cold brew coffee in a swing-top glass bottle", "Cà phê cold brew trong chai thủy tinh nắp gài"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:16u59WyJxIEV-PxZYy_zQTVJY_ud7axLC/cold brew 2.jpeg",
+    sha256: "d434dc35ceb2321b569a351a5a1143cf9076fba652e4c4fcb35d4a7f9f0095f8", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-drip-bag-brewing",
+    src: "/images/catalog/coffee/photos/drip-bag-brewing.webp",
+    alt: L("A drip coffee bag brewing in a glass as hot water is poured", "Túi cà phê lọc đang pha trong ly khi rót nước nóng"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:1hkmxALKqO3QopflJQ3f_4XZkZXbeMaKi/ca-phe-tui-loc-giay.png",
+    sha256: "f2035cc42a8a8e2aa7c7472192d69ee1496fd90a4a6a54691bd3eea9c8cc20d2", rights: "pending-confirmation",
+  },
+  {
+    id: "coffee-photo-drip-bag-pour",
+    src: "/images/catalog/coffee/photos/drip-bag-pour.webp",
+    alt: L("A used drip coffee bag lifted from a white cup", "Túi cà phê lọc được nhấc khỏi tách trắng"),
+    kind: "editorial", family: "coffee", sourceFile: "drive:1Rc7AxB2btM9B17_tB0Zwxlv5Fnc2Wm8l/cafe-túi-lọc.jpg",
+    sha256: "cbe33e048ab8415f88403323aca32b2d841b1178632200dd95aa31111b3dfeda", rights: "pending-confirmation",
+  },
+  {
+    id: "birds-nest-photo-cleaned-nests",
+    src: "/images/catalog/birds-nest/photos/cleaned-nests.webp",
+    alt: L("Cleaned edible bird's nests on a wooden stand", "Tổ yến làm sạch trên đế gỗ"),
+    kind: "editorial", family: "birds-nest", sourceFile: "drive:1_iNR48sZnLcZKKJeAEOpY5yJ9neQJFKe/yến sào làm sạch.jpg",
+    sha256: "4873ad6acdf3bff99ef3035e4cc1ffd2f79fe9db7404c022462e1bd190beac70", rights: "pending-confirmation",
+  },
+  {
+    id: "nsb-photo-cashew-kernels",
+    src: "/images/catalog/nuts-spices-botanicals/photos/cashew-kernels.webp",
+    alt: L("Whole cashew kernels, close up", "Nhân hạt điều nguyên, chụp cận"),
+    kind: "editorial", family: "nuts-spices-botanicals", sourceFile: "drive:1hL-rXZv-1LJDCh8e4gIBvfgX8GdEa2yO/hạt điều.jpg",
+    sha256: "511e085e41e0982d3b90f7c8ad8717d1e0cbd888605fe3843232685f65d5ba54", rights: "pending-confirmation",
+  },
+  {
+    id: "nsb-photo-cashews-bowl",
+    src: "/images/catalog/nuts-spices-botanicals/photos/cashews-bowl.webp",
+    alt: L("Cashew kernels in a wooden bowl on a dark table", "Nhân hạt điều trong bát gỗ trên bàn gỗ tối"),
+    kind: "editorial", family: "nuts-spices-botanicals", sourceFile: "drive:1o5hhj1eAy3tqEkR4fGgFTJMlPwZ7I_nz/hạt điều 2.jpg",
+    sha256: "cb3a8ddf73435aae8076dddde0f32aa03492180c2460d291416c41d271c6757b", rights: "pending-confirmation",
+  },
+  {
+    id: "nsb-photo-spices-still-life",
+    src: "/images/catalog/nuts-spices-botanicals/photos/spices-still-life.webp",
+    alt: L("Cinnamon sticks, star anise and black peppercorns on light wood", "Quế thanh, hoa hồi và hạt tiêu đen trên nền gỗ sáng"),
+    kind: "editorial", family: "nuts-spices-botanicals", sourceFile: "drive:1jvf75s67F8dqaZF9V7ER4AOSCoMph0ZV/Hạt, Gia vị & Thảo mộc.jpg",
+    sha256: "3a6b5375484e327fe0865d6b52444d7bd432caff32d2fd40a0031a72585627b8", rights: "pending-confirmation",
+  },
 ] as const satisfies readonly MediaAsset[];
 
 export type AssetId = (typeof ASSET_LIST)[number]["id"];
@@ -317,24 +410,24 @@ export const FAMILY_MEDIA: Record<FamilySlug, MediaSlot> = {
 };
 
 export const RANGE_MEDIA: Record<RangeId, MediaSlot> = {
-  "coffee-green": single("coffee-photo-bowls", "One range photograph; the confirmed codes carry their own packs"),
-  "coffee-roasted": single("coffee-photo-spoons", "One range photograph; the confirmed codes carry their own packs"),
-  "coffee-soluble": missing("The only instant-coffee photograph is the coffee family's second highlight image"),
-  "coffee-extract": missing("No extract or concentrate imagery in the repository"),
-  "coffee-cold-brew": missing("No range-level cold brew imagery; the WHCF006 can belongs to that code"),
-  "coffee-single-serve": missing("No drip-bag, sachet or retail-box imagery in the repository"),
+  "coffee-green": pair("coffee-photo-bowls", "coffee-photo-green-beans-scoop"),
+  "coffee-roasted": pair("coffee-photo-spoons", "coffee-photo-roasted-ground-bowls"),
+  "coffee-soluble": single("coffee-photo-instant-granules", "One instant-coffee photograph; the Drive file named for instant coffee shows ground coffee"),
+  "coffee-extract": pair("coffee-photo-concentrate-jar", "coffee-photo-extract-bottle"),
+  "coffee-cold-brew": pair("coffee-photo-cold-brew-pour", "coffee-photo-cold-brew-bottle"),
+  "coffee-single-serve": pair("coffee-photo-drip-bag-brewing", "coffee-photo-drip-bag-pour"),
   "coconut-milk-cream": pair("coconut-pack-milk-carton", "coconut-pack-cream-bib"),
   "coconut-powders-solids": pair("coconut-pack-desiccated-pouch", "coconut-pack-milk-powder-pouch"),
   "coconut-blossom-sugar": single("coconut-pack-blossom-sugar-pouch", "One pack render (WHCO005); no second blossom-sugar asset"),
-  "birds-nest-cleaned": single("birds-nest-pack-cleaned-box", "One usable pack (WHBN002); other boxes are near-identical, 'Buyer sample' or 'NET WT. TBD'"),
+  "birds-nest-cleaned": pair("birds-nest-pack-cleaned-box", "birds-nest-photo-cleaned-nests"),
   "birds-nest-instant": pair("birds-nest-pack-instant-sachet", "birds-nest-pack-instant-carton"),
   "birds-nest-oem": missing("No source shows concentrate, extract, powder or blend formats"),
   "fruit-soft-dried": pair("fruit-pack-soft-dried-mango-pouch", "fruit-crop-soft-dried-soursop"),
   "fruit-freeze-dried": single("fruit-crop-freeze-dried-mango", "One crop; no freeze-dried mango pack exists"),
   "fruit-concentrate-powder": pair("fruit-pack-passion-fruit-concentrate-bib", "fruit-crop-passion-fruit-powder"),
   "fruit-frozen-puree": single("fruit-crop-passion-fruit-puree", "One crop; no frozen purée pack exists"),
-  "nsb-nuts": missing("No standalone cashew image; the only one is a crop of the family photograph"),
-  "nsb-spices": single("nsb-crop-star-anise", "Star anise only; no standalone black pepper or cinnamon image"),
+  "nsb-nuts": pair("nsb-photo-cashew-kernels", "nsb-photo-cashews-bowl"),
+  "nsb-spices": pair("nsb-crop-star-anise", "nsb-photo-spices-still-life"),
 };
 
 const COFFEE_SECOND =

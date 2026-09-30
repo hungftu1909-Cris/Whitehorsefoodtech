@@ -62,7 +62,59 @@ different photograph from the family composition. Presented as a family
 origin image (alt says what it shows), never as a kernel lot or a WHNSB001
 product image.
 
-### Owner-supplied product photographs (added 2026-09-28)
+### Owner product-format photographs — Drive folder (added 2026-09-30)
+
+Source: owner-shared public Google Drive folder
+`https://drive.google.com/drive/folders/1_zKefxiUP9DPWP1h8YIXGp_ExIO3xSkU`
+(25 files, listed via the folder's public embedded view and downloaded by
+file ID over HTTPS without sign-in). Originals are kept, unmodified, in
+`D:\wh-sources\drive-products-2026-09-30\originals\` with
+`inventory.json` (ID, name, bytes, SHA-256, format, dimensions). None
+matched an existing site image (dHash ≤ 12). The files carry no author
+or licence metadata; their style is consistent with commercial stock
+photography. **Licence status:** owner-supplied, commercial-use terms to
+be recorded before Production.
+
+**How they are presented:** as *format* photographs for a range (kind
+`editorial`, no badge; alt text says only what is visible). They are never
+mapped to a specific SKU code, never presented as Whitehorse stock, a
+batch, origin or certification evidence, and never replace the
+Whitehorse packaging renders.
+
+| Public file | Drive ID · source | Source SHA-256 | Processing | Derived SHA-256 | Slot |
+|---|---|---|---|---|---|
+| `public/images/catalog/coffee/photos/green-beans-wooden-scoop.webp` | `1zkNZgME65ni8wewYIDQ9TT9J5M1r7NyX` · `green cafe.jpg` (2048×1366) | `efd382b98b09cbe3beada2a3df749257d781d839d963830a210f3eb954571e9f` | 4:3 crop (114,0) 1821×1366 → 1200x900 WebP q80, no upscaling | `d40959d03f333f2333c8a2ef39df08c141b2da51bd5f966865f2bfe2c85e9d6b` | coffee-green · 02 |
+| `public/images/catalog/coffee/photos/roasted-beans-ground-bowls.webp` | `1qmYObD1u2x4AGmrQWiNgAiPTxRFA4NUv` · `cafe rang & xay.jpg` (2048×1365) | `af6eb606f20b32c2af965450924c1508f9adfd0ec66383f5e1aaa341ae70273c` | 4:3 crop (228,0) 1820×1365 → 1200x900 WebP q80, no upscaling | `2a731e98b93a0061522fa10573224a6cbd668e8f02cd0ade2619e1c84157a2b2` | coffee-roasted · 02 |
+| `public/images/catalog/coffee/photos/instant-granules-spoon.webp` | `1OFpNZPyiA0SX5fsCaMR90DTcRmYymW9r` · `hòa tan.jpg` (2121×1414) | `27a11757bb206adcf46e10c1ecc5fe075e624de8a3c46226082b2082d03f7929` | 4:3 crop (236,0) 1885×1414 → 1200x900 WebP q80, no upscaling | `8e13c55670dc50aa721ef601e865eae101fe681de7ffd1efb05e501ffd9f0329` | coffee-soluble · 01 |
+| `public/images/catalog/coffee/photos/concentrate-jar.webp` | `1rZlu-wXMN1TOJi93BQkmz1xm-ok3I0ZM` · `cô đặc.jpg` (1200×857) | `63b353903b5b3233e5a76a636373117d52e909319b04fb7c2f9e54db8f7e6370` | 4:3 crop (57,0) 1143×857 → 1143x857 WebP q80, no upscaling | `a9d2d33c118f7af4d120ca4d212197d881bbdc852c033b2f6ef98fcb8f671908` | coffee-extract · 01 |
+| `public/images/catalog/coffee/photos/extract-bottle.webp` | `1nEoyJvtF2HAjXbhDfqasx465HvgIa7ej` · `Chiết xuất.avif` (740×413) | `5b0363d0d9cbcd921b281b78be0ae6bdbe9f0378153951de09233f8f20d4a228` | 4:3 crop (35,0) 551×413 → 551x413 WebP q80, no upscaling | `98777662c1b1aa6abad1948b03ccc9caef49058fd47858d28d47e7c9413f08ed` | coffee-extract · 02 |
+| `public/images/catalog/coffee/photos/cold-brew-pour.webp` | `10DB_9H61kO2CnRswiJX3Q0LxUdMHEdST` · `cold brew.jpg` (1200×1800) | `fc7faeed827f3f5f7f0ddaea88be2500353779afa78e7be8161f525addc2ace8` | 4:3 crop (0,630) 1200×900 → 1200x900 WebP q80, no upscaling | `361ceaa6572736fd761ad10296770d0b6aa8c21d7ce2980e37f27719754e51a0` | coffee-cold-brew · 01 |
+| `public/images/catalog/coffee/photos/cold-brew-bottle.webp` | `16u59WyJxIEV-PxZYy_zQTVJY_ud7axLC` · `cold brew 2.jpeg` (1707×2560) | `7ef32f51b3f042dbb2d834e3711e974fa2893f9241bfe52e5e197f655e0c8267` | 4:3 crop (0,640) 1707×1280 → 1200x900 WebP q80, no upscaling | `d434dc35ceb2321b569a351a5a1143cf9076fba652e4c4fcb35d4a7f9f0095f8` | coffee-cold-brew · 02 |
+| `public/images/catalog/coffee/photos/drip-bag-brewing.webp` | `1hkmxALKqO3QopflJQ3f_4XZkZXbeMaKi` · `ca-phe-tui-loc-giay.png` (900×600) | `6f644845cb0243bf7cd4a8f9c73c660dad139680f999c6e57ba3c0a142f1d8d1` | 4:3 crop (50,0) 800×600 → 800x600 WebP q80, no upscaling | `f2035cc42a8a8e2aa7c7472192d69ee1496fd90a4a6a54691bd3eea9c8cc20d2` | coffee-single-serve · 01 |
+| `public/images/catalog/coffee/photos/drip-bag-pour.webp` | `1Rc7AxB2btM9B17_tB0Zwxlv5Fnc2Wm8l` · `cafe-túi-lọc.jpg` (800×800) | `7e6e6504cd186029aefcc5b0fb5420be93db8ddac0d005a5560967f34455933f` | 4:3 crop (0,100) 800×600 → 800x600 WebP q80, no upscaling | `cbe33e048ab8415f88403323aca32b2d841b1178632200dd95aa31111b3dfeda` | coffee-single-serve · 02 |
+| `public/images/catalog/birds-nest/photos/cleaned-nests.webp` | `1_iNR48sZnLcZKKJeAEOpY5yJ9neQJFKe` · `yến sào làm sạch.jpg` (1280×853) | `8433068ae173dd67781a4ec927739f6b4e1dbf21d35120e10cf553221631b882` | 4:3 crop (0,0) 1137×853 → 1137x853 WebP q80, no upscaling | `4873ad6acdf3bff99ef3035e4cc1ffd2f79fe9db7404c022462e1bd190beac70` | birds-nest-cleaned · 02 |
+| `public/images/catalog/nuts-spices-botanicals/photos/cashew-kernels.webp` | `1hL-rXZv-1LJDCh8e4gIBvfgX8GdEa2yO` · `hạt điều.jpg` (1000×1000) | `74f619633dadd8308f1389ddd6c87fb5fabbc37e77b8689a3eff1b2deed26f6e` | 4:3 crop (0,125) 1000×750 → 1000x750 WebP q80, no upscaling | `511e085e41e0982d3b90f7c8ad8717d1e0cbd888605fe3843232685f65d5ba54` | nsb-nuts · 01 |
+| `public/images/catalog/nuts-spices-botanicals/photos/cashews-bowl.webp` | `1o5hhj1eAy3tqEkR4fGgFTJMlPwZ7I_nz` · `hạt điều 2.jpg` (800×500) | `760999eb72e3d5418ac22ea409e320f6c731a1743d9a77eda6589ac286d5d836` | 4:3 crop (133,0) 667×500 → 667x500 WebP q80, no upscaling | `cb3a8ddf73435aae8076dddde0f32aa03492180c2460d291416c41d271c6757b` | nsb-nuts · 02 |
+| `public/images/catalog/nuts-spices-botanicals/photos/spices-still-life.webp` | `1jvf75s67F8dqaZF9V7ER4AOSCoMph0ZV` · `Hạt, Gia vị & Thảo mộc.jpg` (2048×1361) | `4e4531695197bc2ace1fba6f62ff9d379da88c404f7490e14105274beda32f0a` | 4:3 crop (14,0) 1815×1361 → 1200x900 WebP q80, no upscaling | `3a6b5375484e327fe0865d6b52444d7bd432caff32d2fd40a0031a72585627b8` | nsb-spices · 02 |
+
+Not used, and why:
+
+| Drive file | Reason |
+|---|---|
+| `cafe hòa tan.jpg` (`1dkuR0x4c03kZpLTdiL9iTYQI15o8dFaW`) | Shows ground coffee on a spoon, not instant — name and content disagree |
+| `cafe nhân xanh.jpg` (`1a0gwvr_HOIh6a5KUvIlyamBLi6pefqe6`) | Metal scoop carries engraved maker text; sack print at the edge (third-party branding) |
+| `green coffee.jpg` (`1FxWphCvRNaxYpx1IQ2Ownt9KD-MOgkCr`) | Third green-coffee close-up; the range already has a distinct pair |
+| `cafe-tui-loc.png` (`1B-R2yO1d4H3M5V9VB-nwwi21Y336_wGN`) | 546×546, too soft for cards; two sharper drip-bag photos used |
+| `dừa sấy.jpg` (`1LSBVX2Ap_w22guFg1v9eFQRt5GNyffjT`) | Desiccated coconut — the coconut powders/solids range already has a verified pack pair |
+| `sữa kem dừa.jpg` (`1C3I6tuUgUTyKTbDKpYb5MpWVgu2PwcXR`) | Coconut milk — the milk & cream range already has a verified pack pair |
+| `đường hoa dừa.jpg` (`1z0NU_rY0l4PJubEX0IjvZZE4waw-gKrr`) | 300×300 — too small for a card or quick view |
+| `gia vị.jpg` (`18Ic7r8_Rj9Nhcq2IDc97pA64NBadCGO9`) | Round spice looks like allspice, not a confirmed product |
+| `hạt gia vị.jpg` (`14IJsxdXh7R4JLJ5iCx7klw110jZ4dF7J`) | Same scene as the spices photo used (different crop); first download returned HTTP 500, retried via uc?export=download |
+| `yến ăn liền.jpg` (`13ar43L7eI7aRvx2EPR7h5PGhLCZrnqIl`) | Ready-to-eat jar — the instant range already has a verified pack pair |
+| `yến chưng sẵn.webp` (`1iCCDjHDOulgxKZIKZOxlXDJiEB3FJF-h`) | Prepared nest with dates — the instant range already has a pack pair; not an OEM format |
+| `yến làm sạch.webp` (`1EOAwZ31qNRESEF34U5aTCn0vgqieNxfv`) | Second cleaned-nest scene includes a prepared dessert glass; the chosen photo shows cleaned nests only |
+
+## Owner-supplied product photographs (added 2026-09-28)
 
 The four original product compositions in the owner's image folder are now
 used as the primary family visuals. They are paired with a different visual

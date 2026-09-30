@@ -67,24 +67,24 @@ image-free. All rights: *pending written confirmation* (see
 
 | ID | image01 | image02 | Provenance (source file) | Status |
 |---|---|---|---|---|
-| coffee-green | `coffee/coffee-green-roasted-ground-bowls.jpg` | — | Đề xuất chỉnh sửa Website.docx#word/media/image3.jpg | verified (1) · 02 missing — One range photograph; the confirmed codes carry their own packs |
-| coffee-roasted | `coffee/coffee-roasted-ground-instant-spoons.jpg` | — | Đề xuất chỉnh sửa Website.docx#word/media/image2.jpg | verified (1) · 02 missing — One range photograph; the confirmed codes carry their own packs |
-| coffee-soluble | — | — | — | **missing** — The only instant-coffee photograph is the coffee family's second highlight image |
-| coffee-extract | — | — | — | **missing** — No extract or concentrate imagery in the repository |
-| coffee-cold-brew | — | — | — | **missing** — No range-level cold brew imagery; the WHCF006 can belongs to that code |
-| coffee-single-serve | — | — | — | **missing** — No drip-bag, sachet or retail-box imagery in the repository |
+| coffee-green | `coffee/coffee-green-roasted-ground-bowls.jpg` | `coffee/photos/green-beans-wooden-scoop.webp` | Đề xuất chỉnh sửa Website.docx#word/media/image3.jpg; drive:1zkNZgME65ni8wewYIDQ9TT9J5M1r7NyX/green cafe.jpg | **verified (2)** |
+| coffee-roasted | `coffee/coffee-roasted-ground-instant-spoons.jpg` | `coffee/photos/roasted-beans-ground-bowls.webp` | Đề xuất chỉnh sửa Website.docx#word/media/image2.jpg; drive:1qmYObD1u2x4AGmrQWiNgAiPTxRFA4NUv/cafe rang & xay.jpg | **verified (2)** |
+| coffee-soluble | `coffee/photos/instant-granules-spoon.webp` | — | drive:1OFpNZPyiA0SX5fsCaMR90DTcRmYymW9r/hòa tan.jpg | verified (1) · 02 missing — One instant-coffee photograph; the Drive file named for instant coffee shows ground coffee |
+| coffee-extract | `coffee/photos/concentrate-jar.webp` | `coffee/photos/extract-bottle.webp` | drive:1rZlu-wXMN1TOJi93BQkmz1xm-ok3I0ZM/cô đặc.jpg; drive:1nEoyJvtF2HAjXbhDfqasx465HvgIa7ej/Chiết xuất.avif | **verified (2)** |
+| coffee-cold-brew | `coffee/photos/cold-brew-pour.webp` | `coffee/photos/cold-brew-bottle.webp` | drive:10DB_9H61kO2CnRswiJX3Q0LxUdMHEdST/cold brew.jpg; drive:16u59WyJxIEV-PxZYy_zQTVJY_ud7axLC/cold brew 2.jpeg | **verified (2)** |
+| coffee-single-serve | `coffee/photos/drip-bag-brewing.webp` | `coffee/photos/drip-bag-pour.webp` | drive:1hkmxALKqO3QopflJQ3f_4XZkZXbeMaKi/ca-phe-tui-loc-giay.png; drive:1Rc7AxB2btM9B17_tB0Zwxlv5Fnc2Wm8l/cafe-túi-lọc.jpg | **verified (2)** |
 | coconut-milk-cream | `coconut/packs/coconut-milk-carton-concept-pack.webp` | `coconut/packs/coconut-cream-bib-concept-pack.webp` | 02_whco001_s12_1_l_professional_front34_2400.jpg; 07_whco002_s13_20_kg_industrial_front34_2400.jpg | **verified (2)** |
 | coconut-powders-solids | `coconut/packs/desiccated-coconut-pouch-concept-pack.webp` | `coconut/packs/coconut-milk-powder-pouch-concept-pack.webp` | 10_whco003_s15_1_kg_professional_front34_2400.jpg; 13_whco004_s15_500_g_1_kg_professional_front34_2400.jpg | **verified (2)** |
 | coconut-blossom-sugar | `coconut/packs/coconut-blossom-sugar-pouch-concept-pack.webp` | — | 17_whco005_s15_250_300_500_g_retail_front34_2400.jpg | verified (1) · 02 missing — One pack render (WHCO005); no second blossom-sugar asset |
-| birds-nest-cleaned | `birds-nest/packs/cleaned-birds-nest-box-concept-pack.webp` | — | 05_whbn002_s19_50_g_retail_front34_2400.jpg | verified (1) · 02 missing — One usable pack (WHBN002); other boxes are near-identical, 'Buyer sample' or 'NET WT. TBD' |
+| birds-nest-cleaned | `birds-nest/packs/cleaned-birds-nest-box-concept-pack.webp` | `birds-nest/photos/cleaned-nests.webp` | 05_whbn002_s19_50_g_retail_front34_2400.jpg; drive:1_iNR48sZnLcZKKJeAEOpY5yJ9neQJFKe/yến sào làm sạch.jpg | **verified (2)** |
 | birds-nest-instant | `birds-nest/packs/instant-birds-nest-sachet-concept-pack.webp` | `birds-nest/packs/instant-birds-nest-carton-concept-pack.webp` | 01_whbn001_s23_10_g_retail_front34_2400.jpg; 03_whbn001_s20_10_10_g_retail_front34_2400.jpg | **verified (2)** |
 | birds-nest-oem | — | — | — | **missing** — No source shows concentrate, extract, powder or blend formats |
 | fruit-soft-dried | `fruit/packs/soft-dried-mango-pouch-concept-pack.webp` | `fruit/studio/soft-dried-soursop-studio.webp` | 01_whfr001_s15_500_g_professional_front34_2400.jpg; owner:Trái cây 2.png | **verified (2)** |
 | fruit-freeze-dried | `fruit/studio/freeze-dried-mango-studio.webp` | — | owner:Trái cây 2.png | verified (1) · 02 missing — One crop; no freeze-dried mango pack exists |
 | fruit-concentrate-powder | `fruit/packs/passion-fruit-concentrate-bib-concept-pack.webp` | `fruit/studio/passion-fruit-powder-studio.webp` | 04_3d_glb/25_whfr006_s13_20_kg_industrial.glb; owner:Trái cây 2.png | **verified (2)** |
 | fruit-frozen-puree | `fruit/studio/passion-fruit-puree-studio.webp` | — | owner:Trái cây 2.png | verified (1) · 02 missing — One crop; no frozen purée pack exists |
-| nsb-nuts | — | — | — | **missing** — No standalone cashew image; the only one is a crop of the family photograph |
-| nsb-spices | `nuts-spices-botanicals/studio/star-anise-studio.webp` | — | Đề xuất chỉnh sửa Website 4.docx#image2.png | verified (1) · 02 missing — Star anise only; no standalone black pepper or cinnamon image |
+| nsb-nuts | `nuts-spices-botanicals/photos/cashew-kernels.webp` | `nuts-spices-botanicals/photos/cashews-bowl.webp` | drive:1hL-rXZv-1LJDCh8e4gIBvfgX8GdEa2yO/hạt điều.jpg; drive:1o5hhj1eAy3tqEkR4fGgFTJMlPwZ7I_nz/hạt điều 2.jpg | **verified (2)** |
+| nsb-spices | `nuts-spices-botanicals/studio/star-anise-studio.webp` | `nuts-spices-botanicals/photos/spices-still-life.webp` | Đề xuất chỉnh sửa Website 4.docx#image2.png; drive:1jvf75s67F8dqaZF9V7ER4AOSCoMph0ZV/Hạt, Gia vị & Thảo mộc.jpg | **verified (2)** |
 
 ### SKU codes (29)
 
@@ -148,21 +148,30 @@ Resolved from supplied material in this pass:
 | Level | Verified pair | Single (02 missing) | Missing |
 |---|---|---|---|
 | Families (5) | 4 — coffee, coconut, bird's nest, nuts/spices | 1 — fruit | 0 |
-| Ranges (18) | 5 | 7 | 6 — coffee-soluble, coffee-extract, coffee-cold-brew, coffee-single-serve, birds-nest-oem, nsb-nuts |
-| SKU codes (29) | 4 — WHCF005, WHCF006, WHCF009 (public pages); WHBN001 (range level) | 13 — WHCF001–004, 007, 008; WHCO001–005; WHBN002; WHFR001 | 12 — WHFR002–009, WHNSB001–004 |
+| Ranges (18) | **13** (was 5) | **4** (was 7) — coconut-blossom-sugar, coffee-soluble, fruit-freeze-dried, fruit-frozen-puree | **1** (was 6) — birds-nest-oem |
+| SKU codes (29) | 4 — WHCF005, WHCF006, WHCF009 (public pages); WHBN001 (range level) | 13 | 12 — WHFR002–009, WHNSB001–004 |
+
+**Drive folder pass (2026-09-30, `1_zKefxiUP9DPWP1h8YIXGp_ExIO3xSkU`):** 25
+owner files inventoried; 13 format photographs added to range slots:
+coffee-green/roasted (02), coffee-soluble (01), coffee-extract,
+cold-brew and single-serve (pairs), birds-nest-cleaned (02), nsb-nuts
+(pair) and nsb-spices (02). 12 skipped (branding, low resolution, a
+name/content mismatch, near-duplicate scenes, or ranges that already have
+verified packaging pairs). Generic photos are mapped to ranges only, never
+to SKU codes. Source mapping: `docs/asset-provenance.md` → "Owner
+product-format photographs — Drive folder".
 
 ## Genuine gaps — exact item needed from the owner
 
 | Item | What exists | What is needed |
 |---|---|---|
-| Fruit family image02 | Only re-crops of image01, the range-crop source, and zip renders showing "Buyer sample"/jackfruit/pineapple | A second text-free fruit photograph (mango, soursop or passion fruit) that is not `Trái cây.jpg` / `Trái cây 2.png` |
-| WHCF001–003, 004, 007, 008 image02 | Sample ("Buyer sample"), "TBD" sacks, same-pouch or cross-code-identical renders | An approved second format/angle per code without sample/TBD text |
-| coffee-soluble / extract / cold-brew / single-serve ranges | Only images owned by specific codes or the family pair | Range-level imagery (instant formats, liquid extract, cold brew, drip bags/sachets) |
-| birds-nest-oem range | Nothing matching concentrate/extract/powder/blend | OEM format imagery |
-| nsb-nuts range; WHNSB001–004 | Illustrations only (captioned WHNSP) | Cashew/pepper/cinnamon/star-anise packs or product photos |
-| Fruit register | Brochure vs Packaging Architecture conflict on WHFR002/004/005/006 | Owner decision on the fruit code register |
-| WHFR007–009 | Not named in any owner document; site states 29 codes (claim registry row 9) vs brochure 26 | Owner confirmation of the three codes or of the count |
-| Rights | Every asset "pending confirmation" | Written licence/permission per source before Production |
+| Fruit family image02; all fruit range 02s | Only re-crops of image01, the range-crop source and zip renders with "Buyer sample"/jackfruit/pineapple; the Drive folder has no fruit photos | Text-free fruit photographs (mango, soursop, passion fruit formats) |
+| coffee-soluble 02 | One instant-granules photo; the Drive "cafe hòa tan" file shows ground coffee | A second instant-coffee photograph |
+| coconut-blossom-sugar 02 | Pack render only; the Drive sugar photo is 300×300 | A coconut sugar photograph ≥ 1200 px wide |
+| birds-nest-oem | Nothing matching concentrate/extract/powder/blend | OEM format imagery |
+| WHCF001–004, 007, 008 image02 | Sample/TBD/same-pouch or cross-code-identical renders | An approved second format per code (generic photos are not SKU images) |
+| WHNSB001–004, WHFR002–009 | Illustrations or conflicting register only | Packs or product photos per code; fruit register decision |
+| Rights | Every asset "pending confirmation" (incl. the Drive photos) | Written licence/permission before Production |
 
 ## QA evidence
 
