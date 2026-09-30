@@ -26,6 +26,7 @@ export function FamilyVisual({
   priority,
   compact,
   showBadge = true,
+  showCounter = true,
   className,
 }: {
   family: FamilySlug;
@@ -41,6 +42,8 @@ export function FamilyVisual({
    * the whole group (the About mosaic).
    */
   showBadge?: boolean;
+  /** Passed to DualImageFrame. */
+  showCounter?: boolean;
   className?: string;
 }) {
   const image = familyImage(family);
@@ -61,6 +64,7 @@ export function FamilyVisual({
         sizes={sizes}
         priority={priority}
         showBadge={showBadge}
+        showCounter={showCounter}
         className={frame}
       />
     );

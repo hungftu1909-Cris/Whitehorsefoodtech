@@ -39,6 +39,34 @@ wrong register for an export/agriculture heritage brand.
 - Motion: subtle fade/slide-up on scroll (200–350ms, ease-out), respect
   `prefers-reduced-motion`. No morphing/parallax gimmicks.
 
+## Quiet-luxury refinement (2026-09-30)
+
+Thesis: **premium sourcing house × institutional ingredient platform.**
+Quiet luxury — confident contrast, editorial photography, disciplined
+typography, generous negative space, fewer UI boxes, restrained bronze and
+deliberate asymmetry. Not a coffee shop, not a SaaS dashboard.
+
+- Surfaces alternate deliberately: `bg-deep` black-olive (`--deep`
+  `#131B16`, ivory `--deep-foreground` `#F6F1E4`, stays dark in both
+  themes) → ivory → forest (`bg-primary`) → ivory → sand (`bg-muted`) →
+  black-olive → ivory → forest footer.
+- One dominant photograph per composition, at most one inset; no badges
+  over crops. Representative-image disclosures are real captions, set
+  beneath the image.
+- Sequences are ruled and numbered (serif bronze numerals, hairline
+  `border-foreground/15` rules); evidence is ruled rows; technology is one
+  backbone rule with status markers (filled = operating now, ring = being
+  built, faint ring = roadmap). No card grids, pills or icon tiles on the
+  homepage.
+- Actions: primary = solid ivory/forest block, `h-12 px-7`, sharp corners;
+  secondary = underlined text link (`underline-offset-8`,
+  `decoration-accent/50`). No decorative arrows.
+- `--radius` is `0.25rem`. No drop shadows except the floating CTA's soft
+  separation shadow.
+- Type: headings `font-medium` Playfair, not semibold; H1 3 lines on
+  desktop, ≤4 on mobile. Body ≥16px; labels ≥12px (`text-xs`) with wide
+  tracking. Header is 80px with a 48px mark.
+
 ## Colors
 
 Light mode is primary (export/B2B site — dark mode is a nice-to-have, not a

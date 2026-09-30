@@ -80,18 +80,21 @@ test("homepage tells the platform story in order, with the operating standard be
   assert.deepEqual([...positions].sort((a, b) => a - b), positions, "homepage section order");
 });
 
-test("hero is platform-level: owner-supplied network imagery, captioned, and a current capability card", () => {
+test("hero is platform-level: one dominant network image, one inset, captioned, and a current capability", () => {
   const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
   assert.doesNotMatch(hero, /images\/catalog\//, "no single product family leads the hero");
-  for (const src of ["quality-processing.webp", "network-coffee-harvest.webp", "network-air-freight.webp"]) {
+  for (const src of ["quality-processing.webp", "network-coffee-harvest.webp"]) {
     assert.ok(hero.includes(src), `hero uses ${src}`);
   }
+  assert.doesNotMatch(hero, /process-partner-facility/, "no third-party-branded facility image");
+  assert.equal((hero.match(/<Image\b/g) ?? []).length, 2, "one dominant image and at most one inset");
+  assert.doesNotMatch(hero, /\.label\}/, "no category badges over the crops");
   assert.match(hero, /t\("imageCaption"\)/);
   assert.match(hero, /t\("standard\.status"\)/);
   assert.doesNotMatch(hero, /CircleDashed|t\("building"\)/, "no building-status card in the hero");
   assert.match(hero, /PRODUCT_CATEGORIES\.map/);
   assert.match(hero, /CUSTOM_SOURCING_HREF/);
-  assert.match(hero, /priority=\{i === 0\}/, "one priority image");
+  assert.equal((hero.match(/^\s+priority\s*$/gm) ?? []).length, 1, "one priority image");
   assert.doesNotMatch(hero, /"use client"/);
 });
 
@@ -137,4 +140,25 @@ test("audience gateway is a platform entry with a current-proof line", () => {
   assert.match(gateway, /Nhà cung cấp Việt Nam/);
   assert.match(gateway, /29 defined core SKUs · 50\+ screened suppliers · 10\+ market relationships/);
   assert.match(gateway, /Zalo/);
+});
+
+test("homepage refinement: quiet actions, readable labels and no card grids", () => {
+  const files = [
+    ...fs.readdirSync("src/components/home").map((f) => `src/components/home/${f}`).filter((f) => !f.endsWith("value-proposition.tsx")),
+    "src/components/sections/split-cta.tsx",
+    "src/components/layout/floating-cta-bar.tsx",
+    "src/components/layout/audience-gateway.tsx",
+  ];
+  for (const file of files) {
+    const source = fs.readFileSync(file, "utf8");
+    assert.doesNotMatch(source, /\bArrow(Right|UpRight)\b/, `${file}: no decorative arrows on actions`);
+    assert.doesNotMatch(source, /text-\[0\.[0-6]\d*rem\]/, `${file}: labels are at least 12px`);
+  }
+  for (const section of ["operating-system", "evidence-layer", "platform-map", "products-preview", "proof-strip"]) {
+    const source = fs.readFileSync(`src/components/home/${section}.tsx`, "utf8");
+    assert.doesNotMatch(source, /rounded-xl|rounded-full[^"]*px-|shadow-\[/, `${section}: no card, pill or shadow treatment`);
+  }
+  const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
+  assert.match(hero, /bg-deep/, "hero opens on the deep editorial surface");
+  assert.match(fs.readFileSync("src/components/home/products-preview.tsx", "utf8"), /showCounter=\{false\}/);
 });

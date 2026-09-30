@@ -1,4 +1,3 @@
-import { ArrowRight, BrainCircuit, Check, CircleDashed, Route } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -6,90 +5,87 @@ import { cn } from "@/lib/utils";
 type Status = "current" | "building" | "roadmap";
 type Node = { label: string; status: Status };
 
-const STATUS_ICON = { current: Check, building: CircleDashed, roadmap: Route } as const;
+/** Filled = operating now; ring = being built; faint ring = roadmap. */
+const MARKER: Record<Status, string> = {
+  current: "border-accent bg-accent",
+  building: "border-accent bg-deep",
+  roadmap: "border-deep-foreground/40 bg-deep",
+};
 
 /**
  * Future-facing platform layers, after the operating standard, portfolio
  * and evidence. Every layer shows its delivery status (claim registry
- * row 29), matching the Quality page architecture.
+ * row 29), matching the Quality page architecture. Drawn as one data
+ * backbone with layers along it, not as a dashboard of tiles.
  */
 export function PlatformMap() {
   const t = useTranslations("home.platform");
   const nodes = t.raw("technology.nodes") as Node[];
 
-  const statusBadge = (status: Status) => {
-    const Icon = STATUS_ICON[status];
-    return (
-      <span
-        className={cn(
-          "inline-flex items-center gap-1.5 text-[0.62rem] font-semibold tracking-[0.14em] uppercase",
-          status === "current" ? "text-accent" : "text-primary-foreground/60"
-        )}
-      >
-        <Icon className="size-3" aria-hidden="true" />
-        {t(`statusLabels.${status}`)}
-      </span>
-    );
-  };
+  const status = (s: Status) => (
+    <span className="flex items-center gap-2.5 text-xs tracking-[0.16em] uppercase">
+      <span aria-hidden="true" className={cn("size-2.5 shrink-0 rounded-full border", MARKER[s])} />
+      <span className={s === "current" ? "text-accent" : "text-deep-foreground/60"}>{t(`statusLabels.${s}`)}</span>
+    </span>
+  );
 
   return (
-    <section className="relative overflow-hidden bg-primary text-primary-foreground">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:48px_48px]"
-      />
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-20">
-          <div>
-            <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">{t("eyebrow")}</p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl">
+    <section aria-labelledby="platform-title" className="bg-deep text-deep-foreground">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:py-32 lg:px-8 lg:py-40">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-6">
+            <p className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{t("eyebrow")}</p>
+            <h2 id="platform-title" className="mt-5 font-serif text-[2rem] leading-[1.12] font-medium tracking-[-0.01em] text-balance md:text-[2.6rem]">
               {t("title")}
             </h2>
-            <p className="mt-5 max-w-lg leading-relaxed text-primary-foreground/75">{t("subtitle")}</p>
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-deep-foreground/70 md:text-[1.0625rem]">{t("subtitle")}</p>
           </div>
 
-          <div className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-6">
-            {statusBadge("building")}
-            <h3 className="mt-3 font-serif text-xl font-semibold">{t("workspace.title")}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">{t("workspace.body")}</p>
+          <div className="border-l border-accent/50 pl-6 lg:col-span-4 lg:col-start-9 lg:self-end">
+            {status("building")}
+            <h3 className="mt-4 font-serif text-2xl font-medium">{t("workspace.title")}</h3>
+            <p className="mt-3 text-[0.9375rem] leading-relaxed text-deep-foreground/70">{t("workspace.body")}</p>
           </div>
         </div>
 
-        <div className="mt-10 rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-5 sm:p-6 md:p-8">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <h3 className="font-serif text-2xl font-semibold md:text-3xl">{t("technology.title")}</h3>
-            <p className="max-w-2xl text-sm leading-relaxed text-primary-foreground/70">{t("technology.body")}</p>
+        <div className="mt-20 md:mt-28">
+          <div className="grid gap-5 lg:grid-cols-12 lg:gap-8">
+            <h3 className="font-serif text-2xl font-medium lg:col-span-5 md:text-[1.75rem]">{t("technology.title")}</h3>
+            <p className="max-w-2xl text-[0.9375rem] leading-relaxed text-deep-foreground/70 lg:col-span-6 lg:col-start-7">{t("technology.body")}</p>
           </div>
 
-          <ol className="mt-7 grid gap-2 sm:grid-cols-2 lg:grid-cols-6">
+          {/* The backbone: one rule, with each layer marked on it. */}
+          <ol className="relative mt-12 grid gap-9 pl-8 before:absolute before:top-1 before:bottom-1 before:left-[4.5px] before:w-px before:bg-deep-foreground/20 sm:grid-cols-2 sm:gap-x-8 lg:mt-16 lg:grid-cols-6 lg:gap-6 lg:pt-10 lg:pl-0 lg:before:top-[4.5px] lg:before:right-0 lg:before:bottom-auto lg:before:left-0 lg:before:h-px lg:before:w-auto">
             {nodes.map((node, i) => (
-              <li
-                key={node.label}
-                className="flex min-h-24 flex-col justify-between gap-3 rounded-md border border-primary-foreground/15 bg-primary/70 px-4 py-3 text-sm leading-snug text-primary-foreground/85"
-              >
-                <span className="flex items-center justify-between gap-2">
-                  <span className="font-mono text-xs text-accent">{String(i + 1).padStart(2, "0")}</span>
-                  {statusBadge(node.status)}
-                </span>
-                <span>{node.label}</span>
+              <li key={node.label} className="relative">
+                <span
+                  aria-hidden="true"
+                  className={cn("absolute top-1 -left-8 size-2.5 rounded-full border lg:-top-10 lg:left-0", MARKER[node.status])}
+                />
+                <span className="text-xs tracking-[0.14em] text-deep-foreground/50 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                <p className="mt-2 font-serif text-xl leading-snug">{node.label}</p>
+                <p className="mt-3 text-xs tracking-[0.16em] uppercase">
+                  <span className={node.status === "current" ? "text-accent" : "text-deep-foreground/60"}>
+                    {t(`statusLabels.${node.status}`)}
+                  </span>
+                </p>
               </li>
             ))}
           </ol>
 
-          <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-md border border-accent/35 bg-accent/10 px-4 py-3 text-sm font-semibold text-primary-foreground">
-            <span className="flex items-center gap-3">
-              <BrainCircuit className="size-5 shrink-0 text-accent" aria-hidden="true" />
-              {t("technology.ai")}
-            </span>
-            {statusBadge("roadmap")}
+          <div className="mt-12 flex flex-col gap-4 border-t border-accent/40 pt-6 sm:flex-row sm:items-center sm:justify-between lg:mt-16">
+            <p className="font-serif text-xl">{t("technology.ai")}</p>
+            {status("roadmap")}
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-primary-foreground/15 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-3xl text-xs leading-relaxed text-primary-foreground/60">{t("note")}</p>
-          <Link href="/certifications" className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent hover:underline">
+        <div className="mt-16 flex flex-col gap-6 md:mt-20 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
+          <p className="max-w-3xl text-sm leading-relaxed text-deep-foreground/60">{t("note")}</p>
+          <Link
+            href="/certifications"
+            className="shrink-0 text-[0.9375rem] font-medium underline decoration-accent/60 underline-offset-8 transition-colors hover:decoration-accent"
+          >
             {t("cta")}
-            <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
       </div>

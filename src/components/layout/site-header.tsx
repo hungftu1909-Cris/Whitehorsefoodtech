@@ -22,8 +22,8 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
   const t = useTranslations("nav");
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/80 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/85">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-6 lg:px-8">
         <Link href="/" className="cursor-pointer">
           <Logo />
         </Link>
@@ -54,7 +54,7 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                       }
                     />
                   </li>
-                  <li className="px-2 pt-2 pb-1 text-[0.65rem] font-semibold tracking-[0.16em] text-muted-foreground uppercase">
+                  <li className="px-2 pt-2 pb-1 text-xs font-semibold tracking-[0.16em] text-muted-foreground uppercase">
                     {t("currentPortfolio")}
                   </li>
                   {PRODUCT_CATEGORIES.map((c) => (
@@ -110,7 +110,7 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
           <ThemeToggle className="cursor-pointer" />
           <Link
             href="/rfq"
-            className={cn(buttonVariants({ variant: "default" }), "hidden cursor-pointer sm:inline-flex")}
+            className={cn(buttonVariants({ variant: "default" }), "hidden h-10 cursor-pointer px-5 text-[0.875rem] tracking-[0.01em] sm:inline-flex")}
           >
             {t("requestQuote")}
           </Link>

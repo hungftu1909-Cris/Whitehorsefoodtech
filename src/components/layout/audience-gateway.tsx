@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Building2, Sprout } from "lucide-react";
+import { Building2, Sprout } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import {
   Dialog,
@@ -64,8 +64,8 @@ export function AudienceGateway() {
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-h-[calc(100dvh-2rem)] gap-0 sm:max-w-2xl overflow-y-auto p-0" aria-label="Enter the Whitehorse platform">
         <DialogHeader className="border-b border-border px-6 py-6 pr-14 sm:px-8 sm:py-7">
-          <p className="text-[0.68rem] font-semibold tracking-[0.18em] text-accent uppercase">Enter the Whitehorse platform</p>
-          <DialogTitle className="font-serif text-2xl leading-tight text-balance sm:text-3xl">
+          <p className="text-xs font-medium tracking-[0.22em] text-accent uppercase">Enter the Whitehorse platform</p>
+          <DialogTitle className="font-serif text-2xl leading-tight font-medium text-balance sm:text-[2rem]">
             Premium ingredients from Vietnam. One qualified supply workflow.
           </DialogTitle>
           <DialogDescription lang="vi" className="leading-relaxed">
@@ -84,11 +84,10 @@ export function AudienceGateway() {
             className="group cursor-pointer bg-background p-6 transition-colors hover:bg-muted/50 sm:p-8"
           >
             <div className="flex items-start justify-between gap-4">
-              <Building2 className="size-6 text-accent" aria-hidden="true" />
-              <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+              <Building2 className="size-5 text-accent" strokeWidth={1.5} aria-hidden="true" />
             </div>
-            <p className="mt-6 text-[0.65rem] font-semibold tracking-[0.16em] text-muted-foreground uppercase sm:mt-8">Global buyers</p>
-            <p className="mt-1 font-serif text-xl font-semibold text-foreground">Source qualified Vietnamese ingredients.</p>
+            <p className="mt-6 text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase sm:mt-8">Global buyers</p>
+            <p className="mt-2 font-serif text-xl font-medium text-foreground decoration-accent/60 underline-offset-[6px] group-hover:underline">Source qualified Vietnamese ingredients.</p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Continue in English · Current portfolio, custom sourcing and quote requests.</p>
           </Link>
           <Link
@@ -99,11 +98,10 @@ export function AudienceGateway() {
             className="group cursor-pointer bg-background p-6 transition-colors hover:bg-muted/50 sm:p-8"
           >
             <div className="flex items-start justify-between gap-4">
-              <Sprout className="size-6 text-accent" aria-hidden="true" />
-              <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+              <Sprout className="size-5 text-accent" strokeWidth={1.5} aria-hidden="true" />
             </div>
-            <p className="mt-6 text-[0.65rem] font-semibold tracking-[0.16em] text-muted-foreground uppercase sm:mt-8">Nhà cung cấp Việt Nam</p>
-            <p className="mt-1 font-serif text-xl font-semibold text-foreground">Tham gia mạng lưới nguồn cung được thẩm định.</p>
+            <p className="mt-6 text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase sm:mt-8">Nhà cung cấp Việt Nam</p>
+            <p className="mt-2 font-serif text-xl font-medium text-foreground decoration-accent/60 underline-offset-[6px] group-hover:underline">Tham gia mạng lưới nguồn cung được thẩm định.</p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Tiếp tục bằng tiếng Việt · Đăng ký năng lực hoặc trao đổi nhanh qua Zalo.</p>
           </Link>
         </div>

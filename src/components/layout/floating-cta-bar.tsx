@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { FileText, LayoutGrid } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -54,7 +54,7 @@ export function FloatingCtaBar() {
   const showRfq = pathname !== "/rfq" && !onCatalogDetail;
 
   const shared =
-    "fixed bottom-4 z-30 flex size-12 items-center justify-center gap-1.5 rounded-full p-0 shadow-lg transition-all duration-300 sm:bottom-6 sm:h-11 sm:w-auto sm:rounded-lg sm:px-5 sm:py-2.5";
+    "fixed bottom-4 z-30 flex size-12 items-center justify-center gap-1.5 rounded-full p-0 shadow-[0_10px_30px_-14px_rgba(15,20,17,0.45)] transition-all duration-300 sm:bottom-6 sm:h-11 sm:w-auto sm:rounded-sm sm:px-6 sm:py-2.5 sm:text-[0.875rem]";
   const state = (v: boolean) =>
     v ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0";
 
@@ -69,12 +69,13 @@ export function FloatingCtaBar() {
           className={cn(
             buttonVariants({ variant: "outline" }),
             shared,
-            "left-4 border-2 border-accent bg-card text-foreground hover:bg-muted sm:left-6",
+            "left-4 border border-accent bg-card text-foreground hover:bg-muted sm:left-6",
             state(visible)
           )}
         >
           <span className="hidden sm:inline">{tCommon("exploreProducts")}</span>
-          <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
+          {/* Icon only where the label collapses (narrow phones). */}
+          <LayoutGrid className="size-4 shrink-0 sm:hidden" aria-hidden="true" />
         </Link>
       )}
 
@@ -92,7 +93,7 @@ export function FloatingCtaBar() {
           )}
         >
           <span className="hidden sm:inline">{tNav("requestQuote")}</span>
-          <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
+          <FileText className="size-4 shrink-0 sm:hidden" aria-hidden="true" />
         </Link>
       )}
     </>

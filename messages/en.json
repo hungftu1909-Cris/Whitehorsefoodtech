@@ -65,24 +65,17 @@
       "standard": {
         "label": "The Whitehorse standard",
         "status": "Operating now",
-        "title": "Specification-led sourcing",
-        "body": "Qualified supply · Request-specific evidence · Commercial coordination"
+        "title": "Specification-led sourcing"
       },
       "images": [
         {
-          "label": "Processing",
           "alt": "Two workers in hygiene clothing loading trays of fruit into an open freeze-drying chamber"
         },
         {
-          "label": "Origin",
           "alt": "Growers collecting freshly harvested coffee cherries onto tarpaulins between coffee trees"
-        },
-        {
-          "label": "Global markets",
-          "alt": "Palletised cargo being loaded into a freighter aircraft on an airport apron"
         }
       ],
-      "imageCaption": "Representative stages across Vietnam's ingredient supply network — processing, origin and air freight. Not Whitehorse-owned facilities or a specific shipment."
+      "imageCaption": "Representative stages in Vietnam's ingredient supply network — processing and origin harvest. Not Whitehorse-owned facilities or a specific shipment."
     },
     "operating": {
       "eyebrow": "How the platform works",
@@ -139,28 +132,23 @@
       "items": [
         {
           "title": "Coffee Ingredients",
-          "tagline": "Green, roasted, soluble, extract & cold brew",
-          "status": "9 defined SKUs"
+          "tagline": "Green, roasted, soluble, extract & cold brew"
         },
         {
           "title": "Coconut Ingredients",
-          "tagline": "Milk & cream, powders & solids, blossom sugar",
-          "status": "5 defined SKUs"
+          "tagline": "Milk & cream, powders & solids, blossom sugar"
         },
         {
           "title": "Bird's Nest Ingredients",
-          "tagline": "Cleaned nest & instant / ready-to-prepare formats",
-          "status": "2 defined SKUs"
+          "tagline": "Cleaned nest & instant / ready-to-prepare formats"
         },
         {
           "title": "Fruit Ingredients",
-          "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
-          "status": "9 defined SKUs"
+          "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée"
         },
         {
           "title": "Nuts, Spices & Botanicals",
-          "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
-          "status": "4 defined SKUs"
+          "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise"
         }
       ],
       "custom": {
@@ -222,6 +210,10 @@
       "title": "Confidence is assembled around the request.",
       "subtitle": "Instead of generic trust badges, Whitehorse frames the evidence a buyer may need and confirms what applies to the selected supplier, site, product and order.",
       "cta": "Quality & qualification",
+      "image": {
+        "alt": "Palletised cargo being loaded into a freighter aircraft on an airport apron",
+        "caption": "Representative export stage — palletised air cargo. Not a Whitehorse-owned facility or a specific shipment."
+      },
       "items": [
         {
           "label": "Scope 01",

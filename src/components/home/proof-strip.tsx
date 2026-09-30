@@ -1,32 +1,27 @@
-import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 /**
- * Compact credibility strip: current facts only (docs/claim-registry.md
- * rows 3, 4 and 9), carrying the "Current" tag. Three-year vision figures
- * live on About, never here.
+ * Current facts only (docs/claim-registry.md rows 3, 4 and 9), carrying the
+ * "Current" tag. Three-year vision figures live on About, never here. Large
+ * serif figures on the forest surface; no pills or icons.
  */
 export function ProofStrip() {
   const t = useTranslations("home.proof");
   const items = t.raw("items") as { value: string; label: string }[];
 
   return (
-    <section aria-labelledby="proof-title" className="border-b border-border bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3">
-          <h2 id="proof-title" className="text-xs font-semibold tracking-[0.2em] text-primary-foreground/80 uppercase">
-            {t("title")}
-          </h2>
-          <span className="inline-flex items-center gap-1 rounded-full border border-accent/50 px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.12em] text-accent uppercase">
-            <Check className="size-3" aria-hidden="true" />
-            {t("tag")}
-          </span>
-        </div>
-        <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-0">
+    <section aria-labelledby="proof-title" className="bg-primary text-primary-foreground">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 md:py-24 lg:px-8">
+        <h2 id="proof-title" className="flex items-center gap-4 text-xs font-medium tracking-[0.24em] text-primary-foreground/70 uppercase">
+          {t("title")}
+          <span aria-hidden="true" className="h-px w-8 bg-accent" />
+          <span className="text-accent">{t("tag")}</span>
+        </h2>
+        <ul className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-10 md:mt-14 lg:gap-16">
           {items.map((item) => (
-            <li key={item.value} className="flex items-baseline gap-4 sm:block sm:border-r sm:border-primary-foreground/15 sm:px-8 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0">
-              <p className="w-14 shrink-0 font-serif text-3xl font-semibold text-accent sm:w-auto md:text-4xl">{item.value}</p>
-              <p className="text-sm leading-relaxed text-primary-foreground/75 sm:mt-2">{item.label}</p>
+            <li key={item.value}>
+              <p className="font-serif text-6xl leading-none font-medium tracking-[-0.02em] md:text-7xl">{item.value}</p>
+              <p className="mt-5 max-w-[19rem] text-[0.9375rem] leading-relaxed text-primary-foreground/72">{item.label}</p>
             </li>
           ))}
         </ul>

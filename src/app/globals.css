@@ -12,6 +12,8 @@
   --font-serif: var(--font-playfair);
   --font-heading: var(--font-playfair);
   --color-success: var(--success);
+  --color-deep: var(--deep);
+  --color-deep-foreground: var(--deep-foreground);
   --color-success-foreground: var(--success-foreground);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -84,7 +86,13 @@
   --chart-3: #6b4a2e;
   --chart-4: #4b6043;
   --chart-5: #8a7a5c;
-  --radius: 0.5rem;
+  /* Quiet-luxury refinement (2026-09-30): sharper corners, fewer soft
+     rounded rectangles. */
+  --radius: 0.25rem;
+  /* Black-olive editorial surface (homepage hero, technology). Stays dark
+     in both themes. */
+  --deep: #131b16;
+  --deep-foreground: #f6f1e4;
   --sidebar: #fbf7ee;
   --sidebar-foreground: #1b221d;
   --sidebar-primary: #1f2e25;
@@ -98,7 +106,8 @@
 /* Inverse (primary) surfaces — proof strip, technology, footer, CTA bands —
    carry a lighter bronze so accent text and accent buttons keep AA contrast
    on deep forest (and a darker one on the light dark-mode primary). */
-.bg-primary:not(a, button) {
+.bg-primary:not(a, button),
+.bg-deep {
   --accent: #c9a462;
   --accent-foreground: #1b221d;
   --ring: #c9a462;
@@ -113,6 +122,8 @@
 .dark {
   --background: #111612;
   --foreground: #f1e7d6;
+  --deep: #0b100d;
+  --deep-foreground: #f1e7d6;
   --card: #18201a;
   --card-foreground: #f1e7d6;
   --popover: #18201a;

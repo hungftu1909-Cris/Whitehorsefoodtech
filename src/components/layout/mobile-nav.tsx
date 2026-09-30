@@ -64,7 +64,7 @@ export function MobileNav({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
                 >
                   {t("products")}
                 </Link>
-                <p className="px-2 pt-2 text-[0.65rem] font-semibold tracking-[0.16em] text-muted-foreground uppercase">
+                <p className="px-2 pt-2 text-xs font-semibold tracking-[0.16em] text-muted-foreground uppercase">
                   {t("currentPortfolio")}
                 </p>
                 {PRODUCT_CATEGORIES.map((c) => (

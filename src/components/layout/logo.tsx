@@ -12,11 +12,11 @@ export function Logo({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2.5 font-serif text-lg font-semibold tracking-tight text-primary",
+        "inline-flex items-center gap-3 font-serif text-xl font-semibold tracking-tight text-primary sm:text-[1.4rem]",
         className
       )}
     >
-      <span className="flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#fbf7ee] p-1 ring-1 ring-black/5">
+      <span className="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#fbf7ee] p-1 ring-1 ring-black/5 sm:size-12">
         <Image
           src="/brand/mark-256.png"
           alt=""
@@ -26,9 +26,9 @@ export function Logo({ className }: { className?: string }) {
           priority
         />
       </span>
-      <span className="flex flex-col leading-none">
+      <span className="flex flex-col gap-0.5 leading-none">
         <span>Whitehorse</span>
-        <span className="text-[0.65em] font-sans font-medium tracking-[0.2em] text-muted-foreground uppercase">
+        <span className="text-[0.6em] font-sans font-medium tracking-[0.32em] text-muted-foreground uppercase">
           Foodtech
         </span>
       </span>

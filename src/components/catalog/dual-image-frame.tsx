@@ -18,12 +18,15 @@ export function DualImageFrame({
   priority,
   className,
   showBadge = true,
+  showCounter = true,
 }: {
   images: FrameImage[];
   sizes: string;
   priority?: boolean;
   className?: string;
   showBadge?: boolean;
+  /** The "01 / 02" marker; editorial grids that explain the pair elsewhere hide it. */
+  showCounter?: boolean;
 }) {
   const primary = images[0];
   const secondary = images[1];
@@ -59,7 +62,7 @@ export function DualImageFrame({
       {showBadge && primary.badge && (
         <span
           className={cn(
-            "absolute bottom-2 left-2 rounded-full border border-border/60 bg-background/90 px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase transition-opacity duration-300",
+            "absolute bottom-3 left-3 rounded-sm bg-background/92 px-2.5 py-1 text-xs font-medium tracking-[0.08em] text-foreground/80 uppercase transition-opacity duration-300",
             secondary && "dual-frame-primary-badge group-hover/media:opacity-0"
           )}
         >
@@ -67,12 +70,12 @@ export function DualImageFrame({
         </span>
       )}
       {showBadge && secondary?.badge && (
-        <span className="dual-frame-secondary-badge absolute bottom-2 left-2 rounded-full border border-border/60 bg-background/90 px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase opacity-0 transition-opacity duration-300 group-hover/media:opacity-100">
+        <span className="dual-frame-secondary-badge absolute bottom-3 left-3 rounded-sm bg-background/92 px-2.5 py-1 text-xs font-medium tracking-[0.08em] text-foreground/80 uppercase opacity-0 transition-opacity duration-300 group-hover/media:opacity-100">
           {secondary.badge}
         </span>
       )}
-      {secondary && (
-        <span className="absolute top-3 right-3 rounded-full border border-background/50 bg-background/85 px-2 py-1 font-mono text-[0.65rem] tracking-wider text-foreground">
+      {secondary && showCounter && (
+        <span className="absolute top-3 right-3 rounded-sm bg-background/88 px-2 py-1 font-mono text-xs tracking-wider text-foreground">
           01 / 02
         </span>
       )}

@@ -1,88 +1,93 @@
 import { useLocale, useTranslations } from "next-intl";
-import { ArrowRight, Compass } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { SectionHeading } from "@/components/sections/section-heading";
 import { FamilyVisual } from "@/components/catalog/family-visual";
 import type { FamilySlug } from "@/lib/catalog";
-import { Badge } from "@/components/ui/badge";
 import { CUSTOM_SOURCING_HREF, PRODUCT_CATEGORIES } from "@/lib/nav";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 /**
- * The current portfolio: every collection gets the same card, badge and
- * weight — none is the brand. The last cell is the open path for any other
- * Vietnamese ingredient, so the grid reads as today's focus, not the
- * boundary (2 + 2 + 2 on tablet, 3 + 3 on desktop).
+ * The current portfolio as an editorial catalogue: every collection gets
+ * the same image size, numeral, name and one descriptor — none is the
+ * brand. The sixth plate is the open path for any other Vietnamese
+ * ingredient, so the grid reads as today's focus, not the boundary
+ * (2 + 2 + 2 on tablet, 3 + 3 on desktop).
  */
 export function ProductsPreview() {
   const t = useTranslations("home.productsPreview");
   const tc = useTranslations("catalog");
   const locale = useLocale();
-  const items = t.raw("items") as { title: string; tagline: string; status: string }[];
+  const items = t.raw("items") as { title: string; tagline: string }[];
+  const number = (i: number) => String(i + 1).padStart(2, "0");
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
-        <Link href="/products" className="group inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent hover:underline">
-          {t("exploreCta")}
-          <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-        </Link>
-      </div>
-
-      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {PRODUCT_CATEGORIES.map((category, i) => {
-          const item = items[i];
-          return (
-            <li key={category.slug} className="flex">
-              <Link
-                href={`/products/${category.slug}`}
-                className="group flex w-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <FamilyVisual
-                  family={category.slug as FamilySlug}
-                  locale={locale}
-                  name={item.title}
-                  labels={{ concept: tc("conceptPackBadge") }}
-                  className="border-b border-border"
-                />
-                <div className="flex flex-1 flex-col p-5">
-                  <Badge variant="outline" className="mb-3 text-muted-foreground">
-                    {item.status}
-                  </Badge>
-                  <h3 className="flex items-center justify-between gap-3 font-serif text-xl font-semibold text-foreground">
-                    {item.title}
-                    <ArrowRight
-                      className="size-4 shrink-0 text-accent transition-transform group-hover:translate-x-0.5"
-                      aria-hidden="true"
-                    />
-                  </h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{item.tagline}</p>
-                </div>
-              </Link>
-            </li>
-          );
-        })}
-
-        <li id="custom-sourcing" className="flex scroll-mt-24">
-          <div className="flex w-full flex-col rounded-xl border border-dashed border-accent/60 bg-muted/40 p-6 md:p-7">
-            <span className="flex size-11 items-center justify-center rounded-full border border-accent/40 text-accent">
-              <Compass className="size-5" aria-hidden="true" />
-            </span>
-            <p className="mt-6 text-[0.65rem] font-semibold tracking-[0.18em] text-accent uppercase">{t("custom.eyebrow")}</p>
-            <h3 className="mt-2 font-serif text-2xl leading-snug font-semibold text-foreground">{t("custom.title")}</h3>
-            <p className="mt-3 mb-8 text-sm leading-relaxed text-muted-foreground">{t("custom.body")}</p>
+    <section aria-labelledby="portfolio-title" className="bg-background">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:py-32 lg:px-8 lg:py-40">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
+          <div className="lg:max-w-2xl">
+            <p className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{t("eyebrow")}</p>
+            <h2 id="portfolio-title" className="mt-5 font-serif text-[2rem] leading-[1.12] font-medium tracking-[-0.01em] text-balance text-foreground md:text-[2.6rem]">
+              {t("title")}
+            </h2>
+          </div>
+          <div className="lg:max-w-md">
+            <p className="text-base leading-relaxed text-pretty text-muted-foreground">{t("subtitle")}</p>
             <Link
-              href={CUSTOM_SOURCING_HREF}
-              className={cn(buttonVariants({ size: "lg" }), "group mt-auto h-auto min-h-11 w-full cursor-pointer justify-between px-5 py-2.5 text-left whitespace-normal")}
+              href="/products"
+              className="mt-6 inline-block text-[0.9375rem] font-medium text-foreground underline decoration-accent/50 underline-offset-8 transition-colors hover:decoration-accent"
             >
-              {t("custom.cta")}
-              <ArrowRight className="ml-2 size-4 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              {t("exploreCta")}
             </Link>
           </div>
-        </li>
-      </ul>
+        </div>
+
+        <ul className="mt-16 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 md:mt-20 lg:grid-cols-3 lg:gap-y-20">
+          {PRODUCT_CATEGORIES.map((category, i) => {
+            const item = items[i];
+            return (
+              <li key={category.slug}>
+                <Link href={`/products/${category.slug}`} className="group block cursor-pointer">
+                  <FamilyVisual
+                    family={category.slug as FamilySlug}
+                    locale={locale}
+                    name={item.title}
+                    labels={{ concept: tc("conceptPackBadge") }}
+                    showCounter={false}
+                  />
+                  <div className="mt-6 grid grid-cols-[2.5rem_1fr] gap-x-3">
+                    <span className="pt-1.5 text-xs tracking-[0.12em] text-accent tabular-nums">{number(i)}</span>
+                    <div>
+                      <h3 className="font-serif text-[1.6rem] leading-tight font-medium text-foreground decoration-accent/60 underline-offset-[6px] group-hover:underline">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.tagline}</p>
+                    </div>
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
+
+          <li id="custom-sourcing" className="scroll-mt-28">
+            <div className="group relative flex aspect-[4/3] flex-col justify-between bg-deep p-7 text-deep-foreground md:p-8">
+              <p className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{t("custom.eyebrow")}</p>
+              <div>
+                <h3 className="max-w-[16ch] font-serif text-[1.75rem] leading-[1.15] font-medium text-balance md:text-[2rem]">
+                  {t("custom.title")}
+                </h3>
+                <Link
+                  href={CUSTOM_SOURCING_HREF}
+                  className="mt-6 inline-block text-[0.9375rem] font-medium underline decoration-accent/60 underline-offset-8 transition-colors after:absolute after:inset-0 group-hover:decoration-accent"
+                >
+                  {t("custom.cta")}
+                </Link>
+              </div>
+            </div>
+            <div className="mt-6 grid grid-cols-[2.5rem_1fr] gap-x-3">
+              <span className="pt-0.5 text-xs tracking-[0.12em] text-accent tabular-nums">{number(PRODUCT_CATEGORIES.length)}</span>
+              <p className="text-[0.9375rem] leading-relaxed text-muted-foreground">{t("custom.body")}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
   );
 }

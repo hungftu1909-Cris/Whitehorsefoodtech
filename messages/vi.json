@@ -65,24 +65,17 @@
       "standard": {
         "label": "Chuẩn vận hành Whitehorse",
         "status": "Đang vận hành",
-        "title": "Tìm nguồn dẫn dắt bởi thông số",
-        "body": "Nguồn cung được thẩm định · Hồ sơ theo từng yêu cầu · Điều phối thương mại"
+        "title": "Tìm nguồn dẫn dắt bởi thông số"
       },
       "images": [
         {
-          "label": "Chế biến",
           "alt": "Hai công nhân mặc đồ bảo hộ vệ sinh xếp khay trái cây vào buồng sấy thăng hoa đang mở"
         },
         {
-          "label": "Vùng nguyên liệu",
           "alt": "Người trồng gom quả cà phê vừa thu hoạch lên tấm bạt giữa vườn cà phê"
-        },
-        {
-          "label": "Thị trường toàn cầu",
-          "alt": "Hàng hóa đóng pallet được đưa lên máy bay chở hàng tại sân đỗ sân bay"
         }
       ],
-      "imageCaption": "Hình ảnh minh họa các khâu trong chuỗi cung ứng nguyên liệu Việt Nam — chế biến, vùng nguyên liệu và vận chuyển hàng không. Không phải cơ sở của Whitehorse hay một lô hàng cụ thể."
+      "imageCaption": "Hình ảnh minh họa các khâu trong chuỗi cung ứng nguyên liệu Việt Nam — chế biến và thu hoạch tại vùng nguyên liệu. Không phải cơ sở của Whitehorse hay một lô hàng cụ thể."
     },
     "operating": {
       "eyebrow": "Cách nền tảng vận hành",
@@ -139,28 +132,23 @@
       "items": [
         {
           "title": "Nguyên liệu Cà phê",
-          "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew",
-          "status": "9 SKU đã xác định"
+          "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew"
         },
         {
           "title": "Nguyên liệu Dừa",
-          "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa",
-          "status": "5 SKU đã xác định"
+          "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa"
         },
         {
           "title": "Nguyên liệu Yến sào",
-          "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn",
-          "status": "2 SKU đã xác định"
+          "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn"
         },
         {
           "title": "Nguyên liệu Trái cây",
-          "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree",
-          "status": "9 SKU đã xác định"
+          "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree"
         },
         {
           "title": "Hạt, Gia vị & Thảo mộc",
-          "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa",
-          "status": "4 SKU đã xác định"
+          "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa"
         }
       ],
       "custom": {
@@ -222,6 +210,10 @@
       "title": "Niềm tin được xây dựng quanh từng yêu cầu.",
       "subtitle": "Thay vì huy hiệu chung chung, Whitehorse xác định hồ sơ người mua có thể cần và xác nhận nội dung áp dụng cho đúng nhà cung cấp, cơ sở, sản phẩm và đơn hàng.",
       "cta": "Chất lượng & thẩm định",
+      "image": {
+        "alt": "Hàng hóa đóng pallet được đưa lên máy bay chở hàng tại sân đỗ sân bay",
+        "caption": "Hình ảnh minh họa khâu xuất khẩu — hàng hóa đóng pallet vận chuyển hàng không. Không phải cơ sở của Whitehorse hay một lô hàng cụ thể."
+      },
       "items": [
         {
           "label": "Phạm vi 01",
