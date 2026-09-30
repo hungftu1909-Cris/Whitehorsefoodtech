@@ -129,8 +129,11 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
     setValue,
     getValues,
     formState: { errors, isSubmitting, submitCount },
-  } = useForm<RfqInput>({ resolver: zodResolver(rfqSchema), defaultValues });
+  } = useForm<RfqInput>({ resolver: zodResolver(rfqSchema), defaultValues, mode: "onTouched" });
   const product = useWatch({ control, name: "product" });
+  const intent = useWatch({ control, name: "intent" });
+  const range = useWatch({ control, name: "range" });
+  const sku = useWatch({ control, name: "sku" });
   const model: RfqModel = useWatch({ control, name: "model" }) ?? "bulk";
   const modelFields: readonly string[] = MODEL_FIELDS[model];
 
@@ -160,9 +163,26 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
     label: v === "not-sure" ? t("incotermNotSure") : v,
   }));
 
+  // Live summary of what the buyer is asking about (prefill included), so
+  // the product → enquiry step never loses its context.
+  const context = [
+    intent ? t(`intents.${intent}`) : "",
+    productOptions.find((o) => o.value === product)?.label ?? "",
+    range ? pick(rangesForProduct(product).find((r) => r.id === range)?.name ?? { en: "", vi: "" }, locale) : "",
+    sku ?? "",
+  ].filter(Boolean);
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-10">
+    <form onSubmit={handleSubmit(onSubmit)} noValidate aria-busy={isSubmitting} className="space-y-9">
       <Honeypot register={register} />
+
+      <div data-rfq-context className="rounded-sm border border-border bg-muted/50 px-4 py-3">
+        <p className="text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">{t("context.label")}</p>
+        <p aria-live="polite" className="mt-1 text-[0.9375rem] font-medium text-foreground">
+          {context.length > 1 ? context.join(" · ") : t("context.empty")}
+        </p>
+        {context.length > 1 && <p className="mt-0.5 text-sm text-muted-foreground">{t("context.hint")}</p>}
+      </div>
 
       <FieldGroup legend={t("sectionRequest")}>
         <fieldset>
@@ -491,7 +511,7 @@ export function RfqForm({ defaults = {} }: { defaults?: RfqPrefill }) {
         undeliveredText={(email) => t("errorDelivery", { email })}
       />
 
-      <Button type="submit" size="lg" disabled={isSubmitting} className="cursor-pointer">
+      <Button type="submit" size="lg" disabled={isSubmitting} className="h-12 w-full cursor-pointer rounded-sm px-7 text-[0.9375rem] sm:w-auto">
         {isSubmitting ? tc("sending") : t("submit")}
       </Button>
     </form>

@@ -5,8 +5,8 @@ import fs from "node:fs";
 import path from "node:path";
 import en from "../messages/en.json" with { type: "json" };
 import vi from "../messages/vi.json" with { type: "json" };
-import { FAMILY_IMAGES, FAMILY_SECONDARY_IMAGES, ABOUT_MOSAIC_FAMILIES } from "../src/lib/family-images.ts";
-import { CATALOG_SKUS } from "../src/lib/catalog.ts";
+import { ABOUT_MOSAIC_FAMILIES, FAMILY_MEDIA, familyMedia } from "../src/lib/media-manifest.ts";
+import type { FamilySlug } from "../src/lib/catalog.ts";
 import { PRODUCT_CATEGORIES } from "../src/lib/nav.ts";
 
 type About = typeof en.about;
@@ -82,42 +82,35 @@ test("About keeps its truth boundaries", () => {
 
 // ---------------------------------------------------------------- imagery
 
-test("every family maps to exactly one image with EN/VI alt text", () => {
-  assert.deepEqual(Object.keys(FAMILY_IMAGES).sort(), PRODUCT_CATEGORIES.map((c) => c.slug).sort());
-  for (const [family, image] of Object.entries(FAMILY_IMAGES)) {
-    assert.ok(image.alt.en.trim() && image.alt.vi.trim(), `${family} alt`);
-    assert.ok(image.src.startsWith("/images/catalog/"), `${family} lives under /images/catalog`);
+test("every family has a keyed highlight slot with EN/VI alt text", () => {
+  assert.deepEqual(Object.keys(FAMILY_MEDIA).sort(), PRODUCT_CATEGORIES.map((c) => c.slug).sort());
+  for (const family of Object.keys(FAMILY_MEDIA) as FamilySlug[]) {
+    for (const image of familyMedia(family)) {
+      assert.ok(image.alt.en.trim() && image.alt.vi.trim(), `${family} alt`);
+      assert.ok(image.src.startsWith("/images/catalog/"), `${family} lives under /images/catalog`);
+    }
   }
   assert.deepEqual([...ABOUT_MOSAIC_FAMILIES].sort(), PRODUCT_CATEGORIES.map((c) => c.slug).sort(), "About mosaic shows all five families");
   assert.equal(ABOUT_MOSAIC_FAMILIES[1], "birds-nest", "bird's nest sits in the top row");
 });
 
-test("every family leads with an editorial image and pairs a distinct second visual", () => {
-  const coffee = FAMILY_IMAGES.coffee;
-  assert.equal(coffee.kind, "editorial");
-  assert.ok(coffee.src.startsWith("/images/catalog/coffee/"));
-  assert.ok(CATALOG_SKUS.some((s) => s.images.some((i) => i.src === coffee.src)), "same file as a catalog coffee image");
-  for (const [family, image] of Object.entries(FAMILY_IMAGES)) {
-    assert.equal(image.kind, "editorial", `${family} leads with an editorial image`);
-    assert.notEqual(image.src, FAMILY_SECONDARY_IMAGES[family as keyof typeof FAMILY_SECONDARY_IMAGES].src);
+test("every family leads with an editorial image; second views are genuine or absent", () => {
+  for (const family of Object.keys(FAMILY_MEDIA) as FamilySlug[]) {
+    const [first, second] = familyMedia(family);
+    assert.equal(first.kind, "editorial", `${family} leads with an editorial image`);
+    if (second) assert.notEqual(second.sourceFile, first.sourceFile, `${family} second view is a different photograph`);
   }
-  assert.equal(FAMILY_SECONDARY_IMAGES.coconut.kind, "concept-pack");
-  assert.equal(FAMILY_SECONDARY_IMAGES["birds-nest"].kind, "concept-pack");
-  assert.equal(FAMILY_SECONDARY_IMAGES.fruit.kind, "studio");
-  assert.equal(FAMILY_SECONDARY_IMAGES["nuts-spices-botanicals"].kind, "studio");
+  assert.equal(familyMedia("coconut")[1].kind, "concept-pack");
+  assert.equal(familyMedia("birds-nest")[1].kind, "concept-pack");
+  // Fruit has no second family photograph that is not a re-crop or a range source.
+  assert.equal(familyMedia("fruit").length, 1);
+  assert.equal(familyMedia("nuts-spices-botanicals")[1].id, "nsb-photo-cashew-tree");
 });
 
-test("family images on disk are optimised, 4:3-ready and have provenance", () => {
-  for (const image of Object.values(FAMILY_IMAGES)) {
+test("family images on disk are optimised and have provenance", () => {
+  for (const image of (Object.keys(FAMILY_MEDIA) as FamilySlug[]).flatMap(familyMedia)) {
     const file = path.join("public", image.src);
     assert.ok(fs.existsSync(file), `${image.src} missing`);
-    if (image.kind === "studio") {
-      // JPEG SOF0/SOF2 header: height then width.
-      const buf = fs.readFileSync(file);
-      const sof = buf.findIndex((b, i) => b === 0xff && (buf[i + 1] === 0xc0 || buf[i + 1] === 0xc2));
-      const h = buf.readUInt16BE(sof + 5), w = buf.readUInt16BE(sof + 7);
-      assert.ok(Math.abs(w / h - 4 / 3) < 0.01, `${image.src} is ${w}×${h}, not 4:3`);
-    }
     assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
     assert.ok(PROVENANCE.includes(image.src.replace(/^\//, "public/")), `${image.src} not in asset-provenance.md`);
   }

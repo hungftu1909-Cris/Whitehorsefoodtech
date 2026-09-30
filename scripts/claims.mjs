@@ -50,6 +50,12 @@ export const FORBIDDEN_CLAIMS = [
   { id: "absolute-purity", pattern: /100\s?%\s*(organic|natural|pure)|(hữu cơ|tự nhiên|nguyên chất) 100\s?%|100\s?% (hữu cơ|tự nhiên|nguyên chất)/i, reason: "Certification/purity claim; organic is per supplier certificate, confirmed per order." },
   { id: "export-grade", pattern: /export[- ]grade/i, reason: "Grading/readiness claim; market access is confirmed per supplier and market." },
   { id: "guarantee", pattern: /\bwe guarantee\b|\bguaranteed (quality|supply|delivery|consistency)\b|chúng tôi (cam kết|bảo đảm|đảm bảo) 100%/i, reason: "Guarantee language needs contract backing." },
+  // The platform is extensible, but the portfolio is five current
+  // collections plus request-specific custom sourcing — never universal
+  // availability (claim registry row 30).
+  { id: "universal-sourcing", pattern: /\b(every|any|all)\s+(premium\s+)?(vietnamese\s+)?ingredients?\s+(from|in|of)\s+vietnam\b|\b(every|all)\s+vietnamese\s+ingredients?\b|(mọi|toàn bộ) (loại )?nguyên liệu (của |tại |từ )?việt nam/i, reason: "Universal-availability claim; sourcing beyond the current portfolio is assessed per request." },
+  // "Qualified" describes the per-request process, not a supplier headcount.
+  { id: "qualified-count", pattern: /\b\d+\+?\s+(qualified|approved|certified)\s+suppliers?\b|\b\d+\+?\s+nhà cung cấp (đạt chuẩn|được chứng nhận|đã được thẩm định)/i, reason: "The 50+ figure is screened suppliers; qualification is per request, product, site and market." },
   { id: "globally-delivered", pattern: /globally delivered|giao khắp toàn cầu/i, reason: "Implies an existing global delivery record." },
   { id: "sku-prefix", pattern: /\bWHC0\d{2}\b/, reason: "Wrong coffee format prefix — codes are WHCF001–WHCF009." },
   { id: "vpbank", pattern: /vpbank/i, reason: "Not a confirmed direct partner; publication needs explicit written permission (see claim registry)." },

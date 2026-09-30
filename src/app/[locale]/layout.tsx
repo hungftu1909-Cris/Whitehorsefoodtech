@@ -5,9 +5,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ThemeColor } from "@/components/theme/theme-color";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
-import { FloatingCtaBar } from "@/components/layout/floating-cta-bar";
 import { AudienceGateway } from "@/components/layout/audience-gateway";
 import { JsonLd } from "@/components/seo/json-ld";
 import { routing, type Locale } from "@/i18n/routing";
@@ -17,10 +17,10 @@ import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fbf8f1" },
-    { media: "(prefers-color-scheme: dark)", color: "#1c120a" },
-  ],
+  // The site opens light regardless of OS preference, so the browser chrome
+  // matches the paper background. <ThemeColor /> retints it after an
+  // explicit dark choice from the header toggle.
+  themeColor: "#fbfaf7",
 };
 
 const inter = Inter({
@@ -89,6 +89,7 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "meta" });
+  const tn = await getTranslations({ locale, namespace: "nav" });
   // Blog slugs differ per locale; the header's language switcher needs this
   // map to land on the translated article (or /blog) instead of a 404.
   const blogSlugMap = getLocaleSwitchMap(locale);
@@ -101,13 +102,22 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <JsonLd locale={locale} siteName={t("siteName")} description={t("description")} />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        {/* Light is the default for every first visit (Luminous direction): an
+            OS dark preference no longer turns the whole site dark. Dark stays
+            available from the header toggle and is remembered once chosen. */}
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+          <ThemeColor />
           <NextIntlClientProvider>
+            <a
+              href="#main-content"
+              className="sr-only z-50 rounded-sm bg-primary px-4 py-3 text-sm font-medium text-primary-foreground focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+            >
+              {tn("skipToContent")}
+            </a>
             <SiteHeader blogSlugMap={blogSlugMap} />
             <AudienceGateway />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" tabIndex={-1} className="flex-1 outline-none">{children}</main>
             <SiteFooter />
-            <FloatingCtaBar />
             <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>

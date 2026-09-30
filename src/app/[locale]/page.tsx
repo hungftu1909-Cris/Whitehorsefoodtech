@@ -2,12 +2,14 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
 import { ProofStrip } from "@/components/home/proof-strip";
 import { ProductsPreview } from "@/components/home/products-preview";
-import { PlatformMap } from "@/components/home/platform-map";
-import { EvidenceLayer } from "@/components/home/evidence-layer";
+import { QualityMethod } from "@/components/home/quality-method";
 import { SplitCta } from "@/components/sections/split-cta";
 
-// Six server-rendered sections tell one platform story. Interactive product
-// filtering lives on /products, keeping the homepage fast and indexable.
+// Server-rendered, shortest path to a buyer decision: promise → compact
+// current proof → current collections (+ custom sourcing, documents) → one
+// short quality / working-method band (technology roadmap in a disclosure)
+// → buyer / supplier paths. Detailed mechanics live on Process and Quality.
+// Interactive product filtering lives on /products.
 export default async function Home({
   params,
 }: {
@@ -22,8 +24,7 @@ export default async function Home({
       <Hero />
       <ProofStrip />
       <ProductsPreview />
-      <PlatformMap />
-      <EvidenceLayer />
+      <QualityMethod />
       <SplitCta
         title={t("title")}
         subtitle={t("subtitle")}

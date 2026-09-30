@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -13,7 +12,13 @@ type Path = {
   secondaryHref?: Href;
 };
 
-/** Closing CTA with two pathways: buyers to RFQ, suppliers to registration. */
+/**
+ * Closing CTA with two pathways: buyers to RFQ, suppliers to registration.
+ * Two light plates (white on a hairline, and pale mist) with quiet,
+ * arrow-free actions; the buyer path leads with the solid forest action.
+ * Both bodies start on the same line under the label row and the actions
+ * sit on a shared baseline, whatever the copy length.
+ */
 export function SplitCta({
   title,
   subtitle,
@@ -28,44 +33,42 @@ export function SplitCta({
   id?: string;
 }) {
   return (
-    <section id={id} className="scroll-mt-20 bg-muted/40">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-        <h2 className="max-w-3xl font-serif text-3xl leading-tight font-semibold text-balance text-foreground md:text-5xl">
+    <section id={id} className="scroll-mt-24 bg-background">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 md:py-24 lg:px-8">
+        <h2 className="max-w-3xl font-serif text-[2.1rem] leading-[1.1] font-medium tracking-[-0.01em] text-balance text-foreground md:text-5xl">
           {title}
         </h2>
-        {subtitle && <p className="mt-5 max-w-2xl text-muted-foreground">{subtitle}</p>}
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        {subtitle && <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-[1.0625rem]">{subtitle}</p>}
+        <div className="mt-10 grid gap-4 md:mt-12 md:grid-cols-2 md:gap-6">
           {[buyer, supplier].map((path, i) => (
-            <div key={path.label} className={cn("flex min-h-64 flex-col rounded-xl border p-6 md:p-8", i === 0 ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground")}>
+            <div key={path.label} className={cn("flex min-h-64 min-w-0 flex-col p-6 text-foreground sm:p-7 md:p-10", i === 0 ? "border border-foreground/12 bg-card" : "bg-muted")}>
               <div className="flex items-center justify-between gap-4">
-                <h3 className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">{path.label}</h3>
-                <span className={cn("font-mono text-xs", i === 0 ? "text-primary-foreground/45" : "text-muted-foreground")}>0{i + 1}</span>
+                <h3 className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{path.label}</h3>
+                <span className="font-serif text-lg text-muted-foreground tabular-nums">0{i + 1}</span>
               </div>
-              <p className={cn("mt-auto max-w-lg pt-12 text-lg leading-relaxed", i === 0 ? "text-primary-foreground/80" : "text-muted-foreground")}>{path.body}</p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <p className="mt-10 max-w-lg font-serif text-xl leading-relaxed text-foreground md:text-[1.4rem]">{path.body}</p>
+              <div className="mt-auto flex flex-col gap-3 pt-8 sm:flex-row sm:flex-wrap">
                 <Link
                   href={path.href}
                   className={cn(
                     buttonVariants({ variant: i === 0 ? "default" : "outline", size: "lg" }),
-                    "h-11 w-full cursor-pointer justify-between px-5 text-sm sm:w-auto",
+                    "h-auto min-h-12 w-full cursor-pointer rounded-sm px-6 py-3 text-center text-[0.9375rem] whitespace-normal sm:w-auto sm:px-7",
                     i === 0
-                      ? "bg-accent text-accent-foreground hover:bg-accent/90"
-                      : "border-border bg-transparent text-foreground hover:border-accent hover:bg-muted"
+                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                      : "border-foreground/30 bg-transparent text-foreground hover:border-foreground hover:bg-transparent"
                   )}
                 >
                   {path.cta}
-                  <ArrowRight className="ml-2 size-4" aria-hidden="true" />
                 </Link>
                 {path.secondaryCta && path.secondaryHref && (
                   <Link
                     href={path.secondaryHref}
                     className={cn(
                       buttonVariants({ variant: "outline", size: "lg" }),
-                      "h-11 w-full cursor-pointer justify-between border-primary-foreground/35 bg-transparent px-5 text-sm text-primary-foreground hover:bg-primary-foreground/10 sm:w-auto"
+                      "h-auto min-h-12 w-full cursor-pointer rounded-sm border-foreground/30 bg-transparent px-6 py-3 text-center text-[0.9375rem] whitespace-normal text-foreground hover:border-foreground hover:bg-transparent sm:w-auto sm:px-7"
                     )}
                   >
                     {path.secondaryCta}
-                    <ArrowRight className="ml-2 size-4" aria-hidden="true" />
                   </Link>
                 )}
               </div>

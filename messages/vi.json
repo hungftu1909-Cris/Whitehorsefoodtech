@@ -1,13 +1,16 @@
 {
   "meta": {
     "siteName": "Whitehorse Foodtech",
-    "title": "Whitehorse Foodtech — Nguyên liệu nông nghiệp cao cấp Việt Nam cho khách hàng quốc tế",
-    "description": "Whitehorse Foodtech kết nối nông hộ, hợp tác xã và nhà máy chế biến phù hợp tại Việt Nam với các nhà phân phối, nhà sản xuất thực phẩm và đồ uống, hệ thống foodservice và thương hiệu quốc tế — cà phê, dừa, yến sào, trái cây, hạt, gia vị và thảo mộc, tìm nguồn theo thông số."
+    "title": "Whitehorse Foodtech — Nền tảng nguyên liệu cao cấp từ Việt Nam",
+    "description": "Whitehorse Foodtech kết nối người mua toàn cầu với nguồn cung nguyên liệu cao cấp được thẩm định tại Việt Nam — tìm nguồn theo thông số, hồ sơ theo từng yêu cầu và điều phối thương mại xuyên suốt. Bộ sưu tập trọng tâm hiện tại: cà phê, dừa, yến sào, trái cây, cùng hạt, gia vị và thảo mộc."
   },
   "nav": {
     "home": "Trang chủ",
+    "openMenu": "Mở menu",
     "about": "Giới thiệu",
     "products": "Sản phẩm",
+    "currentPortfolio": "Danh mục hiện tại",
+    "customSourcing": "Tìm nguồn theo yêu cầu",
     "productsCoffee": "Nguyên liệu Cà phê",
     "productsCoconut": "Nguyên liệu Dừa",
     "productsBirdsNest": "Nguyên liệu Yến sào",
@@ -20,7 +23,19 @@
     "clients": "Mạng lưới",
     "blog": "Tin tức",
     "contact": "Liên hệ",
-    "requestQuote": "Yêu cầu báo giá"
+    "requestQuote": "Yêu cầu báo giá",
+    "company": "Công ty",
+    "qualityShort": "Chất lượng",
+    "forSuppliers": "Dành cho nhà cung cấp",
+    "language": "Ngôn ngữ",
+    "localeNames": {
+      "en": "English",
+      "vi": "Tiếng Việt"
+    },
+    "allProducts": "Tất cả sản phẩm",
+    "primaryLabel": "Điều hướng chính",
+    "skipToContent": "Chuyển đến nội dung",
+    "closeMenu": "Đóng menu"
   },
   "footer": {
     "tagline": "Nguyên liệu nông nghiệp cao cấp Việt Nam, tìm nguồn và điều phối theo thông số của bạn.",
@@ -54,33 +69,76 @@
   "home": {
     "hero": {
       "eyebrow": "Nền tảng nguyên liệu Việt Nam",
-      "status": "Nền tảng hiện tại",
-      "title": "Nguyên liệu cao cấp, được cấu trúc cho đội ngũ sản phẩm toàn cầu.",
-      "subtitle": "Whitehorse kết nối các dòng nguyên liệu đã xác định, nhà cung cấp được sàng lọc và hồ sơ chất lượng theo từng yêu cầu — cùng nguồn cung số lượng lớn và OEM, ODM, OBM qua đối tác sản xuất phù hợp, cho nhà phân phối, nhà sản xuất, hệ thống foodservice và thương hiệu.",
+      "title": "Nguyên liệu cao cấp từ Việt Nam, thẩm định theo đúng thông số của bạn.",
+      "subtitle": "Whitehorse đưa yêu cầu sản phẩm của thị trường toàn cầu đến với nguồn cung Việt Nam phù hợp — được thẩm định, có hồ sơ riêng cho từng yêu cầu và được điều phối thương mại xuyên suốt.",
       "ctaPrimary": "Yêu cầu báo giá",
-      "ctaSecondary": "Khám phá nguyên liệu",
-      "signals": [
+      "ctaSecondary": "Xem danh mục hiện tại",
+      "portfolioLabel": "Bộ sưu tập trọng tâm hiện tại",
+      "portfolioBeyond": "Tìm nguồn theo thông số riêng",
+      "standard": {
+        "label": "Chuẩn vận hành Whitehorse",
+        "status": "Đang vận hành",
+        "title": "Tìm nguồn dẫn dắt bởi thông số"
+      },
+      "images": {
+        "processing": {
+          "alt": "Hai công nhân mặc đồ bảo hộ vệ sinh xếp khay trái cây vào buồng sấy thăng hoa đang mở"
+        },
+        "freight": {
+          "alt": "Hàng hóa đóng pallet được đưa lên máy bay chở hàng tại sân đỗ sân bay"
+        },
+        "origin": {
+          "alt": "Người nông dân thu hoạch quả cà phê chín vào thau giữa vườn cà phê"
+        }
+      },
+      "imageCaption": "Hình ảnh minh họa các khâu trong mạng lưới cung ứng — thu hoạch tại vùng trồng, chế biến nguyên liệu và vận chuyển hàng không xuất khẩu. Không phải nông trại, cơ sở của Whitehorse hay một lô hàng cụ thể.",
+      "imageCaptionMobile": "Hình ảnh minh họa các khâu trong mạng lưới cung ứng — thu hoạch tại vùng trồng, chế biến nguyên liệu và vận chuyển hàng không xuất khẩu. Không phải nông trại, cơ sở của Whitehorse hay một lô hàng cụ thể.",
+      "paths": {
+        "label": "Chọn lối vào",
+        "buyer": "Global buyers — explore in English",
+        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt",
+        "chooser": "Chọn lối vào"
+      }
+    },
+    "operating": {
+      "eyebrow": "Cách nền tảng vận hành",
+      "title": "Một chuẩn vận hành, từ thông số đến thực thi.",
+      "subtitle": "Danh mục có thể mở rộng; cách Whitehorse thẩm định và thực thi nguồn cung thì không đổi. Mỗi yêu cầu đi qua cùng bốn nguyên tắc.",
+      "status": "Đang vận hành",
+      "stages": [
         {
-          "label": "Phạm vi",
-          "value": "5 nhóm"
+          "number": "01",
+          "title": "Thông số người mua",
+          "body": "Sản phẩm, định dạng, ứng dụng, thị trường, sản lượng, bao bì và yêu cầu hồ sơ được xác định cùng người mua trước khi tìm nguồn."
         },
         {
-          "label": "Danh mục",
-          "value": "29 SKU cốt lõi"
+          "number": "02",
+          "title": "Mạng lưới được thẩm định",
+          "body": "Nhà cung cấp được sàng lọc theo năng lực sản phẩm, cơ sở, thị trường và yêu cầu hồ sơ, rồi được đối chiếu với thông số."
         },
         {
-          "label": "Mạng lưới",
-          "value": "50+ sàng lọc"
+          "number": "03",
+          "title": "Hồ sơ theo từng yêu cầu",
+          "body": "Mẫu, phạm vi kiểm nghiệm, chứng nhận của nhà cung cấp và chứng từ lô hàng được thống nhất cho đúng nhà cung cấp, cơ sở, sản phẩm và đơn hàng."
+        },
+        {
+          "number": "04",
+          "title": "Thực thi thương mại",
+          "body": "Nguồn cung số lượng lớn, hoặc OEM, ODM và OBM qua đối tác sản xuất phù hợp, với điều khoản, đóng gói, chứng từ và logistics được điều phối theo từng đơn hàng."
         }
       ],
-      "moduleLabel": "Lớp nền tảng",
-      "building": "Đang xây dựng",
-      "moduleTitle": "Không gian hồ sơ",
-      "moduleBody": "Góc nhìn tương lai cho người mua về thông số, hồ sơ nhà cung cấp và tiến độ yêu cầu — đang được xây dựng, chưa phải dịch vụ tài khoản trực tuyến."
+      "cta": "Xem quy trình xử lý yêu cầu",
+      "techSummary": "Công nghệ chuỗi cung ứng — trạng thái từng lớp",
+      "qualityCta": "Chất lượng & thẩm định"
     },
     "proof": {
       "title": "Whitehorse hôm nay",
+      "tag": "Hiện tại",
       "items": [
+        {
+          "value": "29",
+          "label": "SKU cốt lõi đã xác định trong năm bộ sưu tập trọng tâm hiện tại"
+        },
         {
           "value": "50+",
           "label": "Nhà cung cấp được sàng lọc theo năng lực sản phẩm, cơ sở và yêu cầu thị trường"
@@ -88,96 +146,90 @@
         {
           "value": "10+",
           "label": "Thị trường có quan hệ khách hàng và thương mại đang diễn ra"
-        },
-        {
-          "value": "5",
-          "label": "Nhóm nguyên liệu, từ cà phê đến thảo mộc"
         }
       ]
     },
     "productsPreview": {
-      "eyebrow": "Dữ liệu nguyên liệu",
-      "title": "Một danh mục, năm nhóm nguyên liệu.",
-      "subtitle": "Khám phá 29 SKU cốt lõi đã xác định trong năm nhóm, cùng năng lực phát triển mix, blend và công thức tùy chỉnh theo thông số của người mua.",
+      "eyebrow": "Danh mục hiện tại",
+      "title": "Các bộ sưu tập trọng tâm hôm nay.",
+      "subtitle": "Năm bộ sưu tập với 29 SKU cốt lõi đã xác định dẫn dắt danh mục hiện tại, cùng khả năng phát triển mix, blend và công thức tùy chỉnh theo thông số của người mua. Khả năng cung ứng, thông số cuối cùng và hồ sơ được xác nhận theo từng yêu cầu.",
       "exploreCta": "Mở Product Explorer",
-      "items": [
-        {
-          "title": "Nguyên liệu Cà phê",
-          "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew",
-          "status": "9 SKU đã xác định"
-        },
-        {
+      "items": {
+        "coconut": {
           "title": "Nguyên liệu Dừa",
-          "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa",
-          "status": "5 SKU đã xác định"
+          "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa"
         },
-        {
-          "title": "Nguyên liệu Yến sào",
-          "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn",
-          "status": "2 SKU đã xác định"
-        },
-        {
+        "fruit": {
           "title": "Nguyên liệu Trái cây",
-          "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree",
-          "status": "9 SKU đã xác định"
+          "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree"
         },
-        {
+        "nutsSpicesBotanicals": {
           "title": "Hạt, Gia vị & Thảo mộc",
-          "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa",
-          "status": "4 SKU đã xác định"
+          "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa"
+        },
+        "coffee": {
+          "title": "Nguyên liệu Cà phê",
+          "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew"
+        },
+        "birdsNest": {
+          "title": "Nguyên liệu Yến sào",
+          "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn"
         }
-      ]
+      },
+      "custom": {
+        "eyebrow": "Ngoài danh mục hiện tại",
+        "title": "Tìm nguồn một nguyên liệu Việt Nam khác.",
+        "body": "Những yêu cầu nằm ngoài các bộ sưu tập hiện tại — chẳng hạn trà, ca cao, gạo, thảo mộc, nguyên liệu thực vật hay nguyên liệu chức năng — được đánh giá theo thông số của bạn bằng cùng một chuẩn vận hành. Mức độ phù hợp của nhà cung cấp, tính khả thi và hồ sơ được xác nhận trước khi có bất kỳ cam kết nào.",
+        "cta": "Gửi yêu cầu tìm nguồn riêng"
+      },
+      "documentsLabel": "Tải về"
     },
     "platform": {
-      "eyebrow": "Mô hình Whitehorse",
-      "title": "Một hành trình kết nối từ nhu cầu nguyên liệu đến nguồn cung phù hợp.",
-      "subtitle": "Nền tảng đưa dữ liệu sản phẩm, ghép nối nhà cung cấp và điều phối hồ sơ vào một quy trình thương mại — trong khi không gian số được phát triển theo từng giai đoạn có nhãn rõ ràng.",
-      "current": "Đang vận hành",
-      "building": "Lớp sản phẩm đang phát triển",
-      "currentShort": "Hiện tại",
-      "buildingShort": "Đang xây dựng",
-      "stages": [
-        {
-          "number": "01",
-          "title": "Dữ liệu sản phẩm",
-          "body": "Nhóm, định dạng, mã sản phẩm và các chiều thông số người mua cần xác định trong brief.",
-          "status": "current"
-        },
-        {
-          "number": "02",
-          "title": "Ghép nối nhà cung cấp",
-          "body": "Nhà cung cấp tiềm năng được sàng lọc theo sản phẩm, cơ sở, thị trường và yêu cầu hồ sơ.",
-          "status": "current"
-        },
-        {
-          "number": "03",
-          "title": "Điều phối hồ sơ",
-          "body": "Mẫu, phạm vi kiểm nghiệm, hồ sơ nhà cung cấp và chứng từ lô hàng được thống nhất cho từng yêu cầu.",
-          "status": "current"
-        },
-        {
-          "number": "04",
-          "title": "Không gian số cho người mua",
-          "body": "Góc nhìn có cấu trúc về yêu cầu, thông số và hồ sơ là lớp sản phẩm tiếp theo, chưa phải dịch vụ đang hoạt động.",
-          "status": "building"
-        }
-      ],
+      "eyebrow": "Công nghệ chuỗi cung ứng",
+      "title": "Các lớp tiếp theo của nền tảng, gắn nhãn theo trạng thái.",
+      "subtitle": "Hôm nay, chuẩn vận hành được thực hiện qua con người, quy trình nhà cung cấp và hồ sơ yêu cầu. Các lớp số được bổ sung từng bước, và mỗi lớp cho biết đang vận hành hay vẫn đang được xây dựng.",
+      "statusLabels": {
+        "current": "Đang vận hành",
+        "building": "Đang xây dựng",
+        "roadmap": "Lộ trình"
+      },
+      "workspace": {
+        "title": "Không gian số cho người mua",
+        "body": "Góc nhìn có cấu trúc về yêu cầu, thông số và hồ sơ — lớp sản phẩm tiếp theo, chưa phải dịch vụ tài khoản đang hoạt động."
+      },
       "technology": {
-        "status": "Định hướng nền tảng",
         "title": "Công nghệ kết nối chất lượng & chuỗi cung ứng",
         "body": "Một trục dữ liệu kết nối nhu cầu, thông số, năng lực nguồn cung, hồ sơ chất lượng, tồn kho và các mốc vận tải quanh từng yêu cầu.",
         "nodes": [
-          "Dữ liệu nguồn & IoT",
-          "Hồ sơ QMS / LIMS",
-          "Tồn kho WMS",
-          "Luồng nhà cung cấp & đơn hàng",
-          "Logistics TMS",
-          "Phản hồi Buyer"
+          {
+            "label": "Dữ liệu nguồn & IoT",
+            "status": "roadmap"
+          },
+          {
+            "label": "Hồ sơ QMS / LIMS",
+            "status": "building"
+          },
+          {
+            "label": "Tồn kho WMS",
+            "status": "roadmap"
+          },
+          {
+            "label": "Luồng nhà cung cấp & đơn hàng",
+            "status": "current"
+          },
+          {
+            "label": "Logistics TMS",
+            "status": "roadmap"
+          },
+          {
+            "label": "Mạng lưới người mua & phân phối",
+            "status": "current"
+          }
         ],
-        "ai": "AI + dữ liệu thông minh xuyên suốt mọi lớp"
+        "ai": "AI + dữ liệu thông minh xuyên suốt các lớp"
       },
-      "note": "Hiện tại nghĩa là quy trình Whitehorse đang vận hành. Đang xây dựng nghĩa là định hướng sản phẩm trong quá trình phát triển; không hàm ý cổng thông tin, khu vực tài khoản hay theo dõi lô hàng thời gian thực đã hoạt động.",
-      "cta": "Xem quy trình xử lý yêu cầu"
+      "note": "Đang vận hành nghĩa là quy trình Whitehorse đang hoạt động. Đang xây dựng và Lộ trình là các định hướng sản phẩm đang phát triển; không hàm ý cổng thông tin, khu vực tài khoản, tích hợp toàn mạng lưới hay theo dõi lô hàng thời gian thực đã hoạt động. Mức độ áp dụng sẽ khác nhau theo nhà cung cấp, cơ sở và dự án.",
+      "cta": "Xem kiến trúc công nghệ"
     },
     "evidence": {
       "eyebrow": "Lớp hồ sơ",
@@ -238,14 +290,14 @@
       "note": "Khả năng cung ứng, MOQ, công thức, bao bì, chứng nhận và tuân thủ thị trường được xác nhận theo từng sản phẩm, cơ sở đối tác và dự án. Chứng nhận thuộc về một nhà cung cấp, cơ sở và phạm vi sản phẩm cụ thể."
     },
     "ctaBanner": {
-      "title": "Chọn lối vào nền tảng của bạn.",
+      "title": "Hai lối vào nền tảng.",
       "subtitle": "Chia sẻ sản phẩm, sản lượng và cảng đích. Đội ngũ kinh doanh của chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo.",
       "cta": "Yêu cầu báo giá",
       "buyerLabel": "Dành cho người mua",
-      "buyerBody": "Khám phá nguyên liệu, xác định thông số và bắt đầu yêu cầu số lượng lớn, OEM, ODM hoặc OBM phù hợp.",
+      "buyerBody": "Gửi yêu cầu cho một bộ sưu tập hiện tại hoặc một nguyên liệu Việt Nam khác, xác định thông số và bắt đầu yêu cầu số lượng lớn, OEM, ODM hoặc OBM.",
       "buyerCta": "Yêu cầu báo giá",
       "supplierLabel": "Dành cho nhà cung cấp",
-      "supplierBody": "Nông hộ, hợp tác xã và nhà máy chế biến có thể gửi thông tin năng lực, cơ sở và hồ sơ để đánh giá.",
+      "supplierBody": "Nông hộ, hợp tác xã và nhà máy chế biến — trong hay ngoài các bộ sưu tập hiện tại — có thể gửi thông tin năng lực, cơ sở và hồ sơ để đánh giá.",
       "supplierCta": "Đăng ký làm nhà cung cấp"
     }
   },
@@ -431,14 +483,22 @@
     "hero": {
       "eyebrow": "Product Explorer",
       "title": "Tìm đúng dạng nguyên liệu cho yêu cầu của bạn.",
-      "subtitle": "Khám phá 29 SKU cốt lõi đã xác định qua mười tám dòng tìm nguồn và phát triển trong năm nhóm nguyên liệu. Các dòng mix, blend và công thức tùy chỉnh cũng có thể được phát triển theo yêu cầu. Thông số cuối cùng, khả năng cung ứng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng."
+      "subtitle": "Khám phá 29 SKU cốt lõi đã xác định qua mười tám dòng tìm nguồn và phát triển trong năm nhóm nguyên liệu. Các dòng mix, blend và công thức tùy chỉnh cũng có thể được phát triển theo yêu cầu. Thông số cuối cùng, khả năng cung ứng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng.",
+      "lead": "29 SKU cốt lõi đã xác định trong mười tám dòng sản phẩm thuộc năm nhóm hiện tại. Thông số, khả năng cung ứng và hồ sơ được thống nhất theo từng đơn hàng."
     },
     "explorer": {
       "eyebrow": "Danh mục có cấu trúc",
       "title": "Lọc theo nhóm. Tìm theo dạng hoặc ứng dụng.",
       "subtitle": "Mỗi dòng tổ chức các SKU cốt lõi, định dạng mở và chiều thông số cần xác định. Chọn nhóm hoặc tìm trên danh mục song ngữ; mix, blend và công thức tùy chỉnh có thể được brief từ dòng phù hợp.",
       "filterLabel": "Lọc theo nhóm nguyên liệu",
-      "searchPlaceholder": "Dạng, sản phẩm hoặc ứng dụng"
+      "searchPlaceholder": "Dạng, sản phẩm hoặc ứng dụng",
+      "chipLabels": {
+        "coffee": "Cà phê",
+        "coconut": "Dừa",
+        "fruit": "Trái cây",
+        "nutsSpicesBotanicals": "Hạt & Gia vị",
+        "birdsNest": "Yến sào"
+      }
     },
     "categories": {
       "coffee": {
@@ -593,7 +653,18 @@
     "rangesCount": "{count, plural, other {# dòng sản phẩm}}",
     "stickyLabel": "Yêu cầu mẫu hoặc báo giá",
     "galleryLabel": "Hình ảnh sản phẩm",
-    "showImage": "Xem ảnh {index}"
+    "showImage": "Xem ảnh {index}",
+    "quickView": "Xem nhanh",
+    "quickViewOf": "Xem nhanh: {name}",
+    "closePanel": "Đóng",
+    "familyPage": "Mở trang nhóm sản phẩm",
+    "codePagesInRange": "Trang SKU chi tiết trong dòng này",
+    "specFieldsTitle": "Các thông số cần thống nhất",
+    "showImageOf": "Xem ảnh {index}/2",
+    "pauseImages": "Tạm dừng chuyển ảnh",
+    "playImages": "Tiếp tục chuyển ảnh",
+    "emptyHint": "Thử nhóm khác hoặc từ khóa ngắn hơn, ví dụ tên trái cây, dạng sản phẩm (bột, đông lạnh) hoặc ứng dụng.",
+    "briefOther": "Gửi yêu cầu nguyên liệu khác"
   },
   "documents": {
     "hero": {
@@ -892,7 +963,8 @@
     "hero": {
       "eyebrow": "Yêu cầu báo giá",
       "title": "Yêu cầu báo giá hoặc mẫu hàng",
-      "subtitle": "Chia sẻ sản phẩm, thông số, sản lượng và điểm đến. Đội ngũ kinh doanh của chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo."
+      "subtitle": "Chia sẻ sản phẩm, thông số, sản lượng và điểm đến. Đội ngũ kinh doanh của chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo.",
+      "lead": "Chia sẻ sản phẩm, thông số, sản lượng và điểm đến. Đội ngũ kinh doanh xem xét các yêu cầu phù hợp và phản hồi bước thương mại tiếp theo."
     },
     "form": {
       "title": "Yêu cầu báo giá",
@@ -1007,7 +1079,12 @@
       "targetMarketPlaceholder": "VD: bán lẻ EU, thương mại điện tử Nhật Bản, foodservice Trung Đông",
       "brandModel": "Mô hình thương hiệu cần trao đổi (không bắt buộc)",
       "brandModelPlaceholder": "VD: thành phẩm mang thương hiệu của bạn, dòng sản phẩm đồng thương hiệu",
-      "packing": "Quy cách đóng gói (không bắt buộc)"
+      "packing": "Quy cách đóng gói (không bắt buộc)",
+      "context": {
+        "label": "Yêu cầu của bạn",
+        "empty": "Chọn nhu cầu bên dưới — sản phẩm, dòng sản phẩm và loại yêu cầu.",
+        "hint": "Có thể điều chỉnh mọi chi tiết trong biểu mẫu bên dưới."
+      }
     }
   },
   "packaging": {
@@ -1041,11 +1118,26 @@
       "eyebrow": "Nguyên tắc kỹ thuật bắt buộc",
       "title": "Thiết kế cao cấp bắt đầu từ bảo vệ sản phẩm.",
       "items": [
-        { "title": "Logic van", "body": "Cà phê rang trong bao kín cần van thoát khí một chiều. Cà phê nhân tuyệt đối không dùng van. Cà phê hòa tan và mọi sản phẩm bột phải kín bụi, không van." },
-        { "title": "Khả năng nhìn thấy sản phẩm", "body": "Có thể dùng cửa sổ tiết chế cho một số sản phẩm khô nguyên dạng sau khi thẩm định màng và hạn dùng. Bột và sản phẩm sấy thăng hoa mặc định dùng bao bì kín sáng." },
-        { "title": "Khẩu phần đơn", "body": "Cà phê túi lọc, cà phê hòa tan nguyên chất và premix dùng cấu trúc và định lượng khác nhau; không gộp thành một dạng gói chung." },
-        { "title": "Quy trình dạng lỏng", "body": "Bảo quản lạnh, chiết nóng và vô trùng là các hệ khác nhau. Bao bì phải theo quy trình chiết rót được phê duyệt trước khi đưa ra tuyên bố ổn định ở nhiệt độ thường." },
-        { "title": "Ngôn ngữ công nghiệp", "body": "Bao bì công nghiệp cao cấp dựa trên typography kỷ luật, nhận diện lô và truy xuất nguồn gốc—không dựa vào trang trí xa xỉ." }
+        {
+          "title": "Logic van",
+          "body": "Cà phê rang trong bao kín cần van thoát khí một chiều. Cà phê nhân tuyệt đối không dùng van. Cà phê hòa tan và mọi sản phẩm bột phải kín bụi, không van."
+        },
+        {
+          "title": "Khả năng nhìn thấy sản phẩm",
+          "body": "Có thể dùng cửa sổ tiết chế cho một số sản phẩm khô nguyên dạng sau khi thẩm định màng và hạn dùng. Bột và sản phẩm sấy thăng hoa mặc định dùng bao bì kín sáng."
+        },
+        {
+          "title": "Khẩu phần đơn",
+          "body": "Cà phê túi lọc, cà phê hòa tan nguyên chất và premix dùng cấu trúc và định lượng khác nhau; không gộp thành một dạng gói chung."
+        },
+        {
+          "title": "Quy trình dạng lỏng",
+          "body": "Bảo quản lạnh, chiết nóng và vô trùng là các hệ khác nhau. Bao bì phải theo quy trình chiết rót được phê duyệt trước khi đưa ra tuyên bố ổn định ở nhiệt độ thường."
+        },
+        {
+          "title": "Ngôn ngữ công nghiệp",
+          "body": "Bao bì công nghiệp cao cấp dựa trên typography kỷ luật, nhận diện lô và truy xuất nguồn gốc—không dựa vào trang trí xa xỉ."
+        }
       ]
     },
     "custom": {

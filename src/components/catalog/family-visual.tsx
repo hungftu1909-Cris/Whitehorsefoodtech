@@ -1,7 +1,7 @@
 import { DualImageFrame } from "@/components/catalog/dual-image-frame";
-import { FAMILY_SECONDARY_IMAGES, familyImage } from "@/lib/family-images";
+import { toFrameImages } from "@/lib/frame-images";
+import { familyMedia } from "@/lib/media-manifest";
 import { pick, rangesFor, type FamilySlug } from "@/lib/catalog";
-import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { hasPublicFile } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
@@ -11,11 +11,11 @@ export type FamilyVisualLabels = {
 };
 
 /**
- * The visual for one product family, from src/lib/family-images.ts.
- * Always 4:3 and object-cover. Editorial and studio images carry their
- * visible badge; a studio image that is not on disk yet renders as a quiet
- * typographic panel (family number, name and ranges) instead of an empty
- * box or the retired packaging mock-ups.
+ * The visual for one product family, resolved by family slug from
+ * src/lib/media-manifest.ts (FAMILY_MEDIA). Always 4:3 and object-cover.
+ * Two verified highlight images give the hover / auto-advance pair; one
+ * gives a still frame. If no verified file is on disk the family renders a
+ * quiet typographic panel (name and ranges) — never another family's image.
  */
 export function FamilyVisual({
   family,
@@ -26,6 +26,7 @@ export function FamilyVisual({
   priority,
   compact,
   showBadge = true,
+  href,
   className,
 }: {
   family: FamilySlug;
@@ -41,41 +42,34 @@ export function FamilyVisual({
    * the whole group (the About mosaic).
    */
   showBadge?: boolean;
+  /** Makes the image a link (overlay; controls stay outside the <a>). */
+  href?: React.ComponentProps<typeof DualImageFrame>["href"];
   className?: string;
 }) {
-  const image = familyImage(family);
-  const secondary = FAMILY_SECONDARY_IMAGES[family];
+  const media = familyMedia(family).filter((asset) => hasPublicFile(asset.src));
   const frame = cn("relative aspect-[4/3] overflow-hidden", className);
-  const badge = (kind: typeof image.kind) =>
-    kind === "concept-pack" ? labels.concept : undefined;
 
-  if (hasPublicFile(image.src)) {
+  if (media.length > 0) {
     return (
       <DualImageFrame
-        images={[
-          { src: image.src, alt: pick(image.alt, locale), badge: badge(image.kind) },
-          ...(hasPublicFile(secondary.src)
-            ? [{ src: secondary.src, alt: pick(secondary.alt, locale), badge: badge(secondary.kind) }]
-            : []),
-        ]}
+        images={toFrameImages(media, locale, labels.concept)}
         sizes={sizes}
         priority={priority}
         showBadge={showBadge}
+        href={href}
         className={frame}
       />
     );
   }
 
-  const index = PRODUCT_CATEGORIES.findIndex((c) => c.slug === family) + 1;
   const ranges = rangesFor(family).map((range) => pick(range.name, locale));
   return (
     // Decorative: the family name and ranges are repeated in the card or
     // page copy next to it, so screen readers skip the panel.
     <div
       aria-hidden="true"
-      className={cn(frame, "flex flex-col justify-between bg-muted/60", compact ? "p-4" : "p-6 md:p-8")}
+      className={cn(frame, "flex flex-col justify-end bg-muted/60", compact ? "p-4" : "p-6 md:p-8")}
     >
-      <span className="font-serif text-sm text-accent tabular-nums">{String(index).padStart(2, "0")}</span>
       <div>
         <p
           className={cn(

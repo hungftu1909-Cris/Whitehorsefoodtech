@@ -48,29 +48,27 @@ test("family visuals keep only the concept-pack disclosure", () => {
   }
   const visual = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");
   assert.match(visual, /<DualImageFrame/);
-  assert.match(visual, /badge: badge\(image\.kind\)/);
-  assert.match(visual, /badge: badge\(secondary\.kind\)/);
+  assert.match(visual, /toFrameImages\(media, locale, labels\.concept\)/, "badge only via the concept-pack label");
   const frame = fs.readFileSync("src/components/catalog/dual-image-frame.tsx", "utf8");
-  assert.match(frame, /\{primary\.badge\}/);
-  assert.match(frame, /\{secondary\.badge\}/);
+  assert.match(frame, /\{showSecond \? secondary\?\.badge : primary\.badge\}/, "the badge always describes the displayed view");
   assert.match(frame, /object-cover/);
   const detail = fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8");
   assert.doesNotMatch(detail, /studioNote|editorialBadge|studioBadge/);
   assert.match(detail, /<DualImageFrame/, "detail page uses the shared two-image frame");
-  assert.match(detail, /badgeFor\(image\.kind\)/, "detail frame labels concept packaging when applicable");
+  assert.match(detail, /toFrameImages\(heroMedia, locale, tc\("conceptPackBadge"\)\)/, "detail frame labels concept packaging when applicable");
 });
 
-test("homepage is six server-rendered platform sections, without page-wide reveal hydration", () => {
+test("homepage is five server-rendered sections, without page-wide reveal hydration", () => {
   const page = fs.readFileSync("src/app/[locale]/page.tsx", "utf8");
-  const order = ["<Hero", "<ProofStrip", "<ProductsPreview", "<PlatformMap", "<EvidenceLayer", "<SplitCta"].map((tag) => page.indexOf(tag));
-  assert.ok(order.every((pos, i) => pos > -1 && (i === 0 || pos > order[i - 1])), "Hero → proof → families → platform → evidence → split CTA");
-  assert.equal((page.match(/^ {6}<[A-Z]/gm) ?? []).length, 6, "exactly six sections");
+  const order = ["<Hero", "<ProofStrip", "<ProductsPreview", "<QualityMethod", "<SplitCta"].map((tag) => page.indexOf(tag));
+  assert.ok(order.every((pos, i) => pos > -1 && (i === 0 || pos > order[i - 1])), "hero, proof, collections, quality & method, paths");
+  assert.equal((page.match(/^ {6}<[A-Z]/gm) ?? []).length, 5, "exactly five sections");
   for (const file of fs.readdirSync("src/components/home")) {
     assert.doesNotMatch(fs.readFileSync(`src/components/home/${file}`, "utf8"), /^"use client"/m, `${file} is a Server Component`);
   }
   assert.equal(fs.existsSync("src/components/ui/reveal.tsx"), false, "no IntersectionObserver reveal wrapper");
   const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
-  assert.equal((hero.match(/^\s+priority\s*$/gm) ?? []).length, 1, "the hero image is the only priority image");
+  assert.equal((hero.match(/^\s+priority(=\{i === 0\})?\s*$/gm) ?? []).length, 1, "the hero image is the only priority image");
   const preview = fs.readFileSync("src/components/home/products-preview.tsx", "utf8");
   assert.doesNotMatch(preview, /priority/, "family cards below the fold stay lazy");
 });
@@ -79,7 +77,8 @@ test("product index is a filterable, server-rendered range explorer", () => {
   const page = fs.readFileSync("src/app/[locale]/products/page.tsx", "utf8");
   assert.match(page, /<FilterGrid/);
   assert.match(page, /queryKey="family"/);
-  assert.match(page, /CATALOG_RANGES\.map/);
+  assert.match(page, /familyOrder\.flatMap\(\(family\) => rangesFor\(family\)\)/, "ranges follow the family order");
+  assert.match(page, /orderedRanges\.map/);
   assert.match(page, /<RangeCard/);
 });
 

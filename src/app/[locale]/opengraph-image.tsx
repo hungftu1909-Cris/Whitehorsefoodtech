@@ -63,7 +63,7 @@ export default async function OpengraphImage({
             style={{
               fontSize: 54,
               lineHeight: 1.15,
-              color: "#241505",
+              color: "#1B221D",
               fontWeight: 700,
             }}
           >
@@ -85,12 +85,12 @@ export default async function OpengraphImage({
           style={{
             display: "flex",
             fontSize: 20,
-            color: "#B8863A",
+            color: "#8A6A2F",
             fontFamily: "sans-serif",
             letterSpacing: 2,
           }}
         >
-          VIETNAMESE COFFEE INGREDIENTS · B2B
+          VIETNAM PREMIUM INGREDIENT PLATFORM · B2B
         </div>
       </div>
     ),

@@ -1,0 +1,83 @@
+[
+ {
+  "tag": "en-1440",
+  "links": 17,
+  "bad": [],
+  "journeys": {
+   "rfq": "200 1xform",
+   "rfq-prefill": "200 1xform",
+   "supplier": "200 1xform",
+   "buyer-products": "200 18x[data-media-frame]",
+   "sku-page": "200 1x[data-media-frame=pair]",
+   "documents": "200 2xa[href$='.pdf']"
+  },
+  "docs": [
+   "200 application/pdf /documents/whitehorse-foodtech-brochure.pdf",
+   "200 application/pdf /documents/whitehorse-foodtech-packaging-architecture.pdf"
+  ],
+  "errors": []
+ },
+ {
+  "tag": "en-390",
+  "links": 17,
+  "bad": [],
+  "journeys": {
+   "rfq": "200 1xform",
+   "rfq-prefill": "200 1xform",
+   "supplier": "200 1xform",
+   "buyer-products": "200 18x[data-media-frame]",
+   "sku-page": "200 1x[data-media-frame=pair]",
+   "documents": "200 2xa[href$='.pdf']"
+  },
+  "docs": [
+   "200 application/pdf /documents/whitehorse-foodtech-brochure.pdf",
+   "200 application/pdf /documents/whitehorse-foodtech-packaging-architecture.pdf"
+  ],
+  "errors": []
+ },
+ {
+  "tag": "vi-1440",
+  "links": 17,
+  "bad": [],
+  "journeys": {
+   "rfq": "200 1xform",
+   "rfq-prefill": "200 1xform",
+   "supplier": "200 1xform",
+   "buyer-products": "200 18x[data-media-frame]",
+   "sku-page": "200 1x[data-media-frame=pair]",
+   "documents": "200 2xa[href$='.pdf']"
+  },
+  "docs": [
+   "200 application/pdf /documents/whitehorse-foodtech-brochure.pdf",
+   "200 application/pdf /documents/whitehorse-foodtech-packaging-architecture.pdf"
+  ],
+  "errors": []
+ },
+ {
+  "tag": "vi-390",
+  "links": 17,
+  "bad": [],
+  "journeys": {
+   "rfq": "200 1xform",
+   "rfq-prefill": "200 1xform",
+   "supplier": "200 1xform",
+   "buyer-products": "200 18x[data-media-frame]",
+   "sku-page": "200 1x[data-media-frame=pair]",
+   "documents": "200 2xa[href$='.pdf']"
+  },
+  "docs": [
+   "200 application/pdf /documents/whitehorse-foodtech-brochure.pdf",
+   "200 application/pdf /documents/whitehorse-foodtech-packaging-architecture.pdf"
+  ],
+  "errors": []
+ },
+ {
+  "tag": "gateway",
+  "dialog": 1,
+  "choices": [
+   "Global buyersSource qualified Vietnamese → /en/products",
+   "Nhà cung cấp Việt NamTham gia mạng lưới  → /vi/suppliers/apply",
+   "Close → button"
+  ]
+ }
+]

@@ -7,7 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { Breadcrumbs } from "@/components/catalog/breadcrumbs";
 import { RequestActions } from "@/components/catalog/request-actions";
 import { SkuCard } from "@/components/catalog/cards";
-import { SkuGallery } from "@/components/catalog/sku-gallery";
+import { DualImageFrame } from "@/components/catalog/dual-image-frame";
+import { toFrameImages } from "@/lib/frame-images";
+import { SpecPlate } from "@/components/catalog/spec-plate";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import {
@@ -19,6 +21,7 @@ import {
   pick,
   relatedSkus,
 } from "@/lib/catalog";
+import { skuMedia } from "@/lib/media-manifest";
 import { rfqHref } from "@/lib/rfq-links";
 import { pageMetadata } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
@@ -45,7 +48,7 @@ export async function generateMetadata({
     path: `/products/${sku.family}/${sku.slug}`,
     title: `${pick(sku.name, locale)} (${sku.code})`,
     description: pick(sku.summary, locale),
-    images: [sku.images[0].src],
+    images: skuMedia(sku.code).map((image) => image.src).slice(0, 1),
   });
 }
 
@@ -66,6 +69,7 @@ export default async function SkuPage({
   const familyName = tf("name");
   const name = pick(sku.name, locale);
   const related = relatedSkus(sku);
+  const media = skuMedia(sku.code);
   const packaging = PACKAGING_OPTIONS[sku.family];
   const steps = tc.raw("orderingSteps") as string[];
   const formatRow = sku.specs.find((row) => row.reference && /Format|Drying|Species/.test(row.label.en));
@@ -92,16 +96,20 @@ export default async function SkuPage({
 
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 pt-8 pb-14 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div>
-          <SkuGallery
-            images={sku.images.map((image) => ({
-              src: image.src,
-              alt: pick(image.alt, locale),
-              badge: image.kind === "concept-pack" ? tc("conceptPackBadge") : undefined,
-            }))}
-            label={tc("galleryLabel")}
-            showLabel={tc("showImage", { index: "{index}" })}
-          />
-          {sku.images.some((image) => image.kind === "concept-pack") && (
+          {/* SKU_MEDIA by code: the code's own pack; a second view only when a
+              second verified image of this code exists (hover / auto-advance,
+              no manual chooser). */}
+          {media.length > 0 ? (
+            <DualImageFrame
+              images={toFrameImages(media, locale, tc("conceptPackBadge"))}
+              sizes="(min-width: 1024px) 40rem, 100vw"
+              priority
+              className="rounded-lg border border-border"
+            />
+          ) : (
+            <SpecPlate eyebrow={sku.code} formats={[name]} className="rounded-lg border border-border" />
+          )}
+          {media.some((image) => image.kind === "concept-pack") && (
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tc("conceptPackNote")}</p>
           )}
         </div>
@@ -119,7 +127,7 @@ export default async function SkuPage({
           </p>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">{pick(sku.summary, locale)}</p>
 
-          <p className="mt-6 text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">
+          <p className="mt-6 text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase">
             {tc("applicationsLabel")}
           </p>
           <ul className="mt-2 flex flex-wrap gap-2">
@@ -150,7 +158,7 @@ export default async function SkuPage({
             <div key={label} className="flex items-start gap-3 py-6 sm:px-4">
               <Icon className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
               <div>
-                <dt className="text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{label}</dt>
+                <dt className="text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase">{label}</dt>
                 <dd className="mt-1 text-sm text-foreground">{value}</dd>
               </div>
             </div>

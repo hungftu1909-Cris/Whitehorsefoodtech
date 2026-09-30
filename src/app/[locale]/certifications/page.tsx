@@ -182,7 +182,7 @@ export default async function CertificationsPage({
                   </div>
                   <h3 className="mt-auto pt-10 font-serif text-xl font-semibold">{layer.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">{layer.description}</p>
-                  <span className={`mt-5 inline-flex w-fit rounded-full border px-2.5 py-1 text-[0.65rem] font-semibold tracking-[0.1em] uppercase ${TECHNOLOGY_STATUS_CLASSES[layer.status]}`}>
+                  <span className={`mt-5 inline-flex w-fit rounded-full border px-2.5 py-1 text-xs font-semibold tracking-[0.1em] uppercase ${TECHNOLOGY_STATUS_CLASSES[layer.status]}`}>
                     {t(`technology.statusLabels.${layer.status}`)}
                   </span>
                 </li>

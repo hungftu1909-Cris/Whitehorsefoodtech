@@ -39,6 +39,103 @@ wrong register for an export/agriculture heritage brand.
 - Motion: subtle fade/slide-up on scroll (200–350ms, ease-out), respect
   `prefers-reduced-motion`. No morphing/parallax gimmicks.
 
+## Quiet-luxury refinement (2026-09-30)
+
+Thesis: **premium sourcing house × institutional ingredient platform.**
+Quiet luxury — confident contrast, editorial photography, disciplined
+typography, generous negative space, fewer UI boxes, restrained bronze and
+deliberate asymmetry. Not a coffee shop, not a SaaS dashboard.
+
+- Surfaces alternate deliberately: `bg-deep` black-olive (`--deep`
+  `#131B16`, ivory `--deep-foreground` `#F6F1E4`, stays dark in both
+  themes) → ivory → forest (`bg-primary`) → ivory → sand (`bg-muted`) →
+  black-olive → ivory → forest footer.
+- One dominant photograph per composition, at most one inset, framed by a
+  1px hairline rule (no thick frames); no badges over crops.
+  Representative-image disclosures are real captions, set directly beneath
+  the visible image and describing only what is visible at that breakpoint.
+  An image appears once per page. The homepage hero carries no
+  coffee-family visual.
+- Sequences are ruled and numbered (serif bronze numerals, hairline
+  `border-foreground/15` rules); evidence is ruled rows; technology is one
+  backbone rule with status markers (filled = operating now, ring = being
+  built, faint ring = roadmap). No card grids, pills or icon tiles on the
+  homepage.
+- Actions: primary = solid ivory/forest block, `h-12 px-7`, sharp corners;
+  secondary = underlined text link (`underline-offset-8`,
+  `decoration-accent/50`). No decorative arrows.
+- `--radius` is `0.25rem`. No drop shadows (the floating CTA pills were
+  removed 2026-09-30; the only persistent mobile action is the family/SKU
+  RequestBar, which hides at the footer and while typing).
+- Type: headings `font-medium` Playfair, not semibold; H1 3 lines on
+  desktop, ≤4 on mobile. Body ≥16px; labels ≥12px (`text-xs`) with wide
+  tracking. Header is 72px with a 48px mark: Products ▾ · Quality · How we work · Company ▾, a bordered EN/VI language control with US/VN flags (44px, active state filled forest), a discreet supplier link (always Vietnamese) and one primary action. The bilingual entry chooser (Buyer → English, Supplier → Tiếng Việt) opens on every arrival at the homepage (domain visit, reload, logo/Home) and from the hero "Choose your entry" control; never on deep links.
+
+## Luminous direction (2026-09-30, supersedes the dark surfaces above)
+
+Review feedback: the black-olive full-height hero plus a dark industrial
+image made the brand feel heavy, closed and factory-led. Thesis kept
+(premium sourcing house × institutional ingredient platform); the *form*
+of premium changes from dark editorial to **luminous** — daylight,
+precision and openness. Not a colour swap and not a beige lifestyle site.
+
+- **Light is the default for every first visit.** `ThemeProvider` uses
+  `defaultTheme="light"` without `enableSystem`; an OS dark preference no
+  longer darkens the site. Dark stays available from the header toggle.
+  `theme-color` is the paper `#FBFAF7`.
+- **Surfaces:** paper `--background #FBFAF7` (brighter, less yellow than the
+  old ivory), white `--card #FFFFFF`, and mist `--muted #F0F2ED` (a pale,
+  slightly sage daylight neutral replacing the beige sand). Border
+  `#DFE2D9`. Homepage rhythm: luminous hero → white → mist (proof) →
+  paper (portfolio) → white (evidence) → mist (technology) → paper (split
+  CTA) → forest footer. No `bg-deep` or forest section bands on the homepage
+  (guarded by `tests/platform-experience.test.ts`).
+- **Forest is ink, not a room:** `--primary #1F2E25` sets headlines, key
+  figures and solid primary actions; the footer is the single dark block.
+- **`.bg-luminous`** (globals.css): paper with a white bloom behind the
+  headline and a faint champagne / sage warmth toward the photograph. It is
+  a wash, not a decorative gradient; no glass or blur.
+- **Photography in daylight:** the hero composition is unchanged (processing
+  image + air-freight inset + caption), but the photograph sits on paper
+  with no darkening overlay; the inset sits on a 1px `foreground/15`
+  hairline. Only a light `saturate-[0.9]` is applied; files are untouched.
+- Proof figures are forest serif numerals on hairline rules on mist; the
+  custom-sourcing plate is mist on a hairline; split-CTA plates are white
+  on a hairline (buyer, solid forest action) and mist (supplier, outline).
+
+### Final refinement (2026-09-30)
+
+- **Homepage rhythm (updated):** luminous hero → white (operating
+  standard) → daylight mist (proof) → white (portfolio) → luminous
+  (evidence) → daylight mist (technology) → paper (split CTA) → forest
+  footer. **`.bg-daylight`** is mist lifted by a white bloom from above, a
+  faint sage settle below and a 1px top hairline — same palette as
+  `.bg-luminous`, no new colours, so the middle carries light instead of
+  reading as flat grey stock.
+- **Mobile hero is content-first:** below `lg` the order is eyebrow →
+  headline → subtitle → actions → photograph + disclosure caption →
+  standard / portfolio. From `lg` the figure is absolutely positioned
+  against the section (the content wrapper is `lg:static`); the desktop
+  composition is unchanged.
+- **Family order is platform-first:** coconut → fruit → nuts, spices &
+  botanicals → coffee → bird's nest (`PRODUCT_CATEGORIES`), shared by the
+  hero list, portfolio grid, menus, footer, /products and the sitemap.
+  Coffee never leads. Homepage family copy is keyed by `categoryKey`.
+- **Portfolio imagery:** photographs sit on a cool mist mount on white with
+  a gentle `brightness-[1.03] saturate-[0.82]`, so warm studio sweeps read
+  as a gallery, not a beige retail shelf. The custom-sourcing plate uses
+  the same mount (white plate inside) so every tile aligns.
+- **Split CTA:** bodies start on the same line under the label row;
+  actions are pushed to a shared baseline (`mt-auto` on the action row).
+- **Touch targets:** hamburger, theme toggle, dialog and sheet close
+  buttons are 44px (`size-11`); footer social icons keep a 16px glyph in a
+  44px target; the EN / VI switcher widens its hit area with an invisible
+  `::after`. The hamburger is labelled `nav.openMenu` (“Open menu” / “Mở
+  menu”).
+- **Browser chrome:** the server emits the paper `theme-color`;
+  `<ThemeColor />` retints it to `#111612` once an explicit dark choice
+  (header toggle, stored by next-themes) resolves, and back on light.
+
 ## Colors
 
 Light mode is primary (export/B2B site — dark mode is a nice-to-have, not a
@@ -46,25 +143,38 @@ requirement). Contrast checked against WCAG AA (4.5:1 body text).
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-primary` | `#3B2314` | Dark roast brown — headers, primary buttons, nav bg |
-| `--color-primary-foreground` | `#FBF7EE` | Text/icons on primary |
-| `--color-secondary` | `#6B4A2E` | Mid brown — secondary surfaces, hover states |
-| `--color-accent` | `#B8863A` | Bronze/gold — CTA highlights, links, active states, icons |
-| `--color-accent-foreground` | `#241505` | Text on accent |
-| `--color-background` | `#FBF8F1` | Page background (warm cream, matches logo bg) |
-| `--color-foreground` | `#241505` | Body text (near-black warm brown, not pure black) |
-| `--color-card` | `#FFFFFF` | Card surfaces |
-| `--color-card-foreground` | `#241505` | Text on cards |
-| `--color-muted` | `#F1E7D6` | Muted section backgrounds, tags |
-| `--color-muted-foreground` | `#4A3C2C` | Secondary/caption text (darkened 2026-08 for stronger contrast) |
-| `--color-border` | `#E4D6BC` | Hairline borders/dividers |
-| `--color-success` | `#4B6043` | Organic/certification badges |
-| `--color-destructive` | `#B3261E` | Form errors |
-| `--color-ring` | `#B8863A` | Focus ring (accent) |
+**Platform repositioning (2026-09-30):** Whitehorse is a Vietnam premium
+ingredient platform, not a coffee brand. Institutional surfaces moved from
+dark-roast brown to deep forest / black olive on warm ivory with a
+restrained bronze; Whitehorse brown is retained as the secondary heritage
+colour (logo, `--secondary`). Product-family colours may appear only as
+restrained category accents.
 
-Dark mode (optional, used for footer / optional toggle): background
-`#1C120A`, foreground `#F1E7D6`, card `#241708`, keep the same accent
-`#B8863A` (already passes 4.5:1 on dark backgrounds).
+| Token | Hex | Usage |
+|---|---|---|
+| `--color-primary` | `#1F2E25` | Deep forest — ink for headlines/figures, primary buttons, footer (was `#3B2314`) |
+| `--color-primary-foreground` | `#F8F5EC` | Text/icons on primary |
+| `--color-secondary` | `#6B4A2E` | Whitehorse heritage brown — secondary surfaces |
+| `--color-accent` | `#7D5F27` | Restrained bronze — eyebrows, links, icons, focus (≥ 4.5:1 on ivory, muted and white) |
+| `--color-accent-foreground` | `#FBF8F1` | Text on accent |
+| `--color-background` | `#FBFAF7` | Page background (daylight paper; was warm ivory `#FBF8F1`) |
+| `--color-foreground` | `#1B221D` | Body text (black olive, not pure black) |
+| `--color-card` | `#FFFFFF` | Card surfaces |
+| `--color-card-foreground` | `#1B221D` | Text on cards |
+| `--color-muted` | `#F0F2ED` | Mist — alternate section bands, plates (was sand `#EFEADD`) |
+| `--color-muted-foreground` | `#474A3F` | Secondary/caption text (7.5:1 on muted) |
+| `--color-border` | `#DFE2D9` | Hairline borders/dividers |
+| `--color-success` | `#4B6043` | "Operating now" / current-status badges |
+| `--color-destructive` | `#B3261E` | Form errors |
+| `--color-ring` | `#7D5F27` | Focus ring (accent) |
+
+Inside any `.bg-primary` surface (not the primary buttons themselves) the accent switches to a lighter bronze
+`#C9A462` (6:1 on `#1F2E25`) with `#1B221D` text on accent fills; see
+`src/app/globals.css`.
+
+Dark mode (optional toggle): background `#111612`, foreground `#F1E7D6`,
+card `#18201A`, accent `#DDB066`; the light-gold dark-mode primary uses a
+dark bronze `#5B4418` accent inside `.bg-primary`.
 
 Do not use pure black (`#000`) or the generic navy/blue the tool's
 auto-search defaulted to — off-brand.

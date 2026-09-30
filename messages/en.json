@@ -1,13 +1,16 @@
 {
   "meta": {
     "siteName": "Whitehorse Foodtech",
-    "title": "Whitehorse Foodtech — Premium Vietnamese Agricultural Ingredients for International Buyers",
-    "description": "Whitehorse Foodtech connects suitable Vietnamese farms, cooperatives and processing factories with international distributors, food and beverage manufacturers, foodservice groups and brands — coffee, coconut, bird's nest, fruit, nuts, spices and botanicals, sourced to specification."
+    "title": "Whitehorse Foodtech — Premium Ingredient Platform from Vietnam",
+    "description": "Whitehorse Foodtech connects global buyers with qualified premium ingredient supply from Vietnam — specification-led sourcing, request-specific evidence and coordinated commercial execution. Current focus collections: coffee, coconut, bird's nest, fruit, and nuts, spices & botanicals."
   },
   "nav": {
     "home": "Home",
+    "openMenu": "Open menu",
     "about": "About",
     "products": "Products",
+    "currentPortfolio": "Current portfolio",
+    "customSourcing": "Custom sourcing",
     "productsCoffee": "Coffee Ingredients",
     "productsCoconut": "Coconut Ingredients",
     "productsBirdsNest": "Bird's Nest Ingredients",
@@ -20,7 +23,19 @@
     "clients": "Network",
     "blog": "Insights",
     "contact": "Contact",
-    "requestQuote": "Request a Quote"
+    "requestQuote": "Request a Quote",
+    "company": "Company",
+    "qualityShort": "Quality",
+    "forSuppliers": "For suppliers",
+    "language": "Language",
+    "localeNames": {
+      "en": "English",
+      "vi": "Tiếng Việt"
+    },
+    "allProducts": "All products",
+    "primaryLabel": "Main navigation",
+    "skipToContent": "Skip to content",
+    "closeMenu": "Close menu"
   },
   "footer": {
     "tagline": "Premium Vietnamese agricultural ingredients, sourced and coordinated to your specification.",
@@ -54,33 +69,76 @@
   "home": {
     "hero": {
       "eyebrow": "Vietnam ingredient platform",
-      "status": "Current platform",
-      "title": "Premium ingredients, structured for global product teams.",
-      "subtitle": "Whitehorse connects defined ingredient ranges, screened suppliers and request-scoped quality evidence — with bulk supply and OEM, ODM and OBM through suitable manufacturing partners, for distributors, manufacturers, foodservice groups and brands.",
+      "title": "Premium ingredients from Vietnam, qualified around your specification.",
+      "subtitle": "Whitehorse connects global product requirements with qualified Vietnamese sources, request-specific evidence and coordinated commercial execution.",
       "ctaPrimary": "Request a quote",
-      "ctaSecondary": "Explore ingredients",
-      "signals": [
+      "ctaSecondary": "Explore the current portfolio",
+      "portfolioLabel": "Current focus collections",
+      "portfolioBeyond": "Custom sourcing by specification",
+      "standard": {
+        "label": "The Whitehorse standard",
+        "status": "Operating now",
+        "title": "Specification-led sourcing"
+      },
+      "images": {
+        "processing": {
+          "alt": "Two workers in hygiene clothing loading trays of fruit into an open freeze-drying chamber"
+        },
+        "freight": {
+          "alt": "Palletised cargo being loaded into a freighter aircraft on an airport apron"
+        },
+        "origin": {
+          "alt": "A farmer harvesting ripe coffee cherries into a basin among coffee trees"
+        }
+      },
+      "imageCaption": "Representative supply-network stages — harvest at a growing area, ingredient processing and export air freight. Not Whitehorse-owned farms or facilities, or a specific shipment.",
+      "imageCaptionMobile": "Representative supply-network stages — harvest at a growing area, ingredient processing and export air freight. Not Whitehorse-owned farms or facilities, or a specific shipment.",
+      "paths": {
+        "label": "Choose your path",
+        "buyer": "Global buyers — explore in English",
+        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt",
+        "chooser": "Choose your entry"
+      }
+    },
+    "operating": {
+      "eyebrow": "How the platform works",
+      "title": "One operating standard, from specification to execution.",
+      "subtitle": "The portfolio can grow; the way Whitehorse qualifies and executes supply stays fixed. Each request moves through the same four disciplines.",
+      "status": "Operating now",
+      "stages": [
         {
-          "label": "Scope",
-          "value": "5 families"
+          "number": "01",
+          "title": "Buyer specification",
+          "body": "Product, format, application, market, volume, packaging and document needs are defined with the buyer before sourcing begins."
         },
         {
-          "label": "Portfolio",
-          "value": "29 core SKUs"
+          "number": "02",
+          "title": "Qualified network",
+          "body": "Suppliers are screened against product capability, facility, market and documentation requirements, then matched to the specification."
         },
         {
-          "label": "Network",
-          "value": "50+ screened"
+          "number": "03",
+          "title": "Request-specific evidence",
+          "body": "Samples, test scope, supplier certificates and lot documents are agreed for the selected supplier, site, product and order."
+        },
+        {
+          "number": "04",
+          "title": "Commercial execution",
+          "body": "Bulk supply, or OEM, ODM and OBM through suitable manufacturing partners, with terms, packing, documents and logistics coordinated per order."
         }
       ],
-      "moduleLabel": "Platform layer",
-      "building": "Building",
-      "moduleTitle": "Evidence workspace",
-      "moduleBody": "A future buyer view for specifications, supplier evidence and request progress — being built, not yet a live account service."
+      "cta": "See how a request moves",
+      "techSummary": "Supply-chain technology — status by layer",
+      "qualityCta": "Quality & qualification"
     },
     "proof": {
       "title": "Whitehorse today",
+      "tag": "Current",
       "items": [
+        {
+          "value": "29",
+          "label": "Defined core SKUs across today's five focus collections"
+        },
         {
           "value": "50+",
           "label": "Suppliers screened by product capability, facility and market requirements"
@@ -88,96 +146,90 @@
         {
           "value": "10+",
           "label": "Markets with active buyer and trading relationships"
-        },
-        {
-          "value": "5",
-          "label": "Ingredient families, from coffee to botanicals"
         }
       ]
     },
     "productsPreview": {
-      "eyebrow": "Ingredient intelligence",
-      "title": "One catalog, five ingredient families.",
-      "subtitle": "Navigate 29 defined core SKUs across five families, plus mix, blend and custom-formulation development to buyer specification.",
+      "eyebrow": "Current portfolio",
+      "title": "Today's focus collections.",
+      "subtitle": "Five collections and 29 defined core SKUs lead the current portfolio, with mixes, blends and custom formulations developed to buyer specification. Availability, final specification and evidence are confirmed per request.",
       "exploreCta": "Open Product Explorer",
-      "items": [
-        {
-          "title": "Coffee Ingredients",
-          "tagline": "Green, roasted, soluble, extract & cold brew",
-          "status": "9 defined SKUs"
-        },
-        {
+      "items": {
+        "coconut": {
           "title": "Coconut Ingredients",
-          "tagline": "Milk & cream, powders & solids, blossom sugar",
-          "status": "5 defined SKUs"
+          "tagline": "Milk & cream, powders & solids, blossom sugar"
         },
-        {
-          "title": "Bird's Nest Ingredients",
-          "tagline": "Cleaned nest & instant / ready-to-prepare formats",
-          "status": "2 defined SKUs"
-        },
-        {
+        "fruit": {
           "title": "Fruit Ingredients",
-          "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
-          "status": "9 defined SKUs"
+          "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée"
         },
-        {
+        "nutsSpicesBotanicals": {
           "title": "Nuts, Spices & Botanicals",
-          "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
-          "status": "4 defined SKUs"
+          "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise"
+        },
+        "coffee": {
+          "title": "Coffee Ingredients",
+          "tagline": "Green, roasted, soluble, extract & cold brew"
+        },
+        "birdsNest": {
+          "title": "Bird's Nest Ingredients",
+          "tagline": "Cleaned nest & instant / ready-to-prepare formats"
         }
-      ]
+      },
+      "custom": {
+        "eyebrow": "Beyond the current portfolio",
+        "title": "Source another Vietnamese ingredient.",
+        "body": "Briefs outside today's collections — tea, cacao, rice, herbs, plant-based or functional ingredients, for example — are assessed against your specification through the same standard. Supplier fit, feasibility and evidence are confirmed before any commitment.",
+        "cta": "Start a custom sourcing request"
+      },
+      "documentsLabel": "Download"
     },
     "platform": {
-      "eyebrow": "The Whitehorse model",
-      "title": "A connected path from ingredient need to qualified supply.",
-      "subtitle": "The platform brings product intelligence, supplier matching and evidence coordination into one commercial workflow — while the digital workspace develops in clearly labelled stages.",
-      "current": "Operating now",
-      "building": "Product layer in development",
-      "currentShort": "Current",
-      "buildingShort": "Building",
-      "stages": [
-        {
-          "number": "01",
-          "title": "Product intelligence",
-          "body": "Defined families, formats, product codes and the specification dimensions a buyer needs to brief.",
-          "status": "current"
-        },
-        {
-          "number": "02",
-          "title": "Supplier matching",
-          "body": "Potential suppliers are screened against product, facility, market and documentation requirements.",
-          "status": "current"
-        },
-        {
-          "number": "03",
-          "title": "Evidence coordination",
-          "body": "Samples, testing scope, supplier documents and lot documentation are agreed for each request.",
-          "status": "current"
-        },
-        {
-          "number": "04",
-          "title": "Digital buyer workspace",
-          "body": "A structured view of requests, specifications and evidence is the next product layer, not a live service today.",
-          "status": "building"
-        }
-      ],
+      "eyebrow": "Supply-chain technology",
+      "title": "The next layers of the platform, labelled by status.",
+      "subtitle": "Today the standard runs through people, supplier workflow and request records. Digital layers are added in stages, and each shows whether it operates now or is still being built.",
+      "statusLabels": {
+        "current": "Operating now",
+        "building": "Being built",
+        "roadmap": "Roadmap"
+      },
+      "workspace": {
+        "title": "Digital buyer workspace",
+        "body": "A structured view of requests, specifications and evidence — the next product layer, not a live account service today."
+      },
       "technology": {
-        "status": "Platform direction",
         "title": "Connected quality & supply-chain technology",
         "body": "One data backbone connects demand, specification, supply capability, quality evidence, inventory and transport milestones around each request.",
         "nodes": [
-          "Source & IoT data",
-          "QMS / LIMS evidence",
-          "WMS inventory",
-          "Supplier & order workflow",
-          "TMS logistics",
-          "Buyer feedback"
+          {
+            "label": "Source & IoT data",
+            "status": "roadmap"
+          },
+          {
+            "label": "QMS / LIMS evidence",
+            "status": "building"
+          },
+          {
+            "label": "WMS inventory",
+            "status": "roadmap"
+          },
+          {
+            "label": "Supplier & order workflow",
+            "status": "current"
+          },
+          {
+            "label": "TMS logistics",
+            "status": "roadmap"
+          },
+          {
+            "label": "Buyer & distribution network",
+            "status": "current"
+          }
         ],
-        "ai": "AI + data intelligence across every layer"
+        "ai": "AI + data intelligence across the layers"
       },
-      "note": "Current means an operating Whitehorse workflow. Building means a product direction under development; it does not imply a live portal, account area or real-time lot tracking.",
-      "cta": "See how a request moves"
+      "note": "Operating now means a working Whitehorse workflow. Being built and Roadmap mean product directions under development; they do not imply a live portal, account area, network-wide integration or real-time lot tracking. Coverage will vary by supplier, facility and project.",
+      "cta": "Explore the technology architecture"
     },
     "evidence": {
       "eyebrow": "Evidence layer",
@@ -238,14 +290,14 @@
       "note": "Availability, MOQ, formulation, packaging, certification and market compliance are confirmed per product, partner facility and project. Certificates belong to a specific supplier, site and product scope."
     },
     "ctaBanner": {
-      "title": "Choose your path into the platform.",
+      "title": "Two ways into the platform.",
       "subtitle": "Share your product, volume and destination port. Our sales team reviews qualified requests and follows up with the next commercial step.",
       "cta": "Request a quote",
       "buyerLabel": "For buyers",
-      "buyerBody": "Explore ingredients, define the specification and start a qualified bulk, OEM, ODM or OBM request.",
+      "buyerBody": "Brief a current collection or another Vietnamese ingredient, define the specification and start a bulk, OEM, ODM or OBM request.",
       "buyerCta": "Request a quote",
       "supplierLabel": "For suppliers",
-      "supplierBody": "Farmers, cooperatives and processors can submit capability, facility and document information for assessment.",
+      "supplierBody": "Farmers, cooperatives and processors — within or beyond today's collections — can submit capability, facility and document information for assessment.",
       "supplierCta": "Apply as a supplier"
     }
   },
@@ -431,14 +483,22 @@
     "hero": {
       "eyebrow": "Product Explorer",
       "title": "Find the ingredient format your brief needs.",
-      "subtitle": "Explore 29 defined core SKUs through eighteen sourcing and development ranges across five ingredient families. Mixes, blends and custom formulations can also be developed to request. Final specification, availability, test method, documentation and COA scope are agreed per order."
+      "subtitle": "Explore 29 defined core SKUs through eighteen sourcing and development ranges across five ingredient families. Mixes, blends and custom formulations can also be developed to request. Final specification, availability, test method, documentation and COA scope are agreed per order.",
+      "lead": "29 defined core SKUs in eighteen ranges across today's five families. Specification, availability and documents are agreed per order."
     },
     "explorer": {
       "eyebrow": "Structured catalog",
       "title": "Filter by family. Search by format or application.",
       "subtitle": "Each range organises the core SKUs, open formats and specification dimensions to resolve. Select a family or search the bilingual catalog; mixes, blends and custom formulations can be briefed through the relevant range.",
       "filterLabel": "Filter by ingredient family",
-      "searchPlaceholder": "Format, product or application"
+      "searchPlaceholder": "Format, product or application",
+      "chipLabels": {
+        "coffee": "Coffee",
+        "coconut": "Coconut",
+        "fruit": "Fruit",
+        "nutsSpicesBotanicals": "Nuts & Spices",
+        "birdsNest": "Bird's Nest"
+      }
     },
     "categories": {
       "coffee": {
@@ -593,7 +653,18 @@
     "rangesCount": "{count, plural, one {# range} other {# ranges}}",
     "stickyLabel": "Request sample or quote",
     "galleryLabel": "Product images",
-    "showImage": "Show image {index}"
+    "showImage": "Show image {index}",
+    "quickView": "Quick view",
+    "quickViewOf": "Quick view: {name}",
+    "closePanel": "Close",
+    "familyPage": "Open the family page",
+    "codePagesInRange": "Detailed SKU pages in this range",
+    "specFieldsTitle": "Specification fields to agree",
+    "showImageOf": "Show image {index} of 2",
+    "pauseImages": "Pause image rotation",
+    "playImages": "Resume image rotation",
+    "emptyHint": "Try another family or a shorter search term, such as a fruit, a format (powder, frozen) or an application.",
+    "briefOther": "Brief another ingredient"
   },
   "documents": {
     "hero": {
@@ -892,7 +963,8 @@
     "hero": {
       "eyebrow": "Request a quote",
       "title": "Request a quote or samples",
-      "subtitle": "Share your product, specification, volume and destination. Our sales team reviews qualified requests and follows up with the next commercial step."
+      "subtitle": "Share your product, specification, volume and destination. Our sales team reviews qualified requests and follows up with the next commercial step.",
+      "lead": "Share the product, specification, volume and destination. Our sales team reviews qualified requests and follows up with the next commercial step."
     },
     "form": {
       "title": "Quote request",
@@ -1007,7 +1079,12 @@
       "targetMarketPlaceholder": "e.g. EU retail, Japan e-commerce, Middle East foodservice",
       "brandModel": "Brand model to discuss (optional)",
       "brandModelPlaceholder": "e.g. finished product under your brand, co-branded range",
-      "packing": "Packing (optional)"
+      "packing": "Packing (optional)",
+      "context": {
+        "label": "Your enquiry",
+        "empty": "Choose what you need below — product, range and request type.",
+        "hint": "Adjust any detail in the form below."
+      }
     }
   },
   "packaging": {
@@ -1041,11 +1118,26 @@
       "eyebrow": "Technical non-negotiables",
       "title": "Premium design begins with product protection.",
       "items": [
-        { "title": "Valve logic", "body": "Roasted coffee in a sealed pack needs a one-way degassing valve. Green coffee never does. Instant coffee and powders stay dust-tight with no valve." },
-        { "title": "Product visibility", "body": "A restrained window may be used for selected whole dry products after film and shelf-life validation. Powders and freeze-dried products remain opaque by default." },
-        { "title": "Single serve", "body": "Drip coffee, pure soluble coffee and premix use different structures and fill ranges. They are never collapsed into one generic sachet." },
-        { "title": "Liquid process", "body": "Chilled, hot-fill and aseptic formats are different systems. The vessel follows the approved fill process before any ambient-stability claim is made." },
-        { "title": "Industrial expression", "body": "Premium industrial packs rely on disciplined typography, lot identity and traceability—not decorative luxury finishing." }
+        {
+          "title": "Valve logic",
+          "body": "Roasted coffee in a sealed pack needs a one-way degassing valve. Green coffee never does. Instant coffee and powders stay dust-tight with no valve."
+        },
+        {
+          "title": "Product visibility",
+          "body": "A restrained window may be used for selected whole dry products after film and shelf-life validation. Powders and freeze-dried products remain opaque by default."
+        },
+        {
+          "title": "Single serve",
+          "body": "Drip coffee, pure soluble coffee and premix use different structures and fill ranges. They are never collapsed into one generic sachet."
+        },
+        {
+          "title": "Liquid process",
+          "body": "Chilled, hot-fill and aseptic formats are different systems. The vessel follows the approved fill process before any ambient-stability claim is made."
+        },
+        {
+          "title": "Industrial expression",
+          "body": "Premium industrial packs rely on disciplined typography, lot identity and traceability—not decorative luxury finishing."
+        }
       ]
     },
     "custom": {

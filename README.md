@@ -4,8 +4,8 @@ Bilingual (EN/VI) B2B website for Whitehorse Foodtech, a premium
 agricultural ingredient sourcing and connection platform linking suitable
 Vietnamese farms, cooperatives and processing factories with international
 distributors, food and beverage manufacturers, foodservice groups and
-brands. Five product families (coffee, coconut, bird's nest, fruit, nuts,
-spices & botanicals) with 29 defined core SKUs; mix, blend and custom
+brands. Five product families (coconut, fruit, nuts, spices & botanicals, coffee,
+bird's nest) with 29 defined core SKUs; mix, blend and custom
 formulation development is handled per request. Built
 with Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui and
 `next-intl`.

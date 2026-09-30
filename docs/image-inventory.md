@@ -51,6 +51,50 @@ existing coffee editorial photo stays as the second image.
 | WHCF008 Agglomerated Instant | `public/images/catalog/coffee/packs/whcf008-concept-pack.webp` | `24_whcf008_s09_20_2_g_retail_front34_2400.jpg` | `53695576f537a49c` | stick carton, distinct from WHCF007 |
 | WHCF009 Freeze-Dried Instant | `public/images/catalog/coffee/packs/whcf009-concept-pack.webp` | `28_whcf009_s10_100_g_retail_front34_2400.jpg` | `405310ed12988d51` | jar, distinct from WHCF008 |
 
+### Coffee — second pack format of the same code (added 2026-09-30)
+
+Same processing as above (bounding box of the pack, 0.864 of frame height,
+centred on the render's own ivory ground, 4:3, 1600×1200 WebP q80). Each
+prints its own code and carries no "Buyer sample" or "TBD" wording; shown
+as image02 (hover / ~8s auto-advance) for that code only.
+
+| Code | Public file | Source file (`WHITEHORSE_01_COFFEE/02_sku_packshots_ivory/`) | Source SHA-256 | Derived SHA-256 (16) | Why |
+|---|---|---|---|---|---|
+| WHCF005 | `public/images/catalog/coffee/packs/whcf005-retail-box-concept-pack.webp` | `14_whcf005_s07_10_11_g_retail_front34_2400.jpg` | `947276b96f8f7f8e4365d43b4295a576fa308043c396a38871dcf712197c9701` | `acde368cf734564e` | Retail box (10 × 11 g) — distinct shape from the 250 g pouch |
+| WHCF006 | `public/images/catalog/coffee/packs/whcf006-pouch-concept-pack.webp` | `33_whcf006_s25_20_g_retail_front34_2400.jpg` | `130537fc0fa8e08c586e82fb5b9b72279a6fc4110b46482f2be9863dce3a2112` | `4dd1f2c8394b3691` | 20 g pouch — distinct from the RTD can |
+| WHCF009 | `public/images/catalog/coffee/packs/whcf009-pouch-concept-pack.webp` | `29_whcf009_s15_100_g_retail_front34_2400.jpg` | `c6581b9ba3d75efa304b4c9eeeab42eeabe630c1e5012afb51f99420f99d350f` | `cfb6e3d4298bb235` | 100 g pouch — distinct from the jar |
+
+Rejected as image02: WHCF004 250 g pouch (same pouch/label as image01);
+WHCF007 20 × 2 g box (indistinguishable from WHCF008's pack at card size);
+all `s01`/`s02`/`s03` sample packs ("Buyer sample"); `s18` sacks ("TBD");
+2 g sticks (edge-on); cross-code identical renders (24/27, 25/30/35).
+
+## Owner code register (checked 2026-09-30)
+
+`Whitehorse Brochure.pdf` (source folder) is the only document naming
+every public code: WHCF001–009, WHCO001–005, WHBN001–002, **WHFR001/002
+mango (soft-dried / freeze-dried), WHFR003 soursop, WHFR004/005/006 passion
+fruit (concentrate / purée / powder)**, **WHNSB001 cashew, 002 pepper, 003
+cinnamon, 004 star anise** — 26 codes. `Packaging Architecture.pdf`
+(REFERENCE / PROVISIONAL) agrees on coffee, coconut, bird's nest, WHFR001
+and WHNSB, but assigns WHFR002 pineapple, WHFR004 banana, WHFR006 passion
+fruit concentrate (the render zip follows it; zip WHFR003 = jackfruit,
+WHFR005 = dragon fruit). **WHFR007–009 appear in no owner document.**
+**WHNSB vs WHNSP:** brochure, Packaging Architecture, claim registry and
+site use WHNSB; only the `Anh SKU/Vector` illustration captions (and the
+`Vector sửa` filenames) print WHNSP — an artwork-side inconsistency.
+`Whitehorse_Product_Naming_Coding_Standard_v1.0.docx` proposes a future
+`WH-[CAT]-[FAMILY]-[SPEC]` format and does not list the current codes.
+
+`Anh SKU/Vector` (and `Vector sửa`, `drive-download…zip`) hold one
+ingredient illustration per code with the code printed on the artwork.
+Not used: they are illustrations, not product imagery or packs; several
+are near-identical across codes (WHCF001/003, WHCF008/009); the nuts/spices
+captions contradict the WHNSB register; and the revised set is still in
+progress. Brochure photographs are generic stock (latte art, cardamom/
+cloves/mace board, kiwi/orange dried fruit) that would misrepresent the
+ranges — not used.
+
 ## Coconut — 5 defined core SKUs, presented at range level
 
 The source packs print WHCO001–005. They are part of the 29-SKU defined

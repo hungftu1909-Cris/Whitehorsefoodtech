@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { SplitCta } from "@/components/sections/split-cta";
 import { FamilyVisual } from "@/components/catalog/family-visual";
-import { ABOUT_MOSAIC_FAMILIES } from "@/lib/family-images";
+import { ABOUT_MOSAIC_FAMILIES } from "@/lib/media-manifest";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 //   current facts only.
 // - Balance Life is a program signal; no partner logos or other names.
 // - The legacy About/factory artwork is never rendered (unsupported claims
-//   in the images). The hero mosaic comes from src/lib/family-images.ts.
+//   in the images). The hero mosaic comes from src/lib/media-manifest.ts.
 
 type Item = { title: string; description: string };
 
@@ -287,7 +287,7 @@ export default async function AboutPage({
           <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {status.map((item) => (
               <li key={item.value} className="border-t border-border pt-5">
-                <span className="inline-block rounded-full border border-border px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">
+                <span className="inline-block rounded-full border border-border px-2 py-0.5 text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase">
                   {item.tag}
                 </span>
                 <p className="mt-3 font-serif text-3xl font-semibold text-accent md:text-4xl">{item.value}</p>
