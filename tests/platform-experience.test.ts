@@ -174,7 +174,26 @@ test("homepage refinement: quiet actions, readable labels and no card grids", ()
     const source = fs.readFileSync(`src/components/home/${section}.tsx`, "utf8");
     assert.doesNotMatch(source, /rounded-xl|rounded-full[^"]*px-|shadow-\[/, `${section}: no card, pill or shadow treatment`);
   }
-  const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
-  assert.match(hero, /bg-deep/, "hero opens on the deep editorial surface");
   assert.match(fs.readFileSync("src/components/home/products-preview.tsx", "utf8"), /showCounter=\{false\}/);
+});
+
+test("luminous direction: the default homepage is light, not a dark editorial surface", () => {
+  const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
+  assert.match(hero, /<section className="bg-luminous\b/, "hero opens on the luminous paper surface");
+  assert.doesNotMatch(hero, /from-deep|from-primary\/|bg-gradient-to-/, "no darkening overlay on the hero photograph");
+  assert.match(fs.readFileSync("src/app/globals.css", "utf8"), /\.bg-luminous \{/);
+
+  const homeSurfaces = [
+    ...fs.readdirSync("src/components/home").map((f) => `src/components/home/${f}`),
+    "src/components/sections/split-cta.tsx",
+  ];
+  for (const file of homeSurfaces) {
+    const source = fs.readFileSync(file, "utf8");
+    // Forest stays for solid primary actions; it is not a section or plate surface.
+    assert.doesNotMatch(source, /\bbg-deep\b|<section[^>]*\bbg-primary\b|"bg-primary text-primary-foreground"/, `${file}: no dark band on the homepage`);
+  }
+
+  const layout = fs.readFileSync("src/app/[locale]/layout.tsx", "utf8");
+  assert.match(layout, /defaultTheme="light"/, "first visit is light regardless of OS preference");
+  assert.doesNotMatch(layout, /defaultTheme="system"|\benableSystem\s/, "OS dark mode does not darken the default experience");
 });

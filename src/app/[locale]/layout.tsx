@@ -17,10 +17,9 @@ import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fbf8f1" },
-    { media: "(prefers-color-scheme: dark)", color: "#1c120a" },
-  ],
+  // The site opens light regardless of OS preference, so the browser chrome
+  // matches the paper background.
+  themeColor: "#fbfaf7",
 };
 
 const inter = Inter({
@@ -101,7 +100,10 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <JsonLd locale={locale} siteName={t("siteName")} description={t("description")} />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        {/* Light is the default for every first visit (Luminous direction): an
+            OS dark preference no longer turns the whole site dark. Dark stays
+            available from the header toggle and is remembered once chosen. */}
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <NextIntlClientProvider>
             <SiteHeader blogSlugMap={blogSlugMap} />
             <AudienceGateway />

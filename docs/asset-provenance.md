@@ -218,6 +218,12 @@ the air-freight scene. Images get a light CSS desaturation
 (`saturate-[0.82–0.85]`) and a surface gradient only; the files themselves
 are unchanged. No image was added, generated or retouched.
 
+**Luminous direction (2026-09-30):** same two images, same composition and
+same captions, but the hero now sits on the light paper surface instead of
+black olive. The dark surface gradient over the processing image was
+removed; both images carry only `saturate-[0.9]`. No image was added,
+generated or retouched.
+
 **Follow-up (2026-09-30):** the coffee-harvest inset was replaced by the
 air-freight image so the hero carries no coffee-family visual. To avoid
 showing the same photograph twice, the homepage evidence section is now

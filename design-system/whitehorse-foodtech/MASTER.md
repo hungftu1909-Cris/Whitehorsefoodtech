@@ -70,6 +70,38 @@ deliberate asymmetry. Not a coffee shop, not a SaaS dashboard.
   desktop, ≤4 on mobile. Body ≥16px; labels ≥12px (`text-xs`) with wide
   tracking. Header is 80px with a 48px mark.
 
+## Luminous direction (2026-09-30, supersedes the dark surfaces above)
+
+Review feedback: the black-olive full-height hero plus a dark industrial
+image made the brand feel heavy, closed and factory-led. Thesis kept
+(premium sourcing house × institutional ingredient platform); the *form*
+of premium changes from dark editorial to **luminous** — daylight,
+precision and openness. Not a colour swap and not a beige lifestyle site.
+
+- **Light is the default for every first visit.** `ThemeProvider` uses
+  `defaultTheme="light"` without `enableSystem`; an OS dark preference no
+  longer darkens the site. Dark stays available from the header toggle.
+  `theme-color` is the paper `#FBFAF7`.
+- **Surfaces:** paper `--background #FBFAF7` (brighter, less yellow than the
+  old ivory), white `--card #FFFFFF`, and mist `--muted #F0F2ED` (a pale,
+  slightly sage daylight neutral replacing the beige sand). Border
+  `#DFE2D9`. Homepage rhythm: luminous hero → white → mist (proof) →
+  paper (portfolio) → white (evidence) → mist (technology) → paper (split
+  CTA) → forest footer. No `bg-deep` or forest section bands on the homepage
+  (guarded by `tests/platform-experience.test.ts`).
+- **Forest is ink, not a room:** `--primary #1F2E25` sets headlines, key
+  figures and solid primary actions; the footer is the single dark block.
+- **`.bg-luminous`** (globals.css): paper with a white bloom behind the
+  headline and a faint champagne / sage warmth toward the photograph. It is
+  a wash, not a decorative gradient; no glass or blur.
+- **Photography in daylight:** the hero composition is unchanged (processing
+  image + air-freight inset + caption), but the photograph sits on paper
+  with no darkening overlay; the inset sits on a 1px `foreground/15`
+  hairline. Only a light `saturate-[0.9]` is applied; files are untouched.
+- Proof figures are forest serif numerals on hairline rules on mist; the
+  custom-sourcing plate is mist on a hairline; split-CTA plates are white
+  on a hairline (buyer, solid forest action) and mist (supplier, outline).
+
 ## Colors
 
 Light mode is primary (export/B2B site — dark mode is a nice-to-have, not a
@@ -86,18 +118,18 @@ restrained category accents.
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-primary` | `#1F2E25` | Deep forest — primary buttons, proof/technology/footer bands (was `#3B2314`) |
+| `--color-primary` | `#1F2E25` | Deep forest — ink for headlines/figures, primary buttons, footer (was `#3B2314`) |
 | `--color-primary-foreground` | `#F8F5EC` | Text/icons on primary |
 | `--color-secondary` | `#6B4A2E` | Whitehorse heritage brown — secondary surfaces |
 | `--color-accent` | `#7D5F27` | Restrained bronze — eyebrows, links, icons, focus (≥ 4.5:1 on ivory, muted and white) |
 | `--color-accent-foreground` | `#FBF8F1` | Text on accent |
-| `--color-background` | `#FBF8F1` | Page background (warm ivory, matches logo bg) |
+| `--color-background` | `#FBFAF7` | Page background (daylight paper; was warm ivory `#FBF8F1`) |
 | `--color-foreground` | `#1B221D` | Body text (black olive, not pure black) |
 | `--color-card` | `#FFFFFF` | Card surfaces |
 | `--color-card-foreground` | `#1B221D` | Text on cards |
-| `--color-muted` | `#EFEADD` | Muted section backgrounds, tags |
+| `--color-muted` | `#F0F2ED` | Mist — alternate section bands, plates (was sand `#EFEADD`) |
 | `--color-muted-foreground` | `#474A3F` | Secondary/caption text (7.5:1 on muted) |
-| `--color-border` | `#E3DCCB` | Hairline borders/dividers |
+| `--color-border` | `#DFE2D9` | Hairline borders/dividers |
 | `--color-success` | `#4B6043` | "Operating now" / current-status badges |
 | `--color-destructive` | `#B3261E` | Form errors |
 | `--color-ring` | `#7D5F27` | Focus ring (accent) |

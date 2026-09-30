@@ -9,7 +9,8 @@ import { CUSTOM_SOURCING_HREF, PRODUCT_CATEGORIES } from "@/lib/nav";
  * the same image size, numeral, name and one descriptor — none is the
  * brand. The sixth plate is the open path for any other Vietnamese
  * ingredient, so the grid reads as today's focus, not the boundary
- * (2 + 2 + 2 on tablet, 3 + 3 on desktop).
+ * (2 + 2 + 2 on tablet, 3 + 3 on desktop). That plate is pale mist on a
+ * hairline, not a dark block among the photographs.
  */
 export function ProductsPreview() {
   const t = useTranslations("home.productsPreview");
@@ -67,10 +68,10 @@ export function ProductsPreview() {
           })}
 
           <li id="custom-sourcing" className="scroll-mt-28">
-            <div className="group relative flex aspect-[4/3] flex-col justify-between bg-deep p-7 text-deep-foreground md:p-8">
+            <div className="group relative flex aspect-[4/3] flex-col justify-between border border-foreground/10 bg-muted p-7 text-foreground md:p-8">
               <p className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{t("custom.eyebrow")}</p>
               <div>
-                <h3 className="max-w-[16ch] font-serif text-[1.75rem] leading-[1.15] font-medium text-balance md:text-[2rem]">
+                <h3 className="max-w-[16ch] font-serif text-[1.75rem] leading-[1.15] font-medium text-balance text-primary md:text-[2rem]">
                   {t("custom.title")}
                 </h3>
                 <Link

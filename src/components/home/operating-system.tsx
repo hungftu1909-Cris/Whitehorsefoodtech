@@ -14,7 +14,7 @@ export function OperatingSystem() {
   const stages = t.raw("stages") as Stage[];
 
   return (
-    <section aria-labelledby="operating-title" className="bg-background">
+    <section aria-labelledby="operating-title" className="bg-card">
       <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 sm:px-6 md:py-32 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:py-40">
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-32">

@@ -55,10 +55,11 @@
 
 :root {
   /* Whitehorse Foodtech brand tokens — see design-system/whitehorse-foodtech/MASTER.md.
-     Institutional surfaces are deep forest / black olive on warm ivory with a
-     restrained bronze; Whitehorse brown stays as the secondary heritage tone
-     (platform repositioning, 2026-09-30). */
-  --background: #fbf8f1;
+     Luminous direction (2026-09-30): daylight paper, white and a pale mist
+     carry the page; deep forest is ink, primary actions and the footer, not
+     a surface to sit in. Restrained bronze; Whitehorse brown stays as the
+     secondary heritage tone. */
+  --background: #fbfaf7;
   --foreground: #1b221d;
   --card: #ffffff;
   --card-foreground: #1b221d;
@@ -68,7 +69,9 @@
   --primary-foreground: #f8f5ec;
   --secondary: #6b4a2e;
   --secondary-foreground: #fbf7ee;
-  --muted: #efeadd;
+  /* Mist: a pale, slightly sage daylight neutral — lighter and cooler than
+     the old sand, so alternate bands read as light, not beige. */
+  --muted: #f0f2ed;
   --muted-foreground: #474a3f;
   /* Darker bronze so accent text (eyebrows, links) passes AA on ivory and
      muted surfaces; forest surfaces switch to a lighter bronze below. */
@@ -78,8 +81,8 @@
   --success-foreground: #fbf7ee;
   --destructive: #b3261e;
   --destructive-foreground: #fbf7ee;
-  --border: #e3dccb;
-  --input: #e3dccb;
+  --border: #dfe2d9;
+  --input: #dfe2d9;
   --ring: #7d5f27;
   --chart-1: #1f2e25;
   --chart-2: #7d5f27;
@@ -89,17 +92,17 @@
   /* Quiet-luxury refinement (2026-09-30): sharper corners, fewer soft
      rounded rectangles. */
   --radius: 0.25rem;
-  /* Black-olive editorial surface (homepage hero, technology). Stays dark
-     in both themes. */
+  /* Black-olive surface, kept for inner-page accents only; the homepage no
+     longer uses it (Luminous, 2026-09-30). Stays dark in both themes. */
   --deep: #131b16;
   --deep-foreground: #f6f1e4;
-  --sidebar: #fbf7ee;
+  --sidebar: #fbfaf7;
   --sidebar-foreground: #1b221d;
   --sidebar-primary: #1f2e25;
   --sidebar-primary-foreground: #f8f5ec;
-  --sidebar-accent: #efeadd;
+  --sidebar-accent: #f0f2ed;
   --sidebar-accent-foreground: #1b221d;
-  --sidebar-border: #e3dccb;
+  --sidebar-border: #dfe2d9;
   --sidebar-ring: #7d5f27;
 }
 
@@ -163,6 +166,23 @@
   --sidebar-accent-foreground: #f1e7d6;
   --sidebar-border: color-mix(in oklab, #f1e7d6 15%, transparent);
   --sidebar-ring: #d4a24e;
+}
+
+/* Luminous wash: daylight falling across paper — a white bloom behind the
+   headline and a faint champagne / sage warmth toward the photograph. Not a
+   decorative gradient; it only lifts the surface off flat ivory. */
+.bg-luminous {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(60rem 36rem at 12% 0%, #ffffff 0%, transparent 70%),
+    radial-gradient(44rem 30rem at 88% 30%, color-mix(in oklab, #d9c38f 16%, transparent) 0%, transparent 72%),
+    radial-gradient(40rem 26rem at 70% 100%, color-mix(in oklab, #b9c8b0 18%, transparent) 0%, transparent 70%);
+}
+
+.dark .bg-luminous {
+  background-image:
+    radial-gradient(60rem 36rem at 12% 0%, color-mix(in oklab, #f1e7d6 5%, transparent) 0%, transparent 70%),
+    radial-gradient(44rem 30rem at 88% 30%, color-mix(in oklab, #ddb066 7%, transparent) 0%, transparent 72%);
 }
 
 @layer base {

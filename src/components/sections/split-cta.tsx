@@ -14,7 +14,8 @@ type Path = {
 
 /**
  * Closing CTA with two pathways: buyers to RFQ, suppliers to registration.
- * Two flat plates (forest and sand) with quiet, arrow-free actions.
+ * Two light plates (white on a hairline, and pale mist) with quiet,
+ * arrow-free actions; the buyer path leads with the solid forest action.
  */
 export function SplitCta({
   title,
@@ -38,12 +39,12 @@ export function SplitCta({
         {subtitle && <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-[1.0625rem]">{subtitle}</p>}
         <div className="mt-14 grid gap-4 md:mt-16 md:grid-cols-2 md:gap-6">
           {[buyer, supplier].map((path, i) => (
-            <div key={path.label} className={cn("flex min-h-72 flex-col p-7 md:p-10", i === 0 ? "bg-primary text-primary-foreground" : "bg-muted text-foreground")}>
+            <div key={path.label} className={cn("flex min-h-72 flex-col p-7 text-foreground md:p-10", i === 0 ? "border border-foreground/12 bg-card" : "bg-muted")}>
               <div className="flex items-center justify-between gap-4">
                 <h3 className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{path.label}</h3>
-                <span className={cn("font-serif text-lg tabular-nums", i === 0 ? "text-primary-foreground/50" : "text-muted-foreground")}>0{i + 1}</span>
+                <span className="font-serif text-lg text-muted-foreground tabular-nums">0{i + 1}</span>
               </div>
-              <p className={cn("mt-auto max-w-lg pt-14 font-serif text-xl leading-relaxed md:text-[1.4rem]", i === 0 ? "text-primary-foreground/90" : "text-foreground")}>{path.body}</p>
+              <p className="mt-auto max-w-lg pt-14 font-serif text-xl leading-relaxed text-foreground md:text-[1.4rem]">{path.body}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
                   href={path.href}
@@ -51,7 +52,7 @@ export function SplitCta({
                     buttonVariants({ variant: i === 0 ? "default" : "outline", size: "lg" }),
                     "h-12 w-full cursor-pointer rounded-sm px-7 text-[0.9375rem] sm:w-auto",
                     i === 0
-                      ? "bg-primary-foreground text-primary hover:bg-white"
+                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
                       : "border-foreground/30 bg-transparent text-foreground hover:border-foreground hover:bg-transparent"
                   )}
                 >
@@ -62,7 +63,7 @@ export function SplitCta({
                     href={path.secondaryHref}
                     className={cn(
                       buttonVariants({ variant: "outline", size: "lg" }),
-                      "h-12 w-full cursor-pointer rounded-sm border-primary-foreground/35 bg-transparent px-7 text-[0.9375rem] text-primary-foreground hover:border-primary-foreground hover:bg-transparent sm:w-auto"
+                      "h-12 w-full cursor-pointer rounded-sm border-foreground/30 bg-transparent px-7 text-[0.9375rem] text-foreground hover:border-foreground hover:bg-transparent sm:w-auto"
                     )}
                   >
                     {path.secondaryCta}
