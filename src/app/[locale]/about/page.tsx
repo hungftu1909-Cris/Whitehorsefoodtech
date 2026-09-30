@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { SplitCta } from "@/components/sections/split-cta";
 import { FamilyVisual } from "@/components/catalog/family-visual";
-import { ABOUT_MOSAIC_FAMILIES } from "@/lib/family-images";
+import { ABOUT_MOSAIC_FAMILIES } from "@/lib/media-manifest";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 //   current facts only.
 // - Balance Life is a program signal; no partner logos or other names.
 // - The legacy About/factory artwork is never rendered (unsupported claims
-//   in the images). The hero mosaic comes from src/lib/family-images.ts.
+//   in the images). The hero mosaic comes from src/lib/media-manifest.ts.
 
 type Item = { title: string; description: string };
 

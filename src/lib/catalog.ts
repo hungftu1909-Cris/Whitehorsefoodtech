@@ -57,19 +57,18 @@ export function definedCodesFor(family: FamilySlug): string[] {
   );
 }
 
-export type CatalogImage = {
-  src: string;
-  alt: Localized;
-  /**
-   * "editorial": generic photographs from the website-edit brief.
-   * "concept-pack": the owner's packaging concept render for that exact
-   * code or range (docs/image-inventory.md) — provisional artwork with the
-   * source label untouched, never a photo of stock or a final label.
-   * "studio": text-free studio representation of an ingredient format.
-   * Every kind carries a visible badge.
-   */
-  kind: "editorial" | "concept-pack" | "studio";
-};
+/** Stable range identifiers — the keys media, RFQ links and filters use. */
+export const RANGE_ID_LIST = [
+  "coffee-green", "coffee-roasted", "coffee-soluble", "coffee-extract", "coffee-cold-brew", "coffee-single-serve",
+  "coconut-milk-cream", "coconut-powders-solids", "coconut-blossom-sugar",
+  "birds-nest-cleaned", "birds-nest-instant", "birds-nest-oem",
+  "fruit-soft-dried", "fruit-freeze-dried", "fruit-concentrate-powder", "fruit-frozen-puree",
+  "nsb-nuts", "nsb-spices",
+] as const;
+export type RangeId = (typeof RANGE_ID_LIST)[number];
+
+// Product imagery is NOT part of the catalog data: every family, range and
+// code resolves its images by stable id from src/lib/media-manifest.ts.
 
 export type SpecRow = {
   label: Localized;
@@ -82,7 +81,7 @@ export type SpecRow = {
 };
 
 export type CatalogRange = {
-  id: string;
+  id: RangeId;
   family: FamilySlug;
   name: Localized;
   summary: Localized;
@@ -96,84 +95,28 @@ export type CatalogRange = {
    * (docs/claim-registry.md row 24).
    */
   indicative?: Localized[];
-  /**
-   * Range-level visuals, filled from RANGE_IMAGES below. A range has no
-   * official SKU code, so these illustrate the product form and are never
-   * presented as a confirmed code, stock or approved packaging.
-   */
-  images?: CatalogImage[];
 };
 
 export type CatalogSku = {
   code: string;
   slug: string;
   family: FamilySlug;
-  range: string;
+  range: RangeId;
   name: Localized;
   /** One line for cards: format · main application. */
   line: Localized;
   summary: Localized;
   applications: Localized[];
   specs: SpecRow[];
-  images: CatalogImage[];
 };
 
 const AGREED: Localized = { en: "Agreed per order", vi: "Thống nhất theo đơn hàng" };
 export const AGREED_PER_ORDER = AGREED;
 
-// ---------------------------------------------------------------- images
-const IMG = {
-  cups: {
-    src: "/images/catalog/coffee/coffee-ground-whole-instant.jpg",
-    alt: {
-      en: "Ground coffee, roasted beans and instant coffee granules in three cups",
-      vi: "Cà phê xay, cà phê hạt rang và cà phê hòa tan dạng hạt trong ba chiếc cốc",
-    },
-    kind: "editorial",
-  },
-  spoons: {
-    src: "/images/catalog/coffee/coffee-roasted-ground-instant-spoons.jpg",
-    alt: {
-      en: "Roasted coffee beans in a wooden bowl with spoons of ground and instant coffee",
-      vi: "Cà phê hạt rang trong bát gỗ cùng thìa cà phê xay và cà phê hòa tan",
-    },
-    kind: "editorial",
-  },
-  bowls: {
-    src: "/images/catalog/coffee/coffee-green-roasted-ground-bowls.jpg",
-    alt: {
-      en: "Green coffee beans and ground coffee in wooden bowls on roasted beans",
-      vi: "Cà phê nhân xanh và cà phê xay trong bát gỗ trên nền cà phê hạt rang",
-    },
-    kind: "editorial",
-  },
-  flatlay: {
-    src: "/images/catalog/coffee/coffee-green-roasted-flatlay.jpg",
-    alt: {
-      en: "Green and roasted coffee beans with ground coffee in white dishes and wooden scoops",
-      vi: "Cà phê nhân xanh, cà phê rang và cà phê xay trong đĩa trắng và muỗng gỗ",
-    },
-    kind: "editorial",
-  },
-} satisfies Record<string, CatalogImage>;
-
-/** One packaging concept render per confirmed code (front three-quarter view). */
-const PACK = (code: string, en: string, vi: string): CatalogImage => ({
-  src: `/images/catalog/coffee/packs/${code.toLowerCase()}-concept-pack.webp`,
-  alt: {
-    en: `Packaging concept render for ${code}: ${en}`,
-    vi: `Hình render bao bì ý tưởng cho ${code}: ${vi}`,
-  },
-  kind: "concept-pack",
-});
-
-// Family-level visuals (cards, family hero, About mosaic) live in
-// src/lib/family-images.ts.
-
 // ---------------------------------------------------------------- ranges
 const r = (
   family: FamilySlug,
-  id: string,
+  id: RangeId,
   name: Localized,
   summary: Localized,
   formats: Localized[],
@@ -316,130 +259,6 @@ export const CATALOG_RANGES: CatalogRange[] = [
     [L("Whole black pepper: density 500–570 g/l; moisture ≤ 13%", "Hồ tiêu đen nguyên hạt: dung trọng 500–570 g/l; độ ẩm ≤ 13%")]),
 ];
 
-// ---------------------------------------------------------------- range images
-// Source renders from the CEO folder, label untouched (docs/image-inventory.md).
-// One distinct pack per named product; ranges without a suitable source
-// stay text-only rather than borrow another product's image.
-const RPACK = (family: FamilySlug, file: string, en: string, vi: string): CatalogImage => ({
-  src: `/images/catalog/${family}/packs/${file}.webp`,
-  alt: { en: `Packaging concept render: ${en}`, vi: `Hình render bao bì ý tưởng: ${vi}` },
-  kind: "concept-pack",
-});
-/** Source-derived crop of an owner-supplied studio image — no pack, no label. */
-const STUDIO = (family: FamilySlug, file: string, en: string, vi: string): CatalogImage => ({
-  src: `/images/catalog/${family}/studio/${file}.webp`,
-  alt: { en: en[0].toUpperCase() + en.slice(1), vi: vi[0].toUpperCase() + vi.slice(1) },
-  kind: "studio",
-});
-
-const FAMILY_EDITORIAL: Record<Exclude<FamilySlug, "coffee">, CatalogImage> = {
-  coconut: {
-    src: "/images/catalog/editorial/coconut-real-products.webp",
-    alt: L("Owner-supplied coconut product photograph", "Ảnh sản phẩm dừa do Whitehorse cung cấp"),
-    kind: "editorial",
-  },
-  "birds-nest": {
-    src: "/images/catalog/editorial/birds-nest-real-products.webp",
-    alt: L("Owner-supplied bird's nest product photograph", "Ảnh sản phẩm yến do Whitehorse cung cấp"),
-    kind: "editorial",
-  },
-  fruit: {
-    src: "/images/catalog/editorial/fruit-real-products.webp",
-    alt: L("Owner-supplied fruit product photograph", "Ảnh sản phẩm trái cây do Whitehorse cung cấp"),
-    kind: "editorial",
-  },
-  "nuts-spices-botanicals": {
-    src: "/images/catalog/editorial/nuts-spices-real-products.webp",
-    alt: L("Owner-supplied nuts and spices product photograph", "Ảnh sản phẩm hạt và gia vị do Whitehorse cung cấp"),
-    kind: "editorial",
-  },
-};
-
-const RANGE_FALLBACKS: Record<FamilySlug, CatalogImage[]> = {
-  coffee: [IMG.flatlay, IMG.spoons],
-  coconut: [
-    FAMILY_EDITORIAL.coconut,
-    {
-      src: "/images/catalog/studio/coconut.jpg",
-      alt: L("Coconut ingredient formats", "Các dạng nguyên liệu dừa"),
-      kind: "studio",
-    },
-  ],
-  "birds-nest": [
-    FAMILY_EDITORIAL["birds-nest"],
-    {
-      src: "/images/catalog/studio/birds-nest.jpg",
-      alt: L("Bird's nest ingredient formats", "Các dạng nguyên liệu yến"),
-      kind: "studio",
-    },
-  ],
-  fruit: [
-    FAMILY_EDITORIAL.fruit,
-    {
-      src: "/images/catalog/studio/fruit.jpg",
-      alt: L("Fruit ingredient formats", "Các dạng nguyên liệu trái cây"),
-      kind: "studio",
-    },
-  ],
-  "nuts-spices-botanicals": [
-    FAMILY_EDITORIAL["nuts-spices-botanicals"],
-    {
-      src: "/images/catalog/studio/nuts-spices-botanicals.jpg",
-      alt: L("Cashew kernels and spice formats", "Nhân hạt điều và các dạng gia vị"),
-      kind: "studio",
-    },
-  ],
-};
-
-export const RANGE_IMAGES: Partial<Record<string, CatalogImage[]>> = {
-  "coconut-milk-cream": [
-    RPACK("coconut", "coconut-milk-carton-concept-pack", "coconut milk in a 1 L aseptic carton", "sữa dừa trong hộp giấy vô trùng 1 L"),
-    RPACK("coconut", "coconut-cream-bib-concept-pack", "coconut cream in a 20 kg bag-in-box carton", "kem dừa trong thùng bag-in-box 20 kg"),
-  ],
-  "coconut-powders-solids": [
-    RPACK("coconut", "desiccated-coconut-pouch-concept-pack", "desiccated coconut, fine grade, in a 1 kg pouch with window", "dừa sấy khô loại mịn trong túi 1 kg có cửa sổ"),
-    RPACK("coconut", "coconut-milk-powder-pouch-concept-pack", "coconut milk powder in a 500 g / 1 kg pouch", "bột sữa dừa trong túi 500 g / 1 kg"),
-  ],
-  "coconut-blossom-sugar": [
-    RPACK("coconut", "coconut-blossom-sugar-pouch-concept-pack", "coconut blossom sugar in a retail pouch with window", "đường hoa dừa trong túi bán lẻ có cửa sổ"),
-  ],
-  "birds-nest-cleaned": [
-    RPACK("birds-nest", "cleaned-birds-nest-box-concept-pack", "cleaned edible bird's nest in a 50 g rigid box", "yến sào làm sạch trong hộp cứng 50 g"),
-  ],
-  "birds-nest-instant": [
-    RPACK("birds-nest", "instant-birds-nest-sachet-concept-pack", "instant bird's nest in a 10 g serving sachet", "yến ăn liền trong gói 10 g"),
-    RPACK("birds-nest", "instant-birds-nest-carton-concept-pack", "instant bird's nest in a carton of 10 × 10 g sachets", "yến ăn liền trong hộp 10 gói 10 g"),
-  ],
-  "fruit-soft-dried": [
-    RPACK("fruit", "soft-dried-mango-pouch-concept-pack", "soft-dried mango in a 500 g pouch", "xoài sấy dẻo trong túi 500 g"),
-    STUDIO("fruit", "soft-dried-soursop-studio", "dried soursop pieces in a wooden bowl beside a halved soursop", "mãng cầu sấy trong bát gỗ bên quả mãng cầu bổ đôi"),
-  ],
-  "fruit-freeze-dried": [
-    STUDIO("fruit", "freeze-dried-mango-studio", "freeze-dried mango cubes in a bowl", "xoài sấy thăng hoa dạng hạt lựu trong bát"),
-  ],
-  "fruit-concentrate-powder": [
-    RPACK("fruit", "passion-fruit-concentrate-bib-concept-pack", "passion fruit concentrate in a 20 kg bag-in-box carton", "chanh dây cô đặc trong thùng bag-in-box 20 kg"),
-    STUDIO("fruit", "passion-fruit-powder-studio", "passion fruit powder in a bowl beside a halved passion fruit", "bột chanh dây trong bát bên quả chanh dây bổ đôi"),
-  ],
-  "fruit-frozen-puree": [
-    STUDIO("fruit", "passion-fruit-puree-studio", "passion fruit purée in a bowl with whole and halved passion fruit", "puree chanh dây trong bát cùng chanh dây nguyên quả và bổ đôi"),
-  ],
-  "nsb-nuts": [
-    STUDIO("nuts-spices-botanicals", "cashew-kernels-studio", "whole cashew kernels with black peppercorns and star anise", "nhân hạt điều nguyên cùng hạt tiêu đen và hoa hồi"),
-  ],
-  "nsb-spices": [
-    STUDIO("nuts-spices-botanicals", "star-anise-studio", "whole star anise on a wooden surface", "hoa hồi nguyên cánh trên mặt gỗ"),
-  ],
-};
-for (const range of CATALOG_RANGES) {
-  const images = [...(RANGE_IMAGES[range.id] ?? [])];
-  for (const fallback of RANGE_FALLBACKS[range.family]) {
-    if (images.length >= 2) break;
-    if (!images.some((image) => image.src === fallback.src)) images.push(fallback);
-  }
-  range.images = images;
-}
-
 // ---------------------------------------------------------------- confirmed coffee codes
 const MOISTURE_GREEN: SpecRow = {
   label: L("Moisture", "Độ ẩm"),
@@ -468,7 +287,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Processing", "Phương pháp chế biến") },
       PACKAGING,
     ],
-    images: [PACK("WHCF001", "green Robusta coffee beans in a 2–5 kg barrier pouch", "cà phê nhân Robusta trong túi barrier 2–5 kg"), IMG.bowls],
   },
   {
     code: "WHCF002", slug: "whcf002", family: "coffee", range: "coffee-green",
@@ -484,7 +302,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Processing", "Phương pháp chế biến"), reference: L("Washed or natural — agreed per order", "Chế biến ướt hoặc tự nhiên — thống nhất theo đơn") },
       PACKAGING,
     ],
-    images: [PACK("WHCF002", "green Arabica coffee beans in a 2–5 kg barrier pouch", "cà phê nhân Arabica trong túi barrier 2–5 kg"), IMG.flatlay],
   },
   {
     code: "WHCF003", slug: "whcf003", family: "coffee", range: "coffee-green",
@@ -500,7 +317,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Cup profile", "Hương vị (cupping)") },
       PACKAGING,
     ],
-    images: [PACK("WHCF003", "fine green Robusta in a 2–5 kg barrier pouch", "Robusta nhân loại Fine trong túi barrier 2–5 kg"), IMG.bowls],
   },
   {
     code: "WHCF004", slug: "whcf004", family: "coffee", range: "coffee-roasted",
@@ -515,7 +331,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Blend", "Phối trộn"), reference: L("Straight Robusta or blend — agreed", "Robusta nguyên chất hoặc phối trộn — thống nhất") },
       PACKAGING,
     ],
-    images: [PACK("WHCF004", "roasted whole-bean coffee in a 1 kg pouch", "cà phê rang nguyên hạt trong túi 1 kg"), IMG.cups],
   },
   {
     code: "WHCF005", slug: "whcf005", family: "coffee", range: "coffee-roasted",
@@ -530,7 +345,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Moisture", "Độ ẩm"), method: "ISO 11294" },
       PACKAGING,
     ],
-    images: [PACK("WHCF005", "roasted and ground coffee in a 250 g pouch", "cà phê rang xay trong túi 250 g"), IMG.spoons],
   },
   {
     code: "WHCF006", slug: "whcf006", family: "coffee", range: "coffee-cold-brew",
@@ -546,7 +360,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Processing and shelf life", "Xử lý và hạn dùng") },
       PACKAGING,
     ],
-    images: [PACK("WHCF006", "cold brew black coffee in a 250 ml can", "cold brew cà phê đen trong lon 250 ml"), IMG.spoons],
   },
   {
     code: "WHCF007", slug: "whcf007", family: "coffee", range: "coffee-soluble",
@@ -562,7 +375,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Bulk density and solubility", "Tỷ trọng khối và độ hòa tan") },
       PACKAGING,
     ],
-    images: [PACK("WHCF007", "spray-dried instant coffee in a 20–25 kg lined carton", "cà phê hòa tan sấy phun trong thùng carton có lót 20–25 kg"), IMG.cups],
   },
   {
     code: "WHCF008", slug: "whcf008", family: "coffee", range: "coffee-soluble",
@@ -578,7 +390,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Granule size and density", "Cỡ hạt và tỷ trọng") },
       PACKAGING,
     ],
-    images: [PACK("WHCF008", "agglomerated instant coffee in a carton of 20 × 2 g sticks", "cà phê hòa tan tạo hạt trong hộp 20 gói 2 g"), IMG.spoons],
   },
   {
     code: "WHCF009", slug: "whcf009", family: "coffee", range: "coffee-soluble",
@@ -594,7 +405,6 @@ export const CATALOG_SKUS: CatalogSku[] = [
       { label: L("Particle size and colour", "Cỡ hạt và màu sắc") },
       PACKAGING,
     ],
-    images: [PACK("WHCF009", "freeze-dried instant coffee in a 100 g jar", "cà phê hòa tan sấy thăng hoa trong hũ 100 g"), IMG.cups],
   },
 ];
 
@@ -625,7 +435,7 @@ export const PACKAGING_OPTIONS: Partial<Record<FamilySlug, Localized[]>> = {
 };
 
 // ---------------------------------------------------------------- queries
-export const RANGE_IDS = CATALOG_RANGES.map((range) => range.id);
+export const RANGE_IDS: RangeId[] = CATALOG_RANGES.map((range) => range.id);
 
 export function rangesFor(family: FamilySlug) {
   return CATALOG_RANGES.filter((range) => range.family === family);

@@ -37,20 +37,19 @@ commercial website use, and record the licence reference here.
 
 ## Family imagery (added 2026-09-28, branch `feat/phase3-premium-about-studio`)
 
-Single source of truth: `src/lib/family-images.ts` (`FAMILY_IMAGES` and
-`FAMILY_SECONDARY_IMAGES`),
-rendered only through `src/components/catalog/family-visual.tsx` on the
-homepage preview, `/products`, each family page hero and the About mosaic.
-All renders are 4:3, `next/image`, `object-cover`; the family hero has
-`priority`.
+**Superseded 2026-09-30 (media audit).** Single source of truth is now
+`src/lib/media-manifest.ts` (`FAMILY_MEDIA`, `RANGE_MEDIA`, `SKU_MEDIA`,
+keyed by family slug / range id / SKU code), rendered through
+`DualImageFrame` / `SpecPlate`. Full mapping, root cause and gaps:
+`docs/media-audit.md`.
 
-| Family | File | Kind | Visible label | Status |
-|---|---|---|---|---|
-| Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` + `public/images/catalog/coffee/coffee-ground-whole-instant.jpg` | Editorial photographs (see table above) | None | Rendered as a two-image family visual. Production rights pending (as above). |
-| Coconut | `public/images/catalog/editorial/coconut-real-products.webp` + `public/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp` | Owner product composition + concept packaging | Concept packaging only | Rendered as a two-image family visual |
-| Bird's nest | `public/images/catalog/editorial/birds-nest-real-products.webp` + `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | Owner product composition + concept packaging | Concept packaging only | Rendered as a two-image family visual |
-| Fruit | `public/images/catalog/editorial/fruit-real-products.webp` + `public/images/catalog/studio/fruit.jpg` | Owner product composition + studio representation | None | Rendered as a two-image family visual |
-| Nuts, spices & botanicals | `public/images/catalog/editorial/nuts-spices-real-products.webp` + `public/images/catalog/studio/nuts-spices-botanicals.jpg` | Owner product composition + studio representation | None | Rendered as a two-image family visual |
+| Family | image01 | image02 | Status |
+|---|---|---|---|
+| Coffee | `public/images/catalog/coffee/coffee-green-roasted-flatlay.jpg` | `public/images/catalog/coffee/coffee-ground-whole-instant.jpg` | Verified pair. Production rights pending (as above). |
+| Coconut | `public/images/catalog/editorial/coconut-real-products.webp` | `public/images/catalog/coconut/packs/coconut-lineup-concept-pack.webp` | Verified pair (concept packaging labelled) |
+| Bird's nest | `public/images/catalog/editorial/birds-nest-real-products.webp` | `public/images/catalog/birds-nest/packs/birds-nest-lineup-concept-pack.webp` | Verified pair (concept packaging labelled) |
+| Fruit | `public/images/catalog/editorial/fruit-real-products.webp` | — | **02 missing.** `studio/fruit.jpg` was used as 02 until 2026-09-30 but is the same photograph (`Trái cây.jpg`) re-cropped — retired from use |
+| Nuts, spices & botanicals | `public/images/catalog/editorial/nuts-spices-real-products.webp` | — | **02 missing.** `studio/nuts-spices-botanicals.jpg` is the same photograph (`Hạt quế hồi.jpg`) re-cropped — retired from use |
 
 ### Owner-supplied product photographs (added 2026-09-28)
 
@@ -73,7 +72,11 @@ composition shown, not a specific inventory lot, supplier batch, certificate,
 origin record or availability claim. Exact product, source and final
 specification are still confirmed per request.
 
-### Studio image sources (added 2026-09-28)
+### Studio image sources (added 2026-09-28; not rendered since 2026-09-30)
+
+These four files are re-crops of the owner photographs above (same source
+SHA-256). Showing one beside its editorial encode presented one photograph
+as two images, so they are listed in `REJECTED_MEDIA` and no longer mapped.
 
 Source: the owner's shared Google Drive folder
 `https://drive.google.com/drive/folders/1Qs95WmumHthaNYqngoZrWBmv_qIJVVLt`

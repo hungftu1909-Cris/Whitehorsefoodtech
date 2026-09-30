@@ -12,8 +12,8 @@ import { FilterGrid } from "@/components/catalog/filter-grid";
 import { RangeCard, SkuCard } from "@/components/catalog/cards";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
-import { FAMILY_SECONDARY_IMAGES, familyImage } from "@/lib/family-images";
-import { DualImageFrame } from "@/components/catalog/dual-image-frame";
+import { familyMedia } from "@/lib/media-manifest";
+import { DualImageFrame, toFrameImages } from "@/components/catalog/dual-image-frame";
 import {
   DEFINED_SKU_COUNTS,
   definedCodesFor,
@@ -50,13 +50,13 @@ export async function generateMetadata({
   const category = findCategory(slug);
   if (!category) return {};
   const t = await getTranslations({ locale, namespace: `products.categories.${category.categoryKey}` });
-  const hero = familyImage(slug as FamilySlug);
+  const hero = familyMedia(slug as FamilySlug)[0];
   return pageMetadata({
     locale,
     path: `/products/${slug}`,
     title: t("name"),
     description: t("description"),
-    ...(hasPublicFile(hero.src) ? { images: [hero.src] } : {}),
+    ...(hero && hasPublicFile(hero.src) ? { images: [hero.src] } : {}),
   });
 }
 
@@ -80,7 +80,7 @@ export default async function ProductFamilyPage({
   const skus = skusFor(family);
   const definedCount = DEFINED_SKU_COUNTS[family];
   const definedCodes = definedCodesFor(family);
-  const hero = familyImage(family);
+  const heroMedia = familyMedia(family);
   const name = t("name");
 
   const actionLabels = { sample: tc("requestSample"), spec: tc("requestSpec"), quote: tc("requestQuote") };
@@ -102,12 +102,8 @@ export default async function ProductFamilyPage({
     indicativeNote: tc("indicativeNote"),
     moreDetail: tc("moreDetail"),
     conceptBadge: tc("conceptPackBadge"),
-    galleryLabel: tc("galleryLabel"),
-    showImage: tc("showImage", { index: "{index}" }),
+    familyName: name,
   };
-  const badgeFor = (kind: string) =>
-    kind === "concept-pack" ? tc("conceptPackBadge") : undefined;
-  const secondaryVisual = FAMILY_SECONDARY_IMAGES[family];
   const packaging = PACKAGING_OPTIONS[family];
   const rangeCards = ranges.map((range) => ({
     id: range.id,
@@ -162,20 +158,18 @@ export default async function ProductFamilyPage({
           <RequestActions family={family} labels={actionLabels} className="mt-7" />
         </div>
         <div>
-          <DualImageFrame
-            images={[hero, secondaryVisual].map((image) => ({
-              src: image.src,
-              alt: pick(image.alt, locale),
-              badge: badgeFor(image.kind),
-            }))}
-            sizes="(min-width: 1024px) 40rem, 100vw"
-            priority
-            className="rounded-lg border border-border"
-          />
-          {/* The first view is an owner-supplied/editorial ingredient image;
-              the second is a concept pack or studio representation. Neither
-              is a statement of current stock or final production artwork. */}
-          {secondaryVisual.kind === "concept-pack" && (
+          {heroMedia.length > 0 && (
+            <DualImageFrame
+              images={toFrameImages(heroMedia, locale, tc("conceptPackBadge"))}
+              sizes="(min-width: 1024px) 40rem, 100vw"
+              priority
+              className="rounded-lg border border-border"
+            />
+          )}
+          {/* Family highlight images from FAMILY_MEDIA: an owner-supplied or
+              editorial ingredient image, plus a concept line-up only where one
+              exists. Neither is a statement of stock or final artwork. */}
+          {heroMedia.some((image) => image.kind === "concept-pack") && (
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{tc("conceptPackNote")}</p>
           )}
         </div>

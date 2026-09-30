@@ -3,8 +3,9 @@
 // dropdown, mobile nav, footer, sitemap) since all of them map over this
 // array rather than hardcoding the list separately.
 //
-// `slug` → route segment under /products/[slug] and key into
-// FAMILY_IMAGES (src/lib/family-images.ts).
+// `slug` → route segment under /products/[slug] and the stable key into
+// FAMILY_MEDIA (src/lib/media-manifest.ts). Order is presentation only:
+// nothing — copy or imagery — may be looked up by position in this array.
 // `key` → nav.* translation key (short label used in menus/footer).
 // `categoryKey` → products.categories.* translation key (full card/detail
 // content: name, tagline, description, specs, applications).

@@ -55,7 +55,8 @@ test("catalog two-view imagery is shared and touch devices rotate automatically"
   assert.match(family, /<DualImageFrame/);
   assert.match(detail, /<DualImageFrame/);
   assert.match(css, /@media \(hover: none\)/);
-  assert.match(css, /dual-frame-secondary 8s/);
+  // Each view holds about 8 seconds: a 16s two-view cycle.
+  assert.match(css, /dual-frame-secondary 16s/);
 });
 
 test("one-time audience gateway routes buyers to English and suppliers to Vietnamese", () => {

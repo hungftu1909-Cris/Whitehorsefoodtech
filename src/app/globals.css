@@ -215,28 +215,29 @@
 }
 
 /* On touch devices there is no dependable hover state, so two-view product
-   frames reveal their second image automatically. Desktop remains calm and
-   uses the deliberate hover treatment. */
+   frames advance automatically: each view holds for about 8 seconds (16s
+   cycle, ~0.8s crossfade). Desktop remains calm and uses the deliberate
+   hover treatment. Single-image frames never animate. */
 @media (hover: none) and (prefers-reduced-motion: no-preference) {
   .dual-frame-primary,
   .dual-frame-primary-badge {
-    animation: dual-frame-primary 8s ease-in-out infinite;
+    animation: dual-frame-primary 16s ease-in-out infinite;
   }
 
   .dual-frame-secondary,
   .dual-frame-secondary-badge {
-    animation: dual-frame-secondary 8s ease-in-out infinite;
+    animation: dual-frame-secondary 16s ease-in-out infinite;
   }
 }
 
 @keyframes dual-frame-primary {
-  0%, 42%, 100% { opacity: 1; }
-  52%, 90% { opacity: 0; }
+  0%, 47.5%, 100% { opacity: 1; }
+  52.5%, 95% { opacity: 0; }
 }
 
 @keyframes dual-frame-secondary {
-  0%, 42%, 100% { opacity: 0; }
-  52%, 90% { opacity: 1; }
+  0%, 47.5%, 100% { opacity: 0; }
+  52.5%, 95% { opacity: 1; }
 }
 
 /* Motion is decorative only (hover zooms, colour fades); switch it off for

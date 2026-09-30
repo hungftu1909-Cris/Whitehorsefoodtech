@@ -36,6 +36,10 @@ export default async function ProductsPage({
     family: category.slug as FamilySlug,
     name: t(`categories.${category.categoryKey}.name`),
   }));
+  // Ranges follow the family order of PRODUCT_CATEGORIES; images are keyed by
+  // range id (media-manifest), so reordering never changes what a card shows.
+  const familyOrder = PRODUCT_CATEGORIES.map((category) => category.slug as FamilySlug);
+  const orderedRanges = familyOrder.flatMap((family) => rangesFor(family));
   const results = Array.from({ length: CATALOG_RANGES.length + 1 }, (_, count) => tcat("results", { count }));
   const itemList = {
     "@context": "https://schema.org",
@@ -93,7 +97,7 @@ export default async function ProductsPage({
             noResults: tcat("noResults"),
             results,
           }}
-          items={CATALOG_RANGES.map((range) => {
+          items={orderedRanges.map((range) => {
             const category = categories.find((item) => item.slug === range.family)!;
             return {
               id: range.id,
@@ -113,8 +117,7 @@ export default async function ProductsPage({
                     indicativeNote: tcat("indicativeNote"),
                     moreDetail: tcat("moreDetail"),
                     conceptBadge: tcat("conceptPackBadge"),
-                    galleryLabel: tcat("galleryLabel"),
-                    showImage: tcat("showImage", { index: "{index}" }),
+                    familyName: category.name,
                   }}
                 />
               ),

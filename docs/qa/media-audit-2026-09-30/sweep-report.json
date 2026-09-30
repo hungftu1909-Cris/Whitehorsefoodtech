@@ -1,0 +1,5191 @@
+[
+  {
+    "tag": "home-en-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "products-en-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 351
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 338
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 233
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "coconut-en-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "fruit-en-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 351
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 338
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "nuts-en-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 233
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "coffee-en-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf005",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "birds-nest-en-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "whcf001-en-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf006-en-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf009-en-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "about-en-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 224
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 224
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 229,
+        "h": 172
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 224
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 224
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 229,
+        "h": 172
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 144
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 144
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 148,
+        "h": 111
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 144
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 148,
+        "h": 111
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 144
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 148,
+        "h": 111
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "home-en-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 324,
+        "h": 243
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "products-en-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 254
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 244
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 169
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "coconut-en-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "fruit-en-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 254
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 244
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "nuts-en-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 169
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "coffee-en-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf005",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "birds-nest-en-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "whcf001-en-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf006-en-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf009-en-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "about-en-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 195
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 195
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 175,
+        "h": 131
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 195
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 195
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 175,
+        "h": 131
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 128
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 128
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 114,
+        "h": 86
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 128
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 114,
+        "h": 86
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 128
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 114,
+        "h": 86
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "home-vi-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 475
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 475
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 350,
+        "h": 263
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "products-vi-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 351
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 338
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 233
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "coconut-vi-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "fruit-vi-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 351
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 299
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 338
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "nuts-vi-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 233
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "coffee-vi-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf005",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "birds-nest-vi-1440",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": true,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "0",
+      "o2": "1"
+    },
+    "errors": []
+  },
+  {
+    "tag": "whcf001-vi-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf006-vi-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf009-vi-1440",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 640
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 588,
+        "h": 441
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 290
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 416
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 387,
+        "h": 291
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "about-vi-1440",
+    "failed": "page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot",
+    "errors": []
+  },
+  {
+    "tag": "home-vi-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 324,
+        "h": 243
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 324,
+        "h": 243
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "products-vi-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 254
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 244
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 169
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "coconut-vi-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-milk-carton",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-cream-bib",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-pack-desiccated-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coconut-pack-milk-powder-pouch",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coconut-pack-blossom-sugar-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "fruit-vi-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-soft-dried-mango-pouch",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-soft-dried-soursop",
+            "slot": "02",
+            "ok": true,
+            "w": 254
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-freeze-dried-mango",
+            "slot": "01",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "fruit-pack-passion-fruit-concentrate-bib",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "fruit-crop-passion-fruit-powder",
+            "slot": "02",
+            "ok": true,
+            "w": 216
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-crop-passion-fruit-puree",
+            "slot": "01",
+            "ok": true,
+            "w": 244
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "nuts-vi-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-crop-star-anise",
+            "slot": "01",
+            "ok": true,
+            "w": 169
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "coffee-vi-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf005",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-bowls",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-photo-spoons",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "birds-nest-vi-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-cleaned-box",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-pack-instant-sachet",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          },
+          {
+            "id": "birds-nest-pack-instant-carton",
+            "slot": "02",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "none",
+        "imgs": [],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  },
+  {
+    "tag": "whcf001-vi-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf004",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf006-vi-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf006",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf002",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf003",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "whcf009-vi-390",
+    "frames": [
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf009",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 358,
+        "h": 269
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf007",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf008",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "coffee-pack-whcf001",
+            "slot": "01",
+            "ok": true,
+            "w": 390
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 356,
+        "h": 267
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": null,
+    "errors": []
+  },
+  {
+    "tag": "about-vi-390",
+    "frames": [
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coffee-photo-flatlay",
+            "slot": "01",
+            "ok": true,
+            "w": 195
+          },
+          {
+            "id": "coffee-photo-cups",
+            "slot": "02",
+            "ok": true,
+            "w": 195
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 175,
+        "h": 131
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "birds-nest-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 195
+          },
+          {
+            "id": "birds-nest-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 195
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 175,
+        "h": 131
+      },
+      {
+        "type": "pair",
+        "imgs": [
+          {
+            "id": "coconut-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 128
+          },
+          {
+            "id": "coconut-pack-lineup",
+            "slot": "02",
+            "ok": true,
+            "w": 128
+          }
+        ],
+        "counter": true,
+        "anim": "dual-frame-primary",
+        "animDur": "16s",
+        "w": 114,
+        "h": 86
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "fruit-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 128
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 114,
+        "h": 86
+      },
+      {
+        "type": "single",
+        "imgs": [
+          {
+            "id": "nsb-photo-composition",
+            "slot": "01",
+            "ok": true,
+            "w": 128
+          }
+        ],
+        "counter": false,
+        "anim": "none",
+        "animDur": "0s",
+        "w": 114,
+        "h": 86
+      }
+    ],
+    "dupes": [],
+    "broken": [],
+    "allBroken": [],
+    "overflow": 0,
+    "interaction": {
+      "o1": "1",
+      "o2": "0"
+    },
+    "errors": []
+  }
+]

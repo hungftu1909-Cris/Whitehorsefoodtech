@@ -48,8 +48,7 @@ test("family visuals keep only the concept-pack disclosure", () => {
   }
   const visual = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");
   assert.match(visual, /<DualImageFrame/);
-  assert.match(visual, /badge: badge\(image\.kind\)/);
-  assert.match(visual, /badge: badge\(secondary\.kind\)/);
+  assert.match(visual, /toFrameImages\(media, locale, labels\.concept\)/, "badge only via the concept-pack label");
   const frame = fs.readFileSync("src/components/catalog/dual-image-frame.tsx", "utf8");
   assert.match(frame, /\{primary\.badge\}/);
   assert.match(frame, /\{secondary\.badge\}/);
@@ -57,7 +56,7 @@ test("family visuals keep only the concept-pack disclosure", () => {
   const detail = fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8");
   assert.doesNotMatch(detail, /studioNote|editorialBadge|studioBadge/);
   assert.match(detail, /<DualImageFrame/, "detail page uses the shared two-image frame");
-  assert.match(detail, /badgeFor\(image\.kind\)/, "detail frame labels concept packaging when applicable");
+  assert.match(detail, /toFrameImages\(heroMedia, locale, tc\("conceptPackBadge"\)\)/, "detail frame labels concept packaging when applicable");
 });
 
 test("homepage is seven server-rendered platform sections, without page-wide reveal hydration", () => {
@@ -83,7 +82,8 @@ test("product index is a filterable, server-rendered range explorer", () => {
   const page = fs.readFileSync("src/app/[locale]/products/page.tsx", "utf8");
   assert.match(page, /<FilterGrid/);
   assert.match(page, /queryKey="family"/);
-  assert.match(page, /CATALOG_RANGES\.map/);
+  assert.match(page, /familyOrder\.flatMap\(\(family\) => rangesFor\(family\)\)/, "ranges follow the family order");
+  assert.match(page, /orderedRanges\.map/);
   assert.match(page, /<RangeCard/);
 });
 

@@ -10,7 +10,6 @@ import {
   DEFINED_SKU_TOTAL,
   definedCodesFor,
   PACKAGING_OPTIONS,
-  RANGE_IMAGES,
   relatedSkus,
   type Localized,
   type FamilySlug,
@@ -18,7 +17,7 @@ import {
 import { COFFEE_FORMAT_CODES, parseRfqPrefill, rfqSchema } from "../src/lib/validations.ts";
 import { rfqHref } from "../src/lib/rfq-links.ts";
 import { PRODUCT_CATEGORIES } from "../src/lib/nav.ts";
-import { FAMILY_IMAGES, FAMILY_SECONDARY_IMAGES } from "../src/lib/family-images.ts";
+import { FAMILY_MEDIA, MEDIA_ASSETS, familyMedia, rangeMedia, skuMedia } from "../src/lib/media-manifest.ts";
 
 const SOURCES = fs.readFileSync("docs/product-range-sources.md", "utf8");
 const PROVENANCE = fs.readFileSync("docs/asset-provenance.md", "utf8");
@@ -27,7 +26,7 @@ function localized(): Localized[] {
   const out: Localized[] = [];
   for (const r of CATALOG_RANGES) out.push(r.name, r.summary, ...r.formats, ...r.specFields);
   for (const s of CATALOG_SKUS) {
-    out.push(s.name, s.line, s.summary, ...s.applications, ...s.images.map((i) => i.alt));
+    out.push(s.name, s.line, s.summary, ...s.applications, ...skuMedia(s.code).map((i) => i.alt));
     for (const row of s.specs) out.push(row.label, ...(row.reference ? [row.reference] : []));
   }
   return out;
@@ -128,69 +127,57 @@ test("brief values without a primary source are not published", () => {
   }
 });
 
-test("every catalog image exists, is optimised and has provenance", () => {
-  const editorialFamilyImages = Object.values(FAMILY_IMAGES).filter((i) => i.kind === "editorial");
-  const images = [...CATALOG_SKUS.flatMap((s) => s.images), ...editorialFamilyImages];
-  for (const image of images) {
-    const file = path.join("public", image!.src);
-    assert.ok(fs.existsSync(file), `${image!.src} missing`);
-    assert.ok(fs.statSync(file).size < 400 * 1024, `${image!.src} not optimised`);
-    assert.ok(PROVENANCE.includes(image!.src.replace(/^\//, "public/")), `${image!.src} not in asset-provenance.md`);
-    assert.ok(image!.kind === "editorial" || image!.kind === "concept-pack");
+test("every manifest image exists, is optimised and has provenance", () => {
+  const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
+  for (const image of Object.values(MEDIA_ASSETS)) {
+    const file = path.join("public", image.src);
+    assert.ok(fs.existsSync(file), `${image.src} missing`);
+    assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
+    const publicPath = image.src.replace(/^\//, "public/");
+    assert.ok(PROVENANCE.includes(publicPath) || INVENTORY.includes(publicPath), `${image.src} has no provenance row`);
+    assert.ok(image.alt.en.trim() && image.alt.vi.trim(), `${image.id} alt`);
   }
   assert.match(PROVENANCE, /production rights confirmation pending/i);
 });
 
-test("each confirmed code leads with its own packaging render, never a shared image", () => {
-  const primaries = CATALOG_SKUS.map((s) => s.images[0].src);
+test("each confirmed code shows only its own packaging render, never a shared image", () => {
+  const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
+  const primaries = CATALOG_SKUS.map((s) => skuMedia(s.code)[0].src);
   assert.equal(new Set(primaries).size, primaries.length, "primary SKU images are unique");
   for (const sku of CATALOG_SKUS) {
-    const [first, ...rest] = sku.images;
-    assert.equal(first.kind, "concept-pack", `${sku.code} leads with its pack`);
-    assert.ok(first.src.includes(sku.slug), `${sku.code} pack file is named for the code`);
-    assert.ok(first.src.endsWith(".webp"));
-    assert.ok(first.alt.en.includes(sku.code) && first.alt.vi.includes(sku.code), `${sku.code} alt names the code`);
-    assert.ok(rest.every((i) => i.kind === "editorial"));
+    const media = skuMedia(sku.code);
+    assert.ok(media.length >= 1, `${sku.code} has its pack`);
+    for (const image of media) {
+      assert.equal(image.kind, "concept-pack", `${sku.code} shows only code-specific packs`);
+      assert.ok(image.src.includes(sku.slug), `${sku.code} pack file is named for the code`);
+      assert.ok(image.alt.en.includes(sku.code) && image.alt.vi.includes(sku.code), `${sku.code} alt names the code`);
+      assert.ok(INVENTORY.includes(image.src.replace(/^\//, "public/")), `${sku.code} in inventory`);
+    }
   }
-  const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
-  for (const sku of CATALOG_SKUS) assert.ok(INVENTORY.includes(sku.images[0].src.replace(/^\//, "public/")), `${sku.code} in inventory`);
 });
 
-test("every range has a truthful two-image presentation", () => {
+test("ranges show only their own verified images, or none", () => {
   const INVENTORY = fs.readFileSync("docs/image-inventory.md", "utf8");
   for (const range of CATALOG_RANGES) {
-    assert.equal(range.images?.length, 2, `${range.id} has exactly two visual states`);
-    assert.equal(new Set(range.images?.map((image) => image.src)).size, 2, `${range.id} images differ`);
-    for (const image of range.images ?? []) {
-      const file = path.join("public", image.src);
-      assert.ok(fs.existsSync(file), `${image.src} missing`);
-      assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
+    const media = rangeMedia(range.id);
+    assert.ok(media.length <= 2, `${range.id} has at most two views`);
+    for (const image of media) {
+      assert.equal(image.family, range.family, `${range.id} image belongs to its family`);
       const publicPath = image.src.replace(/^\//, "public/");
-      assert.ok(
-        INVENTORY.includes(publicPath) || PROVENANCE.includes(publicPath),
-        `${image.src} is missing from the image inventory and provenance registry`
-      );
-      assert.ok(image.alt.en.trim() && image.alt.vi.trim());
+      assert.ok(INVENTORY.includes(publicPath) || PROVENANCE.includes(publicPath), `${image.src} documented`);
       assert.doesNotMatch(image.alt.en + image.alt.vi, /\bWH(CO|BN|FR)\d/, "range alt text never names an unconfirmed code");
     }
-  }
-  for (const [rangeId, sourceImages] of Object.entries(RANGE_IMAGES)) {
-    assert.ok(sourceImages?.length, `${rangeId} keeps its source-specific image before fallbacks`);
+    const familyIds = new Set(familyMedia(range.family).map((image) => image.id));
+    assert.ok(media.every((image) => !familyIds.has(image.id)), `${range.id} never borrows its family highlight image`);
   }
 });
 
-test("every family has two distinct, documented visuals", () => {
+test("family highlight images are two distinct files when both are verified", () => {
   for (const family of PRODUCT_CATEGORIES.map((category) => category.slug) as FamilySlug[]) {
-    const primary = FAMILY_IMAGES[family];
-    const secondary = FAMILY_SECONDARY_IMAGES[family];
-    assert.notEqual(primary.src, secondary.src, `${family} family images differ`);
-    for (const image of [primary, secondary]) {
-      const file = path.join("public", image.src);
-      assert.ok(fs.existsSync(file), `${image.src} missing`);
-      assert.ok(fs.statSync(file).size < 400 * 1024, `${image.src} not optimised`);
-      assert.ok(PROVENANCE.includes(image.src.replace(/^\//, "public/")), `${image.src} has provenance`);
-      assert.ok(image.alt.en.trim() && image.alt.vi.trim());
-    }
+    const media = familyMedia(family);
+    assert.ok(media.length >= 1, `${family} has a verified highlight image`);
+    assert.equal(media.length, FAMILY_MEDIA[family].status === "verified-pair" ? 2 : 1, `${family} status matches its images`);
+    if (media.length === 2) assert.notEqual(media[0].src, media[1].src, `${family} family images differ`);
   }
 });
 
