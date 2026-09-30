@@ -105,7 +105,7 @@ export default async function PackagingPage({
                 <p className="mt-2 text-sm text-muted-foreground">{pick(structure.fill, locale)}</p>
                 <ul className="mt-auto flex flex-wrap gap-1.5 pt-6" aria-label={t("structures.usedBy")}>
                   {structure.families.map((family) => (
-                    <li key={family} className="rounded-full bg-muted px-2.5 py-1 text-[0.7rem] text-foreground/80">
+                    <li key={family} className="rounded-full bg-muted px-2.5 py-1 text-xs text-foreground/80">
                       {familyLabels[family]}
                     </li>
                   ))}

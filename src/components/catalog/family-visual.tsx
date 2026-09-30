@@ -1,4 +1,5 @@
-import { DualImageFrame, toFrameImages } from "@/components/catalog/dual-image-frame";
+import { DualImageFrame } from "@/components/catalog/dual-image-frame";
+import { toFrameImages } from "@/lib/frame-images";
 import { familyMedia } from "@/lib/media-manifest";
 import { pick, rangesFor, type FamilySlug } from "@/lib/catalog";
 import { hasPublicFile } from "@/lib/media";
@@ -25,7 +26,7 @@ export function FamilyVisual({
   priority,
   compact,
   showBadge = true,
-  showCounter = true,
+  href,
   className,
 }: {
   family: FamilySlug;
@@ -41,8 +42,8 @@ export function FamilyVisual({
    * the whole group (the About mosaic).
    */
   showBadge?: boolean;
-  /** Passed to DualImageFrame. */
-  showCounter?: boolean;
+  /** Makes the image a link (overlay; controls stay outside the <a>). */
+  href?: React.ComponentProps<typeof DualImageFrame>["href"];
   className?: string;
 }) {
   const media = familyMedia(family).filter((asset) => hasPublicFile(asset.src));
@@ -55,7 +56,7 @@ export function FamilyVisual({
         sizes={sizes}
         priority={priority}
         showBadge={showBadge}
-        showCounter={showCounter}
+        href={href}
         className={frame}
       />
     );

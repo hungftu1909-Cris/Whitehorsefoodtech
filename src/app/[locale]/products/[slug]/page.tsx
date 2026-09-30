@@ -8,12 +8,13 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumbs } from "@/components/catalog/breadcrumbs";
 import { RequestActions } from "@/components/catalog/request-actions";
-import { FilterGrid } from "@/components/catalog/filter-grid";
-import { RangeCard, SkuCard } from "@/components/catalog/cards";
+import { FilterGrid, QuickViewHost } from "@/components/catalog/filter-grid";
+import { RangeCard, RangeDetail, SkuCard } from "@/components/catalog/cards";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { familyMedia } from "@/lib/media-manifest";
-import { DualImageFrame, toFrameImages } from "@/components/catalog/dual-image-frame";
+import { DualImageFrame } from "@/components/catalog/dual-image-frame";
+import { toFrameImages } from "@/lib/frame-images";
 import {
   DEFINED_SKU_COUNTS,
   definedCodesFor,
@@ -91,18 +92,29 @@ export default async function ProductFamilyPage({
     searchPlaceholder: tc("searchPlaceholder"),
     clear: tc("clearAll"),
     noResults: tc("noResults"),
+    emptyHint: tc("emptyHint"),
+    close: tc("closePanel"),
     results: Array.from({ length: count + 1 }, (_, n) => tc("results", { count: n })),
   });
   const rangeLabels = {
     formats: tc("formatsLabel"),
-    generalSpecLabel: tc("generalSpecLabel"),
     specify: tc("specifyLabel"),
     request: tc("requestRange"),
+    conceptBadge: tc("conceptPackBadge"),
+    quickView: tc("quickView"),
+    familyName: name,
+  };
+  const detailLabels = {
+    formats: tc("formatsLabel"),
+    specFieldsTitle: tc("specFieldsTitle"),
     indicative: tc("indicativeLabel"),
     indicativeNote: tc("indicativeNote"),
-    moreDetail: tc("moreDetail"),
     conceptBadge: tc("conceptPackBadge"),
-    familyName: name,
+    familyPage: tc("familyPage"),
+    codePages: tc("codePagesInRange"),
+    requestSpec: tc("requestSpec"),
+    requestSample: tc("requestSample"),
+    perRequestNote: tc("perRequestNote"),
   };
   const packaging = PACKAGING_OPTIONS[family];
   const rangeCards = ranges.map((range) => ({
@@ -110,6 +122,11 @@ export default async function ProductFamilyPage({
     group: range.id,
     search: [range.name.en, range.name.vi, ...range.formats.flatMap((f) => [f.en, f.vi])].join(" ").toLowerCase(),
     card: <RangeCard range={range} locale={locale} labels={rangeLabels} />,
+    detail: {
+      title: pick(range.name, locale),
+      kicker: name,
+      content: <RangeDetail range={range} locale={locale} labels={detailLabels} />,
+    },
   }));
 
   // ItemList only where each item has its own page (confirmed codes).
@@ -175,7 +192,7 @@ export default async function ProductFamilyPage({
         </div>
       </section>
 
-      <section id="sku-portfolio" className="border-y border-primary-foreground/10 bg-primary text-primary-foreground">
+      <section id="sku-portfolio" className="border-y border-border bg-muted/50 text-foreground">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
           <div>
             <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-accent uppercase">
@@ -185,19 +202,19 @@ export default async function ProductFamilyPage({
             <h2 className="mt-3 font-serif text-2xl font-semibold text-balance md:text-3xl">
               {tc("portfolioTitle", { count: definedCount })}
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-primary-foreground/75">
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
               {tc("portfolioSubtitle")}
             </p>
           </div>
           <div>
             <ul className="flex flex-wrap gap-2" aria-label={tc("portfolioCodesLabel")}>
               {definedCodes.map((code) => (
-                <li key={code} className="rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-3 py-1.5 font-mono text-xs tracking-wide">
+                <li key={code} className="rounded-full border border-border bg-card px-3 py-1.5 font-mono text-xs tracking-wide text-foreground">
                   {code}
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/75">{tc("generalSpecLead")}</p>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{tc("generalSpecLead")}</p>
             <Link
               href={rfqHref({ family, intent: "spec-sheet" })}
               className="mt-4 inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-accent hover:underline"
@@ -244,13 +261,15 @@ export default async function ProductFamilyPage({
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading title={tc("rangesTitle")} subtitle={tc("rangesSubtitle")} />
           {skus.length > 0 ? (
-            <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {rangeCards.map((item) => (
-                <li key={item.id} className="flex">
-                  {item.card}
-                </li>
-              ))}
-            </ul>
+            <QuickViewHost items={rangeCards} closeLabel={tc("closePanel")}>
+              <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {rangeCards.map((item) => (
+                  <li key={item.id} className="flex">
+                    {item.card}
+                  </li>
+                ))}
+              </ul>
+            </QuickViewHost>
           ) : (
             <FilterGrid
               className="mt-8"

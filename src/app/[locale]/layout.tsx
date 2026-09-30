@@ -8,8 +8,6 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeColor } from "@/components/theme/theme-color";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
-import { FloatingCtaBar } from "@/components/layout/floating-cta-bar";
-import { AudienceGateway } from "@/components/layout/audience-gateway";
 import { JsonLd } from "@/components/seo/json-ld";
 import { routing, type Locale } from "@/i18n/routing";
 import { getLocaleSwitchMap } from "@/lib/blog";
@@ -90,6 +88,7 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "meta" });
+  const tn = await getTranslations({ locale, namespace: "nav" });
   // Blog slugs differ per locale; the header's language switcher needs this
   // map to land on the translated article (or /blog) instead of a 404.
   const blogSlugMap = getLocaleSwitchMap(locale);
@@ -108,11 +107,15 @@ export default async function LocaleLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <ThemeColor />
           <NextIntlClientProvider>
+            <a
+              href="#main-content"
+              className="sr-only z-50 rounded-sm bg-primary px-4 py-3 text-sm font-medium text-primary-foreground focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+            >
+              {tn("skipToContent")}
+            </a>
             <SiteHeader blogSlugMap={blogSlugMap} />
-            <AudienceGateway />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" tabIndex={-1} className="flex-1 outline-none">{children}</main>
             <SiteFooter />
-            <FloatingCtaBar />
             <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>

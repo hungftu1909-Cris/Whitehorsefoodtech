@@ -253,11 +253,11 @@ test("rendering code never picks product images by position or modulo", () => {
   assert.ok(!fs.existsSync("src/components/catalog/sku-gallery.tsx"), "manual thumbnail chooser removed");
 });
 
-test("single images never get a counter, crossfade or chooser", () => {
+test("single images stay still: controls and motion exist only for a verified second view", () => {
   const frame = fs.readFileSync("src/components/catalog/dual-image-frame.tsx", "utf8");
-  assert.match(frame, /secondary && showCounter/, "01 / 02 only with a real second image");
   assert.match(frame, /images\[1\]\.src !== primary\.src/, "same-file second view is dropped");
-  assert.doesNotMatch(frame, /<button|onClick/, "no manual chooser");
-  const css = fs.readFileSync("src/app/globals.css", "utf8");
-  assert.match(css, /@media \(hover: none\)[\s\S]*?dual-frame-primary 16s/, "touch screens advance every ~8s (16s two-view cycle)");
+  assert.match(frame, /\{secondary && \(\s*<div className="absolute top-2 right-2/, "01 / 02 control renders only with a real second image");
+  assert.match(frame, /if \(!secondary \|\| !autoplay \|\| paused \|\| !inView\) return;/, "no timer for single images, when paused or off screen");
+  assert.match(frame, /const displayed[^;]*!manual && hovering/, "a manual choice overrides hover; one value drives images, counter and badge");
 });
+

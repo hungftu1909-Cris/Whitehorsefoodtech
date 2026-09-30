@@ -1,17 +1,15 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
-import { OperatingSystem } from "@/components/home/operating-system";
 import { ProofStrip } from "@/components/home/proof-strip";
 import { ProductsPreview } from "@/components/home/products-preview";
-import { EvidenceLayer } from "@/components/home/evidence-layer";
-import { PlatformMap } from "@/components/home/platform-map";
+import { QualityMethod } from "@/components/home/quality-method";
 import { SplitCta } from "@/components/sections/split-cta";
 
-// Server-rendered platform story, in a fixed order: promise → operating
-// standard → current proof → current portfolio (+ custom sourcing) →
-// evidence and technology → buyer / supplier entry. The operating standard
-// deliberately precedes the catalogue. Interactive product filtering lives
-// on /products, keeping the homepage fast and indexable.
+// Server-rendered, shortest path to a buyer decision: promise → compact
+// current proof → current collections (+ custom sourcing, documents) → one
+// short quality / working-method band (technology roadmap in a disclosure)
+// → buyer / supplier paths. Detailed mechanics live on Process and Quality.
+// Interactive product filtering lives on /products.
 export default async function Home({
   params,
 }: {
@@ -24,11 +22,9 @@ export default async function Home({
   return (
     <>
       <Hero />
-      <OperatingSystem />
       <ProofStrip />
       <ProductsPreview />
-      <EvidenceLayer />
-      <PlatformMap />
+      <QualityMethod />
       <SplitCta
         title={t("title")}
         subtitle={t("subtitle")}

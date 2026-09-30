@@ -48,7 +48,7 @@ export function SmartImage({
         className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
       {badge && (
-        <span className="absolute bottom-2 left-2 rounded-full border border-border/60 bg-background/90 px-2 py-0.5 text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
+        <span className="absolute bottom-2 left-2 rounded-full border border-border/60 bg-background/90 px-2 py-0.5 text-xs font-semibold tracking-[0.12em] text-muted-foreground uppercase">
           {badge}
         </span>
       )}

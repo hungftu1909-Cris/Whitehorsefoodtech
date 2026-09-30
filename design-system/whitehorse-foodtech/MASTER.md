@@ -64,11 +64,12 @@ deliberate asymmetry. Not a coffee shop, not a SaaS dashboard.
 - Actions: primary = solid ivory/forest block, `h-12 px-7`, sharp corners;
   secondary = underlined text link (`underline-offset-8`,
   `decoration-accent/50`). No decorative arrows.
-- `--radius` is `0.25rem`. No drop shadows except the floating CTA's soft
-  separation shadow.
+- `--radius` is `0.25rem`. No drop shadows (the floating CTA pills were
+  removed 2026-09-30; the only persistent mobile action is the family/SKU
+  RequestBar, which hides at the footer and while typing).
 - Type: headings `font-medium` Playfair, not semibold; H1 3 lines on
   desktop, ≤4 on mobile. Body ≥16px; labels ≥12px (`text-xs`) with wide
-  tracking. Header is 80px with a 48px mark.
+  tracking. Header is 72px with a 48px mark: Products ▾ · Quality · How we work · Company ▾, EN/VI, a discreet supplier link (always Vietnamese) and one primary action. No first-visit modal.
 
 ## Luminous direction (2026-09-30, supersedes the dark surfaces above)
 

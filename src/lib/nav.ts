@@ -53,3 +53,22 @@ export const MAIN_NAV = [
   { href: "/blog", key: "blog" as const },
   { href: "/contact", key: "contact" as const },
 ];
+
+// Header information architecture (2026-09-30 UX refinement): a few buyer
+// priorities plus one company menu. Every MAIN_NAV page stays reachable —
+// tests/navigation.test.ts checks the header, mobile menu and footer cover it.
+export const BUYER_NAV = [
+  { href: "/certifications", key: "qualityShort" as const },
+  { href: "/process", key: "process" as const },
+];
+
+export const COMPANY_NAV = [
+  { href: "/about", key: "about" as const },
+  { href: "/clients", key: "clients" as const },
+  { href: "/blog", key: "blog" as const },
+  { href: "/documents", key: "documents" as const },
+  { href: "/contact", key: "contact" as const },
+];
+
+/** The supplier path always opens in Vietnamese (the supplier audience). */
+export const SUPPLIER_HREF = "/suppliers/apply" as const;

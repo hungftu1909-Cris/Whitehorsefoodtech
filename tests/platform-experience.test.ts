@@ -32,53 +32,53 @@ test("network gives buyers and Vietnamese suppliers equal entry paths", () => {
   assert.match(contactForm, /defaultMessage/);
 });
 
-test("quality page presents the phased digital supply-chain architecture", () => {
+test("quality page presents the phased digital supply-chain architecture; the homepage keeps it optional", () => {
   const quality = fs.readFileSync("src/app/[locale]/certifications/page.tsx", "utf8");
-  const home = fs.readFileSync("src/components/home/platform-map.tsx", "utf8");
+  const home = fs.readFileSync("src/components/home/quality-method.tsx", "utf8");
 
   assert.match(quality, /technology\.layers/);
   assert.match(quality, /technology\.backboneNodes/);
   assert.match(quality, /technology\.statusLabels/);
-  assert.match(quality, /snap-x/);
   assert.match(quality, /BrainCircuit/);
-  assert.match(home, /technology\.nodes/);
-  assert.match(home, /technology\.ai/);
+  // Homepage: the roadmap sits inside a native disclosure, with each layer's status.
+  assert.match(home, /tp\.raw\("technology\.nodes"\)/);
+  assert.match(home, /<details[\s\S]*nodes\.map[\s\S]*statusLabels\.\$\{node\.status\}[\s\S]*<\/details>/);
 });
 
-test("catalog two-view imagery is shared and touch devices rotate automatically", () => {
-  const cards = fs.readFileSync("src/components/catalog/cards.tsx", "utf8");
-  const family = fs.readFileSync("src/components/catalog/family-visual.tsx", "utf8");
-  const detail = fs.readFileSync("src/app/[locale]/products/[slug]/page.tsx", "utf8");
-  const css = fs.readFileSync("src/app/globals.css", "utf8");
-
-  assert.match(cards, /<DualImageFrame/g);
-  assert.match(family, /<DualImageFrame/);
-  assert.match(detail, /<DualImageFrame/);
-  assert.match(css, /@media \(hover: none\)/);
-  // Each view holds about 8 seconds: a 16s two-view cycle.
-  assert.match(css, /dual-frame-secondary 16s/);
+test("two-view imagery is shared; touch auto-advance is ~8 s, pausable and off under reduced motion", () => {
+  for (const file of ["src/components/catalog/cards.tsx", "src/components/catalog/family-visual.tsx", "src/app/[locale]/products/[slug]/page.tsx", "src/app/[locale]/products/[slug]/[sku]/page.tsx"]) {
+    assert.match(fs.readFileSync(file, "utf8"), /<DualImageFrame/, `${file} uses the shared frame`);
+  }
+  const frame = fs.readFileSync("src/components/catalog/dual-image-frame.tsx", "utf8");
+  assert.match(frame, /export const AUTO_ADVANCE_MS = 8000;/);
+  assert.match(frame, /matchMedia\("\(hover: none\) and \(prefers-reduced-motion: no-preference\)"\)/, "autoplay only on touch screens that allow motion");
+  assert.match(frame, /motion-reduce:transition-none/, "reduced motion also removes the crossfade");
+  assert.match(frame, /pauseImages/, "touch autoplay can be paused");
+  assert.match(frame, /IntersectionObserver/, "no rotation while off screen");
+  assert.doesNotMatch(fs.readFileSync("src/app/globals.css", "utf8"), /@keyframes dual-frame/, "no CSS keyframe rotation");
 });
 
-test("one-time audience gateway routes buyers to English and suppliers to Vietnamese", () => {
-  const gateway = fs.readFileSync("src/components/layout/audience-gateway.tsx", "utf8");
+test("no first-visit modal: buyer and supplier paths are inline, buyers to English, suppliers to Vietnamese", () => {
   const layout = fs.readFileSync("src/app/[locale]/layout.tsx", "utf8");
+  const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
+  const header = fs.readFileSync("src/components/layout/site-header.tsx", "utf8");
   const supplier = fs.readFileSync("src/app/[locale]/suppliers/apply/page.tsx", "utf8");
 
-  assert.match(layout, /<AudienceGateway/);
-  assert.match(gateway, /pathname === "\/"/);
-  assert.match(gateway, /href="\/products"[\s\S]*locale="en"/);
-  assert.match(gateway, /href="\/suppliers\/apply"[\s\S]*locale="vi"/);
-  assert.match(gateway, /localStorage\?\.setItem/);
-  assert.match(gateway, /catch \{/);
+  assert.equal(fs.existsSync("src/components/layout/audience-gateway.tsx"), false, "gateway modal removed");
+  assert.doesNotMatch(layout, /Gateway|<Dialog/, "nothing interrupts the first visit");
+  assert.match(hero, /href="\/products"\s+locale="en"/, "buyer path continues in English");
+  assert.match(hero, /href=\{SUPPLIER_HREF\}\s+locale="vi"/, "supplier path continues in Vietnamese");
+  assert.match(header, /href=\{SUPPLIER_HREF\}\s+locale="vi"/, "header keeps a discreet supplier link");
   assert.match(supplier, /siteConfig\.zalo/);
 });
 
-test("homepage tells the platform story in order, with the operating standard before the catalogue", () => {
+test("homepage takes the shortest path to a buyer decision", () => {
   const home = fs.readFileSync("src/app/[locale]/page.tsx", "utf8");
-  const order = ["<Hero", "<OperatingSystem", "<ProofStrip", "<ProductsPreview", "<EvidenceLayer", "<PlatformMap", "<SplitCta"];
+  const order = ["<Hero", "<ProofStrip", "<ProductsPreview", "<QualityMethod", "<SplitCta"];
   const positions = order.map((marker) => home.indexOf(marker));
   for (const [i, pos] of positions.entries()) assert.ok(pos > -1, `homepage renders ${order[i]}`);
-  assert.deepEqual([...positions].sort((a, b) => a - b), positions, "homepage section order");
+  assert.deepEqual([...positions].sort((a, b) => a - b), positions, "hero, proof, collections, quality & method, paths");
+  for (const retired of ["<OperatingSystem", "<EvidenceLayer", "<PlatformMap"]) assert.ok(!home.includes(retired), `${retired} is not a homepage band`);
 });
 
 test("hero is platform-level: one dominant network image, one inset, captioned, and a current capability", async () => {
@@ -102,10 +102,7 @@ test("hero is platform-level: one dominant network image, one inset, captioned, 
   assert.equal((hero.match(/<Image\b/g) ?? []).length, 2, "one dominant image and at most one inset");
   assert.doesNotMatch(hero, /\.label\}/, "no category badges over the crops");
   assert.match(hero, /t\("imageCaption"\)/);
-  assert.match(hero, /t\("standard\.status"\)/);
   assert.doesNotMatch(hero, /CircleDashed|t\("building"\)/, "no building-status card in the hero");
-  assert.match(hero, /PRODUCT_CATEGORIES\.map/);
-  assert.match(hero, /CUSTOM_SOURCING_HREF/);
   assert.equal((hero.match(/^\s+priority\s*$/gm) ?? []).length, 1, "one priority image");
   assert.doesNotMatch(hero, /"use client"/);
 });
@@ -144,38 +141,26 @@ test("homepage technology layers carry the same truthful statuses as the Quality
   }
 });
 
-test("audience gateway is a platform entry with a current-proof line", () => {
-  const gateway = fs.readFileSync("src/components/layout/audience-gateway.tsx", "utf8");
-  assert.match(gateway, /Enter the Whitehorse platform/);
-  assert.match(gateway, /Premium ingredients from Vietnam\. One qualified supply workflow\./);
-  assert.match(gateway, /Global buyers/);
-  assert.match(gateway, /Nhà cung cấp Việt Nam/);
-  assert.match(gateway, /29 defined core SKUs · 50\+ screened suppliers · 10\+ market relationships/);
-  assert.match(gateway, /Zalo/);
-});
-
-test("evidence section is image-free and does not repeat the hero image", () => {
-  const evidence = fs.readFileSync("src/components/home/evidence-layer.tsx", "utf8");
-  assert.doesNotMatch(evidence, /<Image\b|\.webp|\.jpg/);
+test("the quality & method band is image-free and keeps the evidence qualification", () => {
+  const method = fs.readFileSync("src/components/home/quality-method.tsx", "utf8");
+  assert.doesNotMatch(method, /<Image\b|\.webp|\.jpg/);
+  assert.match(method, /te\("note"\)/, "request-specific evidence qualification stays visible");
 });
 
 test("homepage refinement: quiet actions, readable labels and no card grids", () => {
   const files = [
     ...fs.readdirSync("src/components/home").map((f) => `src/components/home/${f}`).filter((f) => !f.endsWith("value-proposition.tsx")),
     "src/components/sections/split-cta.tsx",
-    "src/components/layout/floating-cta-bar.tsx",
-    "src/components/layout/audience-gateway.tsx",
   ];
   for (const file of files) {
     const source = fs.readFileSync(file, "utf8");
     assert.doesNotMatch(source, /\bArrow(Right|UpRight)\b/, `${file}: no decorative arrows on actions`);
     assert.doesNotMatch(source, /text-\[0\.[0-6]\d*rem\]/, `${file}: labels are at least 12px`);
   }
-  for (const section of ["operating-system", "evidence-layer", "platform-map", "products-preview", "proof-strip"]) {
+  for (const section of ["quality-method", "products-preview", "proof-strip"]) {
     const source = fs.readFileSync(`src/components/home/${section}.tsx`, "utf8");
     assert.doesNotMatch(source, /rounded-xl|rounded-full[^"]*px-|shadow-\[/, `${section}: no card, pill or shadow treatment`);
   }
-  assert.match(fs.readFileSync("src/components/home/products-preview.tsx", "utf8"), /showCounter=\{false\}/);
 });
 
 test("luminous direction: the default homepage is light, not a dark editorial surface", () => {
@@ -206,8 +191,7 @@ test("final refinement: content-first mobile hero, neutral family order, accessi
   const cta = hero.indexOf('t("ctaPrimary")');
   const figure = hero.indexOf("<figure");
   assert.ok(h1 > -1 && cta > h1 && figure > cta, "h1 → primary CTA → figure in source order");
-  assert.match(hero, /<figure className="[^"]*lg:absolute/, "figure leaves the flow from lg");
-  assert.match(hero, /max-w-7xl[^"]*lg:static/, "desktop figure is positioned against the section");
+  assert.doesNotMatch(hero, /<figure className="[^"]*absolute|<figcaption className="[^"]*absolute/, "figure and caption stay in normal flow, under the images");
 
   const { PRODUCT_CATEGORIES } = await import("../src/lib/nav.ts");
   assert.notEqual(PRODUCT_CATEGORIES[0].slug, "coffee", "coffee does not lead hero list, grid, footer or menus");

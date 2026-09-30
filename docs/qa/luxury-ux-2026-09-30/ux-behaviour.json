@@ -1,0 +1,192 @@
+[
+  {
+    "name": "home: no dialog on first visit",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "keyboard: first Tab is the skip link",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "keyboard: Enter opens Company menu with 5 links",
+    "ok": true,
+    "detail": "5"
+  },
+  {
+    "name": "keyboard: visible focus ring on header item",
+    "ok": true,
+    "detail": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.504688 0.0137289 0.0815282 / 0.6) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+  },
+  {
+    "name": "hero: caption beneath both images, no overlap",
+    "ok": true,
+    "detail": "{\"cap\":{\"top\":649.703125,\"bottom\":695.203125},\"imgBottoms\":[637.703125,612.703125],\"overlap\":false}"
+  },
+  {
+    "name": "hero: buyer → /en/products, supplier → /vi/suppliers/apply",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "home 1440: no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "explorer 1440x900: search + first card in first viewport",
+    "ok": true,
+    "detail": "{\"search\":416,\"cardTop\":449,\"imageBottom\":740}"
+  },
+  {
+    "name": "explorer: ?family=fruit restored (4 results)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "quick view: opens as dialog",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "quick view: URL carries view= and keeps family=",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en/products?family=fruit&view=fruit-soft-dried"
+  },
+  {
+    "name": "quick view: focus moved into panel",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "quick view: full spec fields + prefilled request links",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "quick view: Escape closes",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "quick view: focus returns to its trigger",
+    "ok": true,
+    "detail": "Quick view: Soft-dried fruit vs Quick view: Soft-dried fruit"
+  },
+  {
+    "name": "quick view: close removes view= and keeps family=",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en/products?family=fruit"
+  },
+  {
+    "name": "Back after quick view returns to the previous page",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en"
+  },
+  {
+    "name": "quick view: deep link ?view= opens the panel",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "search: Vietnamese term finds ranges on the EN page",
+    "ok": true,
+    "detail": "2 results"
+  },
+  {
+    "name": "search: empty state with guidance and reset",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "reset: clears search, 18 results",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "explorer: no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "gallery: hover peeks at 02 (images + counter agree)",
+    "ok": true,
+    "detail": "{\"active\":\"2\",\"o1\":\"0\",\"o2\":\"1\",\"counter\":\"02 / 02\"}"
+  },
+  {
+    "name": "gallery: click under pointer is authoritative (01 shown, counter 01)",
+    "ok": true,
+    "detail": "{\"active\":\"1\",\"o1\":\"1\",\"o2\":\"0\",\"counter\":\"01 / 02\"}"
+  },
+  {
+    "name": "gallery: keyboard toggle shows 02 consistently",
+    "ok": true,
+    "detail": "{\"active\":\"2\",\"o1\":\"0\",\"o2\":\"1\",\"counter\":\"02 / 02\"}"
+  },
+  {
+    "name": "gallery: single image has no controls",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "touch: auto-advances after ~8 s",
+    "ok": true,
+    "detail": "1 → 2"
+  },
+  {
+    "name": "touch: pause stops rotation",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "reduced motion: no autoplay, no pause control, no crossfade",
+    "ok": true,
+    "detail": "{\"active\":\"1\",\"pause\":1,\"dur\":\"1e-05s\"}"
+  },
+  {
+    "name": "rfq: context summary shows intent, family, range",
+    "ok": true,
+    "detail": "Your enquiryRequest a specification sheet · Coconut Ingredients · Coconut milk & creamAdjust any detail in the form below."
+  },
+  {
+    "name": "rfq 1440x900: form starts in the first screen",
+    "ok": true,
+    "detail": "353"
+  },
+  {
+    "name": "rfq: EN→VI keeps intent/product/range",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "rfq: VI context in Vietnamese",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "rfq: empty submit shows inline errors, nothing sent",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "rfq: submit disabled while sending; one request only (mocked, no lead written)",
+    "ok": true,
+    "detail": "disabled=true posts=1"
+  },
+  {
+    "name": "rfq: genuine result feedback shown",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "rfq: no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "request bar: shown after scroll, hidden at footer and while typing",
+    "ok": true,
+    "detail": "false/true/true"
+  }
+]

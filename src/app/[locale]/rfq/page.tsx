@@ -31,14 +31,14 @@ export default async function RfqPage({
 
   return (
     <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
+      {/* One compact header, then the form itself — the page title is not
+          repeated on the form card, so the first fields sit in the first
+          viewport. The prefilled selection is summarised inside the form. */}
+      <PageHero compact eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.lead")} />
 
-      <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <div className="rounded-lg border border-border bg-card p-6 md:p-8">
-          <h2 className="font-serif text-xl font-semibold text-foreground">{t("form.title")}</h2>
-          <div className="mt-6">
-            <RfqForm defaults={prefill} />
-          </div>
+      <section aria-label={t("form.title")} className="mx-auto max-w-3xl px-5 pt-6 pb-20 sm:px-6 md:pt-8 md:pb-28 lg:px-8">
+        <div className="rounded-sm border border-border bg-card p-5 sm:p-7">
+          <RfqForm defaults={prefill} />
         </div>
       </section>
     </>

@@ -1,0 +1,530 @@
+[
+ {
+  "tag": "home-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "products-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 5
+ },
+ {
+  "tag": "coconut-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 3
+ },
+ {
+  "tag": "fruit-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "nuts-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "coffee-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "birds-nest-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "whcf001-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 0
+ },
+ {
+  "tag": "whcf006-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "whcf009-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "about-en-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "home-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "products-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 5
+ },
+ {
+  "tag": "coconut-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 3
+ },
+ {
+  "tag": "fruit-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "nuts-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "coffee-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "birds-nest-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "whcf001-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 0
+ },
+ {
+  "tag": "whcf006-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "whcf009-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "about-en-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "home-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "products-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 5
+ },
+ {
+  "tag": "coconut-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 3
+ },
+ {
+  "tag": "fruit-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "nuts-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "coffee-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "birds-nest-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "whcf001-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 0
+ },
+ {
+  "tag": "whcf006-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "whcf009-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "about-vi-1440",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "home-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "products-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 5
+ },
+ {
+  "tag": "coconut-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 3
+ },
+ {
+  "tag": "fruit-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "nuts-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "coffee-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "birds-nest-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "whcf001-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 0
+ },
+ {
+  "tag": "whcf006-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "whcf009-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "about-vi-390",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "home-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "products-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 5
+ },
+ {
+  "tag": "coconut-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 3
+ },
+ {
+  "tag": "fruit-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "nuts-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "coffee-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "birds-nest-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "whcf001-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 0
+ },
+ {
+  "tag": "whcf006-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "whcf009-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "about-en-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "home-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "products-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 5
+ },
+ {
+  "tag": "coconut-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 3
+ },
+ {
+  "tag": "fruit-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "nuts-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "coffee-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ },
+ {
+  "tag": "birds-nest-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 2
+ },
+ {
+  "tag": "whcf001-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 0
+ },
+ {
+  "tag": "whcf006-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "whcf009-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 1
+ },
+ {
+  "tag": "about-vi-320",
+  "dupes": [],
+  "broken": 0,
+  "overflow": 0,
+  "errors": 0,
+  "pairs": 4
+ }
+]

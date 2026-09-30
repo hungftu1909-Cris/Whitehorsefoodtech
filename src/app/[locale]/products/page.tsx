@@ -4,10 +4,12 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { CommercialDocuments } from "@/components/sections/commercial-documents";
 import { FilterGrid } from "@/components/catalog/filter-grid";
-import { RangeCard } from "@/components/catalog/cards";
+import { RangeCard, RangeDetail } from "@/components/catalog/cards";
+import { Link } from "@/i18n/navigation";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
 import { pageMetadata } from "@/lib/seo";
-import { CATALOG_RANGES, DEFINED_SKU_COUNTS, rangesFor, type FamilySlug } from "@/lib/catalog";
+import { CATALOG_RANGES, pick, rangesFor, type FamilySlug } from "@/lib/catalog";
+import { CUSTOM_SOURCING_HREF } from "@/lib/nav";
 import { serializeJsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site";
 
@@ -55,39 +57,19 @@ export default async function ProductsPage({
 
   return (
     <>
-      <PageHero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.title")}
-        subtitle={t("hero.subtitle")}
-      />
+      <PageHero compact eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.lead")} />
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <div className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-          <div>
-            <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">{t("explorer.eyebrow")}</p>
-            <h2 className="mt-3 font-serif text-3xl leading-tight font-semibold tracking-tight text-balance text-foreground md:text-4xl">
-              {t("explorer.title")}
-            </h2>
-          </div>
-          <p className="max-w-2xl text-base leading-relaxed text-muted-foreground lg:justify-self-end">{t("explorer.subtitle")}</p>
-        </div>
-
-        <dl className="grid border-b border-border sm:grid-cols-5">
-          {categories.map((category) => (
-            <div key={category.slug} className="border-b border-border py-4 last:border-b-0 sm:border-r sm:border-b-0 sm:px-4 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0">
-              <dt className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">{category.name}</dt>
-              <dd className="mt-1 font-serif text-lg font-semibold text-foreground">
-                {tcat("rangesCount", { count: rangesFor(category.family).length })}
-                <span className="ml-2 text-xs font-normal text-accent">+ {tcat("codesCount", { count: DEFINED_SKU_COUNTS[category.family] })}</span>
-              </dd>
-            </div>
-          ))}
-        </dl>
-
+      {/* Tools first: filters, search, result count and the first row sit in
+          the first desktop viewport. Family counts ride on the filter chips;
+          full specification fields open in the quick view. */}
+      <section className="mx-auto max-w-7xl px-5 pt-6 pb-16 sm:px-6 md:pb-24 lg:px-8">
         <FilterGrid
-          className="mt-10"
           queryKey="family"
-          groups={categories.map((category) => ({ id: category.slug, label: category.name }))}
+          groups={categories.map((category) => ({
+            id: category.slug,
+            label: category.name,
+            count: rangesFor(category.family).length,
+          }))}
           labels={{
             filter: t("explorer.filterLabel"),
             all: tcat("filterAll"),
@@ -95,39 +77,66 @@ export default async function ProductsPage({
             searchPlaceholder: t("explorer.searchPlaceholder"),
             clear: tcat("clearAll"),
             noResults: tcat("noResults"),
+            emptyHint: tcat("emptyHint"),
+            close: tcat("closePanel"),
             results,
           }}
+          empty={
+            <Link
+              href={CUSTOM_SOURCING_HREF}
+              className="inline-flex min-h-11 items-center text-sm font-medium text-foreground underline decoration-accent/50 underline-offset-4 hover:decoration-accent"
+            >
+              {tcat("briefOther")}
+            </Link>
+          }
           items={orderedRanges.map((range) => {
             const category = categories.find((item) => item.slug === range.family)!;
             return {
               id: range.id,
               group: range.family,
-              search: [range.name.en, range.name.vi, range.summary.en, range.summary.vi, ...range.formats.flatMap((format) => [format.en, format.vi])].join(" ").toLowerCase(),
+              search: [range.name.en, range.name.vi, range.summary.en, range.summary.vi, ...range.formats.flatMap((format) => [format.en, format.vi]), ...range.specFields.flatMap((f) => [f.en, f.vi]), category.name].join(" ").toLowerCase(),
               card: (
                 <RangeCard
                   range={range}
                   locale={locale}
                   labels={{
-                    familyLabel: category.name,
+                    showFamily: true,
+                    familyName: category.name,
                     formats: tcat("formatsLabel"),
-                    generalSpecLabel: tcat("generalSpecLabel"),
                     specify: tcat("specifyLabel"),
                     request: tcat("requestRange"),
-                    indicative: tcat("indicativeLabel"),
-                    indicativeNote: tcat("indicativeNote"),
-                    moreDetail: tcat("moreDetail"),
                     conceptBadge: tcat("conceptPackBadge"),
-                    familyName: category.name,
+                    quickView: tcat("quickView"),
                   }}
                 />
               ),
+              detail: {
+                title: pick(range.name, locale),
+                kicker: category.name,
+                content: (
+                  <RangeDetail
+                    range={range}
+                    locale={locale}
+                    labels={{
+                      formats: tcat("formatsLabel"),
+                      specFieldsTitle: tcat("specFieldsTitle"),
+                      indicative: tcat("indicativeLabel"),
+                      indicativeNote: tcat("indicativeNote"),
+                      conceptBadge: tcat("conceptPackBadge"),
+                      familyPage: tcat("familyPage"),
+                      codePages: tcat("codePagesInRange"),
+                      requestSpec: tcat("requestSpec"),
+                      requestSample: tcat("requestSample"),
+                      perRequestNote: tcat("perRequestNote"),
+                    }}
+                  />
+                ),
+              },
             };
           })}
         />
 
-        <p className="mt-10 rounded-lg border border-dashed border-border bg-muted/30 p-4 text-xs leading-relaxed text-muted-foreground">
-          {tcat("perRequestNote")}
-        </p>
+        <p className="mt-10 max-w-4xl text-sm leading-relaxed text-muted-foreground">{tcat("perRequestNote")}</p>
       </section>
 
       <CommercialDocuments

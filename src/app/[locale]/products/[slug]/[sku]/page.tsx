@@ -7,7 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import { Breadcrumbs } from "@/components/catalog/breadcrumbs";
 import { RequestActions } from "@/components/catalog/request-actions";
 import { SkuCard } from "@/components/catalog/cards";
-import { DualImageFrame, toFrameImages } from "@/components/catalog/dual-image-frame";
+import { DualImageFrame } from "@/components/catalog/dual-image-frame";
+import { toFrameImages } from "@/lib/frame-images";
 import { SpecPlate } from "@/components/catalog/spec-plate";
 import { RequestBar } from "@/components/catalog/request-bar";
 import { PRODUCT_CATEGORIES } from "@/lib/nav";
@@ -126,7 +127,7 @@ export default async function SkuPage({
           </p>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">{pick(sku.summary, locale)}</p>
 
-          <p className="mt-6 text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">
+          <p className="mt-6 text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase">
             {tc("applicationsLabel")}
           </p>
           <ul className="mt-2 flex flex-wrap gap-2">
@@ -157,7 +158,7 @@ export default async function SkuPage({
             <div key={label} className="flex items-start gap-3 py-6 sm:px-4">
               <Icon className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
               <div>
-                <dt className="text-[0.65rem] font-semibold tracking-[0.15em] text-muted-foreground uppercase">{label}</dt>
+                <dt className="text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase">{label}</dt>
                 <dd className="mt-1 text-sm text-foreground">{value}</dd>
               </div>
             </div>

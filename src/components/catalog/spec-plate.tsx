@@ -25,7 +25,7 @@ export function SpecPlate({
         className
       )}
     >
-      <span className="text-[0.65rem] font-semibold tracking-[0.18em] text-accent uppercase">{eyebrow}</span>
+      <span className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">{eyebrow}</span>
       <ul className="space-y-1.5 border-t border-foreground/12 pt-4">
         {formats.map((format) => (
           <li key={format} className="font-serif text-xl leading-snug text-foreground/85 md:text-[1.35rem]">
