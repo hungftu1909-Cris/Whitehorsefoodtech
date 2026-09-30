@@ -3,30 +3,35 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SUPPLIER_HREF } from "@/lib/nav";
 import { hasPublicFile } from "@/lib/media";
+import { EntryChooserButton } from "@/components/layout/audience-gateway";
 
-// One dominant owner-supplied supply-network image and one restrained inset
-// (docs/asset-provenance.md, "Homepage hero composition"): processing leads,
-// export air freight supports. Neither is a product family, and no
-// coffee-family visual is used here. about.jpg and factory.jpg stay
+// Owner-supplied supply-network photographs (docs/asset-provenance.md,
+// "Homepage hero composition"): processing leads; a growing-area harvest and
+// export air freight support. All three are captioned as representative
+// stages, never as Whitehorse-owned farms, facilities or a shipment. about.jpg and factory.jpg stay
 // unrendered: that artwork carries unsupported claims (claim registry row 15).
-const HERO_IMAGES = [
-  "/images/platform/quality-processing.webp",
-  "/images/platform/network-air-freight.webp",
-] as const;
+// Three representative supply-network stages, keyed (never positional):
+// harvest at a growing area, freeze-drying, and export air cargo.
+const HERO_IMAGES = {
+  origin: "/images/platform/origin-harvest.webp",
+  processing: "/images/platform/quality-processing.webp",
+  freight: "/images/platform/network-air-freight.webp",
+} as const;
 
 /**
  * Server-rendered editorial hero on the luminous paper surface: promise,
- * one commercial paragraph, two actions and the two platform paths inline
- * (buyers continue in English, Vietnamese suppliers in Vietnamese) — no
- * first-visit modal. The figure is in normal flow: on phones it follows the
- * headline and actions; from lg it sits beside them. The inset lies inside
- * the image box and the representative-stage caption sits beneath both,
- * so it can never collide with either image. Main image = LCP, no carousel.
+ * one commercial paragraph, two actions and the platform paths inline
+ * (buyers continue in English, Vietnamese suppliers in Vietnamese) plus a
+ * control that reopens the bilingual entry chooser (AudienceGateway, which
+ * also opens by itself on every arrival at the homepage). The figure is a
+ * three-photo collage in normal flow: on phones it follows the headline and
+ * actions; from lg it sits beside them. One caption sits beneath the collage,
+ * outside every photo. The processing photo is the LCP; no carousel.
  */
 export function Hero() {
   const t = useTranslations("home.hero");
-  const images = t.raw("images") as { alt: string }[];
-  const showImages = HERO_IMAGES.every(hasPublicFile);
+  const images = t.raw("images") as Record<keyof typeof HERO_IMAGES, { alt: string }>;
+  const showImages = Object.values(HERO_IMAGES).every(hasPublicFile);
 
   return (
     <section className="bg-luminous text-foreground" aria-labelledby="hero-title">
@@ -83,38 +88,49 @@ export function Hero() {
                   {t("paths.supplier")}
                 </Link>
               </li>
+              <li>
+                <EntryChooserButton label={t("paths.chooser")} />
+              </li>
             </ul>
           </nav>
         </div>
 
         {showImages && (
-          <figure className="lg:col-span-6 lg:pl-6">
-            <div className="relative aspect-[4/3] bg-muted lg:aspect-[5/4]">
-              <Image
-                src={HERO_IMAGES[0]}
-                alt={images[0].alt}
-                fill
-                priority
-                sizes="(min-width: 1024px) 44vw, 100vw"
-                className="object-cover object-[60%_50%] saturate-[0.9]"
-              />
-              {/* The inset lies inside the image box (it only steps past its
-                  left edge into the gutter), so the caption below is clear. */}
-              <div className="absolute bottom-6 -left-6 hidden aspect-[4/3] w-44 border border-foreground/15 bg-background lg:block xl:w-52">
+          <figure className="lg:col-span-6 lg:pl-4">
+            {/* One fixed-ratio stage; every tile is placed in percentages of
+                it, so the collage keeps its proportions from 320px up. The
+                caption sits below the stage and can never touch a photo. */}
+            <div className="relative aspect-[6/5] w-full">
+              <div className="absolute top-0 right-0 h-[80%] w-[74%] border border-foreground/15 bg-muted">
                 <Image
-                  src={HERO_IMAGES[1]}
-                  alt={images[1].alt}
+                  src={HERO_IMAGES.processing}
+                  alt={images.processing.alt}
                   fill
-                  sizes="13rem"
+                  priority
+                  sizes="(min-width: 1024px) 34vw, 74vw"
+                  className="object-cover object-[60%_50%] saturate-[0.9]"
+                />
+              </div>
+              <div className="absolute top-[13%] left-0 aspect-[4/5] w-[35%] border border-foreground/15 bg-muted">
+                <Image
+                  src={HERO_IMAGES.origin}
+                  alt={images.origin.alt}
+                  fill
+                  sizes="(min-width: 1024px) 16vw, 35vw"
+                  className="object-cover saturate-[0.9]"
+                />
+              </div>
+              <div className="absolute right-[7%] bottom-0 aspect-[4/3] w-[47%] border border-foreground/15 bg-muted">
+                <Image
+                  src={HERO_IMAGES.freight}
+                  alt={images.freight.alt}
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 47vw"
                   className="object-cover object-[62%_50%] saturate-[0.9]"
                 />
               </div>
             </div>
-            {/* Beneath the visible images; names only what each breakpoint shows. */}
-            <figcaption className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              <span className="lg:hidden">{t("imageCaptionMobile")}</span>
-              <span className="hidden lg:inline">{t("imageCaption")}</span>
-            </figcaption>
+            <figcaption className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">{t("imageCaption")}</figcaption>
           </figure>
         )}
       </div>

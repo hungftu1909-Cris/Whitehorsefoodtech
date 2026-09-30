@@ -196,6 +196,7 @@ pictured people, or handled the pictured shipment.
 | `public/images/platform/process-partner-facility.webp` | `4.jpg` | 1200×675 | `0c4252e96ed2f332b7330f527432ac81e50d6a1943d9d3e347590177ad343b95` | Centre crop 16:9, WebP q82; partner-facility section |
 | `public/images/platform/network-coffee-harvest.webp` | `THU GOM CAFE.jpg` | 1200×675 | `90d84593a2f414d48ce5c2164dba84a270a377542dbb7b5494a84fada51d7740` | Centre crop 16:9, WebP q82; Network hero. Not used on the homepage (removed from the hero inset 2026-09-30: coffee-family visual) |
 | `public/images/platform/network-air-freight.webp` | `ảnh máy bay.jpg` | 1200×675 | `90081b405ef9d7fd77a7b62f1900c6a90b1b225278553e25ddc5469e1feace9f` | Centre crop 16:9, WebP q82; Network inset; homepage hero inset since 2026-09-30 (only place it appears on the homepage) |
+| `public/images/platform/origin-harvest.webp` | `THU CAFE.jpg` (1200×800, SHA-256 `3e11dc75f5123cbb942d67b1bf32e91a3940beb1f302559defcc73d12ef65fde`) | 464×580 | `64c26e581b3c838d5e9dff602af9fd77c5bbf131c1eab9ad58f2d312c66f9d0e` | 4:5 crop at (372,216), native resolution (no upscaling), WebP q82. Crop starts below a small third-party badge on the cap. Homepage hero growing-area tile since 2026-09-30. Location is not recorded in the source; shown as "harvest at a growing area", never as a named region or a Whitehorse farm |
 
 **Licence status:** owner-supplied; photographer/source and commercial-use
 rights still need to be recorded before Production replacement or reuse
@@ -205,6 +206,21 @@ outside this website.
 packaging; tool/designer and rights to be recorded before Production.
 
 ## Homepage hero composition (decided 2026-09-30, branch `feat/platform-repositioning`)
+
+**Three-photo composition (owner request, 2026-09-30 evening).** The owner
+asked for the hero to combine a Vietnamese growing area, the freeze-drying
+photograph and the cargo aircraft. Every genuine origin photograph in the
+supplied material (`Ảnh WEB…zip`) shows coffee farms, so the growing-area
+tile is `origin-harvest.webp` (from `THU CAFE.jpg`); this owner instruction
+supersedes the earlier "no coffee-family visual in the hero" decision below.
+`THU GOM CAFE.jpg` stays the Network hero, so no photograph repeats across
+those two heroes. Rejected: `ẢNH CAFE.jpg` (1100×734, too small),
+`cafe trên cây 2.jpg` (cherries only, no sense of place), all
+`Anh SKU/Vector` landscapes (generated label backgrounds) and
+`about.jpg` / `factory.jpg` (claims). One caption beneath the collage names
+all three stages and states they are not Whitehorse-owned farms, facilities
+or a specific shipment; no location is claimed for the photographs.
+
 
 The platform brief removed the coffee-only hero (`coffee-ground-whole-instant.jpg`)
 without replacing it with another single family, a five-product collage,

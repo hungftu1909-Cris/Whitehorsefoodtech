@@ -80,20 +80,24 @@
         "status": "Operating now",
         "title": "Specification-led sourcing"
       },
-      "images": [
-        {
+      "images": {
+        "processing": {
           "alt": "Two workers in hygiene clothing loading trays of fruit into an open freeze-drying chamber"
         },
-        {
+        "freight": {
           "alt": "Palletised cargo being loaded into a freighter aircraft on an airport apron"
+        },
+        "origin": {
+          "alt": "A farmer harvesting ripe coffee cherries into a basin among coffee trees"
         }
-      ],
-      "imageCaption": "Representative supply-network stages — ingredient processing and export air freight. Not Whitehorse-owned facilities or a specific shipment.",
-      "imageCaptionMobile": "Representative supply-network stage — ingredient processing. Not a Whitehorse-owned facility or a specific lot.",
+      },
+      "imageCaption": "Representative supply-network stages — harvest at a growing area, ingredient processing and export air freight. Not Whitehorse-owned farms or facilities, or a specific shipment.",
+      "imageCaptionMobile": "Representative supply-network stages — harvest at a growing area, ingredient processing and export air freight. Not Whitehorse-owned farms or facilities, or a specific shipment.",
       "paths": {
         "label": "Choose your path",
         "buyer": "Global buyers — explore in English",
-        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt"
+        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt",
+        "chooser": "Choose your entry"
       }
     },
     "operating": {

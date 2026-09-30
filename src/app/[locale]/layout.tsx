@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeColor } from "@/components/theme/theme-color";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { AudienceGateway } from "@/components/layout/audience-gateway";
 import { JsonLd } from "@/components/seo/json-ld";
 import { routing, type Locale } from "@/i18n/routing";
 import { getLocaleSwitchMap } from "@/lib/blog";
@@ -114,6 +115,7 @@ export default async function LocaleLayout({
               {tn("skipToContent")}
             </a>
             <SiteHeader blogSlugMap={blogSlugMap} />
+            <AudienceGateway />
             <main id="main-content" tabIndex={-1} className="flex-1 outline-none">{children}</main>
             <SiteFooter />
             <Toaster />

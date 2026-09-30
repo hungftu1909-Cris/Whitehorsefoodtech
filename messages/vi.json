@@ -80,20 +80,24 @@
         "status": "Đang vận hành",
         "title": "Tìm nguồn dẫn dắt bởi thông số"
       },
-      "images": [
-        {
+      "images": {
+        "processing": {
           "alt": "Hai công nhân mặc đồ bảo hộ vệ sinh xếp khay trái cây vào buồng sấy thăng hoa đang mở"
         },
-        {
+        "freight": {
           "alt": "Hàng hóa đóng pallet được đưa lên máy bay chở hàng tại sân đỗ sân bay"
+        },
+        "origin": {
+          "alt": "Người nông dân thu hoạch quả cà phê chín vào thau giữa vườn cà phê"
         }
-      ],
-      "imageCaption": "Hình ảnh minh họa các khâu trong chuỗi cung ứng — chế biến nguyên liệu và xuất khẩu bằng đường hàng không. Không phải cơ sở của Whitehorse hay một lô hàng cụ thể.",
-      "imageCaptionMobile": "Hình ảnh minh họa một khâu trong chuỗi cung ứng — chế biến nguyên liệu. Không phải cơ sở của Whitehorse hay một lô hàng cụ thể.",
+      },
+      "imageCaption": "Hình ảnh minh họa các khâu trong mạng lưới cung ứng — thu hoạch tại vùng trồng, chế biến nguyên liệu và vận chuyển hàng không xuất khẩu. Không phải nông trại, cơ sở của Whitehorse hay một lô hàng cụ thể.",
+      "imageCaptionMobile": "Hình ảnh minh họa các khâu trong mạng lưới cung ứng — thu hoạch tại vùng trồng, chế biến nguyên liệu và vận chuyển hàng không xuất khẩu. Không phải nông trại, cơ sở của Whitehorse hay một lô hàng cụ thể.",
       "paths": {
         "label": "Chọn lối vào",
         "buyer": "Global buyers — explore in English",
-        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt"
+        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt",
+        "chooser": "Chọn lối vào"
       }
     },
     "operating": {

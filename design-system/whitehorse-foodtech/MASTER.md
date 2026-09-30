@@ -69,7 +69,7 @@ deliberate asymmetry. Not a coffee shop, not a SaaS dashboard.
   RequestBar, which hides at the footer and while typing).
 - Type: headings `font-medium` Playfair, not semibold; H1 3 lines on
   desktop, ≤4 on mobile. Body ≥16px; labels ≥12px (`text-xs`) with wide
-  tracking. Header is 72px with a 48px mark: Products ▾ · Quality · How we work · Company ▾, EN/VI, a discreet supplier link (always Vietnamese) and one primary action. No first-visit modal.
+  tracking. Header is 72px with a 48px mark: Products ▾ · Quality · How we work · Company ▾, a bordered EN/VI language control with US/VN flags (44px, active state filled forest), a discreet supplier link (always Vietnamese) and one primary action. The bilingual entry chooser (Buyer → English, Supplier → Tiếng Việt) opens on every arrival at the homepage (domain visit, reload, logo/Home) and from the hero "Choose your entry" control; never on deep links.
 
 ## Luminous direction (2026-09-30, supersedes the dark surfaces above)
 

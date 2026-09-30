@@ -58,16 +58,21 @@ test("two-view imagery is shared; touch auto-advance is ~8 s, pausable and off u
   assert.doesNotMatch(fs.readFileSync("src/app/globals.css", "utf8"), /@keyframes dual-frame/, "no CSS keyframe rotation");
 });
 
-test("no first-visit modal: buyer and supplier paths are inline, buyers to English, suppliers to Vietnamese", () => {
+test("entry chooser: every arrival at the homepage, reopenable, buyers to English and suppliers to Vietnamese", () => {
+  const gateway = fs.readFileSync("src/components/layout/audience-gateway.tsx", "utf8");
   const layout = fs.readFileSync("src/app/[locale]/layout.tsx", "utf8");
   const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
   const header = fs.readFileSync("src/components/layout/site-header.tsx", "utf8");
   const supplier = fs.readFileSync("src/app/[locale]/suppliers/apply/page.tsx", "utf8");
 
-  assert.equal(fs.existsSync("src/components/layout/audience-gateway.tsx"), false, "gateway modal removed");
-  assert.doesNotMatch(layout, /Gateway|<Dialog/, "nothing interrupts the first visit");
-  assert.match(hero, /href="\/products"\s+locale="en"/, "buyer path continues in English");
-  assert.match(hero, /href=\{SUPPLIER_HREF\}\s+locale="vi"/, "supplier path continues in Vietnamese");
+  assert.match(layout, /<AudienceGateway \/>/);
+  assert.match(gateway, /const arrivedHome = pathname === "\/" && lastPath !== "\/";/, "opens on arrival at the homepage (domain, reload, logo), never on deep links");
+  assert.doesNotMatch(gateway, /localStorage|sessionStorage/, "no saved preference can hide it when returning to the domain");
+  assert.match(gateway, /href="\/products" locale="en"/, "buyer continues in English");
+  assert.match(gateway, /href="\/suppliers\/apply" locale="vi"/, "supplier continues in Vietnamese");
+  assert.match(gateway, /<FlagUS[\s\S]*English[\s\S]*<FlagVN[\s\S]*Tiếng Việt/, "flags with language names");
+  assert.match(gateway, /finalFocus=\{opener\}/, "focus returns to the control that reopened it");
+  assert.match(hero, /<EntryChooserButton/, "the chooser can be reopened from the homepage");
   assert.match(header, /href=\{SUPPLIER_HREF\}\s+locale="vi"/, "header keeps a discreet supplier link");
   assert.match(supplier, /siteConfig\.zalo/);
 });
@@ -81,28 +86,29 @@ test("homepage takes the shortest path to a buyer decision", () => {
   for (const retired of ["<OperatingSystem", "<EvidenceLayer", "<PlatformMap"]) assert.ok(!home.includes(retired), `${retired} is not a homepage band`);
 });
 
-test("hero is platform-level: one dominant network image, one inset, captioned, and a current capability", async () => {
+test("hero is platform-level: three captioned supply-network stages, one priority image", async () => {
   const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
-  assert.doesNotMatch(hero, /images\/catalog\//, "no single product family leads the hero");
-  for (const src of ["quality-processing.webp", "network-air-freight.webp"]) {
+  assert.doesNotMatch(hero, /images\/catalog\//, "no product-family catalogue image leads the hero");
+  for (const src of ["origin-harvest.webp", "quality-processing.webp", "network-air-freight.webp"]) {
     assert.ok(hero.includes(src), `hero uses ${src}`);
+    assert.ok(fs.existsSync(`public/images/platform/${src}`), `${src} exists`);
+    assert.ok(fs.statSync(`public/images/platform/${src}`).size < 200 * 1024, `${src} is optimised`);
+    assert.match(fs.readFileSync("docs/asset-provenance.md", "utf8"), new RegExp(`public/images/platform/${src.replace(".", "\\.")}`), `${src} has provenance`);
   }
-  assert.doesNotMatch(hero, /coffee-harvest|images\/[^"]*coffee/i, "no coffee-family visual in the hero");
-  assert.doesNotMatch(hero, /process-partner-facility/, "no third-party-branded facility image");
-  assert.doesNotMatch(hero, /border-\[\d+px\]/, "inset uses a 1px rule, not a thick frame");
+  assert.doesNotMatch(hero, /"\/images\/[^"]*(process-partner-facility|about\.jpg|factory\.jpg)"/, "no third-party-branded or claim-bearing artwork");
+  assert.doesNotMatch(hero, /border-\[\d+px\]/, "tiles use a 1px rule, not a thick frame");
   assert.match(hero, /href="\/products"\s+className="[^"]*min-h-11/, "secondary CTA is at least 44px tall");
-  assert.match(hero, /t\("imageCaptionMobile"\)[\s\S]*<\/figcaption>\s*<\/figure>/, "mobile caption sits in the figure under the image");
+  assert.match(hero, /<\/div>\s*<figcaption className="mt-4[^"]*">\{t\("imageCaption"\)\}<\/figcaption>\s*<\/figure>/, "one caption beneath the collage, outside every photo");
   const en = (await import("../messages/en.json", { with: { type: "json" } })).default;
   const vi = (await import("../messages/vi.json", { with: { type: "json" } })).default;
   for (const catalog of [en, vi]) {
-    assert.doesNotMatch(JSON.stringify(catalog.home.hero.images), /coffee|cà phê/i, "hero alt text names no coffee visual");
+    assert.deepEqual(Object.keys(catalog.home.hero.images).sort(), ["freight", "origin", "processing"], "alt text keyed per image");
+    for (const image of Object.values(catalog.home.hero.images) as { alt: string }[]) assert.ok(image.alt.trim());
     assert.match(catalog.home.hero.imageCaption, /Whitehorse/, "non-ownership disclosure stays visible");
-    assert.match(catalog.home.hero.imageCaptionMobile, /Whitehorse/, "mobile disclosure stays visible");
+    assert.doesNotMatch(JSON.stringify(catalog.home.hero), /Vietnam's|miền|Tây Nguyên|Đắk Lắk|Central Highlands/i, "no location is claimed for the photographs");
   }
-  assert.equal((hero.match(/<Image\b/g) ?? []).length, 2, "one dominant image and at most one inset");
+  assert.equal((hero.match(/<Image\b/g) ?? []).length, 3, "three photographs");
   assert.doesNotMatch(hero, /\.label\}/, "no category badges over the crops");
-  assert.match(hero, /t\("imageCaption"\)/);
-  assert.doesNotMatch(hero, /CircleDashed|t\("building"\)/, "no building-status card in the hero");
   assert.equal((hero.match(/^\s+priority\s*$/gm) ?? []).length, 1, "one priority image");
   assert.doesNotMatch(hero, /"use client"/);
 });

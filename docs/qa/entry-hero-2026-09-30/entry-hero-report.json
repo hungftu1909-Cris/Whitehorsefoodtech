@@ -1,0 +1,152 @@
+[
+  {
+    "name": "domain root: chooser opens",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en"
+  },
+  {
+    "name": "chooser: US + VN flags, buyer /en/products, supplier /vi/suppliers/apply",
+    "ok": true,
+    "detail": "{\"flags\":3,\"links\":[\"buyer:/en/products\",\"supplier:/vi/suppliers/apply\"],\"focusInside\":true}"
+  },
+  {
+    "name": "chooser: focus is inside the dialog",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "buyer choice → /en/products, no chooser there",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en/products"
+  },
+  {
+    "name": "brand logo → home: chooser shows again",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "reopen from hero (keyboard)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Escape closes; focus returns to the reopen button",
+    "ok": true,
+    "detail": "Choose your entry"
+  },
+  {
+    "name": "VI home 390: chooser opens",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "supplier choice → /vi/suppliers/apply",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "close button dismisses",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "return to the domain (reload) after dismissal: chooser shows again",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "language switch on the homepage does not re-open it",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "new visit to the domain: chooser shows",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "chooser carries no proof-stat line; two primary choices",
+    "ok": true,
+    "detail": "{\"proof\":false,\"choices\":2}"
+  },
+  {
+    "name": "deep link /en/products?family=fruit: no chooser",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "deep link /en/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream: no chooser",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "deep link /vi/products/coffee/whcf009: no chooser",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "1440: EN/VI flag group in header, EN pressed, ≥44px",
+    "ok": true,
+    "detail": "[{\"label\":\"English\",\"pressed\":\"true\",\"w\":68,\"h\":44,\"flag\":true},{\"label\":\"Tiếng Việt\",\"pressed\":\"false\",\"w\":61,\"h\":44,\"flag\":true}]"
+  },
+  {
+    "name": "1440: switch to VI keeps intent/product/range",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "390: EN/VI flag group in header, EN pressed, ≥44px",
+    "ok": true,
+    "detail": "[{\"label\":\"English\",\"pressed\":\"true\",\"w\":68,\"h\":44,\"flag\":true},{\"label\":\"Tiếng Việt\",\"pressed\":\"false\",\"w\":61,\"h\":44,\"flag\":true}]"
+  },
+  {
+    "name": "390: switch to VI keeps intent/product/range",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "320: compact flag language button in header (44px, flag, named)",
+    "ok": true,
+    "detail": "[{\"label\":\"Tiếng Việt\",\"pressed\":null,\"w\":44,\"h\":44,\"flag\":true}]"
+  },
+  {
+    "name": "320: switch to VI keeps intent/product/range",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "hero en 1440: 3 photos loaded, caption below all, no overflow",
+    "ok": true,
+    "detail": "{\"count\":3,\"loaded\":true,\"minW\":195,\"capClear\":true,\"inside\":true,\"overflow\":0,\"broken\":0}"
+  },
+  {
+    "name": "hero en 390: 3 photos loaded, caption below all, no overflow",
+    "ok": true,
+    "detail": "{\"count\":3,\"loaded\":true,\"minW\":121,\"capClear\":true,\"inside\":true,\"overflow\":0,\"broken\":0}"
+  },
+  {
+    "name": "hero en 320: 3 photos loaded, caption below all, no overflow",
+    "ok": true,
+    "detail": "{\"count\":3,\"loaded\":true,\"minW\":96,\"capClear\":true,\"inside\":true,\"overflow\":0,\"broken\":0}"
+  },
+  {
+    "name": "hero vi 1440: 3 photos loaded, caption below all, no overflow",
+    "ok": true,
+    "detail": "{\"count\":3,\"loaded\":true,\"minW\":195,\"capClear\":true,\"inside\":true,\"overflow\":0,\"broken\":0}"
+  },
+  {
+    "name": "hero vi 390: 3 photos loaded, caption below all, no overflow",
+    "ok": true,
+    "detail": "{\"count\":3,\"loaded\":true,\"minW\":121,\"capClear\":true,\"inside\":true,\"overflow\":0,\"broken\":0}"
+  },
+  {
+    "name": "hero vi 320: 3 photos loaded, caption below all, no overflow",
+    "ok": true,
+    "detail": "{\"count\":3,\"loaded\":true,\"minW\":96,\"capClear\":true,\"inside\":true,\"overflow\":0,\"broken\":0}"
+  },
+  {
+    "name": "no console errors or page errors across all runs",
+    "ok": true,
+    "detail": ""
+  }
+]

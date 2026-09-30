@@ -89,7 +89,8 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
         </NavigationMenu>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <LocaleSwitcher className="hidden min-[360px]:flex" blogSlugMap={blogSlugMap} />
+          <LocaleSwitcher className="hidden min-[390px]:flex" blogSlugMap={blogSlugMap} />
+          <LocaleSwitcher compact className="min-[390px]:hidden" blogSlugMap={blogSlugMap} />
           <Link
             href={SUPPLIER_HREF}
             locale="vi"
@@ -98,7 +99,7 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
           >
             {t("forSuppliers")}
           </Link>
-          <ThemeToggle className="size-11 cursor-pointer" />
+          <ThemeToggle className="hidden size-11 cursor-pointer sm:inline-flex" />
           <Link
             href="/rfq"
             className="ml-1 hidden h-11 cursor-pointer items-center rounded-sm bg-primary px-5 text-[0.9375rem] font-medium text-primary-foreground transition-colors duration-200 hover:bg-primary/90 focus-visible:ring-3 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:outline-none sm:inline-flex"
