@@ -80,13 +80,24 @@ test("homepage tells the platform story in order, with the operating standard be
   assert.deepEqual([...positions].sort((a, b) => a - b), positions, "homepage section order");
 });
 
-test("hero is platform-level: one dominant network image, one inset, captioned, and a current capability", () => {
+test("hero is platform-level: one dominant network image, one inset, captioned, and a current capability", async () => {
   const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
   assert.doesNotMatch(hero, /images\/catalog\//, "no single product family leads the hero");
-  for (const src of ["quality-processing.webp", "network-coffee-harvest.webp"]) {
+  for (const src of ["quality-processing.webp", "network-air-freight.webp"]) {
     assert.ok(hero.includes(src), `hero uses ${src}`);
   }
+  assert.doesNotMatch(hero, /coffee-harvest|images\/[^"]*coffee/i, "no coffee-family visual in the hero");
   assert.doesNotMatch(hero, /process-partner-facility/, "no third-party-branded facility image");
+  assert.doesNotMatch(hero, /border-\[\d+px\]/, "inset uses a 1px rule, not a thick frame");
+  assert.match(hero, /href="\/products"\s+className="[^"]*min-h-11/, "secondary CTA is at least 44px tall");
+  assert.match(hero, /t\("imageCaptionMobile"\)[\s\S]*<\/figcaption>\s*<\/figure>/, "mobile caption sits in the figure under the image");
+  const en = (await import("../messages/en.json", { with: { type: "json" } })).default;
+  const vi = (await import("../messages/vi.json", { with: { type: "json" } })).default;
+  for (const catalog of [en, vi]) {
+    assert.doesNotMatch(JSON.stringify(catalog.home.hero.images), /coffee|cà phê/i, "hero alt text names no coffee visual");
+    assert.match(catalog.home.hero.imageCaption, /Whitehorse/, "non-ownership disclosure stays visible");
+    assert.match(catalog.home.hero.imageCaptionMobile, /Whitehorse/, "mobile disclosure stays visible");
+  }
   assert.equal((hero.match(/<Image\b/g) ?? []).length, 2, "one dominant image and at most one inset");
   assert.doesNotMatch(hero, /\.label\}/, "no category badges over the crops");
   assert.match(hero, /t\("imageCaption"\)/);
@@ -140,6 +151,11 @@ test("audience gateway is a platform entry with a current-proof line", () => {
   assert.match(gateway, /Nhà cung cấp Việt Nam/);
   assert.match(gateway, /29 defined core SKUs · 50\+ screened suppliers · 10\+ market relationships/);
   assert.match(gateway, /Zalo/);
+});
+
+test("evidence section is image-free and does not repeat the hero image", () => {
+  const evidence = fs.readFileSync("src/components/home/evidence-layer.tsx", "utf8");
+  assert.doesNotMatch(evidence, /<Image\b|\.webp|\.jpg/);
 });
 
 test("homepage refinement: quiet actions, readable labels and no card grids", () => {

@@ -171,8 +171,8 @@ pictured people, or handled the pictured shipment.
 | `public/images/platform/quality-processing.webp` | `1.jpg` | 1200×675 | `1a06b5f57437bde9d03b8a7b1623fba33eda8953431ca53f14f7468b177c771b` | Centre crop 16:9, WebP q82; Quality hero; homepage hero primary image (LCP) since 2026-09-30 |
 | `public/images/platform/process-container-loading.webp` | `1.png` | 1200×675 | `32c40939c3934d36b3c88a0e428b1cc0c8e5611281561a6b6365af14ab4e5d63` | Centre crop 16:9, WebP q82; How We Work hero |
 | `public/images/platform/process-partner-facility.webp` | `4.jpg` | 1200×675 | `0c4252e96ed2f332b7330f527432ac81e50d6a1943d9d3e347590177ad343b95` | Centre crop 16:9, WebP q82; partner-facility section |
-| `public/images/platform/network-coffee-harvest.webp` | `THU GOM CAFE.jpg` | 1200×675 | `90d84593a2f414d48ce5c2164dba84a270a377542dbb7b5494a84fada51d7740` | Centre crop 16:9, WebP q82; Network hero; homepage hero inset since 2026-09-30 |
-| `public/images/platform/network-air-freight.webp` | `ảnh máy bay.jpg` | 1200×675 | `90081b405ef9d7fd77a7b62f1900c6a90b1b225278553e25ddc5469e1feace9f` | Centre crop 16:9, WebP q82; Network inset; homepage evidence image since 2026-09-30 (hero market tile until the luxury refinement) |
+| `public/images/platform/network-coffee-harvest.webp` | `THU GOM CAFE.jpg` | 1200×675 | `90d84593a2f414d48ce5c2164dba84a270a377542dbb7b5494a84fada51d7740` | Centre crop 16:9, WebP q82; Network hero. Not used on the homepage (removed from the hero inset 2026-09-30: coffee-family visual) |
+| `public/images/platform/network-air-freight.webp` | `ảnh máy bay.jpg` | 1200×675 | `90081b405ef9d7fd77a7b62f1900c6a90b1b225278553e25ddc5469e1feace9f` | Centre crop 16:9, WebP q82; Network inset; homepage hero inset since 2026-09-30 (only place it appears on the homepage) |
 
 **Licence status:** owner-supplied; photographer/source and commercial-use
 rights still need to be recorded before Production replacement or reuse
@@ -191,8 +191,8 @@ and provenance-recorded assets:
 | Candidate | Decision | Reason |
 |---|---|---|
 | `platform/quality-processing.webp` | **Used — dominant image (LCP)** | Real processing stage (freeze-drying trays, hygiene clothing); no logos or text; not tied to one family |
-| `platform/network-coffee-harvest.webp` | **Used — single restrained inset** | Only Vietnamese origin/harvest image on file. It shows coffee cherries, so it stays a small inset (desktop only), never the lead |
-| `platform/network-air-freight.webp` | Moved out of the hero (luxury refinement, 2026-09-30) | Now the homepage evidence-section image, with its own representative caption (`home.evidence.image.caption`) |
+| `platform/network-air-freight.webp` | **Used — single restrained inset (desktop only)** | Real export stage (palletised air cargo at a freighter); no legible third-party branding; not tied to one family |
+| `platform/network-coffee-harvest.webp` | Not used on the homepage (removed 2026-09-30) | Shows coffee cherries — a coffee-family visual. The homepage hero must not feel coffee-led, even as an inset. Kept on Network |
 | `platform/process-partner-facility.webp` | Not used on the homepage | Visible third-party equipment brand ("BUHLER") and coffee-sack print ("KHO 03", green coffee) — third-party branding and coffee-led |
 | `platform/process-container-loading.webp` | Not used on the homepage | Kept on How We Work |
 | Catalog / studio / concept-pack images | Not used in hero | Product imagery belongs below the platform proposition (current portfolio section) |
@@ -200,20 +200,28 @@ and provenance-recorded assets:
 
 **Luxury refinement (2026-09-30):** the three-tile collage and its
 per-tile stage badges were retired. The hero is now one dominant image on
-the black-olive surface with one inset. The disclosure is unchanged in
-substance and still visible, but set as a proper caption beneath the image
-(desktop) or at the end of the hero (mobile), outside the headline focal
-area: "Representative stages in Vietnam's ingredient supply network —
-processing and origin harvest. Not Whitehorse-owned facilities or a
-specific shipment." (VI equivalent in `home.hero.imageCaption`). Images get
-a light CSS desaturation (`saturate-[0.82–0.85]`) and a surface gradient
-only; the files themselves are unchanged. No image was added, generated or
-retouched.
+the black-olive surface with one inset (framed by a 1px hairline rule).
+The disclosure is unchanged in substance and still visible, set as a
+proper caption directly beneath the visible image, outside the headline
+focal area, and naming only what is visible at that breakpoint:
 
-The evidence section uses `platform/network-air-freight.webp` with the
-caption "Representative export stage — palletised air cargo. Not a
-Whitehorse-owned facility or a specific shipment." It illustrates the
-export context, not the evidence itself or a Whitehorse shipment.
+- Desktop (processing image + air-freight inset): "Representative
+  supply-network stages — ingredient processing and export air freight.
+  Not Whitehorse-owned facilities or a specific shipment."
+  (`home.hero.imageCaption`)
+- Mobile (processing image only; the inset is hidden): "Representative
+  supply-network stage — ingredient processing. Not a Whitehorse-owned
+  facility or a specific lot." (`home.hero.imageCaptionMobile`)
+
+VI equivalents use the same keys. The caption makes no location claim for
+the air-freight scene. Images get a light CSS desaturation
+(`saturate-[0.82–0.85]`) and a surface gradient only; the files themselves
+are unchanged. No image was added, generated or retouched.
+
+**Follow-up (2026-09-30):** the coffee-harvest inset was replaced by the
+air-freight image so the hero carries no coffee-family visual. To avoid
+showing the same photograph twice, the homepage evidence section is now
+image-free (typographic statement + ruled scope rows).
 
 **Asset gap:** no single truthful master image shows Vietnamese origin +
 qualification/evidence + global connection across several ingredients. A

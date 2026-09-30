@@ -72,10 +72,11 @@
           "alt": "Two workers in hygiene clothing loading trays of fruit into an open freeze-drying chamber"
         },
         {
-          "alt": "Growers collecting freshly harvested coffee cherries onto tarpaulins between coffee trees"
+          "alt": "Palletised cargo being loaded into a freighter aircraft on an airport apron"
         }
       ],
-      "imageCaption": "Representative stages in Vietnam's ingredient supply network — processing and origin harvest. Not Whitehorse-owned facilities or a specific shipment."
+      "imageCaption": "Representative supply-network stages — ingredient processing and export air freight. Not Whitehorse-owned facilities or a specific shipment.",
+      "imageCaptionMobile": "Representative supply-network stage — ingredient processing. Not a Whitehorse-owned facility or a specific lot."
     },
     "operating": {
       "eyebrow": "How the platform works",
@@ -210,10 +211,6 @@
       "title": "Confidence is assembled around the request.",
       "subtitle": "Instead of generic trust badges, Whitehorse frames the evidence a buyer may need and confirms what applies to the selected supplier, site, product and order.",
       "cta": "Quality & qualification",
-      "image": {
-        "alt": "Palletised cargo being loaded into a freighter aircraft on an airport apron",
-        "caption": "Representative export stage — palletised air cargo. Not a Whitehorse-owned facility or a specific shipment."
-      },
       "items": [
         {
           "label": "Scope 01",

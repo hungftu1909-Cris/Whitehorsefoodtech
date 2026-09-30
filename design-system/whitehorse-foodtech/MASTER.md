@@ -50,9 +50,12 @@ deliberate asymmetry. Not a coffee shop, not a SaaS dashboard.
   `#131B16`, ivory `--deep-foreground` `#F6F1E4`, stays dark in both
   themes) → ivory → forest (`bg-primary`) → ivory → sand (`bg-muted`) →
   black-olive → ivory → forest footer.
-- One dominant photograph per composition, at most one inset; no badges
-  over crops. Representative-image disclosures are real captions, set
-  beneath the image.
+- One dominant photograph per composition, at most one inset, framed by a
+  1px hairline rule (no thick frames); no badges over crops.
+  Representative-image disclosures are real captions, set directly beneath
+  the visible image and describing only what is visible at that breakpoint.
+  An image appears once per page. The homepage hero carries no
+  coffee-family visual.
 - Sequences are ruled and numbered (serif bronze numerals, hairline
   `border-foreground/15` rules); evidence is ruled rows; technology is one
   backbone rule with status markers (filled = operating now, ring = being

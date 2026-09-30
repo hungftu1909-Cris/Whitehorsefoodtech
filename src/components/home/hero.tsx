@@ -6,13 +6,14 @@ import { hasPublicFile } from "@/lib/media";
 
 // One dominant owner-supplied supply-network image and one restrained inset
 // (docs/asset-provenance.md, "Homepage hero composition"): processing leads,
-// Vietnamese origin supports. Neither is a product family. The
-// representative-stage disclosure is a proper caption beneath the image,
-// outside the focal area. about.jpg and factory.jpg stay unrendered: that
-// artwork carries unsupported claims (claim registry row 15).
+// export air freight supports. Neither is a product family, and no
+// coffee-family visual is used here. The representative-stage disclosure is a
+// proper caption directly beneath the visible image, outside the focal area.
+// about.jpg and factory.jpg stay unrendered: that artwork carries unsupported
+// claims (claim registry row 15).
 const HERO_IMAGES = [
   "/images/platform/quality-processing.webp",
-  "/images/platform/network-coffee-harvest.webp",
+  "/images/platform/network-air-freight.webp",
 ] as const;
 
 /**
@@ -47,18 +48,21 @@ export function Hero() {
             />
           </div>
 
-          <div className="absolute bottom-16 -left-10 hidden aspect-[4/5] w-36 border-[6px] border-deep lg:block xl:w-44">
+          <div className="absolute bottom-16 -left-10 hidden aspect-[4/3] w-52 border border-deep-foreground/20 lg:block xl:w-60">
             <Image
               src={HERO_IMAGES[1]}
               alt={images[1].alt}
               fill
-              sizes="11rem"
-              className="object-cover object-[58%_50%] saturate-[0.82]"
+              sizes="15rem"
+              className="object-cover object-[62%_50%] saturate-[0.82]"
             />
           </div>
 
-          <figcaption className="hidden text-xs leading-relaxed text-deep-foreground/55 lg:absolute lg:right-0 lg:bottom-8 lg:left-40 lg:block lg:pr-8 xl:left-48 xl:pr-12">
-            {t("imageCaption")}
+          {/* Mobile shows only the main image, so its caption names only that
+              stage; desktop adds the inset and names both. */}
+          <figcaption className="px-5 pt-3 text-xs leading-relaxed text-deep-foreground/55 sm:px-6 lg:absolute lg:right-0 lg:bottom-8 lg:left-48 lg:px-0 lg:pt-0 lg:pr-8 xl:left-56 xl:pr-12">
+            <span className="lg:hidden">{t("imageCaptionMobile")}</span>
+            <span className="hidden lg:inline">{t("imageCaption")}</span>
           </figcaption>
         </figure>
       )}
@@ -81,7 +85,7 @@ export function Hero() {
             </Link>
             <Link
               href="/products"
-              className="cursor-pointer text-[0.9375rem] font-medium underline decoration-deep-foreground/35 underline-offset-[10px] transition-colors hover:decoration-accent focus-visible:ring-3 focus-visible:ring-ring/60 focus-visible:outline-none"
+              className="inline-flex min-h-11 cursor-pointer items-center text-[0.9375rem] font-medium underline decoration-deep-foreground/35 underline-offset-[10px] transition-colors hover:decoration-accent focus-visible:ring-3 focus-visible:ring-ring/60 focus-visible:outline-none"
             >
               {t("ctaSecondary")}
             </Link>
@@ -111,10 +115,6 @@ export function Hero() {
               </dd>
             </div>
           </dl>
-
-          {showImages && (
-            <p className="mt-8 text-xs leading-relaxed text-deep-foreground/50 lg:hidden">{t("imageCaption")}</p>
-          )}
         </div>
       </div>
     </section>
