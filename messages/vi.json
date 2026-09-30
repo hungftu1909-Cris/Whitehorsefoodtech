@@ -491,7 +491,14 @@
       "title": "Lọc theo nhóm. Tìm theo dạng hoặc ứng dụng.",
       "subtitle": "Mỗi dòng tổ chức các SKU cốt lõi, định dạng mở và chiều thông số cần xác định. Chọn nhóm hoặc tìm trên danh mục song ngữ; mix, blend và công thức tùy chỉnh có thể được brief từ dòng phù hợp.",
       "filterLabel": "Lọc theo nhóm nguyên liệu",
-      "searchPlaceholder": "Dạng, sản phẩm hoặc ứng dụng"
+      "searchPlaceholder": "Dạng, sản phẩm hoặc ứng dụng",
+      "chipLabels": {
+        "coffee": "Cà phê",
+        "coconut": "Dừa",
+        "fruit": "Trái cây",
+        "nutsSpicesBotanicals": "Hạt & Gia vị",
+        "birdsNest": "Yến sào"
+      }
     },
     "categories": {
       "coffee": {

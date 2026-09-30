@@ -82,7 +82,8 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${siteConfig.email}`} className="cursor-pointer hover:text-primary-foreground">
+                {/* The address is one long token; let it wrap in narrow footer columns (768px). */}
+                <a href={`mailto:${siteConfig.email}`} className="cursor-pointer [overflow-wrap:anywhere] hover:text-primary-foreground">
                   {siteConfig.email}
                 </a>
               </li>

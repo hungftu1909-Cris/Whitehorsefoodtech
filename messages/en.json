@@ -491,7 +491,14 @@
       "title": "Filter by family. Search by format or application.",
       "subtitle": "Each range organises the core SKUs, open formats and specification dimensions to resolve. Select a family or search the bilingual catalog; mixes, blends and custom formulations can be briefed through the relevant range.",
       "filterLabel": "Filter by ingredient family",
-      "searchPlaceholder": "Format, product or application"
+      "searchPlaceholder": "Format, product or application",
+      "chipLabels": {
+        "coffee": "Coffee",
+        "coconut": "Coconut",
+        "fruit": "Fruit",
+        "nutsSpicesBotanicals": "Nuts & Spices",
+        "birdsNest": "Bird's Nest"
+      }
     },
     "categories": {
       "coffee": {

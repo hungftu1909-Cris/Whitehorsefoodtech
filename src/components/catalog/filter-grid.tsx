@@ -154,7 +154,8 @@ export function FilterGrid({
   empty,
 }: {
   items: FilterItem[];
-  groups: { id: string; label: string; count?: number }[];
+  /** `label` is the visible chip text; `fullLabel` (optional) the full name for screen readers. */
+  groups: { id: string; label: string; fullLabel?: string; count?: number }[];
   labels: {
     filter: string;
     all: string;
@@ -214,7 +215,7 @@ export function FilterGrid({
   }, []);
   const chip = (active: boolean) =>
     cn(
-      "inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border px-4 text-sm font-medium transition-colors duration-200 focus-visible:ring-3 focus-visible:ring-ring/60 focus-visible:outline-none",
+      "inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center gap-1.5 rounded-full border px-3 text-sm font-medium whitespace-nowrap sm:gap-2 sm:px-4 transition-colors duration-200 focus-visible:ring-3 focus-visible:ring-ring/60 focus-visible:outline-none",
       active
         ? "border-primary bg-primary text-primary-foreground"
         : "border-border bg-card text-foreground/80 hover:border-foreground/40 hover:text-foreground"
@@ -225,7 +226,9 @@ export function FilterGrid({
       <div className={className}>
         {/* Row 1: families (one line on desktop, a scroll row on phones).
             Row 2: search, live result count and reset. */}
-        <div role="group" aria-label={labels.filter} className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0">
+        {/* Chips wrap (never scroll or clip): one row on desktop, two on most
+            phones, a third only on the narrowest screens. */}
+        <div role="group" aria-label={labels.filter} className="flex flex-wrap gap-1.5 sm:gap-2">
           <button type="button" aria-pressed={!group} onClick={() => setGroup("")} className={cn(chip(!group), "shrink-0")}>
             {labels.all}
           </button>
@@ -237,7 +240,14 @@ export function FilterGrid({
               onClick={() => setGroup(group === g.id ? "" : g.id)}
               className={cn(chip(group === g.id), "shrink-0")}
             >
-              {g.label}
+              {g.fullLabel ? (
+                <>
+                  <span aria-hidden="true">{g.label}</span>
+                  <span className="sr-only">{g.fullLabel}</span>
+                </>
+              ) : (
+                g.label
+              )}
               {g.count !== undefined && (
                 <span className={cn("tabular-nums", group === g.id ? "text-primary-foreground/75" : "text-muted-foreground")}>{g.count}</span>
               )}

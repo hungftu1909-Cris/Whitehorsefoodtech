@@ -1,0 +1,322 @@
+[
+  {
+    "name": "en 1440: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"All\",\"Coffee\",\"Coconut\",\"Fruit\",\"Nuts & Spices\",\"Bird's Nest\"]"
+  },
+  {
+    "name": "en 1440: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=1 scroll=0 overflow=0"
+  },
+  {
+    "name": "en 1440: rows = 1 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "full category names remain for screen readers",
+    "ok": true,
+    "detail": "All | CoffeeCoffee Ingredients6 | CoconutCoconut Ingredients3 | FruitFruit Ingredients4 | Nuts & SpicesNuts, Spices & Botanicals2 | Bird's NestBird's Nest Ingredients3"
+  },
+  {
+    "name": "en 1440: coffee chip → 6 results, pressed, ?family=coffee",
+    "ok": true,
+    "detail": "6 http://127.0.0.1:4817/en/products?family=coffee"
+  },
+  {
+    "name": "en 1440: coconut chip → 3 results, pressed, ?family=coconut",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/en/products?family=coconut"
+  },
+  {
+    "name": "en 1440: fruit chip → 4 results, pressed, ?family=fruit",
+    "ok": true,
+    "detail": "4 http://127.0.0.1:4817/en/products?family=fruit"
+  },
+  {
+    "name": "en 1440: nuts-spices-botanicals chip → 2 results, pressed, ?family=nuts-spices-botanicals",
+    "ok": true,
+    "detail": "2 http://127.0.0.1:4817/en/products?family=nuts-spices-botanicals"
+  },
+  {
+    "name": "en 1440: birds-nest chip → 3 results, pressed, ?family=birds-nest",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/en/products?family=birds-nest"
+  },
+  {
+    "name": "en 1440: All resets to 18 and clears ?family=",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en/products"
+  },
+  {
+    "name": "en 1440: deep link ?family=fruit selects Fruit (4)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "en 1440: keyboard Enter on Coffee chip filters (6)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "en 768: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"All\",\"Coffee\",\"Coconut\",\"Fruit\",\"Nuts & Spices\",\"Bird's Nest\"]"
+  },
+  {
+    "name": "en 768: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=1 scroll=0 overflow=0"
+  },
+  {
+    "name": "en 768: rows = 1 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "en 600: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"All\",\"Coffee\",\"Coconut\",\"Fruit\",\"Nuts & Spices\",\"Bird's Nest\"]"
+  },
+  {
+    "name": "en 600: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=2 scroll=0 overflow=0"
+  },
+  {
+    "name": "en 600: rows = 2 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "2"
+  },
+  {
+    "name": "en 390: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"All\",\"Coffee\",\"Coconut\",\"Fruit\",\"Nuts & Spices\",\"Bird's Nest\"]"
+  },
+  {
+    "name": "en 390: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=2 scroll=0 overflow=0"
+  },
+  {
+    "name": "en 390: rows = 2 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "2"
+  },
+  {
+    "name": "en 390: coffee chip → 6 results, pressed, ?family=coffee",
+    "ok": true,
+    "detail": "6 http://127.0.0.1:4817/en/products?family=coffee"
+  },
+  {
+    "name": "en 390: coconut chip → 3 results, pressed, ?family=coconut",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/en/products?family=coconut"
+  },
+  {
+    "name": "en 390: fruit chip → 4 results, pressed, ?family=fruit",
+    "ok": true,
+    "detail": "4 http://127.0.0.1:4817/en/products?family=fruit"
+  },
+  {
+    "name": "en 390: nuts-spices-botanicals chip → 2 results, pressed, ?family=nuts-spices-botanicals",
+    "ok": true,
+    "detail": "2 http://127.0.0.1:4817/en/products?family=nuts-spices-botanicals"
+  },
+  {
+    "name": "en 390: birds-nest chip → 3 results, pressed, ?family=birds-nest",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/en/products?family=birds-nest"
+  },
+  {
+    "name": "en 390: All resets to 18 and clears ?family=",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en/products"
+  },
+  {
+    "name": "en 390: deep link ?family=fruit selects Fruit (4)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "en 390: keyboard Enter on Coffee chip filters (6)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "en 320: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"All\",\"Coffee\",\"Coconut\",\"Fruit\",\"Nuts & Spices\",\"Bird's Nest\"]"
+  },
+  {
+    "name": "en 320: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=3 scroll=0 overflow=0"
+  },
+  {
+    "name": "en 320: rows = 3 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "3"
+  },
+  {
+    "name": "vi 1440: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"Tất cả\",\"Cà phê\",\"Dừa\",\"Trái cây\",\"Hạt & Gia vị\",\"Yến sào\"]"
+  },
+  {
+    "name": "vi 1440: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=1 scroll=0 overflow=0"
+  },
+  {
+    "name": "vi 1440: rows = 1 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "vi 1440: coffee chip → 6 results, pressed, ?family=coffee",
+    "ok": true,
+    "detail": "6 http://127.0.0.1:4817/vi/products?family=coffee"
+  },
+  {
+    "name": "vi 1440: coconut chip → 3 results, pressed, ?family=coconut",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/vi/products?family=coconut"
+  },
+  {
+    "name": "vi 1440: fruit chip → 4 results, pressed, ?family=fruit",
+    "ok": true,
+    "detail": "4 http://127.0.0.1:4817/vi/products?family=fruit"
+  },
+  {
+    "name": "vi 1440: nuts-spices-botanicals chip → 2 results, pressed, ?family=nuts-spices-botanicals",
+    "ok": true,
+    "detail": "2 http://127.0.0.1:4817/vi/products?family=nuts-spices-botanicals"
+  },
+  {
+    "name": "vi 1440: birds-nest chip → 3 results, pressed, ?family=birds-nest",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/vi/products?family=birds-nest"
+  },
+  {
+    "name": "vi 1440: All resets to 18 and clears ?family=",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/products"
+  },
+  {
+    "name": "vi 1440: deep link ?family=fruit selects Fruit (4)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "vi 1440: keyboard Enter on Coffee chip filters (6)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "vi 768: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"Tất cả\",\"Cà phê\",\"Dừa\",\"Trái cây\",\"Hạt & Gia vị\",\"Yến sào\"]"
+  },
+  {
+    "name": "vi 768: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=1 scroll=0 overflow=0"
+  },
+  {
+    "name": "vi 768: rows = 1 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "vi 600: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"Tất cả\",\"Cà phê\",\"Dừa\",\"Trái cây\",\"Hạt & Gia vị\",\"Yến sào\"]"
+  },
+  {
+    "name": "vi 600: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=2 scroll=0 overflow=0"
+  },
+  {
+    "name": "vi 600: rows = 2 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "2"
+  },
+  {
+    "name": "vi 390: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"Tất cả\",\"Cà phê\",\"Dừa\",\"Trái cây\",\"Hạt & Gia vị\",\"Yến sào\"]"
+  },
+  {
+    "name": "vi 390: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=2 scroll=0 overflow=0"
+  },
+  {
+    "name": "vi 390: rows = 2 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "2"
+  },
+  {
+    "name": "vi 390: coffee chip → 6 results, pressed, ?family=coffee",
+    "ok": true,
+    "detail": "6 http://127.0.0.1:4817/vi/products?family=coffee"
+  },
+  {
+    "name": "vi 390: coconut chip → 3 results, pressed, ?family=coconut",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/vi/products?family=coconut"
+  },
+  {
+    "name": "vi 390: fruit chip → 4 results, pressed, ?family=fruit",
+    "ok": true,
+    "detail": "4 http://127.0.0.1:4817/vi/products?family=fruit"
+  },
+  {
+    "name": "vi 390: nuts-spices-botanicals chip → 2 results, pressed, ?family=nuts-spices-botanicals",
+    "ok": true,
+    "detail": "2 http://127.0.0.1:4817/vi/products?family=nuts-spices-botanicals"
+  },
+  {
+    "name": "vi 390: birds-nest chip → 3 results, pressed, ?family=birds-nest",
+    "ok": true,
+    "detail": "3 http://127.0.0.1:4817/vi/products?family=birds-nest"
+  },
+  {
+    "name": "vi 390: All resets to 18 and clears ?family=",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/products"
+  },
+  {
+    "name": "vi 390: deep link ?family=fruit selects Fruit (4)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "vi 390: keyboard Enter on Coffee chip filters (6)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "vi 320: order All, Coffee, Coconut, Fruit, then others",
+    "ok": true,
+    "detail": "[\"Tất cả\",\"Cà phê\",\"Dừa\",\"Trái cây\",\"Hạt & Gia vị\",\"Yến sào\"]"
+  },
+  {
+    "name": "vi 320: every chip fully visible, no strip scroll, no page overflow, ≥44px",
+    "ok": true,
+    "detail": "rows=3 scroll=0 overflow=0"
+  },
+  {
+    "name": "vi 320: rows = 3 (1 desktop/tablet, ≤2 at 390+, ≤3 at 320)",
+    "ok": true,
+    "detail": "3"
+  },
+  {
+    "name": "no console or page errors",
+    "ok": true,
+    "detail": ""
+  }
+]

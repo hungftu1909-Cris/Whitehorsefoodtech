@@ -13,6 +13,11 @@ import { CUSTOM_SOURCING_HREF } from "@/lib/nav";
 import { serializeJsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site";
 
+// Display order for the family filter chips only (owner priority: coffee,
+// coconut, fruit first). Product data, menus and the grid keep
+// PRODUCT_CATEGORIES order; chips are keyed by slug, never by position.
+const CHIP_ORDER: FamilySlug[] = ["coffee", "coconut", "fruit", "nuts-spices-botanicals", "birds-nest"];
+
 export async function generateMetadata({
   params,
 }: {
@@ -65,11 +70,14 @@ export default async function ProductsPage({
       <section className="mx-auto max-w-7xl px-5 pt-6 pb-16 sm:px-6 md:pb-24 lg:px-8">
         <FilterGrid
           queryKey="family"
-          groups={categories.map((category) => ({
-            id: category.slug,
-            label: category.name,
-            count: rangesFor(category.family).length,
-          }))}
+          groups={[...categories]
+            .sort((a, b) => CHIP_ORDER.indexOf(a.family) - CHIP_ORDER.indexOf(b.family))
+            .map((category) => ({
+              id: category.slug,
+              label: t(`explorer.chipLabels.${category.categoryKey}`),
+              fullLabel: category.name,
+              count: rangesFor(category.family).length,
+            }))}
           labels={{
             filter: t("explorer.filterLabel"),
             all: tcat("filterAll"),
