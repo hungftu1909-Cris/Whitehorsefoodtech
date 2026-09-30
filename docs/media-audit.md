@@ -166,5 +166,27 @@ Resolved from supplied material in this pass:
 
 ## QA evidence
 
-Local production build of `8bb9f30` (first pass): `docs/qa/media-audit-2026-09-30/`.
-Current-head results are recorded in the PR description and closeout.
+**Vercel preview QA — BLOCKED.** Both preview deployments of `5cc9821`
+built successfully (GitHub status `success`, 09:11 UTC):
+`https://whitehorsefoodtech-4zxyp6yej-hungftu1909-cris-projects.vercel.app`
+and `https://whitehorsefoodtech-vercel-ai4vkur58-hungftu1909-cris-projects.vercel.app`.
+Every request returns `302 → vercel.com/sso-api` (Deployment Protection);
+the local Vercel CLI token is rejected (`api.vercel.com/v2/user` → 403) and
+no connected browser tool was available, so the previews were not viewed.
+
+**Local production build of `5cc9821` (`next build` + `next start`, Chrome
+via playwright-core)** — `docs/qa/media-audit-2026-09-30/second-pass-5cc9821/`:
+- Media sweep, 11 routes × EN/VI × 1440/390 (44 runs): 0 duplicate media ids
+  per page, 0 broken images, 0 horizontal overflow, 0 console errors or
+  warnings, 0 counters on single frames, 0 identical 01/02; desktop hover
+  shows image02 (opacity 0 → 1). Coffee page: 4 pairs (hero, WHCF005, 006,
+  009); nuts family: pair. `media-sweep.json`.
+- Journeys, EN/VI × 1440/390: 17 header/footer/menu links resolve (0 ≥ 400);
+  `/rfq` and pre-filled `/rfq?...sku=WHCF009` render the form; supplier
+  application form renders; `/documents` PDFs (brochure, packaging
+  architecture) return 200 `application/pdf`; audience gateway routes buyers
+  to `/en/products`, suppliers to `/vi/suppliers/apply`. `journeys.json`.
+- Touch auto-advance (unchanged CSS, sampled in real time on the first
+  pass): image01 ≈ 0–7.6 s, image02 ≈ 8.4–15.2 s, 16 s cycle.
+
+First pass (`8bb9f30`): `docs/qa/media-audit-2026-09-30/*.jpg`, `sweep-report.json`.
