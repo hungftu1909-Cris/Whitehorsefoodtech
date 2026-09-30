@@ -8,7 +8,8 @@ import { hasPublicFile } from "@/lib/media";
 // (docs/asset-provenance.md, "Homepage hero composition"): processing leads,
 // export air freight supports. Neither is a product family, and no
 // coffee-family visual is used here. The representative-stage disclosure is a
-// proper caption directly beneath the visible image, outside the focal area.
+// proper caption directly beneath the visible image, outside the focal area,
+// and below lg the image and caption follow the headline and actions.
 // about.jpg and factory.jpg stay unrendered: that artwork carries unsupported
 // claims (claim registry row 15).
 const HERO_IMAGES = [
@@ -31,40 +32,7 @@ export function Hero() {
 
   return (
     <section className="bg-luminous relative isolate overflow-hidden text-foreground">
-      {showImages && (
-        <figure className="relative px-5 pt-2 sm:px-6 lg:absolute lg:inset-y-0 lg:right-0 lg:w-[37%] lg:p-0 xl:w-[38%]">
-          <div className="relative aspect-[16/9] bg-muted lg:absolute lg:inset-x-0 lg:top-16 lg:bottom-28 lg:aspect-auto">
-            <Image
-              src={HERO_IMAGES[0]}
-              alt={images[0].alt}
-              fill
-              priority
-              sizes="(min-width: 1024px) 38vw, 100vw"
-              className="object-cover object-[60%_50%] saturate-[0.9]"
-            />
-          </div>
-
-          {/* The inset sits proud of the paper on a hairline, in daylight. */}
-          <div className="absolute bottom-16 -left-10 hidden aspect-[4/3] w-52 border border-foreground/15 bg-background lg:block xl:w-60">
-            <Image
-              src={HERO_IMAGES[1]}
-              alt={images[1].alt}
-              fill
-              sizes="15rem"
-              className="object-cover object-[62%_50%] saturate-[0.9]"
-            />
-          </div>
-
-          {/* Mobile shows only the main image, so its caption names only that
-              stage; desktop adds the inset and names both. */}
-          <figcaption className="pt-3 text-xs leading-relaxed text-muted-foreground lg:absolute lg:right-0 lg:bottom-8 lg:left-48 lg:px-0 lg:pt-0 lg:pr-8 xl:left-56 xl:pr-12">
-            <span className="lg:hidden">{t("imageCaptionMobile")}</span>
-            <span className="hidden lg:inline">{t("imageCaption")}</span>
-          </figcaption>
-        </figure>
-      )}
-
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:static lg:px-8">
         <div className="flex flex-col pt-9 pb-12 sm:pt-12 lg:min-h-[clamp(36rem,calc(100svh-5rem),46rem)] lg:w-[60%] lg:pt-24 lg:pr-12 lg:pb-0">
           <p className="text-xs font-medium tracking-[0.28em] text-accent uppercase">{t("eyebrow")}</p>
           <h1 className="mt-5 font-serif text-[2.3rem] leading-[1.06] font-medium tracking-[-0.02em] text-balance text-primary sm:text-5xl lg:mt-7 lg:text-[3.2rem] xl:text-[3.5rem]">
@@ -88,11 +56,49 @@ export function Hero() {
             </Link>
           </div>
 
+          {/* Below lg the photograph follows the promise and the primary
+              action, so the headline — not the representative-stage
+              disclosure — is the first thing read. From lg it is lifted out
+              of the flow and positioned against the section (the wrapper is
+              lg:static), keeping the right-hand editorial composition. */}
+          {showImages && (
+            <figure className="relative mt-12 sm:mt-14 lg:absolute lg:inset-y-0 lg:right-0 lg:mt-0 lg:w-[37%] xl:w-[38%]">
+              <div className="relative aspect-[16/9] bg-muted lg:absolute lg:inset-x-0 lg:top-16 lg:bottom-28 lg:aspect-auto">
+                <Image
+                  src={HERO_IMAGES[0]}
+                  alt={images[0].alt}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 38vw, 100vw"
+                  className="object-cover object-[60%_50%] saturate-[0.9]"
+                />
+              </div>
+
+              {/* The inset sits proud of the paper on a hairline, in daylight. */}
+              <div className="absolute bottom-16 -left-10 hidden aspect-[4/3] w-52 border border-foreground/15 bg-background lg:block xl:w-60">
+                <Image
+                  src={HERO_IMAGES[1]}
+                  alt={images[1].alt}
+                  fill
+                  sizes="15rem"
+                  className="object-cover object-[62%_50%] saturate-[0.9]"
+                />
+              </div>
+
+              {/* Mobile shows only the main image, so its caption names only that
+                  stage; desktop adds the inset and names both. */}
+              <figcaption className="pt-3 text-xs leading-relaxed text-muted-foreground lg:absolute lg:right-0 lg:bottom-8 lg:left-48 lg:pt-0 lg:pr-8 xl:left-56 xl:pr-12">
+                <span className="lg:hidden">{t("imageCaptionMobile")}</span>
+                <span className="hidden lg:inline">{t("imageCaption")}</span>
+              </figcaption>
+            </figure>
+          )}
+
           {/* The current portfolio is read from PRODUCT_CATEGORIES, so a new
               collection appears here without a copy change; custom sourcing
               is always the open end of the list. The standard states a
               capability that operates today. */}
-          <dl className="mt-14 grid gap-8 border-t border-foreground/15 pt-7 sm:grid-cols-2 sm:gap-10 lg:mt-auto lg:mb-16 lg:pt-8">
+          <dl className="mt-12 grid gap-8 border-t border-foreground/15 pt-7 sm:grid-cols-2 sm:gap-10 lg:mt-auto lg:mb-16 lg:pt-8">
             <div>
               <dt className="text-xs tracking-[0.2em] text-muted-foreground uppercase">{t("standard.label")}</dt>
               <dd className="mt-3 font-serif text-xl text-primary">{t("standard.title")}</dd>

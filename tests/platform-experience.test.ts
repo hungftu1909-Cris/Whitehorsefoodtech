@@ -197,3 +197,40 @@ test("luminous direction: the default homepage is light, not a dark editorial su
   assert.match(layout, /defaultTheme="light"/, "first visit is light regardless of OS preference");
   assert.doesNotMatch(layout, /defaultTheme="system"|\benableSystem\s/, "OS dark mode does not darken the default experience");
 });
+
+test("final refinement: content-first mobile hero, neutral family order, accessible touch targets", async () => {
+  const hero = fs.readFileSync("src/components/home/hero.tsx", "utf8");
+  // Below lg the headline and primary action precede the photograph and its disclosure.
+  const h1 = hero.indexOf("<h1");
+  const cta = hero.indexOf('t("ctaPrimary")');
+  const figure = hero.indexOf("<figure");
+  assert.ok(h1 > -1 && cta > h1 && figure > cta, "h1 → primary CTA → figure in source order");
+  assert.match(hero, /<figure className="[^"]*lg:absolute/, "figure leaves the flow from lg");
+  assert.match(hero, /max-w-7xl[^"]*lg:static/, "desktop figure is positioned against the section");
+
+  const { PRODUCT_CATEGORIES } = await import("../src/lib/nav.ts");
+  assert.notEqual(PRODUCT_CATEGORIES[0].slug, "coffee", "coffee does not lead hero list, grid, footer or menus");
+  const en = (await import("../messages/en.json", { with: { type: "json" } })).default;
+  const vi = (await import("../messages/vi.json", { with: { type: "json" } })).default;
+  for (const catalog of [en, vi]) {
+    const items = catalog.home.productsPreview.items as Record<string, { title: string }>;
+    assert.deepEqual(Object.keys(items).sort(), PRODUCT_CATEGORIES.map((c) => c.categoryKey).sort(), "homepage copy keyed per family");
+  }
+  assert.match(fs.readFileSync("src/components/home/products-preview.tsx", "utf8"), /items\[category\.categoryKey\]/);
+
+  const mobileNav = fs.readFileSync("src/components/layout/mobile-nav.tsx", "utf8");
+  assert.match(mobileNav, /aria-label=\{t\("openMenu"\)\}/, "hamburger is labelled as opening the menu");
+  assert.equal(en.nav.openMenu, "Open menu");
+  assert.equal(vi.nav.openMenu, "Mở menu");
+  assert.match(mobileNav, /className="size-11[^"]*xl:hidden"/, "hamburger is 44px");
+  for (const file of ["src/components/ui/dialog.tsx", "src/components/ui/sheet.tsx"]) {
+    assert.match(fs.readFileSync(file, "utf8"), /absolute top-2 right-2 size-11/, `${file}: close button is 44px`);
+  }
+
+  const split = fs.readFileSync("src/components/sections/split-cta.tsx", "utf8");
+  assert.doesNotMatch(split, /<p className="mt-auto/, "split CTA bodies start on the same line");
+  assert.match(split, /mt-auto flex flex-col gap-3/, "split CTA actions share a baseline");
+
+  const layout = fs.readFileSync("src/app/[locale]/layout.tsx", "utf8");
+  assert.match(layout, /<ThemeColor \/>/, "browser chrome follows an explicit dark choice");
+});

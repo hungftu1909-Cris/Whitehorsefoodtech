@@ -107,7 +107,7 @@ export function SiteHeader({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
 
         <div className="flex items-center gap-3">
           <LocaleSwitcher className="hidden sm:flex" blogSlugMap={blogSlugMap} />
-          <ThemeToggle className="cursor-pointer" />
+          <ThemeToggle className="size-11 cursor-pointer" />
           <Link
             href="/rfq"
             className={cn(buttonVariants({ variant: "default" }), "hidden h-10 cursor-pointer px-5 text-[0.875rem] tracking-[0.01em] sm:inline-flex")}

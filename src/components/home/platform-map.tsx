@@ -17,7 +17,7 @@ const MARKER: Record<Status, string> = {
  * and evidence. Every layer shows its delivery status (claim registry
  * row 29), matching the Quality page architecture. Drawn as one data
  * backbone with layers along it, not as a dashboard of tiles, on the pale
- * mist band so the roadmap reads open and light rather than as a control room.
+ * daylight mist band so the roadmap reads open and light rather than as a control room.
  */
 export function PlatformMap() {
   const t = useTranslations("home.platform");
@@ -31,7 +31,7 @@ export function PlatformMap() {
   );
 
   return (
-    <section aria-labelledby="platform-title" className="bg-muted text-foreground">
+    <section aria-labelledby="platform-title" className="bg-daylight text-foreground">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:py-32 lg:px-8 lg:py-40">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-6">

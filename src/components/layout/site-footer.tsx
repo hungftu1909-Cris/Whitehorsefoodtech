@@ -107,7 +107,9 @@ export function SiteFooter() {
                 {tf("terms")}
               </Link>
               {SOCIAL_LINKS.length > 0 && (
-                <div className="flex items-center gap-3 border-l border-primary-foreground/25 pl-5">
+                // Icons stay 16px; each link is a 44px target (negative margin keeps
+                // the row compact), spaced so neighbouring targets never overlap.
+                <div className="flex items-center gap-7 border-l border-primary-foreground/25 pl-5">
                   {SOCIAL_LINKS.map(({ href, label, Icon }) => (
                     <a
                       key={label}
@@ -115,7 +117,7 @@ export function SiteFooter() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="cursor-pointer text-primary-foreground/85 hover:text-primary-foreground"
+                      className="-m-3.5 inline-flex size-11 cursor-pointer items-center justify-center text-primary-foreground/85 hover:text-primary-foreground"
                     >
                       <Icon className="size-4" aria-hidden="true" />
                     </a>

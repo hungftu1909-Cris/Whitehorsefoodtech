@@ -6,6 +6,7 @@
   },
   "nav": {
     "home": "Trang chủ",
+    "openMenu": "Mở menu",
     "about": "Giới thiệu",
     "products": "Sản phẩm",
     "currentPortfolio": "Danh mục hiện tại",
@@ -130,28 +131,28 @@
       "title": "Các bộ sưu tập trọng tâm hôm nay.",
       "subtitle": "Năm bộ sưu tập với 29 SKU cốt lõi đã xác định dẫn dắt danh mục hiện tại, cùng khả năng phát triển mix, blend và công thức tùy chỉnh theo thông số của người mua. Khả năng cung ứng, thông số cuối cùng và hồ sơ được xác nhận theo từng yêu cầu.",
       "exploreCta": "Mở Product Explorer",
-      "items": [
-        {
-          "title": "Nguyên liệu Cà phê",
-          "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew"
-        },
-        {
+      "items": {
+        "coconut": {
           "title": "Nguyên liệu Dừa",
           "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa"
         },
-        {
-          "title": "Nguyên liệu Yến sào",
-          "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn"
-        },
-        {
+        "fruit": {
           "title": "Nguyên liệu Trái cây",
           "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree"
         },
-        {
+        "nutsSpicesBotanicals": {
           "title": "Hạt, Gia vị & Thảo mộc",
           "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa"
+        },
+        "coffee": {
+          "title": "Nguyên liệu Cà phê",
+          "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew"
+        },
+        "birdsNest": {
+          "title": "Nguyên liệu Yến sào",
+          "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn"
         }
-      ],
+      },
       "custom": {
         "eyebrow": "Ngoài danh mục hiện tại",
         "title": "Tìm nguồn một nguyên liệu Việt Nam khác.",

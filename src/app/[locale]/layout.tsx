@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ThemeColor } from "@/components/theme/theme-color";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { FloatingCtaBar } from "@/components/layout/floating-cta-bar";
@@ -18,7 +19,8 @@ import "../globals.css";
 
 export const viewport: Viewport = {
   // The site opens light regardless of OS preference, so the browser chrome
-  // matches the paper background.
+  // matches the paper background. <ThemeColor /> retints it after an
+  // explicit dark choice from the header toggle.
   themeColor: "#fbfaf7",
 };
 
@@ -104,6 +106,7 @@ export default async function LocaleLayout({
             OS dark preference no longer turns the whole site dark. Dark stays
             available from the header toggle and is remembered once chosen. */}
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+          <ThemeColor />
           <NextIntlClientProvider>
             <SiteHeader blogSlugMap={blogSlugMap} />
             <AudienceGateway />

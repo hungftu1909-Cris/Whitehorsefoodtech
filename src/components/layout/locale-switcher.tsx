@@ -41,7 +41,9 @@ export function LocaleSwitcher({
               )
             }
             className={cn(
-              "cursor-pointer rounded px-1 py-0.5 transition-colors",
+              // The invisible ::after widens the tap area to ~44px tall
+              // without changing the compact EN / VI layout.
+              "relative cursor-pointer rounded px-1 py-0.5 transition-colors after:absolute after:-inset-x-2 after:-inset-y-2.5",
               cur === locale
                 ? "font-semibold text-foreground"
                 : "text-muted-foreground hover:text-foreground"

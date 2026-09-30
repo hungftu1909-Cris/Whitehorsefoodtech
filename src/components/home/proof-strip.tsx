@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 /**
  * Current facts only (docs/claim-registry.md rows 3, 4 and 9), carrying the
  * "Current" tag. Three-year vision figures live on About, never here. Large
- * forest-ink serif figures on the pale mist band, each on a hairline rule;
+ * forest-ink serif figures on the daylight mist band, each on a hairline rule;
  * no pills or icons.
  */
 export function ProofStrip() {
@@ -11,7 +11,7 @@ export function ProofStrip() {
   const items = t.raw("items") as { value: string; label: string }[];
 
   return (
-    <section aria-labelledby="proof-title" className="bg-muted text-foreground">
+    <section aria-labelledby="proof-title" className="bg-daylight text-foreground">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 md:py-24 lg:px-8">
         <h2 id="proof-title" className="flex items-center gap-4 text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
           {t("title")}

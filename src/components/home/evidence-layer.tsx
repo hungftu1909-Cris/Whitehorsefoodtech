@@ -12,7 +12,7 @@ export function EvidenceLayer() {
   const items = t.raw("items") as { label: string; title: string; body: string }[];
 
   return (
-    <section aria-labelledby="evidence-title" className="bg-card">
+    <section aria-labelledby="evidence-title" className="bg-luminous">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:py-32 lg:px-8 lg:py-40">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-8">
           <div className="lg:col-span-6">

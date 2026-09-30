@@ -63,7 +63,7 @@ export function AudienceGateway() {
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-h-[calc(100dvh-2rem)] gap-0 sm:max-w-2xl overflow-y-auto p-0" aria-label="Enter the Whitehorse platform">
-        <DialogHeader className="border-b border-border px-6 py-6 pr-14 sm:px-8 sm:py-7">
+        <DialogHeader className="border-b border-border px-6 py-6 pr-16 sm:px-8 sm:py-7">
           <p className="text-xs font-medium tracking-[0.22em] text-accent uppercase">Enter the Whitehorse platform</p>
           <DialogTitle className="font-serif text-2xl leading-tight font-medium text-balance sm:text-[2rem]">
             Premium ingredients from Vietnam. One qualified supply workflow.
@@ -81,7 +81,7 @@ export function AudienceGateway() {
             locale="en"
             lang="en"
             onClick={rememberChoice}
-            className="group cursor-pointer bg-background p-6 transition-colors hover:bg-muted/50 sm:p-8"
+            className="group cursor-pointer bg-card p-6 transition-colors hover:bg-muted/60 sm:p-8"
           >
             <div className="flex items-start justify-between gap-4">
               <Building2 className="size-5 text-accent" strokeWidth={1.5} aria-hidden="true" />
@@ -95,7 +95,7 @@ export function AudienceGateway() {
             locale="vi"
             lang="vi"
             onClick={rememberChoice}
-            className="group cursor-pointer bg-background p-6 transition-colors hover:bg-muted/50 sm:p-8"
+            className="group cursor-pointer bg-card p-6 transition-colors hover:bg-muted/60 sm:p-8"
           >
             <div className="flex items-start justify-between gap-4">
               <Sprout className="size-5 text-accent" strokeWidth={1.5} aria-hidden="true" />

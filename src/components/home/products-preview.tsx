@@ -11,16 +11,22 @@ import { CUSTOM_SOURCING_HREF, PRODUCT_CATEGORIES } from "@/lib/nav";
  * ingredient, so the grid reads as today's focus, not the boundary
  * (2 + 2 + 2 on tablet, 3 + 3 on desktop). That plate is pale mist on a
  * hairline, not a dark block among the photographs.
+ *
+ * The approved studio images sit on warm peach sweeps. Rather than altering
+ * the files, each is shown on a cool mist mount (a passe-partout) with a
+ * slightly quieter saturation and a touch of lift, so the grid reads as a
+ * luminous gallery on white — not a beige retail shelf. Items are keyed by
+ * categoryKey, so the order always follows PRODUCT_CATEGORIES.
  */
 export function ProductsPreview() {
   const t = useTranslations("home.productsPreview");
   const tc = useTranslations("catalog");
   const locale = useLocale();
-  const items = t.raw("items") as { title: string; tagline: string }[];
+  const items = t.raw("items") as Record<string, { title: string; tagline: string }>;
   const number = (i: number) => String(i + 1).padStart(2, "0");
 
   return (
-    <section aria-labelledby="portfolio-title" className="bg-background">
+    <section aria-labelledby="portfolio-title" className="bg-card">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:py-32 lg:px-8 lg:py-40">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
           <div className="lg:max-w-2xl">
@@ -42,17 +48,20 @@ export function ProductsPreview() {
 
         <ul className="mt-16 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 md:mt-20 lg:grid-cols-3 lg:gap-y-20">
           {PRODUCT_CATEGORIES.map((category, i) => {
-            const item = items[i];
+            const item = items[category.categoryKey];
             return (
               <li key={category.slug}>
                 <Link href={`/products/${category.slug}`} className="group block cursor-pointer">
-                  <FamilyVisual
-                    family={category.slug as FamilySlug}
-                    locale={locale}
-                    name={item.title}
-                    labels={{ concept: tc("conceptPackBadge") }}
-                    showCounter={false}
-                  />
+                  <div className="border border-foreground/8 bg-muted p-3 sm:p-4">
+                    <FamilyVisual
+                      family={category.slug as FamilySlug}
+                      locale={locale}
+                      name={item.title}
+                      labels={{ concept: tc("conceptPackBadge") }}
+                      showCounter={false}
+                      className="brightness-[1.03] saturate-[0.82]"
+                    />
+                  </div>
                   <div className="mt-6 grid grid-cols-[2.5rem_1fr] gap-x-3">
                     <span className="pt-1.5 text-xs tracking-[0.12em] text-accent tabular-nums">{number(i)}</span>
                     <div>
@@ -68,18 +77,21 @@ export function ProductsPreview() {
           })}
 
           <li id="custom-sourcing" className="scroll-mt-28">
-            <div className="group relative flex aspect-[4/3] flex-col justify-between border border-foreground/10 bg-muted p-7 text-foreground md:p-8">
-              <p className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{t("custom.eyebrow")}</p>
-              <div>
-                <h3 className="max-w-[16ch] font-serif text-[1.75rem] leading-[1.15] font-medium text-balance text-primary md:text-[2rem]">
-                  {t("custom.title")}
-                </h3>
-                <Link
-                  href={CUSTOM_SOURCING_HREF}
-                  className="mt-6 inline-block text-[0.9375rem] font-medium underline decoration-accent/60 underline-offset-8 transition-colors after:absolute after:inset-0 group-hover:decoration-accent"
-                >
-                  {t("custom.cta")}
-                </Link>
+            {/* Same outer mount as the photographs, so the plate aligns with them. */}
+            <div className="group relative border border-foreground/8 bg-muted p-3 sm:p-4">
+              <div className="flex aspect-[4/3] flex-col justify-between border border-foreground/10 bg-card p-6 text-foreground md:p-7">
+                <p className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{t("custom.eyebrow")}</p>
+                <div>
+                  <h3 className="max-w-[16ch] font-serif text-[1.75rem] leading-[1.15] font-medium text-balance text-primary md:text-[2rem]">
+                    {t("custom.title")}
+                  </h3>
+                  <Link
+                    href={CUSTOM_SOURCING_HREF}
+                    className="mt-6 inline-block text-[0.9375rem] font-medium underline decoration-accent/60 underline-offset-8 transition-colors after:absolute after:inset-0 group-hover:decoration-accent"
+                  >
+                    {t("custom.cta")}
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="mt-6 grid grid-cols-[2.5rem_1fr] gap-x-3">

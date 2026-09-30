@@ -17,16 +17,22 @@
 // reach that detail via RFQ) but are enumerated per family in this file's
 // git history / project brief so a future per-SKU page can key off the same
 // `categoryKey` without restructuring this list.
+//
+// Platform order (2026-09-30): broad, multi-application plant-ingredient
+// families lead (coconut, fruit, nuts/spices/botanicals), then the two
+// specialty collections (coffee, bird's nest). No single family — coffee in
+// particular — reads as the brand. Copy keyed per family (e.g.
+// home.productsPreview.items.<categoryKey>) follows this order automatically.
 export const PRODUCT_CATEGORIES = [
-  { slug: "coffee", key: "productsCoffee" as const, categoryKey: "coffee" as const },
   { slug: "coconut", key: "productsCoconut" as const, categoryKey: "coconut" as const },
-  { slug: "birds-nest", key: "productsBirdsNest" as const, categoryKey: "birdsNest" as const },
   { slug: "fruit", key: "productsFruit" as const, categoryKey: "fruit" as const },
   {
     slug: "nuts-spices-botanicals",
     key: "productsNutsSpicesBotanicals" as const,
     categoryKey: "nutsSpicesBotanicals" as const,
   },
+  { slug: "coffee", key: "productsCoffee" as const, categoryKey: "coffee" as const },
+  { slug: "birds-nest", key: "productsBirdsNest" as const, categoryKey: "birdsNest" as const },
 ];
 
 // PRODUCT_CATEGORIES is the *current* portfolio, not the platform boundary.

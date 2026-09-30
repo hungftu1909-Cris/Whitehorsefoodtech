@@ -66,7 +66,7 @@ test("defined core portfolio is 29 SKUs across five families", () => {
 
 test("families, ranges and codes are consistent", () => {
   const families = PRODUCT_CATEGORIES.map((c) => c.slug);
-  assert.deepEqual(families, ["coffee", "coconut", "birds-nest", "fruit", "nuts-spices-botanicals"], "catalog order");
+  assert.deepEqual(families, ["coconut", "fruit", "nuts-spices-botanicals", "coffee", "birds-nest"], "platform order: coffee is not first");
   assert.equal(new Set(CATALOG_RANGES.map((r) => r.id)).size, CATALOG_RANGES.length, "range ids unique");
   for (const family of families) {
     assert.ok(CATALOG_RANGES.some((r) => r.family === family), `${family} has ranges`);

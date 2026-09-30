@@ -31,7 +31,7 @@ export function MobileNav({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         render={
-          <Button variant="ghost" size="icon" className="cursor-pointer xl:hidden" aria-label={t("home")}>
+          <Button variant="ghost" size="icon" className="size-11 cursor-pointer xl:hidden" aria-label={t("openMenu")}>
             <Menu className="size-5" />
           </Button>
         }
@@ -118,7 +118,7 @@ export function MobileNav({ blogSlugMap }: { blogSlugMap?: BlogSlugMap }) {
 
           <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
             <LocaleSwitcher blogSlugMap={blogSlugMap} />
-            <ThemeToggle className="cursor-pointer" />
+            <ThemeToggle className="size-11 cursor-pointer" />
           </div>
         </nav>
       </SheetContent>

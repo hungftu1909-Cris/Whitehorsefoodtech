@@ -6,6 +6,7 @@
   },
   "nav": {
     "home": "Home",
+    "openMenu": "Open menu",
     "about": "About",
     "products": "Products",
     "currentPortfolio": "Current portfolio",
@@ -130,28 +131,28 @@
       "title": "Today's focus collections.",
       "subtitle": "Five collections and 29 defined core SKUs lead the current portfolio, with mixes, blends and custom formulations developed to buyer specification. Availability, final specification and evidence are confirmed per request.",
       "exploreCta": "Open Product Explorer",
-      "items": [
-        {
-          "title": "Coffee Ingredients",
-          "tagline": "Green, roasted, soluble, extract & cold brew"
-        },
-        {
+      "items": {
+        "coconut": {
           "title": "Coconut Ingredients",
           "tagline": "Milk & cream, powders & solids, blossom sugar"
         },
-        {
-          "title": "Bird's Nest Ingredients",
-          "tagline": "Cleaned nest & instant / ready-to-prepare formats"
-        },
-        {
+        "fruit": {
           "title": "Fruit Ingredients",
           "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée"
         },
-        {
+        "nutsSpicesBotanicals": {
           "title": "Nuts, Spices & Botanicals",
           "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise"
+        },
+        "coffee": {
+          "title": "Coffee Ingredients",
+          "tagline": "Green, roasted, soluble, extract & cold brew"
+        },
+        "birdsNest": {
+          "title": "Bird's Nest Ingredients",
+          "tagline": "Cleaned nest & instant / ready-to-prepare formats"
         }
-      ],
+      },
       "custom": {
         "eyebrow": "Beyond the current portfolio",
         "title": "Source another Vietnamese ingredient.",

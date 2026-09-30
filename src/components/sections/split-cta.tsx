@@ -16,6 +16,8 @@ type Path = {
  * Closing CTA with two pathways: buyers to RFQ, suppliers to registration.
  * Two light plates (white on a hairline, and pale mist) with quiet,
  * arrow-free actions; the buyer path leads with the solid forest action.
+ * Both bodies start on the same line under the label row and the actions
+ * sit on a shared baseline, whatever the copy length.
  */
 export function SplitCta({
   title,
@@ -44,8 +46,8 @@ export function SplitCta({
                 <h3 className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{path.label}</h3>
                 <span className="font-serif text-lg text-muted-foreground tabular-nums">0{i + 1}</span>
               </div>
-              <p className="mt-auto max-w-lg pt-14 font-serif text-xl leading-relaxed text-foreground md:text-[1.4rem]">{path.body}</p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <p className="mt-14 max-w-lg font-serif text-xl leading-relaxed text-foreground md:text-[1.4rem]">{path.body}</p>
+              <div className="mt-auto flex flex-col gap-3 pt-8 sm:flex-row sm:flex-wrap">
                 <Link
                   href={path.href}
                   className={cn(

@@ -113,6 +113,15 @@ per-order disclosure. Neither mode is presented as a
 specific inventory lot, supplier batch, certification/traceability evidence
 or stock availability.
 
+**Homepage portfolio treatment (2026-09-30, final refinement):** several
+family images sit on warm peach studio sweeps, which read beige on the
+light page. The fix is presentation only: on the homepage grid each
+family visual sits on a cool mist mount (`bg-muted`, 12–16px, hairline)
+on a white section, with CSS `brightness-[1.03] saturate-[0.82]`. The
+source files, crops and `FAMILY_IMAGES` mapping are unchanged; no image was
+added, generated, retouched or recoloured on disk. Inner pages keep their
+existing treatment.
+
 **Retired:** `public/images/products/*-card.jpg` / `*-detail.jpg`
 (packaging mock-ups with "100% natural", "organic & natural" and similar
 wording) are no longer referenced by any code

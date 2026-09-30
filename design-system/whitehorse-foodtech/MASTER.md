@@ -102,6 +102,39 @@ precision and openness. Not a colour swap and not a beige lifestyle site.
   custom-sourcing plate is mist on a hairline; split-CTA plates are white
   on a hairline (buyer, solid forest action) and mist (supplier, outline).
 
+### Final refinement (2026-09-30)
+
+- **Homepage rhythm (updated):** luminous hero → white (operating
+  standard) → daylight mist (proof) → white (portfolio) → luminous
+  (evidence) → daylight mist (technology) → paper (split CTA) → forest
+  footer. **`.bg-daylight`** is mist lifted by a white bloom from above, a
+  faint sage settle below and a 1px top hairline — same palette as
+  `.bg-luminous`, no new colours, so the middle carries light instead of
+  reading as flat grey stock.
+- **Mobile hero is content-first:** below `lg` the order is eyebrow →
+  headline → subtitle → actions → photograph + disclosure caption →
+  standard / portfolio. From `lg` the figure is absolutely positioned
+  against the section (the content wrapper is `lg:static`); the desktop
+  composition is unchanged.
+- **Family order is platform-first:** coconut → fruit → nuts, spices &
+  botanicals → coffee → bird's nest (`PRODUCT_CATEGORIES`), shared by the
+  hero list, portfolio grid, menus, footer, /products and the sitemap.
+  Coffee never leads. Homepage family copy is keyed by `categoryKey`.
+- **Portfolio imagery:** photographs sit on a cool mist mount on white with
+  a gentle `brightness-[1.03] saturate-[0.82]`, so warm studio sweeps read
+  as a gallery, not a beige retail shelf. The custom-sourcing plate uses
+  the same mount (white plate inside) so every tile aligns.
+- **Split CTA:** bodies start on the same line under the label row;
+  actions are pushed to a shared baseline (`mt-auto` on the action row).
+- **Touch targets:** hamburger, theme toggle, dialog and sheet close
+  buttons are 44px (`size-11`); footer social icons keep a 16px glyph in a
+  44px target; the EN / VI switcher widens its hit area with an invisible
+  `::after`. The hamburger is labelled `nav.openMenu` (“Open menu” / “Mở
+  menu”).
+- **Browser chrome:** the server emits the paper `theme-color`;
+  `<ThemeColor />` retints it to `#111612` once an explicit dark choice
+  (header toggle, stored by next-themes) resolves, and back on light.
+
 ## Colors
 
 Light mode is primary (export/B2B site — dark mode is a nice-to-have, not a
