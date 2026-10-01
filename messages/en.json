@@ -69,16 +69,16 @@
   "home": {
     "hero": {
       "eyebrow": "Vietnam ingredient platform",
-      "title": "Premium ingredients from Vietnam, qualified around your specification.",
-      "subtitle": "Whitehorse connects global product requirements with qualified Vietnamese sources, request-specific evidence and coordinated commercial execution.",
+      "title": "Vietnam ingredients. Qualified to your specification.",
+      "subtitle": "Coffee, coconut, fruit and custom sourcing — qualified suppliers, coordinated QA/QC and documents for each order.",
       "ctaPrimary": "Request a quote",
-      "ctaSecondary": "Explore the current portfolio",
-      "portfolioLabel": "Current focus collections",
+      "ctaSecondary": "Explore products",
+      "portfolioLabel": "Product collections",
       "portfolioBeyond": "Custom sourcing by specification",
       "standard": {
         "label": "The Whitehorse standard",
         "status": "Operating now",
-        "title": "Specification-led sourcing"
+        "title": "Specification-led supply"
       },
       "images": {
         "processing": {
@@ -91,40 +91,46 @@
           "alt": "A farmer harvesting ripe coffee cherries into a basin among coffee trees"
         }
       },
-      "imageCaption": "Representative supply-network stages — harvest at a growing area, ingredient processing and export air freight. Not Whitehorse-owned farms or facilities, or a specific shipment.",
-      "imageCaptionMobile": "Representative supply-network stages — harvest at a growing area, ingredient processing and export air freight. Not Whitehorse-owned farms or facilities, or a specific shipment.",
+      "imageCaption": "Illustrative: harvest → processing → air freight. Not Whitehorse-owned sites or shipments.",
+      "imageCaptionMobile": "Illustrative: harvest → processing → air freight. Not Whitehorse-owned sites or shipments.",
       "paths": {
         "label": "Choose your path",
-        "buyer": "Global buyers — explore in English",
-        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt",
+        "buyer": "Buyers — continue in English",
+        "supplier": "Nhà cung cấp — tiếng Việt",
         "chooser": "Choose your entry"
-      }
+      },
+      "facts": [
+        "Bulk",
+        "OEM / ODM / OBM",
+        "QA/QC per order",
+        "Export documents"
+      ]
     },
     "operating": {
       "eyebrow": "How the platform works",
-      "title": "One operating standard, from specification to execution.",
-      "subtitle": "The portfolio can grow; the way Whitehorse qualifies and executes supply stays fixed. Each request moves through the same four disciplines.",
+      "title": "One standard, from specification to delivery.",
+      "subtitle": "Four steps, every ingredient.",
       "status": "Operating now",
       "stages": [
         {
           "number": "01",
           "title": "Buyer specification",
-          "body": "Product, format, application, market, volume, packaging and document needs are defined with the buyer before sourcing begins."
+          "body": "Product, volume, market, documents — agreed <k>first</k>."
         },
         {
           "number": "02",
           "title": "Qualified network",
-          "body": "Suppliers are screened against product capability, facility, market and documentation requirements, then matched to the specification."
+          "body": "Screened for capability and market fit."
         },
         {
           "number": "03",
           "title": "Request-specific evidence",
-          "body": "Samples, test scope, supplier certificates and lot documents are agreed for the selected supplier, site, product and order."
+          "body": "Samples, tests, lot documents <k>per order</k>."
         },
         {
           "number": "04",
           "title": "Commercial execution",
-          "body": "Bulk supply, or OEM, ODM and OBM through suitable manufacturing partners, with terms, packing, documents and logistics coordinated per order."
+          "body": "<k>Bulk</k> or <k>OEM / ODM / OBM</k> through suitable manufacturing partners."
         }
       ],
       "cta": "See how a request moves",
@@ -137,22 +143,22 @@
       "items": [
         {
           "value": "29",
-          "label": "Defined core SKUs across today's five focus collections"
+          "label": "Defined core SKUs in <k>five collections</k>"
         },
         {
           "value": "50+",
-          "label": "Suppliers screened by product capability, facility and market requirements"
+          "label": "Suppliers screened for capability, facility and market"
         },
         {
           "value": "10+",
-          "label": "Markets with active buyer and trading relationships"
+          "label": "Markets with active buyer relationships"
         }
       ]
     },
     "productsPreview": {
-      "eyebrow": "Current portfolio",
-      "title": "Today's focus collections.",
-      "subtitle": "Five collections and 29 defined core SKUs lead the current portfolio, with mixes, blends and custom formulations developed to buyer specification. Availability, final specification and evidence are confirmed per request.",
+      "eyebrow": "Product collections",
+      "title": "Today's collections.",
+      "subtitle": "<k>29</k> core SKUs in five collections, plus custom formulations.",
       "exploreCta": "Open Product Explorer",
       "items": {
         "coconut": {
@@ -179,7 +185,7 @@
       "custom": {
         "eyebrow": "Beyond the current portfolio",
         "title": "Source another Vietnamese ingredient.",
-        "body": "Briefs outside today's collections — tea, cacao, rice, herbs, plant-based or functional ingredients, for example — are assessed against your specification through the same standard. Supplier fit, feasibility and evidence are confirmed before any commitment.",
+        "body": "Tea, cacao, rice, herbs and more — assessed against your specification; supplier fit and evidence confirmed before any commitment.",
         "cta": "Start a custom sourcing request"
       },
       "documentsLabel": "Download"
@@ -187,7 +193,7 @@
     "platform": {
       "eyebrow": "Supply-chain technology",
       "title": "The next layers of the platform, labelled by status.",
-      "subtitle": "Today the standard runs through people, supplier workflow and request records. Digital layers are added in stages, and each shows whether it operates now or is still being built.",
+      "subtitle": "Today: people, supplier workflow and request records. Digital layers follow in phased stages.",
       "statusLabels": {
         "current": "Operating now",
         "building": "Being built",
@@ -228,7 +234,7 @@
         ],
         "ai": "AI + data intelligence across the layers"
       },
-      "note": "Operating now means a working Whitehorse workflow. Being built and Roadmap mean product directions under development; they do not imply a live portal, account area, network-wide integration or real-time lot tracking. Coverage will vary by supplier, facility and project.",
+      "note": "Operating now = a working Whitehorse workflow. Being built / Roadmap = in development: no live portal, network-wide integration or real-time lot tracking yet. Coverage will vary by supplier and project.",
       "cta": "Explore the technology architecture"
     },
     "evidence": {
@@ -258,7 +264,7 @@
           "body": "The document set and certificate-of-analysis scope are confirmed before the commercial order."
         }
       ],
-      "note": "Evidence is request-specific. Availability, current validity, test scope and document set are confirmed with the selected supplier for each order."
+      "note": "Evidence and documents confirmed per order."
     },
     "value": {
       "eyebrow": "How Whitehorse creates value",
@@ -291,13 +297,13 @@
     },
     "ctaBanner": {
       "title": "Two ways into the platform.",
-      "subtitle": "Share your product, volume and destination port. Our sales team reviews qualified requests and follows up with the next commercial step.",
+      "subtitle": "Our sales team reviews qualified requests and follows up with the next commercial step.",
       "cta": "Request a quote",
       "buyerLabel": "For buyers",
-      "buyerBody": "Brief a current collection or another Vietnamese ingredient, define the specification and start a bulk, OEM, ODM or OBM request.",
+      "buyerBody": "<k>Bulk</k> or <k>OEM / ODM / OBM</k> — to your specification.",
       "buyerCta": "Request a quote",
       "supplierLabel": "For suppliers",
-      "supplierBody": "Farmers, cooperatives and processors — within or beyond today's collections — can submit capability, facility and document information for assessment.",
+      "supplierBody": "Submit capability, facility and documents for assessment.",
       "supplierCta": "Apply as a supplier"
     }
   },
@@ -305,74 +311,74 @@
     "hero": {
       "eyebrow": "Whitehorse Foodtech / Premium ingredient platform",
       "title": "Raising the standard of Vietnamese ingredients for global value chains.",
-      "subtitle": "Whitehorse Foodtech is building a premium B2B ingredient platform connecting farmers and processors more directly with manufacturers, brands and distributors — designed for fewer layers that add no value, and a more transparent, trusted supply chain.",
-      "imageCaption": "Ingredient-family imagery. Product, source and final specification are confirmed per request.",
+      "subtitle": "A premium B2B ingredient platform linking Vietnamese farmers and processors directly with manufacturers, brands and distributors.",
+      "imageCaption": "Ingredient-family imagery; product and specification confirmed per request.",
       "ctaProducts": "Explore ingredient families",
       "ctaRfq": "Send an ingredient request",
       "mosaicLabel": "Ingredient families Whitehorse works with"
     },
     "thesis": {
       "eyebrow": "Why Whitehorse",
-      "body": "Vietnam does not lack quality agricultural produce. What is missing is a system strong enough to turn that advantage into ingredients with clear standards, the right applications and sustainable access to markets.",
-      "close": "Whitehorse was formed to close that gap."
+      "body": "Vietnam has quality produce — but not yet the system to standardise it.",
+      "close": "Whitehorse exists to close that gap."
     },
     "bottlenecks": {
       "eyebrow": "Where value is lost",
       "title": "Large potential. Too little of the value retained.",
-      "intro": "Many Vietnamese crops still leave the chain as raw or lightly processed commodities, while more of the value is created further along — in processing, application development, standards and brand. The gap sits at six points.",
+      "intro": "The gap sits at six points.",
       "items": [
         {
           "title": "Post-harvest technology",
-          "description": "Uneven drying, storage and primary processing make quality hard to hold steady from growing area to factory."
+          "description": "Uneven drying and storage."
         },
         {
           "title": "R&D and application development",
-          "description": "Ingredients are usually sold as commodities and rarely developed around a buyer's specific application — beverages, bakery, confectionery or nutrition."
+          "description": "Sold as commodity, not by application."
         },
         {
           "title": "Standards and quality documentation",
-          "description": "Specifications, test methods and lot records are rarely organised in a way an international buyer can assess quickly."
+          "description": "Records hard to assess."
         },
         {
           "title": "Ingredient branding",
-          "description": "Vietnamese ingredients are mostly recognised by general origin, not by their characteristics, quality or supply capability."
+          "description": "Known by origin, not quality."
         },
         {
           "title": "Market-access networks",
-          "description": "Farmers and smaller processors struggle to reach manufacturers and brands directly, so value is spread across many intermediary layers."
+          "description": "Few direct routes to buyers."
         },
         {
           "title": "Platform enterprises",
-          "description": "Few enterprises act as infrastructure — connecting supply, processing capability, product data and market demand in one system."
+          "description": "Few platform enterprises."
         }
       ]
     },
     "role": {
       "eyebrow": "The role Whitehorse plays",
-      "title": "From fragmented supply to an ingredient platform buyers can rely on.",
-      "body": "Whitehorse does not own every farm, factory or technology. We are the connection and orchestration layer across four parts of the chain — supply, processing capability within our partner network, product and application data, and market demand — so each ingredient request is met with a suitable source, a clear specification and records that can be checked.",
+      "title": "From fragmented supply to a platform buyers can rely on.",
+      "body": "We <k>connect and orchestrate</k> supply, processing, data and demand — without owning every farm or factory.",
       "capabilities": [
         {
           "title": "Curated Supply",
-          "description": "Farmers, cooperatives and processors selected and assessed for the product, site and market in question — not an open listing."
+          "description": "Assessed per product and market."
         },
         {
           "title": "Application-led Products",
-          "description": "Formats and specifications developed from the buyer's application with processing partners whose capability fits it — including OEM, ODM and OBM where the product, partner facility and market allow."
+          "description": "<k>OEM / ODM / OBM</k> where partner and market allow."
         },
         {
           "title": "Quality & Product Intelligence",
-          "description": "Specifications, test methods, supplier documents and lot records organised so a buyer can assess them."
+          "description": "Specs, tests and lot records you can check."
         },
         {
           "title": "Market Connection",
-          "description": "A more direct route from Vietnamese supply to manufacturers, brands, ingredient users and distribution partners."
+          "description": "Direct routes to manufacturers and brands."
         }
       ]
     },
     "control": {
       "eyebrow": "QA/QC control point",
-      "title": "Value does not start at the transaction. It starts at the control point.",
+      "title": "Quality starts at the control point, not the transaction.",
       "flowLabel": "Quality control points from growing area to buyer feedback",
       "steps": [
         {
@@ -400,34 +406,34 @@
           "description": "Buyer feedback returned to source"
         }
       ],
-      "body": "Whitehorse is progressively building quality-assurance infrastructure — organising evidence, process and accountability around each of these points — so buyers can assess supply with clearer evidence, not promises.",
-      "note": "Testing scope, documentation and COA are agreed for each order. Certifications belong to a specific supplier, site and scope."
+      "body": "Whitehorse is progressively building <k>QA/QC</k> records around each point.",
+      "note": "Certificates belong to a specific supplier, site and scope."
     },
     "mission": {
       "label": "Mission",
-      "body": "To elevate the position of Vietnamese agriculture in global value chains through deep-processing capabilities, product development and a quality system that enables Vietnamese ingredients to be chosen for their value—not only their origin."
+      "body": "Raise Vietnamese agriculture in global value chains — through deep processing, product development and quality systems."
     },
     "vision": {
       "label": "Vision",
-      "body": "To become Vietnam's premium ingredient platform, where deep-processing capability, quality management and value-chain orchestration converge to bring Vietnamese ingredients into high-value supply chains worldwide.",
+      "body": "Vietnam's premium ingredient platform — uniting deep processing, quality management and value-chain orchestration.",
       "rolesTitle": "Four long-term roles",
       "rolesNote": "Roles we are building toward — not current services.",
       "roles": [
         {
           "title": "Premium Ingredient Platform",
-          "description": "Where professional buyers find Vietnamese ingredients defined by specification, application and evidence."
+          "description": "Defined by spec and evidence."
         },
         {
           "title": "Deep-processing Technology Layer",
-          "description": "Connecting processing partners and technologies that move raw produce toward higher-value ingredient formats."
+          "description": "Higher-value formats."
         },
         {
           "title": "Vietnamese Agricultural Value-chain Architect",
-          "description": "Designing how growing areas, processors, laboratories and buyers work together, with accountability at each step."
+          "description": "Accountable chain design."
         },
         {
           "title": "Bridge to Global Ingredient Markets",
-          "description": "A dependable route for Vietnamese ingredients into the supply chains of international manufacturers and brands."
+          "description": "Into global supply chains."
         }
       ]
     },
@@ -435,42 +441,42 @@
       "label": "Long-term direction",
       "note": "Vision — not a current service",
       "title": "Starting with ingredients. Designed for the whole agricultural chain.",
-      "body": "We start with ingredients because that is where standards and applications make the clearest difference. As data, standards and the network mature, the platform is designed to connect cooperatives, farmers, factories, laboratories, logistics providers and professional buyers — including direct quality-assurance and quality-control capability at key sourcing points."
+      "body": "Ingredients first; designed to grow toward the wider chain, including direct QA/QC capability at key sourcing points."
     },
     "ecosystem": {
       "eyebrow": "Ecosystem development",
       "title": "Working with Balance Life on circular agriculture",
-      "body": "Whitehorse Foodtech is currently working with Balance Life around a circular-agriculture initiative. The broader initiative brings together production, value-chain and finance participants. Participant names, scale and implementation scope are disclosed only when formally confirmed."
+      "body": "Circular-agriculture initiative with Balance Life; scope disclosed when confirmed."
     },
     "status": {
-      "title": "Where Whitehorse stands, and where it is heading",
-      "note": "Current figures describe the network today. Three-year vision figures are direction, not a current track record.",
+      "title": "Today, and the direction ahead",
+      "note": "Three-year figures are direction, not track record.",
       "items": [
         {
           "tag": "Current",
           "value": "50+",
-          "label": "Suppliers screened by product capability, facility and market requirements"
+          "label": "Screened suppliers"
         },
         {
           "tag": "Current",
           "value": "10+",
-          "label": "Markets with active buyer relationships and commercial conversations"
+          "label": "Markets with active buyer relationships"
         },
         {
           "tag": "Three-year vision",
           "value": "3,000+",
-          "label": "Cooperatives and source groups within the network's visibility and relationship reach"
+          "label": "Cooperatives and source groups within reach"
         },
         {
           "tag": "Three-year vision",
           "value": "10,000+",
-          "label": "Active buyers within the network's relationship reach"
+          "label": "Active buyers within reach"
         }
       ]
     },
     "cta": {
       "title": "Start with a specific ingredient request.",
-      "subtitle": "Share the application, specification, expected volume and destination market. Our sales team reviews qualified requests and follows up with the next commercial step.",
+      "subtitle": "Send application, specification, volume and market.",
       "buyerLabel": "For buyers",
       "buyerBody": "Manufacturers, brands, ingredient users and distribution partners.",
       "buyerCta": "Send an ingredient request",
@@ -484,7 +490,7 @@
       "eyebrow": "Product Explorer",
       "title": "Find the ingredient format your brief needs.",
       "subtitle": "Explore 29 defined core SKUs through eighteen sourcing and development ranges across five ingredient families. Mixes, blends and custom formulations can also be developed to request. Final specification, availability, test method, documentation and COA scope are agreed per order.",
-      "lead": "29 defined core SKUs in eighteen ranges across today's five families. Specification, availability and documents are agreed per order."
+      "lead": "29 defined core SKUs · 18 ranges · 5 families. Specification and availability are agreed per order."
     },
     "explorer": {
       "eyebrow": "Structured catalog",
@@ -506,7 +512,7 @@
         "slug": "coffee",
         "tagline": "Green, roasted, soluble, extract & cold brew",
         "status": "9 defined SKUs",
-        "description": "Coffee ingredients from Vietnam's main growing regions for food and beverage applications — green and roasted beans, soluble coffee, extracts and cold brew. Bulk, private-label and single-serve formats are discussed per project, with specification and packaging agreed to each product and market.",
+        "description": "Vietnamese <k>coffee</k> for food and beverage: green, roasted, soluble, extract and cold brew — bulk, private label or single-serve.",
         "applicationsTitle": "Common applications",
         "applications": [
           "Roasters",
@@ -522,7 +528,7 @@
         "slug": "coconut",
         "tagline": "Milk & cream, powders & solids, blossom sugar",
         "status": "5 defined SKUs",
-        "description": "Vietnamese coconut made into versatile ingredients for food and beverage applications — from coconut milk and cream to coconut powders and coconut blossom sugar. Suitable for industrial food production and retail, with bulk supply and private-label options agreed to each market's requirements.",
+        "description": "Vietnamese <k>coconut</k> ingredients — milk, cream, powders and blossom sugar — for industrial and retail use, bulk or private label.",
         "applicationsTitle": "Common applications",
         "applications": [
           "Cooking & food processing",
@@ -538,7 +544,7 @@
         "slug": "birds-nest",
         "tagline": "Cleaned nest & instant / ready-to-prepare formats",
         "status": "2 defined SKUs",
-        "description": "Vietnamese edible bird's nest, selected and cleaned, as cleaned nest and instant or ready-to-prepare formats for health food, wellness retail, private-label RTD and nutraceutical applications. Concentrates, extracts, powders and functional blends are developed as OEM on request.",
+        "description": "Selected, cleaned Vietnamese <k>bird's nest</k> — cleaned and ready-to-prepare formats; concentrates, extracts and powders as OEM on request.",
         "applicationsTitle": "Common applications",
         "applications": [
           "Health food & wellness retail",
@@ -552,7 +558,7 @@
         "slug": "fruit",
         "tagline": "Soft-dried, freeze-dried, powder, concentrate & purée",
         "status": "9 defined SKUs",
-        "description": "Vietnamese tropical fruits processed into shelf-stable ingredients. The core range covers soft-dried and freeze-dried mango, soft-dried soursop, and passion fruit as concentrate, frozen purée and powder, for food, beverage and nutrition applications. Other fruit formats are available on request or as OEM.",
+        "description": "Vietnamese tropical <k>fruit</k> as shelf-stable ingredients: soft- and freeze-dried mango, soursop, and passion fruit concentrate, purée and powder.",
         "applicationsTitle": "Common applications",
         "applications": [
           "Smoothie & beverage bases",
@@ -566,7 +572,7 @@
         "slug": "nuts-spices-botanicals",
         "tagline": "Cashew, black pepper, freeze-dried cinnamon & star anise",
         "status": "4 defined SKUs",
-        "description": "Selected Vietnamese nuts and spices graded to the buyer's specification. The core range covers cashew kernels, whole black pepper, freeze-dried cinnamon and freeze-dried star anise, with documentation agreed per order for food manufacturers and ingredient partners. Other botanicals are available on request.",
+        "description": "Vietnamese <k>nuts and spices</k> graded to your specification: cashew kernels, black pepper, freeze-dried cinnamon and star anise.",
         "applicationsTitle": "Common applications",
         "applications": [
           "Food manufacturing",
@@ -578,7 +584,7 @@
     },
     "sampleCta": {
       "title": "Need samples or a specification sheet?",
-      "subtitle": "Tell us the product and format you're evaluating. Samples and documentation are arranged per request, depending on the product and supplier.",
+      "subtitle": "Samples and documents are arranged per request.",
       "cta": "Request samples",
       "secondaryCta": "Request a quote"
     }
@@ -588,19 +594,19 @@
     "breadcrumbProducts": "Products",
     "breadcrumbLabel": "Breadcrumb",
     "confirmedTitle": "Detailed SKU pages",
-    "confirmedSubtitle": "Nine coffee SKUs currently have public code-level detail. The wider defined portfolio is organised by range; availability, final specification and COA scope are confirmed for each request.",
+    "confirmedSubtitle": "Nine coffee SKUs have code-level pages. Availability and final specification are confirmed per request.",
     "portfolioEyebrow": "Defined portfolio",
     "portfolioTitle": "{count} core SKU codes in this family",
-    "portfolioSubtitle": "These codes identify the defined Whitehorse portfolio. They do not imply stock, a fixed supplier or automatic export readiness; detailed public code pages are being expanded family by family.",
+    "portfolioSubtitle": "Codes identify the defined portfolio — not stock, a fixed supplier or export readiness.",
     "portfolioCodesLabel": "Defined SKU codes",
     "generalSpecLabel": "General specification",
-    "generalSpecLead": "The specifications shown below are general reference frameworks, not a one-size-fits-all offer. Tell us the values, application, destination market, volume, certifications and packaging you need; we will match the supplier and confirm the final specification with you.",
+    "generalSpecLead": "General reference frameworks, not a fixed offer. Send your values, application, market, volume and packaging; we match the supplier and confirm the final specification.",
     "generalSpecCta": "Tell us the specification you need",
     "rangesTitle": "Sourcing & custom-development ranges",
-    "rangesSubtitle": "Broader formats we can source or develop on request, matched to suppliers whose product, site and documentation fit your specification.",
+    "rangesSubtitle": "Broader formats sourced or developed on request, with suppliers whose product, site and documents fit.",
     "rangeLabel": "Range",
     "formatsLabel": "Formats",
-    "specifyLabel": "Buyer specification fields",
+    "specifyLabel": "Specify",
     "applicationsLabel": "Applications",
     "filterLabel": "Filter by range",
     "filterAll": "All",
@@ -613,15 +619,15 @@
     "requestSample": "Request sample",
     "requestSpec": "Send required specification",
     "requestQuote": "Request quote",
-    "requestRange": "Tell us your required specification",
+    "requestRange": "Send your specification",
     "conceptPackBadge": "Concept packaging",
-    "conceptPackNote": "Packaging concept render. Label text is illustrative — the final pack, label and specification are confirmed with the supplier or co-packer for each order. Not a photograph of stock.",
-    "perRequestNote": "All specifications shown are general references. A listed product or range is not a statement of stock or export readiness. Tell us the specification you need; availability, final values, test method, documentation and COA scope are then confirmed for that request. OEM, ODM and OBM options depend on the product, partner facility and market.",
+    "conceptPackNote": "Concept render — label text is illustrative; final pack and label are confirmed per order. Not a photograph of stock.",
+    "perRequestNote": "Specifications shown are general references, not stock or export readiness. Final values, test method, documents and COA scope are confirmed per request; OEM / ODM / OBM depends on product and partner.",
     "referenceTitle": "General specification framework",
     "referenceDisclaimer": "These are general reference parameters, not a fixed specification for every supplier or lot. Tell us the specification you need; the final values, test methods, documentation and COA scope are agreed for your request.",
     "indicativeLabel": "General reference specification",
     "moreDetail": "More specification detail",
-    "indicativeNote": "General reference only — final values are confirmed against the selected supplier's specification sheet for each request.",
+    "indicativeNote": "Reference only — final values follow the selected supplier's specification.",
     "paramHeader": "Parameter",
     "referenceHeader": "Typical reference",
     "methodHeader": "Method / basis",
@@ -640,10 +646,10 @@
     "packagingExplore": "Explore packaging architecture",
     "orderingTitle": "How a request works",
     "orderingSteps": [
-      "Tell us the code or range, volume, destination and any specification or certification needs.",
-      "We match suppliers whose product, site and documentation fit, and tell you each one's qualification status.",
-      "Reference samples and a written specification come first; the approved sample becomes the order reference.",
-      "Commercial terms, documents and delivery are confirmed in the quotation and contract."
+      "Send the code or range, volume, destination and requirements.",
+      "We match fitting suppliers and share their qualification status.",
+      "Reference samples and a written spec first — the approved sample is the reference.",
+      "Terms, documents and delivery confirmed in quote and contract."
     ],
     "relatedTitle": "Related product codes",
     "broaderTitle": "Need a different format?",
@@ -675,67 +681,67 @@
     "library": {
       "eyebrow": "Download centre",
       "title": "Shareable commercial materials.",
-      "subtitle": "Use these documents for an initial review, then send us the product, application and specification your project requires.",
+      "subtitle": "For an initial review — then send us your product and specification.",
       "brochure": {
         "title": "Whitehorse Product Brochure",
-        "description": "A concise overview of Whitehorse, the five ingredient families and the current product portfolio for buyer introductions.",
+        "description": "Whitehorse and the five ingredient families at a glance.",
         "meta": "PDF · 4 pages",
         "cta": "Download brochure"
       },
       "packaging": {
         "title": "Whitehorse Packaging Architecture",
-        "description": "The reference pack ladder across five ingredient families, four commercial channels and 27 master structures, with buyer-custom design available by brief.",
+        "description": "Reference packs across five families, four channels and 27 master structures.",
         "meta": "PDF · 18 pages",
         "cta": "Download packaging guide"
       },
       "profile": {
         "title": "Whitehorse Company Profile",
-        "description": "The detailed corporate profile is being finalised. This download will activate after the approved file is added.",
+        "description": "Being finalised — available soon.",
         "meta": "Coming soon",
         "cta": "Available soon"
       },
-      "note": "Brochure and website specifications are general commercial references. Final specification, supplier, site, certification scope, availability, packaging and order documents are confirmed for each request."
+      "note": "General commercial references. Specification, supplier, certification scope, availability and documents are confirmed per request."
     }
   },
   "certifications": {
     "hero": {
       "eyebrow": "Quality & supplier qualification",
       "title": "Evidence before claims.",
-      "subtitle": "We match each requirement to a product, supplier site and destination market — then confirm the relevant evidence for the order.",
-      "imageNote": "Representative image of a supply-network processing stage. The exact supplier, site and certification scope are confirmed per request.",
+      "subtitle": "Evidence matched to product, site and market — confirmed per order.",
+      "imageNote": "Illustrative processing stage. Supplier, site and certification scope are confirmed per request.",
       "action": "Discuss your quality brief"
     },
     "standards": {
       "eyebrow": "What we assess",
       "title": "Standards checked for the actual brief",
-      "subtitle": "These are common checkpoints, not blanket Whitehorse certifications. Applicability is confirmed per product and site."
+      "subtitle": "Checkpoints, not blanket certifications."
     },
     "items": [
       {
         "name": "ISO 22000 / FSSC 22000",
-        "description": "Food-safety management certification checked against the relevant site and product scope."
+        "description": "Checked for the relevant site and product."
       },
       {
         "name": "HACCP",
-        "description": "HACCP plans reviewed for the product and process being quoted."
+        "description": "Reviewed for the product and process."
       },
       {
         "name": "Organic Certification",
-        "description": "Valid organic scope checked for the specific product and supplier when required."
+        "description": "Valid scope checked per product."
       },
       {
         "name": "FDA Registration",
-        "description": "Facility registration and importer-facing supplier information checked for US-bound orders."
+        "description": "Checked for US-bound orders."
       }
     ],
     "technology": {
       "eyebrow": "Digital quality & supply-chain architecture",
-      "title": "From source signals to buyer decisions—one connected data chain.",
-      "subtitle": "Whitehorse is building a phased technology layer to connect quality evidence, inventory, commercial workflow and logistics milestones around each request.",
+      "title": "From source signals to buyer decisions — one data chain.",
+      "subtitle": "A phased layer linking quality, inventory, workflow and logistics.",
       "status": "Platform direction · phased implementation",
       "backboneEyebrow": "One data backbone",
       "backboneTitle": "Every handoff keeps the commercial and quality context.",
-      "backboneBody": "The platform model links demand, specification, supply capability, lot evidence and delivery history instead of treating each step as a separate conversation.",
+      "backboneBody": "Every handoff linked.",
       "backboneNodes": [
         "Buyer need",
         "Product specification",
@@ -755,68 +761,68 @@
         {
           "number": "01",
           "title": "IoT & source capture",
-          "description": "Sensor readings and partner records can capture source, storage and process conditions at the relevant control points.",
+          "description": "Source, storage and process conditions.",
           "status": "roadmap"
         },
         {
           "number": "02",
           "title": "QMS & LIMS evidence",
-          "description": "Specifications, samples, tests, COA, deviations and approvals tied to the supplier, site and lot.",
+          "description": "Specs, tests, COA and approvals per lot.",
           "status": "building"
         },
         {
           "number": "03",
           "title": "WMS · Warehouse management",
-          "description": "Inventory, lot, location, packing, condition and movement records structured for operational visibility.",
+          "description": "Inventory, lot and movement records.",
           "status": "roadmap"
         },
         {
           "number": "04",
           "title": "Supplier & order workflow",
-          "description": "Requirements, matching, quotations, approvals and documents coordinated in one case history.",
+          "description": "Matching, quotes and documents per case.",
           "status": "current"
         },
         {
           "number": "05",
           "title": "TMS · Transportation management",
-          "description": "Bookings, routes, Incoterms, shipping documents, milestones and exceptions connected to the order.",
+          "description": "Bookings, Incoterms and shipping milestones.",
           "status": "roadmap"
         },
         {
           "number": "06",
           "title": "Buyer & distribution network",
-          "description": "Demand signals, delivery evidence and buyer feedback returned to product and source decisions.",
+          "description": "Demand and feedback back to sourcing.",
           "status": "current"
         }
       ],
       "aiTitle": "AI + data intelligence across every layer",
-      "aiBody": "Designed to accelerate supplier-to-buyer matching, surface missing evidence and risk signals, and turn each completed request into better decisions for the next.",
-      "note": "Statuses distinguish the operating workflow and current relationship network from systems being built or planned. System coverage, IoT data, partner integrations and live visibility vary by supplier, facility and project."
+      "aiBody": "Designed for faster matching and earlier risk flags.",
+      "note": "Status shows live vs. planned; coverage will vary by supplier."
     },
     "sustainability": {
       "eyebrow": "Principles",
       "title": "Four working principles",
-      "subtitle": "A concise operating layer for traceability, supplier development and order control.",
+      "subtitle": "Traceability, supplier development and order control.",
       "pillars": [
         {
           "title": "Traceability agreed per order",
-          "description": "Origin, supplier and lot information are agreed in the order documents."
+          "description": "Origin, supplier and lot in order documents."
         },
         {
           "title": "Long-term supplier relationships",
-          "description": "We build durable relationships with suppliers and cooperatives."
+          "description": "Durable supplier and cooperative ties."
         },
         {
           "title": "Environmental responsibility",
-          "description": "We favour resource-efficient processing and responsible farming practices."
+          "description": "Resource-efficient, responsible practice."
         },
         {
           "title": "Quality against specification",
-          "description": "Approved samples and written specifications remain the order reference."
+          "description": "Approved sample + written spec = reference."
         }
       ]
     },
-    "documentsTitle": "Documentation arranged per order",
+    "documentsTitle": "Documents per order",
     "documents": [
       "Certificate of Origin",
       "Phytosanitary Certificate",
@@ -834,39 +840,39 @@
     "hero": {
       "eyebrow": "How we work",
       "title": "From a written brief to coordinated delivery.",
-      "subtitle": "One visible workflow connects specification, supplier matching, approval, quality, documentation and logistics.",
-      "imageNote": "Representative image of a supply-network logistics stage. Final loading method and shipment terms are confirmed per order.",
+      "subtitle": "Spec → supplier → sample → QA/QC → documents → logistics.",
+      "imageNote": "Illustrative logistics stage. Loading method and shipment terms are confirmed per order.",
       "action": "Start with your brief"
     },
     "steps": [
       {
         "title": "Requirement & specification",
-        "description": "Application, specification, volume, market and certification needs are recorded."
+        "description": "Needs recorded."
       },
       {
         "title": "Supplier matching & qualification",
-        "description": "Suitable product, site and documentation capabilities are shortlisted."
+        "description": "Fitting sites shortlisted."
       },
       {
         "title": "Sampling & approval",
-        "description": "The approved sample becomes the commercial reference for the order."
+        "description": "Approved sample = reference."
       },
       {
         "title": "Quality control",
-        "description": "Testing, COA and any third-party inspection are agreed per order."
+        "description": "Tests and COA per order."
       },
       {
         "title": "Packing & documentation",
-        "description": "Packing and the required export document set are checked before loading."
+        "description": "Documents checked before loading."
       },
       {
         "title": "Shipping & delivery",
-        "description": "Logistics are coordinated to the agreed Incoterm and shipment milestones."
+        "description": "To the agreed Incoterm."
       }
     ],
     "factory": {
       "title": "Partner facilities",
-      "subtitle": "Production takes place at assessed supplier and partner facilities. Site information, certification scope and OEM/ODM/OBM suitability are confirmed for the specific product and market."
+      "subtitle": "Assessed partner facilities; <k>OEM / ODM / OBM</k> fit confirmed per product."
     },
     "cta": {
       "title": "Have a specific process or documentation question?",
@@ -877,39 +883,39 @@
     "hero": {
       "eyebrow": "Network",
       "title": "Vietnam supply. Global buyer conversations.",
-      "subtitle": "We connect screened Vietnamese supply capabilities with buyer requirements across Asia, Europe, the Middle East, North America and Oceania.",
-      "imageNote": "Representative images of sourcing and logistics stages across the network; they do not identify a specific contracted site or shipment.",
+      "subtitle": "Screened Vietnamese supply for buyers across five regions.",
+      "imageNote": "Illustrative sourcing and logistics stages — not a specific contracted site or shipment.",
       "buyerAction": "Join as a buyer or distributor",
       "supplierAction": "Join the supplier network"
     },
-    "regionsTitle": "Markets in the current conversation map",
+    "regionsTitle": "Current market conversations",
     "regions": "Russia, Japan, Qatar, Israel, South Korea, China, the United States, Canada, Australia, Germany, Italy, France, Belgium and the Netherlands.",
     "network": {
       "current": {
         "tag": "Current",
         "stat": "10+",
         "statLabel": "Markets with active buyer relationships and conversations",
-        "description": "Active buyer relationships and commercial conversations across five regions."
+        "description": "Active buyer relationships across five regions."
       },
       "suppliers": {
         "tag": "Current",
         "stat": "50+",
         "statLabel": "Screened suppliers",
-        "description": "Screened by product capability, facility and market fit; final qualification remains request-specific."
+        "description": "Screened for capability, facility and market; qualified per request."
       }
     },
     "cta": {
       "title": "Choose your role in the network.",
-      "subtitle": "Buyers and distribution partners start with demand. Vietnamese suppliers start with capability and evidence.",
+      "subtitle": "Buyers start with demand. Suppliers start with capability.",
       "buyer": {
         "label": "For buyers & distributors",
-        "body": "Importers, manufacturers, brands, ingredient users and distribution partners can share a product brief, market and volume for a qualified supply conversation.",
+        "body": "Share product, market and volume.",
         "cta": "Source ingredients",
         "distributionCta": "Discuss distribution partnership"
       },
       "supplier": {
         "label": "For Vietnamese suppliers",
-        "body": "Farmers, cooperatives and processors can submit product capability, facility and document information for assessment.",
+        "body": "Submit capability, facility and documents.",
         "cta": "Join the supplier network"
       }
     }
@@ -964,7 +970,7 @@
       "eyebrow": "Request a quote",
       "title": "Request a quote or samples",
       "subtitle": "Share your product, specification, volume and destination. Our sales team reviews qualified requests and follows up with the next commercial step.",
-      "lead": "Share the product, specification, volume and destination. Our sales team reviews qualified requests and follows up with the next commercial step."
+      "lead": "Product, specification, volume and destination — we review qualified requests and follow up with the next step."
     },
     "form": {
       "title": "Quote request",

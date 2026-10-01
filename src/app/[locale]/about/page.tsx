@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Keywords } from "@/components/ui/keywords";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
@@ -175,7 +176,7 @@ export default async function AboutPage({
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pt-10">
-            <p className="text-base leading-relaxed text-muted-foreground">{t("role.body")}</p>
+            <p className="text-base leading-relaxed text-muted-foreground"><Keywords text={t.raw("role.body") as string} /></p>
           </div>
         </div>
         <dl className="mt-16 border-b border-border">
@@ -191,7 +192,7 @@ export default async function AboutPage({
                 <span className="font-serif text-xl font-semibold text-foreground md:text-2xl">{item.title}</span>
               </dt>
               <dd className="pl-9 text-sm leading-relaxed text-muted-foreground md:col-span-7 md:pt-1.5 md:pl-0 md:text-base">
-                {item.description}
+                <Keywords text={item.description} />
               </dd>
             </div>
           ))}
@@ -226,7 +227,7 @@ export default async function AboutPage({
             ))}
           </ol>
           <div className="mt-16 grid gap-8 border-t border-border pt-10 lg:grid-cols-12">
-            <p className="text-lg leading-relaxed text-foreground lg:col-span-7">{t("control.body")}</p>
+            <p className="text-lg leading-relaxed text-foreground lg:col-span-7"><Keywords text={t.raw("control.body") as string} /></p>
             <p className="text-sm leading-relaxed text-muted-foreground lg:col-span-4 lg:col-start-9">
               {t("control.note")}
             </p>

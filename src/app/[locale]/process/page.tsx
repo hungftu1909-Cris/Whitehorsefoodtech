@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Keywords } from "@/components/ui/keywords";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ClipboardList, UserCheck, FlaskConical, ShieldCheck, FileText, Ship } from "lucide-react";
@@ -96,7 +97,7 @@ export default async function ProcessPage({
               {t("factory.title")}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              {t("factory.subtitle")}
+              <Keywords text={t.raw("factory.subtitle") as string} />
             </p>
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground italic">{t("hero.imageNote")}</p>
           </div>

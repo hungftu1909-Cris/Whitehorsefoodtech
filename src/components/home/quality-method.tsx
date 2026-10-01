@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Keywords } from "@/components/ui/keywords";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
@@ -52,7 +53,7 @@ export function QualityMethod() {
             <li key={stage.number} className="border-t border-foreground/15 pt-5">
               <span className="font-serif text-lg text-accent tabular-nums">{stage.number}</span>
               <h3 className="mt-2 font-serif text-xl leading-snug font-medium text-foreground">{stage.title}</h3>
-              <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted-foreground">{stage.body}</p>
+              <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted-foreground"><Keywords text={stage.body} /></p>
             </li>
           ))}
         </ol>

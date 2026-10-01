@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Keywords, stripKeywords } from "@/components/ui/keywords";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowRight, FileText } from "lucide-react";
@@ -56,7 +57,7 @@ export async function generateMetadata({
     locale,
     path: `/products/${slug}`,
     title: t("name"),
-    description: t("description"),
+    description: stripKeywords(t.raw("description") as string),
     ...(hero && hasPublicFile(hero.src) ? { images: [hero.src] } : {}),
   });
 }
@@ -167,7 +168,7 @@ export default async function ProductFamilyPage({
             {name}
           </h1>
           <p className="mt-2 text-sm font-medium text-accent">{t("tagline")}</p>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">{t("description")}</p>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground"><Keywords text={t.raw("description") as string} /></p>
           <p className="mt-4 text-xs text-muted-foreground">
             {tc("codesCount", { count: definedCount })} · {" "}
             {tc("rangesCount", { count: ranges.length })}

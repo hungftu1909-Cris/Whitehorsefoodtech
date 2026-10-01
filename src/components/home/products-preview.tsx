@@ -1,4 +1,5 @@
 import { useLocale, useTranslations } from "next-intl";
+import { Keywords } from "@/components/ui/keywords";
 import { Download } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { FamilyVisual } from "@/components/catalog/family-visual";
@@ -44,7 +45,7 @@ export function ProductsPreview() {
             </h2>
           </div>
           <div className="lg:max-w-md">
-            <p className="text-base leading-relaxed text-pretty text-muted-foreground">{t("subtitle")}</p>
+            <p className="text-base leading-relaxed text-pretty text-muted-foreground"><Keywords text={t.raw("subtitle") as string} /></p>
             <Link
               href="/products"
               className="mt-5 inline-flex min-h-11 items-center text-[0.9375rem] font-medium text-foreground underline decoration-accent/50 underline-offset-8 transition-colors duration-200 hover:decoration-accent focus-visible:ring-3 focus-visible:ring-ring/60 focus-visible:outline-none"

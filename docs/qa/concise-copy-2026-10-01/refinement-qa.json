@@ -1,0 +1,127 @@
+[
+  {
+    "name": "en 1440 chooser routes",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "en 1440 hero title/subtitle exact",
+    "ok": true,
+    "detail": "{\"t\":\"Vietnam ingredients. Qualified to your specification.\",\"s\":\"Coffee, coconut, fruit and custom sourcing — qualified suppliers, coordinated QA/QC and documents for each order.\"}"
+  },
+  {
+    "name": "en 1440 secondary CTA + collections label",
+    "ok": true,
+    "detail": "{\"links\":[\"Request a quote\",\"Explore products\",\"Buyers — continue in English\"],\"eyebrow\":\"Product collections\"}"
+  },
+  {
+    "name": "en 1440 4 keyword facts + 3 photos",
+    "ok": true,
+    "detail": "[\"Bulk\",\"OEM / ODM / OBM\",\"QA/QC per order\",\"Export documents\"]"
+  },
+  {
+    "name": "en 1440 home: no overflow, keyword contrast >= 4.5",
+    "ok": true,
+    "detail": "ov=0 min=12.62"
+  },
+  {
+    "name": "en 1440 about: short lead, mission/vision present, \"not current\" qualifier, no overflow, contrast",
+    "ok": true,
+    "detail": "{\"lead\":16,\"ov\":0,\"mission\":true,\"vision\":true,\"notCurrent\":true,\"min\":13.63}"
+  },
+  {
+    "name": "en 390 chooser routes",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "en 390 hero title/subtitle exact",
+    "ok": true,
+    "detail": "{\"t\":\"Vietnam ingredients. Qualified to your specification.\",\"s\":\"Coffee, coconut, fruit and custom sourcing — qualified suppliers, coordinated QA/QC and documents for each order.\"}"
+  },
+  {
+    "name": "en 390 secondary CTA + collections label",
+    "ok": true,
+    "detail": "{\"links\":[\"Request a quote\",\"Explore products\",\"Buyers — continue in English\"],\"eyebrow\":\"Product collections\"}"
+  },
+  {
+    "name": "en 390 4 keyword facts + 3 photos",
+    "ok": true,
+    "detail": "[\"Bulk\",\"OEM / ODM / OBM\",\"QA/QC per order\",\"Export documents\"]"
+  },
+  {
+    "name": "en 390 home: no overflow, keyword contrast >= 4.5",
+    "ok": true,
+    "detail": "ov=0 min=12.62"
+  },
+  {
+    "name": "en 390 about: short lead, mission/vision present, \"not current\" qualifier, no overflow, contrast",
+    "ok": true,
+    "detail": "{\"lead\":16,\"ov\":0,\"mission\":true,\"vision\":true,\"notCurrent\":true,\"min\":13.63}"
+  },
+  {
+    "name": "vi 1440 chooser routes",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "vi 1440 hero title/subtitle exact",
+    "ok": true,
+    "detail": "{\"t\":\"Nguyên liệu Việt Nam. Đúng thông số bạn cần.\",\"s\":\"Cà phê, dừa, trái cây và nguyên liệu theo yêu cầu — nguồn cung được thẩm định, QA/QC và hồ sơ theo từng đơn.\"}"
+  },
+  {
+    "name": "vi 1440 secondary CTA + collections label",
+    "ok": true,
+    "detail": "{\"links\":[\"Yêu cầu báo giá\",\"Xem sản phẩm\",\"Buyers — continue in English\"],\"eyebrow\":\"Nhóm sản phẩm\"}"
+  },
+  {
+    "name": "vi 1440 4 keyword facts + 3 photos",
+    "ok": true,
+    "detail": "[\"Hàng xá (bulk)\",\"OEM / ODM / OBM\",\"QA/QC theo đơn\",\"Hồ sơ xuất khẩu\"]"
+  },
+  {
+    "name": "vi 1440 home: no overflow, keyword contrast >= 4.5",
+    "ok": true,
+    "detail": "ov=0 min=12.62"
+  },
+  {
+    "name": "vi 1440 about: short lead, mission/vision present, \"not current\" qualifier, no overflow, contrast",
+    "ok": true,
+    "detail": "{\"lead\":29,\"ov\":0,\"mission\":true,\"vision\":true,\"notCurrent\":true,\"min\":13.63}"
+  },
+  {
+    "name": "vi 390 chooser routes",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "vi 390 hero title/subtitle exact",
+    "ok": true,
+    "detail": "{\"t\":\"Nguyên liệu Việt Nam. Đúng thông số bạn cần.\",\"s\":\"Cà phê, dừa, trái cây và nguyên liệu theo yêu cầu — nguồn cung được thẩm định, QA/QC và hồ sơ theo từng đơn.\"}"
+  },
+  {
+    "name": "vi 390 secondary CTA + collections label",
+    "ok": true,
+    "detail": "{\"links\":[\"Yêu cầu báo giá\",\"Xem sản phẩm\",\"Buyers — continue in English\"],\"eyebrow\":\"Nhóm sản phẩm\"}"
+  },
+  {
+    "name": "vi 390 4 keyword facts + 3 photos",
+    "ok": true,
+    "detail": "[\"Hàng xá (bulk)\",\"OEM / ODM / OBM\",\"QA/QC theo đơn\",\"Hồ sơ xuất khẩu\"]"
+  },
+  {
+    "name": "vi 390 home: no overflow, keyword contrast >= 4.5",
+    "ok": true,
+    "detail": "ov=0 min=12.62"
+  },
+  {
+    "name": "vi 390 about: short lead, mission/vision present, \"not current\" qualifier, no overflow, contrast",
+    "ok": true,
+    "detail": "{\"lead\":29,\"ov\":0,\"mission\":true,\"vision\":true,\"notCurrent\":true,\"min\":13.63}"
+  },
+  {
+    "name": "no console/page errors",
+    "ok": true,
+    "detail": ""
+  }
+]

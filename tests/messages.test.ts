@@ -170,23 +170,25 @@ test("positioning is a Vietnam ingredient platform: not coffee-led and not bound
     // The hero and gateway-level promise never fixes the platform to a
     // family count or to coffee; the count belongs to the current portfolio.
     // (Image alt text may still describe what a photo shows, e.g. a harvest.)
-    const hero = ["eyebrow", "title", "subtitle", "standard", "portfolioLabel"]
+    const hero = ["eyebrow", "title", "standard", "portfolioLabel"]
       .map((key) => JSON.stringify(get(catalog as Json, `home.hero.${key}`)))
       .join(" ");
     assert.doesNotMatch(hero, /\b(5|five) (families|ingredient families)|\b(5|năm) nhóm|coffee|cà phê/i);
+    // The subtitle may name current collections, but never as the boundary:
+    // it keeps the open custom-sourcing path and states no family count.
+    const subtitle = String(get(catalog as Json, "home.hero.subtitle"));
+    assert.match(subtitle, /custom sourcing|theo yêu cầu/i, "hero stays open beyond today's collections");
+    assert.doesNotMatch(subtitle, /\b(5|five) (families|ingredient families)|\b(5|năm) nhóm/i);
     assert.doesNotMatch(hero, /Building|Đang xây dựng/, "the prime hero card states a current capability");
     // The current portfolio is labelled as current, with an open second path.
     assert.ok(String(get(catalog as Json, "home.productsPreview.custom.cta")).length > 0);
   }
-  assert.equal(get(en as Json, "home.hero.title"), "Premium ingredients from Vietnam, qualified around your specification.");
   assert.equal(get(en as Json, "home.hero.standard.status"), "Operating now");
   assert.equal(get(vi as Json, "home.hero.standard.status"), "Đang vận hành");
-  assert.equal(get(en as Json, "home.productsPreview.eyebrow"), "Current portfolio");
-  assert.equal(get(vi as Json, "home.productsPreview.eyebrow"), "Danh mục hiện tại");
   // Custom sourcing is assessed, never promised as availability.
   assert.match(String(get(en as Json, "home.productsPreview.custom.body")), /assessed[\s\S]*confirmed before any commitment/);
   assert.match(String(get(vi as Json, "home.productsPreview.custom.body")), /được đánh giá[\s\S]*được xác nhận trước khi có bất kỳ cam kết nào/);
-  assert.match(String(get(en as Json, "about.hero.subtitle")), /premium B2B ingredient platform connecting farmers and processors more directly/);
+  assert.match(String(get(en as Json, "about.hero.subtitle")), /B2B ingredient platform[\s\S]*farmers and processors/);
 });
 
 test("public navigation retains the approved concepts while page headlines stay concise", () => {
@@ -258,16 +260,12 @@ test("value-prop and hero copy is confident, not apologetic", () => {
     const all = leafValues(catalog as Json).map(([, v]) => v).join("\n");
     assert.doesNotMatch(all, /track record we don't have|thành tích chúng tôi chưa có|as a new company|là một công ty mới/i);
   }
-  assert.equal(
-    get(en as Json, "home.hero.subtitle"),
-    "Whitehorse connects global product requirements with qualified Vietnamese sources, request-specific evidence and coordinated commercial execution."
-  );
 });
 
 test("vision and ecosystem copy stays labelled and logo-free", () => {
   assert.match(String(get(en as Json, "about.direction.note")), /not a current service/i);
   // Direct QA/QC is strategic direction, only inside the labelled vision.
-  assert.match(String(get(en as Json, "about.direction.body")), /direct quality-assurance and quality-control capability/);
+  assert.match(String(get(en as Json, "about.direction.body")), /direct (quality-assurance and quality-control|QA\/QC) capability/);
   assert.match(String(get(vi as Json, "about.direction.note")), /chưa phải dịch vụ/i);
   assert.match(String(get(en as Json, "about.vision.rolesNote")), /not current services/i);
   assert.match(String(get(vi as Json, "about.vision.rolesNote")), /chưa phải dịch vụ/i);

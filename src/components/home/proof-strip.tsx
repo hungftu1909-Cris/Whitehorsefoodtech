@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Keywords } from "@/components/ui/keywords";
 
 /**
  * Current facts only (docs/claim-registry.md rows 3, 4 and 9), carrying the
@@ -22,7 +23,7 @@ export function ProofStrip() {
           {items.map((item) => (
             <li key={item.value} className="border-t border-foreground/15 pt-5">
               <p className="font-serif text-5xl leading-none font-medium tracking-[-0.02em] text-primary md:text-6xl">{item.value}</p>
-              <p className="mt-4 max-w-[19rem] text-[0.9375rem] leading-relaxed text-muted-foreground">{item.label}</p>
+              <p className="mt-4 max-w-[19rem] text-[0.9375rem] leading-relaxed text-muted-foreground"><Keywords text={item.label} /></p>
             </li>
           ))}
         </ul>

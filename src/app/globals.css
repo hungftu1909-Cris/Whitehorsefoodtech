@@ -214,6 +214,22 @@
   }
 }
 
+/* Keyword emphasis (components/ui/keywords.tsx): semibold forest ink on light
+   surfaces; on dark forest bands and in dark mode it switches to the light
+   foreground so contrast stays AA. */
+.kw {
+  font-weight: 600;
+  color: var(--primary);
+}
+.dark .kw {
+  color: var(--foreground);
+}
+/* Last, so it also wins in dark mode (where --primary is a light surface). */
+.bg-primary .kw,
+.bg-deep .kw {
+  color: var(--primary-foreground);
+}
+
 /* Two-view product frames are driven by component state
    (components/catalog/dual-image-frame.tsx): hover on pointer devices, an
    explicit 01/02 control everywhere, and ~8 s auto-advance on touch screens
