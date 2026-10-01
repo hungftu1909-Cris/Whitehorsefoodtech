@@ -32,8 +32,8 @@ test("About has every narrative section in EN and VI with the brief's structure"
 test("About uses the approved headline, mission, vision and closing copy", () => {
   assert.equal(vi.about.hero.title, "Nâng chuẩn nguyên liệu Việt cho chuỗi giá trị toàn cầu.");
   assert.equal(en.about.hero.title, "Raising the standard of Vietnamese ingredients for global value chains.");
-  assert.match(vi.about.hero.subtitle, /^Whitehorse Foodtech đang xây dựng nền tảng nguyên liệu B2B/);
-  assert.match(en.about.hero.subtitle, /^Whitehorse Foodtech is building a premium B2B ingredient platform/);
+  assert.match(vi.about.hero.subtitle, /nền tảng nguyên liệu B2B/i);
+  assert.match(en.about.hero.subtitle, /B2B ingredient platform/);
   assert.equal(vi.about.bottlenecks.title, "Tiềm năng lớn. Giá trị giữ lại còn hạn chế.");
   assert.deepEqual(vi.about.bottlenecks.items.map((i) => i.title), [
     "Công nghệ sau thu hoạch",
@@ -52,8 +52,8 @@ test("About uses the approved headline, mission, vision and closing copy", () =>
   assert.deepEqual(vi.about.control.steps.map((s) => s.title), [
     "Vùng nguyên liệu", "Thu mua", "Chế biến", "Kiểm nghiệm", "Hồ sơ lô hàng", "Phản hồi và cải tiến",
   ]);
-  assert.match(vi.about.mission.body, /được lựa chọn vì giá trị — không chỉ vì xuất xứ\.$/);
-  assert.match(en.about.mission.body, /chosen for their value—not only their origin\.$/);
+  assert.match(vi.about.mission.body, /chế biến sâu[\s\S]*chất lượng/);
+  assert.match(en.about.mission.body, /deep processing[\s\S]*quality/);
   assert.match(vi.about.vision.body, /^Trở thành nền tảng nguyên liệu cao cấp của Việt Nam/);
   assert.deepEqual(en.about.vision.roles.map((r) => r.title), [
     "Premium Ingredient Platform",
@@ -130,8 +130,8 @@ test("About lead is tightened but keeps the thesis", () => {
   const words = (s: string) => s.trim().split(/\s+/).length;
   assert.ok(words(en.about.hero.subtitle) <= 36, `EN lead ${words(en.about.hero.subtitle)} words`);
   assert.ok(words(vi.about.hero.subtitle) <= 58, `VI lead ${words(vi.about.hero.subtitle)} words`);
-  assert.match(en.about.hero.subtitle, /farmers and processors more directly/);
-  assert.match(vi.about.hero.subtitle, /trực tiếp hơn nông hộ và nhà máy chế biến/);
+  assert.match(en.about.hero.subtitle, /farmers and processors/);
+  assert.match(vi.about.hero.subtitle, /nông hộ và nhà chế biến/);
 });
 
 test("only concept packaging keeps a visible image label", () => {

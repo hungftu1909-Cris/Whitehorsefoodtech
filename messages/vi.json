@@ -69,16 +69,16 @@
   "home": {
     "hero": {
       "eyebrow": "Nền tảng nguyên liệu Việt Nam",
-      "title": "Nguyên liệu cao cấp từ Việt Nam, thẩm định theo đúng thông số của bạn.",
-      "subtitle": "Whitehorse đưa yêu cầu sản phẩm của thị trường toàn cầu đến với nguồn cung Việt Nam phù hợp — được thẩm định, có hồ sơ riêng cho từng yêu cầu và được điều phối thương mại xuyên suốt.",
+      "title": "Nguyên liệu Việt Nam. Đúng thông số bạn cần.",
+      "subtitle": "Cà phê, dừa, trái cây và nguyên liệu theo yêu cầu — nguồn cung được thẩm định, QA/QC và hồ sơ theo từng đơn.",
       "ctaPrimary": "Yêu cầu báo giá",
-      "ctaSecondary": "Xem danh mục hiện tại",
-      "portfolioLabel": "Bộ sưu tập trọng tâm hiện tại",
+      "ctaSecondary": "Xem sản phẩm",
+      "portfolioLabel": "Nhóm sản phẩm",
       "portfolioBeyond": "Tìm nguồn theo thông số riêng",
       "standard": {
         "label": "Chuẩn vận hành Whitehorse",
         "status": "Đang vận hành",
-        "title": "Tìm nguồn dẫn dắt bởi thông số"
+        "title": "Nguồn cung theo thông số"
       },
       "images": {
         "processing": {
@@ -95,8 +95,8 @@
       "imageCaptionMobile": "Ảnh minh họa: thu hoạch → chế biến → vận chuyển hàng không. Không phải cơ sở hay lô hàng của Whitehorse.",
       "paths": {
         "label": "Chọn lối vào",
-        "buyer": "Global buyers — explore in English",
-        "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt",
+        "buyer": "Buyers — continue in English",
+        "supplier": "Nhà cung cấp — tiếng Việt",
         "chooser": "Chọn lối vào"
       },
       "facts": [
@@ -109,28 +109,28 @@
     "operating": {
       "eyebrow": "Cách nền tảng vận hành",
       "title": "Một chuẩn làm việc, từ thông số đến giao hàng.",
-      "subtitle": "Bốn bước giống nhau cho mọi nguyên liệu.",
+      "subtitle": "Bốn bước cho mọi nguyên liệu.",
       "status": "Đang vận hành",
       "stages": [
         {
           "number": "01",
           "title": "Thông số người mua",
-          "body": "Sản phẩm, dạng, sản lượng, thị trường, bao bì và hồ sơ — thống nhất <k>trước khi tìm nguồn</k>."
+          "body": "Sản phẩm, sản lượng, thị trường, hồ sơ — thống nhất <k>trước</k>."
         },
         {
           "number": "02",
           "title": "Mạng lưới được thẩm định",
-          "body": "Nhà cung cấp được sàng lọc theo năng lực, cơ sở và thị trường."
+          "body": "Sàng lọc theo năng lực và thị trường."
         },
         {
           "number": "03",
           "title": "Hồ sơ theo từng yêu cầu",
-          "body": "Mẫu, kiểm nghiệm, chứng nhận và hồ sơ lô — <k>theo từng đơn</k>."
+          "body": "Mẫu, kiểm nghiệm, hồ sơ lô <k>theo đơn</k>."
         },
         {
           "number": "04",
           "title": "Thực thi thương mại",
-          "body": "<k>Hàng xá</k> hoặc <k>OEM / ODM / OBM</k> qua đối tác sản xuất phù hợp; điều khoản, bao bì và logistics theo đơn."
+          "body": "<k>Hàng xá</k> hoặc <k>OEM / ODM / OBM</k> qua đối tác sản xuất phù hợp."
         }
       ],
       "cta": "Xem quy trình xử lý yêu cầu",
@@ -156,9 +156,9 @@
       ]
     },
     "productsPreview": {
-      "eyebrow": "Danh mục hiện tại",
-      "title": "Các bộ sưu tập trọng tâm hôm nay.",
-      "subtitle": "<k>29</k> SKU cốt lõi trong năm bộ sưu tập — cùng phối trộn và công thức riêng theo thông số của bạn.",
+      "eyebrow": "Nhóm sản phẩm",
+      "title": "Bộ sưu tập hiện tại.",
+      "subtitle": "<k>29</k> SKU cốt lõi trong năm bộ sưu tập, cùng công thức riêng.",
       "exploreCta": "Mở Product Explorer",
       "items": {
         "coconut": {
@@ -264,7 +264,7 @@
           "body": "Bộ chứng từ và phạm vi phiếu kết quả phân tích được xác nhận trước đơn hàng thương mại."
         }
       ],
-      "note": "Bằng chứng theo từng yêu cầu: hiệu lực, phạm vi kiểm nghiệm và hồ sơ được xác nhận theo đơn."
+      "note": "Bằng chứng và hồ sơ xác nhận theo từng đơn."
     },
     "value": {
       "eyebrow": "Cách Whitehorse tạo giá trị",
@@ -300,10 +300,10 @@
       "subtitle": "Đội ngũ kinh doanh xem xét các yêu cầu phù hợp và phản hồi bước thương mại tiếp theo.",
       "cta": "Yêu cầu báo giá",
       "buyerLabel": "Dành cho người mua",
-      "buyerBody": "Bộ sưu tập hiện tại hoặc nguyên liệu mới — <k>hàng xá</k> hoặc <k>OEM / ODM / OBM</k>, theo thông số của bạn.",
+      "buyerBody": "<k>Hàng xá</k> hoặc <k>OEM / ODM / OBM</k> — theo thông số của bạn.",
       "buyerCta": "Yêu cầu báo giá",
       "supplierLabel": "Dành cho nhà cung cấp",
-      "supplierBody": "Nông hộ, hợp tác xã và nhà chế biến: gửi năng lực, cơ sở và hồ sơ để được đánh giá.",
+      "supplierBody": "Gửi năng lực, cơ sở và hồ sơ để được đánh giá.",
       "supplierCta": "Đăng ký làm nhà cung cấp"
     }
   },
@@ -311,16 +311,16 @@
     "hero": {
       "eyebrow": "Whitehorse Foodtech / Nền tảng nguyên liệu cao cấp",
       "title": "Nâng chuẩn nguyên liệu Việt cho chuỗi giá trị toàn cầu.",
-      "subtitle": "Whitehorse Foodtech đang xây dựng nền tảng nguyên liệu B2B, kết nối trực tiếp hơn nông hộ và nhà máy chế biến với nhà sản xuất, thương hiệu và nhà phân phối — hướng tới ít tầng trung gian không tạo giá trị hơn và một chuỗi cung ứng minh bạch, đáng tin cậy hơn.",
-      "imageCaption": "Hình ảnh theo nhóm nguyên liệu. Sản phẩm, nguồn cung và thông số cuối cùng được xác nhận theo từng yêu cầu.",
+      "subtitle": "Nền tảng nguyên liệu B2B cao cấp, kết nối trực tiếp nông hộ và nhà chế biến Việt Nam với nhà sản xuất, thương hiệu và nhà phân phối.",
+      "imageCaption": "Hình ảnh theo nhóm nguyên liệu; sản phẩm và thông số xác nhận theo từng yêu cầu.",
       "ctaProducts": "Khám phá nhóm nguyên liệu",
       "ctaRfq": "Gửi yêu cầu nguyên liệu",
       "mosaicLabel": "Các nhóm nguyên liệu Whitehorse đang làm việc"
     },
     "thesis": {
       "eyebrow": "Vì sao có Whitehorse",
-      "body": "Việt Nam không thiếu nông sản tốt. Còn thiếu hệ thống biến chúng thành nguyên liệu chuẩn hóa, có đường ra thị trường.",
-      "close": "Whitehorse được hình thành để thu hẹp khoảng cách đó."
+      "body": "Việt Nam có nông sản tốt — nhưng chưa có hệ thống để chuẩn hóa.",
+      "close": "Whitehorse ra đời để lấp khoảng trống đó."
     },
     "bottlenecks": {
       "eyebrow": "Nơi giá trị bị thất thoát",
@@ -329,50 +329,50 @@
       "items": [
         {
           "title": "Công nghệ sau thu hoạch",
-          "description": "Phơi sấy, bảo quản chưa đồng đều nên khó giữ chất lượng."
+          "description": "Phơi sấy, bảo quản chưa đều."
         },
         {
           "title": "R&D và phát triển ứng dụng",
-          "description": "Bán như hàng thô, hiếm khi phát triển theo ứng dụng của người mua."
+          "description": "Bán thô, chưa theo ứng dụng."
         },
         {
           "title": "Tiêu chuẩn và hồ sơ chất lượng",
-          "description": "Thông số và hồ sơ lô khó để người mua đánh giá."
+          "description": "Hồ sơ khó đánh giá."
         },
         {
           "title": "Thương hiệu nguyên liệu",
-          "description": "Được biết qua xuất xứ, chưa qua chất lượng hay năng lực cung ứng."
+          "description": "Biết đến qua xuất xứ, chưa qua chất lượng."
         },
         {
           "title": "Mạng lưới tiếp cận thị trường",
-          "description": "Nhà sản xuất nhỏ khó tiếp cận trực tiếp nhà máy, thương hiệu."
+          "description": "Ít đường trực tiếp đến người mua."
         },
         {
           "title": "Doanh nghiệp nền tảng",
-          "description": "Ít doanh nghiệp kết nối nguồn cung, chế biến, dữ liệu và nhu cầu."
+          "description": "Ít doanh nghiệp nền tảng."
         }
       ]
     },
     "role": {
       "eyebrow": "Vai trò của Whitehorse",
       "title": "Từ nguồn cung phân mảnh đến nền tảng đáng tin cậy.",
-      "body": "Chúng tôi không sở hữu mọi nông trại hay nhà máy — chúng tôi <k>kết nối và điều phối</k> nguồn cung, chế biến, dữ liệu và nhu cầu.",
+      "body": "Chúng tôi <k>kết nối và điều phối</k> nguồn cung, chế biến, dữ liệu và nhu cầu — không sở hữu mọi nông trại hay nhà máy.",
       "capabilities": [
         {
           "title": "Nguồn cung chọn lọc",
-          "description": "Nông hộ, hợp tác xã và nhà chế biến được đánh giá theo sản phẩm và thị trường."
+          "description": "Đánh giá theo sản phẩm và thị trường."
         },
         {
           "title": "Sản phẩm theo ứng dụng",
-          "description": "Dạng sản phẩm từ ứng dụng của người mua — <k>OEM / ODM / OBM</k> khi đối tác và thị trường cho phép."
+          "description": "<k>OEM / ODM / OBM</k> khi đối tác và thị trường cho phép."
         },
         {
           "title": "Dữ liệu chất lượng & sản phẩm",
-          "description": "Thông số, kiểm nghiệm và hồ sơ lô mà người mua kiểm tra được."
+          "description": "Thông số, kiểm nghiệm, hồ sơ lô kiểm chứng được."
         },
         {
           "title": "Kết nối thị trường",
-          "description": "Con đường trực tiếp hơn đến nhà sản xuất, thương hiệu và nhà phân phối."
+          "description": "Đường trực tiếp đến nhà sản xuất, thương hiệu."
         }
       ]
     },
@@ -406,34 +406,34 @@
           "description": "Phản hồi của người mua được đưa về nguồn"
         }
       ],
-      "body": "Whitehorse đang từng bước xây dựng bằng chứng <k>QA/QC</k> quanh từng điểm — để người mua đánh giá nguồn cung bằng hồ sơ, không bằng lời hứa.",
-      "note": "COA và hồ sơ theo đơn; chứng nhận thuộc về nhà cung cấp và cơ sở cụ thể."
+      "body": "Whitehorse đang từng bước xây dựng hồ sơ <k>QA/QC</k> quanh từng điểm.",
+      "note": "Chứng nhận thuộc về nhà cung cấp, cơ sở và phạm vi cụ thể."
     },
     "mission": {
       "label": "Sứ mệnh",
-      "body": "Nâng vị thế nông sản Việt Nam trong chuỗi giá trị toàn cầu thông qua công nghệ chế biến sâu, năng lực phát triển sản phẩm và một hệ thống chất lượng đủ tin cậy để nguyên liệu Việt được lựa chọn vì giá trị — không chỉ vì xuất xứ."
+      "body": "Nâng vị thế nông nghiệp Việt trong chuỗi giá trị toàn cầu — bằng chế biến sâu, phát triển sản phẩm và hệ thống chất lượng."
     },
     "vision": {
       "label": "Tầm nhìn",
-      "body": "Trở thành nền tảng nguyên liệu cao cấp của Việt Nam, nơi năng lực chế biến sâu, quản trị chất lượng và điều phối chuỗi giá trị hội tụ để đưa nguyên liệu Việt vào những chuỗi cung ứng có giá trị cao trên toàn cầu.",
+      "body": "Trở thành nền tảng nguyên liệu cao cấp của Việt Nam — hội tụ chế biến sâu, quản trị chất lượng và điều phối chuỗi giá trị.",
       "rolesTitle": "Bốn vai trò dài hạn",
       "rolesNote": "Những vai trò chúng tôi đang xây dựng hướng tới — chưa phải dịch vụ hiện có.",
       "roles": [
         {
           "title": "Nền tảng nguyên liệu cao cấp",
-          "description": "Nguyên liệu Việt được xác định bằng thông số và bằng chứng."
+          "description": "Xác định bằng thông số và bằng chứng."
         },
         {
           "title": "Lớp công nghệ chế biến sâu",
-          "description": "Đối tác và công nghệ cho các dạng sản phẩm giá trị cao hơn."
+          "description": "Dạng sản phẩm giá trị cao hơn."
         },
         {
           "title": "Kiến trúc sư chuỗi giá trị nông nghiệp Việt",
-          "description": "Cách vùng trồng, nhà chế biến, phòng thí nghiệm và người mua phối hợp."
+          "description": "Thiết kế chuỗi có trách nhiệm."
         },
         {
           "title": "Cầu nối tới thị trường nguyên liệu toàn cầu",
-          "description": "Con đường tin cậy vào chuỗi cung ứng quốc tế."
+          "description": "Vào chuỗi cung ứng toàn cầu."
         }
       ]
     },
@@ -441,16 +441,16 @@
       "label": "Định hướng dài hạn",
       "note": "Tầm nhìn — chưa phải dịch vụ hiện có",
       "title": "Bắt đầu từ nguyên liệu. Thiết kế cho toàn bộ chuỗi nông nghiệp.",
-      "body": "Chúng tôi bắt đầu từ nguyên liệu, nơi tiêu chuẩn tạo khác biệt rõ nhất. Khi mạng lưới trưởng thành, nền tảng được thiết kế để kết nối toàn chuỗi — gồm năng lực đảm bảo và kiểm soát chất lượng trực tiếp tại các điểm thu mua then chốt."
+      "body": "Bắt đầu từ nguyên liệu; được thiết kế để mở rộng ra toàn chuỗi, gồm năng lực QA/QC trực tiếp tại các điểm thu mua then chốt."
     },
     "ecosystem": {
       "eyebrow": "Phát triển hệ sinh thái",
       "title": "Cùng Balance Life phát triển nông nghiệp tuần hoàn",
-      "body": "Whitehorse Foodtech đang hợp tác với Balance Life trong một sáng kiến nông nghiệp tuần hoàn. Thành phần tham gia và phạm vi chỉ được công bố khi xác nhận chính thức."
+      "body": "Sáng kiến nông nghiệp tuần hoàn với Balance Life; phạm vi công bố khi được xác nhận."
     },
     "status": {
       "title": "Hôm nay và định hướng phía trước",
-      "note": "Hiện tại = mạng lưới hôm nay. Ba năm = định hướng, chưa phải thành tích.",
+      "note": "Số liệu ba năm là định hướng, chưa phải thành tích.",
       "items": [
         {
           "tag": "Hiện tại",
@@ -476,7 +476,7 @@
     },
     "cta": {
       "title": "Bắt đầu từ một yêu cầu nguyên liệu cụ thể.",
-      "subtitle": "Chia sẻ ứng dụng, thông số, sản lượng và thị trường. Chúng tôi phản hồi bước thương mại tiếp theo.",
+      "subtitle": "Gửi ứng dụng, thông số, sản lượng và thị trường.",
       "buyerLabel": "Dành cho người mua",
       "buyerBody": "Nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối.",
       "buyerCta": "Gửi yêu cầu nguyên liệu",
@@ -707,14 +707,14 @@
     "hero": {
       "eyebrow": "Chất lượng & thẩm định nhà cung cấp",
       "title": "Bằng chứng trước cam kết.",
-      "subtitle": "Mỗi yêu cầu khớp với sản phẩm, cơ sở và thị trường — bằng chứng xác nhận theo đơn.",
+      "subtitle": "Bằng chứng khớp sản phẩm, cơ sở và thị trường — xác nhận theo đơn.",
       "imageNote": "Ảnh minh họa khâu chế biến. Nhà cung cấp, cơ sở và phạm vi chứng nhận được xác nhận theo yêu cầu.",
       "action": "Trao đổi yêu cầu chất lượng"
     },
     "standards": {
       "eyebrow": "Những gì chúng tôi đánh giá",
       "title": "Tiêu chuẩn được kiểm tra theo yêu cầu thực tế",
-      "subtitle": "Điểm kiểm tra, không phải chứng nhận chung — xác nhận theo sản phẩm và cơ sở."
+      "subtitle": "Điểm kiểm tra, không phải chứng nhận chung."
     },
     "items": [
       {
@@ -737,11 +737,11 @@
     "technology": {
       "eyebrow": "Kiến trúc công nghệ chất lượng & chuỗi cung ứng",
       "title": "Từ tín hiệu nguồn đến quyết định của người mua — một chuỗi dữ liệu.",
-      "subtitle": "Lớp công nghệ theo giai đoạn, liên kết bằng chứng chất lượng, tồn kho, quy trình và logistics theo yêu cầu.",
+      "subtitle": "Lớp công nghệ theo giai đoạn: chất lượng, tồn kho, quy trình, logistics.",
       "status": "Định hướng nền tảng · triển khai theo giai đoạn",
       "backboneEyebrow": "Một trục dữ liệu xuyên suốt",
       "backboneTitle": "Mỗi lần bàn giao đều giữ nguyên ngữ cảnh thương mại và chất lượng.",
-      "backboneBody": "Nhu cầu, thông số, nguồn cung, bằng chứng lô và giao hàng — được liên kết.",
+      "backboneBody": "Mọi khâu được liên kết.",
       "backboneNodes": [
         "Nhu cầu Buyer",
         "Thông số sản phẩm",
@@ -796,8 +796,8 @@
         }
       ],
       "aiTitle": "AI + dữ liệu thông minh xuyên suốt mọi lớp",
-      "aiBody": "Thiết kế để ghép nguồn nhanh hơn và phát hiện sớm rủi ro, thiếu bằng chứng.",
-      "note": "Trạng thái cho biết phần đang vận hành và phần đang xây dựng hoặc theo lộ trình; phạm vi sẽ thay đổi theo nhà cung cấp và dự án."
+      "aiBody": "Thiết kế để ghép nguồn nhanh và cảnh báo rủi ro sớm.",
+      "note": "Trạng thái phân biệt đang chạy và theo lộ trình; phạm vi thay đổi theo nhà cung cấp."
     },
     "sustainability": {
       "eyebrow": "Nguyên tắc",
@@ -840,39 +840,39 @@
     "hero": {
       "eyebrow": "Cách chúng tôi làm việc",
       "title": "Từ yêu cầu bằng văn bản đến giao hàng được điều phối.",
-      "subtitle": "Một quy trình: thông số → nhà cung cấp → mẫu → QA/QC → chứng từ → logistics.",
+      "subtitle": "Thông số → nhà cung cấp → mẫu → QA/QC → chứng từ → logistics.",
       "imageNote": "Ảnh minh họa khâu logistics. Cách đóng hàng và điều kiện giao được xác nhận theo đơn.",
       "action": "Bắt đầu từ yêu cầu của bạn"
     },
     "steps": [
       {
         "title": "Yêu cầu & thông số",
-        "description": "Ghi nhận ứng dụng, thông số, sản lượng, thị trường và chứng nhận."
+        "description": "Ghi nhận nhu cầu."
       },
       {
         "title": "Chọn & thẩm định nhà cung cấp",
-        "description": "Chọn lọc sản phẩm, cơ sở và hồ sơ phù hợp."
+        "description": "Chọn cơ sở phù hợp."
       },
       {
         "title": "Mẫu & phê duyệt",
-        "description": "Mẫu được duyệt = chuẩn tham chiếu của đơn."
+        "description": "Mẫu duyệt = chuẩn."
       },
       {
         "title": "Kiểm soát chất lượng",
-        "description": "Kiểm nghiệm, COA và giám định thống nhất theo đơn."
+        "description": "Kiểm nghiệm, COA theo đơn."
       },
       {
         "title": "Đóng gói & chứng từ",
-        "description": "Kiểm tra bao bì và chứng từ xuất khẩu trước khi đóng hàng."
+        "description": "Kiểm chứng từ trước khi đóng hàng."
       },
       {
         "title": "Vận chuyển & giao hàng",
-        "description": "Điều phối theo Incoterm và các mốc đã thống nhất."
+        "description": "Theo Incoterm đã thống nhất."
       }
     ],
     "factory": {
       "title": "Cơ sở của đối tác",
-      "subtitle": "Cơ sở nhà cung cấp và đối tác đã đánh giá; cơ sở, chứng nhận và mức phù hợp <k>OEM / ODM / OBM</k> xác nhận theo sản phẩm."
+      "subtitle": "Cơ sở đối tác đã đánh giá; mức phù hợp <k>OEM / ODM / OBM</k> xác nhận theo sản phẩm."
     },
     "cta": {
       "title": "Có câu hỏi cụ thể về quy trình hoặc chứng từ?",
@@ -883,7 +883,7 @@
     "hero": {
       "eyebrow": "Mạng lưới",
       "title": "Nguồn cung Việt Nam. Đối thoại với người mua toàn cầu.",
-      "subtitle": "Nguồn cung Việt Nam đã sàng lọc cho người mua tại châu Á, châu Âu, Trung Đông, Bắc Mỹ và châu Đại Dương.",
+      "subtitle": "Nguồn cung Việt Nam đã sàng lọc cho người mua tại năm khu vực.",
       "imageNote": "Ảnh minh họa khâu thu mua và logistics — không phải cơ sở hay lô hàng cụ thể đã ký kết.",
       "buyerAction": "Trở thành Buyer / đối tác phân phối",
       "supplierAction": "Tham gia mạng lưới cung ứng"
@@ -909,13 +909,13 @@
       "subtitle": "Người mua bắt đầu từ nhu cầu. Nhà cung cấp bắt đầu từ năng lực.",
       "buyer": {
         "label": "Dành cho Buyer & đối tác phân phối",
-        "body": "Nhà nhập khẩu, nhà sản xuất, thương hiệu và nhà phân phối: gửi yêu cầu sản phẩm, thị trường và sản lượng.",
+        "body": "Gửi sản phẩm, thị trường và sản lượng.",
         "cta": "Tìm nguồn nguyên liệu",
         "distributionCta": "Trao đổi hợp tác phân phối"
       },
       "supplier": {
         "label": "Dành cho nhà cung cấp Việt Nam",
-        "body": "Nông hộ, hợp tác xã và nhà chế biến: gửi năng lực, cơ sở và hồ sơ để được đánh giá.",
+        "body": "Gửi năng lực, cơ sở và hồ sơ.",
         "cta": "Tham gia mạng lưới cung ứng"
       }
     }
