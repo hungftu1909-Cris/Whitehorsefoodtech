@@ -47,6 +47,14 @@ export function Hero() {
           <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-pretty text-muted-foreground lg:text-lg">
             {t("subtitle")}
           </p>
+          {/* Scannable keywords: what Whitehorse delivers, in four labels. */}
+          <ul className="mt-6 flex flex-wrap gap-x-2 gap-y-2" aria-label={t("eyebrow")}>
+            {(t.raw("facts") as string[]).map((fact) => (
+              <li key={fact} className="rounded-sm border border-primary/20 bg-card/70 px-2.5 py-1 text-xs font-semibold tracking-[0.12em] text-primary uppercase">
+                {fact}
+              </li>
+            ))}
+          </ul>
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link
               href={{ pathname: "/rfq", query: { intent: "quote" } }}

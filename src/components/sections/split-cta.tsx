@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { Keywords } from "@/components/ui/keywords";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -46,7 +47,7 @@ export function SplitCta({
                 <h3 className="text-xs font-medium tracking-[0.24em] text-accent uppercase">{path.label}</h3>
                 <span className="font-serif text-lg text-muted-foreground tabular-nums">0{i + 1}</span>
               </div>
-              <p className="mt-10 max-w-lg font-serif text-xl leading-relaxed text-foreground md:text-[1.4rem]">{path.body}</p>
+              <p className="mt-10 max-w-lg font-serif text-xl leading-relaxed text-foreground md:text-[1.4rem]"><Keywords text={path.body} /></p>
               <div className="mt-auto flex flex-col gap-3 pt-8 sm:flex-row sm:flex-wrap">
                 <Link
                   href={path.href}

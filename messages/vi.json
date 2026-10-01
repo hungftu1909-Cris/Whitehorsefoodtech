@@ -91,40 +91,46 @@
           "alt": "Người nông dân thu hoạch quả cà phê chín vào thau giữa vườn cà phê"
         }
       },
-      "imageCaption": "Hình ảnh minh họa các khâu trong mạng lưới cung ứng — thu hoạch tại vùng trồng, chế biến nguyên liệu và vận chuyển hàng không xuất khẩu. Không phải nông trại, cơ sở của Whitehorse hay một lô hàng cụ thể.",
-      "imageCaptionMobile": "Hình ảnh minh họa các khâu trong mạng lưới cung ứng — thu hoạch tại vùng trồng, chế biến nguyên liệu và vận chuyển hàng không xuất khẩu. Không phải nông trại, cơ sở của Whitehorse hay một lô hàng cụ thể.",
+      "imageCaption": "Ảnh minh họa: thu hoạch → chế biến → vận chuyển hàng không. Không phải cơ sở hay lô hàng của Whitehorse.",
+      "imageCaptionMobile": "Ảnh minh họa: thu hoạch → chế biến → vận chuyển hàng không. Không phải cơ sở hay lô hàng của Whitehorse.",
       "paths": {
         "label": "Chọn lối vào",
         "buyer": "Global buyers — explore in English",
         "supplier": "Nhà cung cấp Việt Nam — đăng ký bằng tiếng Việt",
         "chooser": "Chọn lối vào"
-      }
+      },
+      "facts": [
+        "Hàng xá (bulk)",
+        "OEM / ODM / OBM",
+        "QA/QC theo đơn",
+        "Hồ sơ xuất khẩu"
+      ]
     },
     "operating": {
       "eyebrow": "Cách nền tảng vận hành",
-      "title": "Một chuẩn vận hành, từ thông số đến thực thi.",
-      "subtitle": "Danh mục có thể mở rộng; cách Whitehorse thẩm định và thực thi nguồn cung thì không đổi. Mỗi yêu cầu đi qua cùng bốn nguyên tắc.",
+      "title": "Một chuẩn làm việc, từ thông số đến giao hàng.",
+      "subtitle": "Bốn bước giống nhau cho mọi nguyên liệu.",
       "status": "Đang vận hành",
       "stages": [
         {
           "number": "01",
           "title": "Thông số người mua",
-          "body": "Sản phẩm, định dạng, ứng dụng, thị trường, sản lượng, bao bì và yêu cầu hồ sơ được xác định cùng người mua trước khi tìm nguồn."
+          "body": "Sản phẩm, dạng, sản lượng, thị trường, bao bì và hồ sơ — thống nhất <k>trước khi tìm nguồn</k>."
         },
         {
           "number": "02",
           "title": "Mạng lưới được thẩm định",
-          "body": "Nhà cung cấp được sàng lọc theo năng lực sản phẩm, cơ sở, thị trường và yêu cầu hồ sơ, rồi được đối chiếu với thông số."
+          "body": "Nhà cung cấp được sàng lọc theo năng lực, cơ sở và thị trường."
         },
         {
           "number": "03",
           "title": "Hồ sơ theo từng yêu cầu",
-          "body": "Mẫu, phạm vi kiểm nghiệm, chứng nhận của nhà cung cấp và chứng từ lô hàng được thống nhất cho đúng nhà cung cấp, cơ sở, sản phẩm và đơn hàng."
+          "body": "Mẫu, kiểm nghiệm, chứng nhận và hồ sơ lô — <k>theo từng đơn</k>."
         },
         {
           "number": "04",
           "title": "Thực thi thương mại",
-          "body": "Nguồn cung số lượng lớn, hoặc OEM, ODM và OBM qua đối tác sản xuất phù hợp, với điều khoản, đóng gói, chứng từ và logistics được điều phối theo từng đơn hàng."
+          "body": "<k>Hàng xá</k> hoặc <k>OEM / ODM / OBM</k> qua đối tác sản xuất phù hợp; điều khoản, bao bì và logistics theo đơn."
         }
       ],
       "cta": "Xem quy trình xử lý yêu cầu",
@@ -137,22 +143,22 @@
       "items": [
         {
           "value": "29",
-          "label": "SKU cốt lõi đã xác định trong năm bộ sưu tập trọng tâm hiện tại"
+          "label": "SKU cốt lõi trong <k>năm bộ sưu tập</k>"
         },
         {
           "value": "50+",
-          "label": "Nhà cung cấp được sàng lọc theo năng lực sản phẩm, cơ sở và yêu cầu thị trường"
+          "label": "Nhà cung cấp đã sàng lọc năng lực, cơ sở và thị trường"
         },
         {
           "value": "10+",
-          "label": "Thị trường có quan hệ khách hàng và thương mại đang diễn ra"
+          "label": "Thị trường có quan hệ người mua đang hoạt động"
         }
       ]
     },
     "productsPreview": {
       "eyebrow": "Danh mục hiện tại",
       "title": "Các bộ sưu tập trọng tâm hôm nay.",
-      "subtitle": "Năm bộ sưu tập với 29 SKU cốt lõi đã xác định dẫn dắt danh mục hiện tại, cùng khả năng phát triển mix, blend và công thức tùy chỉnh theo thông số của người mua. Khả năng cung ứng, thông số cuối cùng và hồ sơ được xác nhận theo từng yêu cầu.",
+      "subtitle": "<k>29</k> SKU cốt lõi trong năm bộ sưu tập — cùng phối trộn và công thức riêng theo thông số của bạn.",
       "exploreCta": "Mở Product Explorer",
       "items": {
         "coconut": {
@@ -179,7 +185,7 @@
       "custom": {
         "eyebrow": "Ngoài danh mục hiện tại",
         "title": "Tìm nguồn một nguyên liệu Việt Nam khác.",
-        "body": "Những yêu cầu nằm ngoài các bộ sưu tập hiện tại — chẳng hạn trà, ca cao, gạo, thảo mộc, nguyên liệu thực vật hay nguyên liệu chức năng — được đánh giá theo thông số của bạn bằng cùng một chuẩn vận hành. Mức độ phù hợp của nhà cung cấp, tính khả thi và hồ sơ được xác nhận trước khi có bất kỳ cam kết nào.",
+        "body": "Trà, ca cao, gạo, thảo mộc… được đánh giá theo thông số của bạn; nguồn phù hợp và bằng chứng được xác nhận trước khi có bất kỳ cam kết nào.",
         "cta": "Gửi yêu cầu tìm nguồn riêng"
       },
       "documentsLabel": "Tải về"
@@ -187,7 +193,7 @@
     "platform": {
       "eyebrow": "Công nghệ chuỗi cung ứng",
       "title": "Các lớp tiếp theo của nền tảng, gắn nhãn theo trạng thái.",
-      "subtitle": "Hôm nay, chuẩn vận hành được thực hiện qua con người, quy trình nhà cung cấp và hồ sơ yêu cầu. Các lớp số được bổ sung từng bước, và mỗi lớp cho biết đang vận hành hay vẫn đang được xây dựng.",
+      "subtitle": "Hiện nay: con người, quy trình nhà cung cấp và hồ sơ yêu cầu. Các lớp số bổ sung theo giai đoạn.",
       "statusLabels": {
         "current": "Đang vận hành",
         "building": "Đang xây dựng",
@@ -228,7 +234,7 @@
         ],
         "ai": "AI + dữ liệu thông minh xuyên suốt các lớp"
       },
-      "note": "Đang vận hành nghĩa là quy trình Whitehorse đang hoạt động. Đang xây dựng và Lộ trình là các định hướng sản phẩm đang phát triển; không hàm ý cổng thông tin, khu vực tài khoản, tích hợp toàn mạng lưới hay theo dõi lô hàng thời gian thực đã hoạt động. Mức độ áp dụng sẽ khác nhau theo nhà cung cấp, cơ sở và dự án.",
+      "note": "Đang vận hành = quy trình Whitehorse đang hoạt động. Đang xây dựng / Lộ trình = đang phát triển: chưa có cổng trực tuyến, tích hợp toàn mạng lưới hay theo dõi lô theo thời gian thực. Phạm vi sẽ thay đổi theo nhà cung cấp và dự án.",
       "cta": "Xem kiến trúc công nghệ"
     },
     "evidence": {
@@ -258,7 +264,7 @@
           "body": "Bộ chứng từ và phạm vi phiếu kết quả phân tích được xác nhận trước đơn hàng thương mại."
         }
       ],
-      "note": "Hồ sơ gắn với từng yêu cầu. Khả năng cung ứng, hiệu lực hiện tại, phạm vi thử nghiệm và bộ chứng từ được xác nhận với nhà cung cấp được chọn cho từng đơn hàng."
+      "note": "Bằng chứng theo từng yêu cầu: hiệu lực, phạm vi kiểm nghiệm và hồ sơ được xác nhận theo đơn."
     },
     "value": {
       "eyebrow": "Cách Whitehorse tạo giá trị",
@@ -291,13 +297,13 @@
     },
     "ctaBanner": {
       "title": "Hai lối vào nền tảng.",
-      "subtitle": "Chia sẻ sản phẩm, sản lượng và cảng đích. Đội ngũ kinh doanh của chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo.",
+      "subtitle": "Đội ngũ kinh doanh xem xét các yêu cầu phù hợp và phản hồi bước thương mại tiếp theo.",
       "cta": "Yêu cầu báo giá",
       "buyerLabel": "Dành cho người mua",
-      "buyerBody": "Gửi yêu cầu cho một bộ sưu tập hiện tại hoặc một nguyên liệu Việt Nam khác, xác định thông số và bắt đầu yêu cầu số lượng lớn, OEM, ODM hoặc OBM.",
+      "buyerBody": "Bộ sưu tập hiện tại hoặc nguyên liệu mới — <k>hàng xá</k> hoặc <k>OEM / ODM / OBM</k>, theo thông số của bạn.",
       "buyerCta": "Yêu cầu báo giá",
       "supplierLabel": "Dành cho nhà cung cấp",
-      "supplierBody": "Nông hộ, hợp tác xã và nhà máy chế biến — trong hay ngoài các bộ sưu tập hiện tại — có thể gửi thông tin năng lực, cơ sở và hồ sơ để đánh giá.",
+      "supplierBody": "Nông hộ, hợp tác xã và nhà chế biến: gửi năng lực, cơ sở và hồ sơ để được đánh giá.",
       "supplierCta": "Đăng ký làm nhà cung cấp"
     }
   },
@@ -313,66 +319,66 @@
     },
     "thesis": {
       "eyebrow": "Vì sao có Whitehorse",
-      "body": "Việt Nam không thiếu nông sản chất lượng. Điều còn thiếu là một hệ thống đủ mạnh để chuyển lợi thế ấy thành nguyên liệu có tiêu chuẩn rõ ràng, ứng dụng phù hợp và khả năng tiếp cận thị trường bền vững.",
+      "body": "Việt Nam không thiếu nông sản tốt. Còn thiếu hệ thống biến chúng thành nguyên liệu chuẩn hóa, có đường ra thị trường.",
       "close": "Whitehorse được hình thành để thu hẹp khoảng cách đó."
     },
     "bottlenecks": {
       "eyebrow": "Nơi giá trị bị thất thoát",
       "title": "Tiềm năng lớn. Giá trị giữ lại còn hạn chế.",
-      "intro": "Nhiều nông sản Việt vẫn rời chuỗi ở dạng thô hoặc sơ chế, trong khi phần giá trị cao hơn được tạo ra ở các khâu phía sau — chế biến, phát triển ứng dụng, tiêu chuẩn và thương hiệu. Khoảng cách ấy nằm ở sáu điểm.",
+      "intro": "Khoảng trống nằm ở sáu điểm.",
       "items": [
         {
           "title": "Công nghệ sau thu hoạch",
-          "description": "Sấy, bảo quản và sơ chế chưa đồng đều khiến chất lượng khó giữ ổn định từ vùng nguyên liệu đến nhà máy."
+          "description": "Phơi sấy, bảo quản chưa đồng đều nên khó giữ chất lượng."
         },
         {
           "title": "R&D và phát triển ứng dụng",
-          "description": "Nguyên liệu thường được bán như hàng hóa thô, ít khi được phát triển theo ứng dụng cụ thể của người mua — đồ uống, bánh kẹo hay dinh dưỡng."
+          "description": "Bán như hàng thô, hiếm khi phát triển theo ứng dụng của người mua."
         },
         {
           "title": "Tiêu chuẩn và hồ sơ chất lượng",
-          "description": "Thông số, phương pháp kiểm nghiệm và hồ sơ lô hàng hiếm khi được tổ chức theo cách người mua quốc tế có thể đánh giá nhanh."
+          "description": "Thông số và hồ sơ lô khó để người mua đánh giá."
         },
         {
           "title": "Thương hiệu nguyên liệu",
-          "description": "Nguyên liệu Việt chủ yếu được nhận diện theo xuất xứ chung, chưa theo đặc tính, chất lượng và năng lực cung ứng."
+          "description": "Được biết qua xuất xứ, chưa qua chất lượng hay năng lực cung ứng."
         },
         {
           "title": "Mạng lưới tiếp cận thị trường",
-          "description": "Nông hộ và nhà máy nhỏ khó tiếp cận trực tiếp nhà sản xuất và thương hiệu, nên giá trị bị phân tán qua nhiều tầng trung gian."
+          "description": "Nhà sản xuất nhỏ khó tiếp cận trực tiếp nhà máy, thương hiệu."
         },
         {
           "title": "Doanh nghiệp nền tảng",
-          "description": "Còn ít doanh nghiệp đóng vai trò hạ tầng — kết nối nguồn cung, năng lực chế biến, dữ liệu sản phẩm và nhu cầu thị trường trong một hệ thống."
+          "description": "Ít doanh nghiệp kết nối nguồn cung, chế biến, dữ liệu và nhu cầu."
         }
       ]
     },
     "role": {
       "eyebrow": "Vai trò của Whitehorse",
-      "title": "Từ nguồn cung phân mảnh đến một nền tảng nguyên liệu có thể tin cậy.",
-      "body": "Whitehorse không sở hữu mọi nông trại, nhà máy hay công nghệ. Chúng tôi là lớp kết nối và điều phối giữa bốn thành phần của chuỗi — nguồn cung, năng lực chế biến trong mạng lưới đối tác, dữ liệu sản phẩm và ứng dụng, và nhu cầu thị trường — để mỗi yêu cầu nguyên liệu được đáp ứng bằng nguồn phù hợp, thông số rõ ràng và hồ sơ có thể kiểm tra.",
+      "title": "Từ nguồn cung phân mảnh đến nền tảng đáng tin cậy.",
+      "body": "Chúng tôi không sở hữu mọi nông trại hay nhà máy — chúng tôi <k>kết nối và điều phối</k> nguồn cung, chế biến, dữ liệu và nhu cầu.",
       "capabilities": [
         {
           "title": "Nguồn cung chọn lọc",
-          "description": "Nông hộ, hợp tác xã và nhà máy chế biến được lựa chọn và đánh giá theo từng sản phẩm, cơ sở và thị trường — không phải một danh sách mở."
+          "description": "Nông hộ, hợp tác xã và nhà chế biến được đánh giá theo sản phẩm và thị trường."
         },
         {
           "title": "Sản phẩm theo ứng dụng",
-          "description": "Định dạng và thông số được phát triển từ ứng dụng của khách hàng cùng đối tác chế biến có năng lực phù hợp — bao gồm OEM, ODM và OBM khi sản phẩm, cơ sở đối tác và thị trường cho phép."
+          "description": "Dạng sản phẩm từ ứng dụng của người mua — <k>OEM / ODM / OBM</k> khi đối tác và thị trường cho phép."
         },
         {
           "title": "Dữ liệu chất lượng & sản phẩm",
-          "description": "Thông số, phương pháp kiểm nghiệm, hồ sơ nhà cung cấp và hồ sơ lô hàng được tổ chức để người mua có thể đánh giá."
+          "description": "Thông số, kiểm nghiệm và hồ sơ lô mà người mua kiểm tra được."
         },
         {
           "title": "Kết nối thị trường",
-          "description": "Con đường trực tiếp hơn từ nguồn cung Việt Nam đến nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối."
+          "description": "Con đường trực tiếp hơn đến nhà sản xuất, thương hiệu và nhà phân phối."
         }
       ]
     },
     "control": {
       "eyebrow": "Điểm kiểm soát QA/QC",
-      "title": "Giá trị không bắt đầu ở giao dịch. Nó bắt đầu tại điểm kiểm soát.",
+      "title": "Chất lượng bắt đầu từ điểm kiểm soát, không phải giao dịch.",
       "flowLabel": "Các điểm kiểm soát chất lượng từ vùng nguyên liệu đến phản hồi của người mua",
       "steps": [
         {
@@ -400,8 +406,8 @@
           "description": "Phản hồi của người mua được đưa về nguồn"
         }
       ],
-      "body": "Whitehorse đang từng bước xây dựng hạ tầng đảm bảo chất lượng — tổ chức bằng chứng, quy trình và trách nhiệm giải trình quanh từng điểm kiểm soát — để người mua đánh giá nguồn cung bằng bằng chứng rõ ràng hơn, không phải bằng lời hứa.",
-      "note": "Phạm vi kiểm nghiệm, tài liệu và COA được thống nhất cho từng đơn hàng. Chứng nhận thuộc về từng nhà cung cấp, cơ sở và phạm vi cụ thể."
+      "body": "Whitehorse đang từng bước xây dựng bằng chứng <k>QA/QC</k> quanh từng điểm — để người mua đánh giá nguồn cung bằng hồ sơ, không bằng lời hứa.",
+      "note": "COA và hồ sơ theo đơn; chứng nhận thuộc về nhà cung cấp và cơ sở cụ thể."
     },
     "mission": {
       "label": "Sứ mệnh",
@@ -415,19 +421,19 @@
       "roles": [
         {
           "title": "Nền tảng nguyên liệu cao cấp",
-          "description": "Nơi người mua chuyên nghiệp tìm thấy nguyên liệu Việt được xác định bằng thông số, ứng dụng và bằng chứng."
+          "description": "Nguyên liệu Việt được xác định bằng thông số và bằng chứng."
         },
         {
           "title": "Lớp công nghệ chế biến sâu",
-          "description": "Kết nối đối tác và công nghệ chế biến giúp nông sản thô trở thành những dạng nguyên liệu có giá trị cao hơn."
+          "description": "Đối tác và công nghệ cho các dạng sản phẩm giá trị cao hơn."
         },
         {
           "title": "Kiến trúc sư chuỗi giá trị nông nghiệp Việt",
-          "description": "Thiết kế cách vùng nguyên liệu, nhà máy chế biến, phòng kiểm nghiệm và người mua phối hợp, với trách nhiệm rõ ràng ở từng khâu."
+          "description": "Cách vùng trồng, nhà chế biến, phòng thí nghiệm và người mua phối hợp."
         },
         {
           "title": "Cầu nối tới thị trường nguyên liệu toàn cầu",
-          "description": "Con đường đáng tin cậy để nguyên liệu Việt đi vào chuỗi cung ứng của các nhà sản xuất và thương hiệu quốc tế."
+          "description": "Con đường tin cậy vào chuỗi cung ứng quốc tế."
         }
       ]
     },
@@ -435,42 +441,42 @@
       "label": "Định hướng dài hạn",
       "note": "Tầm nhìn — chưa phải dịch vụ hiện có",
       "title": "Bắt đầu từ nguyên liệu. Thiết kế cho toàn bộ chuỗi nông nghiệp.",
-      "body": "Chúng tôi bắt đầu từ nguyên liệu vì đó là nơi tiêu chuẩn và ứng dụng tạo ra khác biệt rõ nhất. Khi dữ liệu, tiêu chuẩn và mạng lưới trưởng thành, nền tảng được thiết kế để kết nối hợp tác xã, nông hộ, nhà máy, phòng kiểm nghiệm, đơn vị logistics và người mua chuyên nghiệp — bao gồm năng lực đảm bảo và kiểm soát chất lượng trực tiếp tại các điểm nguồn cung then chốt."
+      "body": "Chúng tôi bắt đầu từ nguyên liệu, nơi tiêu chuẩn tạo khác biệt rõ nhất. Khi mạng lưới trưởng thành, nền tảng được thiết kế để kết nối toàn chuỗi — gồm năng lực đảm bảo và kiểm soát chất lượng trực tiếp tại các điểm thu mua then chốt."
     },
     "ecosystem": {
       "eyebrow": "Phát triển hệ sinh thái",
       "title": "Cùng Balance Life phát triển nông nghiệp tuần hoàn",
-      "body": "Whitehorse Foodtech hiện đang làm việc cùng Balance Life xoay quanh một sáng kiến nông nghiệp tuần hoàn. Sáng kiến rộng hơn này quy tụ các bên tham gia từ sản xuất, chuỗi giá trị và tài chính. Tên các bên tham gia, quy mô và phạm vi triển khai chỉ được công bố khi đã được xác nhận chính thức."
+      "body": "Whitehorse Foodtech đang hợp tác với Balance Life trong một sáng kiến nông nghiệp tuần hoàn. Thành phần tham gia và phạm vi chỉ được công bố khi xác nhận chính thức."
     },
     "status": {
-      "title": "Whitehorse hôm nay và định hướng phía trước",
-      "note": "Số liệu hiện tại mô tả mạng lưới hôm nay. Số liệu tầm nhìn 3 năm là định hướng, không phải kết quả đã đạt được.",
+      "title": "Hôm nay và định hướng phía trước",
+      "note": "Hiện tại = mạng lưới hôm nay. Ba năm = định hướng, chưa phải thành tích.",
       "items": [
         {
           "tag": "Hiện tại",
           "value": "50+",
-          "label": "Nhà cung cấp được sàng lọc theo năng lực sản phẩm, cơ sở và yêu cầu thị trường"
+          "label": "Nhà cung cấp đã sàng lọc"
         },
         {
           "tag": "Hiện tại",
           "value": "10+",
-          "label": "Thị trường có quan hệ khách hàng và trao đổi thương mại đang diễn ra"
+          "label": "Thị trường có quan hệ người mua"
         },
         {
           "tag": "Tầm nhìn 3 năm",
           "value": "3.000+",
-          "label": "Hợp tác xã và nhóm nguồn cung trong phạm vi kết nối của mạng lưới"
+          "label": "Hợp tác xã và nhóm nguồn trong tầm kết nối"
         },
         {
           "tag": "Tầm nhìn 3 năm",
           "value": "10.000+",
-          "label": "Khách hàng đang hoạt động trong phạm vi quan hệ của mạng lưới"
+          "label": "Người mua hoạt động trong tầm kết nối"
         }
       ]
     },
     "cta": {
       "title": "Bắt đầu từ một yêu cầu nguyên liệu cụ thể.",
-      "subtitle": "Hãy chia sẻ ứng dụng, thông số, sản lượng dự kiến và thị trường đích. Đội ngũ kinh doanh sẽ xem xét các yêu cầu phù hợp và trao đổi bước thương mại tiếp theo.",
+      "subtitle": "Chia sẻ ứng dụng, thông số, sản lượng và thị trường. Chúng tôi phản hồi bước thương mại tiếp theo.",
       "buyerLabel": "Dành cho người mua",
       "buyerBody": "Nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối.",
       "buyerCta": "Gửi yêu cầu nguyên liệu",
@@ -484,7 +490,7 @@
       "eyebrow": "Product Explorer",
       "title": "Tìm đúng dạng nguyên liệu cho yêu cầu của bạn.",
       "subtitle": "Khám phá 29 SKU cốt lõi đã xác định qua mười tám dòng tìm nguồn và phát triển trong năm nhóm nguyên liệu. Các dòng mix, blend và công thức tùy chỉnh cũng có thể được phát triển theo yêu cầu. Thông số cuối cùng, khả năng cung ứng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất theo từng đơn hàng.",
-      "lead": "29 SKU cốt lõi đã xác định trong mười tám dòng sản phẩm thuộc năm nhóm hiện tại. Thông số, khả năng cung ứng và hồ sơ được thống nhất theo từng đơn hàng."
+      "lead": "29 SKU cốt lõi · 18 dòng · 5 nhóm. Thông số và khả năng cung ứng thống nhất theo từng đơn."
     },
     "explorer": {
       "eyebrow": "Danh mục có cấu trúc",
@@ -506,7 +512,7 @@
         "slug": "coffee",
         "tagline": "Nhân, rang, hòa tan, chiết xuất & cold brew",
         "status": "9 SKU đã xác định",
-        "description": "Nguyên liệu cà phê từ các vùng trồng chính của Việt Nam cho ngành thực phẩm và đồ uống — cà phê nhân và rang, cà phê hòa tan, chiết xuất và cold brew. Hàng rời, nhãn hàng riêng và dạng single-serve được trao đổi theo từng dự án, với thông số và bao bì thống nhất theo từng sản phẩm và thị trường.",
+        "description": "<k>Cà phê</k> Việt Nam cho thực phẩm và đồ uống: nhân xanh, rang, hòa tan, chiết xuất và cold brew — hàng xá, nhãn riêng hoặc đóng gói nhỏ.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
           "Nhà rang xay",
@@ -522,7 +528,7 @@
         "slug": "coconut",
         "tagline": "Sữa & kem dừa, bột & dừa sấy, đường hoa dừa",
         "status": "5 SKU đã xác định",
-        "description": "Dừa Việt Nam được chế biến thành nguyên liệu đa dụng cho thực phẩm và đồ uống — từ sữa và kem dừa đến bột dừa và đường hoa dừa. Phù hợp cho sản xuất thực phẩm công nghiệp và bán lẻ, với lựa chọn hàng số lượng lớn và nhãn hàng riêng theo yêu cầu của từng thị trường.",
+        "description": "Nguyên liệu <k>dừa</k> Việt Nam — sữa, kem, bột và đường hoa dừa — cho sản xuất và bán lẻ, hàng xá hoặc nhãn riêng.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
           "Nấu ăn & chế biến thực phẩm",
@@ -538,7 +544,7 @@
         "slug": "birds-nest",
         "tagline": "Yến làm sạch & dạng ăn liền / chế biến sẵn",
         "status": "2 SKU đã xác định",
-        "description": "Yến sào Việt Nam được tuyển chọn và làm sạch, cung cấp dưới dạng yến làm sạch và yến ăn liền hoặc chế biến sẵn cho thực phẩm sức khỏe, bán lẻ chăm sóc sức khỏe, đồ uống RTD nhãn hàng riêng và thực phẩm chức năng. Dạng cô đặc, chiết xuất, bột và công thức chức năng được phát triển theo OEM khi có yêu cầu.",
+        "description": "<k>Yến sào</k> Việt Nam tuyển chọn, làm sạch — dạng yến sạch và chế biến sẵn; cô đặc, chiết xuất và bột theo OEM khi có yêu cầu.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
           "Bán lẻ thực phẩm sức khỏe",
@@ -552,7 +558,7 @@
         "slug": "fruit",
         "tagline": "Sấy dẻo, sấy thăng hoa, bột, cô đặc & puree",
         "status": "9 SKU đã xác định",
-        "description": "Trái cây nhiệt đới Việt Nam được chế biến thành nguyên liệu ổn định. Dòng chính gồm xoài sấy dẻo và sấy thăng hoa, mãng cầu sấy dẻo, và chanh dây dạng cô đặc, puree đông lạnh và bột, cho thực phẩm, đồ uống và dinh dưỡng. Các dạng trái cây khác có thể cung cấp theo yêu cầu hoặc OEM.",
+        "description": "<k>Trái cây</k> nhiệt đới Việt Nam thành nguyên liệu bảo quản lâu: xoài sấy dẻo và sấy thăng hoa, mãng cầu, chanh dây cô đặc, puree và bột.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
           "Nền smoothie & đồ uống",
@@ -566,7 +572,7 @@
         "slug": "nuts-spices-botanicals",
         "tagline": "Hạt điều, tiêu đen, quế & hồi sấy thăng hoa",
         "status": "4 SKU đã xác định",
-        "description": "Hạt và gia vị Việt Nam tuyển chọn, phân loại theo thông số của khách hàng. Dòng chính gồm nhân hạt điều, hồ tiêu đen nguyên hạt, quế sấy thăng hoa và hoa hồi sấy thăng hoa, với hồ sơ được thống nhất theo từng đơn hàng cho nhà sản xuất thực phẩm và đối tác nguyên liệu. Các loại thảo mộc khác cung cấp theo yêu cầu.",
+        "description": "<k>Hạt và gia vị</k> Việt Nam phân loại theo thông số của bạn: nhân điều, tiêu đen, quế và hoa hồi sấy thăng hoa.",
         "applicationsTitle": "Ứng dụng phổ biến",
         "applications": [
           "Sản xuất thực phẩm",
@@ -578,7 +584,7 @@
     },
     "sampleCta": {
       "title": "Cần mẫu hoặc bảng thông số kỹ thuật?",
-      "subtitle": "Cho chúng tôi biết sản phẩm và định dạng bạn đang đánh giá. Mẫu và hồ sơ được sắp xếp theo từng yêu cầu, tùy sản phẩm và nhà cung cấp.",
+      "subtitle": "Mẫu và hồ sơ được chuẩn bị theo từng yêu cầu.",
       "cta": "Yêu cầu mẫu hàng",
       "secondaryCta": "Yêu cầu báo giá"
     }
@@ -588,19 +594,19 @@
     "breadcrumbProducts": "Sản phẩm",
     "breadcrumbLabel": "Đường dẫn",
     "confirmedTitle": "Trang chi tiết SKU",
-    "confirmedSubtitle": "Chín SKU cà phê hiện có chi tiết công khai theo mã. Danh mục đã xác định rộng hơn được tổ chức theo dòng; khả năng cung ứng, thông số cuối cùng và phạm vi COA được xác nhận theo từng yêu cầu.",
+    "confirmedSubtitle": "Chín SKU cà phê có trang chi tiết theo mã. Khả năng cung ứng và thông số cuối được xác nhận theo từng yêu cầu.",
     "portfolioEyebrow": "Danh mục đã xác định",
     "portfolioTitle": "{count} mã SKU cốt lõi trong nhóm này",
-    "portfolioSubtitle": "Các mã này xác định danh mục Whitehorse. Chúng không hàm ý hàng có sẵn, một nhà cung cấp cố định hay tự động sẵn sàng xuất khẩu; các trang chi tiết công khai theo mã đang được mở rộng theo từng nhóm.",
+    "portfolioSubtitle": "Mã sản phẩm xác định danh mục — không phải hàng sẵn, nhà cung cấp cố định hay sẵn sàng xuất khẩu.",
     "portfolioCodesLabel": "Các mã SKU đã xác định",
     "generalSpecLabel": "Thông số chung",
-    "generalSpecLead": "Các thông số bên dưới là khung tham chiếu chung, không phải một cấu hình cố định cho mọi nhu cầu. Hãy cho chúng tôi biết giá trị, ứng dụng, thị trường đích, sản lượng, chứng nhận và bao bì bạn cần; chúng tôi sẽ ghép đúng nhà cung cấp và xác nhận thông số cuối cùng cùng bạn.",
+    "generalSpecLead": "Khung tham chiếu chung, không phải chào hàng cố định. Gửi giá trị, ứng dụng, thị trường, sản lượng và bao bì; chúng tôi ghép nhà cung cấp và xác nhận thông số cuối.",
     "generalSpecCta": "Cho chúng tôi biết thông số bạn cần",
     "rangesTitle": "Dòng tìm nguồn & phát triển theo yêu cầu",
-    "rangesSubtitle": "Các dạng sản phẩm rộng hơn chúng tôi có thể tìm nguồn hoặc phát triển theo yêu cầu, với nhà cung cấp có sản phẩm, cơ sở và hồ sơ phù hợp thông số của bạn.",
+    "rangesSubtitle": "Các dạng sản phẩm rộng hơn, tìm nguồn hoặc phát triển theo yêu cầu, với nhà cung cấp phù hợp về sản phẩm, cơ sở và hồ sơ.",
     "rangeLabel": "Dòng",
     "formatsLabel": "Dạng",
-    "specifyLabel": "Các trường thông số người mua cần xác định",
+    "specifyLabel": "Cần xác định",
     "applicationsLabel": "Ứng dụng",
     "filterLabel": "Lọc theo dòng",
     "filterAll": "Tất cả",
@@ -613,15 +619,15 @@
     "requestSample": "Yêu cầu mẫu",
     "requestSpec": "Gửi thông số cần thiết",
     "requestQuote": "Yêu cầu báo giá",
-    "requestRange": "Cho chúng tôi biết thông số bạn cần",
+    "requestRange": "Gửi thông số của bạn",
     "conceptPackBadge": "Bao bì ý tưởng",
-    "conceptPackNote": "Hình render bao bì ý tưởng. Chữ trên nhãn chỉ mang tính minh họa — bao bì, nhãn và thông số cuối cùng được xác nhận với nhà cung cấp hoặc đơn vị đóng gói cho từng đơn hàng. Không phải ảnh chụp hàng có sẵn.",
-    "perRequestNote": "Toàn bộ thông số hiển thị là tham chiếu chung. Việc liệt kê sản phẩm hoặc dòng sản phẩm không có nghĩa là hàng có sẵn hay sẵn sàng xuất khẩu. Hãy cho chúng tôi biết thông số bạn cần; khả năng cung ứng, giá trị cuối cùng, phương pháp thử, hồ sơ và phạm vi COA sẽ được xác nhận cho yêu cầu đó. Phương án OEM, ODM và OBM tùy thuộc sản phẩm, cơ sở đối tác và thị trường.",
+    "conceptPackNote": "Hình render ý tưởng — chữ trên nhãn mang tính minh họa; bao bì và nhãn cuối được xác nhận theo đơn. Không phải ảnh chụp hàng có sẵn.",
+    "perRequestNote": "Thông số hiển thị là tham chiếu chung, không phải hàng sẵn hay sẵn sàng xuất khẩu. Giá trị cuối, phương pháp thử, hồ sơ và phạm vi COA được xác nhận theo từng yêu cầu; OEM / ODM / OBM tùy sản phẩm và đối tác.",
     "referenceTitle": "Khung thông số chung",
     "referenceDisclaimer": "Đây là các thông số tham chiếu chung, không phải thông số cố định của mọi nhà cung cấp hoặc lô hàng. Hãy cho chúng tôi biết thông số bạn cần; giá trị cuối cùng, phương pháp thử, hồ sơ và phạm vi COA được thống nhất cho yêu cầu của bạn.",
     "indicativeLabel": "Thông số tham chiếu chung",
     "moreDetail": "Thêm chi tiết thông số",
-    "indicativeNote": "Chỉ là tham chiếu chung — giá trị cuối cùng được xác nhận theo bảng thông số của nhà cung cấp được chọn cho từng yêu cầu.",
+    "indicativeNote": "Chỉ để tham khảo — giá trị cuối theo bảng thông số của nhà cung cấp được chọn.",
     "paramHeader": "Chỉ tiêu",
     "referenceHeader": "Tham chiếu điển hình",
     "methodHeader": "Phương pháp / căn cứ",
@@ -640,10 +646,10 @@
     "packagingExplore": "Khám phá kiến trúc bao bì",
     "orderingTitle": "Quy trình xử lý yêu cầu",
     "orderingSteps": [
-      "Cho chúng tôi biết mã hoặc dòng sản phẩm, sản lượng, điểm đến và yêu cầu về thông số hoặc chứng nhận.",
-      "Chúng tôi chọn nhà cung cấp có sản phẩm, cơ sở và hồ sơ phù hợp, và cho bạn biết trạng thái thẩm định của từng nhà cung cấp.",
-      "Mẫu chuẩn và thông số bằng văn bản được thực hiện trước; mẫu được duyệt trở thành chuẩn tham chiếu của đơn hàng.",
-      "Điều khoản thương mại, chứng từ và giao hàng được xác nhận trong báo giá và hợp đồng."
+      "Gửi mã hoặc dòng sản phẩm, sản lượng, điểm đến và yêu cầu.",
+      "Chúng tôi ghép nhà cung cấp phù hợp và cho biết trạng thái thẩm định.",
+      "Mẫu tham chiếu và thông số bằng văn bản trước — mẫu duyệt là chuẩn của đơn.",
+      "Điều khoản, hồ sơ và giao hàng xác nhận trong báo giá và hợp đồng."
     ],
     "relatedTitle": "Mã sản phẩm liên quan",
     "broaderTitle": "Cần một dạng sản phẩm khác?",
@@ -675,67 +681,67 @@
     "library": {
       "eyebrow": "Trung tâm tải tài liệu",
       "title": "Tài liệu thương mại sẵn sàng chia sẻ.",
-      "subtitle": "Sử dụng các tài liệu này để đánh giá ban đầu, sau đó gửi cho chúng tôi sản phẩm, ứng dụng và thông số dự án của bạn cần.",
+      "subtitle": "Để xem xét ban đầu — sau đó gửi sản phẩm và thông số bạn cần.",
       "brochure": {
         "title": "Brochure sản phẩm Whitehorse",
-        "description": "Tổng quan ngắn gọn về Whitehorse, năm nhóm nguyên liệu và danh mục sản phẩm hiện tại để giới thiệu với người mua.",
+        "description": "Tổng quan Whitehorse và năm nhóm nguyên liệu.",
         "meta": "PDF · 4 trang",
         "cta": "Tải brochure"
       },
       "packaging": {
         "title": "Packaging Architecture Whitehorse",
-        "description": "Hệ quy cách bao bì tham chiếu cho năm nhóm nguyên liệu, bốn kênh thương mại và 27 cấu trúc chính; có thể thiết kế theo brief của khách hàng.",
+        "description": "Bao bì tham chiếu cho năm nhóm, bốn kênh và 27 cấu trúc chuẩn.",
         "meta": "PDF · 18 trang",
         "cta": "Tải hướng dẫn bao bì"
       },
       "profile": {
         "title": "Company Profile Whitehorse",
-        "description": "Hồ sơ năng lực doanh nghiệp chi tiết sẽ được phát hành sau khi phiên bản chính thức được phê duyệt. Nút tải sẽ tự động hoạt động khi tệp được bổ sung.",
+        "description": "Đang hoàn thiện — sắp có.",
         "meta": "Sắp cập nhật",
         "cta": "Sắp có"
       },
-      "note": "Brochure và các thông số trên website là tài liệu tham chiếu thương mại chung. Thông số cuối cùng, nhà cung cấp, cơ sở, phạm vi chứng nhận, khả năng cung ứng, bao bì và bộ chứng từ được xác nhận theo từng yêu cầu."
+      "note": "Tham chiếu thương mại chung. Thông số, nhà cung cấp, phạm vi chứng nhận, khả năng cung ứng và hồ sơ được xác nhận theo từng yêu cầu."
     }
   },
   "certifications": {
     "hero": {
       "eyebrow": "Chất lượng & thẩm định nhà cung cấp",
       "title": "Bằng chứng trước cam kết.",
-      "subtitle": "Mỗi yêu cầu được đối chiếu với sản phẩm, cơ sở cung ứng và thị trường đích — sau đó hồ sơ liên quan được xác nhận theo đơn hàng.",
-      "imageNote": "Hình ảnh đại diện cho một công đoạn chế biến trong mạng lưới cung ứng. Nhà cung cấp, cơ sở và phạm vi chứng nhận cụ thể được xác nhận theo từng yêu cầu.",
+      "subtitle": "Mỗi yêu cầu khớp với sản phẩm, cơ sở và thị trường — bằng chứng xác nhận theo đơn.",
+      "imageNote": "Ảnh minh họa khâu chế biến. Nhà cung cấp, cơ sở và phạm vi chứng nhận được xác nhận theo yêu cầu.",
       "action": "Trao đổi yêu cầu chất lượng"
     },
     "standards": {
       "eyebrow": "Những gì chúng tôi đánh giá",
       "title": "Tiêu chuẩn được kiểm tra theo yêu cầu thực tế",
-      "subtitle": "Đây là các điểm kiểm tra phổ biến, không phải chứng nhận bao trùm của Whitehorse. Phạm vi áp dụng được xác nhận theo sản phẩm và cơ sở."
+      "subtitle": "Điểm kiểm tra, không phải chứng nhận chung — xác nhận theo sản phẩm và cơ sở."
     },
     "items": [
       {
         "name": "ISO 22000 / FSSC 22000",
-        "description": "Chứng nhận quản lý an toàn thực phẩm được kiểm tra theo đúng cơ sở và phạm vi sản phẩm."
+        "description": "Kiểm tra theo cơ sở và sản phẩm liên quan."
       },
       {
         "name": "HACCP",
-        "description": "Kế hoạch HACCP được xem xét cho sản phẩm và quy trình đang được báo giá."
+        "description": "Xem xét theo sản phẩm và quy trình."
       },
       {
         "name": "Chứng nhận hữu cơ",
-        "description": "Phạm vi hữu cơ còn hiệu lực được kiểm tra cho đúng sản phẩm và nhà cung cấp khi có yêu cầu."
+        "description": "Kiểm tra phạm vi hiệu lực theo sản phẩm."
       },
       {
         "name": "Đăng ký FDA",
-        "description": "Đăng ký cơ sở và thông tin nhà cung cấp được kiểm tra cho đơn hàng đi Hoa Kỳ."
+        "description": "Kiểm tra cho đơn hàng đi Mỹ."
       }
     ],
     "technology": {
       "eyebrow": "Kiến trúc công nghệ chất lượng & chuỗi cung ứng",
-      "title": "Từ tín hiệu tại nguồn đến quyết định của Buyer — trên một chuỗi dữ liệu kết nối.",
-      "subtitle": "Whitehorse đang xây dựng theo từng giai đoạn một lớp công nghệ kết nối hồ sơ chất lượng, tồn kho, quy trình thương mại và các mốc logistics quanh từng yêu cầu.",
+      "title": "Từ tín hiệu nguồn đến quyết định của người mua — một chuỗi dữ liệu.",
+      "subtitle": "Lớp công nghệ theo giai đoạn, liên kết bằng chứng chất lượng, tồn kho, quy trình và logistics theo yêu cầu.",
       "status": "Định hướng nền tảng · triển khai theo giai đoạn",
       "backboneEyebrow": "Một trục dữ liệu xuyên suốt",
       "backboneTitle": "Mỗi lần bàn giao đều giữ nguyên ngữ cảnh thương mại và chất lượng.",
-      "backboneBody": "Mô hình nền tảng liên kết nhu cầu, thông số, năng lực nguồn cung, hồ sơ lô hàng và lịch sử giao nhận thay vì biến mỗi công đoạn thành một cuộc trao đổi rời rạc.",
+      "backboneBody": "Nhu cầu, thông số, nguồn cung, bằng chứng lô và giao hàng — được liên kết.",
       "backboneNodes": [
         "Nhu cầu Buyer",
         "Thông số sản phẩm",
@@ -755,68 +761,68 @@
         {
           "number": "01",
           "title": "IoT & dữ liệu tại nguồn",
-          "description": "Dữ liệu cảm biến và hồ sơ đối tác có thể ghi nhận điều kiện vùng nguyên liệu, lưu kho và chế biến tại các điểm kiểm soát phù hợp.",
+          "description": "Điều kiện nguồn, bảo quản và chế biến.",
           "status": "roadmap"
         },
         {
           "number": "02",
           "title": "Hồ sơ QMS & LIMS",
-          "description": "Thông số, mẫu, kiểm nghiệm, COA, sai lệch và phê duyệt gắn với đúng nhà cung cấp, cơ sở và lô hàng.",
+          "description": "Thông số, kiểm nghiệm, COA và phê duyệt theo lô.",
           "status": "building"
         },
         {
           "number": "03",
           "title": "WMS · Quản trị kho",
-          "description": "Tồn kho, lô hàng, vị trí, đóng gói, điều kiện và dịch chuyển được cấu trúc để hỗ trợ khả năng quan sát vận hành.",
+          "description": "Hồ sơ tồn kho, lô và luân chuyển.",
           "status": "roadmap"
         },
         {
           "number": "04",
           "title": "Luồng nhà cung cấp & đơn hàng",
-          "description": "Yêu cầu, ghép nối, báo giá, phê duyệt và chứng từ được điều phối trong một lịch sử hồ sơ xuyên suốt.",
+          "description": "Ghép nguồn, báo giá và hồ sơ theo vụ việc.",
           "status": "current"
         },
         {
           "number": "05",
           "title": "TMS · Quản trị vận tải",
-          "description": "Đặt chỗ, tuyến vận chuyển, Incoterm, chứng từ, các mốc hành trình và ngoại lệ được kết nối với đơn hàng.",
+          "description": "Đặt chỗ, Incoterms và mốc vận chuyển.",
           "status": "roadmap"
         },
         {
           "number": "06",
           "title": "Mạng lưới Buyer & phân phối",
-          "description": "Tín hiệu nhu cầu, bằng chứng giao hàng và phản hồi của Buyer được đưa trở lại quyết định về sản phẩm và nguồn cung.",
+          "description": "Nhu cầu và phản hồi quay về tìm nguồn.",
           "status": "current"
         }
       ],
       "aiTitle": "AI + dữ liệu thông minh xuyên suốt mọi lớp",
-      "aiBody": "Được thiết kế để tăng tốc ghép nối từ nhà cung cấp tới Buyer, phát hiện sớm hồ sơ còn thiếu và tín hiệu rủi ro, đồng thời biến mỗi yêu cầu đã hoàn tất thành dữ liệu tốt hơn cho quyết định tiếp theo.",
-      "note": "Trạng thái phân biệt quy trình và mạng lưới quan hệ đang vận hành với các hệ thống đang xây dựng hoặc nằm trong lộ trình. Phạm vi hệ thống, dữ liệu IoT, tích hợp đối tác và khả năng quan sát trực tiếp thay đổi theo nhà cung cấp, cơ sở và dự án."
+      "aiBody": "Thiết kế để ghép nguồn nhanh hơn và phát hiện sớm rủi ro, thiếu bằng chứng.",
+      "note": "Trạng thái cho biết phần đang vận hành và phần đang xây dựng hoặc theo lộ trình; phạm vi sẽ thay đổi theo nhà cung cấp và dự án."
     },
     "sustainability": {
       "eyebrow": "Nguyên tắc",
       "title": "Bốn nguyên tắc vận hành",
-      "subtitle": "Lớp vận hành cô đọng cho truy xuất, phát triển nhà cung cấp và kiểm soát đơn hàng.",
+      "subtitle": "Truy xuất, phát triển nhà cung cấp và kiểm soát đơn hàng.",
       "pillars": [
         {
           "title": "Truy xuất thống nhất theo đơn hàng",
-          "description": "Nguồn gốc, nhà cung cấp và lô hàng được thống nhất trong chứng từ đơn hàng."
+          "description": "Xuất xứ, nhà cung cấp, lô ghi trong hồ sơ đơn."
         },
         {
           "title": "Quan hệ dài hạn với nhà cung cấp",
-          "description": "Chúng tôi xây dựng quan hệ bền vững với nhà cung cấp và hợp tác xã."
+          "description": "Gắn bó lâu dài với nhà cung cấp, hợp tác xã."
         },
         {
           "title": "Trách nhiệm với môi trường",
-          "description": "Ưu tiên chế biến tiết kiệm tài nguyên và thực hành canh tác có trách nhiệm."
+          "description": "Tiết kiệm tài nguyên, canh tác có trách nhiệm."
         },
         {
           "title": "Chất lượng theo thông số",
-          "description": "Mẫu đã duyệt và thông số bằng văn bản là chuẩn tham chiếu của đơn hàng."
+          "description": "Mẫu duyệt + thông số văn bản = chuẩn."
         }
       ]
     },
-    "documentsTitle": "Chứng từ được sắp xếp theo đơn hàng",
+    "documentsTitle": "Chứng từ theo đơn",
     "documents": [
       "Chứng nhận xuất xứ (C/O)",
       "Chứng nhận kiểm dịch thực vật",
@@ -834,39 +840,39 @@
     "hero": {
       "eyebrow": "Cách chúng tôi làm việc",
       "title": "Từ yêu cầu bằng văn bản đến giao hàng được điều phối.",
-      "subtitle": "Một quy trình xuyên suốt kết nối thông số, lựa chọn nhà cung cấp, duyệt mẫu, chất lượng, chứng từ và logistics.",
-      "imageNote": "Hình ảnh đại diện cho một công đoạn logistics trong mạng lưới cung ứng. Phương thức đóng hàng và điều kiện vận chuyển cuối cùng được xác nhận theo đơn hàng.",
+      "subtitle": "Một quy trình: thông số → nhà cung cấp → mẫu → QA/QC → chứng từ → logistics.",
+      "imageNote": "Ảnh minh họa khâu logistics. Cách đóng hàng và điều kiện giao được xác nhận theo đơn.",
       "action": "Bắt đầu từ yêu cầu của bạn"
     },
     "steps": [
       {
         "title": "Yêu cầu & thông số",
-        "description": "Ứng dụng, thông số, sản lượng, thị trường và yêu cầu chứng nhận được ghi nhận."
+        "description": "Ghi nhận ứng dụng, thông số, sản lượng, thị trường và chứng nhận."
       },
       {
         "title": "Chọn & thẩm định nhà cung cấp",
-        "description": "Năng lực sản phẩm, cơ sở và hồ sơ phù hợp được lựa chọn."
+        "description": "Chọn lọc sản phẩm, cơ sở và hồ sơ phù hợp."
       },
       {
         "title": "Mẫu & phê duyệt",
-        "description": "Mẫu được duyệt trở thành chuẩn tham chiếu thương mại của đơn hàng."
+        "description": "Mẫu được duyệt = chuẩn tham chiếu của đơn."
       },
       {
         "title": "Kiểm soát chất lượng",
-        "description": "Kiểm nghiệm, COA và giám định bên thứ ba được thống nhất theo đơn hàng."
+        "description": "Kiểm nghiệm, COA và giám định thống nhất theo đơn."
       },
       {
         "title": "Đóng gói & chứng từ",
-        "description": "Quy cách đóng gói và bộ chứng từ xuất khẩu được kiểm tra trước khi đóng hàng."
+        "description": "Kiểm tra bao bì và chứng từ xuất khẩu trước khi đóng hàng."
       },
       {
         "title": "Vận chuyển & giao hàng",
-        "description": "Logistics được điều phối theo Incoterm và các mốc vận chuyển đã thống nhất."
+        "description": "Điều phối theo Incoterm và các mốc đã thống nhất."
       }
     ],
     "factory": {
       "title": "Cơ sở của đối tác",
-      "subtitle": "Sản xuất diễn ra tại cơ sở của nhà cung cấp và đối tác đã được đánh giá. Thông tin cơ sở, phạm vi chứng nhận và năng lực OEM/ODM/OBM được xác nhận theo sản phẩm và thị trường cụ thể."
+      "subtitle": "Cơ sở nhà cung cấp và đối tác đã đánh giá; cơ sở, chứng nhận và mức phù hợp <k>OEM / ODM / OBM</k> xác nhận theo sản phẩm."
     },
     "cta": {
       "title": "Có câu hỏi cụ thể về quy trình hoặc chứng từ?",
@@ -877,39 +883,39 @@
     "hero": {
       "eyebrow": "Mạng lưới",
       "title": "Nguồn cung Việt Nam. Đối thoại với người mua toàn cầu.",
-      "subtitle": "Chúng tôi kết nối năng lực cung ứng Việt Nam đã được sàng lọc với yêu cầu người mua tại châu Á, châu Âu, Trung Đông, Bắc Mỹ và châu Đại Dương.",
-      "imageNote": "Hình ảnh đại diện cho các công đoạn vùng nguyên liệu và logistics trong mạng lưới; không xác định một cơ sở hoặc lô hàng cụ thể.",
+      "subtitle": "Nguồn cung Việt Nam đã sàng lọc cho người mua tại châu Á, châu Âu, Trung Đông, Bắc Mỹ và châu Đại Dương.",
+      "imageNote": "Ảnh minh họa khâu thu mua và logistics — không phải cơ sở hay lô hàng cụ thể đã ký kết.",
       "buyerAction": "Trở thành Buyer / đối tác phân phối",
       "supplierAction": "Tham gia mạng lưới cung ứng"
     },
-    "regionsTitle": "Các thị trường trong bản đồ trao đổi hiện tại",
+    "regionsTitle": "Thị trường đang trao đổi",
     "regions": "Nga, Nhật Bản, Qatar, Israel, Hàn Quốc, Trung Quốc, Hoa Kỳ, Canada, Úc, Đức, Ý, Pháp, Bỉ và Hà Lan.",
     "network": {
       "current": {
         "tag": "Hiện tại",
         "stat": "10+",
         "statLabel": "Thị trường có quan hệ khách hàng và trao đổi thương mại",
-        "description": "Quan hệ khách hàng và trao đổi thương mại đang hoạt động tại năm khu vực."
+        "description": "Quan hệ người mua đang hoạt động tại năm khu vực."
       },
       "suppliers": {
         "tag": "Hiện tại",
         "stat": "50+",
         "statLabel": "Nhà cung cấp đã được sàng lọc",
-        "description": "Được sàng lọc theo năng lực sản phẩm, cơ sở và độ phù hợp thị trường; thẩm định cuối cùng vẫn theo từng yêu cầu."
+        "description": "Sàng lọc theo năng lực, cơ sở và thị trường; thẩm định theo từng yêu cầu."
       }
     },
     "cta": {
       "title": "Chọn vai trò của bạn trong mạng lưới.",
-      "subtitle": "Buyer và đối tác phân phối bắt đầu từ nhu cầu. Nhà cung cấp Việt Nam bắt đầu từ năng lực và hồ sơ.",
+      "subtitle": "Người mua bắt đầu từ nhu cầu. Nhà cung cấp bắt đầu từ năng lực.",
       "buyer": {
         "label": "Dành cho Buyer & đối tác phân phối",
-        "body": "Nhà nhập khẩu, nhà sản xuất, thương hiệu, đơn vị sử dụng nguyên liệu và đối tác phân phối có thể gửi yêu cầu sản phẩm, thị trường và sản lượng để bắt đầu kết nối nguồn cung phù hợp.",
+        "body": "Nhà nhập khẩu, nhà sản xuất, thương hiệu và nhà phân phối: gửi yêu cầu sản phẩm, thị trường và sản lượng.",
         "cta": "Tìm nguồn nguyên liệu",
         "distributionCta": "Trao đổi hợp tác phân phối"
       },
       "supplier": {
         "label": "Dành cho nhà cung cấp Việt Nam",
-        "body": "Nông hộ, hợp tác xã và nhà máy chế biến có thể gửi năng lực sản phẩm, thông tin cơ sở và hồ sơ để được đánh giá.",
+        "body": "Nông hộ, hợp tác xã và nhà chế biến: gửi năng lực, cơ sở và hồ sơ để được đánh giá.",
         "cta": "Tham gia mạng lưới cung ứng"
       }
     }
@@ -964,7 +970,7 @@
       "eyebrow": "Yêu cầu báo giá",
       "title": "Yêu cầu báo giá hoặc mẫu hàng",
       "subtitle": "Chia sẻ sản phẩm, thông số, sản lượng và điểm đến. Đội ngũ kinh doanh của chúng tôi xem xét các yêu cầu phù hợp và liên hệ lại với bước thương mại tiếp theo.",
-      "lead": "Chia sẻ sản phẩm, thông số, sản lượng và điểm đến. Đội ngũ kinh doanh xem xét các yêu cầu phù hợp và phản hồi bước thương mại tiếp theo."
+      "lead": "Sản phẩm, thông số, sản lượng và điểm đến — chúng tôi xem xét yêu cầu phù hợp và phản hồi bước tiếp theo."
     },
     "form": {
       "title": "Yêu cầu báo giá",

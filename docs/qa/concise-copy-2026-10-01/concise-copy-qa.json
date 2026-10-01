@@ -1,0 +1,327 @@
+[
+  {
+    "name": "en 1440 home: chooser Buyer→/en/products, Supplier→/vi/suppliers/apply",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "en 1440 hero: 3 photos, uppercase keyword facts, short headline",
+    "ok": true,
+    "detail": "{\"imgs\":3,\"facts\":[\"uppercase:Bulk\",\"uppercase:OEM / ODM / OBM\",\"uppercase:QA/QC per order\",\"uppercase:Export documents\"],\"h1\":8}"
+  },
+  {
+    "name": "en 1440 /: no overflow; keyword contrast ≥ 4.5 (8 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=12.62"
+  },
+  {
+    "name": "en 1440 /about: no overflow; keyword contrast ≥ 4.5 (3 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "en 1440 /certifications: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "en 1440 /process: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "en 1440 /clients: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "en 1440 /products: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "en 1440 /products/coffee: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "en 1440 explorer: Coffee → Coconut → Fruit chips",
+    "ok": true,
+    "detail": "All|Coffee|Coconut|Fruit|Nuts & Spices|Bird's Nest"
+  },
+  {
+    "name": "en 1440 explorer: search finds cold brew",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "en 1440 explorer: card word count recorded",
+    "ok": true,
+    "detail": "47"
+  },
+  {
+    "name": "en 1440 quick view: Drive photo pair loads",
+    "ok": true,
+    "detail": "coffee-photo-cold-brew-pour:true,coffee-photo-cold-brew-bottle:true"
+  },
+  {
+    "name": "en 1440 RFQ: context summary kept",
+    "ok": true,
+    "detail": "Your enquiryRequest a specification sheet · Coconut Ingredients · Coconut milk & creamAdjust any detail in the form below."
+  },
+  {
+    "name": "en 1440 language switch keeps RFQ params",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "en 1440 supplier entry: form present",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "vi 1440 home: chooser Buyer→/en/products, Supplier→/vi/suppliers/apply",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "vi 1440 hero: 3 photos, uppercase keyword facts, short headline",
+    "ok": true,
+    "detail": "{\"imgs\":3,\"facts\":[\"uppercase:Hàng xá (bulk)\",\"uppercase:OEM / ODM / OBM\",\"uppercase:QA/QC theo đơn\",\"uppercase:Hồ sơ xuất khẩu\"],\"h1\":15}"
+  },
+  {
+    "name": "vi 1440 /: no overflow; keyword contrast ≥ 4.5 (8 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=12.62"
+  },
+  {
+    "name": "vi 1440 /about: no overflow; keyword contrast ≥ 4.5 (3 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "vi 1440 /certifications: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "vi 1440 /process: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "vi 1440 /clients: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "vi 1440 /products: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "vi 1440 /products/coffee: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "vi 1440 explorer: Coffee → Coconut → Fruit chips",
+    "ok": true,
+    "detail": "Tất cả|Cà phê|Dừa|Trái cây|Hạt & Gia vị|Yến sào"
+  },
+  {
+    "name": "vi 1440 explorer: search finds cold brew",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "vi 1440 explorer: card word count recorded",
+    "ok": true,
+    "detail": "66"
+  },
+  {
+    "name": "vi 1440 quick view: Drive photo pair loads",
+    "ok": true,
+    "detail": "coffee-photo-cold-brew-pour:true,coffee-photo-cold-brew-bottle:true"
+  },
+  {
+    "name": "vi 1440 RFQ: context summary kept",
+    "ok": true,
+    "detail": "Yêu cầu của bạnYêu cầu bảng thông số kỹ thuật · Nguyên liệu Dừa · Sữa & kem dừaCó thể điều chỉnh mọi chi tiết trong biểu mẫu bên dưới."
+  },
+  {
+    "name": "vi 1440 language switch keeps RFQ params",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "vi 1440 supplier entry: form present",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "en 390 home: chooser Buyer→/en/products, Supplier→/vi/suppliers/apply",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "en 390 hero: 3 photos, uppercase keyword facts, short headline",
+    "ok": true,
+    "detail": "{\"imgs\":3,\"facts\":[\"uppercase:Bulk\",\"uppercase:OEM / ODM / OBM\",\"uppercase:QA/QC per order\",\"uppercase:Export documents\"],\"h1\":8}"
+  },
+  {
+    "name": "en 390 /: no overflow; keyword contrast ≥ 4.5 (8 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=12.62"
+  },
+  {
+    "name": "en 390 /about: no overflow; keyword contrast ≥ 4.5 (3 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "en 390 /certifications: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "en 390 /process: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "en 390 /clients: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "en 390 /products: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "en 390 /products/coffee: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "en 390 explorer: Coffee → Coconut → Fruit chips",
+    "ok": true,
+    "detail": "All|Coffee|Coconut|Fruit|Nuts & Spices|Bird's Nest"
+  },
+  {
+    "name": "en 390 explorer: search finds cold brew",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "en 390 explorer: card word count recorded",
+    "ok": true,
+    "detail": "47"
+  },
+  {
+    "name": "en 390 quick view: Drive photo pair loads",
+    "ok": true,
+    "detail": "coffee-photo-cold-brew-pour:true,coffee-photo-cold-brew-bottle:true"
+  },
+  {
+    "name": "en 390 RFQ: context summary kept",
+    "ok": true,
+    "detail": "Your enquiryRequest a specification sheet · Coconut Ingredients · Coconut milk & creamAdjust any detail in the form below."
+  },
+  {
+    "name": "en 390 language switch keeps RFQ params",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/vi/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "en 390 supplier entry: form present",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "vi 390 home: chooser Buyer→/en/products, Supplier→/vi/suppliers/apply",
+    "ok": true,
+    "detail": "/en/products /vi/suppliers/apply"
+  },
+  {
+    "name": "vi 390 hero: 3 photos, uppercase keyword facts, short headline",
+    "ok": true,
+    "detail": "{\"imgs\":3,\"facts\":[\"uppercase:Hàng xá (bulk)\",\"uppercase:OEM / ODM / OBM\",\"uppercase:QA/QC theo đơn\",\"uppercase:Hồ sơ xuất khẩu\"],\"h1\":15}"
+  },
+  {
+    "name": "vi 390 /: no overflow; keyword contrast ≥ 4.5 (8 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=12.62"
+  },
+  {
+    "name": "vi 390 /about: no overflow; keyword contrast ≥ 4.5 (3 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "vi 390 /certifications: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "vi 390 /process: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "vi 390 /clients: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "vi 390 /products: no overflow; keyword contrast ≥ 4.5 (0 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=99"
+  },
+  {
+    "name": "vi 390 /products/coffee: no overflow; keyword contrast ≥ 4.5 (1 keywords)",
+    "ok": true,
+    "detail": "overflow=0 min=13.63"
+  },
+  {
+    "name": "vi 390 explorer: Coffee → Coconut → Fruit chips",
+    "ok": true,
+    "detail": "Tất cả|Cà phê|Dừa|Trái cây|Hạt & Gia vị|Yến sào"
+  },
+  {
+    "name": "vi 390 explorer: search finds cold brew",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "name": "vi 390 explorer: card word count recorded",
+    "ok": true,
+    "detail": "66"
+  },
+  {
+    "name": "vi 390 quick view: Drive photo pair loads",
+    "ok": true,
+    "detail": "coffee-photo-cold-brew-pour:true,coffee-photo-cold-brew-bottle:true"
+  },
+  {
+    "name": "vi 390 RFQ: context summary kept",
+    "ok": true,
+    "detail": "Yêu cầu của bạnYêu cầu bảng thông số kỹ thuật · Nguyên liệu Dừa · Sữa & kem dừaCó thể điều chỉnh mọi chi tiết trong biểu mẫu bên dưới."
+  },
+  {
+    "name": "vi 390 language switch keeps RFQ params",
+    "ok": true,
+    "detail": "http://127.0.0.1:4817/en/rfq?intent=spec-sheet&product=coconut&range=coconut-milk-cream"
+  },
+  {
+    "name": "vi 390 supplier entry: form present",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "no console/page errors",
+    "ok": true,
+    "detail": ""
+  }
+]
